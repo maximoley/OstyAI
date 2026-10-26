@@ -48,7 +48,7 @@ for series in data['series']:
                         high_cost_use_rate=local[-1]['use_rate'],
                         endpoint_drop_percentage_points=100 * (local[0]['use_rate']-local[-1]['use_rate'])))
 with (DATA / 'binned-use.csv').open('w', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+    writer = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
     writer.writeheader(); writer.writerows(rows)
 report = dict(source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
               definition='Used starting potion instances / all starting potion instances in each cost bin; final bin includes 1.0.',
@@ -90,5 +90,7 @@ fig.text(.075,.057,'Observed cost/use association, not a controlled cost sweep o
 out=ROOT/'docs/assets/potion_use_vs_penalty.png'
 fig.savefig(out,dpi=180,facecolor='white')
 fig.savefig(out.with_suffix('.svg'),facecolor='white',metadata={'Date':None})
+svg = out.with_suffix('.svg')
+svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines()) + '\n')
 plt.close(fig)
 print(json.dumps(report,indent=2))
