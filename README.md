@@ -101,6 +101,8 @@ As of **October 26, 2026**, the following comparison is in progress. Every agent
 
 The previously proposed 8,000-simulation / rollout-400 MCTS run was removed before its full benchmark started. The current Mentor baseline retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixtures are made compatible offline without a runtime MCTS adapter. These new results will remain separate from the historical row above. [Comparison protocol](docs/HUMAN_COMPARISON.md).
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Training progress
 
 ### Primary validation win rate
@@ -125,6 +127,8 @@ The plots stop at step 5500. Persistent search reuse was enabled after that chec
 
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Model architecture
 
 <details>
@@ -144,6 +148,8 @@ The model has **1,593,346 parameters** and shares an encoder between its policy 
 The policy can act directly by selecting its highest-scoring legal action, or supply priors to Gumbel search while the value head evaluates leaves. [Architecture and tensor layout](docs/ARCHITECTURE.md) · [model implementation](ostyai/model.py) · [checkpoint metadata](models/best/metadata.json).
 
 </details>
+
+---------------------------------------------------------------------------------------------------------------------------
 
 ## Training scheme
 
@@ -174,6 +180,8 @@ Primary search and matched policy-only validation run every **100 updates**; the
 
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Changes relative to the Rust simulator
 
 <details>
@@ -200,6 +208,8 @@ OstyAI extends spire-mentor's engine with a neural learning pipeline and targete
 
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Low-budget search through chance nodes
 
 <details>
@@ -220,6 +230,8 @@ Consequently, low-budget search can depend heavily on the value network understa
 
 </details>
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Future directions and open questions
 
 <details>
@@ -235,6 +247,8 @@ These are research questions, not demonstrated improvements:
 - **The next stage:** what combat strength and throughput are sufficient before resuming run-decision training, and how well do improvements transfer across characters?
 
 </details>
+
+---------------------------------------------------------------------------------------------------------------------------
 
 ## Quick start
 
@@ -254,6 +268,8 @@ Use `--suite human --workers 80` for the full human benchmark or `--suite primar
 
 **The trained model is [`models/best/model.pt`](models/best/model.pt).** `ostyai/initial_weights.pt` is the original random initialization. Cloning or importing the repository does not start training. Full training corpora, replay buffers, optimizer checkpoints and machine-specific compiled binaries are excluded; frozen benchmark inputs are included.
 
+---------------------------------------------------------------------------------------------------------------------------
+
 ## Repository guide
 
 | Location | What to find there |
@@ -266,6 +282,8 @@ Use `--suite human --workers 80` for the full human benchmark or `--suite primar
 | [scripts/](scripts/README.md) | Build, unpack, verify, evaluate and comparison entry points |
 | [provenance/](provenance/README.md) | Source identities, repair/deployment evidence and package verification |
 | [tools/human-panel-source/](tools/human-panel-source/) | Archival benchmark-construction tools; require external source data |
+
+---------------------------------------------------------------------------------------------------------------------------
 
 ## Credits and licensing
 
