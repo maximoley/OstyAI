@@ -29,6 +29,7 @@ Run `scripts/unpack_benchmarks.py` from the repository root to prepare inputs fo
 | [readme-step5500-metrics.json](readme-step5500-metrics.json) | README table values, including every-fight ≥1/3 run count, with source hashes |
 | [history/](history/) | Historical primary, policy-only and human validation JSONL |
 | [human-hp-baseline.json](human-hp-baseline.json) | Human HP-loss baseline analysis |
+| [comparison/](comparison/) | Completed 80-worker Mentor MCTS comparison results, full-process timing and compatibility preparation provenance |
 | [potion-sensitivity/](potion-sensitivity/) | Starting-potion use versus assigned cost at steps 5300–5500, with search and greedy policy; data and plot reproduction |
 | [throughput/](throughput/) | Hardware and timing measurements; see [timing scope](../docs/THROUGHPUT.md) |
 
@@ -36,7 +37,7 @@ Use wins divided by **all requested trials**, including capped/unresolved nonwin
 
 ## New agent comparison
 
-The [four-agent comparison](../docs/HUMAN_COMPARISON.md) evaluates default Mentor MCTS and three step-5500 modes: tiered search, uniform-32 search, and zero-search greedy policy. All use 80 workers and the same offline compatibility-prepared panel. Its full-process timing and new results are separate from the historical reports above. The README marks incomplete results as pending.
+The [four-agent comparison](../docs/HUMAN_COMPARISON.md) evaluates Mentor MCTS with RL-training budgets and three step-5500 modes: tiered search, uniform-32 search, and zero-search greedy policy. All use 80 workers and the same offline compatibility-prepared panel. MCTS is complete; its [outcomes and timing](comparison/) are separate from the historical reports above. The README marks incomplete results as pending.
 
 ## Verification
 

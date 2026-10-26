@@ -1,0 +1,38 @@
+{
+  "mentor_rl_training/summary.json": {
+    "original_json_sha256": "8caac5c307e57751b2f6067e2148839583da8781a6805ac0f3711c2af2a1f53c",
+    "stored_file_sha256": "8caac5c307e57751b2f6067e2148839583da8781a6805ac0f3711c2af2a1f53c"
+  },
+  "mentor_rl_training/provenance.json": {
+    "original_json_sha256": "03f3d2762aa52028b446a882112d4be4fe81800945464a04601d81068777b54c",
+    "stored_file_sha256": "03f3d2762aa52028b446a882112d4be4fe81800945464a04601d81068777b54c"
+  },
+  "mentor_rl_training/trials.json.gz": {
+    "original_json_sha256": "b165fe501cb9d1145ba5210fac23184f6665786b469627301f91da4a66c0de20",
+    "stored_file_sha256": "8d3623b64aa460c23ab1b22ddedb038863030a7dda46f74485cd10e8c940f292"
+  },
+  "mentor_rl_training/combats.json.gz": {
+    "original_json_sha256": "ce87d8f35e9b3406f294d90bfb94da652d2c0f7e103c3a93683975f2c5a234ac",
+    "stored_file_sha256": "86a5d095dca149735ac585ded0fbf8819c5e78ef340d7283f54dd3d91a4f3f24"
+  },
+  "mentor_rl_training/runs.json.gz": {
+    "original_json_sha256": "0f982d5e956bb3ace87828ab731218e4f0cf3087f306162a4f339ef6bb9298ec",
+    "stored_file_sha256": "d58067d08ca279b412c32662b806ae14462e7923eb612a8ea3c761922e22b4ce"
+  },
+  "mentor_rl_training/timing.json": {
+    "original_json_sha256": "479181ad4c9d2af59534a9b6a9561f008ca0516f76348b5f3a014c637e95c867",
+    "stored_file_sha256": "479181ad4c9d2af59534a9b6a9561f008ca0516f76348b5f3a014c637e95c867"
+  },
+  "prepared-manifest.json": {
+    "original_json_sha256": "044d5dc7f62855ac099a0b136c52ff01dd4c9c28c573011699074cd002afe6f9",
+    "stored_file_sha256": "044d5dc7f62855ac099a0b136c52ff01dd4c9c28c573011699074cd002afe6f9"
+  },
+  "preparation.json": {
+    "original_json_sha256": "3e5aec93c797f9126f4150af84cbf3f934ec75a43924afd9dfa1274c85f051e0",
+    "stored_file_sha256": "3e5aec93c797f9126f4150af84cbf3f934ec75a43924afd9dfa1274c85f051e0"
+  },
+  "fixture-manifest.json": {
+    "original_json_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f",
+    "stored_file_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f"
+  }
+}

@@ -6,6 +6,7 @@
 
 - [Offline compatibility preparation](#offline-compatibility-preparation)
 - [Metrics and timing](#metrics-and-timing)
+- [Completed results](#completed-results)
 - [Commands](#commands)
 
 This experiment uses all 512 human A10 winning runs: 12,099 independent combat starts × three frozen RNG states = 36,297 trials per configuration. All runs use **80 workers**, execute sequentially with production training paused, and cap actual play at 1000 actions per trial. The actor is the immutable exported step-5500 checkpoint. None of the neural configurations uses persistent search reuse. The policy-only arm evaluates the legal action logits and selects their argmax, with no search, chance sampling, or replay updates.
@@ -43,6 +44,12 @@ Report trial wins / 36,297, majority combat wins / 12,099 (at least 2/3), and ru
 The primary runtime is measured outside each benchmark process, from launch to successful completion, including loading, inference compilation, output writing and summary aggregation. Offline compatibility preparation and preflight are excluded. Native per-combat seconds and neural collection/capture statistics are retained separately; summed worker CPU durations are not labeled as wall time. Each complete timed run starts with a fresh result directory. If a run must resume, retained partial data are diagnostic and its interrupted timing must not be presented as a fresh uninterrupted comparison.
 
 MCTS trials are journaled as they finish. Neural trials are saved per shard. The runner verifies complete counts, matching fixture/native identities and checkpoint preservation before resuming the paused trainer. It does not consider a launched or partially completed run a finished benchmark.
+
+## Completed results
+
+The Mentor RL-training-budget arm completed all **36,297 trials** on October 26, 2026, with **33,577 wins (92.51%)**, **11,302 majority-won combats (93.41%)**, and **159/512 runs (31.05%)** meeting the ≥2/3 rule in every fight. **269/512 runs (52.54%)** met the ≥1/3 rule in every fight. No trials were unresolved; mean HP lost was **11.57**. The external full-process timer recorded **4,926.89 seconds (1 h 22 min 7 s)** with 80 workers.
+
+[Source outcomes, provenance, recomputed metrics and timing](../benchmarks/comparison/README.md) are included. This MCTS run finished uninterrupted. The subsequent neural arm initially failed during Torch/Triton startup before completing a shard; its failed 19.29-second attempt was archived separately and a fresh timed run started after restoring the successful preflight's project cache configuration. The completed MCTS outcomes and timing were preserved. Neural results remain pending.
 
 ## Commands
 
