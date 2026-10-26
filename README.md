@@ -88,20 +88,20 @@ The exported **step-5500 model** is the best completed human-benchmark checkpoin
 
 There were **9 unresolved trials**. Mean HP lost was **14.41 per completed trial**. The historical report contains evaluation and collection timers with different scopes; they are not substituted for the full-process timing requested for the new comparison. [Original summary](benchmarks/human-validation-005500/summary.json) · [table values and source hashes](benchmarks/readme-step5500-metrics.json).
 
-### Matched four-agent comparison
+### Matched agent comparison
 
 As of **October 26, 2026**, the following comparison is in progress. Every agent uses **80 workers**, the same complete compatibility-prepared panel, and a 1,000-action combat cap. Configurations execute sequentially with production training paused. Wall time includes process startup, loading, compilation, evaluation and result writing; offline fixture preparation is excluded.
 
 | Agent | Search budget | Trial win rate | Majority combat win rate | Every fight ≥2/3 | Every fight ≥1/3 | Full wall time | Status at update |
 |---|---|---|---|---|---|---|---|
 | Mentor MCTS (RL training budget) | 250 non-boss; 1,000 boss; rollout cap 200 | **92.51%** (33,577/36,297) | **93.41%** (11,302/12,099) | **31.05%** (159/512) | **52.54%** (269/512) | **1 h 22 min 7 s** | Complete |
-| OstyAI step 5500, tiered, no reuse | 32 / 64 / 96 / 128 | Pending | Pending | Pending | Pending | Pending | Running |
-| OstyAI step 5500, uniform, no reuse | 32 for every tier | Pending | Pending | Pending | Pending | Pending | Queued |
-| OstyAI step 5500, greedy policy | Zero search; legal-action argmax | Pending | Pending | Pending | Pending | Pending | Queued |
+| OstyAI step 5500, tiered, no reuse | 32 / 64 / 96 / 128 | **91.64%** (33,263/36,297) | **92.71%** (11,217/12,099) | **23.05%** (118/512) | **50.00%** (256/512) | **44 min 45 s** | Complete |
+| OstyAI step 5500, uniform, no reuse | 32 for every tier | — | — | — | — | — | Cancelled before start |
+| OstyAI step 5500, greedy policy | Zero search; legal-action argmax | Pending | Pending | Pending | Pending | Pending | Running |
 
-MCTS completed with **0 unresolved trials** and **11.57 mean HP lost per trial**. Full-process wall time was **4,926.89 seconds** with 80 workers. [Complete MCTS results and timing](benchmarks/comparison/README.md) · [recomputed table metrics](benchmarks/comparison/mentor_rl_training/readme-metrics.json). The neural rows await their new matched runs; the historical model row above is not substituted for them.
+MCTS completed with **0 unresolved trials** and **11.57 mean HP lost per trial**; tiered step 5500 had **11 unresolved trials** and **14.39 mean HP lost per completed trial**. Full-process wall times were **4,926.89 seconds** and **2,684.75 seconds**, respectively, with 80 workers. MCTS won **314 more trials (+0.87 percentage points)**; the tiered model completed the benchmark **1.84× faster**. [Complete results and timing](benchmarks/comparison/README.md) · [MCTS table metrics](benchmarks/comparison/mentor_rl_training/readme-metrics.json) · [tiered-model table metrics](benchmarks/comparison/model5500_tiered_no_reuse/readme-metrics.json). These new matched results remain distinct from the historical model row above.
 
-The previously proposed 8,000-simulation / rollout-400 MCTS run was removed before its full benchmark started. The current Mentor baseline retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixtures are made compatible offline without a runtime MCTS adapter. These new results will remain separate from the historical row above. [Comparison protocol](docs/HUMAN_COMPARISON.md).
+The uniform-32 neural run and the previously proposed 8,000-simulation / rollout-400 MCTS run were cancelled before starting. The current Mentor baseline retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixtures are made compatible offline without a runtime MCTS adapter. [Comparison protocol](docs/HUMAN_COMPARISON.md).
 
 ---------------------------------------------------------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-# Four-way human combat comparison
+# Human combat comparison
 
 [Documentation guide](README.md) · [Project overview](../README.md)
 
@@ -15,7 +15,7 @@ This experiment uses all 512 human A10 winning runs: 12,099 independent combat s
 |---|---|---:|
 | Mentor RL training budget | Common/easy/hard/elite: 250; boss: 1000 | 200 |
 | Step 5500, tiered Gumbel | Easy 32; hard 64; elite 96; boss 128 | Not applicable: neural leaf evaluation, no fixed search depth cap |
-| Step 5500, uniform Gumbel | 32 for every combat | Not applicable |
+| Step 5500, uniform Gumbel (cancelled before start) | 32 for every combat | Not applicable |
 | Step 5500, greedy policy | 0; highest-logit legal action | Not applicable |
 
 Mentor uses its existing complete native MCTS, BeliefDraw mode, heuristic rollouts, TexelWide leaf evaluation, RichBoth terminal evaluation, uniform prior and the deployed mode tuning/root guards. Its upstream evaluator is retained: it does **not** substitute the neural model's potion-cost objective. The model runs use the frozen 0/1 per-potion penalties. This is a comparison of complete agents, with this objective difference made explicit.
@@ -29,7 +29,7 @@ A pristine upstream checkout at `342c525aac02605b480c02f467837842f9ccf704` was b
 <details>
 <summary>Expand compatibility preparation and state-equality checks</summary>
 
-No runtime import adapter or alternate MCTS algorithm is introduced. The existing `state_from_dict` / `play_default_mcts` entry points consume copies prepared before the timed runs. The offline example `native/crates/sts2-wire/examples/prepare_mcts_fixtures.rs` normalizes recognized obsolete openings using the repaired simulator's native move definitions. All four configurations consume the same compatible copies, while the repository's original benchmark fixtures remain unchanged.
+No runtime import adapter or alternate MCTS algorithm is introduced. The existing `state_from_dict` / `play_default_mcts` entry points consume copies prepared before the timed runs. The offline example `native/crates/sts2-wire/examples/prepare_mcts_fixtures.rs` normalizes recognized obsolete openings using the repaired simulator's native move definitions. All three active configurations consume the same compatible copies, while the repository's original benchmark fixtures remain unchanged.
 
 For this panel, 952 enemy openings require normalization. In 192 Haunted Ship starts, the older loader represents the informational Debuff amount as 0 rather than 3. HAUNT's native effect still applies Weak 3 and adds five Dazed cards. This display-field difference is recorded explicitly; all other reconstructed state fields must compare equal to the original repaired import. Prepared fixtures must produce exactly equal native states through the neural and standard MCTS importers. Frozen RNG state, context, metadata and potion labels are preserved. Consequently these are **new matched compatibility-panel results**, not replacements for the historical step-5500 results.
 
@@ -49,7 +49,9 @@ MCTS trials are journaled as they finish. Neural trials are saved per shard. The
 
 The Mentor RL-training-budget arm completed all **36,297 trials** on October 26, 2026, with **33,577 wins (92.51%)**, **11,302 majority-won combats (93.41%)**, and **159/512 runs (31.05%)** meeting the ≥2/3 rule in every fight. **269/512 runs (52.54%)** met the ≥1/3 rule in every fight. No trials were unresolved; mean HP lost was **11.57**. The external full-process timer recorded **4,926.89 seconds (1 h 22 min 7 s)** with 80 workers.
 
-[Source outcomes, provenance, recomputed metrics and timing](../benchmarks/comparison/README.md) are included. This MCTS run finished uninterrupted. The subsequent neural arm initially failed during Torch/Triton startup before completing a shard; its failed 19.29-second attempt was archived separately and a fresh timed run started after restoring the successful preflight's project cache configuration. The completed MCTS outcomes and timing were preserved. Neural results remain pending.
+[Source outcomes, provenance, recomputed metrics and timing](../benchmarks/comparison/README.md) are included. This MCTS run finished uninterrupted. The subsequent neural arm initially failed during Torch/Triton startup before completing a shard; its failed 19.29-second attempt was archived separately and a fresh timed run started after restoring the successful preflight's project cache configuration. The completed MCTS outcomes and timing were preserved.
+
+Tiered step 5500 subsequently completed with **33,263/36,297 trial wins (91.64%)**, **11,217/12,099 majority combat wins (92.71%)**, **118/512 runs meeting every-fight ≥2/3 (23.05%)**, and **256/512 meeting every-fight ≥1/3 (50.00%)**. It had **11 unresolved trials** and **14.39 mean HP lost per completed trial**. Its uninterrupted benchmark process took **2,684.75 seconds (44 min 45 s)**; the replacement orchestrator preserved the original start time when adopting it to cancel the queued uniform-32 arm. [Timing details and complete results](../benchmarks/comparison/README.md).
 
 ## Commands
 
@@ -61,12 +63,11 @@ After building the offline preparation example and preparing a manifest with the
 ```bash
 .venv/bin/python scripts/benchmark_mcts.py --prepared COMPATIBLE_FIXTURES --workers 80 --rollout-depth 200 --budget-preset rl-training --output results/mentor-rl-training
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --output results/model5500-tiered
-.venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --uniform-simulations 32 --output results/model5500-uniform32
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --policy-only --output results/model5500-policy-greedy
 ```
 
 `run_human_comparison.py` is the training host orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
 
-The policy-only arm remains queued, and the 8,000-simulation / 400-rollout configuration remains cancelled. The replacement starts in a fresh `mentor_rl_training` output directory with the updated engine identity recorded. Production remains paused at the preserved checkpoint during the four sequential runs. Training resumes only after all four configurations finish and pass verification.
+The policy-only arm is running at this update. The uniform-32 arm and the 8,000-simulation / 400-rollout configuration were cancelled before starting. Production remains paused at the preserved checkpoint during the three required sequential runs. Training resumes only after MCTS, tiered step 5500 and policy-only finish and pass verification.
 
 </details>

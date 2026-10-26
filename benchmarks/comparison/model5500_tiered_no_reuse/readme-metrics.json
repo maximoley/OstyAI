@@ -1,0 +1,19 @@
+{
+  "trial_wins": 33263,
+  "trials": 36297,
+  "trial_win_rate": 0.9164118246687054,
+  "wins": 11217,
+  "combats": 12099,
+  "win_rate": 0.9271014133399454,
+  "runs_won_every_fight": 118,
+  "runs": 512,
+  "run_win_rate": 0.23046875,
+  "unresolved_trials": 11,
+  "trial_average_hp_lost": 14.391004795237833,
+  "runs_every_fight_at_least_one": 256,
+  "run_at_least_one_rate": 0.5,
+  "full_process_wall_seconds": 2684.7493739128113,
+  "workers": 80,
+  "independently_recomputed": true,
+  "timing_note": "Benchmark child ran uninterrupted; replacement orchestrator adopted it and retained its original start time. Completion polling interval 0.1 seconds. Failed prior startup excluded."
+}

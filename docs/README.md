@@ -25,7 +25,7 @@
 | Task | Read |
 |---|---|
 | Interpret trial, combat and run win rates | [Benchmark definitions](BENCHMARKS.md) |
-| Compare Mentor MCTS, neural search and greedy policy | [Four-agent comparison protocol](HUMAN_COMPARISON.md) |
+| Compare Mentor MCTS, neural search and greedy policy | [Matched comparison protocol](HUMAN_COMPARISON.md) |
 | Build, verify and run the exported model | [Reproduction guide](REPRODUCING.md) |
 | Interpret speed measurements fairly | [Throughput](THROUGHPUT.md) |
 | Locate fixtures and recorded outcomes | [Benchmark file guide](../benchmarks/README.md) |

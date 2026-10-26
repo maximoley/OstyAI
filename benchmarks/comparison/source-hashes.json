@@ -34,5 +34,29 @@
   "fixture-manifest.json": {
     "original_json_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f",
     "stored_file_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f"
+  },
+  "model5500_tiered_no_reuse/summary.json": {
+    "original_json_sha256": "2b3184c415bee7282d6792ef97199266ec2970cd97a61f4cbade3ba56d13e6d1",
+    "stored_file_sha256": "2b3184c415bee7282d6792ef97199266ec2970cd97a61f4cbade3ba56d13e6d1"
+  },
+  "model5500_tiered_no_reuse/provenance.json": {
+    "original_json_sha256": "c12dde761bb20d110c5fc4e17f8a63f1523eee62dddf968c22782fff37684e6a",
+    "stored_file_sha256": "c12dde761bb20d110c5fc4e17f8a63f1523eee62dddf968c22782fff37684e6a"
+  },
+  "model5500_tiered_no_reuse/trials.json.gz": {
+    "original_json_sha256": "4dcf553bbab8ef8d559be8f7d7671f0ccfbd5cb293654c4cafeade6adc7479ec",
+    "stored_file_sha256": "21c2a59ce4e83364e38cacfd51440eac3bd92428a1ab55fdd7f82783cac51fd8"
+  },
+  "model5500_tiered_no_reuse/combats.json.gz": {
+    "original_json_sha256": "56981704d950243583ac075c258c947bce42545412eab5ed146dc2636f5f5b09",
+    "stored_file_sha256": "ecf6020479a50abc7f0d74c1340b678846546af2fcc8f570e8226f6d25768382"
+  },
+  "model5500_tiered_no_reuse/runs.json.gz": {
+    "original_json_sha256": "53f789c40cc0fb56852e6731b6e6c6a138dfcafb24929aa6ee639e338e18e783",
+    "stored_file_sha256": "7fcd2a77255f1eb53c016319484d67460e1f402350bb2c4246a92df2a9e6c329"
+  },
+  "model5500_tiered_no_reuse/timing.json": {
+    "original_json_sha256": "21d1e760a0ec23f8d7cf19bac45a9fb3492141c7eeae4f9b652e01a1eb633bd3",
+    "stored_file_sha256": "21d1e760a0ec23f8d7cf19bac45a9fb3492141c7eeae4f9b652e01a1eb633bd3"
   }
 }
