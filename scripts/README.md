@@ -1,5 +1,11 @@
 # Script guide
 
+**On this page:**
+
+- [Setup and verification](#setup-and-verification)
+- [Evaluation](#evaluation)
+- [Deployment-specific orchestration](#deployment-specific-orchestration)
+
 Run commands from the repository root. [Quick start](../README.md#quick-start) · [Reproduction guide](../docs/REPRODUCING.md)
 
 ## Setup and verification

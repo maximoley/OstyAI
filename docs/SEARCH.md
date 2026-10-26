@@ -2,6 +2,12 @@
 
 [Documentation guide](README.md) · [Project overview](../README.md)
 
+**On this page:**
+
+- [Chance outcomes compete with search depth](#chance-outcomes-compete-with-search-depth)
+- [Recorded Soul example](#recorded-soul-example)
+- [Inspect every search step](#inspect-every-search-step)
+
 The policy scores legal actions and the value network estimates shaped terminal utility. Search uses those predictions to compare actions before playing one in the real combat. Gumbel sequential halving considers up to eight root actions, clipped by the legal-action count and simulation budget. A simulation budget counts search iterations, not a fixed number of moves into the future.
 
 ## Chance outcomes compete with search depth

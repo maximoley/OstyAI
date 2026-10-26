@@ -8,7 +8,7 @@ OstyAI combines a modified Rust simulator, a small policy/value transformer, Gum
 
 **Built on [Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)** and its `sts2-rs` simulator. The original combat engine, content, MCTS and belief-draw implementation are upstream work. See [credits and licensing](#credits-and-licensing).
 
-## Contents
+## Table of contents
 
 - [Motivation: why combat comes first](#motivation-why-combat-comes-first)
 - [A shared human-run combat benchmark](#a-shared-human-run-combat-benchmark)
@@ -23,7 +23,12 @@ OstyAI combines a modified Rust simulator, a small policy/value transformer, Gum
 - [Repository guide](#repository-guide)
 - [Credits and licensing](#credits-and-licensing)
 
+Use the table of contents to jump to a section. Expand the panels below for technical details and plots; the current results and quick start remain visible.
+
 ## Motivation: why combat comes first
+
+<details>
+<summary>Read the motivation: Necrobinder, combat strength, and throughput</summary>
 
 ### Why Necrobinder?
 
@@ -40,6 +45,8 @@ In my earlier full-run training experiment with a weak combat model and no searc
 Full-run training also depends on how many combats the combat model can finish per second. Even a search method that finds excellent moves may be impractical for training a run model if each in-game decision takes minutes. The aim is to approach superhuman combat strength while retaining enough throughput to train the next stage.
 
 For scale, the included 512-combat diagnostic measured roughly **616–644 played decisions/second** without persistent search reuse on an NVIDIA L40 with 80 workers. Those are short diagnostic measurements, not full human-benchmark runtimes. [Measured throughput and timing definitions](docs/THROUGHPUT.md).
+
+</details>
 
 ## A shared human-run combat benchmark
 
@@ -98,17 +105,30 @@ The previously proposed 8,000-simulation / rollout-400 MCTS run was removed befo
 
 ### Primary validation win rate
 
+<details>
+<summary>Show the annotated primary-validation plot</summary>
+
 ![Primary search-enabled validation win rate from optimizer step 0 through 5500, with search and simulator changes annotated](docs/assets/validation_winrate_annotated.png)
 
 The primary panel contains **8,192 trials per checkpoint**. Step 5500 scored **91.92% with search** and **80.09% with greedy policy only**. These primary-panel scores are distinct from the 512-run human benchmark. Search budgets and simulator repairs changed during training, so jumps in the plot do not isolate learning gains. [Matched primary results](benchmarks/validation-comparison-005500.json).
 
+</details>
+
 ### Human benchmark over training
+
+<details>
+<summary>Show the human-benchmark training plot</summary>
 
 ![Human benchmark trial and majority win rates at steps 4000, 4500, 5000 and 5500, plus runs meeting the at-least-one and majority rule in every fight](docs/assets/human_benchmark_vs_optimizer_step.png)
 
 The plots stop at step 5500. Persistent search reuse was enabled after that checkpoint, so these curves do not establish its effect on benchmark strength. Historical configuration and native-library identities are retained in the [validation histories](benchmarks/history/) and [provenance](PROVENANCE.md).
 
+</details>
+
 ## Model architecture
+
+<details>
+<summary>Expand the architecture and component table</summary>
 
 The model has **1,593,346 parameters** and shares an encoder between its policy and value heads.
 
@@ -123,7 +143,12 @@ The model has **1,593,346 parameters** and shares an encoder between its policy 
 
 The policy can act directly by selecting its highest-scoring legal action, or supply priors to Gumbel search while the value head evaluates leaves. [Architecture and tensor layout](docs/ARCHITECTURE.md) · [model implementation](ostyai/model.py) · [checkpoint metadata](models/best/metadata.json).
 
+</details>
+
 ## Training scheme
+
+<details>
+<summary>Expand the training loop, pool quotas, loss, and reward</summary>
 
 Training follows **collection → learning → actor synchronization**. A frozen actor drives 80 Rust workers through approximately 1,024 combat starts per cycle. Completed decision examples enter a **65,536-example FIFO replay buffer**. Each optimizer update samples **16,384 examples**, accumulates gradients across **64 microbatches of 256**, and synchronizes the actor. The target is 10,000 updates; the packaged model is step 5500.
 
@@ -147,7 +172,12 @@ The utility is unclipped and can exceed 1. Training and primary validation assig
 
 Primary search and matched policy-only validation run every **100 updates**; the human benchmark runs every **500**. No learning occurs between paired primary passes. Current source supports persistent search reuse, but the published step-5500 scores and the new comparison's neural runs use no reuse. [Full training configuration](docs/TRAINING.md).
 
+</details>
+
 ## Changes relative to the Rust simulator
+
+<details>
+<summary>Expand neural integration and simulator repairs</summary>
 
 OstyAI extends spire-mentor's engine with a neural learning pipeline and targeted simulator repairs. The [difference inventory](provenance/upstream-differences.json) compares the packaged source with upstream checkout `e7a923e90dc731e83683791b6c4d4a4059656149`.
 
@@ -168,7 +198,12 @@ OstyAI extends spire-mentor's engine with a neural learning pipeline and targete
 
 [Simulator change details](docs/SIMULATOR_CHANGES.md) and [deployment evidence](provenance/changes/) document tests and native hashes. Historical results are never relabeled as results from a repaired or newer simulator.
 
+</details>
+
 ## Low-budget search through chance nodes
+
+<details>
+<summary>Expand the Soul example and chance-versus-depth discussion</summary>
 
 A small search budget is divided between exploring different random outcomes and looking further ahead within each outcome. For a draw card, search must answer both:
 
@@ -183,7 +218,12 @@ Consequently, low-budget search can depend heavily on the value network understa
 
 [Follow the complete search trace](docs/SEARCH.md): all candidate scores, node values, outcome samples, backups and per-simulation results are included.
 
+</details>
+
 ## Future directions and open questions
+
+<details>
+<summary>Expand research directions and open questions</summary>
 
 These are research questions, not demonstrated improvements:
 
@@ -193,6 +233,8 @@ These are research questions, not demonstrated improvements:
 - **Useful reuse:** can persistent search improve strength per second after accounting for cache-management overhead?
 - **Benchmark validity:** how do results change on strictly held-out runs, additional frozen seeds, and stronger reconstruction/parity checks?
 - **The next stage:** what combat strength and throughput are sufficient before resuming run-decision training, and how well do improvements transfer across characters?
+
+</details>
 
 ## Quick start
 

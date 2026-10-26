@@ -2,6 +2,12 @@
 
 [Documentation guide](README.md) · [Project overview](../README.md)
 
+**On this page:**
+
+- [Offline compatibility preparation](#offline-compatibility-preparation)
+- [Metrics and timing](#metrics-and-timing)
+- [Commands](#commands)
+
 This experiment uses all 512 human A10 winning runs: 12,099 independent combat starts × three frozen RNG states = 36,297 trials per configuration. All runs use **80 workers**, execute sequentially with production training paused, and cap actual play at 1000 actions per trial. The actor is the immutable exported step-5500 checkpoint. None of the neural configurations uses persistent search reuse. The policy-only arm evaluates the legal action logits and selects their argmax, with no search, chance sampling, or replay updates.
 
 | Configuration | Simulations per decision | Maximum MCTS rollout length |
@@ -15,11 +21,16 @@ Mentor uses its existing complete native MCTS, BeliefDraw mode, heuristic rollou
 
 ## Offline compatibility preparation
 
+<details>
+<summary>Expand compatibility preparation and state-equality checks</summary>
+
 No runtime import adapter or alternate MCTS algorithm is introduced. The existing `state_from_dict` / `play_default_mcts` entry points consume copies prepared before the timed runs. The offline example `native/crates/sts2-wire/examples/prepare_mcts_fixtures.rs` normalizes recognized obsolete openings using the repaired simulator's native move definitions. All four configurations consume the same compatible copies, while the repository's original benchmark fixtures remain unchanged.
 
 For this panel, 952 enemy openings require normalization. In 192 Haunted Ship starts, the older loader represents the informational Debuff amount as 0 rather than 3. HAUNT's native effect still applies Weak 3 and adds five Dazed cards. This display-field difference is recorded explicitly; all other reconstructed state fields must compare equal to the original repaired import. Prepared fixtures must produce exactly equal native states through the neural and standard MCTS importers. Frozen RNG state, context, metadata and potion labels are preserved. Consequently these are **new matched compatibility-panel results**, not replacements for the historical step-5500 results.
 
 Preparation takes place once, separately timed; its change log, source manifest hash and prepared-shard hashes accompany results. The runtime library is the unchanged deployed build `6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f`. The discarded adapter build is not used.
+
+</details>
 
 ## Metrics and timing
 
@@ -30,6 +41,9 @@ The primary runtime is measured outside each benchmark process, from launch to s
 MCTS trials are journaled as they finish. Neural trials are saved per shard. The runner verifies complete counts, matching fixture/native identities and checkpoint preservation before resuming the paused trainer. It does not consider a launched or partially completed run a finished benchmark.
 
 ## Commands
+
+<details>
+<summary>Expand commands and deployment-specific orchestration notes</summary>
 
 After building the offline preparation example and preparing a manifest with the new shard hashes:
 
@@ -45,3 +59,5 @@ After building the offline preparation example and preparing a manifest with the
 The policy-only arm was added while the first MCTS process was running. The controller was replaced without interrupting that benchmark or its workers; its original launch timestamp is retained. This first arm uses process-exit polling at 0.1-second intervals for completion timing, which can add polling/scheduling latency. Later arms are timed directly around their child process.
 
 The user subsequently removed the queued 8000-simulation, rollout-cap-400 MCTS configuration because of runtime. It was never launched as a full benchmark; its earlier 80-trial preflight is retained only as a diagnostic, not a benchmark result. The active default MCTS process and its original timing were preserved. Training resumes after the four configurations listed above finish.
+
+</details>

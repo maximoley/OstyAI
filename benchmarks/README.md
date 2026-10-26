@@ -2,6 +2,13 @@
 
 [Project results](../README.md#current-results) · [Metric definitions](../docs/BENCHMARKS.md)
 
+**On this page:**
+
+- [Inputs](#inputs)
+- [Published outcomes](#published-outcomes)
+- [New agent comparison](#new-agent-comparison)
+- [Verification](#verification)
+
 ## Inputs
 
 | Location | Contents |

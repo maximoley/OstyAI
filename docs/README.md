@@ -2,6 +2,12 @@
 
 [Project overview and results](../README.md)
 
+**On this page:**
+
+- [Understand the project](#understand-the-project)
+- [Evaluate and reproduce](#evaluate-and-reproduce)
+- [Figures and diagnostic artifacts](#figures-and-diagnostic-artifacts)
+
 ## Understand the project
 
 | Question | Read |

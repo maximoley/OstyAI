@@ -2,6 +2,13 @@
 
 [Documentation guide](README.md) · [Benchmark file guide](../benchmarks/README.md) · [Current results](../README.md#current-results)
 
+**On this page:**
+
+- [Human panel](#human-panel)
+- [Primary matched search/policy panel](#primary-matched-searchpolicy-panel)
+- [Provenance](#provenance)
+- [Timing and matched agent comparisons](#timing-and-matched-agent-comparisons)
+
 The selected model is the step-5500 human-panel champion among completed benchmark checkpoints 4000, 4500, 5000 and 5500 at export time. It leads all three human win metrics. Step 5300 has a higher primary search score; this selection is not a claim of universally best performance.
 
 | Human checkpoint | All-trial win rate | Majority combat win rate | Every-combat run win rate |
@@ -29,9 +36,14 @@ Step 5500 search: **7530/8192 = 91.9189%**, four unresolved. Policy only: **6561
 
 ## Provenance
 
+<details>
+<summary>Expand model, fixture, and simulator identity details</summary>
+
 Model tensor fingerprints use two historical conventions: human hashes names plus tensor bytes; primary hashes names, dtype, shape and tensor bytes. `scripts/verify_model.py` proves that both identify the same exported actor. Step-5500 native hash starts `ce7318db`; the packaged current source's deployed native starts `6a041f84` and adds persistent graph reuse. Published benchmark results predate reuse. Neither hash is expected to match a binary rebuilt at a new path with a new compiler.
 
 `scripts/verify_benchmarks.py` verifies frozen shard hashes, the primary fixture hash, compressed-file integrity, and recomputes human aggregate tables from all trial results. Full training data and raw human exports are omitted.
+
+</details>
 
 ## Timing and matched agent comparisons
 

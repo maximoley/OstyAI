@@ -2,6 +2,12 @@
 
 [Top-level provenance](../PROVENANCE.md) · [Attribution](../ATTRIBUTION.md)
 
+**On this page:**
+
+- [Source and package identity](#source-and-package-identity)
+- [Dataset construction](#dataset-construction)
+- [Simulator and training changes](#simulator-and-training-changes)
+
 ## Source and package identity
 
 - [Upstream differences](upstream-differences.json): inventory relative to the recorded upstream checkout.

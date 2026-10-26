@@ -2,6 +2,11 @@
 
 [Documentation guide](README.md) · [Project overview](../README.md)
 
+**On this page:**
+
+- [Reward](#reward)
+- [Run with your own data](#run-with-your-own-data)
+
 Production alternates **collection → one optimizer update → actor synchronization**. An actor is fixed during collection. Rust workers own states, act/search, and write final pinned observations; Python dispatches GPU batches. Completed-combat rows enter bounded FIFO replay. Collection and learning are cyclic on one GPU; this is not simultaneous independent actor/learner training.
 
 One cycle consumes a prepared bank of approximately 1024 combat starts (unsupported starts can be rejected). Every completed combat contributes its decision records, so fresh examples per cycle vary with combat length. There is no fixed 16,384-fresh-example requirement: **16,384 is the sampled optimizer batch**, and sampling can repeat replay entries.
@@ -43,6 +48,9 @@ It is unclipped. Independent per-potion costs are Uniform[0,1] during training a
 
 ## Run with your own data
 
+<details>
+<summary>Expand data requirements and training commands</summary>
+
 The full training corpus and replay are intentionally absent. Supply native wire JSONL banks under `ostyai/prepared/bank-000000.jsonl`, etc., preserving the corresponding metadata/manifests and held-out exclusions in `ostyai/corpus/manifest.json`. Unpack benchmark fixtures first. The schema is illustrated by the frozen benchmark JSONL; each row contains `wire`, `metadata`, and the required context/evaluation fields.
 
 ```bash
@@ -54,3 +62,5 @@ This starts fresh from `ostyai/initial_weights.pt`. It does **not** resume the c
 `prepare_banks.py` is the legacy human/generated corpus conversion entry point. It requires a separate conversion checkout (`OSTYAI_CORPUS_CONVERTER`, containing `full_corpus.py` and its `native-lib`); it is not necessary for inference or for training on already prepared banks. Original human-panel construction scripts under `tools/human-panel-source/` are archival source evidence and require external raw data/conversion dependencies, not included as a one-command dataset download.
 
 Primary search and matched policy-only validation run every 100 optimizer updates; the 512-run human benchmark runs every 500. Validation preserves the frozen actor and training RNG; results/caches pin provenance. No optimizer updates occur between paired primary evaluations.
+
+</details>
