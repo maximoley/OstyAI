@@ -65,11 +65,14 @@ Each fight preserves its historical deck, relics, HP and inventory. Starting pot
 
 Completed **October 26, 2026**, using **80 workers**, identical compatibility-prepared fixtures and a **1,000-action cap**. Runs were sequential with training paused. Wall time includes startup, loading, compilation, evaluation and output writing; fixture preparation is excluded.
 
-| Agent | Simulations per decision | Trial win rate | Majority combat win rate | Every fight ≥2/3 | Every fight ≥1/3 | Wall time |
-|---|---|---|---|---|---|---|
-| Mentor MCTS | 250 non-boss; 1,000 boss; rollout cap 200 | **92.51%** (33,577/36,297) | **93.41%** (11,302/12,099) | **31.05%** (159/512) | **52.54%** (269/512) | **1 h 22 min 7 s** |
-| OstyAI 5500, tiered, no reuse | 32 / 64 / 96 / 128 | **91.64%** (33,263/36,297) | **92.71%** (11,217/12,099) | **23.05%** (118/512) | **50.00%** (256/512) | **44 min 45 s** |
-| OstyAI 5500, greedy policy | No search; legal-action argmax | **80.08%** (29,068/36,297) | **81.38%** (9,846/12,099) | **2.73%** (14/512) | **12.70%** (65/512) | **5 min 16 s** |
+| Metric | Mentor MCTS | OstyAI 5500, tiered, no reuse | OstyAI 5500, greedy policy |
+|---|---|---|---|
+| Simulations per decision | 250 non-boss; 1,000 boss; rollout cap 200 | 32 / 64 / 96 / 128 | No search; legal-action argmax |
+| Trial win rate | **92.51%** (33,577/36,297) | **91.64%** (33,263/36,297) | **80.08%** (29,068/36,297) |
+| Majority combat win rate | **93.41%** (11,302/12,099) | **92.71%** (11,217/12,099) | **81.38%** (9,846/12,099) |
+| Every fight ≥2/3 | **31.05%** (159/512) | **23.05%** (118/512) | **2.73%** (14/512) |
+| Every fight ≥1/3 | **52.54%** (269/512) | **50.00%** (256/512) | **12.70%** (65/512) |
+| Wall time | **1 h 22 min 7 s** | **44 min 45 s** | **5 min 16 s** |
 
 MCTS won **314 more trials (+0.87 percentage points)** than tiered search; tiered search was **1.84× faster**. Greedy policy was **8.50× faster** than tiered search, with an **11.56-point lower win rate**.
 
