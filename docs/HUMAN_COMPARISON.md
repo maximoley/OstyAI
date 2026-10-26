@@ -55,6 +55,8 @@ Tiered step 5500 subsequently completed with **33,263/36,297 trial wins (91.64%)
 
 Greedy policy-only step 5500 completed with **29,068/36,297 trial wins (80.08%)**, **9,846/12,099 majority combat wins (81.38%)**, **14/512 runs meeting every-fight ≥2/3 (2.73%)**, and **65/512 meeting every-fight ≥1/3 (12.70%)**. It had **1,126 unresolved trials**, included as nonwins, and **18.96 mean HP lost per completed trial**. Full-process runtime was **316.00 seconds (5 min 16 s)** with 80 workers and successful exit code 0. It is **8.50× faster** than tiered search, with **11.56 percentage points lower trial win rate**. [Policy-only source records](../benchmarks/comparison/model5500_policy_greedy/readme-metrics.json).
 
+A follow-up with **boss256** (other tiers unchanged, no reuse) scored **92.27% trial wins**, **93.35% majority wins**, **27.34% every-fight ≥2/3** and **55.86% every-fight ≥1/3** in **1 h 6 min 24 s** with 80 workers. [Full outcomes and provenance](../benchmarks/comparison/model5500_boss256_no_reuse/readme-metrics.json).
+
 ## Commands
 
 <details>

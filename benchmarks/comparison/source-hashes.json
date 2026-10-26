@@ -85,11 +85,36 @@
   },
   "comparison.json": {
     "original_json_sha256": "9b3b9737129d660f881893bf44e2e5b5636f57bc714f65e88b1dbd7a0b19e933",
-    "stored_file_sha256": "ee2a46ad22c195ce3074798f3f100d6d7f11575c531bf32251cddc6afe41d3e4",
-    "transformation": "Absolute server summary paths replaced with repository-relative paths; metrics unchanged."
+    "stored_file_sha256": "29f027e0b6c6648426471eeb56fc61119d89624eaa8539d059ae0cee7ceb117a",
+    "transformation": "Original three-agent aggregate extended locally with independently recomputed boss256 results; server paths remain repository-relative. Original JSON hash identifies the original three-agent source."
   },
   "results-verification.json": {
     "original_json_sha256": "a45bd3dddbade56a9c5b52a4546b2feab743fa70dd9c86b373be3ac96aa3a0eb",
-    "stored_file_sha256": "a45bd3dddbade56a9c5b52a4546b2feab743fa70dd9c86b373be3ac96aa3a0eb"
+    "stored_file_sha256": "9f2e455a76b59b55ec9131c88d15458e195220749c3295263e81c7f2e174284d",
+    "transformation": "Original three-agent aggregate extended locally with independently recomputed boss256 results; server paths remain repository-relative. Original JSON hash identifies the original three-agent source."
+  },
+  "model5500_boss256_no_reuse/summary.json": {
+    "original_json_sha256": "77df4bddc6f08f89de40300708a961842f8e58550abe46a622bc817596c98033",
+    "stored_file_sha256": "77df4bddc6f08f89de40300708a961842f8e58550abe46a622bc817596c98033"
+  },
+  "model5500_boss256_no_reuse/provenance.json": {
+    "original_json_sha256": "c94bf6fdcf0d5822a4c319a35812d4cb137b0137ee76c412835d33d39842927c",
+    "stored_file_sha256": "c94bf6fdcf0d5822a4c319a35812d4cb137b0137ee76c412835d33d39842927c"
+  },
+  "model5500_boss256_no_reuse/trials.json.gz": {
+    "original_json_sha256": "270226a0f6ee110da4ccd196600fe6d2c56780237398a1a766876654070885ed",
+    "stored_file_sha256": "dfdd3ffd837383e8c9c0340d902742df8a19ad4ea2549ba3e0315f5c4abf37f6"
+  },
+  "model5500_boss256_no_reuse/combats.json.gz": {
+    "original_json_sha256": "4602fbc3e996bc0be9ba289c4041979b8c279660794168f6dd17a964603f1462",
+    "stored_file_sha256": "6682ff9100ee1426ae0d4756eaa5c32e1b60a5dba3e888feb1bbcfe80417d94d"
+  },
+  "model5500_boss256_no_reuse/runs.json.gz": {
+    "original_json_sha256": "4fabb8e5cfdef6694f7e52a27070ca8aedbba457452bde95d857671496170b37",
+    "stored_file_sha256": "9868ecffcb79a07819201590c5ef4c12acdb296b31a043a72c61db3e6f213a80"
+  },
+  "model5500_boss256_no_reuse/timing.json": {
+    "original_json_sha256": "6520badb768dfa62602b54a585c636d548a8301198dbbc5355edca5fe66b2b6c",
+    "stored_file_sha256": "6520badb768dfa62602b54a585c636d548a8301198dbbc5355edca5fe66b2b6c"
   }
 }

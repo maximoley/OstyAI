@@ -65,18 +65,18 @@ Each fight preserves its historical deck, relics, HP and inventory. Starting pot
 
 Completed **October 26, 2026**, using **80 workers**, identical compatibility-prepared fixtures and a **1,000-action cap**. Runs were sequential with training paused. Wall time includes startup, loading, compilation, evaluation and output writing; fixture preparation is excluded.
 
-| Metric | Mentor MCTS | OstyAI 5500, tiered, no reuse | OstyAI 5500, greedy policy |
-|---|---|---|---|
-| Simulations per decision | 250 non-boss; 1,000 boss; rollout cap 200 | 32 / 64 / 96 / 128 | No search; legal-action argmax |
-| Trial win rate | **92.51%** (33,577/36,297) | **91.64%** (33,263/36,297) | **80.08%** (29,068/36,297) |
-| Majority combat win rate | **93.41%** (11,302/12,099) | **92.71%** (11,217/12,099) | **81.38%** (9,846/12,099) |
-| Every fight ≥2/3 | **31.05%** (159/512) | **23.05%** (118/512) | **2.73%** (14/512) |
-| Every fight ≥1/3 | **52.54%** (269/512) | **50.00%** (256/512) | **12.70%** (65/512) |
-| Wall time | **1 h 22 min 7 s** | **44 min 45 s** | **5 min 16 s** |
+| Metric | Mentor MCTS | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|
+| Simulations per decision | 250 non-boss; 1,000 boss; rollout cap 200 | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
+| Trial win rate | **92.51%** | **91.64%** | **92.27%** | **80.08%** |
+| Majority combat win rate | **93.41%** | **92.71%** | **93.35%** | **81.38%** |
+| Every fight ≥2/3 | **31.05%** | **23.05%** | **27.34%** | **2.73%** |
+| Every fight ≥1/3 | **52.54%** | **50.00%** | **55.86%** | **12.70%** |
+| Wall time | **1 h 22 min 7 s** | **44 min 45 s** | **1 h 6 min 24 s** | **5 min 16 s** |
 
-MCTS won **314 more trials (+0.87 percentage points)** than tiered search; tiered search was **1.84× faster**. Greedy policy was **8.50× faster** than tiered search, with an **11.56-point lower win rate**.
+Increasing the boss budget from 128 to 256 raised trial win rate by **0.63 percentage points**, with **48% longer runtime**. All neural search runs use **no persistent reuse**.
 
-Unresolved trials were **0 / 11 / 1,126**, and mean HP lost was **11.57 / 14.39 / 18.96**, respectively. MCTS retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixture compatibility is handled offline, without a runtime adapter.
+Unresolved trials were **0 / 11 / 15 / 1,126**, and mean HP lost was **11.57 / 14.39 / 14.16 / 18.96**, in column order. MCTS retains its upstream evaluator rather than the neural potion-penalty objective; fixture compatibility is handled offline. See the linked results for counts and provenance.
 
 [Full results and timing](benchmarks/comparison/README.md) · [Comparison protocol](docs/HUMAN_COMPARISON.md)
 
@@ -89,7 +89,7 @@ Step 5500 is the best completed human-benchmark checkpoint in the bundled traini
 
 | Trial wins | Majority combat wins | Every fight ≥2/3 | Every fight ≥1/3 |
 |---|---|---|---|
-| **91.65%** (33,265/36,297) | **92.72%** (11,218/12,099) | **23.83%** (122/512) | **50.39%** (258/512) |
+| **91.65%** | **92.72%** | **23.83%** | **50.39%** |
 
 There were 9 unresolved trials and 14.41 mean HP lost per completed trial. Its uninterrupted full-process runtime was not verified. This historical evaluation is separate from the timed comparison above.
 

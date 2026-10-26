@@ -18,8 +18,15 @@
       "metrics_recomputed": true,
       "full_trial_set": true,
       "settings_verified": true
+    },
+    {
+      "configuration": "model5500_boss256_no_reuse",
+      "metrics_recomputed": true,
+      "full_trial_set": true,
+      "settings_verified": true
     }
   ],
   "trial_sets_identical": true,
-  "time": 1793051458.441115
+  "time": 1793051458.441115,
+  "extended_at_utc": "2026-10-26T23:46:24.571768+00:00"
 }
