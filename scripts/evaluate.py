@@ -21,7 +21,6 @@ def main():
     ap.add_argument('--cases',type=int,default=24,help='Smoke suite only')
     a=ap.parse_args()
     if a.uniform_simulations is not None and (a.policy_only or not 1<=a.uniform_simulations<=256):ap.error('uniform simulations requires search mode and a budget in 1..256')
-    if a.suite=='human' and a.policy_only:ap.error('Published human benchmark is search-based; use primary for policy-only comparison.')
     if (a.output/'result.json').exists():ap.error('Choose a fresh output directory; results are never overwritten.')
     if a.cases<1 or a.workers<1:ap.error('cases and workers must be positive')
     required=(a.human_fixtures/'manifest.json') if a.suite=='human' and a.human_fixtures else ROOT/'ostyai'/('human-win-validation/manifest.json' if a.suite=='human' else 'validation/fixtures.jsonl')

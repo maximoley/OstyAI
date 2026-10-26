@@ -17,6 +17,7 @@ def main():
         runner=int((p/'runner.pid').read_text())
         if not Path(f'/proc/{runner}').exists():raise RuntimeError('Benchmark runner exited before completion; inspect runner.log')
         time.sleep(30)
+    assert len(comparison['results'])==5
     trial_sets=[];checks=[]
     for row in comparison['results']:
         sp=Path(row['summary']);d=sp.parent;s=json.loads(sp.read_text());trials=json.loads((d/'trials.json').read_text())
@@ -28,11 +29,17 @@ def main():
         if row['configuration'].startswith('model'):
             assert s['model_sha256']=='a04bd9f4964954ad3c6bc11e8de7e809e01075bfb7b45fe4939dcd2580d84376'
             assert s['search_reuse']['enabled'] is False
+            policy_only=row['configuration']=='model5500_policy_greedy'
+            if policy_only:
+                assert s['policy_only'] and s['action_selection']=='legal_argmax' and s['simulations']==0 and s['workers']==80
             budgets=dict(easy=32,hard=32,elite=32,boss=32)if'uniform32'in row['configuration']else dict(easy=32,hard=64,elite=96,boss=128)
-            assert s['simulations']==budgets
+            if not policy_only:assert s['simulations']==budgets
             parts=list(d.glob('part-*.json'));assert len(parts)==48
             for part in parts:
                 r=json.loads(part.read_text());assert r['workers']==80 and r['replay_added']==0 and not r['fatal']
+                if policy_only:
+                    assert all(r[k]==0 for k in ['simulations','search_transitions','forced_search_transitions','chance_samples','replay_added','forced_actions'])
+                    continue
                 assert r['simulations']==sum(budgets[o['search_tier']]*o['searched_decisions']for o in r['outcomes'])
         else:
             for r in trials:
@@ -47,7 +54,7 @@ def main():
     for r in comparison['results']:
         sec=r['wall_seconds'];h=int(sec//3600);m=int(sec%3600//60);ss=sec%60
         lines.append(f"| {r['configuration']} | {r['trial_wins']}/{r['trials']} ({100*r['trial_win_rate']:.3f}%) | {r['wins']}/{r['combats']} ({100*r['win_rate']:.3f}%) | {r['runs_won_every_fight']}/512 ({100*r['run_win_rate']:.3f}%) | {r['trial_average_hp_lost']:.3f} | {r['unresolved_trials']} | {h}h {m}m {ss:.1f}s |")
-    lines+=['','Unresolved trials count as nonwins. HP means exclude unresolved trials. Combats are independent historical starts, not linked model-played runs. Human fixtures may overlap training.','', 'Timing includes process startup, loading, compilation and result writing; offline compatibility preparation/preflight are excluded. All four runs use identical compatibility-prepared states. Original frozen files remain unchanged. Mentor retains its upstream evaluator; model runs use the fixed 0/1 potion-cost labels.']
+    lines+=['','Unresolved trials count as nonwins. HP means exclude unresolved trials. Combats are independent historical starts, not linked model-played runs. Human fixtures may overlap training.','', 'Timing includes process startup, loading, compilation and result writing; offline compatibility preparation/preflight are excluded. All five runs use identical compatibility-prepared states. Original frozen files remain unchanged. Mentor retains its upstream evaluator; model runs use the fixed 0/1 potion-cost labels.']
     (p/'comparison.md').write_text('\n'.join(lines)+'\n')
     save(p/'results-verification.json',dict(complete=True,checks=checks,trial_sets_identical=True,time=time.time()))
     while not (p/'resume-started.json').exists():

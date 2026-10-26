@@ -1,4 +1,4 @@
-"""Run four sequential 80-worker benchmarks and resume the saved production run."""
+"""Run five sequential 80-worker benchmarks and resume the saved production run."""
 import argparse,fcntl,hashlib,json,os,subprocess,time
 from pathlib import Path
 
@@ -11,7 +11,7 @@ def sha(p):
     return h.hexdigest()
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,required=True);ap.add_argument('--production',type=Path,required=True);a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,required=True);ap.add_argument('--production',type=Path,required=True);ap.add_argument('--adopt-first',action='store_true',help='Continue monitoring an already running first benchmark without restarting it');a=ap.parse_args()
     root=a.root;package=Path(__file__).resolve().parents[1];python=os.environ['OSTYAI_PYTHON'];prepared=root/'compatible-fixtures'
     lock=(root/'runner.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     (root/'runner.pid').write_text(str(os.getpid()))
@@ -26,29 +26,50 @@ def main():
         ('mentor_8000_depth400',[python,str(package/'scripts/benchmark_mcts.py'),'--prepared',str(prepared),'--workers','80','--simulations','8000','--rollout-depth','400']),
         ('model5500_tiered_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared)]),
         ('model5500_uniform32_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--uniform-simulations','32']),
+        ('model5500_policy_greedy',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--policy-only']),
     ]
-    all_started=time.time();rows=[]
+    all_started=json.loads((root/'status.json').read_text())['started_at_unix'] if a.adopt_first else time.time();rows=[]
     for name,cmd in commands:
         if (root/'STOP').exists():raise RuntimeError('Comparison STOP requested; training remains paused')
-        out=root/name;assert not out.exists(),'Fresh output required for unbiased full-run wall timing: '+name
+        out=root/name
+        adopted=a.adopt_first and not rows
+        if not adopted:assert not out.exists(),'Fresh output required for unbiased full-run wall timing: '+name
         cmd+=['--output',str(out)]
         save(root/'status.json',dict(stage='benchmark',configuration=name,pid=os.getpid(),completed_configurations=len(rows),started_at_unix=all_started,time=time.time()))
-        begun=time.perf_counter();begun_wall=time.time()
-        with (root/(name+'.log')).open('wb')as log:
-            child=subprocess.Popen(cmd,cwd=package,env=env,stdout=log,stderr=subprocess.STDOUT)
-            save(root/(name+'-process.json'),dict(pid=child.pid,command=cmd,started_at_unix=begun_wall,workers=80))
-            code=child.wait()
-        elapsed=time.perf_counter()-begun
-        save(root/(name+'-timing.json'),dict(wall_seconds=elapsed,started_at_unix=begun_wall,finished_at_unix=time.time(),exit_code=code,includes_process_startup_imports_and_compilation=True,preparation_excluded=True,workers=80))
+        if adopted:
+            previous=json.loads((root/(name+'-process.json')).read_text())
+            assert previous['command']==cmd and previous['workers']==80
+            child_pid=previous['pid'];procpath=Path(f'/proc/{child_pid}')
+            if procpath.exists():
+                actual=(procpath/'cmdline').read_bytes().split(b'\0')[:-1]
+                assert [x.decode()for x in actual]==cmd,'Refuse to adopt another process'
+            begun_wall=previous['started_at_unix']
+            while procpath.exists():
+                try:state=(procpath/'stat').read_text().split(') ',1)[1].split()[0]
+                except FileNotFoundError:break
+                if state=='Z':break
+                time.sleep(0.1)
+            elapsed=time.time()-begun_wall
+            # Adoption cannot waitpid a process with another parent. Successful
+            # complete artifacts below are required instead of inventing an exit code.
+            code=None
+        else:
+            begun=time.perf_counter();begun_wall=time.time()
+            with (root/(name+'.log')).open('wb')as log:
+                child=subprocess.Popen(cmd,cwd=package,env=env,stdout=log,stderr=subprocess.STDOUT)
+                save(root/(name+'-process.json'),dict(pid=child.pid,command=cmd,started_at_unix=begun_wall,workers=80))
+                code=child.wait()
+            elapsed=time.perf_counter()-begun
+        save(root/(name+'-timing.json'),dict(wall_seconds=elapsed,started_at_unix=begun_wall,finished_at_unix=time.time(),exit_code=code,includes_process_startup_imports_and_compilation=True,preparation_excluded=True,workers=80,adopted_process=adopted,completion_poll_interval_seconds=0.1 if adopted else None))
         if code:raise RuntimeError(f'{name} failed with exit code {code}; inspect log')
         summary_path=out/'summary.json' if name.startswith('mentor')else out/'human-validation-005500/summary.json'
         s=json.loads(summary_path.read_text());assert (s['runs'],s['combats'],s['trials'])==(512,12099,36297) and not s['partial_smoke']
         assert s['native_sha256']==lib_hash
         row={k:s[k]for k in ['trial_wins','trials','trial_win_rate','wins','combats','win_rate','runs_won_every_fight','runs','run_win_rate','unresolved_trials','trial_average_hp_lost','average_hp_lost']}
         row.update(configuration=name,wall_seconds=elapsed,workers=80,summary=str(summary_path),native_sha256=lib_hash,manifest_sha256=s['manifest_sha256'])
-        rows.append(row);save(root/'comparison.json',dict(complete=len(rows)==4,results=rows,started_at_unix=all_started,time=time.time()))
+        rows.append(row);save(root/'comparison.json',dict(complete=len(rows)==len(commands),results=rows,started_at_unix=all_started,time=time.time()))
     assert len({r['manifest_sha256']for r in rows})==1
-    # Resume only our own pause, after all four complete, preserving any later STOP.
+    # Resume only our own pause, after all five complete, preserving any later STOP.
     assert not (root/'STOP').exists() and stop.read_text()==stop_text
     assert sha(a.production/'production/latest.pt')==pause['checkpoint_sha256']
     assert sha(Path(pause['replay_file']))==pause['replay_sha256']

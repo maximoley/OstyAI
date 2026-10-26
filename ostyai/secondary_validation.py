@@ -1,7 +1,6 @@
 """Resumable human-only validation at every 500 optimizer updates."""
 from pathlib import Path
 import hashlib,json,time,os
-import torch
 from corpus_stream import atomic_json
 from human_validation_metrics import summarize
 ROOT=Path(__file__).resolve().parent
@@ -16,15 +15,19 @@ def evaluate(native,gpu,output,update,collect,config,stopping=lambda:False,fixtu
     directory=output/f'human-validation-{update:06d}';directory.mkdir(exist_ok=True)
     h=hashlib.sha256()
     for name,t in sorted(gpu.model.state_dict().items()):h.update(name.encode());h.update(t.detach().cpu().contiguous().numpy().tobytes())
-    provenance=dict(update=update,manifest_sha256=hashlib.sha256(raw).hexdigest(),model_sha256=h.hexdigest(),native_sha256=hashlib.sha256((ROOT/'loop_native.so').read_bytes()).hexdigest(),simulations=config(fixtures/manifest["shards"][0]["file"],1,2000000,update,True)["simulation_budgets"],skip_forced_actions=True,replicates=3,part_limit=part_limit)
+    first_config=config(fixtures/manifest['shards'][0]['file'],1,2000000,update,True)
+    policy_only=first_config['simulations']==0
+    provenance=dict(update=update,manifest_sha256=hashlib.sha256(raw).hexdigest(),model_sha256=h.hexdigest(),native_sha256=hashlib.sha256((ROOT/'loop_native.so').read_bytes()).hexdigest(),simulations=0 if policy_only else first_config['simulation_budgets'],skip_forced_actions=first_config.get('skip_forced_actions',True),replicates=3,part_limit=part_limit)
     # Completed historical benchmarks remain tied to their original native/search
     # configuration. A later deployment may reuse the completed result, never
     # unfinished parts from a different simulator. Model/fixtures must still match.
     provenance['search_reuse']=dict(enabled=config(fixtures/manifest['shards'][0]['file'],1,2000000,update,True).get('persistent_search',False),capacity_per_combat=config(fixtures/manifest['shards'][0]['file'],1,2000000,update,True).get('search_cache_nodes',512))
+    if policy_only:provenance.update(policy_only=True,action_selection='legal_argmax',workers=first_config['workers'])
     pp=directory/'provenance.json'
     completed=directory/'summary.json'
     if completed.exists():
         old=json.loads(pp.read_text()); summary=json.loads(completed.read_text())
+        assert old.get('policy_only',False)==policy_only, 'Completed human validation action mode mismatch'
         for key in ['update','manifest_sha256','model_sha256','replicates','part_limit']:
             assert old[key]==provenance[key], 'Completed human validation identity mismatch'
         assert all(summary.get(k)==v for k,v in old.items()), 'Human summary provenance mismatch'
@@ -56,6 +59,11 @@ def evaluate(native,gpu,output,update,collect,config,stopping=lambda:False,fixtu
                 assert [p['cost'] for p in row['potions'][:len(row['potion_costs'])]]==row['potion_costs']
             atomic_json(result,report)
         else:report=dict(outcomes=[],completed=0)
+        if source:
+            assert not report['fatal'] and report['replay_added']==0
+            if policy_only:
+                assert report['workers']==first_config['workers']
+                assert all(report[k]==0 for k in ['simulations','search_transitions','forced_search_transitions','chance_samples','forced_actions'])
         collection_seconds+=report.get('total_seconds',0.0)
         all_rows.extend(report['outcomes'])
         atomic_json(output/'status.json',dict(stage='human_validation',update=update,parts_completed=number+1,parts_total=len(parts),completed_trials=len(all_rows),requested_trials=manifest['requested_trials'],pid=os.getpid()))
