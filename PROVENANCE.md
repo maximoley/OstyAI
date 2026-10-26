@@ -7,6 +7,7 @@ This is a **research package prepared for public release** assembled from the li
 - `provenance/upstream-differences.json`: file-level comparison against the pinned upstream Git tree.
 - `models/best/metadata.json`: model selection criterion, config, parameter count and checkpoint/actor hashes.
 - `provenance/packaging-changes.json`: portable-path and CUDA-discovery changes; production source was not edited.
+- `provenance/training-data.json`: verified training-source counts, generation configuration, source hashes and accepted prepared-bank totals; the full training corpus is not bundled.
 - `MANIFEST.sha256`: published file contents, excluding the manifest itself and Git metadata.
 
 Historical human and primary validation use different actor-hash conventions: human hashes sorted parameter names plus tensor bytes; primary adds tensor dtype and shape. `scripts/verify_model.py` verifies both against the same exported weights. Distinct hash strings therefore do not imply distinct actors.

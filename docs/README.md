@@ -15,6 +15,7 @@
 | What are we trying to build, and why combat first? | [Motivation](../README.md#motivation-why-combat-comes-first) |
 | What does the model see and predict? | [Architecture](ARCHITECTURE.md) |
 | How are search, replay and learning connected? | [Training](TRAINING.md) |
+| Where do the human and 100k random-run training starts come from? | [Data generation and mixture](TRAINING.md#training-data-and-generation) |
 | What happens inside a chance-node search? | [Search walkthrough](SEARCH.md) |
 | What differs from the upstream simulator? | [Simulator changes](SIMULATOR_CHANGES.md) and [attribution](../ATTRIBUTION.md) |
 

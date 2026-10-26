@@ -154,7 +154,28 @@ The policy can act directly by selecting its highest-scoring legal action, or su
 ## Training scheme
 
 <details>
-<summary>Expand the training loop, pool quotas, loss, and reward</summary>
+<summary>Expand data generation, the training loop, pool quotas, loss, and references</summary>
+
+The learning loop is inspired by **AlphaZero**: search improves a neural policy, and a shared policy/value network learns from search targets and combat outcomes ([Silver et al., 2018](https://doi.org/10.1126/science.aar6404)). Root action selection uses a custom adaptation of **Gumbel search**, with sampled candidates and sequential halving ([Danihelka et al., 2022, *Policy improvement by planning with Gumbel*](https://openreview.net/forum?id=bERaNdoegnO)). OstyAI uses the Rust simulator for transitions and stochastic belief draws; it is not an exact reproduction of either paper.
+
+### Training data and generation
+
+Training starts from a **50% human / 50% generated combat-start mixture**. This is separate from the combat-pool quotas used to sample learner batches below.
+
+| Source | Current candidate pool | Starts requested per collection bank |
+|---|---:|---:|
+| Reconstructed human solo A10 Necrobinder combats | 122,489 | 512 |
+| Generated combats from 100,000 random A10 Necrobinder runs | 2,807,379 | 512 |
+
+**Human starts** come from Spire Codex run histories spanning game versions v0.109.1–v0.111.0. Standard solo A10 Necrobinder runs are filtered from the raw records, and combat states are reconstructed from inventory/history and recorded starting HP. Training includes both winning and losing runs. All 1,815 source runs of the fixed primary validation panel are excluded, removing 43,355 combats from 165,844 candidates. The separate 512-winning-run human benchmark may overlap training, as disclosed above.
+
+**The 100k random-run dataset** was generated with 100,000 distinct seeds, A10 Necrobinder, and up to three acts, using the v0.111.0 reference. Run-level choices were randomized: paths, events, rests, upgrades, offered cards, and affordable shop purchases; relics and potions were taken, with random potion replacement when full. At each combat opening, the collector saved a restorable state **before synthetically marking the combat won** and running normal post-combat hooks/rewards. This produced 2,807,379 opening snapshots in 1,000 SQLite shards.
+
+These are **synthetically advanced runs, not 100,000 demonstrated combat wins**. The collector did not play out fights, so its progression does not include damage from those fights, and the resulting starts are not guaranteed winnable. During training, the current actor actually plays each sampled combat in the updated Rust simulator. Search supplies policy targets and the resulting combat supplies terminal value targets; no human winning action sequence is supplied.
+
+Banks sample uniformly within each full source pool, without replacement within a bank and independently across banks. Unsupported conversions are logged and resampled; a later native preparation pass can remove additional incompatible starts, making final banks slightly smaller than 1,024. The 10,000 prepared banks contain **10,185,462 accepted starts**: 5,119,807 human and 5,065,655 generated (including repeats across banks). Full training datasets are not bundled. [Generation details and exclusions](docs/TRAINING.md#training-data-and-generation) · [verified counts and source hashes](provenance/training-data.json).
+
+### Collection and learner sampling
 
 Training follows **collection → learning → actor synchronization**. A frozen actor drives 80 Rust workers through approximately 1,024 combat starts per cycle. Completed decision examples enter a **65,536-example FIFO replay buffer**. Each optimizer update samples **16,384 examples**, accumulates gradients across **64 microbatches of 256**, and synchronizes the actor. The target is 10,000 updates; the packaged model is step 5500.
 
@@ -166,6 +187,8 @@ Training follows **collection → learning → actor synchronization**. A frozen
 | Boss | 128 | 6,554 |
 
 Within each pool, value-error priorities are mixed with **5% uniform sampling**. Importance weights `1 / (N_pool * P(sample | pool))` correct within-pool sampling while preserving the intended 10/20/30/40% pool mixture. Quotas apply to the full optimizer update; microbatches are packed for token-length efficiency.
+
+There is no separate human/generated quota at the learner stage. Combat length, replay retention, pool quotas, and priorities determine the final source mixture among sampled decision examples; a 50/50 mixture of starting combats does not imply 50/50 learner examples.
 
 The loss combines importance-weighted **policy cross-entropy against the search target** and **value MSE against terminal utility**. AdamW uses learning rate `3e-4`, weight decay `1e-4`, and gradient-norm clipping at `1.0`. There is no explicit entropy bonus or distance-to-terminal loss discount.
 

@@ -17,6 +17,8 @@
 
 ## Dataset construction
 
+[Training-data audit](training-data.json) records the current human/generated source pools, 100,000-run generation settings and source hashes, prepared-bank totals, and the separate learner quotas. See [training data and generation](../docs/TRAINING.md#training-data-and-generation) for their interpretation. Full training datasets are not bundled.
+
 [Human-panel notes](human-panel-original.md) describe fixed hash-based run selection, exclusions, frozen RNG states and potion inference. The [frozen manifest](../benchmarks/fixtures/human/manifest.json) identifies the actual evaluation panel. [Construction tools](../tools/human-panel-source/) are archival and require external raw data and conversion dependencies.
 
 ## Simulator and training changes

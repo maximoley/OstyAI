@@ -1,0 +1,93 @@
+{
+  "verified_date": "2026-10-26",
+  "scope": "Documentation audit of existing corpus generation and preparation; no training or benchmark configuration changed.",
+  "generated": {
+    "runs": 100000,
+    "distinct_run_seeds": true,
+    "seed": 9232026,
+    "character": "Necrobinder",
+    "ascension": 10,
+    "max_acts": 3,
+    "reference": "v0.111.0 / 41cef1ea",
+    "shards": 1000,
+    "runs_per_shard": 100,
+    "combat_starts": 2807379,
+    "snapshot": "Combat opening before synthetic victory; full manager state and RNG, restoration checked.",
+    "policy": "Random paths/events/rests/upgrades; take random offered cards; take relics/potions with random replacement; random affordable shop purchases.",
+    "combat_progression": "No combat actions during collection; synthetically mark victory and execute normal post-combat hooks/rewards.",
+    "synthetic_completions": 93199,
+    "event_deaths": 6801,
+    "manifest_sha256": "b81cb35a5350358efb2cfab0a394e137ed0aceb637f507cc57fa74ef0e91b6bc",
+    "collector_source_checks": {
+      "fast_combat/collect_dataset.py": {
+        "sha256": "9b19217a4de969917c6237b559fdacae00f7ba799c190b8a15634bcfea899dbb",
+        "matches_collection_manifest": true
+      },
+      "scenario_db/collector.py": {
+        "sha256": "e2fb7291660d00cdbfdfaa67dd08149a9205aabd53753fdcaabbb53efab487a4",
+        "matches_collection_manifest": true
+      },
+      "scenario_db/run_rules.py": {
+        "sha256": "816a96eda86efa9f84efc8877f5ea8ca4cf9598c9103d5f5903f527653e1e0d5",
+        "matches_collection_manifest": true
+      }
+    }
+  },
+  "human": {
+    "source": "Spire Codex contextual combat reconstructions",
+    "versions": [
+      "v0.109.1",
+      "v0.110.0",
+      "v0.110.1",
+      "v0.111.0"
+    ],
+    "source_runs": 44193,
+    "eligible_runs": 13386,
+    "coop_excluded": 29968,
+    "nonstandard_excluded": 839,
+    "winning_run_required_for_training": false,
+    "candidates_before_primary_holdout": 165844,
+    "primary_holdout_source_runs": 1815,
+    "excluded_combats": 43355,
+    "training_candidates": 122489,
+    "human_cache_sha256": "07b363191afe7f220b3436acbd6f6dec92ac9e0b90b6d43bbdf88ccac5c02ef3",
+    "secondary_512_run_benchmark_may_overlap_training": true
+  },
+  "source_bank_sampling": {
+    "seed": 20261023,
+    "bank_size_before_native_preparation": 1024,
+    "human_starts": 512,
+    "generated_starts": 512,
+    "within_source": "Uniform, without replacement within each bank; independent banks permit repeats.",
+    "all_generated_candidates_used": true,
+    "legacy_generated_seed_split_applied": false,
+    "conversion_failures": "Log source identity and resample.",
+    "later_native_preparation_failures": "Log and omit without backfilling."
+  },
+  "prepared_banks": {
+    "count": 10000,
+    "attempted": 10240000,
+    "accepted": 10185462,
+    "source_counts": {
+      "human": 5119807,
+      "generated": 5065655
+    }
+  },
+  "learner_sampling": {
+    "batch_size": 16384,
+    "quotas": {
+      "easy": 1638,
+      "hard": 3277,
+      "elite": 4915,
+      "boss": 6554
+    },
+    "human_generated_quota": null,
+    "within_pool": "Value-error priorities plus 5% uniform mixture; beta=1 within-pool importance correction."
+  },
+  "notes": [
+    "Synthetic run completion is not a measured combat or full-run win rate; generated starts are not guaranteed winnable.",
+    "Prepared-bank entries include repeats across banks and do not measure completed training.",
+    "Source-bank balance and learner combat-pool quotas are different distributions.",
+    "Full training datasets are not included; this file records summary provenance only."
+  ]
+}
