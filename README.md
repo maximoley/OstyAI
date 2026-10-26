@@ -132,7 +132,7 @@ The plots stop at step 5500. Persistent search reuse was enabled after that chec
 ## Model architecture
 
 <details>
-<summary>Expand the architecture and component table</summary>
+<summary>Expand the architecture, potion-cost conditioning, and measured sensitivity</summary>
 
 The model has **1,593,346 parameters** and shares an encoder between its policy and value heads.
 
@@ -146,6 +146,22 @@ The model has **1,593,346 parameters** and shares an encoder between its policy 
 | GPU execution | Triton token assembly for inference, autograd-compatible training, BF16 autocast, Torch compile and CUDA graphs |
 
 The policy can act directly by selecting its highest-scoring legal action, or supply priors to Gumbel search while the value head evaluates leaves. [Architecture and tensor layout](docs/ARCHITECTURE.md) · [model implementation](ostyai/model.py) · [checkpoint metadata](models/best/metadata.json).
+
+### Potion penalties: input, reward, and learning
+
+Each potion instance receives its own preservation cost `c` in `[0,1]`. The model sees that cost attached to the potion token, plus accumulated spending and combat reward context. These continuous values pass through the numeric encoder and shared transformer to **both policy and value heads**. Costs remain attached to individual potion instances as inventory changes and search clones states. There is no separate potion-policy head or hard rule forbidding expensive potions.
+
+Using a potion adds its cost to `spent_potion_cost` in the terminal utility shown in the training section. It reduces the HP-dependent reward term: holding the final outcome and HP fixed, using a potion of cost `c` lowers utility by `0.5 * (final_hp / initial_hp) * c`. Cost 0 makes its use free in the reward; cost 1 consumes the entire HP bonus if it is the only potion used. Costs add across potions and the utility is not clipped. A costly potion can still be worth using to win the fight.
+
+During training, costs are sampled independently from **Uniform[0,1]**, including for newly acquired potions. Search evaluates actions using that same cost-conditioned state and utility. The policy learns to imitate the resulting search targets, while the value head learns terminal utility by MSE. **The assigned costs are inputs, not learned labels**; what the network learns is when a potion's combat benefit justifies its cost. Primary validation freezes independent costs across checkpoints; the human benchmark instead uses its recorded/inferred 0/1 costs. [Implementation and training details](docs/ARCHITECTURE.md#potion-cost-conditioning).
+
+### Measured sensitivity to potion cost
+
+![Starting-potion use versus assigned penalty for search and greedy policy at checkpoints 5300, 5400 and 5500](docs/assets/potion_use_vs_penalty.png)
+
+Across the last three completed scheduled validation pairs (5300–5500), potion use falls as assigned cost rises, including with **greedy policy and no search**. At step 5500, search used **72.6%** of starting potions costing below 0.1 versus **18.5%** costing at least 0.9; greedy policy used **42.7% versus 7.0%**. This supports learned cost-sensitive behavior in the base policy as well as the search agent.
+
+Each curve covers 12,780 starting potion instances across 8,192 trials; it includes losses and unresolved trials at the action cap. Costs and fixtures match across checkpoints and modes. This is an observed cost/use relationship across randomized potion costs, not a controlled sweep changing only the cost of the same potion in the same state. [Data, definitions, and reproduction](benchmarks/potion-sensitivity/README.md).
 
 </details>
 

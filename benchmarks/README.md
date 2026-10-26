@@ -29,6 +29,7 @@ Run `scripts/unpack_benchmarks.py` from the repository root to prepare inputs fo
 | [readme-step5500-metrics.json](readme-step5500-metrics.json) | README table values, including every-fight ≥1/3 run count, with source hashes |
 | [history/](history/) | Historical primary, policy-only and human validation JSONL |
 | [human-hp-baseline.json](human-hp-baseline.json) | Human HP-loss baseline analysis |
+| [potion-sensitivity/](potion-sensitivity/) | Starting-potion use versus assigned cost at steps 5300–5500, with search and greedy policy; data and plot reproduction |
 | [throughput/](throughput/) | Hardware and timing measurements; see [timing scope](../docs/THROUGHPUT.md) |
 
 Use wins divided by **all requested trials**, including capped/unresolved nonwins. Run-level metrics aggregate independent combat starts, not linked model-played runs. Historical settings and simulator hashes vary; keep their provenance intact.

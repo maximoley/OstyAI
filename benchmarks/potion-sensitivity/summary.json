@@ -1,0 +1,69 @@
+{
+  "source_sha256": "858defdbf5efa823b576a081e0ac30f751e79e76ec2718578ca955607ce4c23b",
+  "definition": "Used starting potion instances / all starting potion instances in each cost bin; final bin includes 1.0.",
+  "includes_unresolved": true,
+  "excludes_potions_acquired_during_combat": true,
+  "frozen_costs_match": true,
+  "series": [
+    {
+      "step": 5300,
+      "mode": "search",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 1,
+      "low_cost_use_rate": 0.6219325153374233,
+      "high_cost_use_rate": 0.17136150234741784,
+      "endpoint_drop_percentage_points": 45.05710129900054
+    },
+    {
+      "step": 5300,
+      "mode": "policy_only",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 138,
+      "low_cost_use_rate": 0.43098159509202455,
+      "high_cost_use_rate": 0.15571205007824726,
+      "endpoint_drop_percentage_points": 27.52695450137773
+    },
+    {
+      "step": 5400,
+      "mode": "search",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 1,
+      "low_cost_use_rate": 0.6464723926380368,
+      "high_cost_use_rate": 0.1643192488262911,
+      "endpoint_drop_percentage_points": 48.215314381174565
+    },
+    {
+      "step": 5400,
+      "mode": "policy_only",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 7,
+      "low_cost_use_rate": 0.42254601226993865,
+      "high_cost_use_rate": 0.13145539906103287,
+      "endpoint_drop_percentage_points": 29.10906132089058
+    },
+    {
+      "step": 5500,
+      "mode": "search",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 4,
+      "low_cost_use_rate": 0.7262269938650306,
+      "high_cost_use_rate": 0.18466353677621283,
+      "endpoint_drop_percentage_points": 54.15634570888178
+    },
+    {
+      "step": 5500,
+      "mode": "policy_only",
+      "trials": 8192,
+      "starting_potions": 12780,
+      "unresolved_trials": 242,
+      "low_cost_use_rate": 0.42714723926380366,
+      "high_cost_use_rate": 0.07042253521126761,
+      "endpoint_drop_percentage_points": 35.672470405253605
+    }
+  ]
+}
