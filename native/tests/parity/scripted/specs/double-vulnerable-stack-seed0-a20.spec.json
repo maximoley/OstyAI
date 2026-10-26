@@ -1,0 +1,35 @@
+{
+  "actions": [
+    {
+      "amount": 6,
+      "dealer": "player",
+      "props": "MOVE",
+      "target": "enemy_0",
+      "type": "deal_damage"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Verifies VulnerablePower amount stacking semantics. Cultist has VulnerablePower(amount=4) (representing 4 stacks); player attacks for 6 raw \u2192 multiplier is still 1.5x (Python's Vulnerable returns the same VULNERABLE_MULTIPLIER regardless of stack count \u2014 duration vs strength) \u2192 6 * 3/2 = 9 \u2192 cultist HP 48 - 9 = 39. The amount=4 round-trips through the parity exporter unchanged. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [
+    {
+      "current_hp": 48,
+      "max_hp": 48,
+      "monster_id": "ShrinkerBeetle",
+      "powers": [
+        {
+          "amount": 4,
+          "id": "VULNERABLE"
+        }
+      ]
+    }
+  ],
+  "name": "double-vulnerable-stack-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50
+  },
+  "scenario": "double-vulnerable-stack",
+  "seed": 0
+}

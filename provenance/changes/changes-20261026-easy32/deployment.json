@@ -1,0 +1,21 @@
+{
+  "resumed_from": 4598,
+  "checkpoint_unchanged": true,
+  "replay_unchanged": true,
+  "first_unprepared": 8409,
+  "search_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "quotas": {
+    "easy": 1638,
+    "hard": 3277,
+    "elite": 4915,
+    "boss": 6554
+  },
+  "time": 1792988054.8406754,
+  "supervisor_pid": 1982004,
+  "feeder_pid": 1982005
+}

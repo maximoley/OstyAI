@@ -1,0 +1,34 @@
+{
+  "name": "ethereal-dazed-expel-seed0",
+  "description": "sts2-rs-6ynt.3.3: ETHEREAL end-of-turn expel. Player starts a round with a single Dazed (UNPLAYABLE + ETHEREAL) in hand and immediately ends turn. The end-of-turn pipeline must move Dazed from hand to exhaust (NOT discard). Verifies parity with sts2-rl-agent@01c094d:sts2_env/core/combat.py:992-999. ShrinkerBeetle is the empty-encounter sentinel used by the burning-blood-setup-only fixture.",
+  "scenario": "ethereal-dazed-expel",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — intent triple diverges by design (monsters.rs:22-29). The ETHEREAL expel itself does NOT consume RNG, so pile counts + hand + exhaust shape stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "DAZED"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "end_turn"}
+  ]
+}

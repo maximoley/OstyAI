@@ -1,0 +1,604 @@
+{
+ "details": [],
+ "error": null,
+ "label": "Map → (1,13)",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "shop",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 1,
+   "bg_row": 13,
+   "bg_seed": 11180935036767329045,
+   "floor": 13,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 1,
+   "bg_row": 13,
+   "bg_seed": 11180935036767329045,
+   "card_removal_cost": 75,
+   "cards": [
+    {
+     "card_cost": 1,
+     "color": "blue",
+     "cost": 48,
+     "description": "Deal 7 damage.\nDraw 1 card for each unique Orb you have.",
+     "description_rich": "Deal 7 damage.\nDraw 1 card for each unique Orb you have.",
+     "id": "COMPILE_DRIVER",
+     "image": "https://assets.test/card_atlas/defect/compile_driver.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Compile Driver",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 0,
+     "color": "blue",
+     "cost": 74,
+     "description": "Deal 3 damage.\nTrigger all Lightning against the enemy.",
+     "description_rich": "Deal 3 damage.\nTrigger all Lightning against the enemy.",
+     "id": "TESLA_COIL",
+     "image": "https://assets.test/card_atlas/defect/tesla_coil.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Tesla Coil",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 0,
+     "color": "blue",
+     "cost": 51,
+     "description": "Gain Energy.\nAdd a Void into your Discard Pile.",
+     "description_rich": "Gain Energy.\nAdd a [gold]Void[/gold] into your [gold]Discard Pile[/gold].",
+     "id": "TURBO",
+     "image": "https://assets.test/card_atlas/defect/turbo.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "TURBO",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 1,
+     "color": "blue",
+     "cost": 26,
+     "description": "Gain 9 Block.",
+     "description_rich": "Gain 9 Block.",
+     "id": "LEAP",
+     "image": "https://assets.test/card_atlas/defect/leap.png",
+     "index": 3,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Leap",
+     "on_sale": true,
+     "rarity": "Common",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 1,
+     "color": "blue",
+     "cost": 76,
+     "description": "The first time you draw a Status each turn, draw 2 cards.",
+     "description_rich": "The first time you draw a Status each turn, draw 2 cards.",
+     "id": "ITERATION",
+     "image": "https://assets.test/card_atlas/defect/beta/iteration.png",
+     "index": 4,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Iteration",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Power"
+    },
+    {
+     "card_cost": 1,
+     "color": "colorless",
+     "cost": 86,
+     "description": "Gain 1 Strength.\nGain 1 Dexterity.",
+     "description_rich": "Gain 1 Strength.\nGain 1 Dexterity.",
+     "id": "PROWESS",
+     "image": "https://assets.test/card_atlas/colorless/prowess.png",
+     "index": 5,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Prowess",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Power"
+    },
+    {
+     "card_cost": 3,
+     "color": "colorless",
+     "cost": 176,
+     "description": "Gain 9 Plating.",
+     "description_rich": "Gain 9 Plating.",
+     "id": "ETERNAL_ARMOR",
+     "image": "https://assets.test/card_atlas/colorless/eternal_armor.png",
+     "index": 6,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Eternal Armor",
+     "on_sale": false,
+     "rarity": "Rare",
+     "type": "Power"
+    }
+   ],
+   "decision": "shop",
+   "floor": 13,
+   "options": [
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 0
+     },
+     "enabled": true,
+     "label": "Buy COMPILE_DRIVER.title (48g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 1
+     },
+     "enabled": true,
+     "label": "Buy TESLA_COIL.title (74g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 2
+     },
+     "enabled": true,
+     "label": "Buy TURBO.title (51g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 3
+     },
+     "enabled": true,
+     "label": "Buy LEAP.title (26g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 4
+     },
+     "enabled": true,
+     "label": "Buy ITERATION.title (76g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 5
+     },
+     "enabled": true,
+     "label": "Buy PROWESS.title (86g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 6
+     },
+     "enabled": true,
+     "label": "Buy ETERNAL_ARMOR.title (176g)"
+    },
+    {
+     "action": "buy_relic",
+     "args": {
+      "relic_index": 0
+     },
+     "enabled": true,
+     "label": "Buy MEAL_TICKET.title (154g)"
+    },
+    {
+     "action": "buy_relic",
+     "args": {
+      "relic_index": 1
+     },
+     "enabled": true,
+     "label": "Buy RAINBOW_RING.title (239g)"
+    },
+    {
+     "action": "buy_relic",
+     "args": {
+      "relic_index": 2
+     },
+     "enabled": true,
+     "label": "Buy GNARLED_HAMMER.title (228g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 0
+     },
+     "enabled": true,
+     "label": "Buy HEART_OF_IRON.title (75g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 1
+     },
+     "enabled": true,
+     "label": "Buy BLOCK_POTION.title (50g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 2
+     },
+     "enabled": true,
+     "label": "Buy WEAK_POTION.title (50g)"
+    },
+    {
+     "action": "remove_card",
+     "args": {},
+     "enabled": true,
+     "label": "Remove a card (75g)"
+    },
+    {
+     "action": "leave_room",
+     "args": {},
+     "enabled": true,
+     "label": "Leave shop"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 3,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Channel 1 Lightning.",
+      "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+      "id": "ZAP",
+      "image": "https://assets.test/card_atlas/defect/zap.png",
+      "index": 7,
+      "name": "Zap",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Evoke your rightmost Orb twice.",
+      "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+      "id": "DUALCAST",
+      "image": "https://assets.test/card_atlas/defect/dualcast.png",
+      "index": 8,
+      "name": "Dualcast",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 11 damage.\nGain 2 Focus this turn.",
+      "description_rich": "Deal 11 damage.\nGain 2 Focus this turn.",
+      "id": "FOCUSED_STRIKE",
+      "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+      "index": 9,
+      "name": "Focused Strike",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "blue",
+      "cost": 3,
+      "description": "At the start of your turn, add a random Power into your Hand.",
+      "description_rich": "At the start of your turn, add a random Power into your [gold]Hand[/gold].",
+      "id": "CREATIVE_AI",
+      "image": "https://assets.test/card_atlas/defect/creative_ai.png",
+      "index": 10,
+      "name": "Creative AI",
+      "rarity": "Rare",
+      "type": "Power",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "description_rich": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "id": "FOCUSED_STRIKE",
+      "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+      "index": 11,
+      "name": "Focused Strike",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+      "description_rich": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+      "id": "SWEEPING_BEAM",
+      "image": "https://assets.test/card_atlas/defect/sweeping_beam.png",
+      "index": 12,
+      "name": "Sweeping Beam",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "quest",
+      "cost": "X",
+      "description": "Unplayable.\nMarks a site of 600 extra Gold in the next Act.",
+      "description_rich": "[gold]Unplayable[/gold].\nMarks a site of 600 extra Gold in the next Act.",
+      "id": "SPOILS_MAP",
+      "image": "https://assets.test/card_atlas/quest/spoils_map.png",
+      "index": 13,
+      "name": "Spoils Map",
+      "rarity": "Quest",
+      "type": "Quest",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 1 Focus this turn for each unique Orb you have.",
+      "description_rich": "Gain 1 Focus this turn for each unique Orb you have.",
+      "id": "SYNCHRONIZE",
+      "image": "https://assets.test/card_atlas/defect/beta/synchronize.png",
+      "index": 14,
+      "name": "Synchronize",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 0,
+      "description": "Gain Energy.\nAdd a Void into your Discard Pile.",
+      "description_rich": "Gain Energy.\nAdd a [gold]Void[/gold] into your [gold]Discard Pile[/gold].",
+      "id": "TURBO",
+      "image": "https://assets.test/card_atlas/defect/turbo.png",
+      "index": 15,
+      "name": "TURBO",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Whenever you create a Status, deal 5 damage to ALL enemies.",
+      "description_rich": "Whenever you create a Status, deal 5 damage to ALL enemies.",
+      "id": "SMOKESTACK",
+      "image": "https://assets.test/card_atlas/defect/beta/smokestack.png",
+      "index": 16,
+      "name": "Smokestack",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 5 damage for each Channeled Orb.",
+      "description_rich": "Deal 5 damage for each Channeled Orb.",
+      "id": "BARRAGE",
+      "image": "https://assets.test/card_atlas/defect/barrage.png",
+      "index": 17,
+      "name": "Barrage",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 278,
+    "hp": 36,
+    "max_hp": 75,
+    "name": "Defect",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, Channel 1 Lightning.",
+      "id": "CRACKED_CORE",
+      "image": "https://assets.test/relic_atlas/cracked_core.png",
+      "name": "Cracked Core"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     },
+     {
+      "description": "At the start of your 2nd turn, gain 2 Energy.",
+      "id": "CANDELABRA",
+      "image": "https://assets.test/relic_atlas/candelabra.png",
+      "name": "Candelabra"
+     },
+     {
+      "description": "Upon pickup, Upgrade 2 random Attacks.",
+      "id": "WHETSTONE",
+      "image": "https://assets.test/relic_atlas/whetstone.png",
+      "name": "Whetstone"
+     }
+    ]
+   },
+   "potions": [
+    {
+     "cost": 75,
+     "description": "Gain 7 Plating.",
+     "id": "HEART_OF_IRON",
+     "image": "https://assets.test/potion_atlas/heart_of_iron.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Heart of Iron"
+    },
+    {
+     "cost": 50,
+     "description": "Gain 12 Block.",
+     "id": "BLOCK_POTION",
+     "image": "https://assets.test/potion_atlas/block_potion.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Block Potion"
+    },
+    {
+     "cost": 50,
+     "description": "Apply 3 Weak.",
+     "id": "WEAK_POTION",
+     "image": "https://assets.test/potion_atlas/weak_potion.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Weak Potion"
+    }
+   ],
+   "relics": [
+    {
+     "cost": 154,
+     "description": "Whenever you enter a shop room, heal 15 HP.",
+     "id": "MEAL_TICKET",
+     "image": "https://assets.test/relic_atlas/meal_ticket.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Meal Ticket"
+    },
+    {
+     "cost": 239,
+     "description": "The first time you play an Attack, Skill, and Power each turn, gain 1 Strength and 1 Dexterity.",
+     "id": "RAINBOW_RING",
+     "image": "https://assets.test/relic_atlas/rainbow_ring.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Rainbow Ring"
+    },
+    {
+     "cost": 228,
+     "description": "Upon pickup, Enchant up to 3 Attacks with Sharp 3.",
+     "id": "GNARLED_HAMMER",
+     "image": "https://assets.test/relic_atlas/gnarled_hammer.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Gnarled Hammer"
+    }
+   ]
+  }
+ }
+}

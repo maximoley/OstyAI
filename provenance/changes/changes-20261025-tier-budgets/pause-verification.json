@@ -1,0 +1,58 @@
+{
+  "step": 4107,
+  "validated": 4100,
+  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004107.pt",
+  "checkpoint_sha256": "ca3fb00aa8bf125cf8ee650b498ce5c7c375a16a7cefd14181bebbb31dbef5f2",
+  "replay_sha256": "a007d136778ed94b38e0a847cf93ec34e7fd8a1bc476f5612dc615b35c17e9fa",
+  "old_settings": {
+    "cycles": 10000,
+    "effective_batch": 16384,
+    "microbatch": 256,
+    "updates_per_cycle": 1,
+    "validation_every": 100,
+    "human_validation_every": 500,
+    "human_validation_runs": 512,
+    "validation_combats": 8192,
+    "workers": 80,
+    "search_simulations": 64,
+    "skip_forced_actions": true,
+    "replay_capacity": 65536,
+    "replay_rows": 1024,
+    "schema_sha256": "7f56e126875a3e8ddccdb61dbec6a6190e6d25d756ebaef33674c93e76036dab",
+    "seed": 2026102501,
+    "potion_cost": "independent per-instance Uniform[0,1]",
+    "sampler": "full-corpus bank stream",
+    "prioritized_replay": {
+      "alpha": 1.0,
+      "beta": 1.0,
+      "uniform_mix": 0.05,
+      "priority": "absolute network value error",
+      "epsilon": 0.001
+    },
+    "logging_schema": 2,
+    "model_config": {
+      "width": 128,
+      "heads": 4,
+      "layers": 4,
+      "ff": 512,
+      "slots": 128,
+      "card_definitions": 585,
+      "catalog_names": 3447,
+      "enum_size": 256,
+      "numeric_fields": 40
+    },
+    "initial_weights_sha256": "b9d2607d05bd7c95f632ae869a1aebbe76f9d479889d8053afadeaa0c4d7ab98"
+  },
+  "new_budgets": {
+    "easy": 16,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "service": {
+    "supervisor_pid": 954138,
+    "trainer_pid": 954139,
+    "stage": "stopped",
+    "exit_code": 0
+  }
+}

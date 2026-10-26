@@ -1,0 +1,487 @@
+{
+ "details": [],
+ "error": null,
+ "label": "Map → (1,2)",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "shop",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 1,
+   "bg_row": 2,
+   "bg_seed": 2,
+   "floor": 2,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 1,
+   "bg_row": 2,
+   "bg_seed": 2,
+   "card_removal_cost": 75,
+   "cards": [
+    {
+     "card_cost": 1,
+     "color": "green",
+     "cost": 50,
+     "description": "Deal 4 damage to ALL enemies twice.",
+     "description_rich": "Deal 4 damage to ALL enemies twice.",
+     "id": "DAGGER_SPRAY",
+     "image": "https://assets.test/card_atlas/silent/dagger_spray.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Dagger Spray",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 3,
+     "color": "green",
+     "cost": 75,
+     "description": "Deal 15 damage.\nCosts 1 less Energy for each Skill played this turn.",
+     "description_rich": "Deal 15 damage.\nCosts 1 less Energy for each Skill played this turn.",
+     "id": "PINPOINT",
+     "image": "https://assets.test/card_atlas/silent/pinpoint.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Pinpoint",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 1,
+     "color": "green",
+     "cost": 148,
+     "description": "Add 2 Inky Shivs into your Hand.",
+     "description_rich": "Add 2 Inky Shivs into your Hand.",
+     "id": "BLADE_OF_INK",
+     "image": "https://assets.test/card_atlas/silent/blade_of_ink.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Blade of Ink",
+     "on_sale": false,
+     "rarity": "Rare",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 2,
+     "color": "green",
+     "cost": 48,
+     "description": "Retain.\nApply 7 Poison.",
+     "description_rich": "[gold]Retain[/gold].\nApply 7 Poison.",
+     "id": "SNAKEBITE",
+     "image": "https://assets.test/card_atlas/silent/snakebite.png",
+     "index": 3,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Snakebite",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 1,
+     "color": "green",
+     "cost": 36,
+     "description": "Poison is triggered 1 additional time.",
+     "description_rich": "Poison is triggered 1 additional time.",
+     "id": "ACCELERANT",
+     "image": "https://assets.test/card_atlas/silent/accelerant.png",
+     "index": 4,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Accelerant",
+     "on_sale": true,
+     "rarity": "Uncommon",
+     "type": "Power"
+    },
+    {
+     "card_cost": 0,
+     "color": "colorless",
+     "cost": 88,
+     "description": "Gain Energy.\nExhaust.",
+     "description_rich": "Gain Energy.\n[gold]Exhaust[/gold].",
+     "id": "PRODUCTION",
+     "image": "https://assets.test/card_atlas/colorless/production.png",
+     "index": 5,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Production",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 2,
+     "color": "colorless",
+     "cost": 171,
+     "description": "Deal 20 damage.\nIf Fatal, gain 20 Gold.",
+     "description_rich": "Deal 20 damage.\nIf Fatal, gain 20 Gold.",
+     "id": "HAND_OF_GREED",
+     "image": "https://assets.test/card_atlas/colorless/hand_of_greed.png",
+     "index": 6,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Hand of Greed",
+     "on_sale": false,
+     "rarity": "Rare",
+     "type": "Attack"
+    }
+   ],
+   "decision": "shop",
+   "floor": 2,
+   "options": [
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 0
+     },
+     "enabled": true,
+     "label": "Buy DAGGER_SPRAY.title (50g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 1
+     },
+     "enabled": true,
+     "label": "Buy PINPOINT.title (75g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 3
+     },
+     "enabled": true,
+     "label": "Buy SNAKEBITE.title (48g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 4
+     },
+     "enabled": true,
+     "label": "Buy ACCELERANT.title (36g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 5
+     },
+     "enabled": true,
+     "label": "Buy PRODUCTION.title (88g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 0
+     },
+     "enabled": true,
+     "label": "Buy SKILL_POTION.title (50g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 1
+     },
+     "enabled": true,
+     "label": "Buy POWER_POTION.title (50g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 2
+     },
+     "enabled": true,
+     "label": "Buy FIRE_POTION.title (50g)"
+    },
+    {
+     "action": "remove_card",
+     "args": {},
+     "enabled": true,
+     "label": "Remove a card (75g)"
+    },
+    {
+     "action": "leave_room",
+     "args": {},
+     "enabled": true,
+     "label": "Leave shop"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 9,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 0,
+      "description": "Deal 3 damage.\nApply 1 Weak.",
+      "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+      "id": "NEUTRALIZE",
+      "image": "https://assets.test/card_atlas/silent/neutralize.png",
+      "index": 10,
+      "name": "Neutralize",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 8 Block.\nDiscard 1 card.",
+      "description_rich": "Gain 8 Block.\nDiscard 1 card.",
+      "id": "SURVIVOR",
+      "image": "https://assets.test/card_atlas/silent/survivor.png",
+      "index": 11,
+      "name": "Survivor",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 2,
+      "description": "Sly.\nDeal 3 damage to a random enemy 4 times.",
+      "description_rich": "[gold]Sly[/gold].\nDeal 3 damage to a random enemy 4 times.",
+      "id": "RICOCHET",
+      "image": "https://assets.test/card_atlas/silent/ricochet.png",
+      "index": 12,
+      "name": "Ricochet",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 118,
+    "hp": 65,
+    "max_hp": 70,
+    "name": "Silent",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, draw 2 additional cards.",
+      "id": "RING_OF_THE_SNAKE",
+      "image": "https://assets.test/relic_atlas/ring_of_the_snake.png",
+      "name": "Ring of the Snake"
+     },
+     {
+      "description": "The Act 1 Boss drops 2 Relics.",
+      "id": "LAVA_ROCK",
+      "image": "https://assets.test/relic_atlas/lava_rock.png",
+      "name": "Lava Rock"
+     }
+    ]
+   },
+   "potions": [
+    {
+     "cost": 50,
+     "description": "Choose 1 of 3 random Skill cards to add into your Hand. It's free to play this turn.",
+     "id": "SKILL_POTION",
+     "image": "https://assets.test/potion_atlas/skill_potion.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Skill Potion"
+    },
+    {
+     "cost": 50,
+     "description": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
+     "id": "POWER_POTION",
+     "image": "https://assets.test/potion_atlas/power_potion.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Power Potion"
+    },
+    {
+     "cost": 50,
+     "description": "Deal 20 damage.",
+     "id": "FIRE_POTION",
+     "image": "https://assets.test/potion_atlas/fire_potion.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Fire Potion"
+    }
+   ],
+   "relics": [
+    {
+     "cost": 230,
+     "description": "Every time you play 10 Attacks, gain 1 Energy.",
+     "id": "NUNCHAKU",
+     "image": "https://assets.test/relic_atlas/nunchaku.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Nunchaku"
+    },
+    {
+     "cost": 295,
+     "description": "The first time you play an Attack, Skill, and Power each turn, gain 1 Strength and 1 Dexterity.",
+     "id": "RAINBOW_RING",
+     "image": "https://assets.test/relic_atlas/rainbow_ring.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Rainbow Ring"
+    },
+    {
+     "cost": 207,
+     "description": "Upon pickup, Enchant an Attack with Momentum 5.",
+     "id": "PUNCH_DAGGER",
+     "image": "https://assets.test/relic_atlas/punch_dagger.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Punch Dagger"
+    }
+   ]
+  }
+ }
+}

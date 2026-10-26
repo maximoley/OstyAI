@@ -1,0 +1,332 @@
+{
+ "details": [
+  "Play Snap",
+  "Terror Eel HP 89→82 (−7)"
+ ],
+ "error": null,
+ "label": "Play Snap → Terror Eel",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": 2,
+   "bg_row": 6,
+   "bg_seed": 11180935036767329045,
+   "floor": 6,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_col": 2,
+   "bg_row": 6,
+   "bg_seed": 11180935036767329045,
+   "can_skip": false,
+   "cards": [
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 9 damage.",
+     "description_rich": "Deal 9 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "id": "UNLEASH",
+     "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+     "index": 1,
+     "name": "Unleash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    }
+   ],
+   "context": "apply_retain_in_hand",
+   "decision": "card_select",
+   "enemies": [
+    {
+     "block": 0,
+     "hp": 82,
+     "index": 0,
+     "intents": [
+      {
+       "damage": 3,
+       "hits": 3,
+       "type": "Attack"
+      }
+     ],
+     "kind": "TerrorEel",
+     "max_hp": 140,
+     "move_state": "ThrashMove",
+     "name": "Terror Eel",
+     "powers": [
+      {
+       "amount": 70,
+       "display_amount": 70,
+       "id": "SHRIEK",
+       "name": "Shriek"
+      }
+     ],
+     "uid": 2
+    }
+   ],
+   "floor": 6,
+   "max_select": 1,
+   "min_select": 1,
+   "options": [
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "0"
+     },
+     "enabled": true,
+     "label": "STRIKE_NECROBINDER.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "1"
+     },
+     "enabled": true,
+     "label": "UNLEASH.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "2"
+     },
+     "enabled": true,
+     "label": "STRIKE_NECROBINDER.title"
+    }
+   ],
+   "player": {
+    "block": 5,
+    "deck": [
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Summon 5.",
+      "description_rich": "Summon 5.",
+      "id": "BODYGUARD",
+      "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+      "index": 8,
+      "name": "Bodyguard",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "id": "UNLEASH",
+      "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+      "index": 9,
+      "name": "Unleash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 3 and gain 3 Energy.",
+      "description_rich": "Next turn, Summon 3 and gain 3 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 10,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 2 and gain 2 Energy.",
+      "description_rich": "Next turn, Summon 2 and gain 2 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 11,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+      "description_rich": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+      "id": "SNAP",
+      "image": "https://assets.test/card_atlas/necrobinder/snap.png",
+      "index": 12,
+      "name": "Snap",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 141,
+    "hp": 19,
+    "max_hp": 68,
+    "name": "Necrobinder",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of your turn, Summon 1.",
+      "id": "BOUND_PHYLACTERY",
+      "image": "https://assets.test/relic_atlas/bound_phylactery.png",
+      "name": "Bound Phylactery"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   },
+   "player_powers": []
+  }
+ }
+}

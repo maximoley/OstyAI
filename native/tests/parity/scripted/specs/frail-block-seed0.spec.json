@@ -1,0 +1,22 @@
+{
+  "name": "frail-block-seed0",
+  "description": "Frail reduces block gained by 25%. Player has FrailPower(2); player gains 5 block → 5 * 0.75 = 3.75 → floor 3. Player.block = 3.",
+  "scenario": "frail-block",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50,
+    "powers": [{"id": "FRAIL", "amount": 2}]
+  },
+  "enemies": [],
+  "actions": [
+    {
+      "type": "gain_block",
+      "target": "player",
+      "amount": 5,
+      "props": "MOVE"
+    }
+  ]
+}

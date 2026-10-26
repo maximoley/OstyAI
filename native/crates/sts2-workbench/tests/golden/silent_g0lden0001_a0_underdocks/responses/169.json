@@ -1,0 +1,99 @@
+{
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "pv": null,
+ "scores": [
+  {
+   "action": "Survivor",
+   "is_best": true,
+   "losses": 3,
+   "low_confidence": false,
+   "q": 0.5951,
+   "q_saturated": false,
+   "stable_idx": 0,
+   "target_index": null,
+   "ties": 0,
+   "visits": 16,
+   "win_prob": 0.8125,
+   "wins": 13
+  },
+  {
+   "action": "Defend",
+   "is_best": false,
+   "losses": 4,
+   "low_confidence": false,
+   "q": 0.414,
+   "q_saturated": false,
+   "stable_idx": 1,
+   "target_index": null,
+   "ties": 0,
+   "visits": 15,
+   "win_prob": 0.7333,
+   "wins": 11
+  },
+  {
+   "action": "Jack of All Trades",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": -0.3635,
+   "q_saturated": false,
+   "stable_idx": 7,
+   "target_index": null,
+   "ties": 0,
+   "visits": 5,
+   "win_prob": 0.4,
+   "wins": 2
+  },
+  {
+   "action": "Strike",
+   "is_best": false,
+   "losses": 4,
+   "low_confidence": false,
+   "q": -0.4839,
+   "q_saturated": false,
+   "stable_idx": 6,
+   "target_index": 0,
+   "ties": 0,
+   "visits": 6,
+   "win_prob": 0.3333,
+   "wins": 2
+  },
+  {
+   "action": "Reflex",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": -1.2943,
+   "q_saturated": false,
+   "stable_idx": 5,
+   "target_index": null,
+   "ties": 0,
+   "visits": 3,
+   "win_prob": 0.0,
+   "wins": 0
+  },
+  {
+   "action": "end turn",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": -1.3342,
+   "q_saturated": false,
+   "stable_idx": -1,
+   "target_index": null,
+   "ties": 0,
+   "visits": 3,
+   "win_prob": 0.0,
+   "wins": 0
+  }
+ ]
+}

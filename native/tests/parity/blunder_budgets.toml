@@ -1,0 +1,30 @@
+# Per-class budget table consumed by
+# `sts2-replay-audit --ci-gate tests/parity/blunder_budgets.toml`.
+#
+# Each key is a `RedFlagKind::as_str()` value. If the corpus produces
+# more flags of that class than the budget, the binary exits 1.
+# Classes omitted from this table get an effective budget of u32::MAX
+# (never gate-fail). When a fix lands that reduces a class count, the
+# corresponding budget gets tightened in the same commit so the gate
+# ratchets monotonically.
+#
+# Starter values (2026-05-21, bead `sts2-rs-z8cpb`): permissive
+# baseline pending a real measured-from-corpus pass. The values below
+# reflect the order-of-magnitude estimates in the parent bead
+# `sts2-rs-64h9r` but err high so the gate doesn't fail on day one.
+# Real numbers will be re-baselined once the post-093d420 batch is
+# audited end-to-end and pasted in `docs/perf/2026-05-21-blunder-
+# audit.md` (Half B).
+
+[budgets]
+suicide_play                    = 8
+lethal_intent_ignored           = 12
+overblock_without_attack_intent = 16
+defend_no_attack_intent         = 24
+end_turn_with_high_energy       = 32
+strike_when_bash_affordable     = 10
+potion_hoarded_on_death         = 0
+consecutive_skipped_turns       = 0
+zero_play_combat                = 0
+transient_power_leak            = 0
+end_turn_with_playable          = 64

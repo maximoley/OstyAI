@@ -1,0 +1,368 @@
+{
+  "A0": {
+    "cells": {
+      "Ironclad/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      }
+    },
+    "lost": 500,
+    "runs": 500,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "A20": {
+    "cells": {
+      "Ironclad/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Ironclad/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "IroncladBane/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Necrobinder/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Regent/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/LeafSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/Mawler": {
+        "avg_turns": 10.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/Nibbit": {
+        "avg_turns": 7.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/ShrinkerBeetles": {
+        "avg_turns": 8.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      },
+      "Silent/TwigSlimeS": {
+        "avg_turns": 20.0,
+        "lost": 20,
+        "runs": 20,
+        "winrate": 0.0,
+        "won": 0
+      }
+    },
+    "lost": 500,
+    "runs": 500,
+    "winrate": 0.0,
+    "won": 0
+  }
+}

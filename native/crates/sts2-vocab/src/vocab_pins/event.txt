@@ -1,0 +1,78 @@
+# PINNED EMBEDDING-ROW ORDER for the `event` PPO registry. APPEND-ONLY.
+#
+# Line N (comments and blanks skipped) is embedding row N. Reordering or
+# deleting a line silently repoints a deployed champion's learned row at a
+# different id -- the failure GH #544 documents. Adding content appends here;
+# regenerate with `cargo run -p sts2-vocab --example dump_vocab_pins`.
+#
+# Ids present here but absent from the content are kept: the row stays
+# unreachable rather than shifting every id after it.
+AbyssalBaths
+Amalgamator
+AromaOfChaos
+BattlewornDummy
+BrainLeech
+Bugslayer
+ByrdonisNest
+ColorfulPhilosophers
+ColossalFlower
+CrystalSphere
+Darv
+DenseVegetation
+DeprecatedAncientEvent
+DeprecatedEvent
+DollRoom
+DoorsOfLightAndDark
+DrowningBeacon
+EndlessConveyor
+FakeMerchant
+FieldOfManSizedHoles
+GraveOfTheForgotten
+HungryForMushrooms
+InfestedAutomaton
+JungleMazeAdventure
+LostWisp
+LuminousChoir
+MorphicGrove
+Neow
+NeowsBlessing
+Nonupeipe
+Orobas
+Pael
+PotionCourier
+PunchOff
+RanwidTheElder
+Reflections
+RelicTrader
+RoomFullOfCheese
+RoundTeaParty
+SapphireSeed
+SelfHelpBook
+SlipperyBridge
+SpiralingWhirlpool
+SpiritGrafter
+StoneOfAllTime
+SunkenStatue
+SunkenTreasury
+Symbiote
+TabletOfTruth
+Tanx
+TeaMaster
+Tezcatara
+TheArchitect
+TheFutureOfPotions
+TheLanternKey
+TheLegendsWereTrue
+ThisOrThat
+TinkerTime
+TrashHeap
+Trial
+UnrestSite
+Vakuu
+WarHistorianRepy
+WaterloggedScriptorium
+WelcomeToWongos
+Wellspring
+WhisperingHollow
+WoodCarvings
+ZenWeaver

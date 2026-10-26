@@ -1,0 +1,28 @@
+# Append-only row order for the PPO enchantment embedding (GH #545).
+# Line N (skipping blanks and comments) IS embedding row N. NEVER reorder,
+# never delete: a deployed champion reads row N and expects this id there.
+# A new enchantment goes at the END of this file, and at the end of
+# `EnchantmentId::ALL`.
+ROYALLY_APPROVED
+STEADY
+TEZCATARAS_EMBER
+SOULS_POWER
+INSTINCT
+GOOPY
+SHARP
+MOMENTUM
+CORRUPTED
+FAVORED
+VIGOROUS
+NIMBLE
+SPIRAL
+GLAM
+ADROIT
+SWIFT
+SOWN
+IMBUED
+SLITHER
+SLUMBERING_ESSENCE
+PERFECT_FIT
+CLONE
+INKY

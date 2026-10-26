@@ -1,0 +1,9 @@
+msrv = "1.78"
+
+# Per RUST_PORTING_PLAN_v2.1 risk register: heap allocation must be visible.
+# HashMap::new requires per-call-site #[allow(clippy::disallowed_methods)] OR
+# an explicit "we want a HashMap because cardinality is unbounded" comment.
+disallowed-methods = [
+  { path = "std::collections::HashMap::new", reason = "Use SmallVec or BTreeMap unless cardinality is genuinely unbounded; allow per call site." },
+  { path = "std::collections::HashMap::with_capacity", reason = "Same as ::new — allow per call site only with rationale." },
+]

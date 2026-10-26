@@ -1,0 +1,29 @@
+{
+  "name": "zero-damage-clamp-seed0",
+  "description": "Damage clamps to zero when negative Strength would push it below. Player has StrengthPower(-10) (allow_negative=True per Python); player attacks Cultist for 6 raw → 6 + (-10) = -4 → max(0, -4) = 0. Cultist HP unchanged (48). Verifies the final clamp at the bottom of the damage pipeline.",
+  "scenario": "zero-damage-clamp",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50,
+    "powers": [{"id": "STRENGTH", "amount": -10}]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 6,
+      "props": "MOVE"
+    }
+  ]
+}

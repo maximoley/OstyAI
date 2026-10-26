@@ -1,0 +1,36 @@
+{
+  "name": "mummified-hand-single-candidate-seed0",
+  "description": "Mummified Hand mid-combat relic parity: with hand=[INFLAME (Power), STRIKE_IRONCLAD (Attack)] and the MummifiedHand relic equipped, playing Inflame fires `after_card_played` (POWER branch). The handler picks a random card from the post-play hand whose cost>0 and is non-X-cost — here the post-play hand contains only STRIKE_IRONCLAD, so the choice is deterministic across the Python-MT and Rust-Xoshiro256++ RNG streams (single-candidate pool). Expected post-state: STRIKE_IRONCLAD remaining in hand with cost=0, player.powers includes STRENGTH=2 from Inflame. Pin: sts2-rl-agent@01c094d:sts2_env/relics/rare.py::MummifiedHand (lines 731-758). Rust handler: relic_effects.rs:on_after_card_played_mummified_hand (bead sts2-rs-l36v). Bead sts2-rs-8z3fl.5. ShrinkerBeetle is the empty-encounter sentinel (no incoming damage).",
+  "scenario": "mummified-hand-single-candidate",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). MummifiedHand pick is deterministic here because the candidate pool reduces to size 1 (only STRIKE_IRONCLAD remains after INFLAME plays), so the RNG.choice() call returns the same identity in both engines regardless of stream divergence."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "INFLAME"},
+      {"card_id": "STRIKE_IRONCLAD"}
+    ]
+  },
+  "relics": ["MummifiedHand"],
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "play_card", "hand_index": 0}
+  ]
+}

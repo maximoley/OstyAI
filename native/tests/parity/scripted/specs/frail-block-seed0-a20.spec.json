@@ -1,0 +1,28 @@
+{
+  "actions": [
+    {
+      "amount": 5,
+      "props": "MOVE",
+      "target": "player",
+      "type": "gain_block"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Frail reduces block gained by 25%. Player has FrailPower(2); player gains 5 block \u2192 5 * 0.75 = 3.75 \u2192 floor 3. Player.block = 3. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [],
+  "name": "frail-block-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50,
+    "powers": [
+      {
+        "amount": 2,
+        "id": "FRAIL"
+      }
+    ]
+  },
+  "scenario": "frail-block",
+  "seed": 0
+}

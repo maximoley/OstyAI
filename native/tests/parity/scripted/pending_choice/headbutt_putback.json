@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "mode": "pending_choice_bridge",
+  "metadata": {
+    "scenario": "headbutt-putback",
+    "bead": "sts2-rs-ck2",
+    "python_pin": "01c094d",
+    "python_source": "sts2-rl-agent@01c094d:sts2_env/parity/bridge_replay.py:303-316 + sts2_env/cards/ironclad/headbutt.py",
+    "description": "Headbutt opens a PendingChoice over the discard pile asking the player to put one card back on top of the draw pile. ChoiceKind=PutBack."
+  },
+  "pending_choice": {
+    "kind": "PutBack",
+    "options": [
+      { "card_id": "Bash", "upgraded": false },
+      { "card_id": "StrikeIronclad", "upgraded": true },
+      { "card_id": "DefendIronclad", "upgraded": false }
+    ],
+    "min_select": 1,
+    "max_select": 1,
+    "can_skip": false
+  },
+  "expected_bridge_value": {
+    "type": "card_select",
+    "kind": "put_back",
+    "cards": [
+      { "id": "BASH", "type": "Attack", "upgraded": false },
+      { "id": "STRIKE_IRONCLAD", "type": "Attack", "upgraded": true },
+      { "id": "DEFEND_IRONCLAD", "type": "Skill", "upgraded": false }
+    ],
+    "min_select": 1,
+    "max_select": 1,
+    "can_skip": false
+  }
+}

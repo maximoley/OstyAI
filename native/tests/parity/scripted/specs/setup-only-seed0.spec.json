@@ -1,0 +1,13 @@
+{
+  "name": "setup-only-seed0",
+  "description": "VTHIN-1 setup-only fixture: Ironclad at 50/50 HP, no enemies, no actions. Validates Rust↔Python data-shape integration on a no-action scenario before any logic exercising fixtures.",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50
+  },
+  "enemies": [],
+  "actions": []
+}

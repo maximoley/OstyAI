@@ -1,0 +1,7 @@
+# Lightspeed-parity smoke fixture: bare-int dispatch + `card` alias + Nibbit AI.
+# Default --encounter is Nibbit (45 HP, BUTT(12) on turn 0 via the DSL AI).
+card 0
+0
+1
+e
+quit

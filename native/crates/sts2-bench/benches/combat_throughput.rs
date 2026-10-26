@@ -1,0 +1,228 @@
+//! P6-10 combat-throughput bench (bead `sts2-rs-fxw`).
+//!
+//! Target: ≥ `80_000` combats/sec single-thread (per
+//! `docs/plans/2026-05-12-p6-strategy-synthesized.md` §6).
+//!
+//! Differs from `combat.rs` (which is the Phase-4 ≥30k baseline harness)
+//! by exercising the **full** P6 dispatch path (`Action::PlayCard` via
+//! `legal_actions`) instead of `EndTurn`-only. Combat shape is a fixed
+//! Cultist-vs-Ironclad encounter with an "always pick action 0" agent
+//! (deterministic, no RNG branch in the timing loop). The combat ends
+//! either on Cultist death or via the natural EndTurn-on-empty-hand path.
+//!
+//! Acceptance: the bench compiles and runs. The 80k/sec target is
+//! reported, not asserted — if missed, the bead description specifies
+//! "create a perf-followup bead and close fxw".
+
+// Bead sts2-rs-ung (P8-4): opt-in mimalloc.
+#[cfg(feature = "mimalloc")]
+#[global_allocator]
+static GLOBAL: sts2_core::alloc::MiMalloc = sts2_core::alloc::MiMalloc;
+
+use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughput};
+use smallvec::SmallVec;
+
+use sts2_content::cards::dispatch as content_dispatch;
+use sts2_content::cards::ironclad_basic::ironclad_starter_deck;
+use sts2_core::cards::Card;
+use sts2_core::combat_loop::{start_combat, start_player_turn};
+use sts2_core::{
+    apply, legal_actions, CardUid, CombatPhase, CombatState, Creature, CreatureUid, IntentHistory,
+    MonsterId, MonsterKind, PlayerCombatState, Side, StepResult, TurnEvents,
+};
+
+fn make_cultist_combat(seed: u64) -> CombatState {
+    let deck = ironclad_starter_deck();
+    let mut draw: SmallVec<[CardUid; 32]> = SmallVec::new();
+    let mut cards_arena: Vec<Card> = Vec::with_capacity(deck.len());
+    for (i, spec) in deck.iter().enumerate() {
+        let raw = u32::try_from(i + 1).expect("deck size fits in u32");
+        let uid = CardUid::new(raw).expect("non-zero");
+        draw.push(uid);
+        cards_arena.push(Card {
+            uid,
+            card_id: spec.id,
+            cost: spec.cost,
+            card_type: spec.card_type,
+            target_type: spec.target_type,
+            upgraded: false,
+            base_damage: spec.base_damage,
+            base_block: spec.base_block,
+            ..Card::pod_defaults()
+        });
+    }
+
+    let cultist_uid = CreatureUid::new(1).expect("non-zero");
+    let cultist = Creature {
+        id: cultist_uid.0,
+        current_hp: 48,
+        max_hp: 48,
+        block: 0,
+        powers: SmallVec::new(),
+        species: Some(MonsterKind::Nibbit),
+        monster_id: MonsterId("Nibbit"),
+        intent: None,
+        intent_history: IntentHistory::default(),
+        ai: None,
+    };
+
+    let player = PlayerCombatState {
+        hand: SmallVec::new(),
+        draw,
+        discard: SmallVec::new(),
+        exhaust: SmallVec::new(),
+        play: SmallVec::new(),
+        energy: 0,
+        max_energy: 3,
+        stars: 0,
+        current_hp: 80,
+        max_hp: 80,
+        block: 0,
+        powers: SmallVec::new(),
+        character: None,
+        potions: SmallVec::new(),
+        potion_slot_indices: SmallVec::new(),
+        potion_slots: 0,
+        orbs: sts2_core::OrbSlots::default(),
+        creature_uid: None,
+        pet_uid: None,
+        shivs_played_this_turn: 0,
+        cards_played_this_turn: [0; 6],
+        powered_hits_this_turn: 0,
+        powered_hits_by_target_this_turn: smallvec::SmallVec::new(),
+        powered_hits_at_card_play_start: 0,
+        attack_command_suppressed_this_play: false,
+        vigor_latch_card: None,
+        generated_cards_this_combat: 0,
+        skills_played_this_turn: 0,
+        card_plays_started_this_turn: 0,
+        cards_first_in_series_this_turn: 0,
+        request_end_turn_after_play: false,
+        retain_this_turn: smallvec::SmallVec::new(),
+        sly_this_turn: smallvec::SmallVec::new(),
+        sly_this_combat: smallvec::SmallVec::new(),
+        pending_retain_count: 0,
+        stars_gained_this_turn: 0,
+        pinned_top: smallvec::SmallVec::new(),
+        pinned_bottom: SmallVec::new(),
+        deferred_draw_order: false,
+    };
+
+    let mut enemy_uids: SmallVec<[CreatureUid; 8]> = SmallVec::new();
+    enemy_uids.push(cultist_uid);
+
+    let mut state = CombatState {
+        player_turn_phase_override: None,
+        phase: CombatPhase::Setup,
+        round: 0,
+        side: Side::Player,
+        rng: sts2_core::dotnet_rng::Rng::new(seed),
+
+        run_rng: sts2_core::run_rng_set::RunRngSet::new(seed),
+        creatures: vec![cultist],
+        cards: cards_arena.into(),
+        powers: Vec::new().into(),
+        relics: Vec::new().into(),
+        potions: Vec::new(),
+        player,
+        allies: SmallVec::new(),
+        enemy_uids,
+        pending_choice: None,
+        resolving_card: None,
+        pending_play: None,
+        pending_turn_setup_resume: false,
+        pending_draw_resume: None,
+        pending_parent_draws: Vec::new(),
+        pending_snecko_cost_randomize: false,
+        pending_cluster_resume: None,
+        pending_hand_draw_resume: None,
+        pending_relic_hand_draw_resume: None,
+        pending_wlp_retain_resume: false,
+        pending_end_turn_resume: None,
+        pending_autoplay_resume: None,
+        autoplay_inline_resolve: false,
+        pending_curse_choice: None,
+        pending_potion_hook_resume: None,
+        pending_enemy_exec_resume: None,
+        combat_log: TurnEvents::default(),
+        swipe_stolen: Vec::new(),
+        escaped_creatures: 0,
+        gremlin_merc_fat_escaped: false,
+        gremlin_merc_gold_was_stolen: false,
+        heist_recovered_gold: 0,
+        event_combat_timed_out: false,
+        gold: 0,
+        is_over: false,
+        player_won: false,
+        ascension: 0,
+        master_deck: Vec::new(),
+        last_added_card: None,
+        is_elite: false,
+        is_boss: false,
+        act_index: 1,
+        active_attack: None,
+        energy_wasted: 0,
+        cards_drawn: 0,
+        pending_run_gold_loss: 0,
+        last_drawn_card: None,
+    };
+
+    let r0 = start_combat(&mut state);
+    debug_assert_eq!(r0, StepResult::Advanced);
+    let r1 = start_player_turn(&mut state);
+    debug_assert_eq!(r1, StepResult::Advanced);
+    debug_assert_eq!(state.phase, CombatPhase::PlayerPlayPhase);
+    state
+}
+
+/// Drive `apply(legal_actions[0])` until terminal. Deterministic — no RNG
+/// in the timing loop.
+#[inline]
+fn drive(state: &mut CombatState) -> u32 {
+    let mut n = 0u32;
+    while !state.is_over {
+        let actions = legal_actions(state);
+        if actions.is_empty() {
+            break;
+        }
+        let _ = apply(state, actions[0].clone());
+        n += 1;
+        debug_assert!(
+            n < 2_000,
+            "combat exceeded 2000 decisions — P6-10 throughput bench regression?"
+        );
+    }
+    n
+}
+
+fn combat_throughput(c: &mut Criterion) {
+    content_dispatch::install_default_registry();
+
+    // Verify the harness terminates on a known seed before timing.
+    {
+        let mut s = make_cultist_combat(0);
+        let n = drive(&mut s);
+        assert!(s.is_over, "harness must terminate");
+        assert!(n > 0, "harness must take ≥ 1 decision");
+    }
+
+    let template = make_cultist_combat(0);
+
+    let mut group = c.benchmark_group("p6_10_combat_throughput");
+    // One iteration = one full combat; throughput in combats/sec.
+    group.throughput(Throughput::Elements(1));
+    group.bench_function("ironclad_vs_cultist", |b| {
+        b.iter_batched(
+            || template.clone(),
+            |mut state| {
+                black_box(drive(&mut state));
+                black_box(state);
+            },
+            criterion::BatchSize::SmallInput,
+        );
+    });
+    group.finish();
+}
+
+criterion_group!(benches, combat_throughput);
+criterion_main!(benches);

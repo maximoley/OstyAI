@@ -1,0 +1,78 @@
+# Card-pool provenance table — REFERENCE ONLY. Nothing reads this file.
+#
+# Bead sts2-rs-pmf (P6-1b) had `scripts/regen-cards-mod.py` generate
+# `cards/mod.rs` from these rows. That script is gone (`mod.rs` outgrew what
+# the manifest could express and a rerun no longer compiled), so `mod.rs` and
+# `dispatch.rs::install_default_registry` are now the real source of truth for
+# which pools exist and which installer each one uses. Keep these rows roughly
+# in step when you add a pool — they are useful review context — but nothing
+# breaks if they drift, and nothing verifies them.
+#
+# Schema (per [[pool]] entry):
+#   file       = "<snake_case>"          # source file: cards/<file>.rs
+#   bead       = "<P-number> (<bead-id>)" # provenance for review
+#   installer  = "<rust::path>"           # fn called from install_default_registry
+#                                          # leave empty until the pool bead lands
+#
+# `ironclad_basic` lives outside the per-character manifest because its 4
+# starter handlers (Strike/Defend/Bash/AscendersBane) are installed by
+# `sts2_core::card_effects::install_default_registry` to avoid a workspace
+# cycle. `dispatch.rs` calls that core installer directly.
+
+[[pool]]
+file = "ironclad_basic"
+bead = "P4-1 (sts2-rs-zcl)"
+installer = ""
+
+# Below: filled by downstream P6-3..P6-7 beads. The pool source files are
+# *not yet committed* — each downstream bead appends one row + lands its
+# `cards/<file>.rs` + `cards/<file>_specs_generated.rs` together. Until
+# then, the rows are commented out so the regen script knows about the
+# upcoming files but `mod.rs` doesn't try to declare missing modules.
+#
+[[pool]]
+file = "ironclad"
+bead = "P6-3 (sts2-rs-le3)"
+installer = "ironclad::install_pool"
+
+[[pool]]
+file = "silent"
+bead = "P6-4 (sts2-rs-l2c)"
+installer = "silent::install_pool"
+
+[[pool]]
+file = "defect"
+bead = "P6-5 (sts2-rs-l7s)"
+installer = "defect::install_pool"
+
+[[pool]]
+file = "colorless"
+bead = "P6-7 (sts2-rs-ltq)"
+installer = "colorless::install_pool"
+
+[[pool]]
+file = "status"
+bead = "P6-7 (sts2-rs-ltq)"
+installer = "status::install_pool"
+
+[[pool]]
+file = "curse"
+bead = "P6-7 (sts2-rs-ltq)"
+installer = "curse::install_pool"
+
+# Pool removed via sts2-rs-g8p2 — an STS1 character with no Python
+# source at pin sts2-rl-agent@01c094d.
+
+# Necrobinder + Regent canonical-content port (umbrella sts2-rs-bay).
+# Pool plumbing landed by `sts2-rs-qeo` (bay-plumb). Card bodies arrive
+# with `bay-necro-cards` (necrobinder) and `bay-regent-cards` (regent);
+# until then `install_pool` is a no-op stub that registers no handlers.
+[[pool]]
+file = "necrobinder"
+bead = "bay-necro (sts2-rs-bay)"
+installer = "necrobinder::install_pool"
+
+[[pool]]
+file = "regent"
+bead = "bay-regent (sts2-rs-bay)"
+installer = "regent::install_pool"

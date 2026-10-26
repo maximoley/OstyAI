@@ -1,0 +1,45 @@
+# cargo-mutants configuration. Mutation testing finds *gaps in the test
+# suite*: it injects small changes (flip `<` to `<=`, drop a `+ block`,
+# replace a return value) and checks whether some test fails. A surviving
+# mutant means a line is executed but not actually asserted.
+#
+# Install:  cargo install cargo-mutants
+# Run (scoped, recommended first pass):
+#   cargo mutants -p sts2-core
+# Run (whole workspace — slow, hundreds of mutants):
+#   cargo mutants
+# Triage:   surviving mutants are written under target/mutants/.
+#
+# Docs: https://mutants.rs/
+
+# CRITICAL: this repo MANDATES nextest. Plain `cargo test` shares a single
+# process and the global effect/relic registry produces order-dependent
+# false failures (see CLAUDE.md "Validation gates before commit"). cargo-
+# mutants defaults to `cargo test`, so without this pin every run would be
+# poisoned by false survivors and false timeouts.
+test_tool = "nextest"
+
+# Generated / port-pinned sources: mutating them only produces noise. They
+# are regenerated from scrapers/TOML and already guarded by the regen-check
+# CI gate, so behavioral correctness there is enforced upstream, not by unit
+# tests in this crate.
+exclude_globs = [
+    "**/*_generated.rs",
+]
+
+# The engine state is large and some tests legitimately run for several
+# seconds. Give mutants headroom over the auto-derived baseline before
+# declaring a mutant "timed out" (i.e. an injected infinite loop) rather
+# than merely slow, so genuinely-slow tests don't read as false timeouts.
+timeout_multiplier = 3.0
+minimum_test_timeout = 60
+
+# PARALLELISM CAVEAT: do NOT pass a high `cargo mutants -j N`. The sts2-core
+# baseline suite is ~60s and nextest already runs it multi-threaded, so each
+# mutant job saturates the cores on its own. Running several jobs in parallel
+# oversubscribes (N jobs x nextest threads) and inflates every test run past
+# the timeout — a run at `-j 4` on a 4-core host produced ~140/147 false
+# TIMEOUTs. Run serial (the default) or, on a many-core host, pair `-j N` with
+# a higher `--timeout`. Mutation testing this crate is inherently slow because
+# each mutant reruns the whole suite; prefer a scoped `--re <fn>` / `-f <file>`
+# first pass over a full-crate sweep.

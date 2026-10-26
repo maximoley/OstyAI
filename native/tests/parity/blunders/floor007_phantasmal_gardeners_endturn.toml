@@ -1,0 +1,54 @@
+schema = 2
+
+# Hand-curated blunder fixture for `sts2-rs-30lw5` (child of
+# `sts2-rs-b4myp` / `sts2-rs-64h9r`).
+#
+# Source: copied from
+#   /tmp/run-fixtures-full/the-ironclad/00030217-6611-4a0a-aa7b-a01d92f22b49_floor007_phantasmal_gardeners_elite.toml
+#
+# Turn 1 vs 4× PHANTASMAL_GARDENER (act-1 elite, max-monster
+# encounter). Curse/status-free deck. End turn at e=3 with
+# 4 enemies on board is the canonical end_turn_with_high_energy
+# blunder. Largest-monster-count fixture under
+# tests/parity/blunders/ — exercises the multi-target line.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 7
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
+room_type  = "elite"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 32
+max_hp    = 80
+gold      = 146
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+", "DOMINATE+", "ONE_TWO_PUNCH+", "UNRELENTING", "SHRUG_IT_OFF"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[blunder_assertion]
+class          = "end_turn_with_high_energy"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

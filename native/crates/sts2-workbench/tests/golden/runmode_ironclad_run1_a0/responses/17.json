@@ -1,0 +1,53 @@
+{
+ "error": null,
+ "impl": "rust",
+ "options": [
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 0
+   },
+   "is_best": false,
+   "label": "Take Vicious",
+   "prob": 0.0001
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 1
+   },
+   "is_best": true,
+   "label": "Take Infernal Blade",
+   "prob": 0.9094
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 2
+   },
+   "is_best": false,
+   "label": "Take Bloodletting",
+   "prob": 0.0004
+  },
+  {
+   "action": "skip_card_reward",
+   "args": {},
+   "is_best": false,
+   "label": "Skip card reward",
+   "prob": 0.0384
+  },
+  {
+   "action": "use_potion",
+   "args": {
+    "potion_index": 0,
+    "target_index": null
+   },
+   "is_best": false,
+   "label": "Drink Fruit Juice",
+   "prob": 0.0517
+  }
+ ],
+ "ppo_available": true,
+ "surface": "card-pick",
+ "value": 0.9373
+}

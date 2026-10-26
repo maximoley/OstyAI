@@ -1,0 +1,16 @@
+# sts2-cli scenario — Ironclad vs. a single Nibbit.
+#
+# Demonstrates the minimal viable scenario shape: schema marker + one
+# [[monsters]] block. Kept under the historical `single-cultist.toml`
+# filename for back-compat with the `demo_single_cultist_runs` test;
+# bead `sts2-rs-ar9u` migrated the body from the (removed) STS1
+# `Cultist` stub to the STS2-native `Nibbit`.
+
+schema = 1
+
+[player]
+class = "Ironclad"
+hp = 80
+
+[[monsters]]
+kind = "Nibbit"

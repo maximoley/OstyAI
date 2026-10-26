@@ -1,0 +1,12 @@
+Licensing scope
+===============
+
+The inherited Rust simulator is MIT-licensed, Copyright (c) 2025-2026
+Thomas Friedel. Its complete license and scope restriction are retained
+unchanged in native/LICENSE and attribution/upstream-LICENSE.
+
+This private snapshot does not create a new blanket license for OstyAI
+additions, model weights, human-derived benchmark fixtures, or results.
+All rights not already granted by the applicable upstream or dependency
+license are reserved by their respective owners. Consult ATTRIBUTION.md
+and PROVENANCE.md before any public redistribution.

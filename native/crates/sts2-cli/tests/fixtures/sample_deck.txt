@@ -1,0 +1,8 @@
+# sample_deck.txt — used by tests/fixtures and the bead-63bi
+# acceptance gate `sts2-cli combat --deck-file …`.
+# Comment lines (full-line and trailing) are ignored. A trailing `+`
+# marks the card as upgraded.
+Strike
+Strike  # repeat trailing comment
+Defend
+Bash+

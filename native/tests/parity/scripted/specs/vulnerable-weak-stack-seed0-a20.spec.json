@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "amount": 6,
+      "dealer": "player",
+      "props": "MOVE",
+      "target": "enemy_0",
+      "type": "deal_damage"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Multipler composition test (load-bearing single-floor invariant). Cultist has VulnerablePower(2), player has WeakPower(2); player attacks Cultist for 6 raw \u2192 composed mul = (3/2) * (3/4) = 9/8 \u2192 6 * 9 / 8 = 54/8 = 6.75 \u2192 floor 6. Cultist HP 48 - 6 = 42. Diverges from per-stage flooring (which would give 6\u21929 vuln\u21926.75 weak\u21926, same here, but the audit showed ~12.5% of inputs flip; this fixture documents the canonical multi-multiplier path. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [
+    {
+      "current_hp": 48,
+      "max_hp": 48,
+      "monster_id": "ShrinkerBeetle",
+      "powers": [
+        {
+          "amount": 2,
+          "id": "VULNERABLE"
+        }
+      ]
+    }
+  ],
+  "name": "vulnerable-weak-stack-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50,
+    "powers": [
+      {
+        "amount": 2,
+        "id": "WEAK"
+      }
+    ]
+  },
+  "scenario": "vulnerable-weak-stack",
+  "seed": 0
+}

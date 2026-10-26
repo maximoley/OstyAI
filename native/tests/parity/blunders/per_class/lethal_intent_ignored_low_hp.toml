@@ -1,0 +1,57 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-nhvwo` (q3yiy.1 follow-up).
+# Class: `lethal_intent_ignored` — Detector at
+# crates/sts2-cli/src/replay/audit.rs:277 fires when the player
+# ends turn with `incoming_attack_damage > player_block + player_hp`.
+#
+# Construction: a floor-7 Phantasmal Gardeners elite encounter
+# (4× monsters, each carrying a damage intent) with player HP cut
+# to 8 so a single incoming-attack would lethal-kill. Curse/
+# status-free deck (per the
+# feedback_blunder_fixture_curse_status_poison memo). MCTS at
+# sims=2000 must pick a defensive card or a kill-the-attacker line,
+# never `End turn` — that would walk into 1-shot death.
+#
+# Source: derived from floor007_phantasmal_gardeners_endturn.toml.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 7
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.PHANTASMAL_GARDENERS_ELITE"
+room_type  = "elite"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 8
+max_hp    = 80
+gold      = 146
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+", "DOMINATE+", "ONE_TWO_PUNCH+", "UNRELENTING", "SHRUG_IT_OFF"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[[monsters]]
+kind = "PHANTASMAL_GARDENER"
+
+[blunder_assertion]
+class          = "lethal_intent_ignored"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

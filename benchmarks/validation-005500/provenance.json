@@ -1,0 +1,26 @@
+{
+  "evaluation_mode": "search",
+  "model_sha256": "5ab556567a7d8f0d8f8657f1ff24b8150428a09bdb23980067a9441459e63816",
+  "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a",
+  "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "update": 5500,
+  "episodes": [
+    1000000,
+    1000001
+  ],
+  "simulation_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "simulations": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "action_selection": "gumbel_search",
+  "max_actions": 1000,
+  "skip_forced_actions": true
+}

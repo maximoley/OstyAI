@@ -1,0 +1,76 @@
+{
+ "assumptions": {
+  "energy": 3,
+  "hand": 5,
+  "samples": 200
+ },
+ "block": {
+  "per_turn": 12.1,
+  "scaling_cards": []
+ },
+ "composition": {
+  "by_rarity": {
+   "Basic": 11,
+   "Common": 2
+  },
+  "by_type": {
+   "Attack": 7,
+   "Skill": 6
+  },
+  "dead_cards": 0,
+  "energy_curve": {
+   "0": 1,
+   "1": 12
+  },
+  "unupgraded_basics": 11
+ },
+ "damage": {
+  "aoe_attacks": [
+   "Flick-Flack",
+   "Dagger Spray"
+  ],
+  "attack_count": 7,
+  "per_turn": 21.1,
+  "scaling_cards": [
+   "Neutralize"
+  ],
+  "single_target": 15.6,
+  "vs_group": 26.6
+ },
+ "deck_size": 13,
+ "lenses": {
+  "boss": 29.0,
+  "hallway": 33.7,
+  "scaling": 26.4
+ },
+ "scores": {
+  "block": 45.5,
+  "damage": 41.0,
+  "velocity": 0.0,
+  "volume": 0.0
+ },
+ "velocity": {
+  "bottleneck": "energy",
+  "cards_per_turn": 3.4,
+  "dilution": 1.0,
+  "draw_limited_turns": 0.0,
+  "energy_limited_turns": 7.0,
+  "engine_cards": 0,
+  "extra_per_turn": 0.0,
+  "tags": {}
+ },
+ "warnings": [
+  {
+   "severity": "info",
+   "text": "Low velocity — few draw/energy cards; you'll often draw the wrong hand."
+  },
+  {
+   "severity": "info",
+   "text": "Energy-limited — cards stranded in hand; more energy helps, more draw won't."
+  },
+  {
+   "severity": "warn",
+   "text": "Deck clogged with basics/curses — prioritise removals."
+  }
+ ]
+}

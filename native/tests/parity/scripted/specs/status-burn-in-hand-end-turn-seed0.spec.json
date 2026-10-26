@@ -1,0 +1,34 @@
+{
+  "name": "status-burn-in-hand-end-turn-seed0",
+  "description": "sts2-rs-8z3fl.11: Burn (Status, cost=-1, unplayable) end-turn-in-hand tick. Player starts a round with a single BURN in hand and immediately ends turn. The end-of-turn `register_turn_end_in_hand_hook(CardId.BURN)` fires, dealing BURN_DAMAGE=2 unblockable-style damage to the owner (sts2-rl-agent@01c094d:sts2_env/cards/status.py:1373-1383 + core/constants.py BURN_DAMAGE=2). Verifies that (a) the engine surfaces the card as `playable: false` on the initial bridge state because cost=-1, (b) the end-turn tick deals exactly 2 damage to the player (80 → 78), and (c) Burn moves to discard (not exhaust — Burn is NOT ethereal, unlike Dazed). Pairs with `ethereal-dazed-expel-seed0` which covers the ethereal-vs-discard distinction. ShrinkerBeetle is the empty-encounter sentinel reused from the Dazed fixture.",
+  "scenario": "status-burn-in-hand-end-turn",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — intent triple diverges by design (monsters.rs:22-29). The Burn end-turn-in-hand tick does NOT consume RNG, so player HP + pile counts + hand shape stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "BURN"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "end_turn"}
+  ]
+}

@@ -1,0 +1,44 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-21s28`.
+# Class: `overblock_without_attack_intent` — fires when block bar
+# materially exceeds enemy attack damage with no further use.
+#
+# Bygone Effigy elite t=1. Enemy has high attack telegraph, so any
+# rational MCTS pick (Strike / Bash) avoids overblocking. At
+# decision_index=0 the audit detector cannot flag the rational
+# pick as overblock without first observing a block-play action.
+#
+# Source: derived from floor008_bygone_effigy_endturn.toml.
+
+[provenance]
+run_id     = "002b06d4-7a04-4f05-bfc0-5fe0945bd225"
+build_id   = "v0.104.0"
+floor      = 8
+act        = "ACT.OVERGROWTH"
+encounter  = "ENCOUNTER.BYGONE_EFFIGY_ELITE"
+room_type  = "elite"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 10
+hp        = 69
+max_hp    = 80
+gold      = 44
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "BLOOD_WALL", "TRUE_GRIT", "THUNDERCLAP", "UPPERCUT+", "TWIN_STRIKE", "STOMP"]
+relics    = ["BURNING_BLOOD", "LARGE_CAPSULE", "PEN_NIB", "RUINED_HELMET"]
+potions   = []
+
+[[monsters]]
+kind = "BYGONE_EFFIGY"
+
+[blunder_assertion]
+class          = "overblock_without_attack_intent"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

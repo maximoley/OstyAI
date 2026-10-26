@@ -1,0 +1,88 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 Cultist's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 48,
+        "id": "Cultist",
+        "is_alive": true,
+        "max_hp": 48,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "cost": 1,
+        "id": "POMMEL_STRIKE",
+        "playable": true,
+        "target": "AnyEnemy",
+        "type": "Attack",
+        "base_damage": 9
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Cultist",
+    "python_pin": "01c094d",
+    "rust_pin": "3d4ce8c14d743d63f96775139f13fde338c8405c",
+    "scenario": "ironclad-pommel-strike",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 39,
+            "id": "Cultist",
+            "is_alive": true,
+            "max_hp": 48,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 2,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

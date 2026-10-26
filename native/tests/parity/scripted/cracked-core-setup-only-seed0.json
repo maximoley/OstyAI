@@ -1,0 +1,29 @@
+{
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 75,
+      "max_energy": 3,
+      "max_hp": 75,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Defect",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "6326251a6a74e6926db39a99ccae36c93a688bc3",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [],
+  "version": 1
+}

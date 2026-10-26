@@ -1,0 +1,19 @@
+{
+ "act": null,
+ "best_label": "Strike",
+ "best_win_prob": 0.7143,
+ "drop_pct": 38,
+ "floor": null,
+ "idx": 123,
+ "is_blunder": true,
+ "matched_best": false,
+ "message": "Turn 1: Survivor instead of Strike dropped P(win) 71%→33% (−38 pts)",
+ "n_actions": 6,
+ "node_id": null,
+ "played_label": "Survivor",
+ "played_win_prob": 0.3333,
+ "player_rank": 2,
+ "regret": 0.381,
+ "turn": 1,
+ "visits": 7
+}

@@ -1,0 +1,51 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "sts2-rs"
+version = "0.0.1"
+description = "Rust STS2 combat simulator (PyO3 bindings)"
+requires-python = ">=3.11"
+authors = [{ name = "Thomas Friedel" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.maturin]
+module-name = "sts2_rs"
+manifest-path = "Cargo.toml"
+features = ["pyo3/extension-module"]
+
+[tool.uv]
+# Rebuild the compiled extension whenever ANY workspace Rust source changes.
+#
+# THE STALE-WHEEL FIX. uv builds this editable package once and caches the
+# result, keyed by default only on this pyproject.toml. So after editing a
+# `.rs` file, uv's env-sync (every `uv run`, even `--frozen`) reinstalls the
+# CACHED build and silently clobbers a fresh `maturin develop` — the recurring
+# "stale wheel" trap that has cost multiple sessions. These cache-keys make uv
+# invalidate and rebuild when any crate source / manifest / lock changes.
+#
+# Globs are relative to this dir (crates/sts2-py): `../**` covers every sibling
+# crate (sts2-core, sts2-content, sts2-runai, …) without reaching the workspace
+# `target/` (which sits at ../../target). `../../Cargo.lock` catches dep bumps.
+# The non-Rust files compiled in with `include_str!` are keys too: anything in
+# a crate's `src/` (sts2-vocab's vocab pins, …), runai's HeuristicV weights,
+# and the toolchain pin. `src_hash` (crates/sts2-srchash) covers the same
+# inputs, so uv and the wheel guards agree on what makes a build stale.
+# sts2-pycli/scripts/uv_stamp_wheel.py mirrors this list: keep to `file` keys.
+cache-keys = [
+    { file = "pyproject.toml" },
+    { file = "Cargo.toml" },
+    { file = "**/*.rs" },
+    { file = "../**/*.rs" },
+    { file = "../**/Cargo.toml" },
+    { file = "../*/src/**/*" },
+    { file = "../../data/runai/heuristic_v.toml" },
+    { file = "../../Cargo.toml" },
+    { file = "../../Cargo.lock" },
+    { file = "../../rust-toolchain.toml" },
+]

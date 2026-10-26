@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-26T17:36:52.675977+00:00",
+  "status": "passed",
+  "source_snapshot": "provenance/export.json",
+  "checks": {
+    "safe_model_load": "passed; finite actor, strict architecture load, 1593346 parameters, both historical fingerprints match",
+    "frozen_benchmarks": "passed; 48 human shard hashes, primary fixture hash, gzip integrity, exact recomputation of per-combat/per-run/summary from 36297 trials",
+    "python_tests": "6 passed: priority sampling, pool sampling, human aggregation",
+    "python_syntax": "passed: compileall scripts and ostyai",
+    "rust_release_build": "passed on Linux NVIDIA L40; 1m37s, existing dependency/build cache",
+    "native_source_identity": "4622 native files present; source matches production export except portable build.rs; 1104 .hegel cache/log files omitted",
+    "gpu_smokes": "24 combats each, no-reuse search / persistent-reuse search / greedy policy; all terminal, search accounting and zero-search counters checked; no replay added; final instrumented policy script rerun also passed",
+    "secret_and_asset_scan": "No private-key/GitHub-token/AWS-key patterns, game-binary/art/audio extensions, or individual files over 50 MiB in package",
+    "focused_rust_search_tests": "24 passed, 83 excluded by focused filter; cargo nextest isolated processes, release build",
+    "documentation_links": "passed for README, provenance and docs"
+  },
+  "limitations": [
+    "Full training corpus and production replay/optimizer/RNG checkpoint intentionally excluded",
+    "No full training run or full 8192/36297 evaluation rerun during packaging; original verified results included",
+    "Dependencies were already installed on Zeus; clean download/install on a new host not tested",
+    "Historical simulator regression reports are included separately; only focused search tests are rerun for packaging"
+  ],
+  "production_training_modified": false,
+  "completed_at_utc": "2026-10-26T17:40:26.848654+00:00"
+}

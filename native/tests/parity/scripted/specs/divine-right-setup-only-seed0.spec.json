@@ -1,0 +1,14 @@
+{
+  "name": "divine-right-setup-only-seed0",
+  "description": "sts2-rs-s16y: setup-only fixture with the Regent starter relic DivineRight installed. Validates the recorder's relics-install slot and that bridge-state byte-equality holds (bridge schema omits relics per zizk). Behavioral observation (round-1 +3 stars per Python pin RelicPool.REGENT class) is visible at player.stars; a follow-up bead can extend to a 1-action variant once the start-of-combat dispatcher fires.",
+  "seed": 0,
+  "character": "Regent",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 72,
+    "current_hp": 72
+  },
+  "enemies": [],
+  "relics": ["DivineRight"],
+  "actions": []
+}

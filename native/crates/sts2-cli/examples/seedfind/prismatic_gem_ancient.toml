@@ -1,0 +1,23 @@
+# seedfind spec — seed-alone example (fast).
+#
+# "A seed whose act-2 boss Ancient offers the Prismatic Gem, and whose act-2
+# event pool contains the Colorful (Prismatic) Philosophers event."
+#
+# Both predicates are fixed by the seed alone, so this scans millions of
+# seeds per minute with no combat. Run:
+#
+#   sts2-cli seedfind --spec crates/sts2-cli/examples/seedfind/prismatic_gem_ancient.toml \
+#       --character ironclad --seeds 200000 --limit 10
+
+character = "ironclad"
+
+# The act-2 Ancient (Orobas/Pael/Tezcatara) offers PRISMATIC_GEM.
+[[ancient_offer]]
+act = 2
+relic = "PRISMATIC_GEM"
+
+# The Colorful Philosophers event is in act 2's pool (it is a shared event,
+# so it appears in every act — kept here to mirror the request).
+[[event_in_pool]]
+act = 2
+id = "ColorfulPhilosophers"

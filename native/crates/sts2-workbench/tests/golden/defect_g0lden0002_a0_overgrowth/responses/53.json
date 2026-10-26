@@ -1,0 +1,475 @@
+{
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "combat_play",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 10568962662196689687,
+   "floor": 2,
+   "step_no": 0,
+   "turn": 5
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 10568962662196689687,
+   "decision": "combat_play",
+   "discard_pile": [],
+   "discard_pile_count": 0,
+   "draw_pile": [
+    {
+     "base_cost": 1,
+     "can_play": false,
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 [gold]Block[/gold].",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": -1,
+     "name": "Defend",
+     "rarity": "Basic",
+     "stats": {
+      "block": 5
+     },
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": false,
+     "color": "blue",
+     "cost": 1,
+     "description": "Evoke your rightmost Orb twice.",
+     "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+     "id": "DUALCAST",
+     "image": "https://assets.test/card_atlas/defect/dualcast.png",
+     "index": -1,
+     "name": "Dualcast",
+     "rarity": "Basic",
+     "stats": {},
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": false,
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": -1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "stats": {
+      "damage": 6
+     },
+     "target_type": "None",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": false,
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": -1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "stats": {
+      "damage": 6
+     },
+     "target_type": "None",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": false,
+     "color": "blue",
+     "cost": 1,
+     "description": "Channel 1 Lightning.",
+     "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+     "id": "ZAP",
+     "image": "https://assets.test/card_atlas/defect/zap.png",
+     "index": -1,
+     "name": "Zap",
+     "rarity": "Basic",
+     "stats": {},
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    }
+   ],
+   "draw_pile_count": 5,
+   "enemies": [
+    {
+     "block": 0,
+     "hp": 11,
+     "image": "https://assets.test/monsters/fuzzy_wurm_crawler.png",
+     "index": 0,
+     "intents": [
+      {
+       "damage": 7,
+       "intent_image": "https://assets.test/intent_atlas/intent_buff.png",
+       "type": "Buff"
+      }
+     ],
+     "kind": "FuzzyWurmCrawler",
+     "max_hp": 57,
+     "move_state": "INHALE",
+     "name": "Fuzzy Wurm Crawler",
+     "powers": [
+      {
+       "amount": 7,
+       "display_amount": 7,
+       "id": "STRENGTH",
+       "image": "https://assets.test/power_atlas/strength_power.png",
+       "image_big": "https://assets.test/power_big/strength_power.png",
+       "name": "Strength"
+      }
+     ],
+     "rig": "https://assets.test/monster_rigs/fuzzy_wurm_crawler/fuzzy_wurm_crawler",
+     "rig_bounds_h": 166.0,
+     "rig_bounds_w": 272.0,
+     "rig_scale": 0.35,
+     "uid": 2
+    }
+   ],
+   "energy": 3,
+   "energy_image": "https://assets.test/sprite_fonts/defect_energy_icon.png",
+   "exhaust_pile": [],
+   "exhaust_pile_count": 0,
+   "floor": 2,
+   "hand": [
+    {
+     "base_cost": 1,
+     "can_play": true,
+     "color": "blue",
+     "cost": 1,
+     "damage_preview": {
+      "0": 6
+     },
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "stats": {
+      "damage": 6
+     },
+     "target_type": "AnyEnemy",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": true,
+     "color": "blue",
+     "cost": 1,
+     "damage_preview": {
+      "0": 6
+     },
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "stats": {
+      "damage": 6
+     },
+     "target_type": "AnyEnemy",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": true,
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 [gold]Block[/gold].",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 2,
+     "name": "Defend",
+     "rarity": "Basic",
+     "stats": {
+      "block": 5
+     },
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": true,
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 [gold]Block[/gold].",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 3,
+     "name": "Defend",
+     "rarity": "Basic",
+     "stats": {
+      "block": 5
+     },
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "base_cost": 1,
+     "can_play": true,
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 [gold]Block[/gold].",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "stats": {
+      "block": 5
+     },
+     "target_type": "None",
+     "type": "Skill",
+     "upgraded": false
+    }
+   ],
+   "max_energy": 3,
+   "options": [],
+   "orb_slots": 3,
+   "orbs": [
+    {
+     "evoke": 8,
+     "image": "https://assets.test/orb_atlas/lightning.png",
+     "index": 0,
+     "name": "LIGHTNING_ORB.title",
+     "passive": 3,
+     "type": "Lightning"
+    },
+    {
+     "evoke": 8,
+     "image": "https://assets.test/orb_atlas/lightning.png",
+     "index": 1,
+     "name": "LIGHTNING_ORB.title",
+     "passive": 3,
+     "type": "Lightning"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Channel 1 Lightning.",
+      "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+      "id": "ZAP",
+      "image": "https://assets.test/card_atlas/defect/zap.png",
+      "index": 8,
+      "name": "Zap",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Evoke your rightmost Orb twice.",
+      "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+      "id": "DUALCAST",
+      "image": "https://assets.test/card_atlas/defect/dualcast.png",
+      "index": 9,
+      "name": "Dualcast",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 2,
+      "description": "The first time you play a\n0 Energy Attack each turn,\nreturn it to your Hand.",
+      "description_rich": "The first time you play a\n0 Energy Attack each turn,\nreturn it to your Hand.",
+      "id": "FERAL",
+      "image": "https://assets.test/card_atlas/defect/beta/feral.png",
+      "index": 10,
+      "name": "Feral",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "upgraded": false
+     }
+    ],
+    "gold": 111,
+    "hp": 46,
+    "image": "https://assets.test/character_sprites/defect.png",
+    "max_hp": 75,
+    "name": "Defect",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, Channel 1 Lightning.",
+      "id": "CRACKED_CORE",
+      "image": "https://assets.test/relic_atlas/cracked_core.png",
+      "name": "Cracked Core"
+     },
+     {
+      "description": "Every 3 normal combats, Upgrade a random card in your Deck.",
+      "id": "FISHING_ROD",
+      "image": "https://assets.test/relic_atlas/fishing_rod.png",
+      "name": "Fishing Rod"
+     }
+    ],
+    "rig": "https://assets.test/character_rigs/defect/defect",
+    "rig_bounds_h": 260.0,
+    "rig_bounds_w": 250.0,
+    "rig_scale": 0.125
+   },
+   "player_powers": [
+    {
+     "amount": 1,
+     "display_amount": 1,
+     "id": "FERAL",
+     "image": "https://assets.test/power_atlas/feral_power.png",
+     "image_big": "https://assets.test/power_big/feral_power.png",
+     "name": "Feral"
+    }
+   ],
+   "round": 5
+  }
+ }
+}

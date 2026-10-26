@@ -1,0 +1,539 @@
+{
+ "details": [
+  "+Relic Pomander"
+ ],
+ "error": null,
+ "label": "Choose: POMANDER",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": null,
+   "bg_row": null,
+   "bg_seed": 11180935036767329045,
+   "floor": 0,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_seed": 11180935036767329045,
+   "can_skip": false,
+   "cards": [
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 4,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "description_rich": "Gain 8 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "description_rich": "Gain 8 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "description_rich": "Gain 8 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 8,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 8 Block.",
+      "description_rich": "Gain 8 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": true
+     },
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 2,
+     "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "id": "BASH",
+     "image": "https://assets.test/card_atlas/ironclad/bash.png",
+     "index": 9,
+     "name": "Bash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgrade_preview": {
+      "color": "red",
+      "cost": 2,
+      "description": "Deal 10 damage.\nApply 3 Vulnerable.",
+      "description_rich": "Deal 10 damage.\nApply 3 Vulnerable.",
+      "id": "BASH",
+      "image": "https://assets.test/card_atlas/ironclad/bash.png",
+      "index": 9,
+      "name": "Bash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     "upgraded": false
+    }
+   ],
+   "context": "upgrade",
+   "decision": "card_select",
+   "floor": 0,
+   "max_select": 1,
+   "min_select": 1,
+   "options": [
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "0"
+     },
+     "enabled": true,
+     "label": "STRIKE_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "1"
+     },
+     "enabled": true,
+     "label": "STRIKE_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "2"
+     },
+     "enabled": true,
+     "label": "STRIKE_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "3"
+     },
+     "enabled": true,
+     "label": "STRIKE_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "4"
+     },
+     "enabled": true,
+     "label": "STRIKE_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "5"
+     },
+     "enabled": true,
+     "label": "DEFEND_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "6"
+     },
+     "enabled": true,
+     "label": "DEFEND_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "7"
+     },
+     "enabled": true,
+     "label": "DEFEND_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "8"
+     },
+     "enabled": true,
+     "label": "DEFEND_IRONCLAD.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "9"
+     },
+     "enabled": true,
+     "label": "BASH.title"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 2,
+      "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "id": "BASH",
+      "image": "https://assets.test/card_atlas/ironclad/bash.png",
+      "index": 9,
+      "name": "Bash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 99,
+    "hp": 80,
+    "max_hp": 80,
+    "name": "Ironclad",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the end of combat, heal 6 HP.",
+      "id": "BURNING_BLOOD",
+      "image": "https://assets.test/relic_atlas/burning_blood.png",
+      "name": "Burning Blood"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   }
+  }
+ }
+}

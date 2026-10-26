@@ -1,0 +1,43 @@
+{
+  "actions": [],
+  "auto_end_turns": 10,
+  "character": "Ironclad",
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — intent triple diverges by design (monsters.rs:22-29 / inflight-briefing §9).",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-rggx: per-step shape lock — Python MT vs Rust Xoshiro256++ roll different intent branches across the 10-turn walk, so damage-derived fields (hp/block/is_alive/powers) and post-game-over freeze fields (/round, player.energy, player.max_energy) are excluded. Only structural shape (type tag, top-level keys, enemy id/max_hp, pile counts, player/max_hp, hand) is byte-locked."
+  },
+  "encounter": "TheInsatiable",
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act2:create_the_insatiable",
+      "builder_seed": 0
+    }
+  ],
+  "name": "act2-the-insatiable-seed0",
+  "player": {
+    "current_hp": 80,
+    "max_hp": 80
+  },
+  "scenario": "act2-the-insatiable",
+  "seed": 0
+}

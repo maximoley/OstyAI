@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-26T17:16:07Z",
+  "upstream_repository": "https://github.com/tfriedel/spire-mentor",
+  "upstream_checkout_commit": "e7a923e90dc731e83683791b6c4d4a4059656149",
+  "current_native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+  "historical_native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "source": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024",
+  "training_datasets_included": false,
+  "private_benchmark_fixtures_included": true,
+  "python": "Python 3.12.3",
+  "torch": "2.7.1+cu128"
+}

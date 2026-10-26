@@ -1,0 +1,79 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG divergence: Python MT vs Rust Xoshiro256++ resolve different initial intents off Byrdonis's SWOOP/PECK alternation when the AI driver consumes RNG bits. Excluding the intent triple keeps the structural shape-lock independent of RNG choice while leaving HP/max_hp/pile counts/keys all byte-locked.",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-sc7aq (may54.1): per-step structural shape lock. Byrdonis alternates SWOOP <-> PECK each turn; damage-derived fields move every turn. Only structural invariants — type tag, enemy id, max_hp=91, pile counts, player.max_hp=80, hand shape — are byte-locked across the 10-turn walk. Python recording is future work once the cross-language RNG-recording infra lands (sister beads ohxoq.1-4 / wdrr3).",
+    "step_action_reason": "All 10 steps use `end_turn`: Byrdonis setup has an empty player draw pile + 0 energy + no relics, so the only legal action every turn is end_turn."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 91,
+        "id": "BYRDONIS",
+        "intent": "ATTACK",
+        "intent_damage": 16,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 91,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Byrdonis",
+    "python_pin": "01c094d-pending",
+    "rust_pin": "sc7aq-rust-only",
+    "scenario": "act1-byrdonis-seed0",
+    "seed": 0,
+    "notes": "sts2-rs-sc7aq (may54.1): 10-turn step-walk extension of the sts2-rs-may54 setup-only sentinel. Third in the parity step-walk shape-lock trio after parafright (sts2-rs-r9n4w) and bygone effigy (sts2-rs-ouojn). Python recording remains future work; this commit lands the Rust-side structural shape-lock so engine regressions on Byrdonis's SWOOP/PECK alternator surface immediately."
+  },
+  "mode": "combat",
+  "steps": [
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 64, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 1, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 48, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 2, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 32, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 3, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 16, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 4, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}},
+    {"action": {"action": "end_turn"}, "resulting_state": {"discard_pile_count": 0, "draw_pile_count": 0, "enemies": [{"block": 0, "hp": 91, "id": "BYRDONIS", "intent": "ATTACK", "intent_damage": 16, "intent_hits": 1, "is_alive": true, "max_hp": 91, "powers": []}], "exhaust_pile_count": 0, "hand": [], "player": {"block": 0, "energy": 0, "hp": 0, "max_energy": 3, "max_hp": 80, "powers": []}, "round": 5, "type": "combat_action"}}
+  ],
+  "version": 1
+}

@@ -1,0 +1,51 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG divergence: Python MT vs Rust Xoshiro256++ resolve different initial intents off Byrdonis's SWOOP/PECK alternation when the AI driver consumes RNG bits. Excluding the intent triple keeps the structural shape-lock independent of RNG choice while leaving HP/max_hp/pile counts/keys all byte-locked."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 91,
+        "id": "BYRDONIS",
+        "intent": "ATTACK",
+        "intent_damage": 16,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 91,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Byrdonis",
+    "python_pin": "01c094d-pending",
+    "rust_pin": "f1cd630-rust-only",
+    "scenario": "act1-byrdonis-setup-only",
+    "seed": 0,
+    "notes": "sts2-rs-may54: setup-only fixture — initial state shape-lock only. Full step-walk + Python recording deferred to may54.1 follow-up. HP fixed at 91 (lower bound of rng_range 91..=94) so Rust-side construction is deterministic; the JSON is the contract, not the rng output. Byrdonis is the chosen simple-AI representative per jdlfq decomposition (2-state SWOOP↔PECK alternator, no RAND branch — the cleanest simple-AI act1 monster outside the existing Mawler fixture)."
+  },
+  "mode": "combat",
+  "steps": [],
+  "version": 1
+}

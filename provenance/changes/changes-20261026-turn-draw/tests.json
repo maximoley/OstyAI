@@ -1,0 +1,14 @@
+{
+  "sts2_core-7a53335129e55de2": {
+    "total": 2368,
+    "passed": 2366,
+    "ignored": 2,
+    "failures": []
+  },
+  "sts2_wire-ffad189f9f90de54": {
+    "total": 62,
+    "passed": 62,
+    "ignored": 0,
+    "failures": []
+  }
+}

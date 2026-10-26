@@ -1,0 +1,54 @@
+sts2-cli v0.0.1 — seed=42 encounter=nibbit (Nibbit) player=Ironclad agent=Random potions=[]
+── starting combat ──
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 3/3
+  draw    : 5  discard: 0  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 43/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: Bash  cost 2  (Attack/Enemy)
+    slot 3: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 4: DefendIronclad  cost 1  (Skill/Self_)
+  random> play 0 0
+  -> Advanced
+  random> play 1 0
+  -> Advanced
+  random> end
+  -> Advanced
+  random> end
+  -> Advanced
+  random> end
+  -> Advanced
+  random> play 4
+  -> Advanced
+  random> play 3 0
+  -> Advanced
+  random> end
+  -> Advanced
+  random> play 4 0
+  -> Advanced
+  random> play 2
+  -> Advanced
+  random> play 2 0
+  -> Advanced
+  random> end
+  -> Advanced
+  random> play 4
+  -> Advanced
+  random> play 1 0
+  -> Advanced
+  random> end
+  -> Advanced
+  random> end
+  -> Advanced
+  random> play 3 0
+  -> Advanced
+  random> end
+  -> Advanced
+  random> play 4 0
+  -> CombatWon
+── combat over: WON ──

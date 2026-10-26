@@ -1,0 +1,22 @@
+{
+ "saves": [
+  {
+   "act1": "overgrowth",
+   "ascension": 0,
+   "backend": "rust",
+   "character": "Ironclad",
+   "name": "golden mid",
+   "progress": {
+    "act": 1,
+    "floor": 8,
+    "hp": 57,
+    "max_hp": 85
+   },
+   "run_mode": true,
+   "saved_at": "2026-01-01T00:00:00Z",
+   "schema_version": 1,
+   "seed": "1",
+   "step_count": 74
+  }
+ ]
+}

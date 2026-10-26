@@ -1,0 +1,6468 @@
+{
+ "graphs": [
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 0,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": null,
+    "path_plan": {
+     "baseline_col": 5,
+     "best_col": 5,
+     "columns": [
+      {
+       "baseline_score": 0.6714,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 31,
+       "score": 0.6714
+      },
+      {
+       "baseline_score": 0.5636,
+       "can_skip_elite": false,
+       "col": 3,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 9,
+       "score": 0.5636
+      },
+      {
+       "baseline_score": 0.6964,
+       "can_skip_elite": false,
+       "col": 5,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 15,
+       "score": 0.6964
+      }
+     ],
+     "diverged": false,
+     "first_col": null,
+     "route": [
+      {
+       "col": 5,
+       "row": 1
+      },
+      {
+       "col": 6,
+       "row": 2
+      },
+      {
+       "col": 6,
+       "row": 3
+      },
+      {
+       "col": 5,
+       "row": 4
+      },
+      {
+       "col": 6,
+       "row": 5
+      },
+      {
+       "col": 5,
+       "row": 6
+      },
+      {
+       "col": 6,
+       "row": 7
+      },
+      {
+       "col": 6,
+       "row": 8
+      },
+      {
+       "col": 6,
+       "row": 9
+      },
+      {
+       "col": 5,
+       "row": 10
+      },
+      {
+       "col": 4,
+       "row": 11
+      },
+      {
+       "col": 4,
+       "row": 12
+      },
+      {
+       "col": 5,
+       "row": 13
+      },
+      {
+       "col": 5,
+       "row": 14
+      },
+      {
+       "col": 4,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 2
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 1,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 0,
+     "row": 1
+    },
+    "path_plan": {
+     "baseline_col": 0,
+     "best_col": 0,
+     "columns": [
+      {
+       "baseline_score": 0.7486,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 31,
+       "score": 0.7486
+      }
+     ],
+     "diverged": false,
+     "first_col": 0,
+     "route": [
+      {
+       "col": 0,
+       "row": 2
+      },
+      {
+       "col": 0,
+       "row": 3
+      },
+      {
+       "col": 0,
+       "row": 4
+      },
+      {
+       "col": 0,
+       "row": 5
+      },
+      {
+       "col": 0,
+       "row": 6
+      },
+      {
+       "col": 0,
+       "row": 7
+      },
+      {
+       "col": 0,
+       "row": 8
+      },
+      {
+       "col": 0,
+       "row": 9
+      },
+      {
+       "col": 0,
+       "row": 10
+      },
+      {
+       "col": 1,
+       "row": 11
+      },
+      {
+       "col": 0,
+       "row": 12
+      },
+      {
+       "col": 1,
+       "row": 13
+      },
+      {
+       "col": 2,
+       "row": 14
+      },
+      {
+       "col": 3,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": true,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 19
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 2,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 0,
+     "row": 2
+    },
+    "path_plan": {
+     "baseline_col": 0,
+     "best_col": 0,
+     "columns": [
+      {
+       "baseline_score": 0.7773,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 31,
+       "score": 0.7773
+      }
+     ],
+     "diverged": false,
+     "first_col": 0,
+     "route": [
+      {
+       "col": 0,
+       "row": 3
+      },
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 5
+      },
+      {
+       "col": 2,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 0,
+       "row": 9
+      },
+      {
+       "col": 0,
+       "row": 10
+      },
+      {
+       "col": 1,
+       "row": 11
+      },
+      {
+       "col": 0,
+       "row": 12
+      },
+      {
+       "col": 1,
+       "row": 13
+      },
+      {
+       "col": 2,
+       "row": 14
+      },
+      {
+       "col": 3,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": true,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 22
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 3,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 0,
+     "row": 3
+    },
+    "path_plan": {
+     "baseline_col": 1,
+     "best_col": 1,
+     "columns": [
+      {
+       "baseline_score": 0.8567,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 18,
+       "score": 0.8567
+      },
+      {
+       "baseline_score": 0.8567,
+       "can_skip_elite": false,
+       "col": 1,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 13,
+       "score": 0.8567
+      }
+     ],
+     "diverged": false,
+     "first_col": null,
+     "route": [
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 5
+      },
+      {
+       "col": 2,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 0,
+       "row": 9
+      },
+      {
+       "col": 0,
+       "row": 10
+      },
+      {
+       "col": 1,
+       "row": 11
+      },
+      {
+       "col": 0,
+       "row": 12
+      },
+      {
+       "col": 1,
+       "row": 13
+      },
+      {
+       "col": 2,
+       "row": 14
+      },
+      {
+       "col": 3,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": true,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 46
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 4,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 1,
+     "row": 4
+    },
+    "path_plan": {
+     "baseline_col": 2,
+     "best_col": 2,
+     "columns": [
+      {
+       "baseline_score": 0.9194,
+       "can_skip_elite": false,
+       "col": 2,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 13,
+       "score": 0.9194
+      }
+     ],
+     "diverged": false,
+     "first_col": 2,
+     "route": [
+      {
+       "col": 2,
+       "row": 5
+      },
+      {
+       "col": 2,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 2,
+       "row": 9
+      },
+      {
+       "col": 3,
+       "row": 10
+      },
+      {
+       "col": 3,
+       "row": 11
+      },
+      {
+       "col": 4,
+       "row": 12
+      },
+      {
+       "col": 5,
+       "row": 13
+      },
+      {
+       "col": 5,
+       "row": 14
+      },
+      {
+       "col": 4,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": true,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 68
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 5,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/the_kin_boss.png",
+     "id": "THE_KIN_BOSS",
+     "kind": "KinFollower",
+     "name": "Kin Follower",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 2,
+     "row": 5
+    },
+    "path_plan": {
+     "baseline_col": 2,
+     "best_col": 2,
+     "columns": [
+      {
+       "baseline_score": 0.9275,
+       "can_skip_elite": false,
+       "col": 2,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 13,
+       "score": 0.9275
+      }
+     ],
+     "diverged": false,
+     "first_col": 2,
+     "route": [
+      {
+       "col": 2,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 2,
+       "row": 9
+      },
+      {
+       "col": 3,
+       "row": 10
+      },
+      {
+       "col": 3,
+       "row": 11
+      },
+      {
+       "col": 4,
+       "row": 12
+      },
+      {
+       "col": 5,
+       "row": 13
+      },
+      {
+       "col": 5,
+       "row": 14
+      },
+      {
+       "col": 4,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": true,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "idx": 70
+  }
+ ],
+ "rows": [
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 0,
+   "idx": 2,
+   "nodes": [
+    {
+     "chosen": true,
+     "col": 0,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    },
+    {
+     "chosen": false,
+     "col": 3,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    },
+    {
+     "chosen": false,
+     "col": 5,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    }
+   ]
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 1,
+   "idx": 19,
+   "nodes": [
+    {
+     "chosen": true,
+     "col": 0,
+     "icon": null,
+     "row": 2,
+     "type": "Unknown"
+    }
+   ]
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 2,
+   "idx": 22,
+   "nodes": [
+    {
+     "chosen": true,
+     "col": 0,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 3,
+     "type": "Monster"
+    }
+   ]
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 3,
+   "idx": 46,
+   "nodes": [
+    {
+     "chosen": false,
+     "col": 0,
+     "icon": null,
+     "row": 4,
+     "type": "Unknown"
+    },
+    {
+     "chosen": true,
+     "col": 1,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 4,
+     "type": "Monster"
+    }
+   ]
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 4,
+   "idx": 68,
+   "nodes": [
+    {
+     "chosen": true,
+     "col": 2,
+     "icon": null,
+     "row": 5,
+     "type": "Unknown"
+    }
+   ]
+  },
+  {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "floor": 5,
+   "idx": 70,
+   "nodes": [
+    {
+     "chosen": true,
+     "col": 2,
+     "icon": "https://assets.test/run_history/elite.png",
+     "row": 6,
+     "type": "Elite"
+    }
+   ]
+  }
+ ]
+}

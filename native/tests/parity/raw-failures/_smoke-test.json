@@ -1,0 +1,19 @@
+{
+  "_comment": "Smoke fixture for bead sts2-rs-1a6. Uses the smoke_test_target_len escape hatch to exercise the shrink loop without a real divergence. Real raw-failure files MUST NOT carry smoke_test_target_len.",
+  "seed": 42,
+  "encounter": "smoke",
+  "symptom": "fake-divergence",
+  "smoke_test_target_len": 2,
+  "actions": [
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"},
+    {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}, {"kind": "EndTurn"}
+  ]
+}

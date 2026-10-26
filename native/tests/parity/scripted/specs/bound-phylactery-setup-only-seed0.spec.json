@@ -1,0 +1,14 @@
+{
+  "name": "bound-phylactery-setup-only-seed0",
+  "description": "sts2-rs-s16y: setup-only fixture with the Necrobinder starter relic BoundPhylactery installed. Validates the recorder's relics-install slot and that bridge-state byte-equality holds (bridge schema omits relics per zizk). Behavioral observation (revive on fatal damage; relic consumed) requires the run-builder + summon_osty runtime; out of scope here.",
+  "seed": 0,
+  "character": "Necrobinder",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 75,
+    "current_hp": 75
+  },
+  "enemies": [],
+  "relics": ["BoundPhylactery"],
+  "actions": []
+}

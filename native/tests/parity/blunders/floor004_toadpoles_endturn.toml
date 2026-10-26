@@ -1,0 +1,53 @@
+schema = 2
+
+# Hand-curated blunder fixture for `sts2-rs-30lw5` (child of
+# `sts2-rs-b4myp` / `sts2-rs-64h9r`).
+#
+# Source: copied from
+#   /tmp/run-fixtures-full/the-ironclad/00030217-6611-4a0a-aa7b-a01d92f22b49_floor004_toadpoles_weak.toml
+#
+# Turn 1 vs 2× TOADPOLE (multi-monster, no curse/status in
+# deck). Near-starter ASC6 deck. End turn at e=3 trips
+# `end_turn_with_high_energy`. First multi-monster fixture
+# under tests/parity/blunders/.
+#
+# Calibration note: an earlier attempt with the CORPSE_SLUG
+# floor-2 ASC10 fixture failed at sims=2000 because that deck
+# contained DOUBT (curse) + INJURY (status) — degenerate draws
+# led MCTS to pick End turn. This fixture uses a clean
+# curse/status-free deck for predictable t=1 affordability.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 4
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.TOADPOLES_WEAK"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 54
+max_hp    = 80
+gold      = 116
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+", "DOMINATE+"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "TOADPOLE"
+
+[[monsters]]
+kind = "TOADPOLE"
+
+[blunder_assertion]
+class          = "end_turn_with_high_energy"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

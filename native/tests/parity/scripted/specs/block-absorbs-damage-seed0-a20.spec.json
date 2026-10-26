@@ -1,0 +1,30 @@
+{
+  "actions": [
+    {
+      "amount": 8,
+      "dealer": "player",
+      "props": "MOVE",
+      "target": "enemy_0",
+      "type": "deal_damage"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Block absorbs damage before HP loss. Cultist has 5 block; player attacks Cultist for 8 raw \u2192 5 absorbed by block \u2192 3 HP loss. Cultist HP 48 - 3 = 45, block 5 - 5 = 0. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [
+    {
+      "block": 5,
+      "current_hp": 48,
+      "max_hp": 48,
+      "monster_id": "ShrinkerBeetle"
+    }
+  ],
+  "name": "block-absorbs-damage-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50
+  },
+  "scenario": "block-absorbs-damage",
+  "seed": 0
+}

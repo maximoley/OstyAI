@@ -1,0 +1,39 @@
+{
+  "name": "necro-bodyguard-seed0",
+  "description": "Necrobinder Bodyguard vs ShrinkerBeetle. Single play_card -> summon_osty(5). Osty is an ally creature, not surfaced in bridge_state shape, so the test pins the no-op bridge-state effect of Bodyguard (no damage, no block, no power changes on the visible state). Mirrors sts2-rl-agent@01c094d:sts2_env/cards/necrobinder.py:71-73 bodyguard. Bead sts2-rs-s39 (bay-fixtures).",
+  "scenario": "necro-bodyguard",
+  "seed": 0,
+  "character": "Necrobinder",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 66,
+    "current_hp": 66,
+    "hand": [
+      {"card_id": "BODYGUARD"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0
+    }
+  ]
+}

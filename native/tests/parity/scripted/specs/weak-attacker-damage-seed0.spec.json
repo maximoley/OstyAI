@@ -1,0 +1,29 @@
+{
+  "name": "weak-attacker-damage-seed0",
+  "description": "Weak on attacker reduces outgoing damage by 25%. Player has WeakPower(2); player attacks Cultist for 6 raw → 6 * 0.75 = 4.5 → floor 4. Cultist HP 48 - 4 = 44.",
+  "scenario": "weak-attacker-damage",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50,
+    "powers": [{"id": "WEAK", "amount": 2}]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 6,
+      "props": "MOVE"
+    }
+  ]
+}

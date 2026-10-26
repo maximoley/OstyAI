@@ -1,0 +1,85 @@
+{
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "pv": null,
+ "scores": [
+  {
+   "action": "Invoke",
+   "is_best": true,
+   "losses": 3,
+   "low_confidence": false,
+   "q": 0.618,
+   "q_saturated": false,
+   "stable_idx": 3,
+   "target_index": null,
+   "ties": 0,
+   "visits": 16,
+   "win_prob": 0.8125,
+   "wins": 13
+  },
+  {
+   "action": "Unleash",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": 0.564,
+   "q_saturated": false,
+   "stable_idx": 0,
+   "target_index": 0,
+   "ties": 0,
+   "visits": 14,
+   "win_prob": 0.7857,
+   "wins": 11
+  },
+  {
+   "action": "Strike",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": 0.1917,
+   "q_saturated": false,
+   "stable_idx": 1,
+   "target_index": 0,
+   "ties": 0,
+   "visits": 8,
+   "win_prob": 0.625,
+   "wins": 5
+  },
+  {
+   "action": "Strike",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": 0.0668,
+   "q_saturated": false,
+   "stable_idx": 2,
+   "target_index": 0,
+   "ties": 0,
+   "visits": 7,
+   "win_prob": 0.5714,
+   "wins": 4
+  },
+  {
+   "action": "end turn",
+   "is_best": false,
+   "losses": 3,
+   "low_confidence": false,
+   "q": -1.3145,
+   "q_saturated": false,
+   "stable_idx": -1,
+   "target_index": null,
+   "ties": 0,
+   "visits": 3,
+   "win_prob": 0.0,
+   "wins": 0
+  }
+ ]
+}

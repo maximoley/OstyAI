@@ -1,0 +1,20 @@
+{
+ "alternative": {
+  "error": "verify arm hit the 12-step cap without ending",
+  "label": "Take Snakebite",
+  "over": false,
+  "steps": 12,
+  "won": false
+ },
+ "decision": "card_reward",
+ "node_id": 27,
+ "note": "inconclusive — a continuation didn't finish; one agent-played continuation per line (same-seeded combat search) — a paired spot check, not a probability",
+ "played": {
+  "error": "verify arm hit the 12-step cap without ending",
+  "label": "Take Ricochet",
+  "over": false,
+  "steps": 12,
+  "won": false
+ },
+ "verdict": "same"
+}

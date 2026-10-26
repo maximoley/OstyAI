@@ -1,0 +1,65 @@
+{
+  "IroncladBane_A0": {
+    "avg_turns": 14.4136,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "IroncladBane_A10": {
+    "avg_turns": 14.388,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "IroncladBane_A20": {
+    "avg_turns": 14.4,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Ironclad_A0": {
+    "avg_turns": 14.424,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Ironclad_A10": {
+    "avg_turns": 14.396,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Ironclad_A20": {
+    "avg_turns": 14.4224,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Silent_A0": {
+    "avg_turns": 14.376,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Silent_A10": {
+    "avg_turns": 14.4448,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  },
+  "Silent_A20": {
+    "avg_turns": 14.4416,
+    "lost": 10000,
+    "seeds": 10000,
+    "winrate": 0.0,
+    "won": 0
+  }
+}

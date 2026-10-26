@@ -1,0 +1,150 @@
+[package]
+name = "sts2-py"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Python (PyO3) bindings for sts2-core."
+
+# Cannot inherit `[lints] workspace = true` here because the PyO3 extension
+# boundary requires `unsafe` (the workspace denies it). We reproduce the
+# workspace lint set manually with `unsafe_code` flipped to `allow`.
+# Keep this in sync with the workspace `[workspace.lints]` block.
+[lints.rust]
+unsafe_code = "allow"
+missing_debug_implementations = "warn"
+rust_2018_idioms = "warn"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+too_many_lines = "allow"
+# Cast carve-outs — synced from `[workspace.lints.clippy]` (bead
+# sts2-rs-943w7): bounded game-value casts (seeds, deck counts, HP) are
+# deliberate. The PyO3 binding crate can't inherit the workspace block,
+# so these must be mirrored here or `-D warnings` fails on the
+# RunRngSet/`seed as i32` construction sites the RNG migration touches.
+cast_possible_truncation = "allow"
+cast_possible_wrap = "allow"
+cast_sign_loss = "allow"
+cast_precision_loss = "allow"
+# Remaining pedantic carve-outs — mirrored from `[workspace.lints.clippy]`
+# (the PyO3 crate can't inherit the workspace block; keep in sync). These
+# fire broadly on deliberate game-state / doc patterns; see the workspace
+# block for the per-lint rationale.
+similar_names = "allow"
+trivially_copy_pass_by_ref = "allow"
+struct_excessive_bools = "allow"
+needless_pass_by_value = "allow"
+items_after_statements = "allow"
+ignore_without_reason = "allow"
+match_same_arms = "allow"
+unreadable_literal = "allow"
+type_complexity = "allow"
+large_enum_variant = "allow"
+option_option = "allow"
+ptr_arg = "allow"
+format_push_string = "allow"
+doc_markdown = "allow"
+doc_overindented_list_items = "allow"
+doc_lazy_continuation = "allow"
+
+[lib]
+name = "sts2_rs"
+# `rlib` so integration tests in `tests/` (bead sts2-rs-92sk) can link
+# against the crate; `cdylib` is the maturin/pyo3 extension target.
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# `extension-module` is activated by maturin (see `pyproject.toml`
+# `[tool.maturin] features`). `cargo test` MUST NOT enable it because
+# `extension-module` skips libpython linkage which breaks
+# `auto-initialize` used by the test harness.
+default = []
+native-gpu-feeder = []
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+# The wire parse + CombatState reconstruction, with no PyO3 in it. This crate
+# supplies the `WireValue` impl for `Bound<PyAny>` and maps `WireError` onto
+# the two Python exception types; the parser itself is shared, so the Python
+# and JSON dialects cannot drift apart.
+sts2-wire = { workspace = true }
+sts2-mcts = { path = "../sts2-mcts", version = "0.0.1" }
+# Issue #15 / bead sts2-rs-cg5ci: runtime recompute of the engine source hash
+# (`sts2_rs.recompute_src_hash`) + the aggregate combine for `sts2_rs.src_hash`.
+sts2-srchash = { path = "../sts2-srchash" }
+# `combat_state_from_scenario_toml` reuses the CLI's `.run-source`
+# scenario loader (`load_scenario_file` + `scenario_to_combat_state`)
+# so the Python workbench recorder loads fixtures via the exact same
+# path as the `sts2-fight-replay` binary.
+sts2-cli = { workspace = true }
+# Run-level policies + agents (HeuristicRunAgent / PpoRunAgent /
+# MctsCombatAgent) exposed to the Python workbench and the PPO env.
+sts2-runai = { workspace = true }
+# Linked through sts2-runai / sts2-wire anyway; named here only so `src_hash()`
+# can fold in its `SRC_HASH`.
+sts2-vocab = { workspace = true }
+pyo3 = { version = "0.24", features = ["abi3-py311"] }
+# `pythonize` 0.24 matches the pyo3 0.24 minor — required for converting
+# the `serde_json::Value` returned by `sts2_core::parity::combat_state_to_bridge_state`
+# into a Python `dict` without round-tripping through a JSON string.
+#
+# pyo3 0.24 closes RUSTSEC-2025-0020 (PyString::from_object buffer overread).
+pythonize = "0.24"
+# Used for: `Xoshiro256PlusPlus::seed_from_u64` so the Python `seed` kwarg
+# wires through to the same RNG `sts2-core` uses internally.
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+# `Action::ResolveChoice` carries a `SmallVec`, so we need the same crate
+# that `sts2-core` uses for the empty-selection placeholder.
+smallvec = { workspace = true }
+# Parallel native actors share one frozen checkpoint schema.
+rayon = { workspace = true }
+# Used by the `dump_state_schema` example (bead sts2-rs-lmg6) to emit a
+# deterministic JSON artifact under `docs/`. The example builds a schema
+# via `BTreeMap` (keyed manually) and serialises through serde_json.
+serde_json = { workspace = true }
+# `ppo_policy` deserializes the Python-built observation dict into `PpoObs` /
+# `Vec<ActionDesc>`; the `DeserializeOwned` bound needs serde itself, not just
+# the JSON front end.
+serde = { workspace = true }
+# The module's `#[global_allocator]` (src/allocator.rs), so the trainer wheel
+# runs on the same allocator as the `sts2-cli` binaries. The module init sets
+# mimalloc's `purge_delay` to -1 there (A1b): with the default 1,000 ms, every
+# advisor call seconds after the last faulted its search memory back in. That
+# call needs no extra feature: mimalloc.h's `mi_option_set` sits in the static
+# library this crate already links. `local_dynamic_tls` is
+# REQUIRED: with mimalloc's default initial-exec TLS model the .so is flagged
+# `STATIC_TLS`, glibc must place the module's whole TLS block (~8 KB) in the
+# small static-TLS surplus it keeps for dlopen'd objects, and
+# `import sts2_rs` fails with "cannot allocate memory in static TLS block".
+# Cargo unifies the feature into `sts2-cli`'s mimalloc only when both are
+# built in one invocation, and the linker relaxes local-dynamic TLS to
+# local-exec in an executable, so the binaries are unaffected. The flag is
+# Unix-only in libmimalloc-sys's build script (a no-op on MSVC).
+mimalloc = { workspace = true, features = ["local_dynamic_tls"] }
+crossbeam-queue = "0.3"
+
+# Issue #15 / bead sts2-rs-cg5ci: build.rs stamps STS2_PY_SRC_HASH (incl. the
+# include_bytes! value/policy-net data) + STS2_WORKSPACE_HASH (Cargo.lock +
+# rust-toolchain.toml).
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dev-dependencies]
+# `auto-initialize` lets integration tests in `tests/` create a Python
+# interpreter on demand without needing a separately-installed Python
+# process. Mutually exclusive with `extension-module`, which is why
+# that feature is opt-in (maturin enables it; cargo test does not).
+pyo3 = { version = "0.24", features = ["abi3-py311", "auto-initialize"] }
+
+[[bin]]
+name = "gpu_feed_bench"
+path = "src/bin/gpu_feed_bench.rs"
+required-features = ["native-gpu-feeder"]

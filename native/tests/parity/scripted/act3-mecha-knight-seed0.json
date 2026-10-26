@@ -1,0 +1,451 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 intent triple diverges by design (monsters.rs:22-29 / inflight-briefing \u00a79).",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round",
+      "/hand",
+      "/draw_pile_count",
+      "/discard_pile_count",
+      "/exhaust_pile_count"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-rggx: per-step shape lock \u2014 Python MT vs Rust Xoshiro256++ roll different intent branches across the 10-turn walk, so damage-derived fields (hp/block/is_alive/powers) and post-game-over freeze fields (/round, player.energy, player.max_energy) are excluded. Only structural shape (type tag, top-level keys, enemy id/max_hp, pile counts, player/max_hp) is byte-locked.\n\n2026-05-28 follow-up: /hand was added to the exclude set for THIS fixture (and only this one) because C# MechaKnight.AfterAddedToRoom calls `CardPileCmd.AddToCombatAndPreview<Burn>(targets, PileType.Hand, 4)` (MegaCrit.Sts2.Core.Models.Monsters/MechaKnight.cs:72-135) and the Rust port now mirrors that, so the player's hand carries 4 Burn status cards from spawn onward. The fixture was authored against an older Rust pin (bc04805d, see metadata.rust_pin) that predated this wiring; its expected hand state is stale. The other 8 act23 fixtures keep their /hand byte-lock."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 155,
+        "id": "MECHA_KNIGHT",
+        "intent": "ATTACK",
+        "intent_damage": 14,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 155,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "MechaKnight",
+    "python_pin": "01c094d",
+    "rust_pin": "bc04805d26b6f47a8f924ac0b8f6f60ee415a9db",
+    "scenario": "act3-mecha-knight",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 66,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "DEFEND",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 50,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 16,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 24,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 50,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 14,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 24,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 4,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 8,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 155,
+            "id": "MECHA_KNIGHT",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 4,
+            "intent_hits": 4,
+            "is_alive": true,
+            "max_hp": 155,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "STRENGTH"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

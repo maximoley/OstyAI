@@ -1,0 +1,1338 @@
+{
+ "details": [
+  "+Relic Fishing Rod"
+ ],
+ "error": null,
+ "label": "Choose: Fishing Rod",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "map_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": null,
+   "bg_row": null,
+   "bg_seed": 10568962662196689687,
+   "floor": 0,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_seed": 10568962662196689687,
+   "choices": [
+    {
+     "col": 0,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    },
+    {
+     "col": 2,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    },
+    {
+     "col": 3,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    },
+    {
+     "col": 5,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 1,
+     "type": "Monster"
+    }
+   ],
+   "decision": "map_select",
+   "floor": 0,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/lagavulin_matriarch_boss.png",
+     "id": "LAGAVULIN_MATRIARCH_BOSS",
+     "kind": "LagavulinMatriarch",
+     "name": "Lagavulin Matriarch",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": null,
+    "path_plan": {
+     "baseline_col": 0,
+     "best_col": 0,
+     "columns": [
+      {
+       "baseline_score": 1.0347,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 40,
+       "score": 1.0347
+      },
+      {
+       "baseline_score": 0.9957,
+       "can_skip_elite": true,
+       "col": 2,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 80,
+       "score": 0.9957
+      },
+      {
+       "baseline_score": 0.8903,
+       "can_skip_elite": false,
+       "col": 3,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 80,
+       "score": 0.8903
+      },
+      {
+       "baseline_score": 0.8903,
+       "can_skip_elite": true,
+       "col": 5,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 96,
+       "score": 0.8903
+      }
+     ],
+     "diverged": false,
+     "first_col": null,
+     "route": [
+      {
+       "col": 0,
+       "row": 1
+      },
+      {
+       "col": 0,
+       "row": 2
+      },
+      {
+       "col": 0,
+       "row": 3
+      },
+      {
+       "col": 0,
+       "row": 4
+      },
+      {
+       "col": 0,
+       "row": 5
+      },
+      {
+       "col": 0,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 1,
+       "row": 9
+      },
+      {
+       "col": 2,
+       "row": 10
+      },
+      {
+       "col": 2,
+       "row": 11
+      },
+      {
+       "col": 3,
+       "row": 12
+      },
+      {
+       "col": 3,
+       "row": 13
+      },
+      {
+       "col": 4,
+       "row": 14
+      },
+      {
+       "col": 4,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 2
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        },
+        {
+         "col": 1,
+         "row": 3
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 3
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        },
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 3,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 4
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 3,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 5
+        },
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 5
+        },
+        {
+         "col": 4,
+         "row": 5
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 5,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 6
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        },
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        },
+        {
+         "col": 5,
+         "row": 7
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 7,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 8
+        },
+        {
+         "col": 2,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 7,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 8
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 9
+        },
+        {
+         "col": 4,
+         "row": 9
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 10
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 10
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 11
+        },
+        {
+         "col": 1,
+         "row": 11
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 10,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 11
+        },
+        {
+         "col": 3,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 12
+        },
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 12
+        },
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 12,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 14
+        },
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        },
+        {
+         "col": 3,
+         "row": 14
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 13,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 14,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 15
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 14,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 14,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "options": [
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 0,
+      "row": 1
+     },
+     "enabled": true,
+     "label": "Monster (0,1)"
+    },
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 2,
+      "row": 1
+     },
+     "enabled": true,
+     "label": "Monster (2,1)"
+    },
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 3,
+      "row": 1
+     },
+     "enabled": true,
+     "label": "Monster (3,1)"
+    },
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 5,
+      "row": 1
+     },
+     "enabled": true,
+     "label": "Monster (5,1)"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 2,
+      "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "id": "BASH",
+      "image": "https://assets.test/card_atlas/ironclad/bash.png",
+      "index": 9,
+      "name": "Bash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 99,
+    "hp": 80,
+    "max_hp": 80,
+    "name": "Ironclad",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the end of combat, heal 6 HP.",
+      "id": "BURNING_BLOOD",
+      "image": "https://assets.test/relic_atlas/burning_blood.png",
+      "name": "Burning Blood"
+     },
+     {
+      "description": "Every 3 normal combats, Upgrade a random card in your Deck.",
+      "id": "FISHING_ROD",
+      "image": "https://assets.test/relic_atlas/fishing_rod.png",
+      "name": "Fishing Rod"
+     }
+    ]
+   }
+  }
+ }
+}

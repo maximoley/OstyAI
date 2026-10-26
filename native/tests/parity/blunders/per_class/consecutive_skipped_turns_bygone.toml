@@ -1,0 +1,44 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-21s28`.
+# Class: `consecutive_skipped_turns` — fires when the player ends
+# turn back-to-back without playing cards. At decision_index=0
+# only one turn has elapsed, so the class is structurally unable
+# to flag the rational pick (needs N≥2 consecutive end-turns).
+#
+# Bygone Effigy elite t=1; rational MCTS picks a card; even if it
+# didn't, decision_index=0 alone cannot exhibit `consecutive`.
+#
+# Source: derived from floor008_bygone_effigy_endturn.toml.
+
+[provenance]
+run_id     = "002b06d4-7a04-4f05-bfc0-5fe0945bd225"
+build_id   = "v0.104.0"
+floor      = 8
+act        = "ACT.OVERGROWTH"
+encounter  = "ENCOUNTER.BYGONE_EFFIGY_ELITE"
+room_type  = "elite"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 10
+hp        = 69
+max_hp    = 80
+gold      = 44
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "BLOOD_WALL", "TRUE_GRIT", "THUNDERCLAP", "UPPERCUT+", "TWIN_STRIKE", "STOMP"]
+relics    = ["BURNING_BLOOD", "LARGE_CAPSULE", "PEN_NIB", "RUINED_HELMET"]
+potions   = []
+
+[[monsters]]
+kind = "BYGONE_EFFIGY"
+
+[blunder_assertion]
+class          = "consecutive_skipped_turns"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

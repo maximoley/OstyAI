@@ -1,0 +1,29 @@
+{
+  "name": "strength-damage-seed0",
+  "description": "Strength adds flat amount to outgoing damage. Player has StrengthPower(3); player attacks Cultist for 6 raw → 6 + 3 = 9 → cultist HP 48 - 9 = 39. Verifies the additive arm of the damage pipeline.",
+  "scenario": "strength-damage",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50,
+    "powers": [{"id": "STRENGTH", "amount": 3}]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 6,
+      "props": "MOVE"
+    }
+  ]
+}

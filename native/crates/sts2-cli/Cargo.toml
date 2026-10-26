@@ -1,0 +1,77 @@
+[package]
+name = "sts2-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Interactive REPL + scripted-replay driver for the sts2-core combat engine."
+publish = false
+
+[lints]
+workspace = true
+
+# Bead `sts2-rs-a2fh`: expose sts2-cli as a library so corpus_gen +
+# bench harnesses can consume the (ScenarioFile, seed) → CombatState
+# pipeline without re-implementing main.rs's arg-merge machinery.
+# The CLI binary still owns clap + the precedence machinery; the
+# library surface is the lower-level scenario loader only.
+[lib]
+name = "sts2_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sts2-cli"
+path = "src/main.rs"
+
+[[bin]]
+name = "sts2-corpus-gen"
+path = "src/bin/corpus_gen.rs"
+
+[[bin]]
+name = "sts2-fight-replay"
+path = "src/bin/fight_replay.rs"
+
+[[bin]]
+name = "sts2-replay-audit"
+path = "src/bin/replay_audit.rs"
+
+# Bead `sts2-rs-40ikw.4` (full-run-AI M0): arena sweep harness — thin
+# clap wrapper over `sts2_runai::arena` with the process-per-seed
+# wall-clock-timeout layer (re-execs itself via the hidden `one-cell`
+# subcommand).
+[[bin]]
+name = "run_arena"
+path = "src/bin/run_arena.rs"
+
+# build.rs stamps a content hash of this crate's build inputs into
+# STS2_CLI_SRC_HASH (compiled in as `SRC_HASH`): part of the sts2_rs src_hash.
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+sts2-mcts = { workspace = true }
+sts2-runai = { workspace = true }
+clap = { workspace = true }
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+smallvec = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = "0.8"
+# sts2-rs-ctdr: glob expansion for sts2-corpus-gen --fixture-glob path.
+# `glob = "0.3"` is std-lib-quality (no transitive deps; ~300 LOC).
+glob = "0.3"
+# sts2-rs: spire-codex corpus is stored gzipped (<hash>.run.gz); human_features
+# decompresses each run in-process.
+flate2 = "1"
+rayon = { workspace = true }
+mimalloc = { workspace = true }
+
+[dev-dependencies]
+sha2 = "0.10"
+# Property tests for the sim/parse command grammar + deck-token grammar
+# (tests/sim_parse.rs, tests/sim_deck.rs). Same version as sts2-core.
+hegeltest = "0.14.9"

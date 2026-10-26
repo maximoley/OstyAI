@@ -1,0 +1,37 @@
+{
+  "time": 1793012665.016146,
+  "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "resumed_from": 5020,
+  "uncommitted_updates_recomputed": 0,
+  "settings_changed": false,
+  "checkpoint_unchanged": true,
+  "replay_preserved": true,
+  "core_tests_isolated": {
+    "passed": 2366,
+    "ignored": 2
+  },
+  "wire_tests_passed": 62,
+  "smoke": {
+    "failed-bank": {
+      "combats": 1020,
+      "wins": 891,
+      "unresolved": 0,
+      "seconds": 41.99738195538521
+    },
+    "primary-panel": {
+      "combats": 4096,
+      "wins": 3773,
+      "unresolved": 0,
+      "seconds": 111.72498439997435
+    },
+    "human-mecha": {
+      "combats": 96,
+      "wins": 87,
+      "unresolved": 0,
+      "seconds": 15.690980035811663
+    },
+    "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566"
+  },
+  "first_unprepared_bank": 10000,
+  "supervisor_pid": 2777460
+}

@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "mode": "combat",
+  "metadata": {
+    "scenario": "heavenly-drill-xcost",
+    "seed": 0,
+    "character": "Regent",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "a4db771",
+    "recorded_ts": "2026-05-16T05:30:00Z",
+    "bead": "sts2-rs-vmko",
+    "parent_bead": "sts2-rs-n4wd",
+    "python_source": "sts2-rl-agent@01c094d:sts2_env/cards/regent.py:L730-L744",
+    "rust_source": "crates/sts2-content/src/cards/regent.rs::play_heavenly_drill",
+    "description": "HeavenlyDrill is an X-cost Regent attack. The handler reads `energy_spent` off the played `CardInstance` (lifted onto the POD by `sts2-rs-n4wd` in `combat_loop::play_card`), and deals `base_damage` damage `x` times — where `x = energy_spent`, doubled to `2 * energy_spent` when `energy_spent >= effect_vars.get('energy', 4)`. Break-on-death matches the Python loop (subsequent hits suppressed once the target dies). Unupgraded `base_damage = 8`; this fixture uses unupgraded to keep numbers deterministic across the four X-cost branches.\n\nFour independent steps, one per branch of the X-cost surface. Each step rebuilds state from `initial_state` — the harness consumer resets between steps rather than threading mutations forward, because the goal here is to pin the doubling-threshold piecewise behaviour, not a multi-turn replay.",
+    "table": [
+      { "energy_spent": 0, "hits": 0,  "total_damage": 0,  "enemy_hp_after": 100 },
+      { "energy_spent": 3, "hits": 3,  "total_damage": 24, "enemy_hp_after": 76  },
+      { "energy_spent": 4, "hits": 8,  "total_damage": 64, "enemy_hp_after": 36, "note": "first doubling tick — energy_spent >= threshold(4)" },
+      { "energy_spent": 5, "hits": 10, "total_damage": 80, "enemy_hp_after": 20 }
+    ]
+  },
+  "initial_state": {
+    "type": "combat_action",
+    "player": {
+      "hp": 50,
+      "max_hp": 50,
+      "block": 0,
+      "energy": 0,
+      "max_energy": 3,
+      "powers": []
+    },
+    "hand": [],
+    "enemies": [
+      {
+        "id": "ShrinkerBeetle",
+        "hp": 100,
+        "max_hp": 100,
+        "block": 0,
+        "is_alive": true,
+        "powers": []
+      }
+    ],
+    "draw_pile_count": 0,
+    "discard_pile_count": 0,
+    "exhaust_pile_count": 0,
+    "round": 0
+  },
+  "steps": [
+    {
+      "action": {
+        "action": "play_heavenly_drill",
+        "energy_spent": 0,
+        "case": "x0-noop",
+        "comment": "energy_spent = 0 below threshold (4); doubling does not apply; loop range is 0 → zero hits → no state mutation. Validates that an X-cost card played at zero energy is a clean no-op rather than an off-by-one (1-hit) or a panic."
+      },
+      "resulting_state": {
+        "type": "combat_action",
+        "player": {
+          "hp": 50,
+          "max_hp": 50,
+          "block": 0,
+          "energy": 0,
+          "max_energy": 3,
+          "powers": []
+        },
+        "hand": [],
+        "enemies": [
+          {
+            "id": "ShrinkerBeetle",
+            "hp": 100,
+            "max_hp": 100,
+            "block": 0,
+            "is_alive": true,
+            "powers": []
+          }
+        ],
+        "draw_pile_count": 0,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "round": 0
+      }
+    },
+    {
+      "action": {
+        "action": "play_heavenly_drill",
+        "energy_spent": 3,
+        "case": "x3-no-double",
+        "comment": "energy_spent = 3 still below the threshold (4), so doubling does NOT apply. 3 hits × 8 base_damage = 24 dmg."
+      },
+      "resulting_state": {
+        "type": "combat_action",
+        "player": {
+          "hp": 50,
+          "max_hp": 50,
+          "block": 0,
+          "energy": 0,
+          "max_energy": 3,
+          "powers": []
+        },
+        "hand": [],
+        "enemies": [
+          {
+            "id": "ShrinkerBeetle",
+            "hp": 76,
+            "max_hp": 100,
+            "block": 0,
+            "is_alive": true,
+            "powers": []
+          }
+        ],
+        "draw_pile_count": 0,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "round": 0
+      }
+    },
+    {
+      "action": {
+        "action": "play_heavenly_drill",
+        "energy_spent": 4,
+        "case": "x4-threshold-double",
+        "comment": "energy_spent = 4 hits the threshold exactly (`>= 4` per the Python pin) → hits doubled to 8. 8 × 8 = 64 dmg. This is the first branch that exercises the doubling code path."
+      },
+      "resulting_state": {
+        "type": "combat_action",
+        "player": {
+          "hp": 50,
+          "max_hp": 50,
+          "block": 0,
+          "energy": 0,
+          "max_energy": 3,
+          "powers": []
+        },
+        "hand": [],
+        "enemies": [
+          {
+            "id": "ShrinkerBeetle",
+            "hp": 36,
+            "max_hp": 100,
+            "block": 0,
+            "is_alive": true,
+            "powers": []
+          }
+        ],
+        "draw_pile_count": 0,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "round": 0
+      }
+    },
+    {
+      "action": {
+        "action": "play_heavenly_drill",
+        "energy_spent": 5,
+        "case": "x5-above-threshold",
+        "comment": "energy_spent = 5 above the threshold → hits doubled to 10. 10 × 8 = 80 dmg, leaving the 100-HP Cultist at 20. Validates that the doubling applies linearly above the threshold (not capped)."
+      },
+      "resulting_state": {
+        "type": "combat_action",
+        "player": {
+          "hp": 50,
+          "max_hp": 50,
+          "block": 0,
+          "energy": 0,
+          "max_energy": 3,
+          "powers": []
+        },
+        "hand": [],
+        "enemies": [
+          {
+            "id": "ShrinkerBeetle",
+            "hp": 20,
+            "max_hp": 100,
+            "block": 0,
+            "is_alive": true,
+            "powers": []
+          }
+        ],
+        "draw_pile_count": 0,
+        "discard_pile_count": 0,
+        "exhaust_pile_count": 0,
+        "round": 0
+      }
+    }
+  ]
+}

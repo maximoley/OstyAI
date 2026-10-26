@@ -1,0 +1,9 @@
+# Scripted human turn vs Cultist (seed 0): play three Strikes, end turn.
+state
+play 0 0
+play 1 0
+play 2 0
+state
+end
+state
+quit

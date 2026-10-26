@@ -1,0 +1,21 @@
+# sts2-cli scenario — Ironclad vs. two LeafSlimeS. Exercises the
+# multi-monster spawn path (`Scenario::from_monsters`).
+#
+# Kept under the historical `double-sentry.toml` filename for
+# back-compat with the `demo_double_sentry_runs` test; bead
+# `sts2-rs-ar9u` migrated the body from the (removed) STS1 `Sentry`
+# stub to the STS2-native `LeafSlimeS`.
+
+schema = 1
+
+[player]
+class = "Ironclad"
+hp = 80
+
+[[monsters]]
+kind = "LeafSlimeS"
+hp = 13
+
+[[monsters]]
+kind = "LeafSlimeS"
+hp = 13

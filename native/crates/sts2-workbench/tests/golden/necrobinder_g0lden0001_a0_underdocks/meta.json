@@ -1,0 +1,254 @@
+{
+ "coverage": [
+  "card_select:add_generated_free_to_hand",
+  "card_select:apply_retain_in_hand",
+  "card_select:put_back",
+  "card_select:remove|upgrade",
+  "card_select:upgrade",
+  "combat_card_select",
+  "decision:card_reward",
+  "decision:card_select",
+  "decision:combat_play",
+  "decision:event_choice",
+  "decision:map_select",
+  "decision:rest_site",
+  "potion_used",
+  "route:/api/deck/reward-preview",
+  "route:/api/deck/trend",
+  "route:/api/live/action",
+  "route:/api/live/auto-action",
+  "route:/api/live/choice-ranker",
+  "route:/api/live/deck-analysis",
+  "route:/api/live/from_replay",
+  "route:/api/live/hint",
+  "route:/api/live/last-move-regret",
+  "route:/api/live/map",
+  "route:/api/live/ppo-policy",
+  "route:/api/live/quit",
+  "route:/api/live/regret-review",
+  "route:/api/live/save",
+  "route:/api/live/search_tree",
+  "route:/api/live/seek",
+  "route:/api/live/start",
+  "route:/api/live/state",
+  "route:/api/live/timeline",
+  "route:/api/live/wpa-review",
+  "route:/api/load",
+  "route:/api/map",
+  "route:/api/mcts-runs",
+  "route:/api/mcts-runs/aggregate",
+  "route:/api/recommend",
+  "route:/api/regret-review",
+  "route:/api/runs",
+  "route:/api/runs/stat",
+  "route:/api/saves",
+  "route:/api/saves/load",
+  "route:/api/search_tree",
+  "route:/api/step",
+  "route:/api/timeline",
+  "route:/api/wpa-review",
+  "seek_fork",
+  "smith",
+  "status:404",
+  "status:409"
+ ],
+ "engine": {
+  "src_hash": "3c33116a5e8894fa",
+  "version": "0.0.1"
+ },
+ "final_act": 1,
+ "final_floor": 8,
+ "full_responses": 63,
+ "full_steps": 0,
+ "patches": {
+  "assets_base_url": "https://assets.test",
+  "ppo_disabled": true,
+  "saved_at": "2026-01-01T00:00:00Z"
+ },
+ "python": "3.13",
+ "reached_game_over": false,
+ "requests": 216,
+ "scenario": {
+  "act1": "underdocks",
+  "ascension": 0,
+  "character": "Necrobinder",
+  "max_steps": 150,
+  "name": "necrobinder_g0lden0001_a0_underdocks",
+  "neow_option": 0,
+  "probes": [
+   {
+    "at": 25,
+    "kind": "state"
+   },
+   {
+    "at": 25,
+    "kind": "auto_action"
+   },
+   {
+    "at": 25,
+    "kind": "ppo_policy"
+   },
+   {
+    "at": 30,
+    "kind": "hint"
+   },
+   {
+    "at": 30,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 31,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 35,
+    "kind": "reward_preview"
+   },
+   {
+    "at": 40,
+    "kind": "map"
+   },
+   {
+    "at": 41,
+    "kind": "timeline"
+   },
+   {
+    "at": 42,
+    "back": 5,
+    "kind": "seek"
+   },
+   {
+    "at": 50,
+    "kind": "state"
+   },
+   {
+    "at": 50,
+    "kind": "auto_action"
+   },
+   {
+    "at": 50,
+    "kind": "deck_analysis"
+   },
+   {
+    "at": 55,
+    "kind": "hint"
+   },
+   {
+    "at": 55,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 55,
+    "kind": "search_tree"
+   },
+   {
+    "at": 56,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 60,
+    "kind": "save",
+    "name": "golden mid"
+   },
+   {
+    "at": 61,
+    "kind": "saves_list"
+   },
+   {
+    "at": 62,
+    "kind": "load",
+    "name": "golden mid"
+   },
+   {
+    "at": 75,
+    "kind": "state"
+   },
+   {
+    "at": 75,
+    "kind": "auto_action"
+   },
+   {
+    "at": 75,
+    "kind": "ppo_policy"
+   },
+   {
+    "at": 75,
+    "kind": "wpa_review"
+   },
+   {
+    "at": 80,
+    "kind": "hint"
+   },
+   {
+    "at": 80,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 81,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 85,
+    "kind": "reward_preview"
+   },
+   {
+    "at": 100,
+    "kind": "state"
+   },
+   {
+    "at": 100,
+    "kind": "auto_action"
+   },
+   {
+    "at": 100,
+    "kind": "regret_review"
+   },
+   {
+    "at": 105,
+    "kind": "hint"
+   },
+   {
+    "at": 105,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 105,
+    "kind": "search_tree"
+   },
+   {
+    "at": 106,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 125,
+    "kind": "state"
+   },
+   {
+    "at": 125,
+    "kind": "auto_action"
+   },
+   {
+    "at": 130,
+    "kind": "hint"
+   },
+   {
+    "at": 130,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 131,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 150,
+    "kind": "state"
+   },
+   {
+    "at": 150,
+    "kind": "auto_action"
+   }
+  ],
+  "seed": "G0LDEN0001"
+ },
+ "steps_played": 150
+}

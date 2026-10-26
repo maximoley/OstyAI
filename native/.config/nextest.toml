@@ -1,0 +1,40 @@
+# cargo-nextest configuration.
+# Install:  cargo install cargo-nextest --locked
+# Run:      cargo nextest run --workspace
+#
+# Default profile balances throughput (one process per test on big boxes)
+# with sane CI ergonomics (fail-fast off, retries on flaky integration tests).
+#
+# ── Slow-test convention ───────────────────────────────────────────────
+# Tests whose name starts with `slow_` are expensive (e.g. multi-seed
+# map generation in a debug build) and are EXCLUDED from the default and
+# CI runs via `default-filter`. This is distinct from `#[ignore]`, which
+# the repo uses for broken / pending tests. Run the slow set explicitly
+# with `cargo nextest run --profile slow`.
+
+[profile.default]
+# Use all available cores for parallelism.
+test-threads = "num-cpus"
+# Don't abort the whole run on the first failure; we want the full report.
+fail-fast = false
+# Long-running parity/fuzz harnesses can exceed the default 60s slow-warn.
+slow-timeout = { period = "60s", terminate-after = 3 }
+# Skip `slow_`-prefixed tests in day-to-day runs.
+default-filter = "not test(/(?:^|::)slow_/)"
+
+[profile.ci]
+# CI gets a stricter timeout so a hung test doesn't burn billed minutes.
+slow-timeout = { period = "120s", terminate-after = 2 }
+fail-fast = false
+# One retry to absorb GH-runner flakiness (network / disk hiccups).
+retries = 1
+# The fast PR gate skips slow tests too; the nightly `slow` profile
+# covers them. `default-filter` is per-profile, not inherited from
+# `default`, so it is repeated here.
+default-filter = "not test(/(?:^|::)slow_/)"
+
+# Nightly / on-demand: run ONLY the slow-tagged tests.
+[profile.slow]
+fail-fast = false
+slow-timeout = { period = "120s", terminate-after = 3 }
+default-filter = "test(/(?:^|::)slow_/)"

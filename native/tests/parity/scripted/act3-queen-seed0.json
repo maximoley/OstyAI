@@ -1,0 +1,686 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 intent triple diverges by design (monsters.rs:22-29 / inflight-briefing \u00a79).",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/enemies/1",
+      "/enemies/2",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-mmqj: Queen's SUMMON intent spawns RoyalGuard (enemies/1) on the Python side. Rust does not yet wire the SUMMON intent \u2192 spawn-creature path, so /enemies/1 is excluded for now (revisit when that engine surface lands). The other excludes are the standard cross-language RNG drift set (see act2-the-obscura-seed0.json)."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 302,
+        "id": "QUEEN",
+        "intent": "SUMMON",
+        "intent_damage": 0,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 302,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Queen",
+    "python_pin": "01c094d",
+    "rust_pin": "bc04805d26b6f47a8f924ac0b8f6f60ee415a9db",
+    "scenario": "act3-queen",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "ATTACK",
+            "intent_damage": 18,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "ATTACK",
+            "intent_damage": 30,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 47,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": [
+            {
+              "amount": 1,
+              "id": "WEAK"
+            }
+          ]
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 2,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 302,
+            "id": "QUEEN",
+            "intent": "SUMMON",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 302,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "ROYAL_GUARD",
+            "intent": "ATTACK",
+            "intent_damage": 15,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "MINION"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

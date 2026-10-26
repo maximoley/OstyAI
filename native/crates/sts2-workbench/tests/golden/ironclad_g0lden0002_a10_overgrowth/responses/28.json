@@ -1,0 +1,43 @@
+{
+ "error": "no PPO net loaded for Ironclad",
+ "impl": "rust",
+ "options": [
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 0
+   },
+   "is_best": false,
+   "label": "Take Dismantle",
+   "prob": null
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 1
+   },
+   "is_best": false,
+   "label": "Take Flame Barrier",
+   "prob": null
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 2
+   },
+   "is_best": false,
+   "label": "Take True Grit",
+   "prob": null
+  },
+  {
+   "action": "skip_card_reward",
+   "args": {},
+   "is_best": false,
+   "label": "Skip card reward",
+   "prob": null
+  }
+ ],
+ "ppo_available": false,
+ "surface": "card-pick",
+ "value": null
+}

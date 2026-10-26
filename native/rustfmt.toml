@@ -1,0 +1,7 @@
+edition = "2021"
+max_width = 100
+
+# NOTE: `imports_granularity = "Crate"` and `group_imports = "StdExternalCrate"`
+# are nightly-only rustfmt options as of 1.85. We've dropped them from the
+# stable-toolchain config to keep `cargo fmt --check` clean. Re-enable behind
+# a `# rustfmt-nightly:` block once we move to nightly OR once these stabilize.

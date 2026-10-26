@@ -1,0 +1,19 @@
+{
+  "latest.pt": {
+    "sha256": "6811f48a9843a2f0a5919673c94ea99ddb1ea79bdd980dc89ea95c407e019aa0",
+    "unchanged": true
+  },
+  "replay-005500.pt": {
+    "sha256": "5cf568b100b928135ad1d2020cd87e882597a78efeea589039f7e116e8dae1a3",
+    "unchanged": true
+  },
+  "preserves": [
+    "model",
+    "actor",
+    "optimizer moments and step",
+    "replay values and priorities",
+    "pool tags",
+    "torch CUDA and replay RNG",
+    "all corpus and validation fixtures"
+  ]
+}

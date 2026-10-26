@@ -1,0 +1,14 @@
+{
+  "name": "burning-blood-setup-only-seed0",
+  "description": "sts2-rs-zizk: setup-only fixture with the Ironclad starter relic BurningBlood installed. Validates that the recorder's relics-install slot lands a real RelicInstance on combat.relics and that byte-equality with Rust holds (because the bridge-state shape omits relics at pin 01c094d).",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80
+  },
+  "enemies": [],
+  "relics": ["BurningBlood"],
+  "actions": []
+}

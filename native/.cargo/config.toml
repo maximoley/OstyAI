@@ -1,0 +1,21 @@
+# Public-export copy of the private tree's sts2-rs/.cargo/config.toml
+# (release/public-overlay/). The private file routes every rustc call through
+# sccache and disables incremental builds for cross-worktree cache reuse; here
+# neither is forced, so a plain `cargo` works on a fresh machine. To use
+# sccache anyway: `export RUSTC_WRAPPER=sccache` (PowerShell:
+# `$env:RUSTC_WRAPPER="sccache"`). Everything below this header must stay
+# identical to the private file (release/test_export_unit.py checks it).
+
+# macOS needs `-undefined dynamic_lookup` so that PyO3 cdylibs built with the
+# `extension-module` feature (crates/sts2-py) can link as part of
+# `cargo build --all-targets`. Without this, ld errors out on unresolved
+# `_Py*` symbols because `extension-module` tells PyO3 not to link libpython
+# directly — the host interpreter provides those at load time.
+[target.'cfg(target_os = "macos")']
+rustflags = ["-C", "link-arg=-undefined", "-C", "link-arg=dynamic_lookup"]
+
+# getrandom 0.4 (via tract-onnx → rand 0.10, PPO in the browser workbench)
+# refuses wasm32-unknown-unknown unless told which backend to use. Nothing
+# first-party asks it for entropy; the cfg only unblocks the build.
+[target.wasm32-unknown-unknown]
+rustflags = ["--cfg", "getrandom_backend=\"wasm_js\""]

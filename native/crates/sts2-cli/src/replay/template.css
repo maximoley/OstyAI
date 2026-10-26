@@ -1,0 +1,129 @@
+/* Minimal STS2 fight-replay styling. No JS. */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #14161a;
+  color: #e7e9ee;
+  margin: 0;
+  padding: 24px;
+  line-height: 1.45;
+}
+h1, h2, h3, h4 {
+  margin: 0.4em 0 0.3em;
+  color: #f6f7fa;
+}
+h1 { font-size: 1.45rem; }
+h2 { font-size: 1.15rem; border-bottom: 1px solid #2a2f3a; padding-bottom: 4px; }
+h3 { font-size: 0.95rem; color: #a9b1bd; text-transform: uppercase; letter-spacing: 0.08em; }
+h4 { font-size: 0.85rem; color: #a9b1bd; }
+p  { margin: 0.3em 0; }
+code { font-family: "JetBrains Mono", "Fira Code", Consolas, monospace; font-size: 0.85rem; background: #1c2029; padding: 1px 5px; border-radius: 3px; }
+a { color: #6ab0ff; }
+
+.fight-header { border-bottom: 2px solid #2a2f3a; padding-bottom: 12px; margin-bottom: 18px; }
+.meta { color: #a9b1bd; font-size: 0.9rem; }
+.meta.abort { color: #f6b365; }
+.home { margin-top: 24px; }
+
+.badge {
+  display: inline-block; padding: 1px 8px; border-radius: 10px;
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.badge.won { background: #1e4d2b; color: #b6f0c2; }
+.badge.lost { background: #5a1e1e; color: #f0bcbc; }
+.badge.neutral { background: #2a2f3a; color: #cfd3da; }
+
+.decision {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+}
+
+.state {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.piles { color: #a9b1bd; font-size: 0.85rem; }
+.powers .pow {
+  display: inline-block; background: #2a2f3a; padding: 1px 7px; border-radius: 4px;
+  font-size: 0.78rem; margin-right: 4px; color: #cfd3da;
+}
+
+.hand .hand-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;
+}
+.card {
+  background: #20242d;
+  border: 1px solid #2a2f3a;
+  border-radius: 6px;
+  width: 110px;
+  text-align: center;
+  padding: 4px;
+  font-size: 0.78rem;
+}
+.card img { width: 100px; height: auto; display: block; margin: 0 auto; border-radius: 4px; }
+.card-text {
+  width: 100px; height: 140px; display: flex; align-items: center; justify-content: center;
+  background: #2a2f3a; color: #cfd3da; font-size: 0.75rem; text-align: center; padding: 4px; border-radius: 4px;
+}
+.card-meta { color: #a9b1bd; margin-top: 2px; }
+.card-id { color: #7c8493; font-size: 0.72rem; word-break: break-word; }
+
+.monster {
+  display: grid; grid-template-columns: 90px 1fr; gap: 10px; margin-bottom: 10px;
+  background: #20242d; border: 1px solid #2a2f3a; border-radius: 6px; padding: 6px;
+}
+.monster img { width: 90px; height: auto; border-radius: 4px; }
+.monster-text {
+  width: 90px; height: 90px; background: #2a2f3a; color: #cfd3da; font-size: 0.78rem;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px;
+  border-radius: 4px;
+}
+.monster-meta .name { font-weight: 600; color: #f6f7fa; }
+.monster-meta.dead { opacity: 0.45; text-decoration: line-through; }
+.monster-meta .intent { color: #f6b365; font-size: 0.85rem; }
+.monster-meta .powers { margin-top: 4px; }
+
+.search { margin-top: 12px; }
+.search .pv { color: #a9b1bd; font-size: 0.85rem; word-break: break-word; }
+
+.outcomes {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+.outcomes th, .outcomes td {
+  text-align: right;
+  padding: 3px 8px;
+  border-bottom: 1px solid #232730;
+}
+.outcomes th { color: #a9b1bd; font-weight: 500; }
+.outcomes td:nth-child(2), .outcomes th:nth-child(2) { text-align: left; }
+.outcomes tr.recommended { background: rgba(106, 176, 255, 0.10); }
+.outcomes tr.recommended td { color: #cfe2ff; }
+.outcomes tr.q-best td { color: #b6f0c2; }
+
+.delta { margin-top: 12px; }
+.delta ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 18px; flex-wrap: wrap; }
+.delta .neg { color: #f49797; font-weight: 600; }
+.delta .pos { color: #b6f0c2; font-weight: 600; }
+
+.terminal {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  border-left: 4px solid #6ab0ff;
+  border-radius: 6px;
+  padding: 12px 18px;
+  margin-top: 20px;
+}
+
+table.index {
+  border-collapse: collapse; width: 100%; font-size: 0.9rem; margin-top: 12px;
+}
+table.index th, table.index td { padding: 6px 12px; border-bottom: 1px solid #2a2f3a; text-align: left; }
+table.index th { color: #a9b1bd; font-weight: 500; }

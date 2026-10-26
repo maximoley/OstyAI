@@ -1,0 +1,36 @@
+# seedfind spec — the full GH #297 request.
+#
+# "2 copies of Nightmare as card rewards, the Courier relic, the Colorful
+# (Prismatic) Philosophers event, and the Prismatic Gem from the act-2 Ancient."
+#
+# This mixes seed-alone predicates (the Ancient offer + event pool, checked
+# instantly) with DRIVEN predicates (the card rewards + obtained relic, which
+# only materialise once a path is walked). Driven predicates are evaluated by
+# playing the run headlessly; a match means the combination surfaced on the
+# sampled path(s). Widen the sample with --paths-per-seed, and expect this to
+# be far slower than a pure seed-alone scan. Run:
+#
+#   sts2-cli seedfind --spec crates/sts2-cli/examples/seedfind/issue297_full_combo.toml \
+#       --character silent --seeds 50000 --paths-per-seed 4 --limit 3
+#
+# (Nightmare is a Silent card, so search as Silent.)
+
+character = "silent"
+
+# ── seed-alone ──
+[[ancient_offer]]
+act = 2
+relic = "PRISMATIC_GEM"
+
+[[event_in_pool]]
+act = 2
+id = "ColorfulPhilosophers"
+
+# ── driven (require playing the run) ──
+# Nightmare offered as a card reward on at least two separate reward screens.
+[[card_reward]]
+id = "NIGHTMARE"
+min_count = 2
+
+# The Courier obtained during the run (shop / reward / event pickup).
+relic_obtained = ["THE_COURIER"]

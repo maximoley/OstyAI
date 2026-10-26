@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "mode": "pending_choice_bridge",
+  "metadata": {
+    "scenario": "exhume-pick",
+    "bead": "sts2-rs-ck2",
+    "python_pin": "01c094d",
+    "python_source": "sts2-rl-agent@01c094d:sts2_env/parity/bridge_replay.py:303-316 + sts2_env/cards/ironclad/exhume.py",
+    "description": "Exhume (Ironclad skill) returns a card from the exhaust pile to the hand. Note: Exhume is not yet ported as a CardId at this pin (see follow-up bead in .pi-flywheel/) — this fixture exercises the ChoiceKind=ExhaustPile bridge using cards available in the starter deck as proxies. ChoiceKind=ExhaustPile."
+  },
+  "pending_choice": {
+    "kind": "ExhaustPile",
+    "options": [
+      { "card_id": "Bash", "upgraded": false },
+      { "card_id": "StrikeIronclad", "upgraded": false }
+    ],
+    "min_select": 1,
+    "max_select": 1,
+    "can_skip": true
+  },
+  "expected_bridge_value": {
+    "type": "card_select",
+    "kind": "exhaust_pile",
+    "cards": [
+      { "id": "BASH", "type": "Attack", "upgraded": false },
+      { "id": "STRIKE_IRONCLAD", "type": "Attack", "upgraded": false }
+    ],
+    "min_select": 1,
+    "max_select": 1,
+    "can_skip": true
+  }
+}

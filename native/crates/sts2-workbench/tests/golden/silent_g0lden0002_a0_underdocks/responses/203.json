@@ -1,0 +1,80 @@
+{
+ "assumptions": {
+  "energy": 3,
+  "hand": 5,
+  "samples": 200
+ },
+ "block": {
+  "per_turn": 13.2,
+  "scaling_cards": []
+ },
+ "composition": {
+  "by_rarity": {
+   "Basic": 12,
+   "Uncommon": 2
+  },
+  "by_type": {
+   "Attack": 8,
+   "Skill": 6
+  },
+  "dead_cards": 0,
+  "energy_curve": {
+   "0": 1,
+   "1": 12,
+   "2": 1
+  },
+  "unupgraded_basics": 12
+ },
+ "damage": {
+  "aoe_attacks": [],
+  "attack_count": 8,
+  "per_turn": 13.7,
+  "scaling_cards": [
+   "Neutralize",
+   "Dash",
+   "Memento Mori"
+  ],
+  "single_target": 13.6,
+  "vs_group": 13.8
+ },
+ "deck_size": 14,
+ "lenses": {
+  "boss": 26.2,
+  "hallway": 27.4,
+  "scaling": 25.6
+ },
+ "scores": {
+  "block": 48.3,
+  "damage": 29.1,
+  "velocity": 1.2,
+  "volume": 11.9
+ },
+ "velocity": {
+  "bottleneck": "energy",
+  "cards_per_turn": 3.1,
+  "dilution": 1.0,
+  "draw_limited_turns": 0.0,
+  "energy_limited_turns": 7.0,
+  "engine_cards": 0,
+  "extra_per_turn": 0.0,
+  "tags": {}
+ },
+ "warnings": [
+  {
+   "severity": "info",
+   "text": "No AOE — multi-enemy fights (Gremlins, hallways) will be slow."
+  },
+  {
+   "severity": "info",
+   "text": "Low velocity — few draw/energy cards; you'll often draw the wrong hand."
+  },
+  {
+   "severity": "info",
+   "text": "Energy-limited — cards stranded in hand; more energy helps, more draw won't."
+  },
+  {
+   "severity": "warn",
+   "text": "Deck clogged with basics/curses — prioritise removals."
+  }
+ ]
+}

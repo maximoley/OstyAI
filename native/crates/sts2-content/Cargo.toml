@@ -1,0 +1,47 @@
+[package]
+name = "sts2-content"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Card / power / monster / relic / potion / orb definitions."
+
+[lints]
+workspace = true
+
+# Issue #15 / bead sts2-rs-cg5ci: build.rs stamps a content hash of this crate's
+# source into STS2_CONTENT_SRC_HASH (compiled in as `SRC_HASH`).
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }
+smallvec = { workspace = true }
+# P7-7 (sts2-rs-spy) Defect orb retrofits use `Rng::gen_range` for
+# Chaos / White Noise random-orb channels.
+rand = { workspace = true }
+
+[dev-dependencies]
+# P5-8 (sts2-rs-2nx) multi-enemy parity harness + monster_intent_roll
+# bench: seeded RNG construction and JSON fixture decode.
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+serde_json = { workspace = true }
+# 29c1f: install_pool_is_idempotent tests share a process-wide
+# relic-registry counter and must serialize against each other.
+# Under nextest (the workspace-mandated runner per CLAUDE.md) each
+# test runs in its own process, so process-global registry state
+# is structurally isolated and the serial_test guard is dead code
+# in practice — kept to keep `cargo test` (non-mandated) at least
+# partially honest for cases that already opt-in via
+# `#[serial_test::serial(relic_registry)]`. See bead `sts2-rs-bt2m5`.
+serial_test = { workspace = true }
+# Phase-0 combat-redesign gate (2026-06-09): the
+# `vajra_changes_search_root_value_vs_bare` behavioral test drives a
+# real MCTS search over a relic-bearing run-bridged combat to prove
+# relics surface in rollouts. `sts2-mcts` already depends on
+# `sts2-content` for its rollout content; this reverse edge is a
+# dev-dependency only, so the cycle is dev-cyclic (Cargo-permitted)
+# and never reaches the normal build graph.
+sts2-mcts = { workspace = true }

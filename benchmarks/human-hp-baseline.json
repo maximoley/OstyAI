@@ -1,0 +1,35 @@
+{
+  "combats": 12099,
+  "runs": 512,
+  "missing_hp": 0,
+  "by_act": {
+    "all": {
+      "n": 12099,
+      "mean_net_hp_lost": 6.061657988263493,
+      "sum_net_hp_lost": 73340,
+      "negative_count": 1247
+    },
+    "1": {
+      "n": 4290,
+      "mean_net_hp_lost": 5.368997668997669,
+      "sum_net_hp_lost": 23033,
+      "negative_count": 191
+    },
+    "2": {
+      "n": 3775,
+      "mean_net_hp_lost": 6.550993377483444,
+      "sum_net_hp_lost": 24730,
+      "negative_count": 407
+    },
+    "3": {
+      "n": 4034,
+      "mean_net_hp_lost": 6.340356965790779,
+      "sum_net_hp_lost": 25577,
+      "negative_count": 649
+    }
+  },
+  "mean_total_net_loss_per_run": 143.2421875,
+  "run_weighted_mean_per_combat": 6.151799016979702,
+  "definition": "human_start_hp minus human_end_hp from frozen historical metadata; floor-boundary HP, not exact combat action snapshots",
+  "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+}

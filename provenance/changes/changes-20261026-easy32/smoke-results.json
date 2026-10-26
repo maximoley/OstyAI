@@ -1,0 +1,89 @@
+{
+  "training": {
+    "search_by_tier": {
+      "boss": {
+        "budget": 128,
+        "combats": 4,
+        "forced_actions": 7,
+        "played_decisions": 199,
+        "searched_decisions": 192,
+        "simulations": 24576
+      },
+      "easy": {
+        "budget": 32,
+        "combats": 4,
+        "forced_actions": 11,
+        "played_decisions": 89,
+        "searched_decisions": 78,
+        "simulations": 2496
+      },
+      "elite": {
+        "budget": 96,
+        "combats": 4,
+        "forced_actions": 15,
+        "played_decisions": 113,
+        "searched_decisions": 98,
+        "simulations": 9408
+      },
+      "hard": {
+        "budget": 64,
+        "combats": 4,
+        "forced_actions": 0,
+        "played_decisions": 111,
+        "searched_decisions": 111,
+        "simulations": 7104
+      }
+    },
+    "forced_search_transitions": 6929,
+    "seconds": 15.791402462869883
+  },
+  "primary": {
+    "search_by_tier": {
+      "boss": {
+        "budget": 128,
+        "combats": 4,
+        "forced_actions": 6,
+        "played_decisions": 258,
+        "searched_decisions": 252,
+        "simulations": 32256
+      },
+      "easy": {
+        "budget": 32,
+        "combats": 4,
+        "forced_actions": 7,
+        "played_decisions": 117,
+        "searched_decisions": 110,
+        "simulations": 3520
+      },
+      "elite": {
+        "budget": 96,
+        "combats": 4,
+        "forced_actions": 3,
+        "played_decisions": 149,
+        "searched_decisions": 146,
+        "simulations": 14016
+      },
+      "hard": {
+        "budget": 64,
+        "combats": 4,
+        "forced_actions": 6,
+        "played_decisions": 126,
+        "searched_decisions": 120,
+        "simulations": 7680
+      }
+    },
+    "forced_search_transitions": 5633,
+    "seconds": 9.284539669752121
+  },
+  "secondary": {
+    "trials": 81,
+    "cache_resume_verified": true,
+    "budgets": {
+      "easy": 32,
+      "hard": 64,
+      "elite": 96,
+      "boss": 128
+    }
+  },
+  "native_sha256": "1d3a5d4a405b299c3171fbaf768e393f0d768d3407e8e435f457c118ec882a67"
+}

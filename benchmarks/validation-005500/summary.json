@@ -1,0 +1,26 @@
+{
+  "environment_revision": "native-ai-import-v1",
+  "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "evaluation_mode": "search",
+  "model_sha256": "5ab556567a7d8f0d8f8657f1ff24b8150428a09bdb23980067a9441459e63816",
+  "action_selection": "gumbel_search",
+  "update": 5500,
+  "requested": 8192,
+  "completed": 8188,
+  "unresolved": 4,
+  "wins": 7530,
+  "win_rate": 0.9196384953590621,
+  "win_rate_lower_bound": 0.919189453125,
+  "mean_return": 1.242317285970408,
+  "mean_potions_used": 0.4860771861260381,
+  "seconds": 419.3202498219907,
+  "per_potion_costs": "independent uniform [0,1], frozen per case/replicate",
+  "simulations": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "skip_forced_actions": true,
+  "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a"
+}

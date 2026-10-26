@@ -1,0 +1,21 @@
+# PINNED EMBEDDING-ROW ORDER for the `boss` PPO registry. APPEND-ONLY.
+#
+# Line N (comments and blanks skipped) is embedding row N. Reordering or
+# deleting a line silently repoints a deployed champion's learned row at a
+# different id -- the failure GH #544 documents. Adding content appends here;
+# regenerate with `cargo run -p sts2-vocab --example dump_vocab_pins`.
+#
+# Ids present here but absent from the content are kept: the row stays
+# unreachable rather than shifting every id after it.
+AEONGLASS_BOSS
+CEREMONIAL_BEAST_BOSS
+KAISER_CRAB_BOSS
+KNOWLEDGE_DEMON_BOSS
+QUEEN_BOSS
+TEST_SUBJECT_BOSS
+THE_INSATIABLE_BOSS
+THE_KIN_BOSS
+VANTOM_BOSS
+LAGAVULIN_MATRIARCH_BOSS
+SOUL_FYSH_BOSS
+WATERFALL_GIANT_BOSS

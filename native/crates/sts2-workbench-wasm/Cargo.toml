@@ -1,0 +1,46 @@
+[package]
+name = "sts2-workbench-wasm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "wasm-bindgen shell over sts2-workbench for the browser-only workbench."
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# Cannot inherit `[lints] workspace = true`: the wasm-bindgen boundary
+# needs `unsafe` (the workspace denies it) — same carve-out as sts2-py.
+[lints.rust]
+unsafe_code = "allow"
+missing_debug_implementations = "warn"
+rust_2018_idioms = "warn"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+too_many_lines = "allow"
+doc_markdown = "allow"
+
+[dependencies]
+sts2-workbench = { path = "../sts2-workbench", version = "0.0.1", features = ["ppo"] }
+serde_json = { workspace = true }
+wasm-bindgen = { workspace = true }
+# `js_sys::Function` for the restore-progress callback.
+js-sys = { workspace = true }
+# Panic messages reach the browser console instead of "unreachable".
+console_error_panic_hook = { workspace = true }
+# rand 0.8 (via sts2-core) pulls getrandom 0.2, which refuses to compile for
+# wasm32-unknown-unknown unless the `js` feature is on. Nothing in the
+# engine ever asks it for entropy — every RNG is explicitly seeded.
+getrandom = { workspace = true, features = ["js"] }
+# tract-onnx (the PPO net, `ppo` feature) pulls rand 0.10 / getrandom 0.4,
+# which needs its own wasm opt-in (`wasm_js`, plus the
+# `getrandom_backend="wasm_js"` cfg in `.cargo/config.toml`).
+getrandom04 = { package = "getrandom", version = "0.4", features = ["wasm_js"] }
+

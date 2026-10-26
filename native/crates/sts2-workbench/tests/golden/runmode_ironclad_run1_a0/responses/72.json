@@ -1,0 +1,11 @@
+{
+ "agreed": false,
+ "available": true,
+ "band": "differed",
+ "brain": "ppo",
+ "champion_label": "Take Shrug It Off",
+ "champion_prob": 0.9578,
+ "margin": 0.9428,
+ "your_label": "Take Tremble",
+ "your_prob": 0.0149
+}

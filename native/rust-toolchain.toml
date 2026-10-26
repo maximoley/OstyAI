@@ -1,0 +1,6 @@
+[toolchain]
+channel = "1.96.0"
+components = ["rustfmt", "clippy"]
+# Browser workbench: `cargo check --target wasm32-unknown-unknown -p sts2-workbench-wasm`.
+targets = ["wasm32-unknown-unknown"]
+profile = "minimal"

@@ -1,0 +1,47 @@
+schema = 2
+
+# Hand-curated blunder fixture for `sts2-rs-64h9r` Half B.
+#
+# Source: copied from
+#   /tmp/run-fixtures-full/the-ironclad/00030217-6611-4a0a-aa7b-a01d92f22b49_floor002_sludge_spinner_weak.toml
+# The `[blunder_assertion]` table is consumed by
+# `crates/sts2-cli/tests/blunder_fixtures.rs`; the existing scenario
+# loader silently ignores it (no `deny_unknown_fields`).
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 2
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.SLUDGE_SPINNER_WEAK"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 64
+max_hp    = 80
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "SLUDGE_SPINNER"
+
+# Floor-2 opener with a full hand of affordable cards (Strikes / Bash
+# at e=3) and a live Sludge Spinner. Picking `End turn` on the first
+# decision is the canonical `end_turn_with_playable` blunder
+# (zero_play_combat at the limit). At the configured budget MCTS
+# should always pick a card, never end-turn.
+[blunder_assertion]
+class          = "end_turn_with_playable"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+# decision_index is 0-based across the entire fight; 0 = first
+# player-controlled decision (turn 1).
+decision_index = 0

@@ -1,0 +1,245 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). Power application + turn-start hook ordering do NOT consume RNG, so player.powers + hp + energy stay byte-equal."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 40,
+        "id": "SHRINKER_BEETLE",
+        "intent": "DEBUFF_STRONG",
+        "intent_damage": 0,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 40,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "cost": 1,
+        "id": "INFLAME",
+        "playable": true,
+        "target": "Self",
+        "type": "Power"
+      },
+      {
+        "cost": 3,
+        "id": "DEMON_FORM_CARD",
+        "playable": true,
+        "target": "Self",
+        "type": "Power"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "d9369d0ce17a46c1cea777a80b1c3d9817f5c379",
+    "scenario": "inflame-demon-form-stack",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "SHRINKER_BEETLE",
+            "intent": "DEBUFF_STRONG",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [
+          {
+            "cost": 3,
+            "id": "DEMON_FORM_CARD",
+            "playable": false,
+            "target": "Self",
+            "type": "Power"
+          }
+        ],
+        "player": {
+          "block": 0,
+          "energy": 2,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "SHRINKER_BEETLE",
+            "intent": "ATTACK",
+            "intent_damage": 7,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [
+          {
+            "cost": 3,
+            "id": "DEMON_FORM_CARD",
+            "playable": true,
+            "target": "Self",
+            "type": "Power"
+          }
+        ],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": [
+            {
+              "amount": -1,
+              "id": "SHRINK"
+            }
+          ]
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "SHRINKER_BEETLE",
+            "intent": "ATTACK",
+            "intent_damage": 7,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": [
+            {
+              "amount": 2,
+              "id": "DEMON_FORM"
+            },
+            {
+              "amount": -1,
+              "id": "SHRINK"
+            }
+          ]
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "SHRINKER_BEETLE",
+            "intent": "ATTACK",
+            "intent_damage": 13,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 73,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": [
+            {
+              "amount": 2,
+              "id": "DEMON_FORM"
+            },
+            {
+              "amount": -1,
+              "id": "SHRINK"
+            },
+            {
+              "amount": 2,
+              "id": "STRENGTH"
+            }
+          ]
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

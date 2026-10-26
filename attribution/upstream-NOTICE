@@ -1,0 +1,20 @@
+spire-mentor — public snapshot
+==========================
+
+This repository is a snapshot export of a private monorepo (spire-mentor-private).
+The original work in it — the code, the documentation, the trained networks —
+is licensed under the MIT licenses in LICENSE, sts2-rs/LICENSE,
+sts2-pycli/LICENSE and sts2-wiki/LICENSE. Those grants cover the original
+work only; nothing below that belongs to Mega Crit is licensed by them.
+
+Slay the Spire 2 is (c) Mega Crit. Nothing here is affiliated with or endorsed
+by Mega Crit. The game's English text and extracted card/relic/monster data
+are included so the simulator and workbench work out of the box; no game
+code, decompiled game code, art, audio or game assemblies are included — the
+tooling extracts those from a copy of the game YOU own
+(docs/bring-your-own-game.md), into git-ignored paths.
+
+Source comments cite file paths inside a decompilation of the game as
+references ("see Foo.cs:12"); the quoted code itself is stripped before
+export. Trained neural-network weights under sts2-pycli/data/ppo/ and
+sts2-rs/data/runai/ were produced by this project's own simulator.

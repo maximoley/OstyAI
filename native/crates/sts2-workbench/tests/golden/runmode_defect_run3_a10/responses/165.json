@@ -1,0 +1,19 @@
+{
+ "final_turn_histogram": {},
+ "n_losses": 1,
+ "n_runs": 1,
+ "pattern_tags": {},
+ "representative_losses": [
+  {
+   "enemy_min_pct": 8.5106,
+   "final_turn": null,
+   "stem": "20260101_000000_Defect_3",
+   "turn1_q": 1.0653
+  }
+ ],
+ "turn1_q": {
+  "max": 1.0653,
+  "mean": 1.0653,
+  "min": 1.0653
+ }
+}

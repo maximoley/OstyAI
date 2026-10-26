@@ -1,0 +1,92 @@
+{
+  "wire_version": 1,
+  "phase": "PlayerPlayPhase",
+  "round": 3,
+  "side": "Player",
+  "is_elite": false,
+  "turn": 3,
+  "combat_id": 41,
+  "intent_amounts": "effective",
+  "rng": {
+    "seed": 18446744073709551557,
+    "ascension": 7,
+    "run_seed": 3735928559,
+    "counters": {
+      "shuffle": 2,
+      "monster_ai": 11,
+      "combat_targets": 4
+    }
+  },
+  "player": {
+    "class": "ironclad",
+    "hp": 54,
+    "max_hp": 80,
+    "block": 5,
+    "energy": 2,
+    "max_energy": 3,
+    "energy_regen_per_turn": 3,
+    "gold": 137,
+    "cards_played_this_turn": [1, 0, 0, 0, 0],
+    "bound_card_played_this_turn": false,
+    "relics": [
+      { "id": "BURNING_BLOOD", "counter": null },
+      { "id": "TOY_BOX", "counter": 2, "is_wax": true, "is_melted": false }
+    ],
+    "powers": [
+      { "name": "STRENGTH", "amount": 2 },
+      { "name": "VULNERABLE", "amount": 1, "display": 1 }
+    ],
+    "potions": ["ATTACK_POTION", null]
+  },
+  "deck": {
+    "draw_pile": [
+      { "id": "STRIKE_IRONCLAD", "stable_idx": 0, "kind": "card", "upgraded": false },
+      { "id": "DEFEND_IRONCLAD", "stable_idx": 1, "kind": "card", "upgraded": true },
+      { "id": "status:Slimed", "stable_idx": 2, "kind": "status", "upgraded": false }
+    ],
+    "discard_pile": [
+      { "id": "BASH", "stable_idx": 3, "kind": "card", "upgraded": false }
+    ],
+    "hand": [
+      {
+        "id": "STRIKE_IRONCLAD",
+        "stable_idx": 4,
+        "kind": "card",
+        "upgraded": false,
+        "base_damage": 6,
+        "flags": ["retain"],
+        "combat_vars": { "rampage_damage": 0, "free_this_turn": 1 }
+      },
+      { "id": "curse:Clumsy", "stable_idx": 5, "kind": "curse", "upgraded": false }
+    ],
+    "exhaust_pile": [],
+    "pinned_top": [1],
+    "deferred_draw_order": false
+  },
+  "encounter": [
+    {
+      "kind": "Nibbit",
+      "uid": 2,
+      "hp": 18,
+      "max_hp": 32,
+      "block": 0,
+      "powers": [{ "name": "WEAK", "amount": 1 }],
+      "intents": [{ "kind": "Attack", "amount": 9, "times": 1 }],
+      "intent_history": [0, 1],
+      "is_dead": false,
+      "is_escaped": false
+    },
+    {
+      "kind": "Mawler",
+      "uid": 3,
+      "hp": 0,
+      "max_hp": 40,
+      "block": 0,
+      "powers": [],
+      "intents": [],
+      "intent_history": [],
+      "is_dead": true,
+      "is_escaped": false
+    }
+  ]
+}

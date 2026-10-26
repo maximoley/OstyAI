@@ -1,0 +1,38 @@
+[package]
+name = "sts2-mcts"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "UCT MCTS engine for sts2-core. Phase-8 keystone (bead sts2-rs-69p)."
+
+[lints]
+workspace = true
+
+# Issue #15 / bead sts2-rs-cg5ci: build.rs stamps a content hash of this crate's
+# source into STS2_MCTS_SRC_HASH (compiled in as `SRC_HASH`).
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }
+smallvec = { workspace = true }
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+rayon = { workspace = true }
+ahash = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# rand 0.8 pulls getrandom 0.2, which refuses to compile for
+# wasm32-unknown-unknown without the `js` feature; `sts2-workbench-wasm`
+# enables it too, but feature unification only reaches a `-p sts2-mcts`
+# wasm check if this crate asks for it itself. Inert on native targets.
+# (rayon itself compiles on wasm32 — `par_search_with_policy` short-circuits
+# at `workers == 1` before touching a pool — so it is not gated.)
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { workspace = true, features = ["js"] }
+
+[dev-dependencies]
+sts2-content = { workspace = true }

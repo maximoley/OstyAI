@@ -1,0 +1,11 @@
+{
+ "agreed": true,
+ "available": true,
+ "band": "matched",
+ "brain": "ppo",
+ "champion_label": "Take Fight Me!",
+ "champion_prob": 1.0,
+ "margin": 0.0,
+ "your_label": "Take Fight Me!",
+ "your_prob": 1.0
+}

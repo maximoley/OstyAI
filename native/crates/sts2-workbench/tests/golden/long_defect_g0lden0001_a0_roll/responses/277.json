@@ -1,0 +1,89 @@
+{
+ "assumptions": {
+  "energy": 3,
+  "hand": 5,
+  "samples": 200
+ },
+ "block": {
+  "per_turn": 5.0,
+  "scaling_cards": []
+ },
+ "composition": {
+  "by_rarity": {
+   "Basic": 9,
+   "Common": 7,
+   "Quest": 1,
+   "Rare": 1,
+   "Uncommon": 2
+  },
+  "by_type": {
+   "Attack": 9,
+   "Power": 2,
+   "Quest": 1,
+   "Skill": 8
+  },
+  "dead_cards": 0,
+  "energy_curve": {
+   "0": 1,
+   "1": 16,
+   "2": 1,
+   "3": 1,
+   "X": 1
+  },
+  "unupgraded_basics": 8
+ },
+ "damage": {
+  "aoe_attacks": [
+   "Sweeping Beam"
+  ],
+  "attack_count": 9,
+  "per_turn": 16.8,
+  "scaling_cards": [
+   "Zap",
+   "Focused Strike",
+   "Focused Strike",
+   "Synchronize",
+   "Smokestack",
+   "Compile Driver",
+   "Uproar"
+  ],
+  "single_target": 15.1,
+  "vs_group": 18.4
+ },
+ "deck_size": 20,
+ "lenses": {
+  "boss": 33.0,
+  "hallway": 33.5,
+  "scaling": 32.8
+ },
+ "scores": {
+  "block": 22.0,
+  "damage": 34.3,
+  "velocity": 42.8,
+  "volume": 31.8
+ },
+ "velocity": {
+  "bottleneck": "energy",
+  "cards_per_turn": 3.2,
+  "dilution": 0.75,
+  "draw_limited_turns": 1.2,
+  "energy_limited_turns": 5.3,
+  "engine_cards": 4,
+  "extra_per_turn": 0.4,
+  "tags": {
+   "draw": 2,
+   "energy": 1,
+   "extra_play": 1
+  }
+ },
+ "warnings": [
+  {
+   "severity": "warn",
+   "text": "Thin on block and no block engine — big hits will land in Act 2+."
+  },
+  {
+   "severity": "info",
+   "text": "Energy-limited — cards stranded in hand; more energy helps, more draw won't."
+  }
+ ]
+}

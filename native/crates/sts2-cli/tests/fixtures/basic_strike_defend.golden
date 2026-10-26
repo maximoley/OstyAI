@@ -1,0 +1,154 @@
+sts2-cli v0.0.1 — seed=0 encounter=nibbit (Nibbit) player=Ironclad agent=Human potions=[]
+── starting combat ──
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 3/3
+  draw    : 5  discard: 0  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 43/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 3: DefendIronclad  cost 1  (Skill/Self_)
+    slot 4: Bash  cost 2  (Attack/Enemy)
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 3/3
+  draw    : 5  discard: 0  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 43/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 3: DefendIronclad  cost 1  (Skill/Self_)
+    slot 4: Bash  cost 2  (Attack/Enemy)
+  actions (type the bracketed index to dispatch):
+    [0] play 0 0  (StrikeIronclad → enemy 0)
+    [1] play 1    (DefendIronclad)
+    [2] play 2 0  (StrikeIronclad → enemy 0)
+    [3] play 3    (DefendIronclad)
+    [4] play 4 0  (Bash → enemy 0)
+    [5] end           (end player turn)
+<< # Scripted human turn vs Cultist (seed 0): play three Strikes, end turn.
+<< state
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 3/3
+  draw    : 5  discard: 0  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 43/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 3: DefendIronclad  cost 1  (Skill/Self_)
+    slot 4: Bash  cost 2  (Attack/Enemy)
+<< play 0 0
+  -> Advanced
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 2/3
+  draw    : 5  discard: 1  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 37/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 4 card(s)
+    slot 0: DefendIronclad  cost 1  (Skill/Self_)
+    slot 1: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 2: DefendIronclad  cost 1  (Skill/Self_)
+    slot 3: Bash  cost 2  (Attack/Enemy)
+  actions (type the bracketed index to dispatch):
+    [0] play 0    (DefendIronclad)
+    [1] play 1 0  (StrikeIronclad → enemy 0)
+    [2] play 2    (DefendIronclad)
+    [3] play 3 0  (Bash → enemy 0)
+    [4] end           (end player turn)
+<< play 1 0
+  -> Advanced
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 1/3
+  draw    : 5  discard: 2  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 31/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 3 card(s)
+    slot 0: DefendIronclad  cost 1  (Skill/Self_)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: Bash  cost 2  (Attack/Enemy)
+  actions (type the bracketed index to dispatch):
+    [0] play 0    (DefendIronclad)
+    [1] play 1    (DefendIronclad)
+    [2] end           (end player turn)
+<< play 2 0
+  -> Advanced
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 1/3
+  draw    : 5  discard: 2  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 31/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 3 card(s)
+    slot 0: DefendIronclad  cost 1  (Skill/Self_)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: Bash  cost 2  (Attack/Enemy)
+  actions (type the bracketed index to dispatch):
+    [0] play 0    (DefendIronclad)
+    [1] play 1    (DefendIronclad)
+    [2] end           (end player turn)
+<< state
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 1
+  player  : HP 80/80  block 0  energy 1/3
+  draw    : 5  discard: 2  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 31/43 block 0  intent Attack { damage: 12 }  alive: true
+  hand    : 3 card(s)
+    slot 0: DefendIronclad  cost 1  (Skill/Self_)
+    slot 1: DefendIronclad  cost 1  (Skill/Self_)
+    slot 2: Bash  cost 2  (Attack/Enemy)
+<< end
+  -> Advanced
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 2
+  player  : HP 68/80  block 0  energy 3/3
+  draw    : 0  discard: 5  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 31/43 block 0  intent Attack { damage: 6 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 2: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 3: DefendIronclad  cost 1  (Skill/Self_)
+    slot 4: DefendIronclad  cost 1  (Skill/Self_)
+  actions (type the bracketed index to dispatch):
+    [0] play 0 0  (StrikeIronclad → enemy 0)
+    [1] play 1 0  (StrikeIronclad → enemy 0)
+    [2] play 2 0  (StrikeIronclad → enemy 0)
+    [3] play 3    (DefendIronclad)
+    [4] play 4    (DefendIronclad)
+    [5] end           (end player turn)
+<< state
+── combat state ─────────────────────────
+  phase   : PlayerPlayPhase
+  round   : 2
+  player  : HP 68/80  block 0  energy 3/3
+  draw    : 0  discard: 5  exhaust: 0
+  monsters:
+    slot 0: Nibbit       HP 31/43 block 0  intent Attack { damage: 6 }  alive: true
+  hand    : 5 card(s)
+    slot 0: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 1: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 2: StrikeIronclad  cost 1  (Attack/Enemy)
+    slot 3: DefendIronclad  cost 1  (Skill/Self_)
+    slot 4: DefendIronclad  cost 1  (Skill/Self_)
+<< quit
+── quit ──

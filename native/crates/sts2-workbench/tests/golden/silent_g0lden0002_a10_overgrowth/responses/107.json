@@ -1,0 +1,72 @@
+{
+ "act": 1,
+ "candidates": [
+  {
+   "is_best": false,
+   "key": "choice:skip",
+   "label": "skip",
+   "q": 1.1039,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": true,
+   "key": "choice:1",
+   "label": "STRIKE_SILENT",
+   "q": 1.1126,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:2",
+   "label": "STRIKE_SILENT",
+   "q": 1.0983,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:3",
+   "label": "MEMENTO_MORI",
+   "q": 1.1024,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:4",
+   "label": "DEFEND_SILENT",
+   "q": 1.1044,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:5",
+   "label": "STRIKE_SILENT",
+   "q": 1.1014,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:6",
+   "label": "DEFEND_SILENT",
+   "q": 1.0975,
+   "visits": 6,
+   "win_prob": 1.0
+  }
+ ],
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "decision": "card_select"
+}

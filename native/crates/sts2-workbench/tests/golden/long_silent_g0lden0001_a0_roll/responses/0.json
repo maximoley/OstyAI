@@ -1,0 +1,258 @@
+{
+ "action_label": "",
+ "assets_base": "https://assets.test",
+ "chosen_action": null,
+ "decision": "event_choice",
+ "idx": 0,
+ "meta": {
+  "act": 1,
+  "act_name": "Overgrowth",
+  "bg_col": null,
+  "bg_row": null,
+  "bg_seed": 11180935036767329045,
+  "floor": 0,
+  "step_no": 0,
+  "turn": null
+ },
+ "pv": null,
+ "scores": [],
+ "source": "live",
+ "state": {
+  "act": 1,
+  "act1": "overgrowth",
+  "act_name": "Overgrowth",
+  "art": {
+   "illustration": null
+  },
+  "ascension": 0,
+  "bg_seed": 11180935036767329045,
+  "decision": "event_choice",
+  "description": "",
+  "event_name": "Neow",
+  "event_options": [
+   {
+    "description": "Gain a positive relic.",
+    "image": null,
+    "index": 0,
+    "is_locked": false,
+    "title": "POMANDER"
+   },
+   {
+    "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+    "image": "https://assets.test/relic_atlas/neows_torment.png",
+    "index": 1,
+    "is_locked": false,
+    "title": "Neow's Torment"
+   },
+   {
+    "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP.",
+    "image": "https://assets.test/relic_atlas/leafy_poultice.png",
+    "index": 2,
+    "is_locked": false,
+    "title": "Leafy Poultice"
+   }
+  ],
+  "floor": 0,
+  "options": [
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 0
+    },
+    "enabled": true,
+    "label": "POMANDER"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 1
+    },
+    "enabled": true,
+    "label": "NEOWS_TORMENT.title"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 2
+    },
+    "enabled": true,
+    "label": "LEAFY_POULTICE.title"
+   }
+  ],
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 4,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 8,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 9,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 0,
+     "description": "Deal 3 damage.\nApply 1 Weak.",
+     "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+     "id": "NEUTRALIZE",
+     "image": "https://assets.test/card_atlas/silent/neutralize.png",
+     "index": 10,
+     "name": "Neutralize",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 8 Block.\nDiscard 1 card.",
+     "description_rich": "Gain 8 Block.\nDiscard 1 card.",
+     "id": "SURVIVOR",
+     "image": "https://assets.test/card_atlas/silent/survivor.png",
+     "index": 11,
+     "name": "Survivor",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    }
+   ],
+   "gold": 99,
+   "hp": 70,
+   "max_hp": 70,
+   "name": "Silent",
+   "potion_slots": 3,
+   "potions": [],
+   "relics": [
+    {
+     "description": "At the start of each combat, draw 2 additional cards.",
+     "id": "RING_OF_THE_SNAKE",
+     "image": "https://assets.test/relic_atlas/ring_of_the_snake.png",
+     "name": "Ring of the Snake"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,698 @@
+{
+ "debug": {
+  "action": "Play Survivor",
+  "combat_search": {
+   "actions": [
+    {
+     "action": {
+      "action": "play",
+      "card_index": 5,
+      "target_index": null
+     },
+     "bucket": "likely-win",
+     "is_best": true,
+     "losses": 0,
+     "low_confidence": false,
+     "p_loss": 0.0,
+     "p_tie": 0.0,
+     "p_win": 1.0,
+     "q": 1.2194,
+     "q_saturated": false,
+     "ties": 0,
+     "value": 1.0,
+     "value_sum": 2.4389,
+     "visits": 2,
+     "wins": 2
+    },
+    {
+     "action": {
+      "action": "play",
+      "card_index": 1,
+      "target_index": 0
+     },
+     "bucket": "likely-win",
+     "is_best": false,
+     "losses": 0,
+     "low_confidence": false,
+     "p_loss": 0.0,
+     "p_tie": 0.0,
+     "p_win": 1.0,
+     "q": 1.2248,
+     "q_saturated": false,
+     "ties": 0,
+     "value": 1.0,
+     "value_sum": 1.2248,
+     "visits": 1,
+     "wins": 1
+    },
+    {
+     "action": {
+      "action": "play",
+      "card_index": 0,
+      "target_index": 0
+     },
+     "bucket": "likely-win",
+     "is_best": false,
+     "losses": 0,
+     "low_confidence": false,
+     "p_loss": 0.0,
+     "p_tie": 0.0,
+     "p_win": 1.0,
+     "q": 1.2337,
+     "q_saturated": false,
+     "ties": 0,
+     "value": 1.0,
+     "value_sum": 2.4675,
+     "visits": 2,
+     "wins": 2
+    },
+    {
+     "action": {
+      "action": "play",
+      "card_index": 2,
+      "target_index": null
+     },
+     "bucket": "likely-win",
+     "is_best": false,
+     "losses": 0,
+     "low_confidence": false,
+     "p_loss": 0.0,
+     "p_tie": 0.0,
+     "p_win": 1.0,
+     "q": 1.2248,
+     "q_saturated": false,
+     "ties": 0,
+     "value": 1.0,
+     "value_sum": 2.4496,
+     "visits": 2,
+     "wins": 2
+    },
+    {
+     "action": {
+      "action": "end_turn"
+     },
+     "bucket": "likely-win",
+     "is_best": false,
+     "losses": 0,
+     "low_confidence": false,
+     "p_loss": 0.0,
+     "p_tie": 0.0,
+     "p_win": 1.0,
+     "q": 1.1997,
+     "q_saturated": false,
+     "ties": 0,
+     "value": 1.0,
+     "value_sum": 1.1997,
+     "visits": 1,
+     "wins": 1
+    }
+   ],
+   "recommended": {
+    "action": "play",
+    "card_index": 5,
+    "target_index": null
+   }
+  },
+  "is_combat": true,
+  "phase": "combat",
+  "result": "Advanced",
+  "summary": "combat MCTS → Play Survivor"
+ },
+ "done": false,
+ "error": null,
+ "over": false,
+ "search": {
+  "action": "Play Survivor",
+  "enemies": [
+   {
+    "block": 0,
+    "hp": 42,
+    "index": 0,
+    "intents": [
+     {
+      "damage": 12,
+      "type": "Attack"
+     }
+    ],
+    "kind": "Nibbit",
+    "max_hp": 42,
+    "move_state": "BUTT",
+    "name": "Nibbit",
+    "powers": [],
+    "uid": 2
+   }
+  ],
+  "scores": [
+   {
+    "action": "Survivor",
+    "is_best": true,
+    "losses": 0,
+    "low_confidence": false,
+    "q": 1.2194,
+    "q_saturated": false,
+    "stable_idx": 5,
+    "target_index": null,
+    "ties": 0,
+    "visits": 2,
+    "win_prob": 1.0,
+    "wins": 2
+   },
+   {
+    "action": "Neutralize",
+    "is_best": false,
+    "losses": 0,
+    "low_confidence": false,
+    "q": 1.2248,
+    "q_saturated": false,
+    "stable_idx": 1,
+    "target_index": 0,
+    "ties": 0,
+    "visits": 1,
+    "win_prob": 1.0,
+    "wins": 1
+   },
+   {
+    "action": "Strike",
+    "is_best": false,
+    "losses": 0,
+    "low_confidence": false,
+    "q": 1.2337,
+    "q_saturated": false,
+    "stable_idx": 0,
+    "target_index": 0,
+    "ties": 0,
+    "visits": 2,
+    "win_prob": 1.0,
+    "wins": 2
+   },
+   {
+    "action": "Defend",
+    "is_best": false,
+    "losses": 0,
+    "low_confidence": false,
+    "q": 1.2248,
+    "q_saturated": false,
+    "stable_idx": 2,
+    "target_index": null,
+    "ties": 0,
+    "visits": 2,
+    "win_prob": 1.0,
+    "wins": 2
+   },
+   {
+    "action": "end turn",
+    "is_best": false,
+    "losses": 0,
+    "low_confidence": false,
+    "q": 1.1997,
+    "q_saturated": false,
+    "stable_idx": -1,
+    "target_index": null,
+    "ties": 0,
+    "visits": 1,
+    "win_prob": 1.0,
+    "wins": 1
+   }
+  ]
+ },
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 1,
+   "bg_row": 1,
+   "bg_seed": 2,
+   "floor": 1,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 1,
+   "bg_row": 1,
+   "bg_seed": 2,
+   "can_skip": false,
+   "cards": [
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_SILENT",
+     "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 0,
+     "description": "Deal 3 damage.\nApply 1 Weak.",
+     "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+     "id": "NEUTRALIZE",
+     "image": "https://assets.test/card_atlas/silent/neutralize.png",
+     "index": 1,
+     "name": "Neutralize",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 2,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 3,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "green",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_SILENT",
+     "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    }
+   ],
+   "context": "discard_from_hand",
+   "decision": "card_select",
+   "enemies": [
+    {
+     "block": 0,
+     "hp": 42,
+     "index": 0,
+     "intents": [
+      {
+       "damage": 12,
+       "type": "Attack"
+      }
+     ],
+     "kind": "Nibbit",
+     "max_hp": 42,
+     "move_state": "BUTT",
+     "name": "Nibbit",
+     "powers": [],
+     "uid": 2
+    }
+   ],
+   "floor": 1,
+   "max_select": 1,
+   "mcts": {
+    "actions": [
+     {
+      "action": {
+       "action": "play",
+       "card_index": 5,
+       "target_index": null
+      },
+      "bucket": "likely-win",
+      "is_best": true,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.2194,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 2.4389,
+      "visits": 2,
+      "wins": 2
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 1,
+       "target_index": 0
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.2248,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.2248,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 0,
+       "target_index": 0
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.2337,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 2.4675,
+      "visits": 2,
+      "wins": 2
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 2,
+       "target_index": null
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.2248,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 2.4496,
+      "visits": 2,
+      "wins": 2
+     },
+     {
+      "action": {
+       "action": "end_turn"
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1997,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1997,
+      "visits": 1,
+      "wins": 1
+     }
+    ],
+    "recommended": {
+     "action": "play",
+     "card_index": 5,
+     "target_index": null
+    }
+   },
+   "min_select": 1,
+   "options": [
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "0"
+     },
+     "enabled": true,
+     "label": "STRIKE_SILENT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "1"
+     },
+     "enabled": true,
+     "label": "NEUTRALIZE.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "2"
+     },
+     "enabled": true,
+     "label": "DEFEND_SILENT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "3"
+     },
+     "enabled": true,
+     "label": "DEFEND_SILENT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "4"
+     },
+     "enabled": true,
+     "label": "DEFEND_SILENT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "5"
+     },
+     "enabled": true,
+     "label": "DEFEND_SILENT.title"
+    }
+   ],
+   "player": {
+    "block": 8,
+    "deck": [
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 9,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 0,
+      "description": "Deal 3 damage.\nApply 1 Weak.",
+      "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+      "id": "NEUTRALIZE",
+      "image": "https://assets.test/card_atlas/silent/neutralize.png",
+      "index": 10,
+      "name": "Neutralize",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 8 Block.\nDiscard 1 card.",
+      "description_rich": "Gain 8 Block.\nDiscard 1 card.",
+      "id": "SURVIVOR",
+      "image": "https://assets.test/card_atlas/silent/survivor.png",
+      "index": 11,
+      "name": "Survivor",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     }
+    ],
+    "gold": 99,
+    "hp": 70,
+    "max_hp": 70,
+    "name": "Silent",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, draw 2 additional cards.",
+      "id": "RING_OF_THE_SNAKE",
+      "image": "https://assets.test/relic_atlas/ring_of_the_snake.png",
+      "name": "Ring of the Snake"
+     },
+     {
+      "description": "The Act 1 Boss drops 2 Relics.",
+      "id": "LAVA_ROCK",
+      "image": "https://assets.test/relic_atlas/lava_rock.png",
+      "name": "Lava Rock"
+     }
+    ]
+   },
+   "player_powers": []
+  }
+ },
+ "steps": 1,
+ "victory": false
+}

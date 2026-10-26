@@ -1,0 +1,9 @@
+# Dead legacy enemy import repair, 2026-10-26
+
+At cycle 4557 the trainer rejected fixture 367 of prepared/bank-004556.jsonl (generated:1244405). The bank contains two already-dead Axebots with the obsolete SHARPEN_MOVE label and two living Axebots with BOOT_UP_MOVE. The first-turn migration guard incorrectly applied its living-enemy preconditions to corpses. All three supervisor attempts failed at this same import. The feeder was healthy.
+
+The targeted Rust change leaves dead-enemy obsolete move metadata untouched. Normal wire reconstruction preserves their zero HP; living enemies still require restored AI, and live obsolete openings still require the original first-player-turn/base-intent/no-history conditions. No fixture bytes, search budgets, loss, sampling quotas, or RNG are changed. The native-ai-import-v1 revision is retained; the new native SHA in deployment.json identifies this verified repair and differentiates future validation provenance.
+
+The latest committed checkpoint is cycle/update 4550, with validation 4500 and 65,536 replay examples. Backups preserve model/actor, optimizer, RNG, replay priorities/pool tags, and the old library/source. The supervisor resumes from 4550; uncommitted progress 4551-4556 is archived by the existing resume logic and recomputed. No replay quarantine is needed because the failure happened before collection and the previously corrected live AI behavior is unchanged.
+
+Evidence: tests.log (59 Rust tests), regression-smoke.json (exact failed fixture), failed-bank-smoke.json (full 1020-combat bank using saved actor), audit.json (both validation suites and nearby training banks), checkpoint-before.json, replay-before.json, deployment.json, and resume-verification.json. Production and feeder are restarted only after these gates pass; run.sh/supervise_run.py and the established v31 feeder runtime remain in use.

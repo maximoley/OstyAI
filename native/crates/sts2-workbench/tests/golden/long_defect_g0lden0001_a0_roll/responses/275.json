@@ -1,0 +1,721 @@
+{
+ "action_label": "Play Defend",
+ "assets_base": "https://assets.test",
+ "chosen_action": {
+  "action": "play_card",
+  "args": {
+   "action": "play",
+   "card_index": 1,
+   "target_index": null
+  },
+  "cmd": "action",
+  "label": "Play Defend",
+  "replay": {
+   "action": "play_card",
+   "args": {
+    "card_index": 1
+   }
+  }
+ },
+ "combat_log": [
+  {
+   "actor": "The Defect",
+   "actor_side": "player",
+   "actor_uid": null,
+   "amount": 5,
+   "kind": "block",
+   "noun": "Block",
+   "round": 2,
+   "side": "player",
+   "source": "Defend",
+   "source_card": "DEFEND_DEFECT",
+   "source_kind": "card",
+   "source_monster": null,
+   "source_move_id": null,
+   "source_upgraded": false,
+   "target": null,
+   "target_side": null,
+   "target_uid": null,
+   "text": "The Defect gained 5 Block.",
+   "verb": "gained"
+  }
+ ],
+ "decision": "combat_play",
+ "idx": 106,
+ "legal_actions": [],
+ "meta": {
+  "act": 1,
+  "act_name": "Overgrowth",
+  "advice": null,
+  "bg_col": 0,
+  "bg_row": 10,
+  "bg_seed": null,
+  "floor": 10,
+  "step_no": 107,
+  "turn": 2
+ },
+ "pv": null,
+ "scores": [],
+ "source": "log",
+ "state": {
+  "act": 1,
+  "act1": "overgrowth",
+  "act_name": "Overgrowth",
+  "ascension": 0,
+  "bg_col": 0,
+  "bg_row": 10,
+  "bg_seed": 11180935036767329045,
+  "decision": "combat_play",
+  "discard_pile": [
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Deal 6 damage.",
+    "description_rich": "Deal 6 damage.",
+    "id": "STRIKE_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 6
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "calculated_value": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Gain 1 Focus this turn for each unique Orb you have.\n(Gain 1 Focus)",
+    "description_rich": "Gain 1 [gold]Focus[/gold] this turn for each unique Orb you have.\n(Gain 1 [gold]Focus[/gold])",
+    "id": "SYNCHRONIZE",
+    "image": "https://assets.test/card_atlas/defect/beta/synchronize.png",
+    "index": -1,
+    "name": "Synchronize",
+    "rarity": "Uncommon",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 3,
+    "can_play": false,
+    "color": "blue",
+    "cost": 3,
+    "description": "At the start of your turn, add a random Power into your Hand.",
+    "description_rich": "At the start of your turn, add a random Power into your [gold]Hand[/gold].",
+    "id": "CREATIVE_AI",
+    "image": "https://assets.test/card_atlas/defect/creative_ai.png",
+    "index": -1,
+    "name": "Creative AI",
+    "rarity": "Rare",
+    "stats": {},
+    "target_type": "None",
+    "type": "Power",
+    "upgraded": false
+   },
+   {
+    "base_cost": -1,
+    "can_play": false,
+    "color": "quest",
+    "cost": 0,
+    "description": "Unplayable.\nMarks a site of 600 extra Gold in the next Act.",
+    "description_rich": "[gold]Unplayable[/gold].\nMarks a site of 600 extra [gold]Gold[/gold] in the next Act.",
+    "id": "SPOILS_MAP",
+    "image": "https://assets.test/card_atlas/quest/spoils_map.png",
+    "index": -1,
+    "name": "Spoils Map",
+    "rarity": "Quest",
+    "stats": {},
+    "target_type": "None",
+    "type": "Quest",
+    "upgraded": false
+   }
+  ],
+  "discard_pile_count": 5,
+  "draw_pile": [
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Evoke your rightmost Orb twice.",
+    "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+    "id": "DUALCAST",
+    "image": "https://assets.test/card_atlas/defect/dualcast.png",
+    "index": -1,
+    "name": "Dualcast",
+    "rarity": "Basic",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Deal 9 damage.\nGain 1 Focus this turn.",
+    "description_rich": "Deal 9 damage.\nGain 1 [gold]Focus[/gold] this turn.",
+    "id": "FOCUSED_STRIKE",
+    "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+    "index": -1,
+    "name": "Focused Strike",
+    "rarity": "Common",
+    "stats": {
+     "damage": 9
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Deal 6 damage.",
+    "description_rich": "Deal 6 damage.",
+    "id": "STRIKE_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 6
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "blue",
+    "cost": 1,
+    "description": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+    "description_rich": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+    "id": "SWEEPING_BEAM",
+    "image": "https://assets.test/card_atlas/defect/sweeping_beam.png",
+    "index": -1,
+    "name": "Sweeping Beam",
+    "rarity": "Common",
+    "stats": {
+     "damage": 6
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   }
+  ],
+  "draw_pile_count": 6,
+  "enemies": [
+   {
+    "block": 5,
+    "hp": 31,
+    "hue_jitter": 0.0474,
+    "image": "https://assets.test/monsters/nibbit.png",
+    "index": 0,
+    "intents": [
+     {
+      "damage": 2,
+      "intent_image": "https://assets.test/intent_atlas/intent_buff.png",
+      "type": "Buff"
+     }
+    ],
+    "kind": "Nibbit",
+    "max_hp": 45,
+    "move_state": "HISS",
+    "name": "Nibbit",
+    "powers": [],
+    "rig": "https://assets.test/monster_rigs/nibbit/nibbit",
+    "rig_bounds_h": 146.0,
+    "rig_bounds_w": 270.0,
+    "rig_scale": 0.28,
+    "size_jitter": 1.05,
+    "uid": 2
+   },
+   {
+    "block": 0,
+    "hp": 26,
+    "hue_jitter": 0.0379,
+    "image": "https://assets.test/monsters/nibbit.png",
+    "index": 1,
+    "intents": [
+     {
+      "base_damage": 12,
+      "damage": 14,
+      "intent_image": "https://assets.test/intent_atlas/attack/intent_attack_3.png",
+      "modifiers": [
+       {
+        "add": 2,
+        "image": "https://assets.test/power_atlas/strength_power.png",
+        "kind": "power",
+        "name": "STRENGTH",
+        "side": "enemy",
+        "title": "Strength"
+       }
+      ],
+      "type": "Attack"
+     }
+    ],
+    "kind": "Nibbit",
+    "max_hp": 42,
+    "move_state": "BUTT",
+    "name": "Nibbit",
+    "powers": [
+     {
+      "amount": 2,
+      "display_amount": 2,
+      "id": "STRENGTH",
+      "image": "https://assets.test/power_atlas/strength_power.png",
+      "image_big": "https://assets.test/power_big/strength_power.png",
+      "name": "Strength"
+     }
+    ],
+    "rig": "https://assets.test/monster_rigs/nibbit/nibbit",
+    "rig_bounds_h": 146.0,
+    "rig_bounds_w": 270.0,
+    "rig_scale": 0.28,
+    "size_jitter": 1.0,
+    "uid": 3
+   }
+  ],
+  "energy": 5,
+  "energy_image": "https://assets.test/sprite_fonts/defect_energy_icon.png",
+  "exhaust_pile": [],
+  "exhaust_pile_count": 0,
+  "floor": 10,
+  "hand": [
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "blue",
+    "cost": 1,
+    "damage_preview": {
+     "0": 9,
+     "1": 9
+    },
+    "description": "Deal 9 damage.",
+    "description_rich": "Deal 9 damage.",
+    "id": "STRIKE_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+    "index": 0,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 9
+    },
+    "target_type": "AnyEnemy",
+    "type": "Attack",
+    "upgraded": true
+   },
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "blue",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_DEFECT",
+    "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+    "index": 1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 0,
+    "can_play": true,
+    "color": "blue",
+    "cost": 0,
+    "description": "Gain Energy.\nAdd a Void into your Discard Pile.",
+    "description_rich": "Gain Energy.\nAdd a [gold]Void[/gold] into your [gold]Discard Pile[/gold].",
+    "id": "TURBO",
+    "image": "https://assets.test/card_atlas/defect/turbo.png",
+    "index": 2,
+    "name": "TURBO",
+    "rarity": "Common",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "blue",
+    "cost": 1,
+    "damage_preview": {
+     "0": 11,
+     "1": 11
+    },
+    "description": "Deal 11 damage.\nGain 2 Focus this turn.",
+    "description_rich": "Deal 11 damage.\nGain 2 [gold]Focus[/gold] this turn.",
+    "id": "FOCUSED_STRIKE",
+    "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+    "index": 3,
+    "name": "Focused Strike",
+    "rarity": "Common",
+    "stats": {
+     "damage": 11
+    },
+    "target_type": "AnyEnemy",
+    "type": "Attack",
+    "upgraded": true
+   },
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "blue",
+    "cost": 1,
+    "description": "Channel 1 Lightning.",
+    "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+    "id": "ZAP",
+    "image": "https://assets.test/card_atlas/defect/zap.png",
+    "index": 4,
+    "name": "Zap",
+    "rarity": "Basic",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   }
+  ],
+  "max_energy": 3,
+  "orb_slots": 3,
+  "orbs": [
+   {
+    "evoke": 8,
+    "image": "https://assets.test/orb_atlas/lightning.png",
+    "index": 0,
+    "name": "LIGHTNING_ORB.title",
+    "passive": 3,
+    "type": "Lightning"
+   }
+  ],
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 9 damage.",
+     "description_rich": "Deal 9 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 3,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Channel 1 Lightning.",
+     "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+     "id": "ZAP",
+     "image": "https://assets.test/card_atlas/defect/zap.png",
+     "index": 7,
+     "name": "Zap",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Evoke your rightmost Orb twice.",
+     "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+     "id": "DUALCAST",
+     "image": "https://assets.test/card_atlas/defect/dualcast.png",
+     "index": 8,
+     "name": "Dualcast",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 11 damage.\nGain 2 Focus this turn.",
+     "description_rich": "Deal 11 damage.\nGain 2 Focus this turn.",
+     "id": "FOCUSED_STRIKE",
+     "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+     "index": 9,
+     "name": "Focused Strike",
+     "rarity": "Common",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "blue",
+     "cost": 3,
+     "description": "At the start of your turn, add a random Power into your Hand.",
+     "description_rich": "At the start of your turn, add a random Power into your [gold]Hand[/gold].",
+     "id": "CREATIVE_AI",
+     "image": "https://assets.test/card_atlas/defect/creative_ai.png",
+     "index": 10,
+     "name": "Creative AI",
+     "rarity": "Rare",
+     "type": "Power",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 9 damage.\nGain 1 Focus this turn.",
+     "description_rich": "Deal 9 damage.\nGain 1 Focus this turn.",
+     "id": "FOCUSED_STRIKE",
+     "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+     "index": 11,
+     "name": "Focused Strike",
+     "rarity": "Common",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+     "description_rich": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+     "id": "SWEEPING_BEAM",
+     "image": "https://assets.test/card_atlas/defect/sweeping_beam.png",
+     "index": 12,
+     "name": "Sweeping Beam",
+     "rarity": "Common",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "quest",
+     "cost": "X",
+     "description": "Unplayable.\nMarks a site of 600 extra Gold in the next Act.",
+     "description_rich": "[gold]Unplayable[/gold].\nMarks a site of 600 extra Gold in the next Act.",
+     "id": "SPOILS_MAP",
+     "image": "https://assets.test/card_atlas/quest/spoils_map.png",
+     "index": 13,
+     "name": "Spoils Map",
+     "rarity": "Quest",
+     "type": "Quest",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 1 Focus this turn for each unique Orb you have.",
+     "description_rich": "Gain 1 Focus this turn for each unique Orb you have.",
+     "id": "SYNCHRONIZE",
+     "image": "https://assets.test/card_atlas/defect/beta/synchronize.png",
+     "index": 14,
+     "name": "Synchronize",
+     "rarity": "Uncommon",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 0,
+     "description": "Gain Energy.\nAdd a Void into your Discard Pile.",
+     "description_rich": "Gain Energy.\nAdd a [gold]Void[/gold] into your [gold]Discard Pile[/gold].",
+     "id": "TURBO",
+     "image": "https://assets.test/card_atlas/defect/turbo.png",
+     "index": 15,
+     "name": "TURBO",
+     "rarity": "Common",
+     "type": "Skill",
+     "upgraded": false
+    }
+   ],
+   "gold": 246,
+   "hp": 39,
+   "image": "https://assets.test/character_sprites/defect.png",
+   "max_hp": 75,
+   "name": "Defect",
+   "potion_slots": 3,
+   "potions": [],
+   "relics": [
+    {
+     "description": "At the start of each combat, Channel 1 Lightning.",
+     "id": "CRACKED_CORE",
+     "image": "https://assets.test/relic_atlas/cracked_core.png",
+     "name": "Cracked Core"
+    },
+    {
+     "description": "Upon pickup, Upgrade a card.",
+     "id": "POMANDER",
+     "image": "https://assets.test/relic_atlas/pomander.png",
+     "name": "Pomander"
+    },
+    {
+     "description": "At the start of your 2nd turn, gain 2 Energy.",
+     "id": "CANDELABRA",
+     "image": "https://assets.test/relic_atlas/candelabra.png",
+     "name": "Candelabra"
+    },
+    {
+     "description": "Upon pickup, Upgrade 2 random Attacks.",
+     "id": "WHETSTONE",
+     "image": "https://assets.test/relic_atlas/whetstone.png",
+     "name": "Whetstone"
+    }
+   ],
+   "rig": "https://assets.test/character_rigs/defect/defect",
+   "rig_bounds_h": 260.0,
+   "rig_bounds_w": 250.0,
+   "rig_scale": 0.125
+  },
+  "player_powers": [],
+  "round": 2
+ },
+ "wpa": null
+}

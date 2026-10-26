@@ -1,0 +1,7 @@
+{
+  "time": 1792952301.6322846,
+  "resume_cycle": 3935,
+  "tests": "14 focused Rust tests passed; deterministic 32-combat trace/outcome/replay parity passed; both GPU smoke runs completed with valid counts",
+  "gpu_parity_limitation": "GPU runs differed on 5/32 traces; exact neural trajectory parity not established. Deterministic evaluator matched all states/actions/rewards/potion ledgers.",
+  "binary_sha256": "d2425d4e0828813c16592b1c1d34e6aa1aeb17794c70ead634c5bf2c451e7805"
+}

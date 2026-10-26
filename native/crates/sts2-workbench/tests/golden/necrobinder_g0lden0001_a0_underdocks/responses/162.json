@@ -1,0 +1,595 @@
+{
+ "action_label": "",
+ "assets_base": "https://assets.test",
+ "chosen_action": null,
+ "decision": "combat_play",
+ "idx": 0,
+ "meta": {
+  "act": 1,
+  "act_name": "Underdocks",
+  "bg_col": 0,
+  "bg_row": 8,
+  "bg_seed": 11180935036767329045,
+  "floor": 8,
+  "step_no": 0,
+  "turn": 1
+ },
+ "pv": null,
+ "scores": [],
+ "source": "live",
+ "state": {
+  "act": 1,
+  "act1": "underdocks",
+  "act_name": "Underdocks",
+  "ascension": 0,
+  "bg_col": 0,
+  "bg_row": 8,
+  "bg_seed": 11180935036767329045,
+  "decision": "combat_play",
+  "discard_pile": [
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Deal 6 damage.",
+    "description_rich": "Deal 6 damage.",
+    "id": "STRIKE_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 6
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Next turn, Summon 2 and gain Energy.",
+    "description_rich": "Next turn, [gold]Summon[/gold] 2 and gain Energy.",
+    "id": "INVOKE",
+    "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+    "index": -1,
+    "name": "Invoke",
+    "rarity": "Common",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   }
+  ],
+  "discard_pile_count": 2,
+  "draw_pile": [
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+    "index": -1,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Next turn, Summon 3 and gain Energy.",
+    "description_rich": "Next turn, [gold]Summon[/gold] 3 and gain Energy.",
+    "id": "INVOKE",
+    "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+    "index": -1,
+    "name": "Invoke",
+    "rarity": "Common",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": true
+   },
+   {
+    "base_cost": 2,
+    "can_play": false,
+    "color": "pink",
+    "cost": 2,
+    "description": "Deal 13 damage.\nAdd a Soul into your Draw Pile, Hand, and Discard Pile.",
+    "description_rich": "Deal 13 damage.\nAdd a [gold]Soul[/gold] into your [gold]Draw Pile[/gold], [gold]Hand[/gold], and [gold]Discard Pile[/gold].",
+    "id": "SEVERANCE",
+    "image": "https://assets.test/card_atlas/necrobinder/severance.png",
+    "index": -1,
+    "name": "Severance",
+    "rarity": "Uncommon",
+    "stats": {
+     "damage": 13
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+    "description_rich": "[gold]Osty[/gold] deals 7 damage.\nAdd [gold]Retain[/gold] to a card in your [gold]Hand[/gold].",
+    "id": "SNAP",
+    "image": "https://assets.test/card_atlas/necrobinder/snap.png",
+    "index": -1,
+    "name": "Snap",
+    "rarity": "Common",
+    "stats": {
+     "damage": 7
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Deal 9 damage.",
+    "description_rich": "Deal 9 damage.",
+    "id": "STRIKE_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 9
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": true
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Deal 9 damage.",
+    "description_rich": "Deal 9 damage.",
+    "id": "STRIKE_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 9
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": true
+   },
+   {
+    "base_cost": 1,
+    "can_play": false,
+    "color": "pink",
+    "cost": 1,
+    "description": "Deal 9 damage.",
+    "description_rich": "Deal 9 damage.",
+    "id": "STRIKE_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+    "index": -1,
+    "name": "Strike",
+    "rarity": "Basic",
+    "stats": {
+     "damage": 9
+    },
+    "target_type": "None",
+    "type": "Attack",
+    "upgraded": true
+   }
+  ],
+  "draw_pile_count": 9,
+  "enemies": [
+   {
+    "block": 0,
+    "hp": 74,
+    "image": "https://assets.test/monsters/living_smog.png",
+    "index": 0,
+    "intents": [
+     {
+      "damage": 8,
+      "intent_image": "https://assets.test/intent_atlas/attack/intent_attack_2.png",
+      "type": "Attack"
+     }
+    ],
+    "kind": "LivingFog",
+    "max_hp": 80,
+    "move_state": "ADVANCED_GAS",
+    "name": "Living Fog",
+    "powers": [],
+    "rig": "https://assets.test/monster_rigs/living_smog/living_smog",
+    "rig_bounds_h": 300.0,
+    "rig_bounds_w": 302.0,
+    "rig_scale": 0.6,
+    "uid": 2
+   }
+  ],
+  "energy": 1,
+  "energy_image": "https://assets.test/sprite_fonts/necrobinder_energy_icon.png",
+  "exhaust_pile": [],
+  "exhaust_pile_count": 0,
+  "floor": 8,
+  "hand": [
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "pink",
+    "cost": 1,
+    "description": "Gain 5 Block.",
+    "description_rich": "Gain 5 [gold]Block[/gold].",
+    "id": "DEFEND_NECROBINDER",
+    "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+    "index": 0,
+    "name": "Defend",
+    "rarity": "Basic",
+    "stats": {
+     "block": 5
+    },
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "calculated_value": 7,
+    "can_play": true,
+    "color": "pink",
+    "cost": 1,
+    "description": "Osty deals 7 damage.\nDeals additional damage equal to Osty's current HP.",
+    "description_rich": "[gold]Osty[/gold] deals 7 damage.\nDeals additional damage equal to [gold]Osty's[/gold] current HP.",
+    "id": "UNLEASH",
+    "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+    "index": 1,
+    "name": "Unleash",
+    "rarity": "Basic",
+    "stats": {},
+    "target_type": "AnyEnemy",
+    "type": "Attack",
+    "upgraded": false
+   },
+   {
+    "base_cost": 1,
+    "can_play": true,
+    "color": "pink",
+    "cost": 1,
+    "description": "Summon 5.",
+    "description_rich": "[gold]Summon[/gold] 5.",
+    "id": "BODYGUARD",
+    "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+    "index": 2,
+    "name": "Bodyguard",
+    "rarity": "Basic",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "base_cost": 0,
+    "can_play": true,
+    "color": "colorless",
+    "cost": 0,
+    "description": "Add 1 random Colorless card into your Hand.\nExhaust.",
+    "description_rich": "Add 1 random Colorless card into your [gold]Hand[/gold].\n[gold]Exhaust[/gold].",
+    "id": "JACK_OF_ALL_TRADES",
+    "image": "https://assets.test/card_atlas/colorless/jack_of_all_trades.png",
+    "index": 3,
+    "name": "Jack of All Trades",
+    "rarity": "Uncommon",
+    "stats": {},
+    "target_type": "None",
+    "type": "Skill",
+    "upgraded": false
+   }
+  ],
+  "max_energy": 3,
+  "options": [],
+  "osty": {
+   "alive": true,
+   "block": 0,
+   "hp": 1,
+   "image": "https://assets.test/monsters/osty.png",
+   "max_hp": 1,
+   "name": "Osty",
+   "rig": "https://assets.test/monster_rigs/osty/osty",
+   "rig_bounds_h": 204.0,
+   "rig_bounds_w": 232.0,
+   "rig_scale": 0.26
+  },
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 9 damage.",
+     "description_rich": "Deal 9 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 9 damage.",
+     "description_rich": "Deal 9 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 9 damage.",
+     "description_rich": "Deal 9 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": true
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Summon 5.",
+     "description_rich": "Summon 5.",
+     "id": "BODYGUARD",
+     "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+     "index": 8,
+     "name": "Bodyguard",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "id": "UNLEASH",
+     "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+     "index": 9,
+     "name": "Unleash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Next turn, Summon 3 and gain 3 Energy.",
+     "description_rich": "Next turn, Summon 3 and gain 3 Energy.",
+     "id": "INVOKE",
+     "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+     "index": 10,
+     "name": "Invoke",
+     "rarity": "Common",
+     "type": "Skill",
+     "upgraded": true
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Next turn, Summon 2 and gain 2 Energy.",
+     "description_rich": "Next turn, Summon 2 and gain 2 Energy.",
+     "id": "INVOKE",
+     "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+     "index": 11,
+     "name": "Invoke",
+     "rarity": "Common",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+     "description_rich": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+     "id": "SNAP",
+     "image": "https://assets.test/card_atlas/necrobinder/snap.png",
+     "index": 12,
+     "name": "Snap",
+     "rarity": "Common",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 2,
+     "description": "Deal 13 damage.\nAdd a Soul into your Draw Pile, Hand, and Discard Pile.",
+     "description_rich": "Deal 13 damage.\nAdd a Soul into your Draw Pile, Hand, and Discard Pile.",
+     "id": "SEVERANCE",
+     "image": "https://assets.test/card_atlas/necrobinder/severance.png",
+     "index": 13,
+     "name": "Severance",
+     "rarity": "Uncommon",
+     "type": "Attack",
+     "upgraded": false
+    }
+   ],
+   "gold": 185,
+   "hp": 12,
+   "image": "https://assets.test/character_sprites/necrobinder.png",
+   "max_hp": 68,
+   "name": "Necrobinder",
+   "potion_slots": 3,
+   "potions": [],
+   "relics": [
+    {
+     "description": "At the start of your turn, Summon 1.",
+     "id": "BOUND_PHYLACTERY",
+     "image": "https://assets.test/relic_atlas/bound_phylactery.png",
+     "name": "Bound Phylactery"
+    },
+    {
+     "description": "Upon pickup, Upgrade a card.",
+     "id": "POMANDER",
+     "image": "https://assets.test/relic_atlas/pomander.png",
+     "name": "Pomander"
+    },
+    {
+     "description": "At the start of your 2nd turn, gain 2 Energy.",
+     "id": "CANDELABRA",
+     "image": "https://assets.test/relic_atlas/candelabra.png",
+     "name": "Candelabra"
+    }
+   ],
+   "rig": "https://assets.test/character_rigs/necrobinder/necrobinder",
+   "rig_bounds_h": 270.0,
+   "rig_bounds_w": 210.0,
+   "rig_scale": 0.27
+  },
+  "player_powers": [
+   {
+    "amount": 2,
+    "display_amount": 2,
+    "id": "SUMMON_NEXT_TURN",
+    "image": "https://assets.test/power_atlas/summon_next_turn_power.png",
+    "image_big": "https://assets.test/power_big/summon_next_turn_power.png",
+    "name": "Summon Next Turn"
+   },
+   {
+    "amount": 2,
+    "display_amount": 2,
+    "id": "ENERGY_NEXT_TURN",
+    "image": "https://assets.test/power_atlas/energy_next_turn_power.png",
+    "image_big": "https://assets.test/power_big/energy_next_turn_power.png",
+    "name": "Energy Next Turn"
+   }
+  ],
+  "round": 1
+ }
+}

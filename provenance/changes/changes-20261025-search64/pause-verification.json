@@ -1,0 +1,26 @@
+{
+  "cycle": 3770,
+  "updates": 3770,
+  "examples": 61767680,
+  "validated_update": 3700,
+  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-003770.pt",
+  "replay_keys": [
+    "capacity",
+    "rows",
+    "cursor",
+    "count",
+    "total",
+    "raw",
+    "policy",
+    "value",
+    "lengths",
+    "ids",
+    "versions",
+    "rng",
+    "priorities",
+    "priority_schema"
+  ],
+  "optimizer_states": 67,
+  "old_simulations": 16,
+  "new_simulations": 64
+}

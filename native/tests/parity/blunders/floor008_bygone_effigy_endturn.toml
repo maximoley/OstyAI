@@ -1,0 +1,46 @@
+schema = 2
+
+# Hand-curated blunder fixture for `sts2-rs-30lw5` (child of
+# `sts2-rs-b4myp` / `sts2-rs-64h9r`).
+#
+# Source: copied from
+#   /tmp/run-fixtures-full/the-ironclad/002b06d4-7a04-4f05-bfc0-5fe0945bd225_floor008_bygone_effigy_elite.toml
+#
+# Turn 1 vs BYGONE_EFFIGY elite. Deck is starter-heavy (6 Strikes
+# + 4 Defends + Bash + a few uncommons) so any 5-card draw at e=3
+# guarantees affordable cards. Ending turn here would trip
+# `end_turn_with_high_energy` (HIGH_ENERGY_THRESHOLD path,
+# crates/sts2-cli/src/replay/audit.rs:259). At the configured
+# budget MCTS should pick a card, never End turn.
+
+[provenance]
+run_id     = "002b06d4-7a04-4f05-bfc0-5fe0945bd225"
+build_id   = "v0.104.0"
+floor      = 8
+act        = "ACT.OVERGROWTH"
+encounter  = "ENCOUNTER.BYGONE_EFFIGY_ELITE"
+room_type  = "elite"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 10
+hp        = 69
+max_hp    = 80
+gold      = 44
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "BLOOD_WALL", "TRUE_GRIT", "THUNDERCLAP", "UPPERCUT+", "TWIN_STRIKE", "STOMP"]
+relics    = ["BURNING_BLOOD", "LARGE_CAPSULE", "PEN_NIB", "RUINED_HELMET"]
+potions   = []
+
+[[monsters]]
+kind = "BYGONE_EFFIGY"
+
+[blunder_assertion]
+class          = "end_turn_with_high_energy"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

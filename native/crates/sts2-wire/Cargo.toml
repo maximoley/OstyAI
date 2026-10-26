@@ -1,0 +1,37 @@
+[package]
+name = "sts2-wire"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "PyO3-free wire-format parse + CombatState reconstruction (the hint/bridge dialect)."
+publish = false
+
+[lints]
+workspace = true
+
+# build.rs stamps a content hash of this crate's build inputs into
+# STS2_WIRE_SRC_HASH (compiled in as `SRC_HASH`): part of the sts2_rs src_hash.
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+# `registry_names_for` single-sources the four PPO registry kinds
+# (card/potion/event/relic_id) from `sts2_vocab` — NOT `sts2-runai`, whose
+# tract-onnx / rayon graph must stay out of the wasm workbench build.
+sts2-vocab = { workspace = true }
+# `emit::mcts`: the `mcts_recommend` / `mcts_search_tree` result dicts, built
+# once for the PyO3 module and the browser workbench.
+sts2-mcts = { workspace = true }
+smallvec = { workspace = true }
+# The non-Python wire source: `impl WireValue for &serde_json::Value` is
+# what lets a Rust caller ingest a captured SpireMentor/adapter dict with
+# no interpreter in the process.
+serde_json = { workspace = true }
+# `emit` builds its `Value`s through `serde_json::to_value`, whose bound is
+# `serde::Serialize`; the typed emitters (`Vec<(String, bool)>`, …) are what a
+# JSON consumer serializes directly.
+serde = { workspace = true }

@@ -1,0 +1,40 @@
+{
+ "points": [
+  {
+   "act": 1,
+   "deck_size": 13,
+   "floor": 0,
+   "idx": 0,
+   "scores": {
+    "block": 44.8,
+    "damage": 26.7,
+    "velocity": 0.0,
+    "volume": 0.0
+   }
+  },
+  {
+   "act": 1,
+   "deck_size": 14,
+   "floor": 1,
+   "idx": 20,
+   "scores": {
+    "block": 48.1,
+    "damage": 29.0,
+    "velocity": 3.0,
+    "volume": 16.1
+   }
+  },
+  {
+   "act": 1,
+   "deck_size": 15,
+   "floor": 2,
+   "idx": 39,
+   "scores": {
+    "block": 46.7,
+    "damage": 27.9,
+    "velocity": 1.7,
+    "volume": 13.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,649 @@
+{
+ "autoplayed": 5,
+ "diff": {
+  "autoplayed": 5,
+  "deck": {
+   "added": [],
+   "removed": [],
+   "upgraded": []
+  },
+  "deck_size": 13,
+  "from_floor": null,
+  "gold": 10,
+  "gold_delta": null,
+  "hp": 60,
+  "hp_delta": null,
+  "lines": [
+   "HP 60/86",
+   "Gold 10",
+   "5 decisions auto-played"
+  ],
+  "max_hp": 86,
+  "potions_gained": [],
+  "potions_lost": [],
+  "relics_gained": [],
+  "relics_lost": [],
+  "to_floor": 3
+ },
+ "error": null,
+ "over": false,
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 1,
+   "bg_row": 3,
+   "bg_seed": 3,
+   "floor": 3,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 10,
+   "bg_col": 1,
+   "bg_row": 3,
+   "bg_seed": 3,
+   "can_skip": false,
+   "cards": [
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 3,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "blue",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_DEFECT",
+     "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "colorless",
+     "cost": 1,
+     "description": "Draw 1 card.\nExhaust.",
+     "description_rich": "Draw 1 card.\n[gold]Exhaust[/gold].",
+     "id": "SLIMED",
+     "image": "https://assets.test/card_atlas/status/slimed.png",
+     "index": 5,
+     "name": "Slimed",
+     "rarity": "Status",
+     "type": "Status",
+     "upgraded": false
+    },
+    {
+     "color": "colorless",
+     "cost": 1,
+     "description": "Draw 1 card.\nExhaust.",
+     "description_rich": "Draw 1 card.\n[gold]Exhaust[/gold].",
+     "id": "SLIMED",
+     "image": "https://assets.test/card_atlas/status/slimed.png",
+     "index": 6,
+     "name": "Slimed",
+     "rarity": "Status",
+     "type": "Status",
+     "upgraded": false
+    }
+   ],
+   "context": "add_from_discard_to_hand",
+   "decision": "card_select",
+   "enemies": [
+    {
+     "block": 0,
+     "hp": 2,
+     "index": 0,
+     "intents": [
+      {
+       "base_damage": 5,
+       "damage": 3,
+       "modifiers": [
+        {
+         "kind": "power",
+         "mul": [
+          3,
+          4
+         ],
+         "name": "WEAK",
+         "side": "enemy"
+        }
+       ],
+       "type": "Attack"
+      }
+     ],
+     "kind": "TwigSlimeS",
+     "max_hp": 8,
+     "move_state": "BUTT",
+     "name": "Twig Slime (S)",
+     "powers": [
+      {
+       "amount": 2,
+       "display_amount": 2,
+       "id": "WEAK",
+       "name": "Weak"
+      }
+     ],
+     "uid": 2
+    },
+    {
+     "block": 0,
+     "hp": 20,
+     "index": 1,
+     "intents": [
+      {
+       "damage": 12,
+       "type": "Attack"
+      }
+     ],
+     "kind": "TwigSlimeM",
+     "max_hp": 29,
+     "move_state": "CLUMP_SHOT",
+     "name": "Twig Slime (M)",
+     "powers": [],
+     "uid": 3
+    },
+    {
+     "block": 0,
+     "hp": 8,
+     "index": 2,
+     "intents": [
+      {
+       "damage": 4,
+       "type": "Attack"
+      }
+     ],
+     "kind": "LeafSlimeS",
+     "max_hp": 14,
+     "move_state": "BUTT",
+     "name": "Leaf Slime (S)",
+     "powers": [],
+     "uid": 4
+    }
+   ],
+   "floor": 3,
+   "max_select": 1,
+   "mcts": {
+    "actions": [
+     {
+      "action": {
+       "action": "play",
+       "card_index": 3,
+       "target_index": null
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1427,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1427,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 0,
+       "target_index": null
+      },
+      "bucket": "likely-win",
+      "is_best": true,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1552,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 2.3104,
+      "visits": 2,
+      "wins": 2
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 1,
+       "target_index": 0
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1605,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1605,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 1,
+       "target_index": 1
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1249,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1249,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 1,
+       "target_index": 2
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1499,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1499,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "play",
+       "card_index": 4,
+       "target_index": null
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1427,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1427,
+      "visits": 1,
+      "wins": 1
+     },
+     {
+      "action": {
+       "action": "end_turn"
+      },
+      "bucket": "likely-win",
+      "is_best": false,
+      "losses": 0,
+      "low_confidence": false,
+      "p_loss": 0.0,
+      "p_tie": 0.0,
+      "p_win": 1.0,
+      "q": 1.1249,
+      "q_saturated": false,
+      "ties": 0,
+      "value": 1.0,
+      "value_sum": 1.1249,
+      "visits": 1,
+      "wins": 1
+     }
+    ],
+    "recommended": {
+     "action": "play",
+     "card_index": 0,
+     "target_index": null
+    }
+   },
+   "min_select": 1,
+   "options": [
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "0"
+     },
+     "enabled": true,
+     "label": "STRIKE_DEFECT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "1"
+     },
+     "enabled": true,
+     "label": "STRIKE_DEFECT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "2"
+     },
+     "enabled": true,
+     "label": "STRIKE_DEFECT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "3"
+     },
+     "enabled": true,
+     "label": "DEFEND_DEFECT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "4"
+     },
+     "enabled": true,
+     "label": "DEFEND_DEFECT.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "5"
+     },
+     "enabled": true,
+     "label": "SLIMED.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "6"
+     },
+     "enabled": true,
+     "label": "SLIMED.title"
+    }
+   ],
+   "orb_slots": 3,
+   "orbs": [
+    {
+     "evoke": 8,
+     "index": 0,
+     "name": "LIGHTNING_ORB.title",
+     "passive": 3,
+     "type": "Lightning"
+    }
+   ],
+   "player": {
+    "block": 3,
+    "deck": [
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Channel 1 Lightning.",
+      "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+      "id": "ZAP",
+      "image": "https://assets.test/card_atlas/defect/zap.png",
+      "index": 8,
+      "name": "Zap",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Evoke your rightmost Orb twice.",
+      "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+      "id": "DUALCAST",
+      "image": "https://assets.test/card_atlas/defect/dualcast.png",
+      "index": 9,
+      "name": "Dualcast",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "curse",
+      "cost": "X",
+      "description": "Unplayable.\nEthereal.\nEternal.",
+      "description_rich": "[gold]Unplayable[/gold].\n[gold]Ethereal[/gold].\n[gold]Eternal[/gold].",
+      "id": "ASCENDERS_BANE",
+      "image": "https://assets.test/card_atlas/curse/ascenders_bane.png",
+      "index": 10,
+      "name": "Ascender's Bane",
+      "rarity": "Curse",
+      "type": "Curse",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 3 Block.\nPut a card from your Discard Pile into your Hand.\nExhaust.",
+      "description_rich": "Gain 3 Block.\nPut a card from your Discard Pile into your Hand.\n[gold]Exhaust[/gold].",
+      "id": "HOLOGRAM",
+      "image": "https://assets.test/card_atlas/defect/hologram.png",
+      "index": 11,
+      "name": "Hologram",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 5 damage for each Channeled Orb.",
+      "description_rich": "Deal 5 damage for each Channeled Orb.",
+      "id": "BARRAGE",
+      "image": "https://assets.test/card_atlas/defect/barrage.png",
+      "index": 12,
+      "name": "Barrage",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 10,
+    "hp": 60,
+    "max_hp": 86,
+    "name": "Defect",
+    "potion_slots": 2,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, Channel 1 Lightning.",
+      "id": "CRACKED_CORE",
+      "image": "https://assets.test/relic_atlas/cracked_core.png",
+      "name": "Cracked Core"
+     },
+     {
+      "description": "Upon pickup, raise your Max HP by 11.",
+      "id": "NUTRITIOUS_OYSTER",
+      "image": "https://assets.test/relic_atlas/nutritious_oyster.png",
+      "name": "Nutritious Oyster"
+     }
+    ]
+   },
+   "player_powers": []
+  }
+ },
+ "stopped": true,
+ "won": false
+}

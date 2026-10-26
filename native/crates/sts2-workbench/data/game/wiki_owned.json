@@ -1,0 +1,1454 @@
+[
+ {
+  "class_name": "Akabeko",
+  "description": "At the start of each combat, gain [blue]8[/blue] [gold]Vigor[/gold]."
+ },
+ {
+  "class_name": "AlchemicalCoffer",
+  "description": "Upon pickup, gain [blue]4[/blue] potion slots filled with random [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "AmethystAubergine",
+  "description": "Enemies drop [blue]15[/blue] additional [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "Anchor",
+  "description": "Start each combat with [blue]10[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "ArcaneScroll",
+  "description": "Upon pickup, obtain a random [gold]Rare Card[/gold] to add to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "ArchaicTooth",
+  "description": "Upon pickup, [gold]Transform[/gold] {StarterCard.StringValue:cond:[gold]{StarterCard}[/gold] into [gold]{AncientCard}[/gold]|a starter card into an ancient version}."
+ },
+ {
+  "class_name": "ArtOfWar",
+  "description": "If you do not play any Attacks during your turn, gain an additional 1 Energy next turn."
+ },
+ {
+  "class_name": "Astrolabe",
+  "description": "Upon pickup, [gold]Transform[/gold] [blue]3[/blue] cards, then [gold]Upgrade[/gold] them."
+ },
+ {
+  "class_name": "BagOfMarbles",
+  "description": "At the start of each combat, apply [blue]1[/blue] [gold]Vulnerable[/gold] to ALL enemies."
+ },
+ {
+  "class_name": "BagOfPreparation",
+  "description": "At the start of each combat, draw [blue]2[/blue] additional cards."
+ },
+ {
+  "class_name": "BeatingRemnant",
+  "description": "You cannot lose more than [blue]20[/blue] HP in a single turn."
+ },
+ {
+  "class_name": "BeautifulBracelet",
+  "description": "Upon pickup, [gold]Enchant[/gold] [blue]4[/blue] random cards in your [gold]Deck[/gold] with [purple]Swift[/purple] [blue]2[/blue]."
+ },
+ {
+  "class_name": "Bellows",
+  "description": "The first [gold]Hand[/gold] you draw each combat is [gold]Upgraded[/gold]."
+ },
+ {
+  "class_name": "BeltBuckle",
+  "description": "While you have no [gold]Potions[/gold], you have [blue]2[/blue] additional [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "BigHat",
+  "description": "At the start of each combat, add [blue]2[/blue] random [gold]Ethereal[/gold] cards into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "BigMushroom",
+  "description": "Upon pickup, raise your Max HP by [blue]20[/blue]. At the start of each combat, draw [blue]2[/blue] fewer cards."
+ },
+ {
+  "class_name": "BiiigHug",
+  "description": "Upon pickup, remove [blue]4[/blue] cards from your [gold]Deck[/gold]. Whenever you shuffle your [gold]Draw Pile[/gold], add a [gold]Soot[/gold] into your [gold]Draw Pile[/gold]."
+ },
+ {
+  "class_name": "BingBong",
+  "description": "Whenever you add a card to your [gold]Deck[/gold], add one additional copy."
+ },
+ {
+  "class_name": "BlackBlood",
+  "description": "At the end of combat, heal [green]12[/green] HP."
+ },
+ {
+  "class_name": "BlackStar",
+  "description": "[gold]Elites[/gold] drop an additional Relic when defeated."
+ },
+ {
+  "class_name": "BlessedAntler",
+  "description": "Gain 1 Energy at the start of each turn. At the start of each combat, shuffle [blue]3[/blue] [gold]Dazed[/gold] into your [gold]Draw Pile[/gold]."
+ },
+ {
+  "class_name": "BloodSoakedRose",
+  "description": "Upon pickup, add [blue]1[/blue] [red]Enthralled[/red] to your [gold]Deck[/gold]. Gain 1 Energy at the start of each turn."
+ },
+ {
+  "class_name": "BloodVial",
+  "description": "At the start of each combat, heal [green]2[/green] HP."
+ },
+ {
+  "class_name": "BoneFlute",
+  "description": "Whenever [gold]Osty[/gold] attacks, gain [blue]2[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "BoneTea",
+  "description": "At the start of the next [blue]{}[/blue] combats, [gold]Upgrade[/gold] your starting hand."
+ },
+ {
+  "class_name": "BookOfFiveRings",
+  "description": "Every [blue]5[/blue] cards you add to your [gold]Deck[/gold], heal [green]20[/green] HP."
+ },
+ {
+  "class_name": "BookRepairKnife",
+  "description": "Whenever a non-Minion enemy dies to [gold]Doom[/gold], heal [green]3[/green] HP."
+ },
+ {
+  "class_name": "Bookmark",
+  "description": "At the end of each turn, lower the cost of a random [gold]Retained[/gold] card by [blue]1[/blue] until played."
+ },
+ {
+  "class_name": "BoomingConch",
+  "description": "At the start of [gold]Elite[/gold] combats, draw [blue]2[/blue] additional cards and gain 1 Energy."
+ },
+ {
+  "class_name": "BoundPhylactery",
+  "description": "At the start of your turn, [gold]Summon[/gold] [blue]1[/blue]."
+ },
+ {
+  "class_name": "BowlerHat",
+  "description": "Gain [blue]{GoldIncrease:percentMore()}%[/blue] additional [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "Bread",
+  "description": "At the start of your first turn, lose Energy. At the start of all other turns, gain Energy."
+ },
+ {
+  "class_name": "BrilliantScarf",
+  "description": "The [blue]5th[/blue] card you play from your hand each turn is free."
+ },
+ {
+  "class_name": "Brimstone",
+  "description": "At the start of your turn, gain [blue]{SelfStrength}[/blue] [gold]Strength[/gold] and ALL enemies gain [blue]{EnemyStrength}[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "BronzeScales",
+  "description": "Start each combat with [blue]3[/blue] [gold]Thorns[/gold]."
+ },
+ {
+  "class_name": "BurningBlood",
+  "description": "At the end of combat, heal [green]6[/green] HP."
+ },
+ {
+  "class_name": "BurningSticks",
+  "description": "The first time each combat you [gold]Exhaust[/gold] a Skill, add a copy of it into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "Byrdpip",
+  "description": "Upon pickup, gain the card [gold]Byrd Swoop[/gold]. A [gold]Byrdpip[/gold] will accompany you in battles."
+ },
+ {
+  "class_name": "CallingBell",
+  "description": "Upon pickup, obtain a unique [red]Curse[/red] and [blue]3[/blue] [gold]Relics[/gold]."
+ },
+ {
+  "class_name": "Candelabra",
+  "description": "At the start of your [blue]2nd[/blue] turn, gain 2 Energy."
+ },
+ {
+  "class_name": "CaptainsWheel",
+  "description": "At the start of your [blue]3rd[/blue] turn, gain [blue]18[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "Cauldron",
+  "description": "Upon pickup, brews [blue]5[/blue] random [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "CentennialPuzzle",
+  "description": "The first time you lose HP each combat, draw [blue]3[/blue] cards."
+ },
+ {
+  "class_name": "Chandelier",
+  "description": "At the start of your [blue]3rd[/blue] turn, gain 3 Energy."
+ },
+ {
+  "class_name": "CharonsAshes",
+  "description": "Whenever you [gold]Exhaust[/gold] a card, deal [blue]3[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "ChemicalX",
+  "description": "The effects of your cost [blue]X[/blue] cards are increased by [blue]2[/blue]."
+ },
+ {
+  "class_name": "ChoicesParadox",
+  "description": "At the start of each combat, add [blue]1[/blue] of [blue]5[/blue] random cards into your [gold]Hand[/gold]. Add [gold]Retain[/gold] to the chosen card."
+ },
+ {
+  "class_name": "ChosenCheese",
+  "description": "At the end of combat, gain [blue]1[/blue] Max HP."
+ },
+ {
+  "class_name": "Circlet",
+  "description": "It's a circlet."
+ },
+ {
+  "class_name": "Claws",
+  "description": "Upon pickup, [gold]Transform[/gold] up to [blue]6[/blue] cards into [gold]Maul[/gold]."
+ },
+ {
+  "class_name": "CloakClasp",
+  "description": "At the end of your turn, gain [blue]1[/blue] [gold]Block[/gold] for each card in your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "CrackedCore",
+  "description": "At the start of each combat, [gold]Channel[/gold] [blue]1[/blue] [gold]Lightning[/gold]."
+ },
+ {
+  "class_name": "Crossbow",
+  "description": "At the start of your turn, add a random [gold]Attack[/gold] into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "CursedPearl",
+  "description": "Upon pickup, receive [red]Greed[/red]. Gain [blue]333[/blue] [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "DarkstonePeriapt",
+  "description": "Whenever you obtain a [red]Curse[/red], raise your Max HP by [blue]6[/blue]."
+ },
+ {
+  "class_name": "DataDisk",
+  "description": "Start each combat with [blue]1[/blue] [gold]Focus[/gold]."
+ },
+ {
+  "class_name": "DaughterOfTheWind",
+  "description": "Whenever you play an Attack, gain [blue]1[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "DelicateFrond",
+  "description": "At the start of each combat, fill all empty potion slots with random [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "DemonTongue",
+  "description": "The first time you lose HP on your turn, heal HP equal to the amount lost."
+ },
+ {
+  "class_name": "DiamondDiadem",
+  "description": "Start combat with [blue]20[/blue] [gold]Block[/gold]. Your [gold]Block[/gold] is not removed at the start of your [blue]2nd[/blue] turn."
+ },
+ {
+  "class_name": "DingyRug",
+  "description": "Card rewards can now contain Colorless cards."
+ },
+ {
+  "class_name": "DistinguishedCape",
+  "description": "Upon pickup, add [blue]2[/blue] random [red]Curses[/red] and [blue]3[/blue] [gold]Apparitions[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "DivineDestiny",
+  "description": "At the start of each combat, gain 7 Stars."
+ },
+ {
+  "class_name": "DivineRight",
+  "description": "At the start of each combat, gain 3 Stars."
+ },
+ {
+  "class_name": "DollysMirror",
+  "description": "Upon pickup, obtain an additional copy of a card in your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "DowsingRod",
+  "description": "Upon pickup, add [blue]1[/blue] [gold]Dowsing[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "DragonFruit",
+  "description": "Whenever you gain [gold]Gold[/gold], raise your Max HP by [blue]1[/blue]."
+ },
+ {
+  "class_name": "DreamCatcher",
+  "description": "Whenever you [gold]Rest[/gold], you may add a card to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "Driftwood",
+  "description": "You may reroll each card reward once."
+ },
+ {
+  "class_name": "DustyTome",
+  "description": "Upon pickup, obtain {AncientCard.StringValue:cond:[gold]{}[/gold]|an [gold]Ancient Card[/gold]}."
+ },
+ {
+  "class_name": "Ectoplasm",
+  "description": "You can no longer gain [gold]Gold[/gold]. Gain 1 Energy at the start of each turn."
+ },
+ {
+  "class_name": "ElectricShrymp",
+  "description": "Upon pickup, [gold]Enchant[/gold] a Skill with [purple]Imbued[/purple]."
+ },
+ {
+  "class_name": "EmberTea",
+  "description": "At the start of the next [blue]{}[/blue] combats, gain [blue]2[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "EmotionChip",
+  "description": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn."
+ },
+ {
+  "class_name": "EmptyCage",
+  "description": "Upon pickup, remove [blue]2[/blue] cards from your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "EternalFeather",
+  "description": "For every [blue]5[/blue] cards in your [gold]Deck[/gold], heal [green]3[/green] HP whenever you enter a [gold]Rest Site[/gold]."
+ },
+ {
+  "class_name": "FakeAnchor",
+  "description": "Start each combat with [blue]4[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "FakeBloodVial",
+  "description": "At the start of each combat, heal [green]1[/green] HP."
+ },
+ {
+  "class_name": "FakeHappyFlower",
+  "description": "Every [blue]5[/blue] turns, gain 1 Energy."
+ },
+ {
+  "class_name": "FakeLeesWaffle",
+  "description": "Upon pickup, heal [green]10%[/green] of your HP."
+ },
+ {
+  "class_name": "FakeMango",
+  "description": "Upon pickup, raise your Max HP by [blue]3[/blue]."
+ },
+ {
+  "class_name": "FakeMerchantsRug",
+  "description": "Poor imitation. Does nothing."
+ },
+ {
+  "class_name": "FakeOrichalcum",
+  "description": "If you end your turn without [gold]Block[/gold], gain [blue]3[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "FakeSneckoEye",
+  "description": "Start each combat [red]Confused[/red]."
+ },
+ {
+  "class_name": "FakeStrikeDummy",
+  "description": "Cards containing “Strike” deal [blue]1[/blue] additional damage."
+ },
+ {
+  "class_name": "FakeVenerableTeaSet",
+  "description": "Whenever you enter a [gold]Rest Site[/gold], start the next combat with an additional 1 Energy."
+ },
+ {
+  "class_name": "FencingManual",
+  "description": "At the start of each combat, [gold]Forge[/gold] [blue]10[/blue]."
+ },
+ {
+  "class_name": "FestivePopper",
+  "description": "At the start of each combat, deal [blue]9[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "Fiddle",
+  "description": "At the start of each turn, draw [blue]2[/blue] additional cards. You may not draw cards during your turn."
+ },
+ {
+  "class_name": "FishingRod",
+  "description": "Every [blue]3[/blue] normal combats, [gold]Upgrade[/gold] a random card in your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "ForgottenSoul",
+  "description": "Whenever you [gold]Exhaust[/gold] a card, deal [blue]1[/blue] damage to a random enemy."
+ },
+ {
+  "class_name": "FragrantMushroom",
+  "description": "Upon pickup, lose [blue]15[/blue] HP and [gold]Upgrade[/gold] [blue]2[/blue] random cards."
+ },
+ {
+  "class_name": "FresnelLens",
+  "description": "Whenever you add a card that gains [gold]Block[/gold] to your [gold]Deck[/gold], [gold]Enchant[/gold] it with [purple]Nimble[/purple] [blue]2[/blue]."
+ },
+ {
+  "class_name": "FrozenEgg",
+  "description": "Whenever you add a Power into your [gold]Deck[/gold], [gold]Upgrade[/gold] it."
+ },
+ {
+  "class_name": "FuneraryMask",
+  "description": "At the start of each combat, add [blue]3[/blue] [gold]Souls[/gold] into your [gold]Draw Pile[/gold]."
+ },
+ {
+  "class_name": "FurCoat",
+  "description": "Upon pickup, mark [blue]8[/blue] random combats. Enemies in those rooms have [blue]1[/blue] HP."
+ },
+ {
+  "class_name": "GalacticDust",
+  "description": "For every [blue]10[/blue] [star] spent, gain [blue]10[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "GamblingChip",
+  "description": "At the start of each combat, discard any number of cards then draw that many."
+ },
+ {
+  "class_name": "GamePiece",
+  "description": "Whenever you play a Power, draw [blue]1[/blue] card."
+ },
+ {
+  "class_name": "GhostSeed",
+  "description": "[gold]Strikes[/gold] and [gold]Defends[/gold] gain [gold]Ethereal[/gold]."
+ },
+ {
+  "class_name": "Girya",
+  "description": "You can now gain [gold]Strength[/gold] at [gold]Rest Sites[/gold]. ([blue]3[/blue] times max)"
+ },
+ {
+  "class_name": "GlassEye",
+  "description": "Upon pickup, obtain [blue]2[/blue] [gold]Common[/gold] cards, [blue]2[/blue] [gold]Uncommon[/gold] cards, and [blue]1[/blue] [gold]Rare[/gold] card."
+ },
+ {
+  "class_name": "Glitter",
+  "description": "[gold]Enchant[/gold] all card rewards with [purple]Glam[/purple]."
+ },
+ {
+  "class_name": "GnarledHammer",
+  "description": "Upon pickup, [gold]Enchant[/gold] up to [blue]3[/blue] Attacks with [purple]Sharp[/purple] [blue]3[/blue]."
+ },
+ {
+  "class_name": "GoldPlatedCables",
+  "description": "Your rightmost Orb triggers its passive an additional time."
+ },
+ {
+  "class_name": "GoldenCompass",
+  "description": "Upon pickup, replace the [gold]Act[/gold] [blue]2[/blue] Map with a single special path."
+ },
+ {
+  "class_name": "GoldenPearl",
+  "description": "Upon pickup, gain [blue]150[/blue] [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "Gorget",
+  "description": "At the start of each combat, gain [blue]4[/blue] [gold]Plating[/gold]."
+ },
+ {
+  "class_name": "GremlinHorn",
+  "description": "Whenever an enemy dies, gain 1 Energy and draw [blue]1[/blue] card."
+ },
+ {
+  "class_name": "HandDrill",
+  "description": "Whenever you break an enemy's [gold]Block[/gold], apply [blue]2[/blue] [gold]Vulnerable[/gold]."
+ },
+ {
+  "class_name": "HappyFlower",
+  "description": "Every [blue]3[/blue] turns, gain 1 Energy."
+ },
+ {
+  "class_name": "HeftyTablet",
+  "description": "Upon pickup, choose [blue]1[/blue] of [blue]3[/blue] Rare cards to add to your [gold]Deck[/gold], and add [blue]1[/blue] [red]Injury[/red] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "HelicalDart",
+  "description": "Whenever you play a [gold]Shiv[/gold], gain [blue]1[/blue] [gold]Dexterity[/gold] this turn."
+ },
+ {
+  "class_name": "HistoryCourse",
+  "description": "At the start of your turn, play a copy of your last played Attack."
+ },
+ {
+  "class_name": "HornCleat",
+  "description": "At the start of your [blue]2nd[/blue] turn, gain [blue]14[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "IceCream",
+  "description": "Energy is now conserved between turns."
+ },
+ {
+  "class_name": "InfusedCore",
+  "description": "At the start of each combat, [gold]Channel[/gold] [blue]3[/blue] [gold]Lightning[/gold]. [gold]Lightning[/gold] deals [blue]1[/blue] additional damage."
+ },
+ {
+  "class_name": "IntimidatingHelmet",
+  "description": "Whenever you play a card that costs 2 Energy or more, gain [blue]4[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "IronClub",
+  "description": "Every [blue]4[/blue] cards you play, draw [blue]1[/blue] card."
+ },
+ {
+  "class_name": "IvoryTile",
+  "description": "Whenever you play a card that costs Energy or more, gain 1 Energy."
+ },
+ {
+  "class_name": "JeweledMask",
+  "description": "At the start of each combat, put a random Power from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold]. It's free to play this combat."
+ },
+ {
+  "class_name": "JewelryBox",
+  "description": "Upon pickup, add [blue]1[/blue] [gold]Apotheosis[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "JossPaper",
+  "description": "Every [blue]5[/blue] times you [gold]Exhaust[/gold] a card, draw [blue]1[/blue] card."
+ },
+ {
+  "class_name": "JuzuBracelet",
+  "description": "Regular enemy combats are no longer encountered in [gold]?[/gold] rooms."
+ },
+ {
+  "class_name": "Kaleidoscope",
+  "description": "Upon pickup, obtain [blue]2[/blue] card rewards from other characters."
+ },
+ {
+  "class_name": "Kifuda",
+  "description": "Upon pickup, [gold]Enchant[/gold] up to [blue]3[/blue] cards with [purple]Adroit[/purple]."
+ },
+ {
+  "class_name": "Kunai",
+  "description": "Every time you play [blue]3[/blue] Attacks in a single turn, gain [blue]1[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "Kusarigama",
+  "description": "Every time you play [blue]3[/blue] Attacks in a single turn, deal [blue]6[/blue] damage to a random enemy."
+ },
+ {
+  "class_name": "Lantern",
+  "description": "Start each combat with an additional 1 Energy."
+ },
+ {
+  "class_name": "LargeCapsule",
+  "description": "Upon pickup, obtain [blue]2[/blue] random [gold]Relics[/gold]. Add an additional [gold]Strike[/gold] and [gold]Defend[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "LastingCandy",
+  "description": "Every other combat, your card rewards gain an additional Power."
+ },
+ {
+  "class_name": "LavaLamp",
+  "description": "At the end of combat, [gold]Upgrade[/gold] all card rewards if you took no damage."
+ },
+ {
+  "class_name": "LavaRock",
+  "description": "The Act 1 Boss drops [blue]2[/blue] [gold]Relics[/gold]."
+ },
+ {
+  "class_name": "LeadPaperweight",
+  "description": "Upon pickup, choose [blue]1[/blue] of [blue]2[/blue] Colorless cards to add to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "LeafyPoultice",
+  "description": "Upon pickup, [gold]Transform[/gold] [blue]1[/blue] of your [gold]Strikes[/gold] and [blue]1[/blue] of your [gold]Defends[/gold] and lose [blue]12[/blue] Max HP."
+ },
+ {
+  "class_name": "LeesWaffle",
+  "description": "Upon pickup, raise your Max HP by [blue]7[/blue] and heal all of your HP."
+ },
+ {
+  "class_name": "LetterOpener",
+  "description": "Every time you play [blue]3[/blue] Skills in a single turn, deal [blue]5[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "LizardTail",
+  "description": "When your HP would be reduced to [blue]0[/blue], heal to [green]50%[/green] of your Max HP instead (works once)."
+ },
+ {
+  "class_name": "LoomingFruit",
+  "description": "Upon pickup, raise your Max HP by [blue]31[/blue]."
+ },
+ {
+  "class_name": "LordsParasol",
+  "description": "When you encounter the [gold]Merchant[/gold], immediately obtain EVERYTHING he sells."
+ },
+ {
+  "class_name": "LostCoffer",
+  "description": "Upon pickup, gain [blue]1[/blue] card reward and procure [blue]1[/blue] random potion."
+ },
+ {
+  "class_name": "LostWisp",
+  "description": "Whenever you play a Power, deal [blue]8[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "LuckyFysh",
+  "description": "Whenever you add a card to your [gold]Deck[/gold], gain [blue]15[/blue] [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "LunarPastry",
+  "description": "At the end of your turn, gain 1 Stars."
+ },
+ {
+  "class_name": "Mango",
+  "description": "Upon pickup, raise your Max HP by [blue]14[/blue]."
+ },
+ {
+  "class_name": "MassiveScroll",
+  "description": "Upon pickup, choose [blue]1[/blue] of [blue]3[/blue] [gold]Multiplayer Cards[/gold] to add to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "MawBank",
+  "description": "Whenever you climb a floor, gain [blue]12[/blue] [gold]Gold[/gold]. No longer works when you spend any [gold]Gold[/gold] at the shop."
+ },
+ {
+  "class_name": "MealTicket",
+  "description": "Whenever you enter a shop room, heal [green]15[/green] HP."
+ },
+ {
+  "class_name": "MeatCleaver",
+  "description": "You may [gold]Cook[/gold] at Rest Sites."
+ },
+ {
+  "class_name": "MeatOnTheBone",
+  "description": "If your HP is at or below [blue]50%[/blue] at the end of combat, heal [green]12[/green] HP."
+ },
+ {
+  "class_name": "MembershipCard",
+  "description": "[blue]50%[/blue] discount on all products!"
+ },
+ {
+  "class_name": "MercuryHourglass",
+  "description": "At the start of your turn, deal [blue]3[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "Metronome",
+  "description": "The first time you [gold]Channel[/gold] [blue]7[/blue] [gold]Orbs[/gold] each combat, deal [blue]30[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "MiniRegent",
+  "description": "The first time you spend [star] each turn, gain [blue]1[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "MiniatureCannon",
+  "description": "[gold]Upgraded[/gold] Attacks deal [blue]3[/blue] additional damage."
+ },
+ {
+  "class_name": "MiniatureTent",
+  "description": "You may choose any number of options at [gold]Rest Sites[/gold]."
+ },
+ {
+  "class_name": "MoltenEgg",
+  "description": "Whenever you add an Attack card to your [gold]Deck[/gold], [gold]Upgrade[/gold] it."
+ },
+ {
+  "class_name": "MrStruggles",
+  "description": "At the start of your turn, deal damage equal to the turn number to ALL enemies."
+ },
+ {
+  "class_name": "MummifiedHand",
+  "description": "Whenever you play a Power, a random card in your [gold]Hand[/gold] is free to play that turn."
+ },
+ {
+  "class_name": "MusicBox",
+  "description": "Create an [gold]Ethereal[/gold] copy of the first Attack you play each turn."
+ },
+ {
+  "class_name": "MysticLighter",
+  "description": "[gold]Enchanted[/gold] Attacks deal [blue]9[/blue] additional damage."
+ },
+ {
+  "class_name": "NeowsBones",
+  "description": "Upon pickup, gain [blue]2[/blue] random [gold]Neow Relics[/gold]. Add [blue]1[/blue] random [red]Curse[/red] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "NeowsSacrifice",
+  "description": "Upon pickup, procure [blue]1[/blue] [gold]Ambergris[/gold] and add [blue]1[/blue] [red]Guilty[/red] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "NeowsTalisman",
+  "description": "Upon pickup, [gold]Upgrade[/gold] [blue]1[/blue] of your [gold]Strikes[/gold] and [blue]1[/blue] of your [gold]Defends[/gold]."
+ },
+ {
+  "class_name": "NeowsTorment",
+  "description": "Upon pickup, add [blue]1[/blue] [gold]Neow's Fury[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "NewLeaf",
+  "description": "Upon pickup, [gold]Transform[/gold] [blue]1[/blue] card."
+ },
+ {
+  "class_name": "NinjaScroll",
+  "description": "At the start of each combat, add [blue]3[/blue] [gold]Shivs[/gold] into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "Nunchaku",
+  "description": "Every time you play [blue]10[/blue] Attacks, gain 1 Energy."
+ },
+ {
+  "class_name": "NutritiousOyster",
+  "description": "Upon pickup, raise your Max HP by [blue]11[/blue]."
+ },
+ {
+  "class_name": "NutritiousSoup",
+  "description": "Upon pickup, [gold]Enchant[/gold] all [gold]Strikes[/gold] in your [gold]Deck[/gold] with [purple]Tezcatara's Ember[/purple]."
+ },
+ {
+  "class_name": "OddlySmoothStone",
+  "description": "Start each combat with [blue]1[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "OldCoin",
+  "description": "Upon pickup, gain [blue]300[/blue] [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "OrangeDough",
+  "description": "At the start of each combat, add [blue]2[/blue] random Colorless cards into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "Orichalcum",
+  "description": "If you end your turn without [gold]Block[/gold], gain [blue]6[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "OrnamentalFan",
+  "description": "Every time you play [blue]3[/blue] Attacks in a single turn, gain [blue]4[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "Orrery",
+  "description": "Upon pickup, gain [blue]5[/blue] card rewards."
+ },
+ {
+  "class_name": "PaelsBlood",
+  "description": "At the start of your turn, draw [blue]1[/blue] additional card."
+ },
+ {
+  "class_name": "PaelsClaw",
+  "description": "Upon pickup, [gold]Enchant[/gold] all [gold]Defends[/gold] with [purple]{EnchantmentName}[/purple]."
+ },
+ {
+  "class_name": "PaelsEye",
+  "description": "The first time each combat you end your turn without playing cards, [gold]Exhaust[/gold] your [gold]Hand[/gold], and take an extra turn."
+ },
+ {
+  "class_name": "PaelsFlesh",
+  "description": "Gain an additional 1 Energy at the start of your [blue]3rd[/blue] turn, and every turn after that."
+ },
+ {
+  "class_name": "PaelsGrowth",
+  "description": "Upon pickup, [gold]Enchant[/gold] a card with [purple]{EnchantmentName}[/purple]."
+ },
+ {
+  "class_name": "PaelsHorn",
+  "description": "Upon pickup, add [blue]2[/blue] [gold]Relax[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "PaelsLegion",
+  "description": "Doubles [gold]Block[/gold] gained from a card, then goes to sleep for [blue]2[/blue] turns."
+ },
+ {
+  "class_name": "PaelsTears",
+  "description": "If you end your turn with unspent  Energy, gain an additional 2 Energy next turn."
+ },
+ {
+  "class_name": "PaelsTooth",
+  "description": "Upon pickup, remove [blue]5[/blue] cards from your [gold]Deck[/gold]. After each combat, randomly add [blue]1[/blue] back [gold]Upgraded[/gold].{CardTitles.StringValue:cond:\n\nCards devoured:\n{}|}"
+ },
+ {
+  "class_name": "PaelsWing",
+  "description": "You may sacrifice card rewards to Pael. Every [blue]2[/blue] sacrifices, obtain a [gold]Relic[/gold]."
+ },
+ {
+  "class_name": "PandorasBox",
+  "description": "[gold]Transform[/gold] ALL [gold]Strikes[/gold] and [gold]Defends[/gold]."
+ },
+ {
+  "class_name": "Pantograph",
+  "description": "At the start of each [gold]Boss[/gold] combat, heal [green]25[/green] HP."
+ },
+ {
+  "class_name": "PaperKrane",
+  "description": "Enemies with [gold]Weak[/gold] deal [blue]40%[/blue] less damage to you rather than [blue]25%[/blue]."
+ },
+ {
+  "class_name": "PaperPhrog",
+  "description": "Enemies with [gold]Vulnerable[/gold] take [blue]75%[/blue] more damage rather than [blue]50%[/blue]."
+ },
+ {
+  "class_name": "ParryingShield",
+  "description": "If you end a turn with at least [blue]10[/blue] [gold]Block[/gold], deal [blue]6[/blue] damage to a random enemy."
+ },
+ {
+  "class_name": "Pear",
+  "description": "Upon pickup, raise your Max HP by [blue]10[/blue]."
+ },
+ {
+  "class_name": "PenNib",
+  "description": "Every [blue]10th[/blue] Attack you play deals double damage."
+ },
+ {
+  "class_name": "Pendulum",
+  "description": "Every [blue]3[/blue] turns, draw [blue]1[/blue] card."
+ },
+ {
+  "class_name": "Permafrost",
+  "description": "The first time you play a Power each combat, gain [blue]7[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "PetrifiedToad",
+  "description": "At the start of each combat, procure a [gold]Potion-Shaped Rock[/gold]."
+ },
+ {
+  "class_name": "PhialHolster",
+  "description": "Upon pickup, gain [blue]1[/blue] potion slot and procure [blue]2[/blue] random [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "PhilosophersStone",
+  "description": "Gain 1 Energy at the start of each turn. ALL enemies start combat with [blue]1[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "PhylacteryUnbound",
+  "description": "At the start of each combat, [gold]Summon[/gold] [blue]{StartOfCombat}[/blue]. At the start of your turn, [gold]Summon[/gold] [blue]{StartOfTurn}[/blue]."
+ },
+ {
+  "class_name": "Planisphere",
+  "description": "Whenever you enter a [gold]?[/gold] room, heal [green]5[/green] HP."
+ },
+ {
+  "class_name": "Pocketwatch",
+  "description": "Whenever you play [blue]3[/blue] or fewer cards during your turn, draw [blue]3[/blue] additional cards at the start of your next turn."
+ },
+ {
+  "class_name": "PollinousCore",
+  "description": "Every [blue]4[/blue] turns, draw [blue]2[/blue] additional cards."
+ },
+ {
+  "class_name": "Pomander",
+  "description": "Upon pickup, [gold]Upgrade[/gold] a card."
+ },
+ {
+  "class_name": "PotionBelt",
+  "description": "Upon pickup, gain [blue]2[/blue] potion slots."
+ },
+ {
+  "class_name": "PowerCell",
+  "description": "At the start of each combat, add [blue]2[/blue] zero-cost cards from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "PrayerWheel",
+  "description": "Normal enemies drop an additional card reward."
+ },
+ {
+  "class_name": "PrecariousShears",
+  "description": "Upon pickup, remove [blue]2[/blue] cards from your [gold]Deck[/gold] and lose [blue]16[/blue] HP."
+ },
+ {
+  "class_name": "PreciseScissors",
+  "description": "Upon pickup, remove [blue]1[/blue] card from your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "PreservedFog",
+  "description": "Upon pickup, remove [blue]3[/blue] cards from your [gold]Deck[/gold]. Add [red]Folly[/red] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "PrismaticGem",
+  "description": "Gain 1 Energy at the start of each turn. Card rewards now contain cards from other colors."
+ },
+ {
+  "class_name": "PumpkinCandle",
+  "description": "Gain 1 Energy at the start of each turn. Extinguishes after [blue]5[/blue] combats. Can be [gold]Kindled[/gold] at [gold]Rest Sites[/gold]."
+ },
+ {
+  "class_name": "PunchDagger",
+  "description": "Upon pickup, [gold]Enchant[/gold] an Attack with [purple]Momentum[/purple] [blue]5[/blue]."
+ },
+ {
+  "class_name": "RadiantPearl",
+  "description": "At the start of each combat, add [blue]1[/blue] [gold]Luminesce[/gold] into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "RainbowRing",
+  "description": "The first time you play an Attack, Skill, and Power each turn, gain [blue]1[/blue] [gold]Strength[/gold] and [blue]1[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "RazorTooth",
+  "description": "Every time you play an Attack or Skill, [gold]Upgrade[/gold] it for the remainder of combat."
+ },
+ {
+  "class_name": "RedMask",
+  "description": "At the start of each combat, apply [blue]1[/blue] [gold]Weak[/gold] to ALL enemies."
+ },
+ {
+  "class_name": "RedSkull",
+  "description": "While your HP is at or below [blue]50%[/blue], you have [blue]3[/blue] additional [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "RegalPillow",
+  "description": "Whenever you [gold]Rest[/gold], heal an additional [blue]15[/blue] HP."
+ },
+ {
+  "class_name": "Regalite",
+  "description": "The first time you create a card each turn, gain [blue]4[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "ReptileTrinket",
+  "description": "Whenever you use a potion, gain [blue]3[/blue] [gold]Strength[/gold] this turn."
+ },
+ {
+  "class_name": "RingOfTheDrake",
+  "description": "At the start of your first [blue]3[/blue] turns, draw [blue]2[/blue] additional cards."
+ },
+ {
+  "class_name": "RingOfTheSnake",
+  "description": "At the start of each combat, draw [blue]2[/blue] additional cards."
+ },
+ {
+  "class_name": "RingingTriangle",
+  "description": "[gold]Retain[/gold] your [gold]Hand[/gold] on the first turn of combat."
+ },
+ {
+  "class_name": "RippleBasin",
+  "description": "If you did not play any Attacks during your turn, gain [blue]4[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "RoyalPoison",
+  "description": "At the start of each combat, lose [blue]4[/blue] HP."
+ },
+ {
+  "class_name": "RoyalStamp",
+  "description": "Upon pickup, choose an Attack or Skill in your [gold]Deck[/gold] to [gold]Enchant[/gold] with [purple]{Enchantment}[/purple]."
+ },
+ {
+  "class_name": "RuinedHelmet",
+  "description": "The first time you gain [gold]Strength[/gold] each combat, double the amount gained."
+ },
+ {
+  "class_name": "RunicCapacitor",
+  "description": "Start each combat with [blue]3[/blue] additional [gold]Orb Slots[/gold]."
+ },
+ {
+  "class_name": "RunicPyramid",
+  "description": "At the end of your turn, you no longer discard your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "Sai",
+  "description": "At the start of your turn, gain [blue]7[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "SandCastle",
+  "description": "Upon pickup, [gold]Upgrade[/gold] [blue]6[/blue] random cards."
+ },
+ {
+  "class_name": "ScreamingFlagon",
+  "description": "If you end your turn with no cards in your [gold]Hand[/gold], deal [blue]20[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "ScrollBoxes",
+  "description": "Upon pickup, choose [blue]1[/blue] of [blue]2[/blue] packs of cards to add to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "SeaGlass",
+  "description": "See [blue]15[/blue] cards from {Character.StringValue:cond:[gold]{}[/gold]|another character}. Choose any number of them to add to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "SealOfGold",
+  "description": "At the start of your turn, spend [blue]3[/blue] [gold]Gold[/gold] to gain 1 Energy."
+ },
+ {
+  "class_name": "SelfFormingClay",
+  "description": "Whenever you lose HP in combat, gain [blue]3[/blue] [gold]Block[/gold] next turn."
+ },
+ {
+  "class_name": "SereTalon",
+  "description": "Upon pickup, lose [blue]9[/blue] Max HP. Add [blue]3[/blue] [purple]Wishes[/purple] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "Shovel",
+  "description": "You can now dig at [gold]Rest Sites[/gold] to obtain a random [gold]Relic[/gold]."
+ },
+ {
+  "class_name": "Shuriken",
+  "description": "Every time you play [blue]3[/blue] Attacks in a single turn, gain [blue]1[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "SignetRing",
+  "description": "Upon pickup, gain [blue]888[/blue] [gold]Gold[/gold]."
+ },
+ {
+  "class_name": "SilkenTress",
+  "description": "Upon pickup, lose all [gold]Gold[/gold]. [gold]Enchant[/gold] all cards in your first card reward with [purple]Glam[/purple]."
+ },
+ {
+  "class_name": "SilverCrucible",
+  "description": "The first [blue]3[/blue] card rewards you see are [gold]Upgraded[/gold]. The first Treasure Chest you open is [red]empty[/red]."
+ },
+ {
+  "class_name": "SlingOfCourage",
+  "description": "Start each [gold]Elite[/gold] combat with [blue]2[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "SmallCapsule",
+  "description": "Upon pickup, obtain a random [gold]Relic[/gold]."
+ },
+ {
+  "class_name": "SneckoEye",
+  "description": "At the start of your turn, draw [blue]2[/blue] additional cards. Start each combat [red]Confused[/red]."
+ },
+ {
+  "class_name": "SneckoSkull",
+  "description": "Whenever you apply [gold]Poison[/gold], apply an additional [blue]1[/blue] [gold]Poison[/gold]."
+ },
+ {
+  "class_name": "Sozu",
+  "description": "Gain 1 Energy at the start of each turn. You can no longer obtain [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "SparklingRouge",
+  "description": "At the start of your [blue]3rd[/blue] turn, gain [blue]1[/blue] [gold]Strength[/gold] and [blue]1[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "SpikedGauntlets",
+  "description": "Gain 1 Energy at the start of each turn. Powers cost [blue]1[/blue] more  Energy."
+ },
+ {
+  "class_name": "StoneCalendar",
+  "description": "At the end of turn [blue]7[/blue], deal [blue]52[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "StoneCracker",
+  "description": "At the start of each combat, [gold]Upgrade[/gold] [blue]2[/blue] random cards in your [gold]Draw Pile[/gold] for the rest of combat."
+ },
+ {
+  "class_name": "StoneHumidifier",
+  "description": "Whenever you [gold]Rest[/gold] at a [gold]Rest Site[/gold], raise your Max HP by [blue]5[/blue]."
+ },
+ {
+  "class_name": "Storybook",
+  "description": "Upon pickup, add [blue]1[/blue] [gold]Brightest Flame[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "Strawberry",
+  "description": "Upon pickup, raise your Max HP by [blue]7[/blue]."
+ },
+ {
+  "class_name": "StrikeDummy",
+  "description": "Cards containing “Strike” deal [blue]3[/blue] additional damage."
+ },
+ {
+  "class_name": "SturdyClamp",
+  "description": "Up to [blue]10[/blue] [gold]Block[/gold] persists across turns."
+ },
+ {
+  "class_name": "SwordOfJade",
+  "description": "Start each combat with [blue]3[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "SwordOfStone",
+  "description": "Transforms into a powerful [gold]Relic[/gold] after defeating [blue]5[/blue] [gold]Elites[/gold]."
+ },
+ {
+  "class_name": "SymbioticVirus",
+  "description": "At the start of each combat, [gold]Channel[/gold] [blue]1[/blue] [gold]Dark[/gold]."
+ },
+ {
+  "class_name": "TanxsWhistle",
+  "description": "Upon pickup, add [blue]1[/blue] [gold]Whistle[/gold] to your [gold]Deck[/gold]."
+ },
+ {
+  "class_name": "TeaOfDiscourtesy",
+  "description": "At the start of the next combat, shuffle [blue]2[/blue] [gold]Dazed[/gold] into your [gold]Draw Pile[/gold]."
+ },
+ {
+  "class_name": "TheAbacus",
+  "description": "Whenever you shuffle your [gold]Draw Pile[/gold], gain [blue]6[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "TheBoot",
+  "description": "Whenever you would deal [blue]4[/blue] or less unblocked attack damage, increase it to [blue]5[/blue]."
+ },
+ {
+  "class_name": "TheCourier",
+  "description": "The merchant no longer runs out of cards, relics, or potions and his prices are reduced by [blue]20%[/blue]."
+ },
+ {
+  "class_name": "ThrowingAxe",
+  "description": "The first card you play each combat is played an extra time."
+ },
+ {
+  "class_name": "Tingsha",
+  "description": "Whenever you discard a card during your turn, deal [blue]3[/blue] damage to a random enemy for each card discarded."
+ },
+ {
+  "class_name": "TinyMailbox",
+  "description": "Whenever you [gold]Rest[/gold], procure [blue]2[/blue] random [gold]Potions[/gold]."
+ },
+ {
+  "class_name": "ToastyMittens",
+  "description": "At the start of your turn, [gold]Exhaust[/gold] [blue]1[/blue] card from your [gold]Hand[/gold] and gain [blue]1[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "Toolbox",
+  "description": "At the start of each combat, choose [blue]1[/blue] of [blue]3[/blue] random Colorless cards and add the chosen card into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "TouchOfOrobas",
+  "description": "Upon pickup, replace {StarterRelic.StringValue:cond:[gold]{StarterRelic}[/gold] with [gold]{UpgradedRelic}[/gold]|your starter [gold]Relic[/gold] with an [gold]Ancient[/gold] version}."
+ },
+ {
+  "class_name": "ToughBandages",
+  "description": "Whenever you discard a card during your turn, gain [blue]3[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "ToxicEgg",
+  "description": "Whenever you add a Skill into your [gold]Deck[/gold], [gold]Upgrade[/gold] it."
+ },
+ {
+  "class_name": "ToyBox",
+  "description": "Upon pickup, obtain [blue]5[/blue] [gold]Wax Relics[/gold]. Every [blue]3[/blue] combats, your left-most [gold]Wax Relic[/gold] will melt away."
+ },
+ {
+  "class_name": "TriBoomerang",
+  "description": "Choose [blue]3[/blue] Attacks in your [gold]Deck[/gold]. [gold]Enchant[/gold] them with [purple]Instinct[/purple]."
+ },
+ {
+  "class_name": "TungstenRod",
+  "description": "Whenever you would lose HP, lose [blue]1[/blue] less."
+ },
+ {
+  "class_name": "TuningFork",
+  "description": "Every time you play [blue]10[/blue] Skills, gain [blue]7[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "TwistedFunnel",
+  "description": "At the start of each combat, apply [blue]4[/blue] [gold]Poison[/gold] to ALL enemies."
+ },
+ {
+  "class_name": "UnceasingTop",
+  "description": "Whenever you have no cards in [gold]Hand[/gold] during your turn, draw a card."
+ },
+ {
+  "class_name": "UndyingSigil",
+  "description": "Enemies with at least as much [gold]Doom[/gold] as HP deal [blue]50%[/blue] less damage."
+ },
+ {
+  "class_name": "UnsettlingLamp",
+  "description": "Each combat, the first time you play a card that [gold]Debuffs[/gold] an enemy, double its effect."
+ },
+ {
+  "class_name": "Vajra",
+  "description": "Start each combat with [blue]1[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "Vambrace",
+  "description": "The first time you gain [gold]Block[/gold] from a card each combat, double the amount gained."
+ },
+ {
+  "class_name": "VelvetChoker",
+  "description": "Gain 1 Energy at the start of each turn. You cannot play more than [blue]6[/blue] cards per turn."
+ },
+ {
+  "class_name": "VenerableTeaSet",
+  "description": "Whenever you enter a [gold]Rest Site[/gold], start the next combat with an additional 2 Energy."
+ },
+ {
+  "class_name": "VeryHotCocoa",
+  "description": "Start each combat with an additional [blue]4 Energy[/blue]."
+ },
+ {
+  "class_name": "VexingPuzzlebox",
+  "description": "At the start of each combat, add a random card into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "VitruvianMinion",
+  "description": "Cards containing “Minion” deal double damage and gain double [gold]Block[/gold]."
+ },
+ {
+  "class_name": "WarHammer",
+  "description": "Whenever you kill an [gold]Elite[/gold], [gold]Upgrade[/gold] [blue]4[/blue] random cards."
+ },
+ {
+  "class_name": "WarPaint",
+  "description": "Upon pickup, [gold]Upgrade[/gold] [blue]2[/blue] random Skills."
+ },
+ {
+  "class_name": "Whetstone",
+  "description": "Upon pickup, [gold]Upgrade[/gold] [blue]2[/blue] random Attacks."
+ },
+ {
+  "class_name": "WhisperingEarring",
+  "description": "Gain 1 Energy at the start of each turn. [red]Vakuu plays your first turn for you.[/red]"
+ },
+ {
+  "class_name": "WhiteBeastStatue",
+  "description": "[gold]Potions[/gold] always appear in combat rewards."
+ },
+ {
+  "class_name": "WhiteStar",
+  "description": "[gold]Elites[/gold] drop an additional [gold]Rare[/gold] card reward."
+ },
+ {
+  "class_name": "WingCharm",
+  "description": "A random card in each card reward is [gold]Enchanted[/gold] with [purple]Swift[/purple] [blue]1[/blue]."
+ },
+ {
+  "class_name": "WingedBoots",
+  "description": "You may ignore paths when choosing the next rooms to travel to [blue]3[/blue] times."
+ },
+ {
+  "class_name": "WongoCustomerAppreciationBadge",
+  "description": "Does nothing."
+ },
+ {
+  "class_name": "WongosMysteryTicket",
+  "description": "Receive [blue]3[/blue] random [gold]Relics[/gold] after [blue]5[/blue] combats."
+ },
+ {
+  "class_name": "YummyCookie",
+  "description": "Upon pickup, [gold]Upgrade[/gold] [blue]4[/blue] cards."
+ },
+ {
+  "class_name": "Ambergris",
+  "description": "Heal for [green]50%[/green] of your Max HP. If used in combat, take an extra turn."
+ },
+ {
+  "class_name": "Ashwater",
+  "description": "[gold]Exhaust[/gold] any number of cards in your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "AttackPotion",
+  "description": "Choose [blue]1[/blue] of [blue]3[/blue] random Attack cards to add into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "BeetleJuice",
+  "description": "Enemy's attacks deal [blue]30%[/blue] less damage for the next [blue]4[/blue] turns."
+ },
+ {
+  "class_name": "BlessingOfTheForge",
+  "description": "[gold]Upgrade[/gold] all cards in your [gold]Hand[/gold] for the rest of combat."
+ },
+ {
+  "class_name": "BlockPotion",
+  "description": "Gain [blue]12[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "BloodPotion",
+  "description": "Heal for [green]20%[/green] of your Max HP."
+ },
+ {
+  "class_name": "BoneBrew",
+  "description": "[gold]Summon[/gold] [blue]15[/blue]."
+ },
+ {
+  "class_name": "BottledPotential",
+  "description": "Shuffle ALL your cards into your [gold]Draw Pile[/gold]. Draw [blue]5[/blue] cards."
+ },
+ {
+  "class_name": "Clarity",
+  "description": "Draw [blue]1[/blue] card. At the start of your next [blue]3[/blue] turns, draw [blue]1[/blue] additional card."
+ },
+ {
+  "class_name": "ColorlessPotion",
+  "description": "Choose [blue]1[/blue] of [blue]3[/blue] random Colorless cards to add into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "CosmicConcoction",
+  "description": "Add [blue]3[/blue] [gold]Upgraded[/gold] Colorless cards into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "CunningPotion",
+  "description": "Add [blue]3[/blue] [gold]Upgraded Shivs[/gold] into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "CureAll",
+  "description": "Gain 1 Energy. Draw [blue]2[/blue] cards."
+ },
+ {
+  "class_name": "DeprecatedPotion",
+  "description": "This potion has been removed from the game."
+ },
+ {
+  "class_name": "DexterityPotion",
+  "description": "Gain [blue]2[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "DistilledChaos",
+  "description": "Play the top [blue]3[/blue] cards of your [gold]Draw Pile[/gold]."
+ },
+ {
+  "class_name": "DropletOfPrecognition",
+  "description": "Choose a card in your [gold]Draw Pile[/gold] and add it into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "Duplicator",
+  "description": "This turn, your next card is played an extra time."
+ },
+ {
+  "class_name": "EnergyPotion",
+  "description": "Gain 2 Energy."
+ },
+ {
+  "class_name": "EntropicBrew",
+  "description": "Fill all your empty potion slots with random potions."
+ },
+ {
+  "class_name": "EssenceOfDarkness",
+  "description": "[gold]Channel[/gold] a [gold]Dark[/gold] for each of your [gold]Orb Slots[/gold]."
+ },
+ {
+  "class_name": "ExplosiveAmpoule",
+  "description": "Deal [blue]10[/blue] damage to ALL enemies."
+ },
+ {
+  "class_name": "FairyInABottle",
+  "description": "When your HP would be reduced to [blue]0[/blue], instead this potion is discarded and you heal to [blue]30%[/blue] of your Max HP."
+ },
+ {
+  "class_name": "FirePotion",
+  "description": "Deal [blue]20[/blue] damage."
+ },
+ {
+  "class_name": "FlexPotion",
+  "description": "Gain [blue]5[/blue] [gold]Strength[/gold]. At the end of your turn, lose [blue]5[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "FocusPotion",
+  "description": "Gain [blue]2[/blue] [gold]Focus[/gold]."
+ },
+ {
+  "class_name": "Fortifier",
+  "description": "Triple your [gold]Block[/gold]."
+ },
+ {
+  "class_name": "FoulPotion",
+  "description": "Deal [blue]12[/blue] damage to ALL players and enemies.\nCan be thrown at the [gold]Merchant[/gold] for [blue]100[/blue] [gold]Gold[/gold] instead."
+ },
+ {
+  "class_name": "FruitJuice",
+  "description": "Gain [blue]5[/blue] Max HP."
+ },
+ {
+  "class_name": "FyshOil",
+  "description": "Gain [blue]1[/blue] [gold]Strength[/gold] and [blue]1[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "GamblersBrew",
+  "description": "Discard any number of cards, then draw that many."
+ },
+ {
+  "class_name": "GhostInAJar",
+  "description": "Gain [blue]1[/blue] [gold]Intangible[/gold]."
+ },
+ {
+  "class_name": "GigantificationPotion",
+  "description": "The next Attack you play deals triple damage."
+ },
+ {
+  "class_name": "GlowwaterPotion",
+  "description": "[gold]Exhaust[/gold] your [gold]Hand[/gold]. Draw [blue]10[/blue] cards."
+ },
+ {
+  "class_name": "HeartOfIron",
+  "description": "Gain [blue]7[/blue] [gold]Plating[/gold]."
+ },
+ {
+  "class_name": "KingsCourage",
+  "description": "[gold]Forge[/gold] [blue]15[/blue]."
+ },
+ {
+  "class_name": "LiquidBronze",
+  "description": "Gain [blue]3[/blue] [gold]Thorns[/gold]."
+ },
+ {
+  "class_name": "LiquidMemories",
+  "description": "Put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "LuckyTonic",
+  "description": "Gain [blue]1[/blue] [gold]Buffer[/gold]."
+ },
+ {
+  "class_name": "MazalethsGift",
+  "description": "Gain [blue]1[/blue] [gold]Ritual[/gold]."
+ },
+ {
+  "class_name": "OrobicAcid",
+  "description": "Add a random Attack, Skill, and Power into your [gold]Hand[/gold]. They're free to play this turn."
+ },
+ {
+  "class_name": "PoisonPotion",
+  "description": "Apply [blue]6[/blue] [gold]Poison[/gold]."
+ },
+ {
+  "class_name": "PotOfGhouls",
+  "description": "Add [blue]2[/blue] [gold]Souls[/gold] into your [gold]Hand[/gold]."
+ },
+ {
+  "class_name": "PotionOfBinding",
+  "description": "Apply [blue]1[/blue] [gold]Weak[/gold] and [blue]1[/blue] [gold]Vulnerable[/gold] to ALL enemies."
+ },
+ {
+  "class_name": "PotionOfCapacity",
+  "description": "Gain [blue]2[/blue] [gold]Orb Slots[/gold]."
+ },
+ {
+  "class_name": "PotionOfDoom",
+  "description": "Apply [blue]33[/blue] [gold]Doom[/gold]."
+ },
+ {
+  "class_name": "PotionShapedRock",
+  "description": "Deal [blue]15[/blue] damage."
+ },
+ {
+  "class_name": "PowderedDemise",
+  "description": "Enemy loses [blue]9[/blue] HP at the end of each of its turns."
+ },
+ {
+  "class_name": "PowerPotion",
+  "description": "Choose [blue]1[/blue] of [blue]3[/blue] random Power cards to add into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "RadiantTincture",
+  "description": "Gain 1 Energy. Gain an additional  Energy at the start of your next [blue]3[/blue] turns."
+ },
+ {
+  "class_name": "RegenPotion",
+  "description": "Gain [green]5[/green] [gold]Regen[/gold]."
+ },
+ {
+  "class_name": "ShacklingPotion",
+  "description": "ALL enemies lose [blue]7[/blue] [gold]Strength[/gold] this turn."
+ },
+ {
+  "class_name": "ShipInABottle",
+  "description": "Gain [blue]10[/blue] [gold]Block[/gold]. Next turn, gain [blue]10[/blue] [gold]Block[/gold]."
+ },
+ {
+  "class_name": "SkillPotion",
+  "description": "Choose [blue]1[/blue] of [blue]3[/blue] random Skill cards to add into your [gold]Hand[/gold]. It's free to play this turn."
+ },
+ {
+  "class_name": "SneckoOil",
+  "description": "Draw [blue]7[/blue] cards. Randomize the cost of cards in your [gold]Hand[/gold] this turn."
+ },
+ {
+  "class_name": "SoldiersStew",
+  "description": "All cards containing [gold]Strike[/gold] gain [blue]1[/blue] [gold]Replay[/gold] this combat."
+ },
+ {
+  "class_name": "SpeedPotion",
+  "description": "Gain [blue]5[/blue] [gold]Dexterity[/gold]. At the end of your turn, lose [blue]5[/blue] [gold]Dexterity[/gold]."
+ },
+ {
+  "class_name": "StableSerum",
+  "description": "[gold]Retain[/gold] your [gold]Hand[/gold] for [blue]2[/blue] turns."
+ },
+ {
+  "class_name": "StarPotion",
+  "description": "Gain 3 Stars."
+ },
+ {
+  "class_name": "StrengthPotion",
+  "description": "Gain [blue]2[/blue] [gold]Strength[/gold]."
+ },
+ {
+  "class_name": "SwiftPotion",
+  "description": "Draw [blue]3[/blue] cards."
+ },
+ {
+  "class_name": "TouchOfInsanity",
+  "description": "Choose a card in your [gold]Hand[/gold]. It is free to play this combat."
+ },
+ {
+  "class_name": "VulnerablePotion",
+  "description": "Apply [blue]3[/blue] [gold]Vulnerable[/gold]."
+ },
+ {
+  "class_name": "WeakPotion",
+  "description": "Apply [blue]3[/blue] [gold]Weak[/gold]."
+ }
+]

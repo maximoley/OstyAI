@@ -1,0 +1,85 @@
+[package]
+name = "sts2-runai"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Run-level AI: arena harness, seed panels, baseline policies, MCTS combat bridge (full-run-AI plan M0+)."
+publish = false
+
+[lints]
+workspace = true
+
+# Feature gates so the browser workbench (wasm32-unknown-unknown) can link
+# the MCTS combat agent + run-level heuristics without tract-onnx / rayon /
+# clocks. The DEFAULT set is everything, so every native build and test is
+# unchanged; `--no-default-features` is the wasm-shaped subset.
+[features]
+default = ["ppo", "sweeps"]
+# ONNX inference: `ppo::net` (PpoNet), `ppo::policy::PpoPolicy`, the
+# critic-mode potion OC, and `arena::CellPolicy::MctsPpo`. The pure
+# observation/encoder/mapfeat/wire/obs modules stay available without it.
+ppo = ["dep:tract-onnx"]
+# CLI sweep harness: arena / calibrate / fork_* / harvest / label / panel /
+# proxy_study / trajectory (rayon pools, gzip + sha2 trajectory files,
+# wall-clock `Instant`s — none of which run in the browser).
+sweeps = ["dep:rayon", "dep:flate2", "dep:sha2"]
+
+# build.rs stamps a content hash of this crate's build inputs into
+# STS2_RUNAI_SRC_HASH (compiled in as `SRC_HASH`): part of the sts2_rs src_hash.
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+sts2-mcts = { workspace = true }
+# PPO id vocabularies + pin files (re-exported as `ppo::vocab`).
+sts2-vocab = { workspace = true }
+rayon = { workspace = true, optional = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+thiserror = { workspace = true }
+# HeuristicV weight files (data/runai/heuristic_v.toml) — M1, bead
+# sts2-rs-40ikw.5.
+toml = "0.8"
+# Bounded fight-strength cache for tier-2/3 rollout probes (plan §5/M2:
+# "lru crate behind a shard lock — dashmap alone has no eviction").
+# Bead sts2-rs-40ikw.6.
+lru = "0.12"
+# PPO run-policy net inference (2026-07-07 ppo-rust-inference plan, Task
+# 3): pure-Rust CPU ONNX runtime for the exported RunPolicyNet, plus the
+# vocab canonicalization port (Task 4+).
+tract-onnx = { workspace = true, optional = true }
+regex = { workspace = true }
+# Trajectory recorder: gzip the per-seed `.run.gz` files + hash the
+# policy model for reproducibility metadata (branch
+# worktree-run-trajectory-recorder).
+flate2 = { version = "1", optional = true }
+sha2 = { version = "0.10", optional = true }
+
+# rand 0.8 pulls getrandom 0.2, which refuses to compile for
+# wasm32-unknown-unknown without the `js` feature; `sts2-workbench-wasm`
+# enables it too, but feature unification only reaches a `-p sts2-runai`
+# wasm check if this crate asks for it itself. Inert on native targets.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { workspace = true, features = ["js"] }
+
+[dev-dependencies]
+# Property-based tests for the decision surfaces (shop knapsack
+# invariants — same generator idiom as sts2-core's prop_* tests).
+hegeltest = "0.14.9"
+# Test-only combat-state fixtures name SmallVec-typed sts2-core fields
+# directly (policy::tests::build_ftl_busy_hand_state).
+smallvec = { workspace = true }
+
+
+# In-process sampling profiler for examples/profile_fight_delta.rs —
+# kernel.perf_event_paranoid=4 on the box blocks unprivileged `perf`.
+# Unix-only (relies on ucontext_t / pthread / POSIX pipes); the example is
+# a no-op stub off Unix so the workspace still builds/tests on Windows.
+[target.'cfg(unix)'.dev-dependencies]
+pprof = { version = "0.15", features = ["flamegraph"] }

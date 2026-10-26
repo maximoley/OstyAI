@@ -1,0 +1,19 @@
+{
+ "final_turn_histogram": {},
+ "n_losses": 1,
+ "n_runs": 1,
+ "pattern_tags": {},
+ "representative_losses": [
+  {
+   "enemy_min_pct": 5.3571,
+   "final_turn": null,
+   "stem": "20260101_000000_Ironclad_1",
+   "turn1_q": 1.1569
+  }
+ ],
+ "turn1_q": {
+  "max": 1.1569,
+  "mean": 1.1569,
+  "min": 1.1569
+ }
+}

@@ -1,0 +1,12 @@
+{
+  "changes": {
+    "native/crates/sts2-py/build.rs": "CUDA_LIB_DIR override replaces machine-specific linker path",
+    "ostyai/loop.py": "Portable CUDA runtime discovery and OSTYAI_MODEL actor path; safe weights-only load",
+    "ostyai/pool_metadata.py": "Resolve encounter registry within packaged native workspace",
+    "ostyai/prepare_banks.py": "Explicit OSTYAI_CORPUS_CONVERTER path and missing-converter error",
+    "ostyai/run.sh": "Relocatable runtime and cache directories",
+    "scripts/": "Standalone build, evaluation, fixture unpacking and verification"
+  },
+  "excluded_runtime_cache_files": 1104,
+  "production_modified": false
+}

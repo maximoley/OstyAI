@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "mode": "combat",
+  "metadata": {
+    "scenario": "act2-tunneler-setup-only",
+    "seed": 0,
+    "character": "Ironclad",
+    "encounter": "Tunneler",
+    "act": 2,
+    "tier": "weak",
+    "python_pin": "01c094d",
+    "rust_pin": "f3fc5f0",
+    "recorded_ts": "2026-05-16T06:30:00Z",
+    "bead": "sts2-rs-rggx",
+    "parent_bead": "sts2-rs-6ynt.10",
+    "python_source": "sts2-rl-agent@01c094d:sts2_env/encounters/act2.py + monsters/act2.py::create_tunneler_ai",
+    "description": "Act 2 weak-tier representative: TUNNELER_WEAK encounter, single Tunneler enemy with no slot args. Setup-only fixture (no actions) — pins the post-setup pre-first-action bridge-state shape for an act2 monster_id ('Tunneler'). Tunneler's BURROW ↔ BITE AI is intentionally NOT rolled here; intent stays None so the test does not depend on the intent-roll determinism path. Tier coverage: weak; the other tiers (normal/elite/boss) for Act 2 + Act 3 remain open under sts2-rs-rggx and are gated on sts2-rs-69u4 for the multi-creature / start-of-combat-power harness extensions per the YellowKnoll stash notes (Queen → RoyalGuard minion spawns, ThievingHopper THIEVERY application).",
+    "limits": "Single-creature, no slot args, no start-of-combat power. Multi-creature minion-spawn encounters (Bowlbugs, Exoskeletons, Queen, TheInsatiable) and start-of-combat-power encounters (ThievingHopper) are deferred to sts2-rs-69u4."
+  },
+  "initial_state": {
+    "type": "combat_action",
+    "player": {
+      "hp": 80,
+      "max_hp": 80,
+      "block": 0,
+      "energy": 0,
+      "max_energy": 3,
+      "powers": []
+    },
+    "hand": [],
+    "enemies": [
+      {
+        "id": "Tunneler",
+        "hp": 26,
+        "max_hp": 26,
+        "block": 0,
+        "is_alive": true,
+        "powers": []
+      }
+    ],
+    "draw_pile_count": 0,
+    "discard_pile_count": 0,
+    "exhaust_pile_count": 0,
+    "round": 0
+  },
+  "steps": []
+}

@@ -1,0 +1,15 @@
+{
+  "update": 5500,
+  "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f",
+  "model_sha256": "a04bd9f4964954ad3c6bc11e8de7e809e01075bfb7b45fe4939dcd2580d84376",
+  "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "simulations": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "skip_forced_actions": true,
+  "replicates": 3,
+  "part_limit": null
+}

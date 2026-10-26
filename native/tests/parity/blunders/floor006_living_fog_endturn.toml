@@ -1,0 +1,43 @@
+schema = 2
+
+# Hand-curated blunder fixture for `sts2-rs-30lw5` (child of
+# `sts2-rs-b4myp` / `sts2-rs-64h9r`).
+#
+# Source: copied from
+#   /tmp/run-fixtures-full/the-ironclad/00030217-6611-4a0a-aa7b-a01d92f22b49_floor006_living_fog_normal.toml
+#
+# Turn 1 vs LIVING_FOG (act-1 normal), ASC6. Curse/status-free
+# near-starter deck with a few uncommons. End turn at e=3 trips
+# `end_turn_with_high_energy`.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 6
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.LIVING_FOG_NORMAL"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 39
+max_hp    = 80
+gold      = 136
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+", "DOMINATE+", "ONE_TWO_PUNCH+", "UNRELENTING"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "LIVING_FOG"
+
+[blunder_assertion]
+class          = "end_turn_with_high_energy"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

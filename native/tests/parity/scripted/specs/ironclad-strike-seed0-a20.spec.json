@@ -1,0 +1,41 @@
+{
+  "name": "ironclad-strike-seed0-a20",
+  "description": "A20 sibling of ironclad-strike-seed0 (sts2-rs-5gvy4). Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension. Pins ascension=20 in metadata.",
+  "scenario": "ironclad-strike",
+  "ascension": 20,
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "Cultist",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — Cultist's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "STRIKE_IRONCLAD"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "Cultist",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    }
+  ]
+}

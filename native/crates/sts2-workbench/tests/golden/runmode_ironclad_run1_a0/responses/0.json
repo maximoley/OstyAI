@@ -1,0 +1,232 @@
+{
+ "action_label": "",
+ "assets_base": "https://assets.test",
+ "chosen_action": null,
+ "decision": "event_choice",
+ "idx": 0,
+ "meta": {
+  "act": 1,
+  "act_name": "Overgrowth",
+  "bg_col": null,
+  "bg_row": null,
+  "bg_seed": 1,
+  "floor": 0,
+  "step_no": 0,
+  "turn": null
+ },
+ "pv": null,
+ "scores": [],
+ "source": "live",
+ "state": {
+  "act": 1,
+  "act1": "overgrowth",
+  "act_name": "Overgrowth",
+  "art": {
+   "illustration": null
+  },
+  "ascension": 0,
+  "bg_seed": 1,
+  "decision": "event_choice",
+  "description": "",
+  "event_name": "Neow",
+  "event_options": [
+   {
+    "description": "Upon pickup, gain 1 potion slot and procure 2 random Potions.",
+    "image": "https://assets.test/relic_atlas/phial_holster.png",
+    "index": 0,
+    "is_locked": false,
+    "title": "Phial Holster"
+   },
+   {
+    "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "image": "https://assets.test/relic_atlas/arcane_scroll.png",
+    "index": 1,
+    "is_locked": false,
+    "title": "Arcane Scroll"
+   },
+   {
+    "description": "Upon pickup, gain 2 random Neow Relics. Add 1 random Curse to your Deck.",
+    "image": "https://assets.test/relic_atlas/neows_bones.png",
+    "index": 2,
+    "is_locked": false,
+    "title": "Neow's Bones"
+   }
+  ],
+  "floor": 0,
+  "options": [
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 0
+    },
+    "enabled": true,
+    "label": "PHIAL_HOLSTER.title"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 1
+    },
+    "enabled": true,
+    "label": "ARCANE_SCROLL.title"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 2
+    },
+    "enabled": true,
+    "label": "NEOWS_BONES.title"
+   }
+  ],
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 4,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 8,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 2,
+     "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "id": "BASH",
+     "image": "https://assets.test/card_atlas/ironclad/bash.png",
+     "index": 9,
+     "name": "Bash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    }
+   ],
+   "gold": 99,
+   "hp": 80,
+   "max_hp": 80,
+   "name": "Ironclad",
+   "potion_slots": 3,
+   "potions": [],
+   "relics": [
+    {
+     "description": "At the end of combat, heal 6 HP.",
+     "id": "BURNING_BLOOD",
+     "image": "https://assets.test/relic_atlas/burning_blood.png",
+     "name": "Burning Blood"
+    }
+   ]
+  }
+ }
+}

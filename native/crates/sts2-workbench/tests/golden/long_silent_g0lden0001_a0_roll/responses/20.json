@@ -1,0 +1,276 @@
+{
+ "details": [],
+ "error": null,
+ "label": "Map → (0,2)",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "event_choice",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 11180935036767329045,
+   "floor": 2,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "art": {
+    "illustration": "https://assets.test/events/aroma_of_chaos.png"
+   },
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 11180935036767329045,
+   "decision": "event_choice",
+   "description": "Upon trudging through a thick underbrush and making it into a clearing, you're hit with an unplaceable nostalgia. A mix of floral scents, putrid decay, and something else entirely. The scent grows stronger with each step, and you feel as though the world around you is warping and twisting. Overcome with a sense of [rainbow freq=0.3 sat=0.8 val=1]shifting chaos, you begin to lose your sense of self.",
+   "event_name": "Aroma of Chaos",
+   "event_options": [
+    {
+     "description": "Transform a card in your Deck.",
+     "image": null,
+     "index": 0,
+     "is_locked": false,
+     "title": "Let Go"
+    },
+    {
+     "description": "Upgrade a card in your Deck.",
+     "image": null,
+     "index": 1,
+     "is_locked": false,
+     "title": "Maintain Control"
+    }
+   ],
+   "floor": 2,
+   "options": [
+    {
+     "action": "choose_option",
+     "args": {
+      "option_index": 0
+     },
+     "enabled": true,
+     "label": "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO.title"
+    },
+    {
+     "action": "choose_option",
+     "args": {
+      "option_index": 1
+     },
+     "enabled": true,
+     "label": "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL.title"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 9,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 0,
+      "description": "Deal 3 damage.\nApply 1 Weak.",
+      "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+      "id": "NEUTRALIZE",
+      "image": "https://assets.test/card_atlas/silent/neutralize.png",
+      "index": 10,
+      "name": "Neutralize",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 8 Block.\nDiscard 1 card.",
+      "description_rich": "Gain 8 Block.\nDiscard 1 card.",
+      "id": "SURVIVOR",
+      "image": "https://assets.test/card_atlas/silent/survivor.png",
+      "index": 11,
+      "name": "Survivor",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Sly.\nDeal 7 damage to ALL enemies.",
+      "description_rich": "[gold]Sly[/gold].\nDeal 7 damage to ALL enemies.",
+      "id": "FLICK_FLACK",
+      "image": "https://assets.test/card_atlas/silent/flick_flack.png",
+      "index": 12,
+      "name": "Flick-Flack",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 117,
+    "hp": 67,
+    "max_hp": 70,
+    "name": "Silent",
+    "potion_slots": 3,
+    "potions": [
+     {
+      "description": "Gain 1 Energy. Gain an additional Energy at the start of your next 3 turns.",
+      "id": "RADIANT_TINCTURE",
+      "image": "https://assets.test/potion_atlas/radiant_tincture.png",
+      "name": "Radiant Tincture"
+     }
+    ],
+    "relics": [
+     {
+      "description": "At the start of each combat, draw 2 additional cards.",
+      "id": "RING_OF_THE_SNAKE",
+      "image": "https://assets.test/relic_atlas/ring_of_the_snake.png",
+      "name": "Ring of the Snake"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   }
+  }
+ }
+}

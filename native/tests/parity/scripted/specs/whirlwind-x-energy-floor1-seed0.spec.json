@@ -1,0 +1,34 @@
+{
+  "name": "whirlwind-x-energy-floor1-seed0",
+  "description": "Whirlwind X-cost remaining-energy boundary at minimum-nonzero floor: initial_energy=1, hand=[WHIRLWIND]. has_energy_cost_x branch in core/combat.py:1371 sets card.energy_spent = owner_state.energy = 1, then the per-tick loop in cards/ironclad.py:1574 runs exactly once → -5 HP to the single enemy + energy → 0 + energy_spent_this_turn += 1. Complements the existing X=3 multi-Vulnerable fixture (ironclad-whirlwind-multi-vulnerable-seed0) by pinning the lower boundary of the X-loop where the outer iteration count is 1 (single tick) and the post-play state shows energy floored. Pin: sts2-rl-agent@01c094d:sts2_env/core/combat.py:1371 (has_energy_cost_x energy_spent assignment) + cards/ironclad.py:1574-1585 (whirlwind effect). Bead sts2-rs-8z3fl.10. ShrinkerBeetle is the empty-encounter sentinel (no incoming damage). Blue Candle (the bead's first sub-fixture) does NOT exist in STS2 at pin 01c094d — confirmed via grep over sts2_env/ + sts2-wiki/decompiled/v0.103.2/ (zero hits); that half of the bead text is STS1-memory drift (see auto-memory feedback_bead_text_from_sts1_memory) and is intentionally omitted.",
+  "scenario": "whirlwind-x-energy-floor1",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 1,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). Whirlwind X-resolve + damage application does NOT consume RNG (no crits / no shuffle this turn), so player.energy + enemies[0].current_hp stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "WHIRLWIND"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "play_card", "hand_index": 0}
+  ]
+}

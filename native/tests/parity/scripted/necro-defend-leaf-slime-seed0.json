@@ -1,0 +1,88 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 LeafSlimeS intent rolls diverge by design (monsters.rs:22-29)."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 13,
+        "id": "LeafSlimeS",
+        "is_alive": true,
+        "max_hp": 13,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "base_block": 5,
+        "cost": 1,
+        "id": "DEFEND_NECROBINDER",
+        "playable": true,
+        "target": "Self",
+        "type": "Skill"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 66,
+      "max_energy": 3,
+      "max_hp": 66,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Necrobinder",
+    "encounter": "LeafSlimeS",
+    "python_pin": "01c094d",
+    "rust_pin": "ca37fab7bae6ced3d82b37a297a40da899cd7846",
+    "scenario": "necro-defend-leaf-slime",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 13,
+            "id": "LeafSlimeS",
+            "is_alive": true,
+            "max_hp": 13,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 5,
+          "energy": 2,
+          "hp": 66,
+          "max_energy": 3,
+          "max_hp": 66,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

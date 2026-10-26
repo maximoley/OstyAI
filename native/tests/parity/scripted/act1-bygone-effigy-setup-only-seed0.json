@@ -1,0 +1,51 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language-RNG-safety exclusion (mirrors Byrdonis/Mawler pattern). Bygone Effigy's initial INITIAL_SLEEP state is deterministic (no RAND branch on startup) so the intent triple is technically stable, but the Python pin's DSL driver consumes RNG bits during state initialization that diverge from Rust's Xoshiro256++. Keeping the structural shape-lock independent of intent values; HP/max_hp/pile counts/keys all byte-locked."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 127,
+        "id": "BYGONE_EFFIGY",
+        "intent": "SLEEP",
+        "intent_damage": 0,
+        "intent_hits": 0,
+        "is_alive": true,
+        "max_hp": 127,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "BygoneEffigy",
+    "python_pin": "01c094d-pending",
+    "rust_pin": "f1cd630-rust-only",
+    "scenario": "act1-bygone-effigy-setup-only",
+    "seed": 0,
+    "notes": "sts2-rs-r0w5n: setup-only fixture (replaces fgzcz's STS1-named JawWorm scope). Full step-walk + Python recording deferred to a follow-up. HP fixed at 127 (Python pin lower bound; ascension+ would bump to 132). Bygone Effigy chosen for the jdlfq slot because: (a) real STS2 act1 elite with a registered MonsterKind, (b) AI is INITIAL_SLEEP → WAKE → SLASHES linear sequence with non-trivial Sleep+Buff+Attack intent mix, (c) deck setup is proven via tests/parity/blunders/floor008_bygone_effigy_endturn.toml. Branching tier per jdlfq.2 was originally JawWorm — see sts2-rs-fgzcz close-reason for the STS1-name finding. Tier label retained for graph continuity; the AI is technically stateful/sequential rather than branching."
+  },
+  "mode": "combat",
+  "steps": [],
+  "version": 1
+}

@@ -1,0 +1,29 @@
+{
+  "name": "block-absorbs-damage-seed0",
+  "description": "Block absorbs damage before HP loss. Cultist has 5 block; player attacks Cultist for 8 raw → 5 absorbed by block → 3 HP loss. Cultist HP 48 - 3 = 45, block 5 - 5 = 0.",
+  "scenario": "block-absorbs-damage",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 5
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 8,
+      "props": "MOVE"
+    }
+  ]
+}

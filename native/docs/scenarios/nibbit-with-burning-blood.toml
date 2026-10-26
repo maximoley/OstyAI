@@ -1,0 +1,30 @@
+# sts2-cli scenario — Ironclad (with Burning Blood + a Fire Potion)
+# vs. a lone Nibbit. Exercises the relic-seed + potion-belt + deck
+# overrides paths in a single file. The custom deck swaps the starter
+# Bash for an upgraded Bash+ and adds an Iron Wave so a few `--steps`
+# of random play actually drive some combat.
+
+schema = 1
+
+[player]
+class = "Ironclad"
+hp = 80
+deck = [
+    "Strike",
+    "Strike",
+    "Strike",
+    "Strike",
+    "Strike",
+    "Defend",
+    "Defend",
+    "Defend",
+    "Defend",
+    "Bash+",
+    "IronWave",
+]
+
+relics = ["BurningBlood"]
+potions = ["Fire Potion"]
+
+[[monsters]]
+kind = "Nibbit"

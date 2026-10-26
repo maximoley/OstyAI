@@ -1,0 +1,34 @@
+{
+  "name": "status-wound-in-hand-end-turn-seed0",
+  "description": "sts2-rs-8z3fl.13: Wound (Status, cost=-1, unplayable, no end-turn effect, no ethereal) end-turn no-op. Player starts a round with a single WOUND in hand and ends turn. Asserts the negative invariant: no damage, no exhaust, no discard — Wound just sits in hand. Pairs with status-burn-in-hand-end-turn (active tick) and ethereal-dazed-expel (ethereal exhaust) to lock the three end-turn outcomes for cost=-1 status cards. Pin: sts2-rl-agent@01c094d:sts2_env/cards/status.py:142-147 (make_wound) — keywords={unplayable} only, no turn_end_in_hand_hook registered.",
+  "scenario": "status-wound-in-hand-end-turn",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — intent triple diverges by design (monsters.rs:22-29). Wound's no-op end-turn-in-hand path does NOT consume RNG, so player HP + pile counts + hand shape stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "WOUND"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "end_turn"}
+  ]
+}

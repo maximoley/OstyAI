@@ -1,0 +1,38 @@
+{
+  "name": "inflame-demon-form-stack-seed0",
+  "description": "Multi-turn Power-stacking parity: turn-1 play Inflame (Strength+2 immediate), turn-2 play Demon Form (registers per-turn-start Strength tick), turn-3 start fires the first Demon Form tick (Strength+2 → total Strength=4) + DEMON_FORM power amount=2 persists. Validates turn-start hook ordering between Inflame (immediate apply) and Demon Form (after_side_turn_start auto-tick) — divergence risk is hook fan-out under the side-turn-start gate. Pin: sts2-rl-agent@01c094d:sts2_env/powers/turn_effects.py:42-58 (DemonFormPower) + cards/ironclad.py:1209-1216 (Inflame), 1822-1838 (Demon Form base amount=2). ShrinkerBeetle is the empty-encounter sentinel (no incoming damage) so player powers stay isolated from intent rolls. Bead sts2-rs-8z3fl.1.",
+  "scenario": "inflame-demon-form-stack",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). Power application + turn-start hook ordering do NOT consume RNG, so player.powers + hp + energy stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "INFLAME"},
+      {"card_id": "DEMON_FORM_CARD"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "play_card", "hand_index": 0},
+    {"type": "end_turn"},
+    {"type": "play_card", "hand_index": 0},
+    {"type": "end_turn"}
+  ]
+}

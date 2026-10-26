@@ -1,0 +1,94 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). Whirlwind X-resolve + damage application does NOT consume RNG (no crits / no shuffle this turn), so player.energy + enemies[0].current_hp stay byte-equal."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 40,
+        "id": "SHRINKER_BEETLE",
+        "intent": "DEBUFF_STRONG",
+        "intent_damage": 0,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 40,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "base_damage": 5,
+        "cost": 0,
+        "id": "WHIRLWIND",
+        "playable": true,
+        "target": "AllEnemies",
+        "type": "Attack"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 1,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "a74d696b84748b504b4ddd4fcf1b9d99ae005ea4",
+    "scenario": "whirlwind-x-energy-floor1",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 35,
+            "id": "SHRINKER_BEETLE",
+            "intent": "DEBUFF_STRONG",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

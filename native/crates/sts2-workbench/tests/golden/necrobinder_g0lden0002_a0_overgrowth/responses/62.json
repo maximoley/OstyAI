@@ -1,0 +1,292 @@
+{
+ "action_label": "",
+ "assets_base": "https://assets.test",
+ "chosen_action": null,
+ "decision": "card_reward",
+ "idx": 0,
+ "meta": {
+  "act": 1,
+  "act_name": "Overgrowth",
+  "bg_col": 0,
+  "bg_row": 2,
+  "bg_seed": 10568962662196689687,
+  "floor": 2,
+  "step_no": 0,
+  "turn": null
+ },
+ "pv": null,
+ "scores": [],
+ "source": "live",
+ "state": {
+  "act": 1,
+  "act1": "overgrowth",
+  "act_name": "Overgrowth",
+  "ascension": 0,
+  "bg_col": 0,
+  "bg_row": 2,
+  "bg_seed": 10568962662196689687,
+  "can_skip": true,
+  "cards": [
+   {
+    "color": "pink",
+    "cost": 1,
+    "description": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
+    "description_rich": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
+    "id": "NO_ESCAPE",
+    "image": "https://assets.test/card_atlas/necrobinder/no_escape.png",
+    "index": 0,
+    "name": "No Escape",
+    "rarity": "Uncommon",
+    "stats": {
+     "block": 0,
+     "damage": 0
+    },
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "color": "pink",
+    "cost": 1,
+    "description": "Ethereal.\nGain 6 Block.\nApply 1 Weak.",
+    "description_rich": "[gold]Ethereal[/gold].\nGain 6 Block.\nApply 1 Weak.",
+    "id": "DEFY",
+    "image": "https://assets.test/card_atlas/necrobinder/defy.png",
+    "index": 1,
+    "name": "Defy",
+    "rarity": "Common",
+    "stats": {
+     "block": 6,
+     "damage": 0
+    },
+    "type": "Skill",
+    "upgraded": false
+   },
+   {
+    "color": "pink",
+    "cost": 2,
+    "description": "Play ALL Ethereal cards in your Exhaust Pile.\nExhaust.",
+    "description_rich": "Play ALL [gold]Ethereal[/gold] cards in your [gold]Exhaust Pile[/gold].\n[gold]Exhaust[/gold].",
+    "id": "EIDOLON",
+    "image": "https://assets.test/card_atlas/necrobinder/eidolon.png",
+    "index": 2,
+    "name": "Eidolon",
+    "rarity": "Rare",
+    "stats": {
+     "block": 0,
+     "damage": 0
+    },
+    "type": "Skill",
+    "upgraded": false
+   }
+  ],
+  "decision": "card_reward",
+  "floor": 2,
+  "options": [
+   {
+    "action": "select_card_reward",
+    "args": {
+     "card_index": 0
+    },
+    "enabled": true,
+    "label": "NO_ESCAPE.title"
+   },
+   {
+    "action": "select_card_reward",
+    "args": {
+     "card_index": 1
+    },
+    "enabled": true,
+    "label": "DEFY.title"
+   },
+   {
+    "action": "select_card_reward",
+    "args": {
+     "card_index": 2
+    },
+    "enabled": true,
+    "label": "EIDOLON.title"
+   },
+   {
+    "action": "skip_card_reward",
+    "args": {},
+    "enabled": true,
+    "label": "Skip"
+   }
+  ],
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 4,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_NECROBINDER",
+     "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Summon 5.",
+     "description_rich": "Summon 5.",
+     "id": "BODYGUARD",
+     "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+     "index": 8,
+     "name": "Bodyguard",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+     "id": "UNLEASH",
+     "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+     "index": 9,
+     "name": "Unleash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "pink",
+     "cost": 1,
+     "description": "Deal 8 damage.\nDeals 4 additional damage for each card drawn during your turn.",
+     "description_rich": "Deal 8 damage.\nDeals 4 additional damage for each card drawn during your turn.",
+     "id": "DEATH_MARCH",
+     "image": "https://assets.test/card_atlas/necrobinder/death_march.png",
+     "index": 10,
+     "name": "Death March",
+     "rarity": "Uncommon",
+     "type": "Attack",
+     "upgraded": false
+    }
+   ],
+   "gold": 126,
+   "hp": 44,
+   "max_hp": 66,
+   "name": "Necrobinder",
+   "potion_slots": 3,
+   "potions": [
+    {
+     "description": "Discard any number of cards, then draw that many.",
+     "id": "GAMBLERS_BREW",
+     "image": "https://assets.test/potion_atlas/gamblers_brew.png",
+     "name": "Gambler's Brew"
+    }
+   ],
+   "relics": [
+    {
+     "description": "At the start of your turn, Summon 1.",
+     "id": "BOUND_PHYLACTERY",
+     "image": "https://assets.test/relic_atlas/bound_phylactery.png",
+     "name": "Bound Phylactery"
+    },
+    {
+     "description": "Every 3 normal combats, Upgrade a random card in your Deck.",
+     "id": "FISHING_ROD",
+     "image": "https://assets.test/relic_atlas/fishing_rod.png",
+     "name": "Fishing Rod"
+    }
+   ]
+  }
+ }
+}

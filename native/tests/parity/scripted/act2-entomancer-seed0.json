@@ -1,0 +1,462 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 intent triple diverges by design (monsters.rs:22-29 / inflight-briefing \u00a79).",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-rggx: per-step shape lock \u2014 Python MT vs Rust Xoshiro256++ roll different intent branches across the 10-turn walk, so damage-derived fields (hp/block/is_alive/powers) and post-game-over freeze fields (/round, player.energy, player.max_energy) are excluded. Only structural shape (type tag, top-level keys, enemy id/max_hp, pile counts, player/max_hp, hand) is byte-locked."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 145,
+        "id": "ENTOMANCER",
+        "intent": "MULTI_ATTACK",
+        "intent_damage": 3,
+        "intent_hits": 7,
+        "is_alive": true,
+        "max_hp": 145,
+        "powers": [
+          {
+            "amount": 1,
+            "id": "PERSONAL_HIVE"
+          }
+        ]
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Entomancer",
+    "python_pin": "01c094d",
+    "rust_pin": "bc04805d26b6f47a8f924ac0b8f6f60ee415a9db",
+    "scenario": "act2-entomancer",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "ATTACK",
+            "intent_damage": 18,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 59,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "BUFF",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 41,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 41,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "ATTACK",
+            "intent_damage": 18,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 20,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 4,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "BUFF",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 2,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 3,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 2,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 6,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 3,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 6,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 3,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 6,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 3,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 6,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 145,
+            "id": "ENTOMANCER",
+            "intent": "MULTI_ATTACK",
+            "intent_damage": 3,
+            "intent_hits": 7,
+            "is_alive": true,
+            "max_hp": 145,
+            "powers": [
+              {
+                "amount": 3,
+                "id": "PERSONAL_HIVE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 6,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

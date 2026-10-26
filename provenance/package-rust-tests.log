@@ -1,0 +1,36 @@
+    Blocking waiting for file lock on build directory
+   Compiling sts2-vocab v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-vocab)
+   Compiling sts2-runai v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-runai)
+   Compiling sts2-cli v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-cli)
+   Compiling sts2-wire v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-wire)
+   Compiling sts2-py v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-py)
+    Finished `release` profile [optimized] target(s) in 6m 25s
+────────────
+ Nextest run ID 6e578668-b960-4bc9-8e09-1bf364712ad8 with nextest profile: default
+    Starting 24 tests across 1 binary (83 tests skipped)
+        PASS [   0.018s] ( 1/24) sts2-py adversarial::closed_loop::replay_queue::tests::bounded_queue_preserves_policy_version_and_terminal_value
+        PASS [   0.022s] ( 2/24) sts2-py adversarial::closed_loop::replay_queue::tests::large_replay_samples_preserve_every_row
+        PASS [   0.023s] ( 3/24) sts2-py adversarial::closed_loop::forced::tests::forced_moves_preserve_state_rng_and_replay
+        PASS [   0.039s] ( 4/24) sts2-py adversarial::closed_loop::forced::tests::forced_moves_respect_action_cap_and_disabled_path
+        PASS [   0.032s] ( 5/24) sts2-py adversarial::closed_loop::replay_queue::tests::oversized_replay_error_preserves_queued_sample
+        PASS [   0.027s] ( 6/24) sts2-py adversarial::closed_loop::search::tests::cyclic_graph_bootstraps_once_per_simulation
+        PASS [   0.034s] ( 7/24) sts2-py adversarial::closed_loop::search::tests::belief_pins_and_chance_outcomes_preserved
+        PASS [   0.024s] ( 8/24) sts2-py adversarial::closed_loop::search::tests::eviction_is_bounded_and_invalidates_complete_chance_sample_lists
+        PASS [   0.027s] ( 9/24) sts2-py adversarial::closed_loop::search::tests::new_actor_discards_persistent_evaluations_and_statistics
+        PASS [   0.032s] (10/24) sts2-py adversarial::closed_loop::search::tests::persistent_reroot_preserves_graph_and_spends_fresh_budget
+        PASS [   0.032s] (11/24) sts2-py adversarial::closed_loop::search::tests::persistent_search_remains_hidden_information_invariant
+        PASS [   0.049s] (12/24) sts2-py adversarial::closed_loop::search::tests::forced_belief_states_are_not_tree_nodes
+        PASS [   0.025s] (13/24) sts2-py adversarial::closed_loop::search::tests::preset_potion_costs_preserve_instance_identity_and_future_cost
+        PASS [   0.042s] (14/24) sts2-py adversarial::closed_loop::search::tests::potion_identity_cost_tokens_and_damage_context_follow_clones
+        PASS [   0.027s] (15/24) sts2-py adversarial::closed_loop::search::tests::real_search_budget_cache_and_hidden_information_invariance
+        PASS [   0.031s] (16/24) sts2-py adversarial::closed_loop::search::tests::sequential_halving_16_simulations
+        PASS [   0.017s] (17/24) sts2-py adversarial::closed_loop::search::tests::stable_softmax_and_ties
+        PASS [   0.018s] (18/24) sts2-py adversarial::closed_loop::tests::descriptor_abi_size_is_stable
+        PASS [   0.030s] (19/24) sts2-py adversarial::closed_loop::tests::bucket_boundaries_keep_every_row
+        PASS [   0.040s] (20/24) sts2-py adversarial::closed_loop::search::tests::transposition_key_hides_rng_but_preserves_continuations_costs_and_pins
+        PASS [   0.044s] (21/24) sts2-py adversarial::closed_loop::search::tests::transposition_hash_collision_requires_full_equality
+        PASS [   0.018s] (22/24) sts2-py adversarial::closed_loop::tests::invalid_configuration_rejected_before_cuda
+        PASS [   0.030s] (23/24) sts2-py adversarial::closed_loop::tier_budget::tests::fail_closed_on_ambiguous_pool_and_invalid_budget
+        PASS [   0.029s] (24/24) sts2-py adversarial::closed_loop::tier_budget::tests::registry_and_generated_pool_labels
+────────────
+     Summary [   0.193s] 24 tests run: 24 passed, 83 skipped

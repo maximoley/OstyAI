@@ -1,0 +1,3984 @@
+{
+ "_meta": {
+  "description": "Curated per-card deck-analysis tags (damage_role/block_role/velocity). Keyed by loc-key == runtime card.id. Mechanical stats live in card_db.json; this file holds the judgement calls (scaling vs frontload, velocity engine type).",
+  "source": "Classified by Haiku subagents reading the v0.99.1 wiki card manifest (description + referenced_powers); backfilled 2026-08-07 for the v0.107.1 roster delta (+NOT_YET/+SCARE/+WITHER, -FOLLOW_THROUGH/-GRAPPLE) when card_db.json was rebuilt off the engine-pinned manifest.",
+  "damage_role": [
+   "frontload",
+   "scaling",
+   "both",
+   "none"
+  ],
+  "block_role": [
+   "frontload",
+   "scaling",
+   "both",
+   "none"
+  ],
+  "velocity": [
+   "draw",
+   "energy",
+   "extra_play",
+   "tutor",
+   "cost_reduction",
+   "exhaust_synergy"
+  ],
+  "beta_refresh": "v0.111.0: classified the 19 added registry rows from the beta card effects; removed retired Scare. Existing historical annotations retained."
+ },
+ "ABRASIVE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain dexterity and thorns"
+ },
+ "ABUNDANCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "cost_reduction"
+  ],
+  "note": "choose an upgraded power that is free this turn"
+ },
+ "ACCELERANT": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "triggers poison additional time"
+ },
+ "ACCURACY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "shiv passive damage buff"
+ },
+ "ACROBATICS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw 3 cards"
+ },
+ "ADAPTIVE_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "frontload damage plus energy generation."
+ },
+ "ADRENALINE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy",
+   "draw"
+  ],
+  "note": "gain energy, draw cards"
+ },
+ "AFTERIMAGE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "scaling block per card played"
+ },
+ "AFTERLIFE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "summon ally"
+ },
+ "AGGRESSION": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "tutor attacks from discard"
+ },
+ "ALCHEMIZE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "procure random potion"
+ },
+ "ALIGNMENT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "pure energy generation."
+ },
+ "ALL_FOR_ONE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy recovery and damage"
+ },
+ "ANGER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage with discard synergy"
+ },
+ "ANOINTED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "tutor rare cards to hand"
+ },
+ "ANTICIPATE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "dexterity this turn"
+ },
+ "APOTHEOSIS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "upgrade all cards"
+ },
+ "APPARITION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "grant intangible for temporary defense."
+ },
+ "ARMAMENTS": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "block and upgrade cards"
+ },
+ "ARSENAL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling strength on colorless cards"
+ },
+ "ASCENDERS_BANE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "ASHEN_STRIKE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "scales off exhaust pile"
+ },
+ "ASSASSINATE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, apply vulnerable"
+ },
+ "ASTRAL_PULSE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "free aoe damage to all enemies."
+ },
+ "AUTOMATION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "periodic energy from card draw"
+ },
+ "BACKFLIP": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "draw"
+  ],
+  "note": "block with draw utility"
+ },
+ "BACKSTAB": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "11 damage single hit"
+ },
+ "BAD_LUCK": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "BALL_LIGHTNING": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage, channel lightning"
+ },
+ "BANSHEES_CRY": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "high aoe damage, cost scaling with ethereal."
+ },
+ "BARRAGE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with orbs"
+ },
+ "BARRICADE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block persists across turns"
+ },
+ "BASH": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage plus vulnerable"
+ },
+ "BATTLE_TRANCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw with lock"
+ },
+ "BEACON_OF_HOPE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "allies gain half your block"
+ },
+ "BEAM_CELL": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "tiny damage plus vulnerable debuff."
+ },
+ "BEAT_DOWN": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "replay attacks from discard"
+ },
+ "BEAT_INTO_SHAPE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload with forge scaling"
+ },
+ "BECKON": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, self-damage curse"
+ },
+ "BEGONE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "4 damage plus transform"
+ },
+ "BELIEVE_IN_YOU": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "other player gains energy"
+ },
+ "BIASED_COGNITION": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "focus scaling power with drawback."
+ },
+ "BIG_BANG": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "utility, energy, stars generation"
+ },
+ "BLACK_HOLE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling aoe damage on energy change"
+ },
+ "BLADE_DANCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "generate shivs for multiple plays"
+ },
+ "BLADE_OF_INK": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "strength per attack played"
+ },
+ "BLADE_SYMPHONY": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "generate Shivs in all players' hands"
+ },
+ "BLAZE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "give another player permanent Strength"
+ },
+ "BLIGHT_STRIKE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage, apply doom"
+ },
+ "BLOODLETTING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy for health cost."
+ },
+ "BLOOD_WALL": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block at life cost"
+ },
+ "BLUDGEON": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "high frontload damage"
+ },
+ "BLUR": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "block scaling via persistent block"
+ },
+ "BODYGUARD": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "summon passive scaling"
+ },
+ "BODY_SLAM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage equals your block"
+ },
+ "BOLAS": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "free damage that bounces back to hand."
+ },
+ "BOMBARDMENT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "damage with exhaust replay"
+ },
+ "BONE_SHARDS": {
+  "damage_role": "both",
+  "block_role": "both",
+  "velocity": [],
+  "note": "conditional damage and block from osty"
+ },
+ "BOOST_AWAY": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "6 block immediate"
+ },
+ "BOOT_SEQUENCE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "10 block frontload"
+ },
+ "BORROWED_TIME": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "apply doom, gain energy"
+ },
+ "BOUNCING_FLASK": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply poison for scaling damage."
+ },
+ "BRAND": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "strength boost at life cost"
+ },
+ "BREAK": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage with vulnerable"
+ },
+ "BREAKTHROUGH": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "9 damage aoe at cost of hp"
+ },
+ "BRIGHTEST_FLAME": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy",
+   "draw"
+  ],
+  "note": "energy and draw, costs hp"
+ },
+ "BUBBLE_BUBBLE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply poison if enemy poisoned"
+ },
+ "BUFFER": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "prevent next damage taken."
+ },
+ "BULK_UP": {
+  "damage_role": "scaling",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "strength and dexterity gains"
+ },
+ "BULLET_TIME": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "makes all cards free to play"
+ },
+ "BULLY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales with enemy vulnerable"
+ },
+ "BULWARK": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "13 block plus forge"
+ },
+ "BUNDLE_OF_JOY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add 3 random cards to hand"
+ },
+ "BURN": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card, self-damage."
+ },
+ "BURNING_PACT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "card draw via exhaust"
+ },
+ "BURST": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "replays next card played"
+ },
+ "BURY": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "52 damage single hit"
+ },
+ "BYRDONIS_EGG": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "quest card, rest hatch"
+ },
+ "BYRD_SWOOP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "14 damage to enemy"
+ },
+ "CACOPHONY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "repeated damage triggered by cumulative cards drawn"
+ },
+ "CALAMITY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw attacks whenever you play attacks."
+ },
+ "CALCIFY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "boost minion attack damage"
+ },
+ "CALCULATED_GAMBLE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw cycling utility"
+ },
+ "CALL_OF_THE_VOID": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw random cards each turn"
+ },
+ "CALTROPS": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "thorns passive damage"
+ },
+ "CAPACITOR": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain 2 orb slots"
+ },
+ "CAPTURE_SPIRIT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage enemy and draw souls."
+ },
+ "CASCADE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "play top cards from deck"
+ },
+ "CATASTROPHE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "plays random cards from deck"
+ },
+ "CELESTIAL_MIGHT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "6 damage hit 3 times"
+ },
+ "CHAOS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel random orb"
+ },
+ "CHARGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "transform draw pile cards"
+ },
+ "CHARGE_BATTERY": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [
+   "energy"
+  ],
+  "note": "block now plus energy next turn."
+ },
+ "CHILD_OF_THE_STARS": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block scaling with star spend"
+ },
+ "CHILL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channels frost orbs"
+ },
+ "CINDER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "17 damage with exhaust"
+ },
+ "CLASH": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "14 damage if all attacks"
+ },
+ "CLAW": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "3 damage, scale all claws"
+ },
+ "CLEANSE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "summon and deck manipulation."
+ },
+ "CLOAK_AND_DAGGER": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "block and add shiv"
+ },
+ "CLOAK_OF_STARS": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "low cost block"
+ },
+ "CLUMSY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "COLD_SNAP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "6 damage, channel frost"
+ },
+ "COLLISION_COURSE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "9 damage, add debris"
+ },
+ "COLOSSUS": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block plus vulnerability resistance."
+ },
+ "COMET": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "high damage with debuffs"
+ },
+ "COMPACT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block and status transformation"
+ },
+ "COMPILE_DRIVER": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "7 damage plus draw per orb"
+ },
+ "CONCOCT": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "ally attack hits apply Poison this turn"
+ },
+ "CONFLAGRATION": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales off attacks played"
+ },
+ "CONQUEROR": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "forge, double ally damage"
+ },
+ "CONSTELLATION": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "another player draws, gains energy and immediate block"
+ },
+ "CONSUMING_SHADOW": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel dark orbs for scaling."
+ },
+ "CONVERGENCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "next turn energy and stars"
+ },
+ "COOLANT": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "scaling block per orb"
+ },
+ "COOLHEADED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "channel frost and draw card"
+ },
+ "COORDINATE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "buff other player strength"
+ },
+ "CORROSIVE_WAVE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "poison enemies when drawing"
+ },
+ "CORRUPTION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "make skills free but exhaust them."
+ },
+ "COSMIC_INDIFFERENCE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "block and discard recursion"
+ },
+ "COUNTDOWN": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling doom application engine"
+ },
+ "CRASH_LANDING": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "21 damage aoe with debris"
+ },
+ "CREATIVE_AI": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add random power to hand"
+ },
+ "CRESCENT_SPEAR": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with star cards"
+ },
+ "CRIMSON_MANTLE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "recurring block per turn with hp cost."
+ },
+ "CRUELTY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "boost damage to weak enemies"
+ },
+ "CRUSH_UNDER": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload aoe damage with strength debuff"
+ },
+ "CURSE_OF_THE_BELL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "DAGGER_SPRAY": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 aoe frontload damage"
+ },
+ "DAGGER_THROW": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "9 damage, draw discard"
+ },
+ "DANSE_MACABRE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block whenever you play expensive cards."
+ },
+ "DARKNESS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel and trigger dark orbs"
+ },
+ "DARK_EMBRACE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "exhaust_synergy"
+  ],
+  "note": "draw engine on exhaust"
+ },
+ "DARK_SHACKLES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "reduce enemy strength this turn"
+ },
+ "DASH": {
+  "damage_role": "both",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "10 damage, 10 block"
+ },
+ "DAZED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status card, dead weight"
+ },
+ "DEADLY_POISON": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply heavy poison for scaling."
+ },
+ "DEATHBRINGER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe doom application"
+ },
+ "DEATHS_DOOR": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "scaling block if doom applied"
+ },
+ "DEATH_MARCH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with cards drawn"
+ },
+ "DEBILITATE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "14 damage, vuln/weak buff"
+ },
+ "DEBRIS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status card, dead card"
+ },
+ "DEBT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card, loses gold."
+ },
+ "DECAY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card in hand"
+ },
+ "DECISIONS_DECISIONS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "extra_play"
+  ],
+  "note": "draw with triple skill replay"
+ },
+ "DEFEND_DEFECT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "5 block immediate"
+ },
+ "DEFEND_IRONCLAD": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "5 block frontload"
+ },
+ "DEFEND_NECROBINDER": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "gain 5 block"
+ },
+ "DEFEND_REGENT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "simple block card."
+ },
+ "DEFEND_SILENT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "basic defense"
+ },
+ "DEFILE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage attack"
+ },
+ "DEFLECT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "4 block immediate"
+ },
+ "DEFRAGMENT": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "focus power scaling"
+ },
+ "DEFY": {
+  "damage_role": "frontload",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "6 block, apply weak"
+ },
+ "DELAY": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [
+   "energy"
+  ],
+  "note": "block plus next turn energy gain."
+ },
+ "DEMESNE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "turn start energy and draw"
+ },
+ "DEMONIC_SHIELD": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "multiplayer block transfer"
+ },
+ "DEMON_FORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain strength each turn"
+ },
+ "DEVASTATE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "30 damage burst"
+ },
+ "DEVOUR_LIFE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "summon when playing souls"
+ },
+ "DIRGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "summon and soul draw scaling."
+ },
+ "DISCOVERY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "tutor free card this turn"
+ },
+ "DISINTEGRATION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status curse, deals self-damage"
+ },
+ "DISMANTLE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage, double if vulnerable"
+ },
+ "DISTRACTION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "tutor free skill"
+ },
+ "DODGE_AND_ROLL": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "4 block now, 4 next turn"
+ },
+ "DOMINATE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain strength per vulnerable stacked."
+ },
+ "DOUBLE_ENERGY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "double remaining energy"
+ },
+ "DOUBT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, applies weak when in hand"
+ },
+ "DOWSING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "unplayable quest becomes Abundance after unknown rooms"
+ },
+ "DRAIN_POWER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage with upgrade cards"
+ },
+ "DRAMATIC_ENTRANCE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "11 aoe damage"
+ },
+ "DREDGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "tutor from discard pile"
+ },
+ "DRUM_OF_BATTLE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw plus exhaust per turn."
+ },
+ "DUALCAST": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "orb evoke twice"
+ },
+ "DUAL_WIELD": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "copies card into hand"
+ },
+ "DYING_STAR": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "9 damage aoe plus weaken enemies"
+ },
+ "ECHOING_SLASH": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 aoe, repeats if kills"
+ },
+ "ECHO_FORM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "first card plays twice"
+ },
+ "EIDOLON": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "exhaust hand for conditional intangible."
+ },
+ "END_OF_DAYS": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe doom with lethal check"
+ },
+ "ENERGY_SURGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "multiplayer energy gain"
+ },
+ "ENFEEBLING_TOUCH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "reduce enemy strength this turn"
+ },
+ "ENLIGHTENMENT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "reduce hand costs to 1"
+ },
+ "ENTHRALLED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, forced play"
+ },
+ "ENTRENCH": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "double current block scaling."
+ },
+ "ENTROPY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "turn start card transform"
+ },
+ "ENVENOM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales poison per unblocked hit"
+ },
+ "EQUILIBRIUM": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "13 block with hand retain"
+ },
+ "ERADICATE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "11 damage x times"
+ },
+ "ESCAPE_PLAN": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw, block if skill drawn"
+ },
+ "ETERNAL_ARMOR": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "gain plating for scaling defense."
+ },
+ "EVIL_EYE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "block bonus with exhaust"
+ },
+ "EXPECT_A_FIGHT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy gain per attack in hand"
+ },
+ "EXPERTISE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw to hand size 6"
+ },
+ "EXPOSE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "remove enemy buffs apply vuln"
+ },
+ "EXTERMINATE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "12 aoe damage to all"
+ },
+ "FADE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "another player gains Dexterity for this turn"
+ },
+ "FALLING_STAR": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage plus debuffs."
+ },
+ "FAN_OF_KNIVES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "shiv damage engine"
+ },
+ "FASTEN": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "amplifies defend card block"
+ },
+ "FEAR": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage plus vulnerable"
+ },
+ "FEED": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, max hp if kills"
+ },
+ "FEEDING_FRENZY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain 5 strength this turn"
+ },
+ "FEEL_NO_PAIN": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "block whenever card exhausted."
+ },
+ "FERAL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "replay cheap attacks"
+ },
+ "FETCH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "osty damage with draw on first play"
+ },
+ "FIEND_FIRE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with exhausted cards"
+ },
+ "FIGHT_ME": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, gain strength"
+ },
+ "FIGHT_THROUGH": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "13 block, add wounds"
+ },
+ "FINESSE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "draw"
+  ],
+  "note": "block and draw."
+ },
+ "FINISHER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with attacks played"
+ },
+ "FISTICUFFS": {
+  "damage_role": "both",
+  "block_role": "both",
+  "velocity": [],
+  "note": "damage converts to block"
+ },
+ "FLAK_CANNON": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "exhaust status for random damage"
+ },
+ "FLAME_BARRIER": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "12 block, 4 reflect damage"
+ },
+ "FLANKING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "enemy takes double damage"
+ },
+ "FLASH_OF_STEEL": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "frontload damage plus draw."
+ },
+ "FLATTEN": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "minion damage with cost reduction"
+ },
+ "FLECHETTES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with skills in hand"
+ },
+ "FLICK_FLACK": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage to all enemies"
+ },
+ "FOCUSED_STRIKE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "9 damage, gain focus"
+ },
+ "FOLLY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card."
+ },
+ "FOOTWORK": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "dexterity scaling"
+ },
+ "FORBIDDEN_GRIMOIRE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "deck pruning tool"
+ },
+ "FOREGONE_CONCLUSION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "tutor cards next turn"
+ },
+ "FORGOTTEN_RITUAL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "3 energy if exhausted"
+ },
+ "FRANTIC_ESCAPE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, increase sandpit"
+ },
+ "FRIENDSHIP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "recurring energy at turn start."
+ },
+ "FTL": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with conditional draw"
+ },
+ "FUEL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy",
+   "draw"
+  ],
+  "note": "free energy and draw"
+ },
+ "FURNACE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "forge each turn"
+ },
+ "FUSION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel plasma orb"
+ },
+ "GAMMA_BLAST": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "13 damage, weak vulnerable"
+ },
+ "GANG_UP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with enemy attacks."
+ },
+ "GATHER_LIGHT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block and star generation"
+ },
+ "GENESIS": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling energy/stars per turn"
+ },
+ "GENETIC_ALGORITHM": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block scales with card upgrades"
+ },
+ "GIANT_ROCK": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "16 damage frontload"
+ },
+ "GLACIER": {
+  "damage_role": "scaling",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "6 block, channel frost"
+ },
+ "GLASSWORK": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block and channel glass orb."
+ },
+ "GLIMMER": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "card draw with deck manipulation"
+ },
+ "GLIMPSE_BEYOND": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "multiplayer soul generation"
+ },
+ "GLITTERSTREAM": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "11 block plus 4 next turn"
+ },
+ "GLOW": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "draw"
+  ],
+  "note": "stars and draw cards"
+ },
+ "GOLD_AXE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales cards played"
+ },
+ "GO_FOR_THE_EYES": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage with conditional weak."
+ },
+ "GRAND_FINALE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "heavy aoe finisher"
+ },
+ "GRAVEBLAST": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "4 damage plus discard tutor"
+ },
+ "GRAVE_WARDEN": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "8 block, add soul"
+ },
+ "GREED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "GUARDS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "transform hand cards to minions."
+ },
+ "GUIDING_STAR": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with delayed draw"
+ },
+ "GUILTY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, removed after combats"
+ },
+ "GUNK_UP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "4 damage 3 times with slime"
+ },
+ "HAILSTORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frost damage scaling"
+ },
+ "HAMMER_TIME": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "all allies forge when forging"
+ },
+ "HAND_OF_GREED": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage with gold bonus."
+ },
+ "HAND_TRICK": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block and add sly"
+ },
+ "HANG": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling damage doubles per hang"
+ },
+ "HAUNT": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage when souls played"
+ },
+ "HAVOC": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "play top card exhaust"
+ },
+ "HAZE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "4 poison aoe to all"
+ },
+ "HEADBUTT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "frontload damage plus tutor discard."
+ },
+ "HEAVENLY_DRILL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling damage with doubling"
+ },
+ "HEGEMONY": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload with next turn energy"
+ },
+ "HEIRLOOM_HAMMER": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "17 damage plus duplicate card"
+ },
+ "HELIX_DRILL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "3 damage per energy"
+ },
+ "HELLO_WORLD": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "add random card each turn"
+ },
+ "HELLRAISER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "auto-play strikes drawn for scaling."
+ },
+ "HEMOKINESIS": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage at life cost"
+ },
+ "HIBERNATE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "channel Frost and share its block this turn"
+ },
+ "HIDDEN_CACHE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "immediate and future star gain"
+ },
+ "HIDDEN_DAGGERS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "discard for shiv generation"
+ },
+ "HIDDEN_GEM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add replay to draw card"
+ },
+ "HIGH_FIVE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "osty deals 11 aoe damage"
+ },
+ "HOLOGRAM": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "block and tutor from discard."
+ },
+ "HOTFIX": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "focus scaling for powers"
+ },
+ "HOWL_FROM_BEYOND": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe frontload with exhaust replay"
+ },
+ "HUDDLE_UP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw for all allies"
+ },
+ "HYPERBEAM": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "26 aoe damage, lose focus"
+ },
+ "ICE_LANCE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "19x3 damage, channel frost"
+ },
+ "IGNITION": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "ally channels plasma for scaling."
+ },
+ "IMITATION_LEARNING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "copy another player's next two power plays"
+ },
+ "IMPATIENCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "conditional card draw"
+ },
+ "IMPERVIOUS": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "high block frontload"
+ },
+ "INFECTION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, self-damage curse"
+ },
+ "INFERNAL_BLADE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "tutor free attack"
+ },
+ "INFERNO": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "lose hp, deal 6 aoe damage"
+ },
+ "INFINITE_BLADES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "add shiv each turn for scaling."
+ },
+ "INFLAME": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "strength scaling"
+ },
+ "INJURY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status curse, dead card"
+ },
+ "INTERCEPT": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "9 block with redirect damage"
+ },
+ "INVOKE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "energy"
+  ],
+  "note": "next turn summon energy"
+ },
+ "IRON_WAVE": {
+  "damage_role": "both",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "5 block 5 damage combo"
+ },
+ "ITERATION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw bonus on status card."
+ },
+ "I_AM_INVINCIBLE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "block with self-replay engine"
+ },
+ "JACKPOT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "frontload with energy card bonus"
+ },
+ "JACK_OF_ALL_TRADES": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "add random colorless card"
+ },
+ "JUGGERNAUT": {
+  "damage_role": "both",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block triggers damage"
+ },
+ "JUGGLING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "copy third attack played"
+ },
+ "KINGLY_KICK": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "damage that costs less when drawn."
+ },
+ "KINGLY_PUNCH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scaling with redraws"
+ },
+ "KNIFE_TRAP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play",
+   "exhaust_synergy"
+  ],
+  "note": "replays all shivs from exhaust"
+ },
+ "KNOCKDOWN": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage plus double damage buff"
+ },
+ "KNOCKOUT_BLOW": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "30 damage, gain stars"
+ },
+ "KNOW_THY_PLACE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply weak vulnerable"
+ },
+ "LANTERN_KEY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "quest, unlock special event."
+ },
+ "LARGESSE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "give card to other player"
+ },
+ "LEADING_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "frontload with shiv generation"
+ },
+ "LEAP": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "9 block immediate"
+ },
+ "LEGION_OF_BONE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "all summon passive"
+ },
+ "LEG_SWEEP": {
+  "damage_role": "frontload",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "11 block, 2 weak"
+ },
+ "LETHALITY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "first attack each turn boost."
+ },
+ "LIFT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "give block to other player"
+ },
+ "LIGHTNING_ROD": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "block with next turn lightning"
+ },
+ "LOOP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "trigger orb passives each turn"
+ },
+ "LUMINESCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "2 energy gain"
+ },
+ "LUNAR_BLAST": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "4 damage per skill played"
+ },
+ "MACHINE_LEARNING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw extra card each turn."
+ },
+ "MAKE_IT_SO": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "damage with skill recursion"
+ },
+ "MALAISE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales with strength debuff"
+ },
+ "MANGLE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "15 damage plus weaken enemy"
+ },
+ "MANIFEST_AUTHORITY": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "7 block add colorless"
+ },
+ "MASTER_OF_STRATEGY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw 3 cards"
+ },
+ "MASTER_PLANNER": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "skills gain sly for replay."
+ },
+ "MAUL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scaling with repeats"
+ },
+ "MAYHEM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "autoplays top deck card"
+ },
+ "MELANCHOLY": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "13 block with cost reduction"
+ },
+ "MEMENTO_MORI": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales off discards"
+ },
+ "METAMORPHOSIS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add 3 free attacks to deck"
+ },
+ "METEOR_SHOWER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "free aoe damage plus debuffs."
+ },
+ "METEOR_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "high cost damage"
+ },
+ "MIDNIGHT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "large attack becomes cheaper as cards are exhausted"
+ },
+ "MIMIC": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "multiplayer block copy"
+ },
+ "MIND_BLAST": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage equals draw pile size"
+ },
+ "MIND_ROT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, draw reduction"
+ },
+ "MINION_DIVE_BOMB": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "13 damage minion attack"
+ },
+ "MINION_SACRIFICE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "simple block card."
+ },
+ "MINION_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with card draw"
+ },
+ "MIRAGE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block scales with poison"
+ },
+ "MISERY": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage plus debuff spread"
+ },
+ "MODDED": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "draw"
+  ],
+  "note": "orb slot, draw, cost up"
+ },
+ "MOLTEN_FIST": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, double vulnerable"
+ },
+ "MOMENTUM_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "frontload damage becomes free."
+ },
+ "MONARCHS_GAZE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "debuff enemy strength scaling"
+ },
+ "MONOLOGUE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling strength per card played"
+ },
+ "MULTI_CAST": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "evoke orb multiple times"
+ },
+ "MURDER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales off cards drawn"
+ },
+ "NECRO_MASTERY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "summon, reflect damage"
+ },
+ "NEGATIVE_PULSE": {
+  "damage_role": "scaling",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block plus apply heavy doom aoe."
+ },
+ "NEOWS_FURY": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with discard recovery"
+ },
+ "NEUROSURGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy",
+   "draw"
+  ],
+  "note": "burst draw and energy with doom"
+ },
+ "NEUTRALIZE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "3 damage plus weak"
+ },
+ "NEUTRON_AEGIS": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "plating scaling"
+ },
+ "NIGHTMARE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "triple card next turn"
+ },
+ "NORMALITY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, limits cards played."
+ },
+ "NOSTALGIA": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "recursion from draw pile"
+ },
+ "NOT_YET": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "2-cost heal 10 hp, exhausts; no combat throughput"
+ },
+ "NOXIOUS_FUMES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling poison engine per turn"
+ },
+ "NO_ESCAPE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "doom scales with existing doom"
+ },
+ "NULL": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, weak, channel"
+ },
+ "OBLIVION": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply doom when playing"
+ },
+ "OFFERING": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "energy and draw for health."
+ },
+ "OMNISLICE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage spreading to all enemies"
+ },
+ "ONE_FOR_ALL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "permanent damage bonus to zero-energy attacks"
+ },
+ "ONE_TWO_PUNCH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "replays next attack"
+ },
+ "ORBIT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy recovery from spending"
+ },
+ "OUTBREAK": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "poison proc damage"
+ },
+ "OUTMANEUVER": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "gain 2 energy next turn"
+ },
+ "OUTRAGE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "immediate attack with copies in players' discard piles"
+ },
+ "OVERCLOCK": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw with burn penalty."
+ },
+ "PACTS_END": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "aoe with exhaust requirement"
+ },
+ "PAGESTORM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw trigger on ethereal cards"
+ },
+ "PALE_BLUE_DOT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw next turn if 5 cards played"
+ },
+ "PANACHE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "5-card combo aoe"
+ },
+ "PANIC_BUTTON": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "30 block, block disable"
+ },
+ "PARRY": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block when playing sovereign."
+ },
+ "PARSE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "pure card draw"
+ },
+ "PARTICLE_WALL": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "block that returns to hand"
+ },
+ "PATTER": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "8 block plus vigor gain"
+ },
+ "PECK": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "6 damage multi-hit"
+ },
+ "PERFECTED_STRIKE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales strikes"
+ },
+ "PHANTOM_BLADES": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "shivs gain retain and bonus damage."
+ },
+ "PHOTON_CUT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with draw and deck manipulation"
+ },
+ "PIERCING_WAIL": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe strength debuff"
+ },
+ "PILLAGE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "6 damage with draw"
+ },
+ "PILLAR_OF_CREATION": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "creation block scaling"
+ },
+ "PINPOINT": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "17 damage, reduce cost"
+ },
+ "PLOT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "all players draw additional cards next turn"
+ },
+ "POISONED_STAB": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage plus poison."
+ },
+ "POKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "minion damage"
+ },
+ "POMMEL_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "frontload with draw"
+ },
+ "POOR_SLEEP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "POUNCE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "12 damage, next skill free"
+ },
+ "PRECISE_CUT": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales down with hand cards"
+ },
+ "PREDATOR": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "frontload damage, draw next turn."
+ },
+ "PREPARED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "neutral card draw"
+ },
+ "PREP_TIME": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "scaling vigor gain per turn"
+ },
+ "PRIMAL_FORCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "transform attacks in hand"
+ },
+ "PRODUCTION": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "2 energy gain"
+ },
+ "PROLONG": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "double block next turn"
+ },
+ "PROPHESIZE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw many cards."
+ },
+ "PROTECTOR": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "minion damage scaling with hp"
+ },
+ "PROWESS": {
+  "damage_role": "scaling",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "dual power scaling"
+ },
+ "PULL_AGGRO": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "summon and 7 block"
+ },
+ "PULL_FROM_BELOW": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales ethereal cards"
+ },
+ "PURITY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "exhaust up to 3 cards"
+ },
+ "PUTREFY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply weak and vulnerable debuffs."
+ },
+ "PYRE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "turn start energy gain"
+ },
+ "QUADCAST": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "evokes rightmost orb"
+ },
+ "QUASAR": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "choose colorless card to add"
+ },
+ "RADIATE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe scales off stars"
+ },
+ "RAGE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "3 block per attack"
+ },
+ "RAINBOW": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel orbs for scaling damage."
+ },
+ "RALLY": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "multi-player block"
+ },
+ "RAMPAGE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload with permanent scaling"
+ },
+ "RATTLE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "osty attack scales with attacks"
+ },
+ "REANIMATE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "20 summon passive"
+ },
+ "REAP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "27 damage attack"
+ },
+ "REAPER_FORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "attacks apply doom for scaling."
+ },
+ "REAVE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage with soul generation"
+ },
+ "REBOOT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "deck cycling and draw"
+ },
+ "REBOUND": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "9 damage with card recycling"
+ },
+ "REFINE_BLADE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "forge, next energy"
+ },
+ "REFLECT": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "17 block, reflect damage"
+ },
+ "REFLEX": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw cards."
+ },
+ "REFRACT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "multi-hit damage"
+ },
+ "REGRET": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, punishes full hand"
+ },
+ "RELAX": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "15 block, next turn draw+energy"
+ },
+ "REND": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales debuff count"
+ },
+ "RESONANCE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gain strength, weaken"
+ },
+ "RESTLESSNESS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw",
+   "energy"
+  ],
+  "note": "draw and energy if hand empty."
+ },
+ "RICOCHET": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "bouncing damage"
+ },
+ "RIGHT_HAND_HAND": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "osty damage, recycled by expensive cards"
+ },
+ "RIP_AND_TEAR": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage 2 random hits"
+ },
+ "ROCKET_PUNCH": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "13 damage, draw, status"
+ },
+ "ROLLING_BOULDER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "5 damage, scales each turn"
+ },
+ "ROYALTIES": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "gold generation at combat end."
+ },
+ "ROYAL_GAMBLE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "star generation"
+ },
+ "RUPTURE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scaling strength on damage taken"
+ },
+ "SACRIFICE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block gains from ally death"
+ },
+ "SALVO": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "12 damage, retain hand"
+ },
+ "SCAVENGE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy",
+   "energy"
+  ],
+  "note": "exhaust, gain energy next"
+ },
+ "SCOURGE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "apply heavy doom and draw."
+ },
+ "SCRAPE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "damage with aggressive draw"
+ },
+ "SCRAWL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw until hand full"
+ },
+ "SCULPTING_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage with ethereal buff"
+ },
+ "SEANCE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "transform to soul"
+ },
+ "SECOND_WIND": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "block per non-attack"
+ },
+ "SECRET_TECHNIQUE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "tutor skill from deck."
+ },
+ "SECRET_WEAPON": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "fetch attack from deck"
+ },
+ "SEEKER_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "frontload with tutor choice"
+ },
+ "SEEKING_EDGE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "forge and aoe damage buff"
+ },
+ "SENTRY_MODE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "add sweeping gaze turn"
+ },
+ "SERPENT_FORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "4 damage on card play"
+ },
+ "SETUP_STRIKE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage plus strength."
+ },
+ "SEVEN_STARS": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "multi-hit aoe damage"
+ },
+ "SEVERANCE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload with soul generation"
+ },
+ "SHADOWMELD": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "double block gains this turn"
+ },
+ "SHADOW_SHIELD": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "11 block, channel dark"
+ },
+ "SHADOW_STEP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "discard, double attack"
+ },
+ "SHAME": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, gain frail each turn."
+ },
+ "SHARED_FATE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "mutual strength debuff"
+ },
+ "SHATTER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe frontload with orb evoke"
+ },
+ "SHINING_STRIKE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage with star gain"
+ },
+ "SHIV": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "4 damage basic attack"
+ },
+ "SHOCKWAVE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "3 weak vulnerable aoe"
+ },
+ "SHROUD": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block whenever doom applied."
+ },
+ "SHRUG_IT_OFF": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "draw"
+  ],
+  "note": "block with card draw"
+ },
+ "SIC_EM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "osty damage with summon scaling"
+ },
+ "SIDESTEP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "gain additional energy next turn"
+ },
+ "SIGNAL_BOOST": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "next power played twice"
+ },
+ "SKEWER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage x times"
+ },
+ "SKIM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw 3 cards"
+ },
+ "SLEIGHT_OF_FLESH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage enemy whenever debuffed."
+ },
+ "SLICE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "basic free attack"
+ },
+ "SLIMED": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "status, draws one card"
+ },
+ "SLOTH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status curse, play limiter"
+ },
+ "SMOKESTACK": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status creation damage"
+ },
+ "SNAKEBITE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply 7 poison"
+ },
+ "SNAP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "ally deals damage, retain card."
+ },
+ "SNEAKY": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block from other player attacks"
+ },
+ "SOLAR_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "frontload with star gain"
+ },
+ "SOOT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, dead card"
+ },
+ "SOUL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "2 card draw"
+ },
+ "SOULBOUND": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "creating Souls also adds them to an ally's draw pile"
+ },
+ "SOUL_STORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales exhaust pile"
+ },
+ "SOVEREIGN_BLADE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage."
+ },
+ "SOW": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe damage"
+ },
+ "SPECTRUM_SHIFT": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "generates colorless card"
+ },
+ "SPEEDSTER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage trigger on draw"
+ },
+ "SPINNER": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "glass channel scaling"
+ },
+ "SPIRIT_OF_ASH": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "4 block per ethereal"
+ },
+ "SPITE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "free damage, draw if hurt."
+ },
+ "SPLASH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "cross-character attack tutor"
+ },
+ "SPOILS_MAP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "quest, marks gold in act"
+ },
+ "SPOILS_OF_BATTLE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "forge action"
+ },
+ "SPORE_MIND": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "SPUR": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "summon, heal ally"
+ },
+ "SQUASH": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage plus vulnerable."
+ },
+ "SQUEEZE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "minion attack scaling"
+ },
+ "STACK": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "block scales with discard pile"
+ },
+ "STAMPEDE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "replay random attack eot"
+ },
+ "STARDUST": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "5 damage x random times"
+ },
+ "STOKE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "exhaust hand, draw cards"
+ },
+ "STOMP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "aoe damage costs less per attack."
+ },
+ "STONE_ARMOR": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "plating scaling"
+ },
+ "STORM": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales lightning on power cards"
+ },
+ "STORM_OF_STEEL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "discard hand for shiv generation"
+ },
+ "STRANGLE": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "8 damage, card play drain"
+ },
+ "STRATAGEM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "tutor from shuffle"
+ },
+ "STRIKE_DEFECT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "simple damage attack."
+ },
+ "STRIKE_IRONCLAD": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "basic attack"
+ },
+ "STRIKE_NECROBINDER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "basic frontload attack"
+ },
+ "STRIKE_REGENT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "6 damage single hit"
+ },
+ "STRIKE_SILENT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "6 damage basic attack"
+ },
+ "SUBROUTINE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy per power play"
+ },
+ "SUCKER_PUNCH": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "frontload damage plus weak."
+ },
+ "SUMMON_FORTH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "summon sovereign blade"
+ },
+ "SUNDER": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "frontload with conditional energy"
+ },
+ "SUPERCRITICAL": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "gain 4 energy"
+ },
+ "SUPERMASSIVE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "scales cards created"
+ },
+ "SUPPRESS": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "11 damage, 3 weak"
+ },
+ "SURVIVOR": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "block with card discard."
+ },
+ "SWEEPING_BEAM": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "aoe damage with draw"
+ },
+ "SWEEPING_GAZE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "free osty random damage"
+ },
+ "SWORD_BOOMERANG": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "3 damage 3 random hits"
+ },
+ "SWORD_SAGE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "blade cost multiplier"
+ },
+ "SYNCHRONIZE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "focus scales with orbs"
+ },
+ "SYNTHESIS": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "damage plus next power costs less."
+ },
+ "TACTICIAN": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "energy generation"
+ },
+ "TAG_TEAM": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "multiplayer damage boost"
+ },
+ "TANK": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "double damage taken, allies protected"
+ },
+ "TAUNT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "7 block, 1 vulnerable"
+ },
+ "TEAR_ASUNDER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "5 damage, scales hp loss"
+ },
+ "TEMPEST": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel lightning for scaling."
+ },
+ "TERRAFORMING": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "vigor scaling"
+ },
+ "TESLA_COIL": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "free damage with lightning trigger"
+ },
+ "THE_BALL": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "immediate attack grows when passed between players"
+ },
+ "THE_BOMB": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "delayed aoe damage"
+ },
+ "THE_GAMBIT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "50 block, risk death"
+ },
+ "THE_HUNT": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage, bonus reward"
+ },
+ "THE_SCYTHE": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales permanently per hit."
+ },
+ "THE_SEALED_THRONE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "star generation from card plays"
+ },
+ "THE_SMITH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "high forge generation"
+ },
+ "THINKING_AHEAD": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw 2, put 1 on top"
+ },
+ "THRASH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "8 damage, scales exhaust"
+ },
+ "THRUMMING_HATCHET": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "11 damage, return next turn"
+ },
+ "THUNDER": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage triggered by lightning evoke."
+ },
+ "THUNDERCLAP": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "aoe with vulnerability"
+ },
+ "TIMES_UP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales with doom"
+ },
+ "TOOLS_OF_THE_TRADE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw discard each turn"
+ },
+ "TORIC_TOUGHNESS": {
+  "damage_role": "none",
+  "block_role": "both",
+  "velocity": [],
+  "note": "5 block, next 2 turns"
+ },
+ "TOXIC": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, take damage"
+ },
+ "TRACKING": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "double damage to weak enemies."
+ },
+ "TRANSFIGURE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add replay to card"
+ },
+ "TRASH_TO_TREASURE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "orb generation on status"
+ },
+ "TREMBLE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "apply vulnerable only"
+ },
+ "TRUE_GRIT": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [
+   "exhaust_synergy"
+  ],
+  "note": "7 block, exhaust random"
+ },
+ "TURBO": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "gain 2 energy"
+ },
+ "TUTOR": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "another player retrieves a chosen draw-pile card"
+ },
+ "TWIN_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "simple two-hit attack."
+ },
+ "TYRANNY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "turn start draw and exhaust"
+ },
+ "ULTIMATE_DEFEND": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "frontload block skill"
+ },
+ "ULTIMATE_STRIKE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "14 damage single hit"
+ },
+ "UNDEATH": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "7 block, copy to discard"
+ },
+ "UNDERWORLD": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "other players' attacks apply Doom this turn"
+ },
+ "UNLEASH": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "damage scales osty hp"
+ },
+ "UNMOVABLE": {
+  "damage_role": "none",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "double first block gain per turn."
+ },
+ "UNRELENTING": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "damage with next attack discount"
+ },
+ "UNTOUCHABLE": {
+  "damage_role": "none",
+  "block_role": "frontload",
+  "velocity": [],
+  "note": "frontload block skill"
+ },
+ "UPPERCUT": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [],
+  "note": "13 damage plus weak+vulnerable"
+ },
+ "UPROAR": {
+  "damage_role": "both",
+  "block_role": "none",
+  "velocity": [
+   "extra_play"
+  ],
+  "note": "10 damage, play random"
+ },
+ "UP_MY_SLEEVE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add 3 shivs to hand"
+ },
+ "VEILPIERCER": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "frontload damage, next ethereal free."
+ },
+ "VENERATE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "star generation"
+ },
+ "VICIOUS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "draw"
+  ],
+  "note": "draw trigger on vulnerable"
+ },
+ "VOID": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, lose energy on draw"
+ },
+ "VOID_FORM": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "cost_reduction"
+  ],
+  "note": "2 free plays, end turn"
+ },
+ "VOLLEY": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "10 damage x times"
+ },
+ "VOLTAIC": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel lightning scaling."
+ },
+ "WASTE_AWAY": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, reduces energy per turn"
+ },
+ "WELL_LAID_PLANS": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "card retention utility"
+ },
+ "WHIRLWIND": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "5 damage aoe multiple times"
+ },
+ "WHISTLE": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "33 damage, stun"
+ },
+ "WHITE_NOISE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "add free power to hand"
+ },
+ "WISH": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "tutor"
+  ],
+  "note": "tutor any card from deck."
+ },
+ "WISP": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [
+   "energy"
+  ],
+  "note": "free energy"
+ },
+ "WITHER": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status, dead card, self-damage while in hand"
+ },
+ "WOUND": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "status curse, dead card"
+ },
+ "WRAITH_FORM": {
+  "damage_role": "scaling",
+  "block_role": "scaling",
+  "velocity": [],
+  "note": "intangible with dex loss"
+ },
+ "WRITHE": {
+  "damage_role": "none",
+  "block_role": "none",
+  "velocity": [],
+  "note": "curse, dead card"
+ },
+ "WROUGHT_IN_WAR": {
+  "damage_role": "frontload",
+  "block_role": "none",
+  "velocity": [],
+  "note": "7 damage, forge"
+ },
+ "ZAP": {
+  "damage_role": "scaling",
+  "block_role": "none",
+  "velocity": [],
+  "note": "channel one lightning."
+ }
+}

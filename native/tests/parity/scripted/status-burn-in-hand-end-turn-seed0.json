@@ -1,0 +1,106 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 intent triple diverges by design (monsters.rs:22-29). The Burn end-turn-in-hand tick does NOT consume RNG, so player HP + pile counts + hand shape stay byte-equal."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 39,
+        "id": "SHRINKER_BEETLE",
+        "intent": "DEBUFF_STRONG",
+        "intent_damage": 0,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 39,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "cost": -1,
+        "id": "BURN",
+        "playable": false,
+        "target": "None",
+        "type": "Status"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "d866db444d81bff2b01c0d173a38c2ee99fee891",
+    "scenario": "status-burn-in-hand-end-turn",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 39,
+            "id": "SHRINKER_BEETLE",
+            "intent": "ATTACK",
+            "intent_damage": 7,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 39,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [
+          {
+            "cost": -1,
+            "id": "BURN",
+            "playable": false,
+            "target": "None",
+            "type": "Status"
+          }
+        ],
+        "player": {
+          "block": 0,
+          "energy": 3,
+          "hp": 78,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": [
+            {
+              "amount": 1,
+              "id": "SHRINK"
+            }
+          ]
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

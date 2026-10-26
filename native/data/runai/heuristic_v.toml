@@ -1,0 +1,181 @@
+# HeuristicV weights — full-run-AI plan §5/M1 (bead sts2-rs-40ikw.5).
+#
+# Texel-style tunable scalar weights for the tier-1 run-level value
+# function (sts2-runai eval/heuristic_v.rs) plus the pathing projection
+# tables (projection.rs). This file is the embedded default — the crate
+# compiles it in via include_str! and `Weights::load(path)` overrides it.
+#
+# The numbers are honest M1 priors: simple, monotone, hand-set. They get
+# refit from M2 rollout labels (plan §5-M2). Keep every entry documented.
+
+# ── HP ────────────────────────────────────────────────────────────────
+# V_hp = hp_frac * (hp_base + hp_act * act_progress) + low_hp * min(0, hp_frac - 0.5)
+# act_progress in [0,1] over the 3-act run: HP matters more the deeper you are.
+hp_base = 1.0
+hp_act = 1.0
+low_hp = 1.5
+
+# ── Gold ──────────────────────────────────────────────────────────────
+# V_gold = gold_sqrt * sqrt(gold) — diminishing returns, monotone.
+gold_sqrt = 0.02
+
+# ── Deck (per-card static features from eval/card_stats.rs) ──────────
+# Frontload: sum over attacks of damage/(1+cost), per deck card (density).
+frontload_per_card = 0.030
+# Block density: average block per deck card.
+block_per_card = 0.040
+# Counts (not densities — owning more is better regardless of deck size).
+aoe_count = 0.08
+scaling_count = 0.10
+upgrade_count = 0.04
+draw_total = 0.015
+energy_total = 0.03
+# Penalties.
+curse_count = -0.12
+# Per-card penalty beyond `deck_size_target` cards.
+deck_size_target = 20.0
+deck_size_penalty = -0.02
+# Per (cost-2)+ unit across the deck (energy-curve heaviness).
+heavy_cost_penalty = -0.02
+
+# ── Relics ────────────────────────────────────────────────────────────
+# 0.10→0.50 (2026-06-17): at 0.10 a shop relic was ΔV-neutral vs its gold
+# cost (gold_sqrt·√gold), so ~473g hoarded never converted to buys (0.04/run).
+# A/B on release-2000 (full-500 nets, eval-cheap): win-rate 8.6%→11.9%,
+# McNemar χ²=21 p≈5e-6, gold spend +89/run. Curve saturates at 0.50 (0.7/1.0
+# add nothing — past here the AI is gold-constrained, not valuation-constrained).
+relic_default = 0.50
+# Overrides keyed by RelicId Debug name. M1 hand priors for common IC
+# pool standouts; everything else takes relic_default.
+[relic_values]
+BurningBlood = 0.15
+PaelsWing = 0.05
+
+# ── Boss identity ─────────────────────────────────────────────────────
+[boss]
+# Extra value per AoE card when the pinned act boss is summon-heavy
+# (matched against PinnedActBoss::display_name).
+aoe_bonus = 0.05
+summon_boss_names = ["The Colony", "Swarm Mother"]
+# Flat per-boss difficulty offsets (Debug display_name keys). Constant
+# offsets don't change rankings; kept for V calibration only.
+[boss.offsets]
+
+# ── Potions ───────────────────────────────────────────────────────────
+[potions]
+# V per held potion, plus boss insurance that grows with proximity to
+# the act boss (act_floor / boss_row).
+held = 0.05
+boss_insurance = 0.05
+
+# ── Ascension ─────────────────────────────────────────────────────────
+# Constant calibration offset per ascension level (rank-inert).
+[ascension]
+per_level = -0.01
+
+# ── Shop policy ───────────────────────────────────────────────────────
+[shop]
+# Gold floor the knapsack never spends below (kept for future shops /
+# events / card removal).
+gold_reserve = 75
+# Minimum ΔV and ΔV-per-gold for a purchase to clear the bar.
+min_dv = 0.01
+min_dv_per_gold = 0.0002
+
+# ── Pathing projection tables (projection.rs, plan §2 pathing) ───────
+[projection]
+# Expected HP loss per encounter class × act (acts 1..3). Heuristic
+# initial tables; refit from M2 campaign audit-log statistics.
+monster_hp_loss = [8.0, 12.0, 16.0]
+elite_hp_loss = [18.0, 26.0, 34.0]
+# Event rooms when no per-event prior exists; Unknown(?) rooms.
+event_hp_loss = 2.0
+unknown_hp_loss = 4.0
+# Expected gold per encounter class (monster 10-20, elite 35-45).
+monster_gold = 15.0
+elite_gold = 40.0
+# Expected reward ΔV per room class (card pick EV, relic EV, ...).
+monster_reward_dv = 0.06
+elite_reward_dv = 0.18
+treasure_dv = 0.12
+shop_dv = 0.05
+event_dv = 0.02
+unknown_dv = 0.03
+# Rest-site projection: heal fraction matches the engine's
+# floor(max_hp * 0.3); smith_dv is the flat upgrade-ΔV stand-in used
+# when projecting a future rest as a smith instead of a heal.
+rest_heal_frac = 0.3
+smith_dv = 0.04
+# Score penalty applied when a projected path drives HP to <= 0
+# (scaled by the deficit) — keeps dead paths strictly dominated while
+# staying continuous for tuning.
+death_penalty = 2.0
+
+# ── Tier-2/3 escalation (policy/tiered.rs, plan §5/M2) ────────────────
+[tiers]
+# Per-surface tier-1 top-2 margin thresholds (V-score units): escalate
+# a card-shaped decision to fight_delta probes when the margin is BELOW
+# the surface's threshold. E7 sweeps these — starting points only.
+card_reward_margin = 0.02
+boss_relic_margin = 0.05
+deck_mutation_margin = 0.01
+smith_margin = 0.01
+# Meta-move surfaces (M2.5, bead sts2-rs-5jrk9): path_delta / rest_delta
+# escalation margins. Default 0.0 = NEVER escalate (the tier-2/3 stack
+# historically bypassed Path/Rest; E2 importance leg showed they own the
+# act-2 frontier — Path +36, Rest +24). Calibrated up by E12/E13 before
+# use; left inert here so the default agent is unchanged. meta_probe_weight
+# blends the probe score with the tier-1 projected score on these surfaces.
+path_margin = 0.0
+rest_margin = 0.0
+meta_probe_weight = 1.0
+# Probe the top-N tier-1-ranked candidates per escalation.
+top_candidates = 3
+# Tier-2 probe budget. 100-sim MCTS, K=16 paired synthetic seeds, T=8
+# player-turn truncation. T=8 (not the plan §5/M2 default T=5) per the
+# 2026-06-13 rescoped E3/E4/E5 calibration (docs/experiments/
+# 2026-06-13-calibration-rescoped.json): T=8 is the shortest horizon
+# with Kendall τ ≥ 0.85 (τ=0.879) and the only truncation clearing E4's
+# <10% top-pick flip bar (9.3%); T=5 flips 28% of top picks vs full-fight
+# scoring. sims=100 stands (10× sims buys only τ +0.04 at this horizon).
+# K=32 per the focused 2026-06-13 T=8 K-leg: K=16 still flips 17.3% of top
+# picks at the faithful horizon (genuine sampling noise, not a truncation
+# artifact); K=32 is the first arm under the 10% bar (τ=0.826, flip=8.7%).
+tier2_sims = 100
+tier2_k = 32
+tier2_t_turns = 8
+# Tier-3 (boss-relic picks): stronger search, longer horizon. Kept at
+# 1000 sims (not eval-strong's 5000) so ~2-5 escalations/run stay
+# under ~30 s box wall; sweepable via the TOML.
+tier3_sims = 1000
+tier3_k = 16
+tier3_t_turns = 8
+
+# ── Optionality-aware pathing (policy/surfaces/pathing.rs) ────────────
+# Value of FLEXIBILITY in the per-floor-replanned act DAG. The map is
+# replanned every floor and only the best path's first edge commits, so
+# the realized value of an edge is the *expected best path revealed after
+# future floors*, not the single best path through it. With Gumbel
+# projection residuals that expectation is the log-sum-exp soft-max at
+# temperature `tau`; tau = 0 restores the historical hard-max exactly.
+# branch_bonus weights ln(#paths) (raw route freedom); elite_skip_bonus is
+# the "skip an elite if you want" real option (a column that keeps both an
+# elite-free and an elite-bearing route to the boss). Elites are a reward
+# FARM you normally want, so the skip bonus is GATED on death risk: it scales
+# from 0 at/above elite_skip_hp_threshold (healthy → take the elite) to full
+# at 0 HP (wounded → keep the escape route). Calibrated by
+# examples/pathing_optionality_ab.rs — see
+# docs/experiments/2026-06-23-pathing-optionality.md.
+#
+# NEUTRALIZED (2026-06-23): tau = 0 + elite_skip_bonus = 0 ⇒
+# OptionalityWeights::hard_max(), i.e. EXACTLY the legacy pre-feature pather.
+# The soft-max/elite-skip values were only ever calibrated on the synthetic
+# walk_net/dose-response harness, which proved unreliable (it lied 6× about the
+# map-topology features — see the experiment doc's "Result — NULL" section).
+# The machinery + workbench overlay ship live, but the deployed default stays
+# hard-max until a clean FULL-ENGINE A/B confirms a non-negative win-rate effect.
+[optionality]
+tau = 0.0
+branch_bonus = 0.0
+elite_skip_bonus = 0.0
+elite_skip_hp_threshold = 0.5

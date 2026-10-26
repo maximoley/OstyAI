@@ -1,0 +1,11 @@
+[package]
+name = "sts2-srchash"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Deterministic, dependency-free content hashing of a crate's build inputs. ONE hasher shared by each engine crate's build.rs (stamps SRC_HASH compiled INTO the crate) and the runtime recompute, so the parity harness can prove the loaded .so matches the source it claims to test (issue #15, bead sts2-rs-cg5ci)."
+
+[lints]
+workspace = true

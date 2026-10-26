@@ -1,0 +1,198 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sts2-core",
+    "crates/sts2-content",
+    "crates/sts2-wire",
+    "crates/sts2-py",
+    "crates/sts2-bench",
+    "crates/sts2-cli",
+    "crates/sts2-mcts",
+    "crates/sts2-runai",
+    "crates/sts2-vocab",
+    "crates/sts2-workbench",
+    "crates/sts2-workbench-wasm",
+    "crates/sts2-srchash",
+    "xtask",
+]
+# `fuzz/` is a cargo-fuzz crate that uses nightly + libfuzzer-sys and
+# would clash with this workspace's `unsafe_code = "deny"` lint. Keep
+# it as a sibling workspace; see `fuzz/README.md` (bead sts2-rs-722dx).
+exclude = ["fuzz"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.96"
+license = "MIT"
+authors = ["Thomas Friedel"]
+repository = "https://github.com/tfriedel/sts2-rs"
+
+[workspace.dependencies]
+sts2-core = { path = "crates/sts2-core", version = "0.0.1" }
+sts2-content = { path = "crates/sts2-content", version = "0.0.1" }
+# PyO3-free wire parse + CombatState reconstruction. `sts2-py` is a thin
+# dialect shim over it; anything else that needs to ingest a captured wire
+# dict does so without an interpreter.
+sts2-wire = { path = "crates/sts2-wire", version = "0.0.1" }
+sts2-mcts = { path = "crates/sts2-mcts", version = "0.0.1" }
+# Bead `sts2-rs-40ikw.4` (full-run-AI M0): run-level AI crate — arena
+# harness, seed panels, baseline policies, MCTS combat bridge.
+sts2-runai = { path = "crates/sts2-runai", version = "0.0.1" }
+# PPO id vocabularies + pin files, split out of sts2-runai so sts2-wire and
+# the browser workbench (wasm) never pull tract-onnx / rayon.
+sts2-vocab = { path = "crates/sts2-vocab", version = "0.0.1" }
+# Browser workbench: the ported FastAPI layer (JSON in/out, no I/O).
+sts2-workbench = { path = "crates/sts2-workbench", version = "0.0.1" }
+# Bead `sts2-rs-a2fh` exposed sts2-cli as a library; reusable from
+# bench harnesses (e.g. `mcts_corpus_realistic`).
+sts2-cli = { path = "crates/sts2-cli", version = "0.0.1" }
+smallvec = { version = "1.13", features = ["const_generics", "union"] }
+rand = "0.8"
+rand_xoshiro = "0.6"
+thiserror = "1.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4", features = ["derive"] }
+rayon = "1.10"
+# `arc-swap` — lock-free read of the write-once-at-install relic hook
+# registries (`ChannelRegistry`). Reads happen on every dispatch from
+# rayon-parallel rollouts; the map is immutable after `INSTALL_ONCE`, so
+# an `ArcSwap` snapshot turns the per-dispatch `RwLock` read into a
+# lock-free atomic load while staying fully thread-safe (bead sts2-rs-b8z17).
+arc-swap = "1.7"
+mimalloc = { version = "0.1", default-features = false }
+ahash = { version = "0.8", default-features = false, features = ["std"] }
+# `serial_test` — applied to the small set of tests that race on
+# process-global listener registries (relic_effects + run_effects
+# empty-bus probes, combat_loop death-check globals). Lets the rest of
+# the ~1430-test suite stay parallel. Workspace dev-dep only.
+serial_test = "3"
+# `proptest` — property-based testing for the deterministic engine. Used to
+# assert invariants (RNG range/determinism, state round-trips) across many
+# generated inputs instead of a handful of hand-picked fixtures. Workspace
+# dev-dep only; never enters the library graph.
+proptest = "1"
+# `tract-onnx` — pure-Rust CPU ONNX runtime for the PPO run-policy net
+# (2026-07-07 ppo-rust-inference plan, Task 3). `ort` is the documented
+# fallback ONLY if tract can't load/run the exported graph — that's a
+# human-escalated decision point, not a default choice.
+tract-onnx = "0.23"
+# Browser workbench (wasm32-unknown-unknown) — only `sts2-workbench-wasm`
+# links these. `getrandom` is never called by first-party code; rand 0.8
+# pulls it in and it refuses to compile for wasm32-unknown-unknown
+# without the `js` feature.
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+console_error_panic_hook = "0.1"
+getrandom = "0.2"
+# `crc32fast` — the workbench's deterministic per-instance hue jitter
+# (port of `zlib.crc32` in sts2-pycli/python/workbench/server.py).
+crc32fast = "1"
+# `regex` — PPO vocab/encoder canonicalization port (mirrors
+# `sts2-pycli/python/ppo/vocab.py::canonical()`), Task 4+.
+regex = "1"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+missing_debug_implementations = "warn"
+# rust_2018_idioms is a lint group → needs priority < 0 to allow per-lint overrides:
+rust_2018_idioms = { level = "warn", priority = -1 }
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+# Pedantic carve-outs (see RUST_PORTING_PLAN_v2.1):
+module_name_repetitions = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+too_many_lines = "allow"
+# Added by sts2-rs-4qpx (clippy 1.95 cleanup): these pedantic lints fire
+# broadly in our game-state code where the patterns are deliberate and
+# safe. They flag well-understood casts on bounded game values (HP,
+# energy, deck counts ≤ 255), small-copy params passed by &ref for API
+# uniformity, and naming pairs that are domain-meaningful (e.g.
+# `dealer`/`damager`).
+cast_possible_truncation = "allow"
+cast_possible_wrap = "allow"
+cast_sign_loss = "allow"
+cast_precision_loss = "allow"
+similar_names = "allow"
+trivially_copy_pass_by_ref = "allow"
+struct_excessive_bools = "allow"
+needless_pass_by_value = "allow"
+items_after_statements = "allow"
+ignore_without_reason = "allow"
+match_same_arms = "allow"
+unreadable_literal = "allow"
+type_complexity = "allow"
+large_enum_variant = "allow"
+option_option = "allow"
+ptr_arg = "allow"
+format_push_string = "allow"
+# Doc-style lints surfaced by 1.95: our doc comments mix prose with
+# Python pin references (`sts2-rl-agent@…`, file:line refs) and
+# manually-indented numbered/bulleted lists. Mass-rewriting them all
+# would churn ~100 lines of docs for zero behavioral benefit.
+doc_markdown = "allow"
+doc_overindented_list_items = "allow"
+doc_lazy_continuation = "allow"
+# `excessive_precision` was previously allow-listed because the texel
+# writeback flow (`scripts/texel_writeback.py`) emitted `repr(float)` into
+# f32 slots, re-introducing f64-precision literals on every tuning pass
+# (e.g. `0.6000000238418579_f32`). Bead sts2-rs-nvh0u trimmed the existing
+# literals to their f32-shortest forms AND updated `format_f32` in the
+# writeback script to round-trip through f32 before formatting, so future
+# tuning passes stay clippy-clean.
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+# Bead `sts2-rs-2vwf`: switched abort → unwind so corpus_gen can
+# `catch_unwind` per-combat panics when --deck-source sts2log-perfect
+# exercises content-gap card dispatch (Rampage/Headbutt/etc). Under
+# abort a single malformed-deck panic takes down the whole rayon pool
+# and wastes the 50min training-corpus run. Unwind costs a small
+# binary-size delta and slightly slower panic path; hot-path codegen
+# (MCTS/eval) is panic-free, so bench numbers are unaffected.
+panic = "unwind"
+opt-level = 3
+
+# Browser workbench wasm build. `panic = "abort"` is safe here: nothing in
+# the wasm graph relies on `catch_unwind` (that is corpus_gen, CLI-only),
+# and unwinding on wasm32 costs binary size for no benefit.
+[profile.wasm-release]
+inherits = "release"
+panic = "abort"
+
+[profile.bench]
+inherits = "release"
+debug = true
+
+# Optimized-but-checked profile for fuzz / corpus-gen / parity sweeps.
+#
+# The default `release` profile keeps `overflow-checks` OFF for the perf
+# baseline (~2 M tx/sec). But the engine casts bounded game values
+# (HP/energy/deck ≤ 255) with `cast_possible_truncation` lint-allowed, so a
+# value that escapes its assumed bound *wraps silently* in release. This
+# profile turns those into panics (plus `debug_assert!`s) while keeping `-O3`
+# + LTO, so long sweeps that already run for minutes can catch arithmetic
+# bugs without regressing the perf-sensitive default release. Opt in with
+# `cargo run --profile release-checked …` for corpus_gen / parity / fuzz reps.
+[profile.release-checked]
+inherits = "release"
+overflow-checks = true
+debug-assertions = true
+
+# Dev-profile speedups: keep our code unoptimized (fast compile) but
+# build dependencies with -O1. Cold builds are ~10s slower, but test
+# execution drops noticeably because hot deps (rand, serde_json,
+# criterion's runtime, pyo3 codepaths) actually run.
+[profile.dev.package."*"]
+opt-level = 1
+
+# Trim debuginfo to line tables only — keeps backtraces useful, cuts
+# linker work and target-dir size meaningfully.
+[profile.dev]
+debug = "line-tables-only"
+split-debuginfo = "unpacked"

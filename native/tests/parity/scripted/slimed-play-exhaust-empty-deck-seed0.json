@@ -1,0 +1,110 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). SLIMED play with empty deck+discard does NOT consume RNG (no shuffle), so player.energy + hand + exhaust counts stay byte-equal."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 40,
+        "id": "SHRINKER_BEETLE",
+        "intent": "DEBUFF_STRONG",
+        "intent_damage": 0,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 40,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "cost": 1,
+        "id": "SLIMED",
+        "playable": true,
+        "target": "None",
+        "type": "Status"
+      },
+      {
+        "base_damage": 6,
+        "cost": 1,
+        "id": "STRIKE_IRONCLAD",
+        "playable": true,
+        "target": "AnyEnemy",
+        "type": "Attack"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "f01b3191b367c6020f0b1c813cab716a8961ff5f",
+    "scenario": "slimed-play-exhaust-empty-deck",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 40,
+            "id": "SHRINKER_BEETLE",
+            "intent": "DEBUFF_STRONG",
+            "intent_damage": 0,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 40,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 1,
+        "hand": [
+          {
+            "base_damage": 6,
+            "cost": 1,
+            "id": "STRIKE_IRONCLAD",
+            "playable": true,
+            "target": "AnyEnemy",
+            "type": "Attack"
+          }
+        ],
+        "player": {
+          "block": 0,
+          "energy": 2,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

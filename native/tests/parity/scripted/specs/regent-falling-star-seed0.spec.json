@@ -1,0 +1,41 @@
+{
+  "name": "regent-falling-star-seed0",
+  "description": "Regent FallingStar vs ShrinkerBeetle. play_card -> deal_damage + apply WEAK + apply VULNERABLE. Mirrors sts2-rl-agent@01c094d:sts2_env/cards/regent.py:66-73 falling_star (basic-4). Bead sts2-rs-s39 (bay-fixtures).",
+  "scenario": "regent-falling-star",
+  "seed": 0,
+  "character": "Regent",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 72,
+    "current_hp": 72,
+    "stars": 2,
+    "hand": [
+      {"card_id": "FALLING_STAR"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    }
+  ]
+}

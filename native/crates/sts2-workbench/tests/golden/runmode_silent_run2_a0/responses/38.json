@@ -1,0 +1,29 @@
+{
+ "error": null,
+ "impl": "rust",
+ "options": [
+  {
+   "action": "select_map_node",
+   "args": {
+    "col": 0,
+    "row": 3
+   },
+   "is_best": false,
+   "label": "Map → (0,3)",
+   "prob": 0.1325
+  },
+  {
+   "action": "select_map_node",
+   "args": {
+    "col": 2,
+    "row": 3
+   },
+   "is_best": true,
+   "label": "Map → (2,3)",
+   "prob": 0.8675
+  }
+ ],
+ "ppo_available": true,
+ "surface": "path",
+ "value": 0.781
+}

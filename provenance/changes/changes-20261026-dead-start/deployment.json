@@ -1,0 +1,68 @@
+{
+  "native_sha256": "1d3a5d4a405b299c3171fbaf768e393f0d768d3407e8e435f457c118ec882a67",
+  "environment_revision": "native-ai-import-v1",
+  "checkpoint_cycle": 4550,
+  "checkpoint_sha256": "dc7220972f1c24bc8d61dfb0e110920061dbf918b7a4fb4bbf62c71704beeaca",
+  "checkpoint_unchanged": true,
+  "replay_unchanged": true,
+  "first_unprepared_bank": 8275,
+  "tests_passed": 59,
+  "audit_states": 60768,
+  "regression_outcome": {
+    "actions": [
+      10,
+      8,
+      1,
+      5,
+      5,
+      0,
+      4,
+      3,
+      3,
+      3,
+      1,
+      2,
+      0,
+      7,
+      1,
+      3,
+      0
+    ],
+    "damage_fraction": 0.510869562625885,
+    "decisions": 17,
+    "forced_actions": 0,
+    "hp": 0,
+    "id": 0,
+    "initial_enemy_hp": 184,
+    "initial_hp": 66.0,
+    "potions": [
+      {
+        "cost": 0.7105088233947754,
+        "id": 0,
+        "used": true
+      },
+      {
+        "cost": 0.07975323498249054,
+        "id": 1,
+        "used": true
+      }
+    ],
+    "return": 0.02554347924888134,
+    "search_tier": "hard",
+    "searched_decisions": 17,
+    "simulation_budget": 64,
+    "simulations": 1088,
+    "spent_cost": 0.7902620434761047,
+    "state_hash": 3867233915299991692,
+    "terminal": true,
+    "trace": 10674903276155052230,
+    "truncated": false,
+    "value": 0.0661417618393898,
+    "win": false
+  },
+  "bank_combats": 1020,
+  "bank_unresolved": 0,
+  "time": 1792986414.6215029,
+  "supervisor_pid": 1928042,
+  "feeder_pid": 1928043
+}

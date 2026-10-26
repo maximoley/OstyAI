@@ -1,0 +1,1304 @@
+{
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "map_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": 0,
+   "bg_row": 3,
+   "bg_seed": 11180935036767329045,
+   "floor": 3,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 3,
+   "bg_seed": 11180935036767329045,
+   "choices": [
+    {
+     "col": 0,
+     "icon": null,
+     "row": 4,
+     "type": "Unknown"
+    },
+    {
+     "col": 1,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 4,
+     "type": "Monster"
+    }
+   ],
+   "decision": "map_select",
+   "floor": 3,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/lagavulin_matriarch_boss.png",
+     "id": "LAGAVULIN_MATRIARCH_BOSS",
+     "kind": "LagavulinMatriarch",
+     "name": "Lagavulin Matriarch",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 0,
+     "row": 3
+    },
+    "path_plan": {
+     "baseline_col": 1,
+     "best_col": 1,
+     "columns": [
+      {
+       "baseline_score": 0.7458,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": false,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 18,
+       "score": 0.7458
+      },
+      {
+       "baseline_score": 0.7458,
+       "can_skip_elite": false,
+       "col": 1,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 1,
+       "n_paths": 13,
+       "score": 0.7458
+      }
+     ],
+     "diverged": false,
+     "first_col": null,
+     "route": [
+      {
+       "col": 1,
+       "row": 4
+      },
+      {
+       "col": 2,
+       "row": 5
+      },
+      {
+       "col": 2,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 0,
+       "row": 9
+      },
+      {
+       "col": 0,
+       "row": 10
+      },
+      {
+       "col": 1,
+       "row": 11
+      },
+      {
+       "col": 0,
+       "row": 12
+      },
+      {
+       "col": 1,
+       "row": 13
+      },
+      {
+       "col": 2,
+       "row": 14
+      },
+      {
+       "col": 3,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 2,
+       "type": "Shop",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        },
+        {
+         "col": 1,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": true,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 4
+        },
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 5
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 5
+        },
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 4,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        },
+        {
+         "col": 1,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 5,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 6
+        },
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 7
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 6,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        },
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 8
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 7,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 9
+        },
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 9
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 9
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 10
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 10
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 11
+        },
+        {
+         "col": 0,
+         "row": 11
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 11
+        },
+        {
+         "col": 2,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 11
+        },
+        {
+         "col": 4,
+         "row": 11
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 10,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 12
+        },
+        {
+         "col": 1,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 11,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 12
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 11,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 12
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        },
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 12,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 12,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 13
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 13,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 13,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "options": [
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 0,
+      "row": 4
+     },
+     "enabled": true,
+     "label": "Unknown (0,4)"
+    },
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 1,
+      "row": 4
+     },
+     "enabled": true,
+     "label": "Monster (1,4)"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Summon 5.",
+      "description_rich": "Summon 5.",
+      "id": "BODYGUARD",
+      "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+      "index": 8,
+      "name": "Bodyguard",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "id": "UNLEASH",
+      "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+      "index": 9,
+      "name": "Unleash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 3 and gain 3 Energy.",
+      "description_rich": "Next turn, Summon 3 and gain 3 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 10,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": true
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 2 and gain 2 Energy.",
+      "description_rich": "Next turn, Summon 2 and gain 2 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 11,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     }
+    ],
+    "gold": 130,
+    "hp": 59,
+    "max_hp": 66,
+    "name": "Necrobinder",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of your turn, Summon 1.",
+      "id": "BOUND_PHYLACTERY",
+      "image": "https://assets.test/relic_atlas/bound_phylactery.png",
+      "name": "Bound Phylactery"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   }
+  }
+ }
+}

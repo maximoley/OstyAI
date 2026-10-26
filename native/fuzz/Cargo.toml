@@ -1,0 +1,34 @@
+[package]
+name = "sts2-fuzz"
+version = "0.0.0"
+edition = "2021"
+publish = false
+# cargo-fuzz uses nightly-only features (libfuzzer-sys via `-Z` flags); keep
+# this crate OUT of the main workspace to avoid forcing nightly on every
+# `cargo check`. The empty `[workspace]` table below makes Cargo treat this
+# directory as its own workspace root.
+[workspace]
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+arbitrary = { version = "1", features = ["derive"] }
+rand = "0.8"
+rand_xoshiro = "0.6"
+smallvec = { version = "1.13", features = ["const_generics", "union"] }
+sts2-core = { path = "../crates/sts2-core" }
+sts2-content = { path = "../crates/sts2-content" }
+
+[[bin]]
+name = "combat_step"
+path = "fuzz_targets/combat_step.rs"
+test = false
+doc = false
+bench = false
+
+# Allow `unsafe_code` here: libfuzzer-sys's `fuzz_target!` macro expands to
+# an `extern "C"` shim that the workspace-wide `unsafe_code = "deny"` would
+# reject. This crate is excluded from the workspace, so the lint config does
+# not apply, but we leave a comment here for future maintainers.

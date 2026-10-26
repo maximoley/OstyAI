@@ -1,0 +1,67 @@
+{
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 50,
+      "max_energy": 3,
+      "max_hp": 50,
+      "powers": [
+        {
+          "amount": 2,
+          "id": "DEXTERITY"
+        }
+      ]
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "ascension": 20,
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "a275b4a0a931022e01bedefed5aa9e28ce4580f6",
+    "scenario": "dexterity-block",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "gain_block",
+        "amount": 5,
+        "props": "MOVE",
+        "target": "player"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 7,
+          "energy": 0,
+          "hp": 50,
+          "max_energy": 3,
+          "max_hp": 50,
+          "powers": [
+            {
+              "amount": 2,
+              "id": "DEXTERITY"
+            }
+          ]
+        },
+        "round": 0,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

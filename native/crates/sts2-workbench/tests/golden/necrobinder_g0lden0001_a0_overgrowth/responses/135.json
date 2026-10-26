@@ -1,0 +1,251 @@
+{
+ "details": [
+  "You HP 17→0 (−17)",
+  "Byrdonis HP 18→0  ☠ defeated",
+  "You −Devour Life",
+  "You −Summon Next Turn",
+  "You −Energy Next Turn"
+ ],
+ "error": null,
+ "label": "End turn",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "game_over",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 2,
+   "bg_row": 6,
+   "bg_seed": 11180935036767329045,
+   "floor": 6,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 2,
+   "bg_row": 6,
+   "bg_seed": 11180935036767329045,
+   "decision": "game_over",
+   "floor": 6,
+   "options": [],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/strike_necrobinder.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 3,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_NECROBINDER",
+      "image": "https://assets.test/card_atlas/necrobinder/defend_necrobinder.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Summon 5.",
+      "description_rich": "Summon 5.",
+      "id": "BODYGUARD",
+      "image": "https://assets.test/card_atlas/necrobinder/bodyguard.png",
+      "index": 7,
+      "name": "Bodyguard",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "description_rich": "Osty deals 6 damage.\nDeals additional damage equal to Osty's current HP.",
+      "id": "UNLEASH",
+      "image": "https://assets.test/card_atlas/necrobinder/unleash.png",
+      "index": 8,
+      "name": "Unleash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 2 and gain 2 Energy.",
+      "description_rich": "Next turn, Summon 2 and gain 2 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 9,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Whenever you play a Soul, Summon 1.",
+      "description_rich": "Whenever you play a Soul, Summon 1.",
+      "id": "DEVOUR_LIFE",
+      "image": "https://assets.test/card_atlas/necrobinder/devour_life.png",
+      "index": 10,
+      "name": "Devour Life",
+      "rarity": "Rare",
+      "type": "Power",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Next turn, Summon 2 and gain 2 Energy.",
+      "description_rich": "Next turn, Summon 2 and gain 2 Energy.",
+      "id": "INVOKE",
+      "image": "https://assets.test/card_atlas/necrobinder/invoke.png",
+      "index": 11,
+      "name": "Invoke",
+      "rarity": "Common",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "pink",
+      "cost": 1,
+      "description": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+      "description_rich": "Osty deals 7 damage.\nAdd Retain to a card in your Hand.",
+      "id": "SNAP",
+      "image": "https://assets.test/card_atlas/necrobinder/snap.png",
+      "index": 12,
+      "name": "Snap",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "quest",
+      "cost": "X",
+      "description": "Unplayable.\nMarks a site of 600 extra Gold in the next Act.",
+      "description_rich": "[gold]Unplayable[/gold].\nMarks a site of 600 extra Gold in the next Act.",
+      "id": "SPOILS_MAP",
+      "image": "https://assets.test/card_atlas/quest/spoils_map.png",
+      "index": 13,
+      "name": "Spoils Map",
+      "rarity": "Quest",
+      "type": "Quest",
+      "upgraded": false
+     }
+    ],
+    "gold": 141,
+    "hp": 0,
+    "max_hp": 66,
+    "name": "Necrobinder",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of your turn, Summon 1.",
+      "id": "BOUND_PHYLACTERY",
+      "image": "https://assets.test/relic_atlas/bound_phylactery.png",
+      "name": "Bound Phylactery"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   },
+   "victory": false
+  }
+ }
+}

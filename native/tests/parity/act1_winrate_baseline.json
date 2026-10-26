@@ -1,0 +1,11 @@
+{
+  "bead": "sts2-rs-fxw",
+  "total_seeds": 10000,
+  "encounters": {
+    "Nibbit": { "runs": 2000, "won": 2000, "winrate": 1.0000 },
+    "Mawler": { "runs": 2000, "won": 2000, "winrate": 1.0000 },
+    "LeafSlimeS": { "runs": 2000, "won": 2000, "winrate": 1.0000 },
+    "TwigSlimeS": { "runs": 2000, "won": 2000, "winrate": 1.0000 },
+    "ShrinkerBeetles": { "runs": 2000, "won": 1979, "winrate": 0.9895 }
+  }
+}

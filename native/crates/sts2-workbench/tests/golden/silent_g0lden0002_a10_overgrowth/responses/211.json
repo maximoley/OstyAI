@@ -1,0 +1,12 @@
+{
+ "runs": [
+  {
+   "enemy_min_pct": 10.1695,
+   "final_floor": 3,
+   "final_turn": null,
+   "stem": "20260101_000000_Silent_G0LDEN0002",
+   "turn1_q": null,
+   "won": false
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+[package]
+name = "sts2-workbench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "The workbench's game-driving + rendering layer (port of sts2-pycli/python/workbench): JSON in, JSON out, no I/O — links natively for tests and into wasm for the browser."
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+sts2-wire = { workspace = true }
+# `/api/bench`: single-tree MCTS over the live combat, the M1 phone-speed
+# exit criterion (and the seam the M2 advisors reuse).
+sts2-mcts = { workspace = true }
+# The map's path-plan overlay (`PyRunManager::path_plan`): the run-AI
+# pathing surface + HeuristicV. Default features OFF so tract-onnx / rayon
+# sweep code stays out of the wasm graph.
+sts2-runai = { path = "../sts2-runai", version = "0.0.1", default-features = false }
+serde = { workspace = true }
+serde_json = { workspace = true }
+crc32fast = { workspace = true }
+# Seeded heuristic playouts for `/api/bench` (never entropy — see the wasm
+# crate's getrandom note).
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+# `combat_resolve_choice_selection` takes the engine's SmallVec selection.
+smallvec = { workspace = true }
+
+[features]
+# The PPO run policy (tract-onnx) — the champion net loaded from bytes
+# (`ppo::load`), node values, the probability panel, the `ppo` brain. On
+# by default so the native tests cover it; the wasm shell enables it too.
+default = ["ppo"]
+ppo = ["sts2-runai/ppo"]
+
+[dev-dependencies]
+# Golden-parity test: SHA-256 of the normalized response, matching the
+# Python dump script (`sts2-pycli/scripts/dump_workbench_golden.py`).
+sha2 = "0.10"

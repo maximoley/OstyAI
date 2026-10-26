@@ -1,0 +1,45 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-21s28`.
+# Class: `zero_play_combat` — fires when the entire combat ends
+# with the player having played zero cards (a global aggregate).
+# Cannot fire at decision_index=0 because by that point the combat
+# is just starting; the audit detector only flags this at fight-
+# end, not on individual decisions.
+#
+# Seapunk t=1; rational MCTS picks a card → combat will not be
+# zero-play.
+#
+# Source: derived from floor003_seapunk_endturn.toml.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 3
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.SEAPUNK_WEAK"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 57
+max_hp    = 80
+gold      = 108
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "SEAPUNK"
+
+[blunder_assertion]
+class          = "zero_play_combat"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

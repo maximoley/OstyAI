@@ -1,0 +1,28 @@
+{
+  "actions": [
+    {
+      "amount": 5,
+      "props": "MOVE",
+      "target": "player",
+      "type": "gain_block"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Dexterity adds flat amount to block gained. Player has DexterityPower(2); player gains 5 block \u2192 5 + 2 = 7. Player.block = 7. Verifies the additive arm of the block pipeline. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [],
+  "name": "dexterity-block-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50,
+    "powers": [
+      {
+        "amount": 2,
+        "id": "DEXTERITY"
+      }
+    ]
+  },
+  "scenario": "dexterity-block",
+  "seed": 0
+}

@@ -1,0 +1,7 @@
+# P6-10 dispatch coverage matrix (bead sts2-rs-fxw)
+# Format: <character>: dispatched=N unregistered=N not_implemented=N total=N
+ironclad: dispatched=87 unregistered=0 not_implemented=0 total=87
+silent: dispatched=89 unregistered=0 not_implemented=0 total=89
+defect: dispatched=88 unregistered=0 not_implemented=0 total=88
+colorless: dispatched=247 unregistered=1 not_implemented=0 total=248
+necrobinder: dispatched=72 unregistered=0 not_implemented=0 total=72

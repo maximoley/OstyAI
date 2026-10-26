@@ -1,0 +1,40 @@
+{
+ "base": {
+  "block": 36.2,
+  "damage": 28.8,
+  "velocity": 60.1,
+  "volume": 39.7
+ },
+ "candidates": [
+  {
+   "delta": {
+    "block": -0.7,
+    "damage": 4.5,
+    "velocity": -1.1,
+    "volume": 1.5
+   },
+   "index": 0,
+   "scores": {
+    "block": 35.5,
+    "damage": 33.3,
+    "velocity": 59.0,
+    "volume": 41.2
+   }
+  },
+  {
+   "delta": {
+    "block": -2.3,
+    "damage": -2.2,
+    "velocity": -10.8,
+    "volume": -4.3
+   },
+   "index": 1,
+   "scores": {
+    "block": 33.9,
+    "damage": 26.6,
+    "velocity": 49.3,
+    "volume": 35.4
+   }
+  }
+ ]
+}

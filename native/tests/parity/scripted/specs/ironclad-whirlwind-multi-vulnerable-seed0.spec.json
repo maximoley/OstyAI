@@ -1,0 +1,42 @@
+{
+  "name": "ironclad-whirlwind-multi-vulnerable-seed0",
+  "description": "Whirlwind (X energy, 5 base damage, AllEnemies) at X=3 hits 3 enemies. Per-enemy Vulnerable check happens inside the per-hit damage pipeline (calculate_damage -> VulnerablePower.modify_damage_multiplicative), so each enemy independently receives floor(5 * 1.5) = 7 if vulnerable, else 5. With Vulnerable on enemies 0 and 2 (amount=2 and amount=1 — the multiplier is binary on has_power, not on stack count: see double-vulnerable-stack-seed0) and no Vulnerable on enemy 1, expected damage per X-tick is 7 / 5 / 7. Over 3 ticks: -21 / -15 / -21. Exercises the order of resolution between the outer X-loop and the per-enemy Vuln check; pins the multi-target Vulnerable scaling missing from existing fixtures (parent bead sts2-rs-8z3fl.6). Pin: sts2-rl-agent@01c094d cards/ironclad.py:1574 whirlwind + powers/common.py VulnerablePower + core/damage.py calculate_damage (math.floor).",
+  "scenario": "ironclad-whirlwind-multi-vulnerable",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "WHIRLWIND"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 30,
+      "current_hp": 30,
+      "powers": [{"id": "VULNERABLE", "amount": 2}]
+    },
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 30,
+      "current_hp": 30
+    },
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 30,
+      "current_hp": 30,
+      "powers": [{"id": "VULNERABLE", "amount": 1}]
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0
+    }
+  ]
+}

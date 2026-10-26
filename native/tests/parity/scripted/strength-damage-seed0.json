@@ -1,0 +1,85 @@
+{
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 48,
+        "id": "ShrinkerBeetle",
+        "is_alive": true,
+        "max_hp": 48,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 50,
+      "max_energy": 3,
+      "max_hp": 50,
+      "powers": [
+        {
+          "amount": 3,
+          "id": "STRENGTH"
+        }
+      ]
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "1ec27f23f5106fb2b5050139dffd6437cd7efb19",
+    "scenario": "strength-damage",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "deal_damage",
+        "amount": 6,
+        "dealer": "player",
+        "props": "MOVE",
+        "target": "enemy_0"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 39,
+            "id": "ShrinkerBeetle",
+            "is_alive": true,
+            "max_hp": 48,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 50,
+          "max_energy": 3,
+          "max_hp": 50,
+          "powers": [
+            {
+              "amount": 3,
+              "id": "STRENGTH"
+            }
+          ]
+        },
+        "round": 0,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

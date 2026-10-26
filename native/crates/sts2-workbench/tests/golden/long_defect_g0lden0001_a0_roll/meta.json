@@ -1,0 +1,849 @@
+{
+ "coverage": [
+  "card_select:add_generated_free_to_hand",
+  "card_select:remove|upgrade",
+  "card_select:transform",
+  "card_select:upgrade",
+  "combat_card_select",
+  "decision:card_reward",
+  "decision:card_select",
+  "decision:combat_play",
+  "decision:event_choice",
+  "decision:game_over",
+  "decision:map_select",
+  "decision:rest_site",
+  "decision:shop",
+  "potion_used",
+  "room_reveal",
+  "route:/api/deck/reward-preview",
+  "route:/api/deck/trend",
+  "route:/api/live/action",
+  "route:/api/live/auto-action",
+  "route:/api/live/choice-ranker",
+  "route:/api/live/deck-analysis",
+  "route:/api/live/from_replay",
+  "route:/api/live/hint",
+  "route:/api/live/last-move-regret",
+  "route:/api/live/map",
+  "route:/api/live/ppo-policy",
+  "route:/api/live/quit",
+  "route:/api/live/regret-review",
+  "route:/api/live/save",
+  "route:/api/live/search_tree",
+  "route:/api/live/seek",
+  "route:/api/live/start",
+  "route:/api/live/state",
+  "route:/api/live/timeline",
+  "route:/api/live/wpa-review",
+  "route:/api/load",
+  "route:/api/map",
+  "route:/api/mcts-runs",
+  "route:/api/mcts-runs/aggregate",
+  "route:/api/recommend",
+  "route:/api/regret-review",
+  "route:/api/runs",
+  "route:/api/runs/stat",
+  "route:/api/saves",
+  "route:/api/saves/load",
+  "route:/api/search_tree",
+  "route:/api/step",
+  "route:/api/timeline",
+  "route:/api/wpa-review",
+  "seek_fork",
+  "status:404",
+  "status:409"
+ ],
+ "engine": {
+  "src_hash": "3c33116a5e8894fa",
+  "version": "0.0.1"
+ },
+ "final_act": 1,
+ "final_floor": 16,
+ "full_responses": 116,
+ "full_steps": 40,
+ "patches": {
+  "assets_base_url": "https://assets.test",
+  "ppo_disabled": true,
+  "saved_at": "2026-01-01T00:00:00Z"
+ },
+ "python": "3.13",
+ "reached_game_over": true,
+ "requests": 290,
+ "scenario": {
+  "act1": "roll",
+  "ascension": 0,
+  "character": "Defect",
+  "full": true,
+  "max_steps": 2000,
+  "name": "long_defect_g0lden0001_a0_roll",
+  "neow_option": 0,
+  "policy": "survivor",
+  "probes": [
+   {
+    "at": 25,
+    "kind": "state"
+   },
+   {
+    "at": 25,
+    "kind": "auto_action"
+   },
+   {
+    "at": 25,
+    "kind": "ppo_policy"
+   },
+   {
+    "at": 30,
+    "kind": "hint"
+   },
+   {
+    "at": 30,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 31,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 35,
+    "kind": "reward_preview"
+   },
+   {
+    "at": 40,
+    "kind": "map"
+   },
+   {
+    "at": 41,
+    "kind": "timeline"
+   },
+   {
+    "at": 42,
+    "back": 5,
+    "kind": "seek"
+   },
+   {
+    "at": 50,
+    "kind": "state"
+   },
+   {
+    "at": 50,
+    "kind": "auto_action"
+   },
+   {
+    "at": 50,
+    "kind": "deck_analysis"
+   },
+   {
+    "at": 55,
+    "kind": "hint"
+   },
+   {
+    "at": 55,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 55,
+    "kind": "search_tree"
+   },
+   {
+    "at": 56,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 60,
+    "kind": "save",
+    "name": "golden mid"
+   },
+   {
+    "at": 61,
+    "kind": "saves_list"
+   },
+   {
+    "at": 62,
+    "kind": "load",
+    "name": "golden mid"
+   },
+   {
+    "at": 75,
+    "kind": "state"
+   },
+   {
+    "at": 75,
+    "kind": "auto_action"
+   },
+   {
+    "at": 75,
+    "kind": "ppo_policy"
+   },
+   {
+    "at": 75,
+    "kind": "wpa_review"
+   },
+   {
+    "at": 80,
+    "kind": "hint"
+   },
+   {
+    "at": 80,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 81,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 85,
+    "kind": "reward_preview"
+   },
+   {
+    "at": 100,
+    "kind": "state"
+   },
+   {
+    "at": 100,
+    "kind": "auto_action"
+   },
+   {
+    "at": 100,
+    "kind": "regret_review"
+   },
+   {
+    "at": 105,
+    "kind": "hint"
+   },
+   {
+    "at": 105,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 105,
+    "kind": "search_tree"
+   },
+   {
+    "at": 106,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 125,
+    "kind": "state"
+   },
+   {
+    "at": 125,
+    "kind": "auto_action"
+   },
+   {
+    "at": 130,
+    "kind": "hint"
+   },
+   {
+    "at": 130,
+    "kind": "choice_ranker"
+   },
+   {
+    "at": 131,
+    "kind": "last_move_regret"
+   },
+   {
+    "at": 150,
+    "kind": "state"
+   },
+   {
+    "at": 150,
+    "kind": "auto_action"
+   },
+   {
+    "at": 175,
+    "kind": "state"
+   },
+   {
+    "at": 175,
+    "kind": "auto_action"
+   },
+   {
+    "at": 200,
+    "kind": "state"
+   },
+   {
+    "at": 200,
+    "kind": "auto_action"
+   },
+   {
+    "at": 225,
+    "kind": "state"
+   },
+   {
+    "at": 225,
+    "kind": "auto_action"
+   },
+   {
+    "at": 250,
+    "kind": "state"
+   },
+   {
+    "at": 250,
+    "kind": "auto_action"
+   },
+   {
+    "at": 275,
+    "kind": "state"
+   },
+   {
+    "at": 275,
+    "kind": "auto_action"
+   },
+   {
+    "at": 300,
+    "kind": "state"
+   },
+   {
+    "at": 300,
+    "kind": "auto_action"
+   },
+   {
+    "at": 325,
+    "kind": "state"
+   },
+   {
+    "at": 325,
+    "kind": "auto_action"
+   },
+   {
+    "at": 350,
+    "kind": "state"
+   },
+   {
+    "at": 350,
+    "kind": "auto_action"
+   },
+   {
+    "at": 375,
+    "kind": "state"
+   },
+   {
+    "at": 375,
+    "kind": "auto_action"
+   },
+   {
+    "at": 400,
+    "kind": "state"
+   },
+   {
+    "at": 400,
+    "kind": "auto_action"
+   },
+   {
+    "at": 425,
+    "kind": "state"
+   },
+   {
+    "at": 425,
+    "kind": "auto_action"
+   },
+   {
+    "at": 450,
+    "kind": "state"
+   },
+   {
+    "at": 450,
+    "kind": "auto_action"
+   },
+   {
+    "at": 475,
+    "kind": "state"
+   },
+   {
+    "at": 475,
+    "kind": "auto_action"
+   },
+   {
+    "at": 500,
+    "kind": "state"
+   },
+   {
+    "at": 500,
+    "kind": "auto_action"
+   },
+   {
+    "at": 525,
+    "kind": "state"
+   },
+   {
+    "at": 525,
+    "kind": "auto_action"
+   },
+   {
+    "at": 550,
+    "kind": "state"
+   },
+   {
+    "at": 550,
+    "kind": "auto_action"
+   },
+   {
+    "at": 575,
+    "kind": "state"
+   },
+   {
+    "at": 575,
+    "kind": "auto_action"
+   },
+   {
+    "at": 600,
+    "kind": "state"
+   },
+   {
+    "at": 600,
+    "kind": "auto_action"
+   },
+   {
+    "at": 625,
+    "kind": "state"
+   },
+   {
+    "at": 625,
+    "kind": "auto_action"
+   },
+   {
+    "at": 650,
+    "kind": "state"
+   },
+   {
+    "at": 650,
+    "kind": "auto_action"
+   },
+   {
+    "at": 675,
+    "kind": "state"
+   },
+   {
+    "at": 675,
+    "kind": "auto_action"
+   },
+   {
+    "at": 700,
+    "kind": "state"
+   },
+   {
+    "at": 700,
+    "kind": "auto_action"
+   },
+   {
+    "at": 725,
+    "kind": "state"
+   },
+   {
+    "at": 725,
+    "kind": "auto_action"
+   },
+   {
+    "at": 750,
+    "kind": "state"
+   },
+   {
+    "at": 750,
+    "kind": "auto_action"
+   },
+   {
+    "at": 775,
+    "kind": "state"
+   },
+   {
+    "at": 775,
+    "kind": "auto_action"
+   },
+   {
+    "at": 800,
+    "kind": "state"
+   },
+   {
+    "at": 800,
+    "kind": "auto_action"
+   },
+   {
+    "at": 825,
+    "kind": "state"
+   },
+   {
+    "at": 825,
+    "kind": "auto_action"
+   },
+   {
+    "at": 850,
+    "kind": "state"
+   },
+   {
+    "at": 850,
+    "kind": "auto_action"
+   },
+   {
+    "at": 875,
+    "kind": "state"
+   },
+   {
+    "at": 875,
+    "kind": "auto_action"
+   },
+   {
+    "at": 900,
+    "kind": "state"
+   },
+   {
+    "at": 900,
+    "kind": "auto_action"
+   },
+   {
+    "at": 925,
+    "kind": "state"
+   },
+   {
+    "at": 925,
+    "kind": "auto_action"
+   },
+   {
+    "at": 950,
+    "kind": "state"
+   },
+   {
+    "at": 950,
+    "kind": "auto_action"
+   },
+   {
+    "at": 975,
+    "kind": "state"
+   },
+   {
+    "at": 975,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1000,
+    "kind": "state"
+   },
+   {
+    "at": 1000,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1025,
+    "kind": "state"
+   },
+   {
+    "at": 1025,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1050,
+    "kind": "state"
+   },
+   {
+    "at": 1050,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1075,
+    "kind": "state"
+   },
+   {
+    "at": 1075,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1100,
+    "kind": "state"
+   },
+   {
+    "at": 1100,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1125,
+    "kind": "state"
+   },
+   {
+    "at": 1125,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1150,
+    "kind": "state"
+   },
+   {
+    "at": 1150,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1175,
+    "kind": "state"
+   },
+   {
+    "at": 1175,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1200,
+    "kind": "state"
+   },
+   {
+    "at": 1200,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1225,
+    "kind": "state"
+   },
+   {
+    "at": 1225,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1250,
+    "kind": "state"
+   },
+   {
+    "at": 1250,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1275,
+    "kind": "state"
+   },
+   {
+    "at": 1275,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1300,
+    "kind": "state"
+   },
+   {
+    "at": 1300,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1325,
+    "kind": "state"
+   },
+   {
+    "at": 1325,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1350,
+    "kind": "state"
+   },
+   {
+    "at": 1350,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1375,
+    "kind": "state"
+   },
+   {
+    "at": 1375,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1400,
+    "kind": "state"
+   },
+   {
+    "at": 1400,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1425,
+    "kind": "state"
+   },
+   {
+    "at": 1425,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1450,
+    "kind": "state"
+   },
+   {
+    "at": 1450,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1475,
+    "kind": "state"
+   },
+   {
+    "at": 1475,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1500,
+    "kind": "state"
+   },
+   {
+    "at": 1500,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1525,
+    "kind": "state"
+   },
+   {
+    "at": 1525,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1550,
+    "kind": "state"
+   },
+   {
+    "at": 1550,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1575,
+    "kind": "state"
+   },
+   {
+    "at": 1575,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1600,
+    "kind": "state"
+   },
+   {
+    "at": 1600,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1625,
+    "kind": "state"
+   },
+   {
+    "at": 1625,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1650,
+    "kind": "state"
+   },
+   {
+    "at": 1650,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1675,
+    "kind": "state"
+   },
+   {
+    "at": 1675,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1700,
+    "kind": "state"
+   },
+   {
+    "at": 1700,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1725,
+    "kind": "state"
+   },
+   {
+    "at": 1725,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1750,
+    "kind": "state"
+   },
+   {
+    "at": 1750,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1775,
+    "kind": "state"
+   },
+   {
+    "at": 1775,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1800,
+    "kind": "state"
+   },
+   {
+    "at": 1800,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1825,
+    "kind": "state"
+   },
+   {
+    "at": 1825,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1850,
+    "kind": "state"
+   },
+   {
+    "at": 1850,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1875,
+    "kind": "state"
+   },
+   {
+    "at": 1875,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1900,
+    "kind": "state"
+   },
+   {
+    "at": 1900,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1925,
+    "kind": "state"
+   },
+   {
+    "at": 1925,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1950,
+    "kind": "state"
+   },
+   {
+    "at": 1950,
+    "kind": "auto_action"
+   },
+   {
+    "at": 1975,
+    "kind": "state"
+   },
+   {
+    "at": 1975,
+    "kind": "auto_action"
+   },
+   {
+    "at": 2000,
+    "kind": "state"
+   },
+   {
+    "at": 2000,
+    "kind": "auto_action"
+   }
+  ],
+  "seed": "G0LDEN0001"
+ },
+ "steps_played": 218
+}

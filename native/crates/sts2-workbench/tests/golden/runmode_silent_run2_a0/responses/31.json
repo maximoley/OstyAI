@@ -1,0 +1,11 @@
+{
+ "agreed": false,
+ "available": true,
+ "band": "differed",
+ "brain": "ppo",
+ "champion_label": "Take Snakebite",
+ "champion_prob": 1.0,
+ "margin": 1.0,
+ "your_label": "Take Ricochet",
+ "your_prob": 0.0
+}

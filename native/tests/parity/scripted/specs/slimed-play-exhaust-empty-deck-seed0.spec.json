@@ -1,0 +1,35 @@
+{
+  "name": "slimed-play-exhaust-empty-deck-seed0",
+  "description": "Slimed status-card play parity: hand=[SLIMED, STRIKE_IRONCLAD], initial_energy=3, deck=[] (recorder default). Playing SLIMED (cost=1, keywords={exhaust}, effect_vars={cards:1}) costs 1 energy → energy=2, fires _draw_cards(1) on an empty draw pile + empty discard pile → no draw (no reshuffle source), Slimed exhausted → exhaust_pile_count=1, hand=[STRIKE_IRONCLAD]. Pins the exhaust-on-play + draw-side-effect contract in the empty-pile boundary where the post-play hand size shrinks by exactly 1 (the played card) rather than staying flat (1 played + 1 drawn). Sibling fixture for an actual draw resolution would require recorder draw_pile support (not yet implemented; see close reason). Pin: sts2-rl-agent@01c094d:sts2_env/cards/status.py:158-170 (slimed_effect + make_slimed). Bead sts2-rs-8z3fl.12 (follow-up to 8z3fl.11). ShrinkerBeetle is the empty-encounter sentinel.",
+  "scenario": "slimed-play-exhaust-empty-deck",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle intent triple diverges by design (monsters.rs:22-29). SLIMED play with empty deck+discard does NOT consume RNG (no shuffle), so player.energy + hand + exhaust counts stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "SLIMED"},
+      {"card_id": "STRIKE_IRONCLAD"}
+    ]
+  },
+  "enemies": [
+    {
+      "builder": "sts2_env.monsters.act1_weak:create_shrinker_beetle",
+      "builder_seed": 0
+    }
+  ],
+  "actions": [
+    {"type": "play_card", "hand_index": 0}
+  ]
+}

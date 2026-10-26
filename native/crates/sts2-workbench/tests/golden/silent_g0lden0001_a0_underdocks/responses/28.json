@@ -1,0 +1,43 @@
+{
+ "error": "no PPO net loaded for Silent",
+ "impl": "rust",
+ "options": [
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 0
+   },
+   "is_best": false,
+   "label": "Take Flick-Flack",
+   "prob": null
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 1
+   },
+   "is_best": false,
+   "label": "Take Dagger Throw",
+   "prob": null
+  },
+  {
+   "action": "select_card_reward",
+   "args": {
+    "card_index": 2
+   },
+   "is_best": false,
+   "label": "Take Expertise",
+   "prob": null
+  },
+  {
+   "action": "skip_card_reward",
+   "args": {},
+   "is_best": false,
+   "label": "Skip card reward",
+   "prob": null
+  }
+ ],
+ "ppo_available": false,
+ "surface": "card-pick",
+ "value": null
+}

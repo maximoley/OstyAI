@@ -1,0 +1,29 @@
+{
+  "name": "double-vulnerable-stack-seed0",
+  "description": "Verifies VulnerablePower amount stacking semantics. Cultist has VulnerablePower(amount=4) (representing 4 stacks); player attacks for 6 raw → multiplier is still 1.5x (Python's Vulnerable returns the same VULNERABLE_MULTIPLIER regardless of stack count — duration vs strength) → 6 * 3/2 = 9 → cultist HP 48 - 9 = 39. The amount=4 round-trips through the parity exporter unchanged.",
+  "scenario": "double-vulnerable-stack",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "powers": [{"id": "VULNERABLE", "amount": 4}]
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 6,
+      "props": "MOVE"
+    }
+  ]
+}

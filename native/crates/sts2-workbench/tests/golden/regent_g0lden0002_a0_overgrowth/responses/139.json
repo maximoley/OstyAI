@@ -1,0 +1,56 @@
+{
+ "act": 1,
+ "candidates": [
+  {
+   "is_best": false,
+   "key": "choice:skip",
+   "label": "skip",
+   "q": 1.1227,
+   "visits": 10,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:1",
+   "label": "DEFEND_REGENT",
+   "q": 1.1291,
+   "visits": 10,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:2",
+   "label": "DEFEND_REGENT",
+   "q": 1.1201,
+   "visits": 9,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": true,
+   "key": "choice:3",
+   "label": "FURNACE",
+   "q": 1.1302,
+   "visits": 10,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:4",
+   "label": "STRIKE_REGENT",
+   "q": 1.1244,
+   "visits": 9,
+   "win_prob": 1.0
+  }
+ ],
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "decision": "card_select"
+}

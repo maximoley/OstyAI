@@ -1,0 +1,8 @@
+{
+ "action": "select_card_reward",
+ "args": {
+  "card_index": 2
+ },
+ "fallback": true,
+ "policy": "ppo"
+}

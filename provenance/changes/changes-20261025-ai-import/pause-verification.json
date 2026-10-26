@@ -1,0 +1,76 @@
+{
+  "step": 4242,
+  "validated": 4200,
+  "checkpoint_sha256": "fc7d1cdf67d5835659849996b6b11af60c9ba572a74cfc0759bd3d521cd0087f",
+  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004242.pt",
+  "replay_sha256": "c34bfc2ce008d484a35298b306b8dc2a39f9dfa39fe4095449807cba407709bf",
+  "settings": {
+    "cycles": 10000,
+    "effective_batch": 16384,
+    "microbatch": 256,
+    "updates_per_cycle": 1,
+    "validation_every": 100,
+    "human_validation_every": 500,
+    "human_validation_runs": 512,
+    "validation_combats": 8192,
+    "workers": 80,
+    "search_simulations": {
+      "easy": 16,
+      "hard": 64,
+      "elite": 96,
+      "boss": 128
+    },
+    "skip_forced_actions": true,
+    "replay_capacity": 65536,
+    "replay_rows": 1024,
+    "schema_sha256": "7f56e126875a3e8ddccdb61dbec6a6190e6d25d756ebaef33674c93e76036dab",
+    "seed": 2026102501,
+    "potion_cost": "independent per-instance Uniform[0,1]",
+    "sampler": "full-corpus bank stream",
+    "prioritized_replay": {
+      "alpha": 1.0,
+      "beta": 1.0,
+      "uniform_mix": 0.05,
+      "priority": "absolute network value error",
+      "epsilon": 0.001
+    },
+    "learner_pool_sampling": {
+      "schema": 1,
+      "mixture": "simulation_budget_proportional",
+      "budgets": {
+        "easy": 16,
+        "hard": 64,
+        "elite": 96,
+        "boss": 128
+      },
+      "quotas": {
+        "easy": 862,
+        "hard": 3449,
+        "elite": 5174,
+        "boss": 6899
+      },
+      "priority_normalization": "within_pool",
+      "importance_target": "uniform_within_pool",
+      "retention": "existing_FIFO"
+    },
+    "logging_schema": 3,
+    "model_config": {
+      "width": 128,
+      "heads": 4,
+      "layers": 4,
+      "ff": 512,
+      "slots": 128,
+      "card_definitions": 585,
+      "catalog_names": 3447,
+      "enum_size": 256,
+      "numeric_fields": 40
+    },
+    "initial_weights_sha256": "b9d2607d05bd7c95f632ae869a1aebbe76f9d479889d8053afadeaa0c4d7ab98"
+  },
+  "service": {
+    "supervisor_pid": 1271906,
+    "trainer_pid": 1271908,
+    "stage": "stopped",
+    "exit_code": 0
+  }
+}

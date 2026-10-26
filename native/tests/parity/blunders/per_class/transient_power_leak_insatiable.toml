@@ -1,0 +1,45 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-21s28`.
+# Class: `transient_power_leak` — fires when a transient/expiring
+# power buff is wasted (e.g. Strength temporary stacks not consumed
+# before turn-end).
+#
+# Insatiable t=1 opener — no transient powers are active at start of
+# combat, so the rational MCTS pick (a 1-cost play) cannot be
+# flagged as transient_power_leak. The class label is informational;
+# the must_not_pick="End turn" substring gates the assertion.
+#
+# Source: derived from unused_energy_opener_insatiable_t1.toml.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 33
+act        = "ACT.HIVE"
+encounter  = "ENCOUNTER.THE_INSATIABLE_BOSS"
+room_type  = "boss"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 66
+max_hp    = 81
+gold      = 60
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+@MOMENTUM", "DOMINATE+", "ONE_TWO_PUNCH+", "SHRUG_IT_OFF", "CRUELTY", "GREED", "ANGER", "FEEL_NO_PAIN", "BATTLE_TRANCE", "PROWESS+", "IMPERVIOUS", "BRIGHTEST_FLAME", "TREMBLE", "UNRELENTING", "SPITE+", "VICIOUS+", "BLOODLETTING", "SHOCKWAVE", "EVIL_EYE", "MOLTEN_FIST"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE", "LASTING_CANDY", "MEAL_TICKET", "PUNCH_DAGGER", "STORYBOOK", "GORGET", "VAJRA", "MR_STRUGGLES"]
+potions   = []
+
+[[monsters]]
+kind = "THE_INSATIABLE"
+
+[blunder_assertion]
+class          = "transient_power_leak"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

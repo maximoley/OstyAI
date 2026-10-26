@@ -1,0 +1,19 @@
+{
+ "act": null,
+ "best_label": "Survivor",
+ "best_win_prob": 1.0,
+ "drop_pct": 0,
+ "floor": null,
+ "idx": 30,
+ "is_blunder": false,
+ "matched_best": true,
+ "message": "Turn 2: Survivor matched the MCTS line (P(win) 100%)",
+ "n_actions": 5,
+ "node_id": null,
+ "played_label": "Survivor",
+ "played_win_prob": 1.0,
+ "player_rank": 0,
+ "regret": 0.0,
+ "turn": 2,
+ "visits": 5
+}

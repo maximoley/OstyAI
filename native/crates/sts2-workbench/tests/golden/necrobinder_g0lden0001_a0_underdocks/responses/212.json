@@ -1,0 +1,21 @@
+{
+ "final_turn_histogram": {
+  "6": 1
+ },
+ "n_losses": 1,
+ "n_runs": 1,
+ "pattern_tags": {},
+ "representative_losses": [
+  {
+   "enemy_min_pct": 5.7143,
+   "final_turn": 6,
+   "stem": "20260101_000000_Necrobinder_G0LDEN0001",
+   "turn1_q": null
+  }
+ ],
+ "turn1_q": {
+  "max": null,
+  "mean": null,
+  "min": null
+ }
+}

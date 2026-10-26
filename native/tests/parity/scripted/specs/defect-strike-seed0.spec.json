@@ -1,0 +1,40 @@
+{
+  "name": "defect-strike-seed0",
+  "description": "Defect StrikeDefect vs Cultist. Single play_card -> deal_damage_player_to_enemy (current_damage path). Mirrors sts2-rl-agent@01c094d:sts2_env/cards/defect.py basic Strike. Bead sts2-rs-kumxn (ohxoq.3).",
+  "scenario": "defect-strike",
+  "seed": 0,
+  "character": "Defect",
+  "encounter": "Cultist",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — Cultist's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "STRIKE_DEFECT"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "Cultist",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    }
+  ]
+}

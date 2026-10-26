@@ -1,0 +1,152 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) \u2014 Cultist's intent roll diverges by design (monsters.rs:22-29). Headbutt + resolve_choice itself does not consume RNG so pile shapes stay byte-equal."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 48,
+        "id": "Cultist",
+        "is_alive": true,
+        "max_hp": 48,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "base_block": 5,
+        "cost": 1,
+        "id": "DEFEND_IRONCLAD",
+        "playable": true,
+        "target": "Self",
+        "type": "Skill"
+      },
+      {
+        "base_damage": 9,
+        "cost": 1,
+        "id": "HEADBUTT",
+        "playable": true,
+        "target": "AnyEnemy",
+        "type": "Attack"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Cultist",
+    "python_pin": "01c094d",
+    "rust_pin": "146b9f90fc329d9026ddd361c00d5b0e03220b2a",
+    "scenario": "headbutt-discard-to-draw",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 48,
+            "id": "Cultist",
+            "is_alive": true,
+            "max_hp": 48,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [
+          {
+            "base_damage": 9,
+            "cost": 1,
+            "id": "HEADBUTT",
+            "playable": true,
+            "target": "AnyEnemy",
+            "type": "Attack"
+          }
+        ],
+        "player": {
+          "block": 5,
+          "energy": 2,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "cards": [
+          {
+            "id": "DEFEND_IRONCLAD",
+            "type": "Skill"
+          }
+        ],
+        "max_select": 1,
+        "min_select": 1,
+        "type": "card_select"
+      }
+    },
+    {
+      "action": {
+        "action": "resolve_choice"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 1,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 39,
+            "id": "Cultist",
+            "is_alive": true,
+            "max_hp": 48,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 5,
+          "energy": 1,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

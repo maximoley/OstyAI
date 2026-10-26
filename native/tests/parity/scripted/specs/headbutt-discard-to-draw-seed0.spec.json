@@ -1,0 +1,49 @@
+{
+  "name": "headbutt-discard-to-draw-seed0",
+  "description": "Headbutt's discard-to-top-of-draw card-choice cycle. Play Defend first (lands in discard), then Headbutt (damages enemy + raises pending_choice over the discard pile), then resolve_choice index=0 to put the discarded Defend on top of the draw pile. Mirrors sts2-rl-agent@01c094d:sts2_env/cards/ironclad.py:359-370.",
+  "scenario": "headbutt-discard-to-draw",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "Cultist",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — Cultist's intent roll diverges by design (monsters.rs:22-29). Headbutt + resolve_choice itself does not consume RNG so pile shapes stay byte-equal."
+  },
+  "player": {
+    "max_hp": 80,
+    "current_hp": 80,
+    "hand": [
+      {"card_id": "DEFEND_IRONCLAD"},
+      {"card_id": "HEADBUTT"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "Cultist",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0
+    },
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    },
+    {
+      "type": "resolve_choice",
+      "choice_index": 0
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+[package]
+name = "sts2-bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Criterion benchmarks for the combat engine."
+publish = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[features]
+# Bead sts2-rs-ung (P8-4): mimalloc plumbing. Default **OFF** because A/B
+# measurement (see `docs/perf-notes-2026-05-12.md`) showed <2% delta on
+# both `mcts_smoke` and `transitions_per_sec` — below the "keep wins ≥5%"
+# threshold this bead uses. Plumbing kept so future workloads (or other
+# allocators wired the same way) can flip it back on with one cargo flag.
+# Enable with `--features mimalloc`. The `#[global_allocator]` lives in
+# each bench file behind a `#[cfg(feature = "mimalloc")]` gate.
+mimalloc = ["sts2-core/mimalloc"]
+
+[dependencies]
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+sts2-core = { workspace = true }
+sts2-content = { workspace = true }
+sts2-mcts = { workspace = true }
+# Bench harness needs to construct a CombatState directly (seed RNG +
+# build SmallVec piles), mirroring the parity_harness builder pattern.
+rand = { workspace = true }
+rand_xoshiro = { workspace = true }
+smallvec = { workspace = true }
+# Bead sts2-rs-yuyc: JSON I/O for the A/B corpus + 50k-sim oracle
+# harness. `serde_json` with sorted-key serialization gives byte-stable
+# output across runs at the same git SHA.
+serde = { workspace = true }
+serde_json = { workspace = true }
+# `mcts_corpus_realistic` example (starter-deck audit DUAL row):
+# globs `.run-source` fixtures and realizes them via
+# `sts2_cli::scenario_to_combat_state` (sts2-rs-a2fh library surface).
+sts2-cli = { workspace = true }
+# GH #446: `mcts_book_sweep --budget <kind>` scores a live `CombatBudget`
+# (per-tier / per-motif simulation counts) on the position book, so the
+# reallocation arms are gated on decisions before any win-rate run.
+sts2-runai = { workspace = true }
+glob = "0.3"
+# Library-evaluation bench only (bumpalo_arena): arena allocation A/B vs the
+# current `Box<CombatState>` per-node "realized" pattern. Not used by the
+# engine/MCTS crates — scoped to the bench so the eval leaves no production
+# footprint. `boxed` gives a drop-running arena box (CombatState owns heap
+# collections, so a plain `Bump::reset()` would leak them).
+bumpalo = { version = "3.20", features = ["boxed"] }
+# Bead `sts2-rs-yg5kz` (aze8.5): `vantom_ceiling_probe` grew a
+# `--deck-source` flag mirroring `corpus_gen.rs:258` so the DUAL probe
+# can run against starter / sts2log-perfect / random-full-pool decks.
+clap = { workspace = true }
+toml = "0.8"
+# `mcts_thread_agreement` parallelises across (position, config, trial)
+# tasks so the threads=1 arm and the single-threaded oracle don't
+# serialize the whole sweep. Nested inside `par_search`'s own rayon use,
+# which is safe (same global pool, work-stealing) and cannot change
+# results — `par_search` is deterministic in (seed, workers, sims).
+rayon = { workspace = true }
+
+[[bench]]
+name = "combat"
+harness = false
+
+[[bench]]
+name = "clone"
+harness = false
+
+# P5-8 (sts2-rs-2nx): monster intent-roll perf bench for the new
+# MonsterAi DSL. Phase-5 target is ≤100ns/intent across the full
+# ~120-monster ctor set.
+[[bench]]
+name = "monster_intent_roll"
+harness = false
+
+# P8-3 (sts2-rs-eqa): MCTS smoke bench — full `Mcts::search()` calls
+# against an Ironclad-vs-Cultist vertical slice.
+[[bench]]
+name = "mcts_smoke"
+harness = false
+
+# P8-3 (sts2-rs-eqa): pure state-transition throughput, no MCTS.
+[[bench]]
+name = "transitions_per_sec"
+harness = false
+
+# Root-parallel MCTS speedup (par_search at 1/2/4 workers, power-rich fixture).
+[[bench]]
+name = "mcts_parallel"
+harness = false
+
+# P6-10 (sts2-rs-fxw): full PlayCard combat throughput, ≥80k combats/sec target.
+[[bench]]
+name = "combat_throughput"
+harness = false
+
+# P7-8 (sts2-rs-d19): combats/sec WITH full P7 content stack installed
+# (relic / potion / orb dispatch registries populated).
+[[bench]]
+name = "p7_throughput"
+harness = false
+
+# Library evaluation (not a bead): bumpalo arena-allocation A/B against the
+# current `Box<CombatState>` per-node allocation pattern. See
+# docs/perf/2026-06-22-bumpalo-arena-eval.md.
+[[bench]]
+name = "bumpalo_arena"
+harness = false
+
+# Companion to bumpalo_arena: counting-allocator profile of a real
+# Mcts::search() — bounds what fraction of a search any arena can remove.
+[[example]]
+name = "alloc_profile"
+path = "examples/alloc_profile.rs"
+
+# ─── A/B + oracle harness (bead sts2-rs-yuyc) ───────────────────────
+# Four binary examples that share a small `mcts_corpus_lib` module
+# located at `examples/mcts_corpus_lib/mod.rs` (a `path = …` module
+# included by each example). Examples are the right scope (vs. `[[bin]]`)
+# because they don't need to ship with `cargo install` and they pick
+# up the crate's dev-dependencies automatically.
+
+[[example]]
+name = "mcts_corpus"
+path = "examples/mcts_corpus.rs"
+
+[[example]]
+name = "mcts_ab"
+path = "examples/mcts_ab.rs"
+
+[[example]]
+name = "mcts_oracle"
+path = "examples/mcts_oracle.rs"
+
+[[example]]
+name = "mcts_ab_diff"
+path = "examples/mcts_ab_diff.rs"
+
+# ─── c_puct sweep harness (bead sts2-rs-y2eu) ───────────────────────
+# Sweep `c_puct ∈ {0.7, 1.0, √2, 2.0, 3.0}` × `sims ∈ {500, 1000,
+# 2000}` × the `mcts_corpus.json` states. Ranks by calibration MSE
+# vs the 50k-sim oracle and PV agreement across sim budgets.
+[[example]]
+name = "mcts_c_puct_sweep"
+path = "examples/mcts_c_puct_sweep.rs"
+
+# Bead in progress (filed alongside this commit): the starter-deck
+# audit's DUAL sibling — generates a 50-state corpus drawn from
+# real `.run-source` TOML fixtures so downstream A/B / Texel /
+# value-net retries can read realistic-deck positions instead of
+# saturating on the starter-only `mcts_corpus.json`.
+[[example]]
+name = "mcts_corpus_realistic"
+path = "examples/mcts_corpus_realistic.rs"
+
+# Bead `sts2-rs-s6umt`: post-hoc SPRT analyzer over two AbReport
+# files. Validates the LLR math + reports compute-savings ratio.
+# Inline early-termination in `mcts_ab_value_net` is a follow-up.
+[[example]]
+name = "sprt_analyze"
+path = "examples/sprt_analyze.rs"
+
+# Bead `sts2-rs-n5yex` (GH #20): closed-loop terminal-fight win-rate
+# harness. Distinguishes agent-actual win rate from root-rollout
+# averages reported by mcts_ab_value_net.
+[[example]]
+name = "closed_loop_harness"
+path = "examples/closed_loop_harness.rs"
+
+# Perf-investigation profiling harness (not a bead). Runs N full
+# `Mcts::search()` calls for callgrind / wall-clock profiling.
+[[example]]
+name = "mcts_profile"
+path = "examples/mcts_profile.rs"
+
+# Fixed-work realistic-deck sibling of `mcts_profile` (2026-07-03
+# lightspeed-gap follow-up): times M searches from N fixed random-deck
+# roots so ms/search is comparable across builds even when engine
+# changes shift whole-combat play traces.
+[[example]]
+name = "mcts_realistic_profile"
+path = "examples/mcts_realistic_profile.rs"
+
+# Hidden-information (clairvoyance) leak probe (2026-07-12 audit):
+# invariance test (chosen action must not depend on unobservable draw
+# order / RNG cursors) + closed-loop TRUE/TRUE2/BLIND win-rate A/B.
+[[example]]
+name = "clairvoyance_probe"
+path = "examples/clairvoyance_probe.rs"
+
+# Phase-0 instrument (2026-08-15 high-ascension campaign, Task 4):
+# paired closed-loop A8-A10 evaluator. Plays every corpus fixture to
+# terminal in the deployed honest dialect with every MctsConfig knob
+# overridable as `k=v` argv (lightspeed tune_optuna.py contract).
+[[example]]
+name = "combat_asc_eval"
+path = "examples/combat_asc_eval.rs"
+
+# GH #446: the position-book knob sweep carries unit tests for its
+# resolution statistic (`top_two_z`), so it is the one example built as a
+# test target too. Examples default to `test = false`, which is why no
+# other example here has a `#[cfg(test)]` module.
+[[example]]
+name = "mcts_book_sweep"
+path = "examples/mcts_book_sweep.rs"
+test = true
+
+# GH #494: the book builder's oracle-Q pooling (`pool_outcomes`) and the
+# `oracle_q` schema round-trip are unit-tested too.
+[[example]]
+name = "combat_position_book"
+path = "examples/combat_position_book.rs"
+test = true

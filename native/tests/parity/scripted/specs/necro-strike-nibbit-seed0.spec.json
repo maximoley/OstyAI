@@ -1,0 +1,40 @@
+{
+  "name": "necro-strike-nibbit-seed0",
+  "description": "Necrobinder StrikeNecrobinder vs Nibbit (Act-1 monster, sts2-rs-vvz0 STS2-native analogue). Same play_card -> damage path as necro-strike-seed0, varied encounter to exercise basic Strike against a different intent generator. Bead sts2-rs-s39 (bay-fixtures).",
+  "scenario": "necro-strike-nibbit",
+  "seed": 0,
+  "character": "Necrobinder",
+  "encounter": "Nibbit",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — Nibbit's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 66,
+    "current_hp": 66,
+    "hand": [
+      {"card_id": "STRIKE_NECROBINDER"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "Nibbit",
+      "max_hp": 45,
+      "current_hp": 45,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    }
+  ]
+}

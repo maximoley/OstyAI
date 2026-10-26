@@ -1,0 +1,1314 @@
+{
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "map_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 10568962662196689687,
+   "floor": 2,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 2,
+   "bg_seed": 10568962662196689687,
+   "choices": [
+    {
+     "col": 0,
+     "icon": "https://assets.test/run_history/monster.png",
+     "row": 3,
+     "type": "Monster"
+    }
+   ],
+   "decision": "map_select",
+   "floor": 2,
+   "full_map": {
+    "boss": {
+     "col": 3,
+     "icon": "https://assets.test/run_history/lagavulin_matriarch_boss.png",
+     "id": "LAGAVULIN_MATRIARCH_BOSS",
+     "kind": "LagavulinMatriarch",
+     "name": "Lagavulin Matriarch",
+     "row": 16,
+     "type": "Boss"
+    },
+    "current_coord": {
+     "col": 0,
+     "row": 2
+    },
+    "path_plan": {
+     "baseline_col": 0,
+     "best_col": 0,
+     "columns": [
+      {
+       "baseline_score": 1.0912,
+       "can_skip_elite": true,
+       "col": 0,
+       "is_pick": true,
+       "max_elites": 2,
+       "min_elites": 0,
+       "n_paths": 40,
+       "score": 1.0912
+      }
+     ],
+     "diverged": false,
+     "first_col": 0,
+     "route": [
+      {
+       "col": 0,
+       "row": 3
+      },
+      {
+       "col": 0,
+       "row": 4
+      },
+      {
+       "col": 0,
+       "row": 5
+      },
+      {
+       "col": 0,
+       "row": 6
+      },
+      {
+       "col": 1,
+       "row": 7
+      },
+      {
+       "col": 1,
+       "row": 8
+      },
+      {
+       "col": 1,
+       "row": 9
+      },
+      {
+       "col": 2,
+       "row": 10
+      },
+      {
+       "col": 1,
+       "row": 11
+      },
+      {
+       "col": 1,
+       "row": 12
+      },
+      {
+       "col": 1,
+       "row": 13
+      },
+      {
+       "col": 2,
+       "row": 14
+      },
+      {
+       "col": 2,
+       "row": 15
+      }
+     ]
+    },
+    "rows": [
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 1
+        },
+        {
+         "col": 2,
+         "row": 1
+        },
+        {
+         "col": 3,
+         "row": 1
+        },
+        {
+         "col": 5,
+         "row": 1
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/ancient.png",
+       "row": 0,
+       "type": "Ancient",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 2
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 2
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 2
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 2
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 1,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        }
+       ],
+       "col": 0,
+       "current": true,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": true
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 3
+        },
+        {
+         "col": 1,
+         "row": 3
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 2,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 3
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 3
+        },
+        {
+         "col": 4,
+         "row": 3
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 2,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 4
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 3,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 4
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 4
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 3,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 4
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 3,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 5
+        },
+        {
+         "col": 0,
+         "row": 5
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 5
+        },
+        {
+         "col": 4,
+         "row": 5
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 6,
+         "row": 5
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 4,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 6
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 6
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 6
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 5,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 6
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 6
+        }
+       ],
+       "col": 6,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 5,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 7
+        },
+        {
+         "col": 0,
+         "row": 7
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 6,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 7
+        },
+        {
+         "col": 5,
+         "row": 7
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 6,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 7
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 6,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 8
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 7,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 8
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 7,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 8
+        },
+        {
+         "col": 2,
+         "row": 8
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 7,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 8
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 7,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 8,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 9
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 8,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 9
+        },
+        {
+         "col": 4,
+         "row": 9
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": null,
+       "row": 8,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 10
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 10
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 10
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/treasure.png",
+       "row": 9,
+       "type": "Treasure",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 11
+        },
+        {
+         "col": 1,
+         "row": 11
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 10,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 11
+        },
+        {
+         "col": 3,
+         "row": 11
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": null,
+       "row": 10,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 12
+        },
+        {
+         "col": 0,
+         "row": 12
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 12
+        },
+        {
+         "col": 2,
+         "row": 12
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": null,
+       "row": 11,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 12
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 11,
+       "type": "Monster",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 13
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": null,
+       "row": 12,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 13
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 12,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 13
+        },
+        {
+         "col": 4,
+         "row": 13
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 12,
+       "type": "RestSite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 14
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 14
+        },
+        {
+         "col": 2,
+         "row": 14
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 14
+        },
+        {
+         "col": 3,
+         "row": 14
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 13,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 14
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 13,
+       "type": "Elite",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 0,
+         "row": 15
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 14,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 1,
+         "row": 15
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 2,
+         "row": 15
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/shop.png",
+       "row": 14,
+       "type": "Shop",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 3,
+       "current": false,
+       "icon": "https://assets.test/run_history/monster.png",
+       "row": 14,
+       "type": "Monster",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 4,
+         "row": 15
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/elite.png",
+       "row": 14,
+       "type": "Elite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 5,
+         "row": 15
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": null,
+       "row": 14,
+       "type": "Unknown",
+       "visited": false
+      }
+     ],
+     [
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 0,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 1,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 2,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 4,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      },
+      {
+       "children": [
+        {
+         "col": 3,
+         "row": 16
+        }
+       ],
+       "col": 5,
+       "current": false,
+       "icon": "https://assets.test/run_history/rest_site.png",
+       "row": 15,
+       "type": "RestSite",
+       "visited": false
+      }
+     ]
+    ],
+    "second_boss": null
+   },
+   "options": [
+    {
+     "action": "select_map_node",
+     "args": {
+      "col": 0,
+      "row": 3
+     },
+     "enabled": true,
+     "label": "Monster (0,3)"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_SILENT",
+      "image": "https://assets.test/card_atlas/silent/strike_silent.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_SILENT",
+      "image": "https://assets.test/card_atlas/silent/defend_silent.png",
+      "index": 9,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 0,
+      "description": "Deal 3 damage.\nApply 1 Weak.",
+      "description_rich": "Deal 3 damage.\nApply 1 Weak.",
+      "id": "NEUTRALIZE",
+      "image": "https://assets.test/card_atlas/silent/neutralize.png",
+      "index": 10,
+      "name": "Neutralize",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Gain 8 Block.\nDiscard 1 card.",
+      "description_rich": "Gain 8 Block.\nDiscard 1 card.",
+      "id": "SURVIVOR",
+      "image": "https://assets.test/card_atlas/silent/survivor.png",
+      "index": 11,
+      "name": "Survivor",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 2,
+      "description": "Gain 10 Block.\nDeal 10 damage.",
+      "description_rich": "Gain 10 Block.\nDeal 10 damage.",
+      "id": "DASH",
+      "image": "https://assets.test/card_atlas/silent/dash.png",
+      "index": 12,
+      "name": "Dash",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "green",
+      "cost": 1,
+      "description": "Deal 9 damage.\nDeals 4 additional damage for each card discarded this turn.",
+      "description_rich": "Deal 9 damage.\nDeals 4 additional damage for each card discarded this turn.",
+      "id": "MEMENTO_MORI",
+      "image": "https://assets.test/card_atlas/silent/memento_mori.png",
+      "index": 13,
+      "name": "Memento Mori",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 126,
+    "hp": 55,
+    "max_hp": 70,
+    "name": "Silent",
+    "potion_slots": 3,
+    "potions": [
+     {
+      "description": "Discard any number of cards, then draw that many.",
+      "id": "GAMBLERS_BREW",
+      "image": "https://assets.test/potion_atlas/gamblers_brew.png",
+      "name": "Gambler's Brew"
+     }
+    ],
+    "relics": [
+     {
+      "description": "At the start of each combat, draw 2 additional cards.",
+      "id": "RING_OF_THE_SNAKE",
+      "image": "https://assets.test/relic_atlas/ring_of_the_snake.png",
+      "name": "Ring of the Snake"
+     },
+     {
+      "description": "Every 3 normal combats, Upgrade a random card in your Deck.",
+      "id": "FISHING_ROD",
+      "image": "https://assets.test/relic_atlas/fishing_rod.png",
+      "name": "Fishing Rod"
+     }
+    ]
+   }
+  }
+ }
+}

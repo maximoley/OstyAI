@@ -1,0 +1,8 @@
+{
+ "action": "choose_option",
+ "args": {
+  "option_index": 0
+ },
+ "fallback": true,
+ "policy": "ppo"
+}

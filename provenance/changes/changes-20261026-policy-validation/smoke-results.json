@@ -1,0 +1,87 @@
+{
+  "full_pair": true,
+  "model_unchanged": true,
+  "training_rng_unchanged": true,
+  "frozen_potion_costs_match_existing_validation": true,
+  "checkpoint_unchanged": true,
+  "cached_resume_without_inference": true,
+  "idempotent_history": true,
+  "reject_wrong_model_cache": true,
+  "comparison": {
+    "update": 5278,
+    "model_sha256": "ee11945b7d303c513dd48792a88f7a221aaa2f4b8df0850c1b4b5bb7300719f1",
+    "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+    "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a",
+    "search_win_rate": 0.917236328125,
+    "policy_win_rate": 0.849365234375,
+    "search_gain_percentage_points": 6.787109375,
+    "search": {
+      "environment_revision": "native-ai-import-v1",
+      "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+      "evaluation_mode": "search",
+      "model_sha256": "ee11945b7d303c513dd48792a88f7a221aaa2f4b8df0850c1b4b5bb7300719f1",
+      "action_selection": "gumbel_search",
+      "update": 5278,
+      "requested": 8192,
+      "completed": 8191,
+      "unresolved": 1,
+      "wins": 7514,
+      "win_rate": 0.9173483091197656,
+      "win_rate_lower_bound": 0.917236328125,
+      "mean_return": 1.2409593596296211,
+      "mean_potions_used": 0.44854108167500917,
+      "seconds": 274.96677773073316,
+      "per_potion_costs": "independent uniform [0,1], frozen per case/replicate",
+      "simulations": {
+        "easy": 32,
+        "hard": 64,
+        "elite": 96,
+        "boss": 128
+      },
+      "skip_forced_actions": true,
+      "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a"
+    },
+    "policy_only": {
+      "environment_revision": "native-ai-import-v1",
+      "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+      "evaluation_mode": "policy_only",
+      "model_sha256": "ee11945b7d303c513dd48792a88f7a221aaa2f4b8df0850c1b4b5bb7300719f1",
+      "action_selection": "legal_argmax",
+      "update": 5278,
+      "requested": 8192,
+      "completed": 8128,
+      "unresolved": 64,
+      "wins": 6958,
+      "win_rate": 0.8560531496062992,
+      "win_rate_lower_bound": 0.849365234375,
+      "mean_return": 1.1645902244982702,
+      "mean_potions_used": 0.312376968503937,
+      "seconds": 24.039884220808744,
+      "per_potion_costs": "independent uniform [0,1], frozen per case/replicate",
+      "simulations": 0,
+      "skip_forced_actions": true,
+      "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a"
+    }
+  },
+  "totals": {
+    "validation": {
+      "simulations": 25657984,
+      "search_transitions": 27207446,
+      "forced_search_transitions": 2678729,
+      "steps": 318553,
+      "forced_actions": 12041,
+      "replay_added": 0,
+      "seconds": 261.9194364361465
+    },
+    "policy-validation": {
+      "simulations": 0,
+      "search_transitions": 0,
+      "forced_search_transitions": 0,
+      "steps": 408237,
+      "forced_actions": 0,
+      "replay_added": 0,
+      "seconds": 15.606155693531036
+    }
+  },
+  "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566"
+}

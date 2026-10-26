@@ -1,0 +1,12 @@
+{
+ "runs": [
+  {
+   "enemy_min_pct": 5.3571,
+   "final_floor": 11,
+   "final_turn": null,
+   "stem": "20260101_000000_Ironclad_1",
+   "turn1_q": 1.1569,
+   "won": false
+  }
+ ]
+}

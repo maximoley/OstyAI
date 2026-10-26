@@ -1,0 +1,35 @@
+{
+  "actions": [
+    {
+      "amount": 6,
+      "dealer": "player",
+      "props": "MOVE",
+      "target": "enemy_0",
+      "type": "deal_damage"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "Weak on attacker reduces outgoing damage by 25%. Player has WeakPower(2); player attacks Cultist for 6 raw \u2192 6 * 0.75 = 4.5 \u2192 floor 4. Cultist HP 48 - 4 = 44. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [
+    {
+      "current_hp": 48,
+      "max_hp": 48,
+      "monster_id": "ShrinkerBeetle"
+    }
+  ],
+  "name": "weak-attacker-damage-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50,
+    "powers": [
+      {
+        "amount": 2,
+        "id": "WEAK"
+      }
+    ]
+  },
+  "scenario": "weak-attacker-damage",
+  "seed": 0
+}

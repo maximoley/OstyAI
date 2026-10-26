@@ -1,0 +1,132 @@
+{
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 30,
+        "id": "ShrinkerBeetle",
+        "is_alive": true,
+        "max_hp": 30,
+        "powers": [
+          {
+            "amount": 2,
+            "id": "VULNERABLE"
+          }
+        ]
+      },
+      {
+        "block": 0,
+        "hp": 30,
+        "id": "ShrinkerBeetle",
+        "is_alive": true,
+        "max_hp": 30,
+        "powers": []
+      },
+      {
+        "block": 0,
+        "hp": 30,
+        "id": "ShrinkerBeetle",
+        "is_alive": true,
+        "max_hp": 30,
+        "powers": [
+          {
+            "amount": 1,
+            "id": "VULNERABLE"
+          }
+        ]
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [
+      {
+        "base_damage": 5,
+        "cost": 0,
+        "id": "WHIRLWIND",
+        "playable": true,
+        "target": "AllEnemies",
+        "type": "Attack"
+      }
+    ],
+    "player": {
+      "block": 0,
+      "energy": 3,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 1,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "ShrinkerBeetle",
+    "python_pin": "01c094d",
+    "rust_pin": "7dba16a838adedba8951a7077b6f0dabc09b7fb2",
+    "scenario": "ironclad-whirlwind-multi-vulnerable",
+    "seed": 0
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "play_card"
+      },
+      "resulting_state": {
+        "discard_pile_count": 1,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 9,
+            "id": "ShrinkerBeetle",
+            "is_alive": true,
+            "max_hp": 30,
+            "powers": [
+              {
+                "amount": 2,
+                "id": "VULNERABLE"
+              }
+            ]
+          },
+          {
+            "block": 0,
+            "hp": 15,
+            "id": "ShrinkerBeetle",
+            "is_alive": true,
+            "max_hp": 30,
+            "powers": []
+          },
+          {
+            "block": 0,
+            "hp": 9,
+            "id": "ShrinkerBeetle",
+            "is_alive": true,
+            "max_hp": 30,
+            "powers": [
+              {
+                "amount": 1,
+                "id": "VULNERABLE"
+              }
+            ]
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 80,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,2559 @@
+{
+  "version": 1,
+  "git_sha": "df387f1a3",
+  "generator": "combat_position_book",
+  "oracle_sims": 50000,
+  "oracle_seeds": 3,
+  "oracle_depth": 200,
+  "max_warmup_plies": 0,
+  "hidden_info": "beliefdraw",
+  "c_puct": 2.5,
+  "draw_widening_c": 2.0,
+  "scored_by_bucket": {
+    "defect/boss": 20,
+    "defect/common": 20,
+    "defect/elite": 40,
+    "ironclad/boss": 20,
+    "ironclad/common": 20,
+    "ironclad/elite": 40,
+    "necrobinder/boss": 20,
+    "necrobinder/common": 20,
+    "necrobinder/elite": 40,
+    "regent/boss": 20,
+    "regent/common": 20,
+    "regent/elite": 40,
+    "silent/boss": 20,
+    "silent/common": 20,
+    "silent/elite": 40
+  },
+  "chance_agreement": 0.1469614297739298,
+  "annotated_with_proofs": 1,
+  "gold_contradicted": 0,
+  "entries": [
+    {
+      "book_id": 0,
+      "character": "defect",
+      "tier": "common",
+      "floor": 1,
+      "fixture_rel_path": "the-defect/onmanifold_00000_common.toml",
+      "seed": 983916,
+      "legal_actions": 6,
+      "state_hash": 17876073981580345814,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 1,
+      "character": "defect",
+      "tier": "common",
+      "floor": 13,
+      "fixture_rel_path": "the-defect/onmanifold_00045_common.toml",
+      "seed": 4354685564937829270,
+      "legal_actions": 6,
+      "state_hash": 9239316790600756249,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 2,
+      "character": "defect",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-defect/onmanifold_00068_common.toml",
+      "seed": 8709371129874674624,
+      "legal_actions": 6,
+      "state_hash": 756868562431267950,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 3,
+      "character": "defect",
+      "tier": "common",
+      "floor": 14,
+      "fixture_rel_path": "the-defect/onmanifold_00090_common.toml",
+      "seed": 1663341875488321493,
+      "legal_actions": 6,
+      "state_hash": 13404041491382346640,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 4,
+      "character": "defect",
+      "tier": "common",
+      "floor": 1,
+      "fixture_rel_path": "the-defect/onmanifold_00136_common.toml",
+      "seed": 17418742259748365332,
+      "legal_actions": 12,
+      "state_hash": 10736958879710541908,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 5,
+      "character": "defect",
+      "tier": "common",
+      "floor": 1,
+      "fixture_rel_path": "the-defect/onmanifold_00227_common.toml",
+      "seed": 635340061526151293,
+      "legal_actions": 6,
+      "state_hash": 14243400331250830249,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 6,
+      "character": "defect",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-defect/onmanifold_00248_common.toml",
+      "seed": 12036054880849349778,
+      "legal_actions": 6,
+      "state_hash": 84876707588758169,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 7,
+      "character": "defect",
+      "tier": "common",
+      "floor": 6,
+      "fixture_rel_path": "the-defect/onmanifold_00270_common.toml",
+      "seed": 4990025626462996647,
+      "legal_actions": 6,
+      "state_hash": 14794411488826671337,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 8,
+      "character": "defect",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-defect/onmanifold_00383_common.toml",
+      "seed": 11008053066887179578,
+      "legal_actions": 6,
+      "state_hash": 17053108931295504411,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 9,
+      "character": "defect",
+      "tier": "common",
+      "floor": 3,
+      "fixture_rel_path": "the-defect/onmanifold_00405_common.toml",
+      "seed": 3962023812500826447,
+      "legal_actions": 6,
+      "state_hash": 18377207615291411453,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 10,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-defect/onmanifold_00003_elite.toml",
+      "seed": 983916,
+      "legal_actions": 6,
+      "state_hash": 1618458634005943847,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 11,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-defect/onmanifold_00005_elite.toml",
+      "seed": 983916,
+      "legal_actions": 6,
+      "state_hash": 10607682420963364668,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 12,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-defect/onmanifold_00040_elite.toml",
+      "seed": 4354685564937829270,
+      "legal_actions": 6,
+      "state_hash": 6221403652551987648,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 13,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-defect/onmanifold_00083_elite.toml",
+      "seed": 1663341875488321493,
+      "legal_actions": 6,
+      "state_hash": 17147499440042107319,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 14,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-defect/onmanifold_00143_elite.toml",
+      "seed": 17418742259748365332,
+      "legal_actions": 6,
+      "state_hash": 350715682828734713,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "proven_pairs": [
+        {
+          "better_first": "PlayCard { hand_index: 3, target: None }",
+          "worse_first": "PlayCard { hand_index: 1, target: None }",
+          "better_card": "ThunderCard(1)",
+          "worse_card": "Coolheaded(1)",
+          "axes": [
+            "enemy_hp"
+          ],
+          "gain_enemy_hp": 6,
+          "gain_player_hp": 0,
+          "gain_player_block": 0
+        }
+      ],
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand",
+        "proven_pair"
+      ]
+    },
+    {
+      "book_id": 15,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-defect/onmanifold_00201_elite.toml",
+      "seed": 14727398570298857555,
+      "legal_actions": 6,
+      "state_hash": 10914296271237208973,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 16,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-defect/onmanifold_00210_elite.toml",
+      "seed": 7681369315912504424,
+      "legal_actions": 6,
+      "state_hash": 6102825723275006779,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 17,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-defect/onmanifold_00358_elite.toml",
+      "seed": 6653367501950334224,
+      "legal_actions": 6,
+      "state_hash": 16346017577359124365,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 18,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 5,
+      "fixture_rel_path": "the-defect/onmanifold_00366_elite.toml",
+      "seed": 18054082321273532709,
+      "legal_actions": 6,
+      "state_hash": 6016993553585182217,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 19,
+      "character": "defect",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-defect/onmanifold_00367_elite.toml",
+      "seed": 18054082321273532709,
+      "legal_actions": 6,
+      "state_hash": 18232722226567858753,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 20,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-defect/onmanifold_00009_boss.toml",
+      "seed": 983916,
+      "legal_actions": 6,
+      "state_hash": 4369168496995951180,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 21,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-defect/onmanifold_00087_boss.toml",
+      "seed": 1663341875488321493,
+      "legal_actions": 10,
+      "state_hash": 9276017672705951015,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(1) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 22,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-defect/onmanifold_00154_boss.toml",
+      "seed": 17418742259748365332,
+      "legal_actions": 6,
+      "state_hash": 8038904373096308175,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 23,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-defect/onmanifold_00173_boss.toml",
+      "seed": 10372713005362012201,
+      "legal_actions": 6,
+      "state_hash": 1711841612497472009,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 24,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-defect/onmanifold_00203_boss.toml",
+      "seed": 14727398570298857555,
+      "legal_actions": 6,
+      "state_hash": 7042818762377337046,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 25,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 23,
+      "fixture_rel_path": "the-defect/onmanifold_00226_boss.toml",
+      "seed": 7681369315912504424,
+      "legal_actions": 6,
+      "state_hash": 5384887679151503257,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 26,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-defect/onmanifold_00246_boss.toml",
+      "seed": 635340061526151293,
+      "legal_actions": 6,
+      "state_hash": 3811528570068277767,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 27,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-defect/onmanifold_00275_boss.toml",
+      "seed": 4990025626462996647,
+      "legal_actions": 8,
+      "state_hash": 5386080412812667667,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 28,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 21,
+      "fixture_rel_path": "the-defect/onmanifold_00361_boss.toml",
+      "seed": 6653367501950334224,
+      "legal_actions": 6,
+      "state_hash": 4793797750284518851,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 29,
+      "character": "defect",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-defect/onmanifold_00381_boss.toml",
+      "seed": 18054082321273532709,
+      "legal_actions": 6,
+      "state_hash": 219275464742928398,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 30,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 1,
+      "fixture_rel_path": "the-ironclad/onmanifold_00000_common.toml",
+      "seed": 992852,
+      "legal_actions": 6,
+      "state_hash": 16030981152423609983,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 31,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 4,
+      "fixture_rel_path": "the-ironclad/onmanifold_00021_common.toml",
+      "seed": 4354685564937838206,
+      "legal_actions": 9,
+      "state_hash": 12987813630453695523,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 32,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 11,
+      "fixture_rel_path": "the-ironclad/onmanifold_00086_common.toml",
+      "seed": 13064056694811528914,
+      "legal_actions": 6,
+      "state_hash": 4170182118222713835,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 33,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 16,
+      "fixture_rel_path": "the-ironclad/onmanifold_00129_common.toml",
+      "seed": 10372713005362021137,
+      "legal_actions": 14,
+      "state_hash": 6402063162329822230,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 34,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 12,
+      "fixture_rel_path": "the-ironclad/onmanifold_00201_common.toml",
+      "seed": 635340061526160229,
+      "legal_actions": 8,
+      "state_hash": 601323447500771801,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 35,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 17,
+      "fixture_rel_path": "the-ironclad/onmanifold_00225_common.toml",
+      "seed": 12036054880849358714,
+      "legal_actions": 6,
+      "state_hash": 2143382270725147266,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 36,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 20,
+      "fixture_rel_path": "the-ironclad/onmanifold_00247_common.toml",
+      "seed": 4990025626463005583,
+      "legal_actions": 10,
+      "state_hash": 630913356266591990,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 37,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 3,
+      "fixture_rel_path": "the-ironclad/onmanifold_00295_common.toml",
+      "seed": 13699396756336696291,
+      "legal_actions": 12,
+      "state_hash": 2878422384800303596,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 38,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 14,
+      "fixture_rel_path": "the-ironclad/onmanifold_00316_common.toml",
+      "seed": 6653367501950343160,
+      "legal_actions": 6,
+      "state_hash": 4720941015146620417,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 39,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-ironclad/onmanifold_00365_common.toml",
+      "seed": 3962023812500835383,
+      "legal_actions": 6,
+      "state_hash": 14081919316014065979,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 40,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 5,
+      "fixture_rel_path": "the-ironclad/onmanifold_00384_common.toml",
+      "seed": 15362738631824033868,
+      "legal_actions": 6,
+      "state_hash": 7367068057640029413,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 41,
+      "character": "ironclad",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-ironclad/onmanifold_00407_common.toml",
+      "seed": 1270680123051327606,
+      "legal_actions": 6,
+      "state_hash": 12550976927394647390,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 42,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00007_elite.toml",
+      "seed": 992852,
+      "legal_actions": 6,
+      "state_hash": 1313638865429948623,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 43,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 9,
+      "fixture_rel_path": "the-ironclad/onmanifold_00026_elite.toml",
+      "seed": 4354685564937838206,
+      "legal_actions": 6,
+      "state_hash": 2500292172335646054,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 44,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-ironclad/onmanifold_00052_elite.toml",
+      "seed": 8709371129874683560,
+      "legal_actions": 6,
+      "state_hash": 16258168578689642205,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 45,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-ironclad/onmanifold_00099_elite.toml",
+      "seed": 6018027440425175783,
+      "legal_actions": 6,
+      "state_hash": 4080750325077858498,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 46,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00111_elite.toml",
+      "seed": 17418742259748374268,
+      "legal_actions": 6,
+      "state_hash": 12924239751022111276,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 47,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 9,
+      "fixture_rel_path": "the-ironclad/onmanifold_00141_elite.toml",
+      "seed": 3326683750975668006,
+      "legal_actions": 6,
+      "state_hash": 4020268090227408685,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 48,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-ironclad/onmanifold_00176_elite.toml",
+      "seed": 7681369315912513360,
+      "legal_actions": 6,
+      "state_hash": 12387306827617727837,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 49,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 9,
+      "fixture_rel_path": "the-ironclad/onmanifold_00179_elite.toml",
+      "seed": 7681369315912513360,
+      "legal_actions": 6,
+      "state_hash": 13444305321684886045,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 50,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00197_elite.toml",
+      "seed": 635340061526160229,
+      "legal_actions": 6,
+      "state_hash": 10790507499388963203,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 51,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00216_elite.toml",
+      "seed": 12036054880849358714,
+      "legal_actions": 6,
+      "state_hash": 18350536499194713392,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 52,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-ironclad/onmanifold_00254_elite.toml",
+      "seed": 16390740445786204068,
+      "legal_actions": 6,
+      "state_hash": 4630001148556246512,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 53,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00273_elite.toml",
+      "seed": 9344711191399850937,
+      "legal_actions": 6,
+      "state_hash": 6694448923866020765,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 54,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-ironclad/onmanifold_00279_elite.toml",
+      "seed": 2298681937013497806,
+      "legal_actions": 6,
+      "state_hash": 14105142543106960,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 55,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 5,
+      "fixture_rel_path": "the-ironclad/onmanifold_00349_elite.toml",
+      "seed": 11008053066887188514,
+      "legal_actions": 6,
+      "state_hash": 7308761911064003660,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 56,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-ironclad/onmanifold_00351_elite.toml",
+      "seed": 11008053066887188514,
+      "legal_actions": 6,
+      "state_hash": 2126660400474704914,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 57,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-ironclad/onmanifold_00385_elite.toml",
+      "seed": 15362738631824033868,
+      "legal_actions": 6,
+      "state_hash": 11075080845150424712,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 58,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00387_elite.toml",
+      "seed": 15362738631824033868,
+      "legal_actions": 6,
+      "state_hash": 13833297914965695481,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 59,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-ironclad/onmanifold_00405_elite.toml",
+      "seed": 8316709377437680737,
+      "legal_actions": 12,
+      "state_hash": 13327777720188031800,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 60,
+      "character": "ironclad",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-ironclad/onmanifold_00439_elite.toml",
+      "seed": 5625365687988172960,
+      "legal_actions": 6,
+      "state_hash": 7840681091537308666,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 61,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-ironclad/onmanifold_00066_boss.toml",
+      "seed": 8709371129874683560,
+      "legal_actions": 6,
+      "state_hash": 8537676727286327573,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 62,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 18,
+      "fixture_rel_path": "the-ironclad/onmanifold_00093_boss.toml",
+      "seed": 13064056694811528914,
+      "legal_actions": 6,
+      "state_hash": 7430908157590074599,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 63,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-ironclad/onmanifold_00132_boss.toml",
+      "seed": 10372713005362021137,
+      "legal_actions": 6,
+      "state_hash": 7732661983194928138,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 64,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-ironclad/onmanifold_00160_boss.toml",
+      "seed": 14727398570298866491,
+      "legal_actions": 6,
+      "state_hash": 6179380793184547923,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 65,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-ironclad/onmanifold_00227_boss.toml",
+      "seed": 12036054880849358714,
+      "legal_actions": 6,
+      "state_hash": 8566055454908647003,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 66,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 21,
+      "fixture_rel_path": "the-ironclad/onmanifold_00248_boss.toml",
+      "seed": 4990025626463005583,
+      "legal_actions": 6,
+      "state_hash": 14703377530039148419,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 67,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 17,
+      "fixture_rel_path": "the-ironclad/onmanifold_00265_boss.toml",
+      "seed": 16390740445786204068,
+      "legal_actions": 6,
+      "state_hash": 3204801166481617387,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 68,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 9,
+      "fixture_rel_path": "the-ironclad/onmanifold_00284_boss.toml",
+      "seed": 2298681937013497806,
+      "legal_actions": 6,
+      "state_hash": 12078951414717636816,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 69,
+      "character": "ironclad",
+      "tier": "boss",
+      "floor": 8,
+      "fixture_rel_path": "the-ironclad/onmanifold_00328_boss.toml",
+      "seed": 18054082321273541645,
+      "legal_actions": 12,
+      "state_hash": 9956962395122249193,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 70,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 12,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00044_common.toml",
+      "seed": 4354685564937760036,
+      "legal_actions": 10,
+      "state_hash": 8818683153211674817,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 71,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 11,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00178_common.toml",
+      "seed": 3326683750975589836,
+      "legal_actions": 6,
+      "state_hash": 10963701691418727870,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 72,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 9,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00221_common.toml",
+      "seed": 7681369315912435190,
+      "legal_actions": 14,
+      "state_hash": 18010666349900695129,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 73,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 8,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00293_common.toml",
+      "seed": 9344711191399772767,
+      "legal_actions": 6,
+      "state_hash": 815497933117483046,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 74,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00312_common.toml",
+      "seed": 2298681937013419636,
+      "legal_actions": 12,
+      "state_hash": 13302565463854559334,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(1) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 75,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00335_common.toml",
+      "seed": 6653367501950264990,
+      "legal_actions": 6,
+      "state_hash": 3978707445915084176,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 76,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 9,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00380_common.toml",
+      "seed": 11008053066887110344,
+      "legal_actions": 6,
+      "state_hash": 17165544641401200292,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 77,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 14,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00405_common.toml",
+      "seed": 3962023812500757213,
+      "legal_actions": 6,
+      "state_hash": 1759175457398117575,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 78,
+      "character": "necrobinder",
+      "tier": "common",
+      "floor": 3,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00426_common.toml",
+      "seed": 8316709377437602567,
+      "legal_actions": 6,
+      "state_hash": 17600312361540995222,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 79,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00015_elite.toml",
+      "seed": 914682,
+      "legal_actions": 8,
+      "state_hash": 11925707694838372870,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 80,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00050_elite.toml",
+      "seed": 4354685564937760036,
+      "legal_actions": 6,
+      "state_hash": 14069176236227953449,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 81,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00099_elite.toml",
+      "seed": 1663341875488252259,
+      "legal_actions": 6,
+      "state_hash": 6635168663124940347,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 82,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 9,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00119_elite.toml",
+      "seed": 13064056694811450744,
+      "legal_actions": 6,
+      "state_hash": 2551176442033262300,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 83,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 15,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00135_elite.toml",
+      "seed": 6018027440425097613,
+      "legal_actions": 11,
+      "state_hash": 10977287369397264597,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 84,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00156_elite.toml",
+      "seed": 10372713005361942967,
+      "legal_actions": 6,
+      "state_hash": 9756019211644630221,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 85,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00165_elite.toml",
+      "seed": 10372713005361942967,
+      "legal_actions": 6,
+      "state_hash": 9440443810002488744,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 86,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00167_elite.toml",
+      "seed": 10372713005361942967,
+      "legal_actions": 12,
+      "state_hash": 12588534695899595932,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 87,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00230_elite.toml",
+      "seed": 7681369315912435190,
+      "legal_actions": 6,
+      "state_hash": 1074903503535072849,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 88,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00235_elite.toml",
+      "seed": 635340061526082059,
+      "legal_actions": 6,
+      "state_hash": 11298814251992478298,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 89,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00261_elite.toml",
+      "seed": 4990025626462927413,
+      "legal_actions": 6,
+      "state_hash": 14711085186622551321,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 90,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 17,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00284_elite.toml",
+      "seed": 16390740445786125898,
+      "legal_actions": 6,
+      "state_hash": 5361381916889946214,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 91,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00349_elite.toml",
+      "seed": 6653367501950264990,
+      "legal_actions": 10,
+      "state_hash": 5965151147268629632,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 92,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00351_elite.toml",
+      "seed": 6653367501950264990,
+      "legal_actions": 6,
+      "state_hash": 8015678452523411074,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 93,
+      "character": "necrobinder",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00445_elite.toml",
+      "seed": 1270680123051249436,
+      "legal_actions": 6,
+      "state_hash": 7440122153233689669,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 94,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 17,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00032_boss.toml",
+      "seed": 11400714819324113167,
+      "legal_actions": 6,
+      "state_hash": 11975678439348770517,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 95,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00051_boss.toml",
+      "seed": 4354685564937760036,
+      "legal_actions": 6,
+      "state_hash": 17306008716073109155,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 96,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00120_boss.toml",
+      "seed": 13064056694811450744,
+      "legal_actions": 6,
+      "state_hash": 2596119289634518627,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 97,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 18,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00138_boss.toml",
+      "seed": 6018027440425097613,
+      "legal_actions": 5,
+      "state_hash": 14577934919909260467,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 98,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00160_boss.toml",
+      "seed": 10372713005361942967,
+      "legal_actions": 6,
+      "state_hash": 1569548061884539579,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 99,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00187_boss.toml",
+      "seed": 3326683750975589836,
+      "legal_actions": 6,
+      "state_hash": 16811302736662908948,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 100,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00267_boss.toml",
+      "seed": 4990025626462927413,
+      "legal_actions": 6,
+      "state_hash": 11183518660299664385,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 101,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00343_boss.toml",
+      "seed": 6653367501950264990,
+      "legal_actions": 12,
+      "state_hash": 2262197164742773449,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 102,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00381_boss.toml",
+      "seed": 11008053066887110344,
+      "legal_actions": 10,
+      "state_hash": 17331647489203150872,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 103,
+      "character": "necrobinder",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-necrobinder/onmanifold_00422_boss.toml",
+      "seed": 15362738631823955698,
+      "legal_actions": 8,
+      "state_hash": 16941513460175048544,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 104,
+      "character": "regent",
+      "tier": "common",
+      "floor": 6,
+      "fixture_rel_path": "the-regent/onmanifold_00021_common.toml",
+      "seed": 11400714819324135316,
+      "legal_actions": 6,
+      "state_hash": 8963019682060373627,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 105,
+      "character": "regent",
+      "tier": "common",
+      "floor": 14,
+      "fixture_rel_path": "the-regent/onmanifold_00067_common.toml",
+      "seed": 8709371129874627539,
+      "legal_actions": 9,
+      "state_hash": 4958932013474949668,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(1) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 106,
+      "character": "regent",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-regent/onmanifold_00115_common.toml",
+      "seed": 10372713005361965116,
+      "legal_actions": 6,
+      "state_hash": 1970162414185063226,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 107,
+      "character": "regent",
+      "tier": "common",
+      "floor": 9,
+      "fixture_rel_path": "the-regent/onmanifold_00138_common.toml",
+      "seed": 3326683750975611985,
+      "legal_actions": 6,
+      "state_hash": 10102651189162659046,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 108,
+      "character": "regent",
+      "tier": "common",
+      "floor": 9,
+      "fixture_rel_path": "the-regent/onmanifold_00162_common.toml",
+      "seed": 7681369315912457339,
+      "legal_actions": 7,
+      "state_hash": 9691784386583829159,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 109,
+      "character": "regent",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-regent/onmanifold_00229_common.toml",
+      "seed": 16390740445786148047,
+      "legal_actions": 6,
+      "state_hash": 8480016541153797968,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 110,
+      "character": "regent",
+      "tier": "common",
+      "floor": 7,
+      "fixture_rel_path": "the-regent/onmanifold_00247_common.toml",
+      "seed": 9344711191399794916,
+      "legal_actions": 7,
+      "state_hash": 14341639564762195583,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 111,
+      "character": "regent",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-regent/onmanifold_00383_common.toml",
+      "seed": 1270680123051271585,
+      "legal_actions": 6,
+      "state_hash": 12367222513693543647,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 112,
+      "character": "regent",
+      "tier": "common",
+      "floor": 9,
+      "fixture_rel_path": "the-regent/onmanifold_00425_common.toml",
+      "seed": 5625365687988116939,
+      "legal_actions": 6,
+      "state_hash": 4319153374661998804,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 113,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 19,
+      "fixture_rel_path": "the-regent/onmanifold_00072_elite.toml",
+      "seed": 8709371129874627539,
+      "legal_actions": 8,
+      "state_hash": 9259595280432815979,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 114,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 4,
+      "fixture_rel_path": "the-regent/onmanifold_00096_elite.toml",
+      "seed": 6018027440425119762,
+      "legal_actions": 6,
+      "state_hash": 6823409959370220127,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 115,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-regent/onmanifold_00135_elite.toml",
+      "seed": 3326683750975611985,
+      "legal_actions": 6,
+      "state_hash": 9701209221980438476,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 116,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-regent/onmanifold_00145_elite.toml",
+      "seed": 14727398570298810470,
+      "legal_actions": 6,
+      "state_hash": 253813601198266495,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 117,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 17,
+      "fixture_rel_path": "the-regent/onmanifold_00170_elite.toml",
+      "seed": 7681369315912457339,
+      "legal_actions": 5,
+      "state_hash": 1432364947274781952,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 118,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-regent/onmanifold_00207_elite.toml",
+      "seed": 12036054880849302693,
+      "legal_actions": 6,
+      "state_hash": 11370452921550578608,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 119,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 17,
+      "fixture_rel_path": "the-regent/onmanifold_00297_elite.toml",
+      "seed": 6653367501950287139,
+      "legal_actions": 6,
+      "state_hash": 11268068825534218483,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 120,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-regent/onmanifold_00346_elite.toml",
+      "seed": 15362738631823977847,
+      "legal_actions": 6,
+      "state_hash": 11082292535913046949,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 121,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-regent/onmanifold_00367_elite.toml",
+      "seed": 8316709377437624716,
+      "legal_actions": 6,
+      "state_hash": 15234607999054588752,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 122,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-regent/onmanifold_00403_elite.toml",
+      "seed": 12671394942374470070,
+      "legal_actions": 6,
+      "state_hash": 3991848416664736839,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 123,
+      "character": "regent",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-regent/onmanifold_00432_elite.toml",
+      "seed": 17026080507311315424,
+      "legal_actions": 6,
+      "state_hash": 17805129677948355986,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 124,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 8,
+      "fixture_rel_path": "the-regent/onmanifold_00053_boss.toml",
+      "seed": 15755400384260980670,
+      "legal_actions": 6,
+      "state_hash": 14393646036707436150,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 125,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-regent/onmanifold_00073_boss.toml",
+      "seed": 8709371129874627539,
+      "legal_actions": 5,
+      "state_hash": 5669618672030988252,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 126,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-regent/onmanifold_00102_boss.toml",
+      "seed": 6018027440425119762,
+      "legal_actions": 6,
+      "state_hash": 2168139179593706574,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 127,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 18,
+      "fixture_rel_path": "the-regent/onmanifold_00209_boss.toml",
+      "seed": 12036054880849302693,
+      "legal_actions": 5,
+      "state_hash": 1861752100012894156,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 128,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 18,
+      "fixture_rel_path": "the-regent/onmanifold_00227_boss.toml",
+      "seed": 4990025626462949562,
+      "legal_actions": 6,
+      "state_hash": 9224723360913887672,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 129,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-regent/onmanifold_00250_boss.toml",
+      "seed": 9344711191399794916,
+      "legal_actions": 6,
+      "state_hash": 11531202311713647844,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 130,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-regent/onmanifold_00280_boss.toml",
+      "seed": 13699396756336640270,
+      "legal_actions": 5,
+      "state_hash": 11833839220719388566,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 131,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-regent/onmanifold_00300_boss.toml",
+      "seed": 6653367501950287139,
+      "legal_actions": 6,
+      "state_hash": 18154720430026428658,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 132,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 21,
+      "fixture_rel_path": "the-regent/onmanifold_00339_boss.toml",
+      "seed": 3962023812500779362,
+      "legal_actions": 6,
+      "state_hash": 13860887206282441465,
+      "gold_action": "PlayCard { hand_index: 2, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 133,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-regent/onmanifold_00371_boss.toml",
+      "seed": 8316709377437624716,
+      "legal_actions": 10,
+      "state_hash": 6249766497112017177,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 134,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 12,
+      "fixture_rel_path": "the-regent/onmanifold_00393_boss.toml",
+      "seed": 1270680123051271585,
+      "legal_actions": 6,
+      "state_hash": 6577102916401628046,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 135,
+      "character": "regent",
+      "tier": "boss",
+      "floor": 19,
+      "fixture_rel_path": "the-regent/onmanifold_00416_boss.toml",
+      "seed": 12671394942374470070,
+      "legal_actions": 6,
+      "state_hash": 5043717523685050407,
+      "gold_action": "PlayCard { hand_index: 1, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 136,
+      "character": "silent",
+      "tier": "common",
+      "floor": 3,
+      "fixture_rel_path": "the-silent/onmanifold_00066_common.toml",
+      "seed": 8709371129874604659,
+      "legal_actions": 18,
+      "state_hash": 7991582603810846477,
+      "gold_action": "PlayCard { hand_index: 2, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 137,
+      "character": "silent",
+      "tier": "common",
+      "floor": 4,
+      "fixture_rel_path": "the-silent/onmanifold_00089_common.toml",
+      "seed": 13064056694811450013,
+      "legal_actions": 8,
+      "state_hash": 7694267272137412961,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 138,
+      "character": "silent",
+      "tier": "common",
+      "floor": 5,
+      "fixture_rel_path": "the-silent/onmanifold_00110_common.toml",
+      "seed": 6018027440425096882,
+      "legal_actions": 14,
+      "state_hash": 3553803704703008824,
+      "gold_action": "PlayCard { hand_index: 5, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 139,
+      "character": "silent",
+      "tier": "common",
+      "floor": 2,
+      "fixture_rel_path": "the-silent/onmanifold_00242_common.toml",
+      "seed": 9344711191399772036,
+      "legal_actions": 8,
+      "state_hash": 4554500173293172990,
+      "gold_action": "PlayCard { hand_index: 1, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 140,
+      "character": "silent",
+      "tier": "common",
+      "floor": 7,
+      "fixture_rel_path": "the-silent/onmanifold_00336_common.toml",
+      "seed": 11008053066887109613,
+      "legal_actions": 10,
+      "state_hash": 14811932663219396494,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 141,
+      "character": "silent",
+      "tier": "common",
+      "floor": 10,
+      "fixture_rel_path": "the-silent/onmanifold_00358_common.toml",
+      "seed": 3962023812500756482,
+      "legal_actions": 12,
+      "state_hash": 14869420683632009603,
+      "gold_action": "PlayCard { hand_index: 6, target: Some(2) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 142,
+      "character": "silent",
+      "tier": "common",
+      "floor": 13,
+      "fixture_rel_path": "the-silent/onmanifold_00380_common.toml",
+      "seed": 15362738631823954967,
+      "legal_actions": 12,
+      "state_hash": 14031759535172602818,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 143,
+      "character": "silent",
+      "tier": "common",
+      "floor": 10,
+      "fixture_rel_path": "the-silent/onmanifold_00403_common.toml",
+      "seed": 1270680123051248705,
+      "legal_actions": 10,
+      "state_hash": 11617678123001586152,
+      "gold_action": "PlayCard { hand_index: 5, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 144,
+      "character": "silent",
+      "tier": "common",
+      "floor": 14,
+      "fixture_rel_path": "the-silent/onmanifold_00428_common.toml",
+      "seed": 12671394942374447190,
+      "legal_actions": 8,
+      "state_hash": 11533823664377621500,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 145,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-silent/onmanifold_00006_elite.toml",
+      "seed": 913951,
+      "legal_actions": 8,
+      "state_hash": 8598286354090024280,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 146,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-silent/onmanifold_00017_elite.toml",
+      "seed": 913951,
+      "legal_actions": 8,
+      "state_hash": 3271332997882334613,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 147,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-silent/onmanifold_00103_elite.toml",
+      "seed": 13064056694811450013,
+      "legal_actions": 8,
+      "state_hash": 11726865520243422817,
+      "gold_action": "PlayCard { hand_index: 3, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 148,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 6,
+      "fixture_rel_path": "the-silent/onmanifold_00141_elite.toml",
+      "seed": 10372713005361942236,
+      "legal_actions": 8,
+      "state_hash": 453632195876519408,
+      "gold_action": "PlayCard { hand_index: 6, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 149,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 17,
+      "fixture_rel_path": "the-silent/onmanifold_00181_elite.toml",
+      "seed": 14727398570298787590,
+      "legal_actions": 12,
+      "state_hash": 10202464410983560376,
+      "gold_action": "PlayCard { hand_index: 6, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 150,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-silent/onmanifold_00191_elite.toml",
+      "seed": 7681369315912434459,
+      "legal_actions": 8,
+      "state_hash": 12109148579474576095,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 151,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 18,
+      "fixture_rel_path": "the-silent/onmanifold_00231_elite.toml",
+      "seed": 4990025626462926682,
+      "legal_actions": 16,
+      "state_hash": 2412233493985462686,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 152,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 16,
+      "fixture_rel_path": "the-silent/onmanifold_00256_elite.toml",
+      "seed": 9344711191399772036,
+      "legal_actions": 8,
+      "state_hash": 13858790878993304798,
+      "gold_action": "PlayCard { hand_index: 5, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 153,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-silent/onmanifold_00277_elite.toml",
+      "seed": 13699396756336617390,
+      "legal_actions": 8,
+      "state_hash": 10529487909723361814,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 154,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 8,
+      "fixture_rel_path": "the-silent/onmanifold_00297_elite.toml",
+      "seed": 6653367501950264259,
+      "legal_actions": 8,
+      "state_hash": 7080000707110282362,
+      "gold_action": "PlayCard { hand_index: 6, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 155,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-silent/onmanifold_00355_elite.toml",
+      "seed": 3962023812500756482,
+      "legal_actions": 8,
+      "state_hash": 8344907108730307529,
+      "gold_action": "PlayCard { hand_index: 0, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent"
+      ]
+    },
+    {
+      "book_id": 156,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 17,
+      "fixture_rel_path": "the-silent/onmanifold_00365_elite.toml",
+      "seed": 3962023812500756482,
+      "legal_actions": 8,
+      "state_hash": 4315873501972389664,
+      "gold_action": "PlayCard { hand_index: 6, target: Some(0) }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 157,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 7,
+      "fixture_rel_path": "the-silent/onmanifold_00421_elite.toml",
+      "seed": 12671394942374447190,
+      "legal_actions": 8,
+      "state_hash": 14931385558277514299,
+      "gold_action": "PlayCard { hand_index: 5, target: Some(0) }",
+      "motifs": [
+        "incoming_attack"
+      ]
+    },
+    {
+      "book_id": 158,
+      "character": "silent",
+      "tier": "elite",
+      "floor": 10,
+      "fixture_rel_path": "the-silent/onmanifold_00424_elite.toml",
+      "seed": 12671394942374447190,
+      "legal_actions": 8,
+      "state_hash": 12100144265108650227,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 159,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 9,
+      "fixture_rel_path": "the-silent/onmanifold_00063_boss.toml",
+      "seed": 15755400384260957790,
+      "legal_actions": 8,
+      "state_hash": 1594522587045023280,
+      "gold_action": "PlayCard { hand_index: 4, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 160,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 9,
+      "fixture_rel_path": "the-silent/onmanifold_00094_boss.toml",
+      "seed": 13064056694811450013,
+      "legal_actions": 8,
+      "state_hash": 13490971374876224275,
+      "gold_action": "PlayCard { hand_index: 5, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 161,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-silent/onmanifold_00115_boss.toml",
+      "seed": 6018027440425096882,
+      "legal_actions": 16,
+      "state_hash": 3053637673180971248,
+      "gold_action": "PlayCard { hand_index: 4, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 162,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 11,
+      "fixture_rel_path": "the-silent/onmanifold_00135_boss.toml",
+      "seed": 17418742259748295367,
+      "legal_actions": 8,
+      "state_hash": 10045381227835239087,
+      "gold_action": "PlayCard { hand_index: 6, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 163,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-silent/onmanifold_00184_boss.toml",
+      "seed": 14727398570298787590,
+      "legal_actions": 8,
+      "state_hash": 17583237669004774956,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "no_attack_intent",
+        "power_in_hand"
+      ]
+    },
+    {
+      "book_id": 164,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 8,
+      "fixture_rel_path": "the-silent/onmanifold_00269_boss.toml",
+      "seed": 2298681937013418905,
+      "legal_actions": 8,
+      "state_hash": 4972315718955503610,
+      "gold_action": "PlayCard { hand_index: 5, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 165,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 20,
+      "fixture_rel_path": "the-silent/onmanifold_00289_boss.toml",
+      "seed": 13699396756336617390,
+      "legal_actions": 8,
+      "state_hash": 3363769103237989555,
+      "gold_action": "PlayCard { hand_index: 6, target: Some(0) }",
+      "motifs": [
+        "no_attack_intent",
+        "free_play_in_hand"
+      ]
+    },
+    {
+      "book_id": 166,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 12,
+      "fixture_rel_path": "the-silent/onmanifold_00319_boss.toml",
+      "seed": 18054082321273462744,
+      "legal_actions": 16,
+      "state_hash": 15914811514962948018,
+      "gold_action": "PlayCard { hand_index: 0, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "multi_enemy"
+      ]
+    },
+    {
+      "book_id": 167,
+      "character": "silent",
+      "tier": "boss",
+      "floor": 10,
+      "fixture_rel_path": "the-silent/onmanifold_00339_boss.toml",
+      "seed": 11008053066887109613,
+      "legal_actions": 12,
+      "state_hash": 14859635045087000972,
+      "gold_action": "PlayCard { hand_index: 3, target: None }",
+      "motifs": [
+        "incoming_attack",
+        "free_play_in_hand",
+        "power_in_hand",
+        "multi_enemy"
+      ]
+    }
+  ]
+}

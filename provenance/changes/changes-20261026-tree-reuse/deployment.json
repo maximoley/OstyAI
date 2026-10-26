@@ -1,0 +1,36 @@
+{
+  "time": 1793034489.9856334,
+  "paused_step": 5500,
+  "native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+  "environment_revision": "native-ai-import-v1",
+  "search_reuse": {
+    "enabled": true,
+    "capacity_per_combat": 512,
+    "schema": 1
+  },
+  "search_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "quotas": {
+    "easy": 1638,
+    "hard": 3277,
+    "elite": 4915,
+    "boss": 6554
+  },
+  "checkpoint_sha256": "6811f48a9843a2f0a5919673c94ea99ddb1ea79bdd980dc89ea95c407e019aa0",
+  "replay_sha256": "5cf568b100b928135ad1d2020cd87e882597a78efeea589039f7e116e8dae1a3",
+  "files": {
+    "production_train.py": "e619e0f869461574b5c482cc5f2322281bea6dd220e5c08f8d306c6be83815b7",
+    "secondary_validation.py": "bc59c6e6756cea580dfe804666bdbf623dff28f4810e48ddc8eca75e7d06da8a",
+    "loop.py": "c72a2e4f687b0bd8fd51e1454a5a004731518689144cdfa48b36c087649da444",
+    "loop_native.so": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+    "source/sts2-rs/crates/sts2-py/src/adversarial/closed_loop.rs": "7a8187aac1b510973c971a7cc5e5b39b9a9a8a7edc728adc8263952b2791f334",
+    "source/sts2-rs/crates/sts2-py/src/adversarial/closed_loop/search.rs": "f1227c11656f6ace0c5c4d08d3b6a3b7931c56229983d603f7cdc1c8b594a5a0",
+    "source/sts2-rs/crates/sts2-py/src/adversarial/closed_loop/forced.rs": "dbddae3bc667bcf97326915d0e8160edbcdcd018ab57d0fef0250cc24d62c537"
+  },
+  "historical_human_validation_sha256": "35c55f780018b2ba197a7e1b06b7feeb2e2efa25b6fe385f4bf22e0e55f724e0",
+  "tests": "24 Rust tests, disabled-path parity, fixed actor comparison, bounded eviction, full training bank/replay ingest, zero-search policy, historical-cache identity tests"
+}

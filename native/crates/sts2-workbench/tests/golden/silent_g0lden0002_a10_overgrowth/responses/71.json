@@ -1,0 +1,48 @@
+{
+ "act": 1,
+ "candidates": [
+  {
+   "is_best": false,
+   "key": "choice:0",
+   "label": "STRIKE_SILENT",
+   "q": 1.1284,
+   "visits": 12,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:1",
+   "label": "STRIKE_SILENT",
+   "q": 1.1284,
+   "visits": 12,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:2",
+   "label": "DEFEND_SILENT",
+   "q": 1.1284,
+   "visits": 12,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": true,
+   "key": "choice:3",
+   "label": "STRIKE_SILENT",
+   "q": 1.1284,
+   "visits": 12,
+   "win_prob": 1.0
+  }
+ ],
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "decision": "card_select"
+}

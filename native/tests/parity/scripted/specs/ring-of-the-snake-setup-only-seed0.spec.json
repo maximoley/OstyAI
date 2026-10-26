@@ -1,0 +1,14 @@
+{
+  "name": "ring-of-the-snake-setup-only-seed0",
+  "description": "sts2-rs-s16y: setup-only fixture with the Silent starter relic RingOfTheSnake installed. Validates the recorder's relics-install slot and that bridge-state byte-equality holds (bridge schema omits relics per zizk). Behavioral observation (round-1 +2 cards drawn) is visible at hand.length after at least one turn-start; this fixture pins setup only — a follow-up bead can add a 1-action variant once the run-loop draws on turn 0.",
+  "seed": 0,
+  "character": "Silent",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 70,
+    "current_hp": 70
+  },
+  "enemies": [],
+  "relics": ["RingOfTheSnake"],
+  "actions": []
+}

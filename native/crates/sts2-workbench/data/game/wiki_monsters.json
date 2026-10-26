@@ -1,0 +1,836 @@
+[
+ {
+  "class_name": "Aeonglass",
+  "hp_ascension": 8,
+  "max_hp": 535,
+  "min_hp": 535,
+  "min_hp_base": 512
+ },
+ {
+  "class_name": "Architect",
+  "max_hp": 9999,
+  "min_hp": 9999
+ },
+ {
+  "class_name": "AssassinRubyRaider",
+  "hp_ascension": 8,
+  "max_hp": 24,
+  "max_hp_base": 23,
+  "min_hp": 19,
+  "min_hp_base": 18
+ },
+ {
+  "class_name": "AxeRubyRaider",
+  "hp_ascension": 8,
+  "max_hp": 23,
+  "max_hp_base": 22,
+  "min_hp": 21,
+  "min_hp_base": 20
+ },
+ {
+  "class_name": "Axebot",
+  "hp_ascension": 8,
+  "max_hp": 86,
+  "max_hp_base": 78,
+  "min_hp": 76,
+  "min_hp_base": 70
+ },
+ {
+  "class_name": "BattleFriendV1",
+  "max_hp": 75,
+  "min_hp": 75
+ },
+ {
+  "class_name": "BattleFriendV2",
+  "max_hp": 150,
+  "min_hp": 150
+ },
+ {
+  "class_name": "BattleFriendV3",
+  "max_hp": 300,
+  "min_hp": 300
+ },
+ {
+  "class_name": "BigDummy",
+  "max_hp": 9999,
+  "min_hp": 9999
+ },
+ {
+  "class_name": "BowlbugEgg",
+  "hp_ascension": 8,
+  "max_hp": 24,
+  "max_hp_base": 22,
+  "min_hp": 23,
+  "min_hp_base": 21
+ },
+ {
+  "class_name": "BowlbugNectar",
+  "hp_ascension": 8,
+  "max_hp": 39,
+  "max_hp_base": 38,
+  "min_hp": 36,
+  "min_hp_base": 35
+ },
+ {
+  "class_name": "BowlbugRock",
+  "hp_ascension": 8,
+  "max_hp": 49,
+  "max_hp_base": 48,
+  "min_hp": 46,
+  "min_hp_base": 45
+ },
+ {
+  "class_name": "BowlbugSilk",
+  "hp_ascension": 8,
+  "max_hp": 44,
+  "max_hp_base": 43,
+  "min_hp": 41,
+  "min_hp_base": 40
+ },
+ {
+  "class_name": "BruteRubyRaider",
+  "hp_ascension": 8,
+  "max_hp": 34,
+  "max_hp_base": 33,
+  "min_hp": 31,
+  "min_hp_base": 30
+ },
+ {
+  "class_name": "BygoneEffigy",
+  "hp_ascension": 8,
+  "max_hp": 132,
+  "min_hp": 132,
+  "min_hp_base": 127
+ },
+ {
+  "class_name": "Byrdonis",
+  "hp_ascension": 8,
+  "max_hp": 90,
+  "max_hp_base": 84,
+  "min_hp": 90,
+  "min_hp_base": 81
+ },
+ {
+  "class_name": "Byrdpip",
+  "max_hp": 9999,
+  "min_hp": 9999
+ },
+ {
+  "class_name": "CalcifiedCultist",
+  "hp_ascension": 8,
+  "max_hp": 42,
+  "max_hp_base": 41,
+  "min_hp": 39,
+  "min_hp_base": 38
+ },
+ {
+  "class_name": "CeremonialBeast",
+  "hp_ascension": 8,
+  "max_hp": 262,
+  "min_hp": 262,
+  "min_hp_base": 252
+ },
+ {
+  "class_name": "Chomper",
+  "hp_ascension": 8,
+  "max_hp": 67,
+  "max_hp_base": 64,
+  "min_hp": 63,
+  "min_hp_base": 60
+ },
+ {
+  "class_name": "CorpseSlug",
+  "hp_ascension": 8,
+  "max_hp": 29,
+  "max_hp_base": 27,
+  "min_hp": 27,
+  "min_hp_base": 25
+ },
+ {
+  "class_name": "CrossbowRubyRaider",
+  "hp_ascension": 8,
+  "max_hp": 22,
+  "max_hp_base": 21,
+  "min_hp": 19,
+  "min_hp_base": 18
+ },
+ {
+  "class_name": "Crusher",
+  "hp_ascension": 8,
+  "max_hp": 219,
+  "min_hp": 219,
+  "min_hp_base": 209
+ },
+ {
+  "class_name": "CubexConstruct",
+  "hp_ascension": 8,
+  "max_hp": 70,
+  "min_hp": 70,
+  "min_hp_base": 65
+ },
+ {
+  "class_name": "DampCultist",
+  "hp_ascension": 8,
+  "max_hp": 54,
+  "max_hp_base": 53,
+  "min_hp": 52,
+  "min_hp_base": 51
+ },
+ {
+  "class_name": "DecimillipedeSegment",
+  "hp_ascension": 8,
+  "max_hp": 52,
+  "max_hp_base": 46,
+  "min_hp": 46,
+  "min_hp_base": 40
+ },
+ {
+  "class_name": "DeprecatedMonster",
+  "max_hp": 0,
+  "min_hp": 0
+ },
+ {
+  "class_name": "DevotedSculptor",
+  "hp_ascension": 8,
+  "max_hp": 172,
+  "min_hp": 172,
+  "min_hp_base": 162
+ },
+ {
+  "class_name": "Entomancer",
+  "hp_ascension": 8,
+  "max_hp": 165,
+  "min_hp": 165,
+  "min_hp_base": 145
+ },
+ {
+  "class_name": "Exoskeleton",
+  "hp_ascension": 8,
+  "max_hp": 30,
+  "max_hp_base": 28,
+  "min_hp": 26,
+  "min_hp_base": 24
+ },
+ {
+  "class_name": "EyeWithTeeth",
+  "max_hp": 6,
+  "min_hp": 6
+ },
+ {
+  "class_name": "Fabricator",
+  "hp_ascension": 8,
+  "max_hp": 155,
+  "min_hp": 155,
+  "min_hp_base": 150
+ },
+ {
+  "class_name": "FakeMerchantMonster",
+  "hp_ascension": 8,
+  "max_hp": 175,
+  "max_hp_base": 165,
+  "min_hp": 175,
+  "min_hp_base": 165
+ },
+ {
+  "class_name": "FatGremlin",
+  "hp_ascension": 8,
+  "max_hp": 18,
+  "max_hp_base": 17,
+  "min_hp": 14,
+  "min_hp_base": 13
+ },
+ {
+  "class_name": "FlailKnight",
+  "hp_ascension": 8,
+  "max_hp": 108,
+  "min_hp": 108,
+  "min_hp_base": 101
+ },
+ {
+  "class_name": "Flyconid",
+  "hp_ascension": 8,
+  "max_hp": 53,
+  "max_hp_base": 49,
+  "min_hp": 51,
+  "min_hp_base": 47
+ },
+ {
+  "class_name": "Fogmog",
+  "hp_ascension": 8,
+  "max_hp": 78,
+  "min_hp": 78,
+  "min_hp_base": 74
+ },
+ {
+  "class_name": "FossilStalker",
+  "hp_ascension": 8,
+  "max_hp": 56,
+  "max_hp_base": 53,
+  "min_hp": 54,
+  "min_hp_base": 51
+ },
+ {
+  "class_name": "FrogKnight",
+  "hp_ascension": 8,
+  "max_hp": 199,
+  "min_hp": 199,
+  "min_hp_base": 191
+ },
+ {
+  "class_name": "FuzzyWurmCrawler",
+  "hp_ascension": 8,
+  "max_hp": 59,
+  "max_hp_base": 57,
+  "min_hp": 58,
+  "min_hp_base": 55
+ },
+ {
+  "class_name": "GasBomb",
+  "hp_ascension": 8,
+  "max_hp": 8,
+  "min_hp": 8,
+  "min_hp_base": 7
+ },
+ {
+  "class_name": "GlobeHead",
+  "hp_ascension": 8,
+  "max_hp": 158,
+  "min_hp": 158,
+  "min_hp_base": 148
+ },
+ {
+  "class_name": "GremlinMerc",
+  "hp_ascension": 8,
+  "max_hp": 53,
+  "max_hp_base": 49,
+  "min_hp": 51,
+  "min_hp_base": 47
+ },
+ {
+  "class_name": "Guardbot",
+  "hp_ascension": 8,
+  "max_hp": 21,
+  "max_hp_base": 20,
+  "min_hp": 17,
+  "min_hp_base": 16
+ },
+ {
+  "class_name": "HauntedShip",
+  "hp_ascension": 8,
+  "max_hp": 67,
+  "min_hp": 67,
+  "min_hp_base": 63
+ },
+ {
+  "class_name": "HunterKiller",
+  "hp_ascension": 8,
+  "max_hp": 126,
+  "min_hp": 126,
+  "min_hp_base": 121
+ },
+ {
+  "class_name": "InfestedPrism",
+  "hp_ascension": 8,
+  "max_hp": 171,
+  "min_hp": 171,
+  "min_hp_base": 161
+ },
+ {
+  "class_name": "Inklet",
+  "hp_ascension": 8,
+  "max_hp": 18,
+  "max_hp_base": 17,
+  "min_hp": 12,
+  "min_hp_base": 11
+ },
+ {
+  "class_name": "KinFollower",
+  "hp_ascension": 8,
+  "max_hp": 63,
+  "max_hp_base": 59,
+  "min_hp": 62,
+  "min_hp_base": 58
+ },
+ {
+  "class_name": "KinPriest",
+  "hp_ascension": 8,
+  "max_hp": 199,
+  "min_hp": 199,
+  "min_hp_base": 190
+ },
+ {
+  "class_name": "KnowledgeDemon",
+  "hp_ascension": 8,
+  "max_hp": 399,
+  "min_hp": 399,
+  "min_hp_base": 379
+ },
+ {
+  "class_name": "LagavulinMatriarch",
+  "hp_ascension": 8,
+  "max_hp": 233,
+  "min_hp": 233,
+  "min_hp_base": 222
+ },
+ {
+  "class_name": "LeafSlimeM",
+  "hp_ascension": 8,
+  "max_hp": 36,
+  "max_hp_base": 35,
+  "min_hp": 33,
+  "min_hp_base": 32
+ },
+ {
+  "class_name": "LeafSlimeS",
+  "hp_ascension": 8,
+  "max_hp": 16,
+  "max_hp_base": 15,
+  "min_hp": 12,
+  "min_hp_base": 11
+ },
+ {
+  "class_name": "LivingFog",
+  "hp_ascension": 8,
+  "max_hp": 82,
+  "min_hp": 82,
+  "min_hp_base": 80
+ },
+ {
+  "class_name": "LivingShield",
+  "hp_ascension": 8,
+  "max_hp": 65,
+  "min_hp": 65,
+  "min_hp_base": 55
+ },
+ {
+  "class_name": "LouseProgenitor",
+  "hp_ascension": 8,
+  "max_hp": 141,
+  "max_hp_base": 136,
+  "min_hp": 138,
+  "min_hp_base": 134
+ },
+ {
+  "class_name": "MagiKnight",
+  "hp_ascension": 8,
+  "max_hp": 89,
+  "min_hp": 89,
+  "min_hp_base": 82
+ },
+ {
+  "class_name": "Mawler",
+  "hp_ascension": 8,
+  "max_hp": 76,
+  "min_hp": 76,
+  "min_hp_base": 72
+ },
+ {
+  "class_name": "MechaKnight",
+  "hp_ascension": 8,
+  "max_hp": 320,
+  "min_hp": 320,
+  "min_hp_base": 300
+ },
+ {
+  "class_name": "MultiAttackMoveMonster",
+  "max_hp": 999,
+  "min_hp": 999
+ },
+ {
+  "class_name": "Myte",
+  "hp_ascension": 8,
+  "max_hp": 69,
+  "max_hp_base": 67,
+  "min_hp": 64,
+  "min_hp_base": 61
+ },
+ {
+  "class_name": "Nibbit",
+  "hp_ascension": 8,
+  "max_hp": 48,
+  "max_hp_base": 46,
+  "min_hp": 44,
+  "min_hp_base": 42
+ },
+ {
+  "class_name": "Noisebot",
+  "hp_ascension": 8,
+  "max_hp": 24,
+  "max_hp_base": 23,
+  "min_hp": 19,
+  "min_hp_base": 18
+ },
+ {
+  "class_name": "OneHpMonster",
+  "max_hp": 1,
+  "min_hp": 1
+ },
+ {
+  "class_name": "Osty",
+  "max_hp": 1,
+  "min_hp": 1
+ },
+ {
+  "class_name": "Ovicopter",
+  "hp_ascension": 8,
+  "max_hp": 132,
+  "max_hp_base": 130,
+  "min_hp": 126,
+  "min_hp_base": 124
+ },
+ {
+  "class_name": "OwlMagistrate",
+  "hp_ascension": 8,
+  "max_hp": 247,
+  "min_hp": 247,
+  "min_hp_base": 231
+ },
+ {
+  "class_name": "PaelsLegion",
+  "max_hp": 9999,
+  "min_hp": 9999
+ },
+ {
+  "class_name": "Parafright",
+  "max_hp": 21,
+  "min_hp": 21
+ },
+ {
+  "class_name": "PhantasmalGardener",
+  "hp_ascension": 8,
+  "max_hp": 32,
+  "max_hp_base": 31,
+  "min_hp": 27,
+  "min_hp_base": 26
+ },
+ {
+  "class_name": "PhrogParasite",
+  "hp_ascension": 8,
+  "max_hp": 68,
+  "max_hp_base": 64,
+  "min_hp": 66,
+  "min_hp_base": 61
+ },
+ {
+  "class_name": "PunchConstruct",
+  "hp_ascension": 8,
+  "max_hp": 60,
+  "min_hp": 60,
+  "min_hp_base": 55
+ },
+ {
+  "class_name": "Queen",
+  "hp_ascension": 8,
+  "max_hp": 419,
+  "min_hp": 419,
+  "min_hp_base": 400
+ },
+ {
+  "class_name": "Rocket",
+  "hp_ascension": 8,
+  "max_hp": 209,
+  "min_hp": 209,
+  "min_hp_base": 199
+ },
+ {
+  "class_name": "ScrollOfBiting",
+  "hp_ascension": 8,
+  "max_hp": 39,
+  "max_hp_base": 37,
+  "min_hp": 33,
+  "min_hp_base": 30
+ },
+ {
+  "class_name": "Seapunk",
+  "hp_ascension": 8,
+  "max_hp": 49,
+  "max_hp_base": 46,
+  "min_hp": 47,
+  "min_hp_base": 44
+ },
+ {
+  "class_name": "SewerClam",
+  "hp_ascension": 8,
+  "max_hp": 58,
+  "min_hp": 58,
+  "min_hp_base": 56
+ },
+ {
+  "class_name": "ShrinkerBeetle",
+  "hp_ascension": 8,
+  "max_hp": 42,
+  "max_hp_base": 40,
+  "min_hp": 40,
+  "min_hp_base": 38
+ },
+ {
+  "class_name": "SingleAttackMoveMonster",
+  "max_hp": 999,
+  "min_hp": 999
+ },
+ {
+  "class_name": "SkulkingColony",
+  "hp_ascension": 8,
+  "max_hp": 80,
+  "min_hp": 80,
+  "min_hp_base": 75
+ },
+ {
+  "class_name": "SlimedBerserker",
+  "hp_ascension": 8,
+  "max_hp": 281,
+  "min_hp": 281,
+  "min_hp_base": 261
+ },
+ {
+  "class_name": "SlitheringStrangler",
+  "hp_ascension": 8,
+  "max_hp": 56,
+  "max_hp_base": 55,
+  "min_hp": 54,
+  "min_hp_base": 53
+ },
+ {
+  "class_name": "SludgeSpinner",
+  "hp_ascension": 8,
+  "max_hp": 42,
+  "max_hp_base": 39,
+  "min_hp": 41,
+  "min_hp_base": 37
+ },
+ {
+  "class_name": "SlumberingBeetle",
+  "hp_ascension": 8,
+  "max_hp": 89,
+  "min_hp": 89,
+  "min_hp_base": 86
+ },
+ {
+  "class_name": "SnappingJaxfruit",
+  "hp_ascension": 8,
+  "max_hp": 36,
+  "max_hp_base": 33,
+  "min_hp": 34,
+  "min_hp_base": 31
+ },
+ {
+  "class_name": "SneakyGremlin",
+  "hp_ascension": 8,
+  "max_hp": 15,
+  "max_hp_base": 14,
+  "min_hp": 11,
+  "min_hp_base": 10
+ },
+ {
+  "class_name": "SoulFysh",
+  "hp_ascension": 8,
+  "max_hp": 221,
+  "min_hp": 221,
+  "min_hp_base": 211
+ },
+ {
+  "class_name": "SoulNexus",
+  "hp_ascension": 8,
+  "max_hp": 254,
+  "min_hp": 254,
+  "min_hp_base": 234
+ },
+ {
+  "class_name": "SpectralKnight",
+  "hp_ascension": 8,
+  "max_hp": 97,
+  "min_hp": 97,
+  "min_hp_base": 93
+ },
+ {
+  "class_name": "SpinyToad",
+  "hp_ascension": 8,
+  "max_hp": 124,
+  "max_hp_base": 119,
+  "min_hp": 121,
+  "min_hp_base": 116
+ },
+ {
+  "class_name": "Stabbot",
+  "hp_ascension": 8,
+  "max_hp": 24,
+  "max_hp_base": 23,
+  "min_hp": 19,
+  "min_hp_base": 18
+ },
+ {
+  "class_name": "TenHpMonster",
+  "max_hp": 10,
+  "min_hp": 10
+ },
+ {
+  "class_name": "TerrorEel",
+  "hp_ascension": 8,
+  "max_hp": 150,
+  "min_hp": 150,
+  "min_hp_base": 140
+ },
+ {
+  "class_name": "TestSubject",
+  "max_hp": 0,
+  "min_hp": 0
+ },
+ {
+  "class_name": "TheAdversaryMkOne",
+  "max_hp": 100,
+  "min_hp": 100
+ },
+ {
+  "class_name": "TheAdversaryMkThree",
+  "hp_ascension": 8,
+  "max_hp": 300,
+  "min_hp": 300
+ },
+ {
+  "class_name": "TheAdversaryMkTwo",
+  "hp_ascension": 8,
+  "max_hp": 200,
+  "min_hp": 200
+ },
+ {
+  "class_name": "TheForgotten",
+  "hp_ascension": 8,
+  "max_hp": 111,
+  "min_hp": 111,
+  "min_hp_base": 106
+ },
+ {
+  "class_name": "TheInsatiable",
+  "hp_ascension": 8,
+  "max_hp": 341,
+  "min_hp": 341,
+  "min_hp_base": 321
+ },
+ {
+  "class_name": "TheLost",
+  "hp_ascension": 8,
+  "max_hp": 99,
+  "min_hp": 99,
+  "min_hp_base": 93
+ },
+ {
+  "class_name": "TheObscura",
+  "hp_ascension": 8,
+  "max_hp": 129,
+  "min_hp": 129,
+  "min_hp_base": 123
+ },
+ {
+  "class_name": "ThievingHopper",
+  "hp_ascension": 8,
+  "max_hp": 84,
+  "min_hp": 84,
+  "min_hp_base": 79
+ },
+ {
+  "class_name": "Toadpole",
+  "hp_ascension": 8,
+  "max_hp": 26,
+  "max_hp_base": 25,
+  "min_hp": 22,
+  "min_hp_base": 21
+ },
+ {
+  "class_name": "TorchHeadAmalgam",
+  "hp_ascension": 8,
+  "max_hp": 211,
+  "min_hp": 211,
+  "min_hp_base": 199
+ },
+ {
+  "class_name": "ToughEgg",
+  "hp_ascension": 8,
+  "max_hp": 19,
+  "max_hp_base": 18,
+  "min_hp": 15,
+  "min_hp_base": 14
+ },
+ {
+  "class_name": "TrackerRubyRaider",
+  "hp_ascension": 8,
+  "max_hp": 26,
+  "max_hp_base": 25,
+  "min_hp": 22,
+  "min_hp_base": 21
+ },
+ {
+  "class_name": "Tunneler",
+  "hp_ascension": 8,
+  "max_hp": 92,
+  "min_hp": 92,
+  "min_hp_base": 87
+ },
+ {
+  "class_name": "TurretOperator",
+  "hp_ascension": 8,
+  "max_hp": 51,
+  "min_hp": 51,
+  "min_hp_base": 41
+ },
+ {
+  "class_name": "TwigSlimeM",
+  "hp_ascension": 8,
+  "max_hp": 29,
+  "max_hp_base": 28,
+  "min_hp": 27,
+  "min_hp_base": 26
+ },
+ {
+  "class_name": "TwigSlimeS",
+  "hp_ascension": 8,
+  "max_hp": 12,
+  "max_hp_base": 11,
+  "min_hp": 8,
+  "min_hp_base": 7
+ },
+ {
+  "class_name": "TwoTailedRat",
+  "hp_ascension": 8,
+  "max_hp": 22,
+  "max_hp_base": 21,
+  "min_hp": 18,
+  "min_hp_base": 17
+ },
+ {
+  "class_name": "Vantom",
+  "hp_ascension": 8,
+  "max_hp": 183,
+  "min_hp": 183,
+  "min_hp_base": 173
+ },
+ {
+  "class_name": "VineShambler",
+  "hp_ascension": 8,
+  "max_hp": 64,
+  "min_hp": 64,
+  "min_hp_base": 61
+ },
+ {
+  "class_name": "WaterfallGiant",
+  "hp_ascension": 8,
+  "max_hp": 250,
+  "min_hp": 250,
+  "min_hp_base": 240
+ },
+ {
+  "class_name": "Wriggler",
+  "hp_ascension": 8,
+  "max_hp": 22,
+  "max_hp_base": 21,
+  "min_hp": 18,
+  "min_hp_base": 17
+ },
+ {
+  "class_name": "Zapbot",
+  "hp_ascension": 8,
+  "max_hp": 24,
+  "max_hp_base": 23,
+  "min_hp": 19,
+  "min_hp_base": 18
+ }
+]

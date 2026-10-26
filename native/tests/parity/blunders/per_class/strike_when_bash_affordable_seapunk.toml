@@ -1,0 +1,54 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-nhvwo` (q3yiy.1 follow-up).
+# Class: `strike_when_bash_affordable` — Detector at
+# crates/sts2-cli/src/replay/audit.rs (RedFlagKind::StrikeWhenBashAffordable)
+# fires when the player picks `Play Strike` while `Play Bash` is
+# affordable and unplayed.
+#
+# Note: this fixture tests the *negative* — MCTS at sims=2000 vs a
+# single SEAPUNK weak should NOT pick `End turn` on a hand with both
+# Strike and Bash available (since playing the energy is strictly
+# better than ending). The class label is informational; the
+# substring `must_not_pick = "End turn"` exercises the standard
+# end-turn path. A future fixture extension may switch the
+# substring to "Play StrikeIronclad" once we have a reliable
+# Bash-in-hand seed.
+#
+# This fixture's primary purpose is to populate the per_class/
+# directory so the recursive enumerate_fixtures walk has a real
+# subdir target to iterate.
+#
+# Source: derived from floor003_seapunk_endturn.toml.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 3
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.SEAPUNK_WEAK"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 57
+max_hp    = 80
+gold      = 108
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "SEAPUNK"
+
+[blunder_assertion]
+class          = "strike_when_bash_affordable"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

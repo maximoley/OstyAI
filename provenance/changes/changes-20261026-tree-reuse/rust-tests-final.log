@@ -1,0 +1,32 @@
+   Compiling sts2-py v0.0.1 (/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/changes-20261026-tree-reuse/source/crates/sts2-py)
+    Finished `release` profile [optimized] target(s) in 3m 28s
+     Running unittests src/lib.rs (/public/maxim/Codex/spire-mentor/sts2-rs/target/release/deps/sts2_rs-749570c9f25771d6)
+
+running 24 tests
+test adversarial::closed_loop::forced::tests::forced_moves_preserve_state_rng_and_replay ... ok
+test adversarial::closed_loop::forced::tests::forced_moves_respect_action_cap_and_disabled_path ... ok
+test adversarial::closed_loop::replay_queue::tests::bounded_queue_preserves_policy_version_and_terminal_value ... ok
+test adversarial::closed_loop::replay_queue::tests::large_replay_samples_preserve_every_row ... ok
+test adversarial::closed_loop::replay_queue::tests::oversized_replay_error_preserves_queued_sample ... ok
+test adversarial::closed_loop::search::tests::belief_pins_and_chance_outcomes_preserved ... ok
+test adversarial::closed_loop::search::tests::cyclic_graph_bootstraps_once_per_simulation ... ok
+test adversarial::closed_loop::search::tests::eviction_is_bounded_and_invalidates_complete_chance_sample_lists ... ok
+test adversarial::closed_loop::search::tests::forced_belief_states_are_not_tree_nodes ... ok
+test adversarial::closed_loop::search::tests::new_actor_discards_persistent_evaluations_and_statistics ... ok
+test adversarial::closed_loop::search::tests::persistent_reroot_preserves_graph_and_spends_fresh_budget ... ok
+test adversarial::closed_loop::search::tests::persistent_search_remains_hidden_information_invariant ... ok
+test adversarial::closed_loop::search::tests::potion_identity_cost_tokens_and_damage_context_follow_clones ... ok
+test adversarial::closed_loop::search::tests::preset_potion_costs_preserve_instance_identity_and_future_cost ... ok
+test adversarial::closed_loop::search::tests::real_search_budget_cache_and_hidden_information_invariance ... ok
+test adversarial::closed_loop::search::tests::sequential_halving_16_simulations ... ok
+test adversarial::closed_loop::search::tests::stable_softmax_and_ties ... ok
+test adversarial::closed_loop::search::tests::transposition_hash_collision_requires_full_equality ... ok
+test adversarial::closed_loop::search::tests::transposition_key_hides_rng_but_preserves_continuations_costs_and_pins ... ok
+test adversarial::closed_loop::tests::bucket_boundaries_keep_every_row ... ok
+test adversarial::closed_loop::tests::descriptor_abi_size_is_stable ... ok
+test adversarial::closed_loop::tests::invalid_configuration_rejected_before_cuda ... ok
+test adversarial::closed_loop::tier_budget::tests::fail_closed_on_ambiguous_pool_and_invalid_budget ... ok
+test adversarial::closed_loop::tier_budget::tests::registry_and_generated_pool_labels ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 83 filtered out; finished in 0.09s
+

@@ -1,0 +1,48 @@
+schema = 2
+
+# Per-class blunder fixture for `sts2-rs-21s28` (nhvwo.1 follow-up).
+# Class: `suicide_play` — RedFlagKind::SuicidePlay fires when the
+# player plays a card that drops them to 0 HP.
+#
+# Curse/status-free Toadpoles t=1 derivative. At decision_index=0 MCTS
+# should pick a card; both the must_not_pick assertion ("End turn"
+# substring absent) and the cross-validation gate (audit must not
+# flag the rational pick as suicide_play) hold trivially because the
+# player is at high HP and no card at t=1 can drop them to zero.
+#
+# Source: derived from floor004_toadpoles_endturn.toml.
+
+[provenance]
+run_id     = "00030217-6611-4a0a-aa7b-a01d92f22b49"
+build_id   = "v0.103.2"
+floor      = 4
+act        = "ACT.UNDERDOCKS"
+encounter  = "ENCOUNTER.TOADPOLES_WEAK"
+room_type  = "monster"
+player_outcome = "won"
+deck_perfect   = true
+relics_perfect = true
+
+[player]
+class     = "Ironclad"
+ascension = 6
+hp        = 54
+max_hp    = 80
+gold      = 116
+deck      = ["STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "STRIKE_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "DEFEND_IRONCLAD", "BASH", "ASCENDERS_BANE", "WHIRLWIND+", "DOMINATE+"]
+relics    = ["BURNING_BLOOD", "SILVER_CRUCIBLE"]
+potions   = []
+
+[[monsters]]
+kind = "TOADPOLE"
+
+[[monsters]]
+kind = "TOADPOLE"
+
+[blunder_assertion]
+class          = "suicide_play"
+must_not_pick  = "End turn"
+sims           = 2000
+rollout_depth  = 15
+seed           = 1
+decision_index = 0

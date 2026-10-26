@@ -1,0 +1,2 @@
+# Random agent ignores stdin; this file just records the test config.
+# args: --agent random --seed 42 --steps 30 --encounter nibbit (sts2-rs-ar9u)

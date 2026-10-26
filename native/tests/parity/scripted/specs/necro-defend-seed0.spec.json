@@ -1,0 +1,40 @@
+{
+  "name": "necro-defend-seed0",
+  "description": "Necrobinder DefendNecrobinder vs ShrinkerBeetle. Single play_card -> gain_block path. Mirrors sts2-rl-agent@01c094d:sts2_env/cards/necrobinder.py defend_necrobinder (basic-4). Bead sts2-rs-s39 (bay-fixtures).",
+  "scenario": "necro-defend",
+  "seed": 0,
+  "character": "Necrobinder",
+  "encounter": "ShrinkerBeetle",
+  "initial_round": 1,
+  "initial_energy": 3,
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG (Python MT vs Rust Xoshiro256++) — ShrinkerBeetle's intent roll diverges by design (monsters.rs:22-29)."
+  },
+  "player": {
+    "max_hp": 66,
+    "current_hp": 66,
+    "hand": [
+      {"card_id": "DEFEND_NECROBINDER"}
+    ]
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "block": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "play_card",
+      "hand_index": 0,
+      "target_index": 0
+    }
+  ]
+}

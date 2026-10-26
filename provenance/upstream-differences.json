@@ -1,0 +1,47 @@
+{
+  "upstream_repository": "https://github.com/tfriedel/spire-mentor",
+  "commit": "e7a923e90dc731e83683791b6c4d4a4059656149",
+  "scope": "Production source relative to recorded upstream checkout; .hegel compiler cache/logs excluded from package",
+  "added": [
+    "crates/sts2-core/src/transition_metrics.rs",
+    "crates/sts2-core/tests/rng_proptest.proptest-regressions",
+    "crates/sts2-py/src/adversarial.rs",
+    "crates/sts2-py/src/adversarial/closed_loop.rs",
+    "crates/sts2-py/src/adversarial/closed_loop/forced.rs",
+    "crates/sts2-py/src/adversarial/closed_loop/replay_queue.rs",
+    "crates/sts2-py/src/adversarial/closed_loop/search.rs",
+    "crates/sts2-py/src/adversarial/closed_loop/search_fixture.json",
+    "crates/sts2-py/src/adversarial/closed_loop/tier_budget.rs",
+    "crates/sts2-py/src/adversarial/fast_flat.rs",
+    "crates/sts2-py/src/adversarial/native_arrays.rs",
+    "crates/sts2-py/src/adversarial/numeric.rs",
+    "crates/sts2-py/src/adversarial/reward.rs",
+    "crates/sts2-py/src/adversarial/worker_queue.rs",
+    "crates/sts2-py/src/adversarial/worker_queue/gpu_feed.rs",
+    "crates/sts2-py/src/bin/gpu_feed_bench.rs",
+    "crates/sts2-py/src/bin/native_queue_bench.rs",
+    "crates/sts2-wire/examples/audit_ai.rs",
+    "crates/sts2-wire/src/fixture_import.rs",
+    "crates/sts2-wire/src/fixture_import_test.json",
+    "crates/sts2-wire/src/turn_start_autoplay_test.json"
+  ],
+  "modified": [
+    "Cargo.lock",
+    "crates/sts2-content/src/monsters/act3_glory.rs",
+    "crates/sts2-core/src/combat_loop.rs",
+    "crates/sts2-core/src/lib.rs",
+    "crates/sts2-mcts/src/lib.rs",
+    "crates/sts2-py/Cargo.toml",
+    "crates/sts2-py/build.rs",
+    "crates/sts2-py/src/lib.rs",
+    "crates/sts2-wire/src/lib.rs",
+    "crates/sts2-wire/src/state_dict.rs"
+  ],
+  "omitted": [],
+  "unchanged_count": 4591,
+  "packaging_omissions": {
+    "pattern": "**/.hegel/**",
+    "file_count": 1104,
+    "reason": "Compiler runtime cache and logs, not source"
+  }
+}

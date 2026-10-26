@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "suite": "smoke",
+      "step": 5500,
+      "requested": 24,
+      "wins": 21,
+      "win_rate": 0.875,
+      "native_sha256": "00488bdb3c19745c4cdb663b0044df68f542d15feb93a75c40fd482f44e1e59a",
+      "persistent_search": true,
+      "policy_only": false
+    },
+    {
+      "suite": "smoke",
+      "step": 5500,
+      "requested": 24,
+      "wins": 21,
+      "win_rate": 0.875,
+      "native_sha256": "00488bdb3c19745c4cdb663b0044df68f542d15feb93a75c40fd482f44e1e59a",
+      "persistent_search": false,
+      "policy_only": false
+    },
+    {
+      "suite": "smoke",
+      "step": 5500,
+      "requested": 24,
+      "wins": 20,
+      "win_rate": 0.8333333333333334,
+      "native_sha256": "00488bdb3c19745c4cdb663b0044df68f542d15feb93a75c40fd482f44e1e59a",
+      "persistent_search": false,
+      "policy_only": true,
+      "model_sha256": "5ab556567a7d8f0d8f8657f1ff24b8150428a09bdb23980067a9441459e63816",
+      "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a",
+      "torch_version": "2.7.1+cu128"
+    },
+    {
+      "suite": "smoke",
+      "step": 5500,
+      "requested": 24,
+      "wins": 20,
+      "win_rate": 0.8333333333333334,
+      "native_sha256": "00488bdb3c19745c4cdb663b0044df68f542d15feb93a75c40fd482f44e1e59a",
+      "persistent_search": false,
+      "policy_only": true
+    }
+  ],
+  "all_72_original_trials_terminal": true,
+  "search_accounting_passed": true,
+  "zero_search_policy_passed": true,
+  "replay_added": 0
+}

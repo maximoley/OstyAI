@@ -1,0 +1,41 @@
+{
+  "actions": [
+    {
+      "action_record": {
+        "action": "direct_damage",
+        "raw_damage": 6,
+        "source": "test_harness",
+        "target": "cultist"
+      },
+      "amount": 6,
+      "dealer": "player",
+      "props": "MOVE",
+      "target": "enemy_0",
+      "type": "deal_damage"
+    }
+  ],
+  "ascension": 20,
+  "character": "Ironclad",
+  "description": "VTHIN-2 Vulnerable + apply_damage fixture: Cultist with VulnerablePower(2) takes 6 raw damage from player \u2192 6 * 1.5 = 9 \u2192 cultist HP 48 - 9 = 39. Locks the rounding-audit invariant under real conditions. A20 sibling (sts2-rs-k3y / sts2-rs-xpa): pins ascension=20 in metadata. Combat-side ascension is identity at python pin 01c094d (see docs/reality-checks/2026-05-12-ascension-audit.md), so the recorded trace is byte-identical to the A0 source except for metadata.ascension.",
+  "encounter": "ShrinkerBeetle",
+  "enemies": [
+    {
+      "current_hp": 48,
+      "max_hp": 48,
+      "monster_id": "ShrinkerBeetle",
+      "powers": [
+        {
+          "amount": 2,
+          "id": "VULNERABLE"
+        }
+      ]
+    }
+  ],
+  "name": "vulnerable-damage-seed0-a20",
+  "player": {
+    "current_hp": 50,
+    "max_hp": 50
+  },
+  "scenario": "vulnerable-damage",
+  "seed": 0
+}

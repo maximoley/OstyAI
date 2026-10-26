@@ -1,0 +1,87 @@
+{
+ "assumptions": {
+  "energy": 3,
+  "hand": 5,
+  "samples": 200
+ },
+ "block": {
+  "per_turn": 6.9,
+  "scaling_cards": [
+   "Bodyguard",
+   "Invoke",
+   "Invoke"
+  ]
+ },
+ "composition": {
+  "by_rarity": {
+   "Basic": 9,
+   "Common": 3,
+   "Curse": 1,
+   "Quest": 1,
+   "Rare": 1
+  },
+  "by_type": {
+   "Attack": 5,
+   "Curse": 1,
+   "Power": 1,
+   "Quest": 1,
+   "Skill": 7
+  },
+  "dead_cards": 1,
+  "energy_curve": {
+   "1": 13,
+   "X": 1
+  },
+  "unupgraded_basics": 9
+ },
+ "damage": {
+  "aoe_attacks": [],
+  "attack_count": 5,
+  "per_turn": 6.3,
+  "scaling_cards": [
+   "Unleash",
+   "Devour Life",
+   "Snap"
+  ],
+  "single_target": 6.3,
+  "vs_group": 6.2
+ },
+ "deck_size": 15,
+ "lenses": {
+  "boss": 32.7,
+  "hallway": 25.5,
+  "scaling": 36.5
+ },
+ "scores": {
+  "block": 29.1,
+  "damage": 14.5,
+  "velocity": 54.9,
+  "volume": 28.5
+ },
+ "velocity": {
+  "bottleneck": "energy",
+  "cards_per_turn": 3.8,
+  "dilution": 1.0,
+  "draw_limited_turns": 2.6,
+  "energy_limited_turns": 2.6,
+  "engine_cards": 2,
+  "extra_per_turn": 0.8,
+  "tags": {
+   "energy": 2
+  }
+ },
+ "warnings": [
+  {
+   "severity": "info",
+   "text": "No AOE — multi-enemy fights (Gremlins, hallways) will be slow."
+  },
+  {
+   "severity": "info",
+   "text": "Energy-limited — cards stranded in hand; more energy helps, more draw won't."
+  },
+  {
+   "severity": "warn",
+   "text": "Deck clogged with basics/curses — prioritise removals."
+  }
+ ]
+}

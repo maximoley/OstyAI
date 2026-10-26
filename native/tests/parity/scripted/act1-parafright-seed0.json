@@ -1,0 +1,409 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG divergence: Python MT vs Rust Xoshiro256++ may resolve intent telegraphing differently even on a single-move self-loop (the engine fires after_intent_chosen hooks that can consume RNG bits). Excluding the intent triple keeps the structural shape-lock independent of those bits while leaving HP/max_hp/pile counts/keys all byte-locked. Parafright's HP is deterministic (rng_range 21..=21) so the initial-state HP is pinned exactly.",
+    "step_exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits",
+      "/enemies/0/hp",
+      "/enemies/0/block",
+      "/enemies/0/is_alive",
+      "/enemies/0/powers",
+      "/player/hp",
+      "/player/block",
+      "/player/powers",
+      "/player/energy",
+      "/player/max_energy",
+      "/round"
+    ],
+    "step_exclude_fields_reason": "sts2-rs-r9n4w (9bkan.1): per-step structural shape lock. Parafright's SLAM(16) is fully deterministic on the Rust side, but the cross-language RNG-divergence rationale that excludes the intent triple on the initial state extends to each turn's intent-roll. Damage-derived fields (hp/block/is_alive/powers) move every turn; /round freezes after game-over and post-game-over /player.energy / /player.max_energy may decay. Only structural invariants (type, enemy id/max_hp, pile counts, player/max_hp, hand) are byte-locked across the 10-turn walk. Pinned: encounter pile shape, enemy id, max_hp invariants. Future Python-recording-infra delivery can drop step_exclude entries as the cross-language RNG is reconciled (tracked by ohxoq.1-4 / may54.1 sister-bead chain).",
+    "step_action_reason": "All 10 steps use `end_turn`: Parafright's setup has an empty player draw pile + 0 energy + no relics, so the only legal action every turn is end_turn. The engine processes the enemy's SLAM intent (16 dmg) on each turn boundary."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 21,
+        "id": "PARAFRIGHT",
+        "intent": "ATTACK",
+        "intent_damage": 16,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 21,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Parafright",
+    "python_pin": "01c094d-pending",
+    "rust_pin": "r9n4w-rust-only",
+    "scenario": "act1-parafright-seed0",
+    "seed": 0,
+    "notes": "sts2-rs-r9n4w (9bkan.1): full 10-turn step-walk extension of the sts2-rs-9bkan setup-only sentinel. Same RNG-divergence exclusion lists as mawler (sts2-rs-t557). Python recording is the future-work delivery once the ohxoq.1-4 / may54.1 Python-recording infra lands; this commit lands the Rust-side structural shape-lock so subsequent engine regressions surface immediately. The structural shape is invariant across the walk by Parafright's deterministic SLAM(16) self-loop construction; the step entries assert that invariance turn by turn."
+  },
+  "mode": "combat",
+  "steps": [
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 64,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 1,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 48,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 2,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 32,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 3,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 16,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 4,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    },
+    {
+      "action": {
+        "action": "end_turn"
+      },
+      "resulting_state": {
+        "discard_pile_count": 0,
+        "draw_pile_count": 0,
+        "enemies": [
+          {
+            "block": 0,
+            "hp": 21,
+            "id": "PARAFRIGHT",
+            "intent": "ATTACK",
+            "intent_damage": 16,
+            "intent_hits": 1,
+            "is_alive": true,
+            "max_hp": 21,
+            "powers": []
+          }
+        ],
+        "exhaust_pile_count": 0,
+        "hand": [],
+        "player": {
+          "block": 0,
+          "energy": 0,
+          "hp": 0,
+          "max_energy": 3,
+          "max_hp": 80,
+          "powers": []
+        },
+        "round": 5,
+        "type": "combat_action"
+      }
+    }
+  ],
+  "version": 1
+}

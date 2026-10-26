@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "actions": [
+    {
+      "kind": "EndTurn"
+    },
+    {
+      "kind": "EndTurn"
+    }
+  ],
+  "encounter": "smoke",
+  "symptom": "fake-divergence",
+  "expected_hash": null,
+  "smoke_test_target_len": 2
+}

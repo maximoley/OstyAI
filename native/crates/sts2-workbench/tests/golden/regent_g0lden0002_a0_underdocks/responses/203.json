@@ -1,0 +1,80 @@
+{
+ "assumptions": {
+  "energy": 3,
+  "hand": 5,
+  "samples": 200
+ },
+ "block": {
+  "per_turn": 9.5,
+  "scaling_cards": [
+   "Pillar of Creation"
+  ]
+ },
+ "composition": {
+  "by_rarity": {
+   "Basic": 10,
+   "Uncommon": 2
+  },
+  "by_type": {
+   "Attack": 5,
+   "Power": 2,
+   "Skill": 5
+  },
+  "dead_cards": 0,
+  "energy_curve": {
+   "0": 1,
+   "1": 11
+  },
+  "unupgraded_basics": 10
+ },
+ "damage": {
+  "aoe_attacks": [],
+  "attack_count": 5,
+  "per_turn": 14.8,
+  "scaling_cards": [
+   "Furnace"
+  ],
+  "single_target": 14.9,
+  "vs_group": 14.7
+ },
+ "deck_size": 12,
+ "lenses": {
+  "boss": 23.2,
+  "hallway": 26.2,
+  "scaling": 21.6
+ },
+ "scores": {
+  "block": 37.7,
+  "damage": 30.9,
+  "velocity": 0.8,
+  "volume": 9.8
+ },
+ "velocity": {
+  "bottleneck": "energy",
+  "cards_per_turn": 3.5,
+  "dilution": 1.0,
+  "draw_limited_turns": 0.0,
+  "energy_limited_turns": 7.0,
+  "engine_cards": 0,
+  "extra_per_turn": 0.0,
+  "tags": {}
+ },
+ "warnings": [
+  {
+   "severity": "info",
+   "text": "No AOE — multi-enemy fights (Gremlins, hallways) will be slow."
+  },
+  {
+   "severity": "info",
+   "text": "Low velocity — few draw/energy cards; you'll often draw the wrong hand."
+  },
+  {
+   "severity": "info",
+   "text": "Energy-limited — cards stranded in hand; more energy helps, more draw won't."
+  },
+  {
+   "severity": "warn",
+   "text": "Deck clogged with basics/curses — prioritise removals."
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "act": null,
+ "best_label": "Survivor",
+ "best_win_prob": 0.0,
+ "drop_pct": 0,
+ "floor": null,
+ "idx": 123,
+ "is_blunder": false,
+ "matched_best": false,
+ "message": "Turn 3: Snakebite instead of Survivor dropped P(win) 0%→0% (−0 pts)",
+ "n_actions": 5,
+ "node_id": null,
+ "played_label": "Snakebite",
+ "played_win_prob": 0.0,
+ "player_rank": 0,
+ "regret": 0.0,
+ "turn": 3,
+ "visits": 5
+}

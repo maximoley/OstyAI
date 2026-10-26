@@ -1,0 +1,35 @@
+{
+  "name": "vulnerable-damage-seed0",
+  "description": "VTHIN-2 Vulnerable + apply_damage fixture: Cultist with VulnerablePower(2) takes 6 raw damage from player → 6 * 1.5 = 9 → cultist HP 48 - 9 = 39. Locks the rounding-audit invariant under real conditions.",
+  "scenario": "vulnerable-damage",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50
+  },
+  "enemies": [
+    {
+      "monster_id": "ShrinkerBeetle",
+      "max_hp": 48,
+      "current_hp": 48,
+      "powers": [{"id": "VULNERABLE", "amount": 2}]
+    }
+  ],
+  "actions": [
+    {
+      "type": "deal_damage",
+      "dealer": "player",
+      "target": "enemy_0",
+      "amount": 6,
+      "props": "MOVE",
+      "action_record": {
+        "action": "direct_damage",
+        "source": "test_harness",
+        "target": "cultist",
+        "raw_damage": 6
+      }
+    }
+  ]
+}

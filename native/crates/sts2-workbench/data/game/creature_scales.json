@@ -1,0 +1,661 @@
+{
+ "aeonglass": {
+  "bounds_h": 527.0,
+  "bounds_w": 428.0,
+  "scale": 0.29032356
+ },
+ "architect": {
+  "bounds_h": 629.0,
+  "bounds_w": 467.0,
+  "scale": 0.35
+ },
+ "assassin_ruby_raider": {
+  "bounds_h": 288.0,
+  "bounds_w": 244.0,
+  "scale": 0.244807
+ },
+ "axe_ruby_raider": {
+  "bounds_h": 230.0,
+  "bounds_w": 244.0,
+  "scale": 0.22
+ },
+ "axebot": {
+  "bounds_h": 388.0,
+  "bounds_w": 334.0,
+  "scale": 0.13
+ },
+ "battle_friend_v1": {
+  "bounds_h": 349.0,
+  "bounds_w": 412.0,
+  "scale": 0.25
+ },
+ "battle_friend_v2": {
+  "bounds_h": 349.0,
+  "bounds_w": 412.0,
+  "scale": 0.25
+ },
+ "battle_friend_v3": {
+  "bounds_h": 349.0,
+  "bounds_w": 412.0,
+  "scale": 0.25
+ },
+ "battleworn_dummy": {
+  "bounds_h": null,
+  "scale": 0.25
+ },
+ "bowlbug": {
+  "bounds_h": null,
+  "scale": 0.275
+ },
+ "bowlbug_egg": {
+  "bounds_h": 150.0,
+  "bounds_w": 200.0,
+  "scale": 0.275
+ },
+ "bowlbug_nectar": {
+  "bounds_h": 150.0,
+  "bounds_w": 186.0,
+  "scale": 0.275
+ },
+ "bowlbug_rock": {
+  "bounds_h": 150.0,
+  "bounds_w": 200.0,
+  "scale": 0.275
+ },
+ "bowlbug_silk": {
+  "bounds_h": 150.0,
+  "bounds_w": 200.0,
+  "scale": 0.275
+ },
+ "brute_ruby_raider": {
+  "bounds_h": 351.0,
+  "bounds_w": 228.0,
+  "scale": 0.22
+ },
+ "bygone_effigy": {
+  "bounds_h": 600.0,
+  "bounds_w": 360.0,
+  "scale": 0.32
+ },
+ "byrdonis": {
+  "bounds_h": 461.0,
+  "bounds_w": 640.0,
+  "scale": 0.313509
+ },
+ "byrdpip": {
+  "bounds_h": 153.0,
+  "bounds_w": 164.0,
+  "scale": 0.25
+ },
+ "calcified_cultist": {
+  "bounds_h": 295.0,
+  "bounds_w": 250.0,
+  "scale": 0.25
+ },
+ "ceremonial_beast": {
+  "bounds_h": 560.0,
+  "bounds_w": 544.0,
+  "scale": 0.434394
+ },
+ "chomper": {
+  "bounds_h": 133.0,
+  "bounds_w": 252.0,
+  "scale": 0.255959
+ },
+ "corpse_slug": {
+  "bounds_h": 164.0,
+  "bounds_w": 232.0,
+  "scale": 0.23
+ },
+ "crossbow_ruby_raider": {
+  "bounds_h": 292.0,
+  "bounds_w": 228.0,
+  "scale": 0.21
+ },
+ "crusher": {
+  "bounds_h": 366.0,
+  "bounds_w": 457.0,
+  "scale": 1.5
+ },
+ "cubex_construct": {
+  "bounds_h": 294.0,
+  "bounds_w": 180.0,
+  "scale": 0.33
+ },
+ "cultists": {
+  "bounds_h": null,
+  "scale": 0.25
+ },
+ "damp_cultist": {
+  "bounds_h": 305.0,
+  "bounds_w": 250.0,
+  "scale": 0.25
+ },
+ "decimillipede": {
+  "bounds_h": 193.0,
+  "bounds_w": 151.0,
+  "scale": 0.5
+ },
+ "decimillipede_segment_back": {
+  "bounds_h": 328.0,
+  "bounds_w": 357.0,
+  "scale": -0.45
+ },
+ "decimillipede_segment_front": {
+  "bounds_h": 299.0,
+  "bounds_w": 357.0,
+  "scale": -0.45
+ },
+ "decimillipede_segment_middle": {
+  "bounds_h": 322.0,
+  "bounds_w": 357.0,
+  "scale": -0.45
+ },
+ "defect": {
+  "bounds_h": 260.0,
+  "bounds_w": 250.0,
+  "scale": 0.125
+ },
+ "devoted_sculptor": {
+  "bounds_h": 406.0,
+  "bounds_w": 290.0,
+  "scale": 0.25
+ },
+ "door": {
+  "bounds_h": 484.0,
+  "scale": 0.36940756
+ },
+ "doormaker": {
+  "bounds_h": 579.0,
+  "scale": 0.29032356
+ },
+ "entomancer": {
+  "bounds_h": 333.0,
+  "bounds_w": 431.0,
+  "scale": 0.3
+ },
+ "exoskeleton": {
+  "bounds_h": 168.0,
+  "bounds_w": 172.0,
+  "scale": 0.12
+ },
+ "eye_with_teeth": {
+  "bounds_h": 345.0,
+  "bounds_w": 270.0,
+  "scale": 0.35
+ },
+ "fabricator": {
+  "bounds_h": 331.0,
+  "bounds_w": 450.0,
+  "scale": 0.13
+ },
+ "fake_merchant_monster": {
+  "bounds_h": 350.0,
+  "bounds_w": 230.0,
+  "scale": 0.25
+ },
+ "fallback": {
+  "bounds_h": 246.0,
+  "bounds_w": 277.0,
+  "scale": 1.0
+ },
+ "fat_gremlin": {
+  "bounds_h": 208.0,
+  "bounds_w": 148.0,
+  "scale": 0.33
+ },
+ "flail_knight": {
+  "bounds_h": 372.0,
+  "bounds_w": 404.0,
+  "scale": 0.14
+ },
+ "flyconid": {
+  "bounds_h": 309.0,
+  "bounds_w": 228.0,
+  "scale": 0.4
+ },
+ "flying_mushrooms": {
+  "bounds_h": null,
+  "scale": 0.4
+ },
+ "fogmog": {
+  "bounds_h": 235.0,
+  "bounds_w": 245.0,
+  "scale": 0.35
+ },
+ "fossil_stalker": {
+  "bounds_h": 224.0,
+  "bounds_w": 274.0,
+  "scale": 0.25
+ },
+ "frog_knight": {
+  "bounds_h": 279.0,
+  "bounds_w": 318.0,
+  "scale": 0.15
+ },
+ "fuzzy_wurm_crawler": {
+  "bounds_h": 166.0,
+  "bounds_w": 272.0,
+  "scale": 0.35
+ },
+ "gas_bomb": {
+  "bounds_h": 149.0,
+  "bounds_w": 164.0,
+  "scale": 0.5
+ },
+ "globe_head": {
+  "bounds_h": 314.0,
+  "bounds_w": 222.0,
+  "scale": 0.15
+ },
+ "gremlin_merc": {
+  "bounds_h": 302.0,
+  "bounds_w": 280.0,
+  "scale": 0.32
+ },
+ "guardbot": {
+  "bounds_h": 185.0,
+  "bounds_w": 224.0,
+  "scale": 0.16
+ },
+ "hatchling": {
+  "bounds_h": 131.0,
+  "bounds_w": 114.0,
+  "scale": 0.275
+ },
+ "haunted_ship": {
+  "bounds_h": 454.0,
+  "bounds_w": 640.0,
+  "scale": 0.3
+ },
+ "hunter_killer": {
+  "bounds_h": 278.0,
+  "bounds_w": 534.0,
+  "scale": 0.275
+ },
+ "infested_guardian": {
+  "bounds_h": null,
+  "scale": 0.35
+ },
+ "infested_prism": {
+  "bounds_h": 358.0,
+  "bounds_w": 239.0,
+  "scale": 0.35
+ },
+ "infested_purifier": {
+  "bounds_h": null,
+  "scale": 0.35
+ },
+ "inklet": {
+  "bounds_h": 187.0,
+  "bounds_w": 140.0,
+  "scale": 0.337954
+ },
+ "ironclad": {
+  "bounds_h": 278.0,
+  "bounds_w": 242.0,
+  "scale": 0.28
+ },
+ "kaiser_crab": {
+  "bounds_h": null,
+  "scale": 0.5
+ },
+ "kaiser_crab_boss": {
+  "bounds_h": null,
+  "scale": 0.5
+ },
+ "kaiser_crab_boss_setup": {
+  "bounds_h": null,
+  "scale": 0.55
+ },
+ "kin_follower": {
+  "bounds_h": 200.0,
+  "bounds_w": 297.0,
+  "scale": 0.29
+ },
+ "kin_priest": {
+  "bounds_h": 275.0,
+  "bounds_w": 360.0,
+  "scale": 0.3
+ },
+ "knowledge_demon": {
+  "bounds_h": 642.0,
+  "bounds_w": 560.0,
+  "scale": 0.28
+ },
+ "lagavulin_matriarch": {
+  "bounds_h": 526.0,
+  "bounds_w": 773.0,
+  "scale": 0.3
+ },
+ "leaf_slime_m": {
+  "bounds_h": 143.0,
+  "bounds_w": 200.0,
+  "scale": 0.45
+ },
+ "leaf_slime_s": {
+  "bounds_h": 102.0,
+  "bounds_w": 154.0,
+  "scale": 0.273444
+ },
+ "living_fog": {
+  "bounds_h": 300.0,
+  "bounds_w": 302.0,
+  "scale": 0.6
+ },
+ "living_shield": {
+  "bounds_h": 400.0,
+  "bounds_w": 356.0,
+  "scale": 0.15
+ },
+ "louse_progenitor": {
+  "bounds_h": 367.0,
+  "bounds_w": 568.0,
+  "scale": 0.194175
+ },
+ "magi_knight": {
+  "bounds_h": 327.0,
+  "bounds_w": 220.0,
+  "scale": 0.142567
+ },
+ "mawler": {
+  "bounds_h": 327.0,
+  "bounds_w": 510.0,
+  "scale": 0.5
+ },
+ "mecha_knight": {
+  "bounds_h": 502.0,
+  "bounds_w": 660.0,
+  "scale": 0.15
+ },
+ "mysterious_knight": {
+  "bounds_h": 437.0,
+  "bounds_w": 492.0,
+  "scale": 0.17
+ },
+ "myte": {
+  "bounds_h": 254.0,
+  "bounds_w": 308.0,
+  "scale": 0.24
+ },
+ "necrobinder": {
+  "bounds_h": 270.0,
+  "bounds_w": 210.0,
+  "scale": 0.27
+ },
+ "nibbit": {
+  "bounds_h": 146.0,
+  "bounds_w": 270.0,
+  "scale": 0.28
+ },
+ "noisebot": {
+  "bounds_h": 174.0,
+  "bounds_w": 220.0,
+  "scale": 0.15
+ },
+ "osty": {
+  "bounds_h": 204.0,
+  "bounds_w": 232.0,
+  "scale": 0.26
+ },
+ "ovicopter": {
+  "bounds_h": 476.0,
+  "bounds_w": 403.0,
+  "scale": 0.3
+ },
+ "owl_magistrate": {
+  "bounds_h": 368.0,
+  "bounds_w": 504.0,
+  "scale": 0.13
+ },
+ "paels_legion": {
+  "bounds_h": 94.0,
+  "bounds_w": 154.0,
+  "scale": 0.25
+ },
+ "parafright": {
+  "bounds_h": 324.0,
+  "bounds_w": 333.0,
+  "scale": 0.3
+ },
+ "phantasmal_gardener": {
+  "bounds_h": 380.0,
+  "bounds_w": 208.0,
+  "scale": 0.3
+ },
+ "phrog_parasite": {
+  "bounds_h": 480.0,
+  "bounds_w": 504.0,
+  "scale": 0.314
+ },
+ "punch_construct": {
+  "bounds_h": 306.0,
+  "bounds_w": 272.0,
+  "scale": 0.32
+ },
+ "queen": {
+  "bounds_h": 497.0,
+  "bounds_w": 316.0,
+  "scale": 0.14
+ },
+ "regent": {
+  "bounds_h": 335.0,
+  "bounds_w": 230.0,
+  "scale": 0.29
+ },
+ "rocket": {
+  "bounds_h": 331.0,
+  "bounds_w": 431.0,
+  "scale": -1.5
+ },
+ "scroll_of_biting": {
+  "bounds_h": 166.0,
+  "bounds_w": 183.0,
+  "scale": 0.27
+ },
+ "seapunk": {
+  "bounds_h": 212.0,
+  "bounds_w": 200.0,
+  "scale": 0.255959
+ },
+ "sewer_clam": {
+  "bounds_h": 337.0,
+  "bounds_w": 363.0,
+  "scale": 0.25
+ },
+ "shrinker_beetle": {
+  "bounds_h": 161.0,
+  "bounds_w": 240.0,
+  "scale": 0.25
+ },
+ "silent": {
+  "bounds_h": 244.0,
+  "bounds_w": 244.0,
+  "scale": 0.29
+ },
+ "skulking_colony": {
+  "bounds_h": 437.0,
+  "bounds_w": 335.0,
+  "scale": 0.488
+ },
+ "slimed_berserker": {
+  "bounds_h": 360.0,
+  "bounds_w": 640.0,
+  "scale": 0.15
+ },
+ "slithering_strangler": {
+  "bounds_h": 220.0,
+  "bounds_w": 198.0,
+  "scale": 0.3
+ },
+ "sludge_spinner": {
+  "bounds_h": 246.0,
+  "bounds_w": 192.0,
+  "scale": 0.25
+ },
+ "slumbering_beetle": {
+  "bounds_h": 368.0,
+  "bounds_w": 760.0,
+  "scale": 0.3
+ },
+ "snapping_jaxfruit": {
+  "bounds_h": 254.0,
+  "bounds_w": 230.0,
+  "scale": 0.3
+ },
+ "sneaky_gremlin": {
+  "bounds_h": 167.0,
+  "bounds_w": 200.0,
+  "scale": 0.3
+ },
+ "soul_fysh": {
+  "bounds_h": 436.0,
+  "bounds_w": 484.0,
+  "scale": 0.25
+ },
+ "soul_nexus": {
+  "bounds_h": 419.0,
+  "bounds_w": 384.0,
+  "scale": 0.3
+ },
+ "spectral_knight": {
+  "bounds_h": 330.0,
+  "bounds_w": 364.0,
+  "scale": 0.22
+ },
+ "spiny_toad": {
+  "bounds_h": 414.0,
+  "bounds_w": 560.0,
+  "scale": 0.275
+ },
+ "stabbot": {
+  "bounds_h": 180.0,
+  "bounds_w": 220.0,
+  "scale": 0.16
+ },
+ "terror_eel": {
+  "bounds_h": 357.0,
+  "bounds_w": 712.0,
+  "scale": 0.2
+ },
+ "test_subject": {
+  "bounds_h": 292.0,
+  "bounds_w": 474.0,
+  "scale": 0.3
+ },
+ "the_adversary_mk_one": {
+  "bounds_h": 515.0,
+  "bounds_w": 492.0,
+  "scale": 2.495
+ },
+ "the_adversary_mk_three": {
+  "bounds_h": 515.0,
+  "bounds_w": 492.0,
+  "scale": 2.495
+ },
+ "the_adversary_mk_two": {
+  "bounds_h": 515.0,
+  "bounds_w": 492.0,
+  "scale": 2.495
+ },
+ "the_forgotten": {
+  "bounds_h": 342.0,
+  "bounds_w": 250.0,
+  "scale": 0.3
+ },
+ "the_insatiable": {
+  "bounds_h": 472.0,
+  "bounds_w": 468.0,
+  "scale": 0.35
+ },
+ "the_lost": {
+  "bounds_h": 322.0,
+  "bounds_w": 175.0,
+  "scale": 0.3
+ },
+ "the_obscura": {
+  "bounds_h": 218.0,
+  "bounds_w": 333.0,
+  "scale": 0.27
+ },
+ "the_spear": {
+  "bounds_h": 269.0,
+  "bounds_w": 269.0,
+  "scale": 0.2755
+ },
+ "thieving_hopper": {
+  "bounds_h": 268.0,
+  "bounds_w": 274.0,
+  "scale": 0.25
+ },
+ "toadpole": {
+  "bounds_h": 160.0,
+  "bounds_w": 300.0,
+  "scale": 0.4
+ },
+ "torch_head_amalgam": {
+  "bounds_h": 316.0,
+  "bounds_w": 350.0,
+  "scale": 0.15
+ },
+ "tough_egg": {
+  "bounds_h": 96.0,
+  "bounds_w": 108.0,
+  "scale": 0.25
+ },
+ "tracker_ruby_raider": {
+  "bounds_h": 236.0,
+  "bounds_w": 303.0,
+  "scale": 0.2
+ },
+ "tunneler": {
+  "bounds_h": 201.0,
+  "bounds_w": 256.0,
+  "scale": 0.14838
+ },
+ "turret_operator": {
+  "bounds_h": 220.0,
+  "bounds_w": 280.0,
+  "scale": 0.15
+ },
+ "twig_slime_m": {
+  "bounds_h": 166.0,
+  "bounds_w": 212.0,
+  "scale": 0.5
+ },
+ "twig_slime_s": {
+  "bounds_h": 106.0,
+  "bounds_w": 140.0,
+  "scale": 0.275
+ },
+ "two_tailed_rat": {
+  "bounds_h": 214.0,
+  "bounds_w": 200.0,
+  "scale": 0.33
+ },
+ "vantom": {
+  "bounds_h": 441.0,
+  "bounds_w": 404.0,
+  "scale": 0.25
+ },
+ "vine_shambler": {
+  "bounds_h": 325.0,
+  "bounds_w": 424.0,
+  "scale": 0.3
+ },
+ "waterfall_giant": {
+  "bounds_h": 504.0,
+  "bounds_w": 610.0,
+  "scale": 0.225
+ },
+ "wriggler": {
+  "bounds_h": 148.0,
+  "bounds_w": 180.0,
+  "scale": 0.214161
+ },
+ "zapbot": {
+  "bounds_h": 194.0,
+  "bounds_w": 200.0,
+  "scale": 0.15
+ }
+}

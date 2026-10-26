@@ -1,0 +1,22 @@
+{
+  "name": "dexterity-block-seed0",
+  "description": "Dexterity adds flat amount to block gained. Player has DexterityPower(2); player gains 5 block → 5 + 2 = 7. Player.block = 7. Verifies the additive arm of the block pipeline.",
+  "scenario": "dexterity-block",
+  "seed": 0,
+  "character": "Ironclad",
+  "encounter": "ShrinkerBeetle",
+  "player": {
+    "max_hp": 50,
+    "current_hp": 50,
+    "powers": [{"id": "DEXTERITY", "amount": 2}]
+  },
+  "enemies": [],
+  "actions": [
+    {
+      "type": "gain_block",
+      "target": "player",
+      "amount": 5,
+      "props": "MOVE"
+    }
+  ]
+}

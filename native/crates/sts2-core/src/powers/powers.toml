@@ -1,0 +1,53 @@
+# Per-character power-listener provenance table — REFERENCE ONLY.
+# Nothing reads this file; its value is the per-character `PowerKind`
+# inventories in the comments below.
+#
+# Bead sts2-rs-pmf (P6-1b) had `scripts/regen-powers-mod.py` generate
+# `powers/mod.rs` from these rows. That script is gone: a rerun re-added the
+# deliberately deleted `necrobinder` module and reset the `PowerKind::all()`
+# count assertion from 272 back to the Python pin's 267. `powers/mod.rs` is
+# now hand-maintained and is the source of truth for which listener modules
+# exist. Keep these rows roughly in step when you add a character — nothing
+# breaks if they drift, and nothing verifies them.
+#
+# Downstream P6-3..P6-7 beads fill in `on_card_played` /
+# `modify_damage_additive` / ... bodies inside the per-character files
+# without touching `powers/mod.rs` itself.
+
+[[character]]
+file = "ironclad"
+bead = "P6-3 (sts2-rs-le3)"
+
+[[character]]
+file = "silent"
+bead = "P6-4 (sts2-rs-l2c)"
+# 17 Silent-exclusive PowerKinds: Accuracy, Afterimage, Blur, Burst, Envenom,
+# FanOfKnives, InfiniteBlades, NoDraw, NoxiousFumes, Outbreak, PhantomBlades,
+# SerpentForm, Sneaky, Speedster, ToolsOfTheTrade, WellLaidPlans, WraithForm.
+
+[[character]]
+file = "defect"
+bead = "P6-5 (sts2-rs-l7s)"
+
+[[character]]
+file = "colorless"
+bead = "P6-7 (sts2-rs-ltq)"
+
+[[character]]
+file = "regent"
+bead = "sts2-rs-jxz (umbrella; jxz.1 stars-resource first slice)"
+# jxz.1 (stars-resource + draw-side, 7 powers): BlackHole, ChildOfTheStars,
+# StarNextTurn, DyingStar, PaleBlueDot, PillarOfCreation, Orbit.
+# Sibling sub-beads jxz.2 (turn-cycle) and jxz.3 (cards-damage) extend the
+# same file to cover the remaining 19 Regent-exclusive PowerKinds.
+
+[[character]]
+file = "necrobinder"
+bead = "sts2-rs-bt9 (bay-necro-powers)"
+# 26 Necrobinder-exclusive PowerKinds per
+# docs/reality-checks/2026-05-12-necro-regent-power-audit.md:
+# Calcify, CallOfTheVoid, Countdown, DanseMacabre, Debilitate, Demesne,
+# DevourLife, Doom, EnfeeblingTouch, ForbiddenGrimoire, Friendship, Hang,
+# Haunt, Lethality, NecroMastery, Neurosurge, Oblivion, Pagestorm,
+# ReaperForm, SentryMode, Shroud, SicEm, SleightOfFlesh, SpiritOfAsh,
+# SummonNextTurn, Veilpiercer.

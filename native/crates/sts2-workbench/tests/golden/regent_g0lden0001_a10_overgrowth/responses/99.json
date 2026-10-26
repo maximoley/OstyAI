@@ -1,0 +1,27 @@
+{
+ "error": "no PPO net loaded for Regent",
+ "impl": "rust",
+ "options": [
+  {
+   "action": "choose_option",
+   "args": {
+    "option_index": 0
+   },
+   "is_best": false,
+   "label": "Choose: Nab the Map",
+   "prob": null
+  },
+  {
+   "action": "choose_option",
+   "args": {
+    "option_index": 1
+   },
+   "is_best": false,
+   "label": "Choose: Slowly Find an Exit",
+   "prob": null
+  }
+ ],
+ "ppo_available": false,
+ "surface": "event",
+ "value": null
+}

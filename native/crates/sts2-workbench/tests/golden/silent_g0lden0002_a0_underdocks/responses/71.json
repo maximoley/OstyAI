@@ -1,0 +1,72 @@
+{
+ "act": 1,
+ "candidates": [
+  {
+   "is_best": false,
+   "key": "choice:skip",
+   "label": "skip",
+   "q": 1.1789,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": true,
+   "key": "choice:1",
+   "label": "STRIKE_SILENT",
+   "q": 1.182,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:2",
+   "label": "STRIKE_SILENT",
+   "q": 1.1784,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:3",
+   "label": "STRIKE_SILENT",
+   "q": 1.1764,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:4",
+   "label": "STRIKE_SILENT",
+   "q": 1.1731,
+   "visits": 6,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:5",
+   "label": "DEFEND_SILENT",
+   "q": 1.1723,
+   "visits": 7,
+   "win_prob": 1.0
+  },
+  {
+   "is_best": false,
+   "key": "choice:6",
+   "label": "SURVIVOR",
+   "q": 1.181,
+   "visits": 7,
+   "win_prob": 1.0
+  }
+ ],
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "decision": "card_select"
+}

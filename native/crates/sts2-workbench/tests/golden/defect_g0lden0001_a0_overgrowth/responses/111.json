@@ -1,0 +1,405 @@
+{
+ "details": [
+  "Used Colorless Potion"
+ ],
+ "error": null,
+ "label": "Drink Colorless Potion → Twig Slime (S)",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_select",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 0,
+   "bg_row": 8,
+   "bg_seed": 11180935036767329045,
+   "floor": 8,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 8,
+   "bg_seed": 11180935036767329045,
+   "can_skip": true,
+   "cards": [
+    {
+     "color": "colorless",
+     "cost": 0,
+     "description": "Next turn, gain Block equal to your current Block.\nExhaust.",
+     "description_rich": "Next turn, gain [gold]Block[/gold] equal to your current [gold]Block[/gold].\n[gold]Exhaust[/gold].",
+     "id": "PROLONG",
+     "image": "https://assets.test/card_atlas/colorless/prolong.png",
+     "index": 0,
+     "name": "Prolong",
+     "rarity": "Uncommon",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "colorless",
+     "cost": 0,
+     "description": "Enemy loses 9 Strength this turn.\nExhaust.",
+     "description_rich": "Enemy loses 9 Strength this turn.\n[gold]Exhaust[/gold].",
+     "id": "DARK_SHACKLES",
+     "image": "https://assets.test/card_atlas/colorless/dark_shackles.png",
+     "index": 1,
+     "name": "Dark Shackles",
+     "rarity": "Uncommon",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "colorless",
+     "cost": 1,
+     "description": "At the start of your turn, gain 4 Vigor.",
+     "description_rich": "At the start of your turn, gain 4 Vigor.",
+     "id": "PREP_TIME",
+     "image": "https://assets.test/card_atlas/colorless/prep_time.png",
+     "index": 2,
+     "name": "Prep Time",
+     "rarity": "Uncommon",
+     "type": "Power",
+     "upgraded": false
+    }
+   ],
+   "context": "add_generated_free_to_hand",
+   "decision": "card_select",
+   "enemies": [
+    {
+     "block": 0,
+     "hp": 7,
+     "index": 0,
+     "intents": [
+      {
+       "damage": 4,
+       "type": "Attack"
+      }
+     ],
+     "kind": "TwigSlimeS",
+     "max_hp": 7,
+     "move_state": "BUTT",
+     "name": "Twig Slime (S)",
+     "powers": [],
+     "uid": 2
+    },
+    {
+     "block": 0,
+     "hp": 12,
+     "index": 1,
+     "intents": [
+      {
+       "damage": 3,
+       "type": "Attack"
+      }
+     ],
+     "kind": "LeafSlimeS",
+     "max_hp": 12,
+     "move_state": "BUTT",
+     "name": "Leaf Slime (S)",
+     "powers": [],
+     "uid": 3
+    },
+    {
+     "block": 0,
+     "hp": 53,
+     "index": 2,
+     "intents": [
+      {
+       "damage": 3,
+       "type": "Debuff"
+      }
+     ],
+     "kind": "SlitheringStrangler",
+     "max_hp": 53,
+     "move_state": "CONSTRICT",
+     "name": "Slithering Strangler",
+     "powers": [],
+     "uid": 4
+    }
+   ],
+   "floor": 8,
+   "max_select": 1,
+   "min_select": 1,
+   "options": [
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "0"
+     },
+     "enabled": true,
+     "label": "PROLONG.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "1"
+     },
+     "enabled": true,
+     "label": "DARK_SHACKLES.title"
+    },
+    {
+     "action": "select_cards",
+     "args": {
+      "indices": "2"
+     },
+     "enabled": true,
+     "label": "PREP_TIME.title"
+    },
+    {
+     "action": "skip_select",
+     "args": {},
+     "enabled": true,
+     "label": "Skip"
+    }
+   ],
+   "orb_slots": 3,
+   "orbs": [
+    {
+     "evoke": 8,
+     "index": 0,
+     "name": "LIGHTNING_ORB.title",
+     "passive": 3,
+     "type": "Lightning"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/strike_defect.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 3,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_DEFECT",
+      "image": "https://assets.test/card_atlas/defect/defend_defect.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Channel 1 Lightning.",
+      "description_rich": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+      "id": "ZAP",
+      "image": "https://assets.test/card_atlas/defect/zap.png",
+      "index": 7,
+      "name": "Zap",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Evoke your rightmost Orb twice.",
+      "description_rich": "[gold]Evoke[/gold] your rightmost Orb twice.",
+      "id": "DUALCAST",
+      "image": "https://assets.test/card_atlas/defect/dualcast.png",
+      "index": 8,
+      "name": "Dualcast",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "description_rich": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "id": "FOCUSED_STRIKE",
+      "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+      "index": 9,
+      "name": "Focused Strike",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 3,
+      "description": "At the start of your turn, add a random Power into your Hand.",
+      "description_rich": "At the start of your turn, add a random Power into your [gold]Hand[/gold].",
+      "id": "CREATIVE_AI",
+      "image": "https://assets.test/card_atlas/defect/creative_ai.png",
+      "index": 10,
+      "name": "Creative AI",
+      "rarity": "Rare",
+      "type": "Power",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "description_rich": "Deal 9 damage.\nGain 1 Focus this turn.",
+      "id": "FOCUSED_STRIKE",
+      "image": "https://assets.test/card_atlas/defect/focused_strike.png",
+      "index": 11,
+      "name": "Focused Strike",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+      "description_rich": "Deal 6 damage to ALL enemies.\nDraw 1 card.",
+      "id": "SWEEPING_BEAM",
+      "image": "https://assets.test/card_atlas/defect/sweeping_beam.png",
+      "index": 12,
+      "name": "Sweeping Beam",
+      "rarity": "Common",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "quest",
+      "cost": "X",
+      "description": "Unplayable.\nMarks a site of 600 extra Gold in the next Act.",
+      "description_rich": "[gold]Unplayable[/gold].\nMarks a site of 600 extra Gold in the next Act.",
+      "id": "SPOILS_MAP",
+      "image": "https://assets.test/card_atlas/quest/spoils_map.png",
+      "index": 13,
+      "name": "Spoils Map",
+      "rarity": "Quest",
+      "type": "Quest",
+      "upgraded": false
+     },
+     {
+      "color": "blue",
+      "cost": 1,
+      "description": "Gain 1 Focus this turn for each unique Orb you have.",
+      "description_rich": "Gain 1 Focus this turn for each unique Orb you have.",
+      "id": "SYNCHRONIZE",
+      "image": "https://assets.test/card_atlas/defect/beta/synchronize.png",
+      "index": 14,
+      "name": "Synchronize",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "upgraded": false
+     }
+    ],
+    "gold": 185,
+    "hp": 10,
+    "max_hp": 75,
+    "name": "Defect",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the start of each combat, Channel 1 Lightning.",
+      "id": "CRACKED_CORE",
+      "image": "https://assets.test/relic_atlas/cracked_core.png",
+      "name": "Cracked Core"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     },
+     {
+      "description": "At the start of your 2nd turn, gain 2 Energy.",
+      "id": "CANDELABRA",
+      "image": "https://assets.test/relic_atlas/candelabra.png",
+      "name": "Candelabra"
+     }
+    ]
+   },
+   "player_powers": []
+  }
+ }
+}

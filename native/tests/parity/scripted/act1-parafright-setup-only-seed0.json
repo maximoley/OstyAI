@@ -1,0 +1,51 @@
+{
+  "compare": {
+    "exclude_fields": [
+      "/enemies/0/intent",
+      "/enemies/0/intent_damage",
+      "/enemies/0/intent_hits"
+    ],
+    "exclude_fields_reason": "Cross-language RNG divergence: Python MT vs Rust Xoshiro256++ may resolve intent telegraphing differently even on a single-move self-loop (the engine fires after_intent_chosen hooks that can consume RNG bits). Excluding the intent triple keeps the structural shape-lock independent of those bits while leaving HP/max_hp/pile counts/keys all byte-locked. Parafright's HP is deterministic (rng_range 21..=21) so the initial-state HP is pinned exactly."
+  },
+  "initial_state": {
+    "discard_pile_count": 0,
+    "draw_pile_count": 0,
+    "enemies": [
+      {
+        "block": 0,
+        "hp": 21,
+        "id": "PARAFRIGHT",
+        "intent": "ATTACK",
+        "intent_damage": 16,
+        "intent_hits": 1,
+        "is_alive": true,
+        "max_hp": 21,
+        "powers": []
+      }
+    ],
+    "exhaust_pile_count": 0,
+    "hand": [],
+    "player": {
+      "block": 0,
+      "energy": 0,
+      "hp": 80,
+      "max_energy": 3,
+      "max_hp": 80,
+      "powers": []
+    },
+    "round": 0,
+    "type": "combat_action"
+  },
+  "metadata": {
+    "character": "Ironclad",
+    "encounter": "Parafright",
+    "python_pin": "01c094d-pending",
+    "rust_pin": "3d4ce8c-rust-only",
+    "scenario": "act1-parafright-setup-only",
+    "seed": 0,
+    "notes": "sts2-rs-9bkan: jdlfq.1 — trivial-AI tier representative. Parafright is the cleanest STS2-native trivial-AI candidate: single SLAM Attack(16) state self-looping, deterministic HP=21 (rng_range 21..=21). Setup-only fixture — full step-walk + Python recording deferred to 9bkan.1 follow-up under the same Python-recording infra blocker as ohxoq.1-4 and may54.1."
+  },
+  "mode": "combat",
+  "steps": [],
+  "version": 1
+}

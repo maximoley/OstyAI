@@ -1,0 +1,20 @@
+[package]
+name = "sts2-vocab"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "PPO id vocabularies + append-only pin files (moved out of sts2-runai so sts2-wire and the browser workbench can name registries without pulling tract-onnx/rayon)."
+publish = false
+
+[lints]
+workspace = true
+
+# build.rs stamps a content hash of this crate's build inputs into
+# STS2_VOCAB_SRC_HASH (compiled in as `SRC_HASH`): part of the sts2_rs src_hash.
+[build-dependencies]
+sts2-srchash = { path = "../sts2-srchash" }
+
+[dependencies]
+sts2-core = { workspace = true }

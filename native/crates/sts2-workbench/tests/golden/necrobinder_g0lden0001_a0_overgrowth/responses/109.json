@@ -1,0 +1,19 @@
+{
+ "act": null,
+ "best_label": "Bodyguard",
+ "best_win_prob": 0.5,
+ "drop_pct": 50,
+ "floor": null,
+ "idx": 73,
+ "is_blunder": true,
+ "matched_best": false,
+ "message": "Turn 2: Unleash instead of Bodyguard dropped P(win) 50%→0% (−50 pts)",
+ "n_actions": 5,
+ "node_id": null,
+ "played_label": "Unleash",
+ "played_win_prob": 0.0,
+ "player_rank": 2,
+ "regret": 0.5,
+ "turn": 2,
+ "visits": 10
+}

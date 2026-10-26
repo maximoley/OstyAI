@@ -1,0 +1,71 @@
+{
+ "config": {
+  "c_puct": 2.5,
+  "depth": 200,
+  "draw_widening_c": 2.0,
+  "hidden_info": "beliefdraw",
+  "rollout_policy": "heuristic",
+  "seed": 1,
+  "sims": 48,
+  "threads": 1
+ },
+ "pv": null,
+ "scores": [
+  {
+   "action": "Bodyguard",
+   "is_best": true,
+   "losses": 0,
+   "low_confidence": false,
+   "q": 1.1028,
+   "q_saturated": false,
+   "stable_idx": 0,
+   "target_index": null,
+   "ties": 0,
+   "visits": 12,
+   "win_prob": 1.0,
+   "wins": 12
+  },
+  {
+   "action": "Invoke",
+   "is_best": false,
+   "losses": 0,
+   "low_confidence": false,
+   "q": 1.101,
+   "q_saturated": false,
+   "stable_idx": 2,
+   "target_index": null,
+   "ties": 0,
+   "visits": 12,
+   "win_prob": 1.0,
+   "wins": 12
+  },
+  {
+   "action": "end turn",
+   "is_best": false,
+   "losses": 0,
+   "low_confidence": false,
+   "q": 1.1001,
+   "q_saturated": false,
+   "stable_idx": -1,
+   "target_index": null,
+   "ties": 0,
+   "visits": 12,
+   "win_prob": 1.0,
+   "wins": 12
+  },
+  {
+   "action": "Unleash",
+   "is_best": false,
+   "losses": 0,
+   "low_confidence": false,
+   "q": 1.0954,
+   "q_saturated": false,
+   "stable_idx": 1,
+   "target_index": 0,
+   "ties": 0,
+   "visits": 12,
+   "win_prob": 1.0,
+   "wins": 12
+  }
+ ]
+}

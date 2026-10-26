@@ -1,0 +1,245 @@
+{
+ "action_label": "",
+ "assets_base": "https://assets.test",
+ "chosen_action": null,
+ "decision": "event_choice",
+ "idx": 0,
+ "meta": {
+  "act": 1,
+  "act_name": "Underdocks",
+  "bg_col": null,
+  "bg_row": null,
+  "bg_seed": 11180935036767329045,
+  "floor": 0,
+  "step_no": 0,
+  "turn": null
+ },
+ "pv": null,
+ "scores": [],
+ "source": "live",
+ "state": {
+  "act": 1,
+  "act1": "underdocks",
+  "act_name": "Underdocks",
+  "art": {
+   "illustration": null
+  },
+  "ascension": 10,
+  "bg_seed": 11180935036767329045,
+  "decision": "event_choice",
+  "description": "",
+  "event_name": "Neow",
+  "event_options": [
+   {
+    "description": "Gain a positive relic.",
+    "image": null,
+    "index": 0,
+    "is_locked": false,
+    "title": "POMANDER"
+   },
+   {
+    "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+    "image": "https://assets.test/relic_atlas/neows_torment.png",
+    "index": 1,
+    "is_locked": false,
+    "title": "Neow's Torment"
+   },
+   {
+    "description": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP.",
+    "image": "https://assets.test/relic_atlas/leafy_poultice.png",
+    "index": 2,
+    "is_locked": false,
+    "title": "Leafy Poultice"
+   }
+  ],
+  "floor": 0,
+  "options": [
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 0
+    },
+    "enabled": true,
+    "label": "POMANDER"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 1
+    },
+    "enabled": true,
+    "label": "NEOWS_TORMENT.title"
+   },
+   {
+    "action": "choose_option",
+    "args": {
+     "option_index": 2
+    },
+    "enabled": true,
+    "label": "LEAFY_POULTICE.title"
+   }
+  ],
+  "player": {
+   "block": 0,
+   "deck": [
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 0,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 1,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 2,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 3,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Deal 6 damage.",
+     "description_rich": "Deal 6 damage.",
+     "id": "STRIKE_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+     "index": 4,
+     "name": "Strike",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 5,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 6,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 7,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 1,
+     "description": "Gain 5 Block.",
+     "description_rich": "Gain 5 Block.",
+     "id": "DEFEND_IRONCLAD",
+     "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+     "index": 8,
+     "name": "Defend",
+     "rarity": "Basic",
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "red",
+     "cost": 2,
+     "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+     "id": "BASH",
+     "image": "https://assets.test/card_atlas/ironclad/bash.png",
+     "index": 9,
+     "name": "Bash",
+     "rarity": "Basic",
+     "type": "Attack",
+     "upgraded": false
+    },
+    {
+     "color": "curse",
+     "cost": "X",
+     "description": "Unplayable.\nEthereal.\nEternal.",
+     "description_rich": "[gold]Unplayable[/gold].\n[gold]Ethereal[/gold].\n[gold]Eternal[/gold].",
+     "id": "ASCENDERS_BANE",
+     "image": "https://assets.test/card_atlas/curse/ascenders_bane.png",
+     "index": 10,
+     "name": "Ascender's Bane",
+     "rarity": "Curse",
+     "type": "Curse",
+     "upgraded": false
+    }
+   ],
+   "gold": 99,
+   "hp": 64,
+   "max_hp": 80,
+   "name": "Ironclad",
+   "potion_slots": 2,
+   "potions": [],
+   "relics": [
+    {
+     "description": "At the end of combat, heal 6 HP.",
+     "id": "BURNING_BLOOD",
+     "image": "https://assets.test/relic_atlas/burning_blood.png",
+     "name": "Burning Blood"
+    }
+   ]
+  }
+ }
+}

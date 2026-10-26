@@ -1,0 +1,290 @@
+{
+ "details": [
+  "Play Strike+",
+  "Sludge Spinner HP 6→0  ☠ defeated",
+  "Gold 99→117",
+  "+Potion Radiant Tincture"
+ ],
+ "error": null,
+ "label": "Play Strike+ → Sludge Spinner",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "card_reward",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Underdocks",
+   "bg_col": 0,
+   "bg_row": 1,
+   "bg_seed": 11180935036767329045,
+   "floor": 1,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "underdocks",
+   "act_name": "Underdocks",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 1,
+   "bg_seed": 11180935036767329045,
+   "can_skip": true,
+   "cards": [
+    {
+     "color": "orange",
+     "cost": 2,
+     "description": "Gain 11 Block.\nNext turn, gain 5 Block.",
+     "description_rich": "Gain 11 Block.\nNext turn, gain 5 Block.",
+     "id": "GLITTERSTREAM",
+     "image": "https://assets.test/card_atlas/regent/glitterstream.png",
+     "index": 0,
+     "name": "Glitterstream",
+     "rarity": "Common",
+     "stats": {
+      "block": 11,
+      "damage": 0
+     },
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "orange",
+     "cost": 1,
+     "description": "Gain 6 Block.\nPut a card from your Discard Pile on top of your Draw Pile.",
+     "description_rich": "Gain 6 [gold]Block[/gold].\nPut a card from your [gold]Discard Pile[/gold] on top of your [gold]Draw Pile[/gold].",
+     "id": "COSMIC_INDIFFERENCE",
+     "image": "https://assets.test/card_atlas/regent/cosmic_indifference.png",
+     "index": 1,
+     "name": "Cosmic Indifference",
+     "rarity": "Common",
+     "stats": {
+      "block": 6,
+      "damage": 0
+     },
+     "type": "Skill",
+     "upgraded": false
+    },
+    {
+     "color": "orange",
+     "cost": 2,
+     "description": "Deal 15 damage.\nNext turn, gain Energy.",
+     "description_rich": "Deal 15 damage.\nNext turn, gain Energy.",
+     "id": "HEGEMONY",
+     "image": "https://assets.test/card_atlas/regent/hegemony.png",
+     "index": 2,
+     "name": "Hegemony",
+     "rarity": "Uncommon",
+     "stats": {
+      "block": 0,
+      "damage": 15
+     },
+     "type": "Attack",
+     "upgraded": false
+    }
+   ],
+   "decision": "card_reward",
+   "floor": 1,
+   "options": [
+    {
+     "action": "select_card_reward",
+     "args": {
+      "card_index": 0
+     },
+     "enabled": true,
+     "label": "GLITTERSTREAM.title"
+    },
+    {
+     "action": "select_card_reward",
+     "args": {
+      "card_index": 1
+     },
+     "enabled": true,
+     "label": "COSMIC_INDIFFERENCE.title"
+    },
+    {
+     "action": "select_card_reward",
+     "args": {
+      "card_index": 2
+     },
+     "enabled": true,
+     "label": "HEGEMONY.title"
+    },
+    {
+     "action": "skip_card_reward",
+     "args": {},
+     "enabled": true,
+     "label": "Skip"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_REGENT",
+      "image": "https://assets.test/card_atlas/regent/strike_regent.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_REGENT",
+      "image": "https://assets.test/card_atlas/regent/strike_regent.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_REGENT",
+      "image": "https://assets.test/card_atlas/regent/strike_regent.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_REGENT",
+      "image": "https://assets.test/card_atlas/regent/strike_regent.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_REGENT",
+      "image": "https://assets.test/card_atlas/regent/defend_regent.png",
+      "index": 4,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_REGENT",
+      "image": "https://assets.test/card_atlas/regent/defend_regent.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_REGENT",
+      "image": "https://assets.test/card_atlas/regent/defend_regent.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_REGENT",
+      "image": "https://assets.test/card_atlas/regent/defend_regent.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 0,
+      "description": "Deal 8 damage.\nApply 1 Weak.\nApply 1 Vulnerable.",
+      "description_rich": "Deal 8 damage.\nApply 1 Weak.\nApply 1 Vulnerable.",
+      "id": "FALLING_STAR",
+      "image": "https://assets.test/card_atlas/regent/falling_star.png",
+      "index": 8,
+      "name": "Falling Star",
+      "rarity": "Basic",
+      "star_cost": 2,
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "orange",
+      "cost": 1,
+      "description": "Gain Stars.",
+      "description_rich": "Gain Stars.",
+      "id": "VENERATE",
+      "image": "https://assets.test/card_atlas/regent/venerate.png",
+      "index": 9,
+      "name": "Venerate",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     }
+    ],
+    "gold": 117,
+    "hp": 68,
+    "max_hp": 75,
+    "name": "Regent",
+    "potion_slots": 3,
+    "potions": [
+     {
+      "description": "Gain 1 Energy. Gain an additional Energy at the start of your next 3 turns.",
+      "id": "RADIANT_TINCTURE",
+      "image": "https://assets.test/potion_atlas/radiant_tincture.png",
+      "name": "Radiant Tincture"
+     }
+    ],
+    "relics": [
+     {
+      "description": "At the start of each combat, gain 3 Stars.",
+      "id": "DIVINE_RIGHT",
+      "image": "https://assets.test/relic_atlas/divine_right.png",
+      "name": "Divine Right"
+     },
+     {
+      "description": "Upon pickup, Upgrade a card.",
+      "id": "POMANDER",
+      "image": "https://assets.test/relic_atlas/pomander.png",
+      "name": "Pomander"
+     }
+    ]
+   }
+  }
+ }
+}

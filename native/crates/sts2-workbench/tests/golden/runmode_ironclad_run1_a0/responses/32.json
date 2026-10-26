@@ -1,0 +1,487 @@
+{
+ "details": [],
+ "error": null,
+ "label": "Map → (0,4)",
+ "step": {
+  "action_label": "",
+  "assets_base": "https://assets.test",
+  "chosen_action": null,
+  "decision": "shop",
+  "idx": 0,
+  "meta": {
+   "act": 1,
+   "act_name": "Overgrowth",
+   "bg_col": 0,
+   "bg_row": 4,
+   "bg_seed": 1,
+   "floor": 4,
+   "step_no": 0,
+   "turn": null
+  },
+  "pv": null,
+  "scores": [],
+  "source": "live",
+  "state": {
+   "act": 1,
+   "act1": "overgrowth",
+   "act_name": "Overgrowth",
+   "ascension": 0,
+   "bg_col": 0,
+   "bg_row": 4,
+   "bg_seed": 1,
+   "card_removal_cost": 75,
+   "cards": [
+    {
+     "card_cost": 1,
+     "color": "red",
+     "cost": 48,
+     "description": "Deal 10 damage.\nDouble the enemy's Vulnerable.\nExhaust.",
+     "description_rich": "Deal 10 damage.\nDouble the enemy's Vulnerable.\n[gold]Exhaust[/gold].",
+     "id": "MOLTEN_FIST",
+     "image": "https://assets.test/card_atlas/ironclad/molten_fist.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Molten Fist",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 0,
+     "color": "red",
+     "cost": 49,
+     "description": "Deal 6 damage.\nAdd a copy of this card into your Discard Pile.",
+     "description_rich": "Deal 6 damage.\nAdd a copy of this card into your Discard Pile.",
+     "id": "ANGER",
+     "image": "https://assets.test/card_atlas/ironclad/anger.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Anger",
+     "on_sale": false,
+     "rarity": "Common",
+     "type": "Attack"
+    },
+    {
+     "card_cost": 1,
+     "color": "red",
+     "cost": 25,
+     "description": "Gain 7 Block.\nExhaust 1 card at random.",
+     "description_rich": "Gain 7 Block.\nExhaust 1 card at random.",
+     "id": "TRUE_GRIT",
+     "image": "https://assets.test/card_atlas/ironclad/true_grit.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "True Grit",
+     "on_sale": true,
+     "rarity": "Common",
+     "type": "Skill"
+    },
+    {
+     "card_cost": "X",
+     "color": "red",
+     "cost": 146,
+     "description": "Play the top X cards of your Draw Pile.",
+     "description_rich": "Play the top X cards of your [gold]Draw Pile[/gold].",
+     "id": "CASCADE",
+     "image": "https://assets.test/card_atlas/ironclad/cascade.png",
+     "index": 3,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Cascade",
+     "on_sale": false,
+     "rarity": "Rare",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 2,
+     "color": "red",
+     "cost": 78,
+     "description": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
+     "description_rich": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
+     "id": "STAMPEDE",
+     "image": "https://assets.test/card_atlas/ironclad/stampede.png",
+     "index": 4,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Stampede",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Power"
+    },
+    {
+     "card_cost": 2,
+     "color": "colorless",
+     "cost": 89,
+     "description": "Play 2 random cards from your Draw Pile.",
+     "description_rich": "Play 2 random cards from your Draw Pile.",
+     "id": "CATASTROPHE",
+     "image": "https://assets.test/card_atlas/colorless/catastrophe.png",
+     "index": 5,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Catastrophe",
+     "on_sale": false,
+     "rarity": "Uncommon",
+     "type": "Skill"
+    },
+    {
+     "card_cost": 0,
+     "color": "colorless",
+     "cost": 173,
+     "description": "Gain 50 Block.\nIf you take unblocked attack damage this combat, die.",
+     "description_rich": "Gain 50 Block.\nIf you take unblocked attack damage this combat, die.",
+     "id": "THE_GAMBIT",
+     "image": "https://assets.test/card_atlas/colorless/the_gambit.png",
+     "index": 6,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "The Gambit",
+     "on_sale": false,
+     "rarity": "Rare",
+     "type": "Skill"
+    }
+   ],
+   "decision": "shop",
+   "floor": 4,
+   "options": [
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 0
+     },
+     "enabled": true,
+     "label": "Buy MOLTEN_FIST.title (48g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 1
+     },
+     "enabled": true,
+     "label": "Buy ANGER.title (49g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 2
+     },
+     "enabled": true,
+     "label": "Buy TRUE_GRIT.title (25g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 4
+     },
+     "enabled": true,
+     "label": "Buy STAMPEDE.title (78g)"
+    },
+    {
+     "action": "buy_card",
+     "args": {
+      "card_index": 5
+     },
+     "enabled": true,
+     "label": "Buy CATASTROPHE.title (89g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 0
+     },
+     "enabled": true,
+     "label": "Buy CLARITY.title (75g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 1
+     },
+     "enabled": true,
+     "label": "Buy BEETLE_JUICE.title (100g)"
+    },
+    {
+     "action": "buy_potion",
+     "args": {
+      "potion_index": 2
+     },
+     "enabled": true,
+     "label": "Buy SWIFT_POTION.title (50g)"
+    },
+    {
+     "action": "remove_card",
+     "args": {},
+     "enabled": true,
+     "label": "Remove a card (75g)"
+    },
+    {
+     "action": "leave_room",
+     "args": {},
+     "enabled": true,
+     "label": "Leave shop"
+    }
+   ],
+   "player": {
+    "block": 0,
+    "deck": [
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 9 damage.",
+      "description_rich": "Deal 9 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 0,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": true
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 1,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 2,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 3,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Deal 6 damage.",
+      "description_rich": "Deal 6 damage.",
+      "id": "STRIKE_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/strike_ironclad.png",
+      "index": 4,
+      "name": "Strike",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 5,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 6,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 7,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Gain 5 Block.",
+      "description_rich": "Gain 5 Block.",
+      "id": "DEFEND_IRONCLAD",
+      "image": "https://assets.test/card_atlas/ironclad/defend_ironclad.png",
+      "index": 8,
+      "name": "Defend",
+      "rarity": "Basic",
+      "type": "Skill",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 2,
+      "description": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "description_rich": "Deal 8 damage.\nApply 2 Vulnerable.",
+      "id": "BASH",
+      "image": "https://assets.test/card_atlas/ironclad/bash.png",
+      "index": 9,
+      "name": "Bash",
+      "rarity": "Basic",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 3,
+      "description": "Deal 20 damage.\nEnemy loses 10 Strength this turn.",
+      "description_rich": "Deal 20 damage.\nEnemy loses 10 Strength this turn.",
+      "id": "MANGLE",
+      "image": "https://assets.test/card_atlas/ironclad/mangle.png",
+      "index": 10,
+      "name": "Mangle",
+      "rarity": "Rare",
+      "type": "Attack",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 1,
+      "description": "Whenever you apply Vulnerable, draw 1 card.",
+      "description_rich": "Whenever you apply Vulnerable, draw 1 card.",
+      "id": "VICIOUS",
+      "image": "https://assets.test/card_atlas/ironclad/vicious.png",
+      "index": 11,
+      "name": "Vicious",
+      "rarity": "Uncommon",
+      "type": "Power",
+      "upgraded": false
+     },
+     {
+      "color": "red",
+      "cost": 2,
+      "description": "Deal 5 damage twice.\nGain 3 Strength.\nThe enemy gains 1 Strength.",
+      "description_rich": "Deal 5 damage twice.\nGain 3 Strength.\nThe enemy gains 1 Strength.",
+      "id": "FIGHT_ME",
+      "image": "https://assets.test/card_atlas/ironclad/fight_me.png",
+      "index": 12,
+      "name": "Fight Me!",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "upgraded": false
+     }
+    ],
+    "gold": 132,
+    "hp": 85,
+    "max_hp": 85,
+    "name": "Ironclad",
+    "potion_slots": 3,
+    "potions": [],
+    "relics": [
+     {
+      "description": "At the end of combat, heal 6 HP.",
+      "id": "BURNING_BLOOD",
+      "image": "https://assets.test/relic_atlas/burning_blood.png",
+      "name": "Burning Blood"
+     },
+     {
+      "description": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+      "id": "ARCANE_SCROLL",
+      "image": "https://assets.test/relic_atlas/arcane_scroll.png",
+      "name": "Arcane Scroll"
+     }
+    ]
+   },
+   "potions": [
+    {
+     "cost": 75,
+     "description": "Draw 1 card. At the start of your next 3 turns, draw 1 additional card.",
+     "id": "CLARITY",
+     "image": "https://assets.test/potion_atlas/clarity.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Clarity Extract"
+    },
+    {
+     "cost": 100,
+     "description": "Enemy's attacks deal 30% less damage for the next 4 turns.",
+     "id": "BEETLE_JUICE",
+     "image": "https://assets.test/potion_atlas/beetle_juice.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Beetle Juice"
+    },
+    {
+     "cost": 50,
+     "description": "Draw 3 cards.",
+     "id": "SWIFT_POTION",
+     "image": "https://assets.test/potion_atlas/swift_potion.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": true,
+     "name": "Swift Potion"
+    }
+   ],
+   "relics": [
+    {
+     "cost": 251,
+     "description": "At the start of your turn, deal 3 damage to ALL enemies.",
+     "id": "MERCURY_HOURGLASS",
+     "image": "https://assets.test/relic_atlas/mercury_hourglass.png",
+     "index": 0,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Mercury Hourglass"
+    },
+    {
+     "cost": 302,
+     "description": "At the end of your turn, gain 1 Block for each card in your Hand.",
+     "id": "CLOAK_CLASP",
+     "image": "https://assets.test/relic_atlas/cloak_clasp.png",
+     "index": 1,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Cloak Clasp"
+    },
+    {
+     "cost": 194,
+     "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with Enchantment.",
+     "id": "ROYAL_STAMP",
+     "image": "https://assets.test/relic_atlas/royal_stamp.png",
+     "index": 2,
+     "is_available": true,
+     "is_stocked": false,
+     "name": "Royal Stamp"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "native_sha256": "0b611775240ccd0f0ce9bb059fd1d41e52897e0190bf19dc28984b5fb306c5d4",
+  "environment_revision": "native-ai-import-v1",
+  "paused_at_step": 4242,
+  "tests_passed": 58,
+  "audit": {
+    "files": 59,
+    "states": 50585,
+    "errors": 0,
+    "missing_enemy_ai": 0
+  },
+  "live_test_combats": 5116,
+  "unresolved": 0,
+  "primary_panel": {
+    "combats": 4096,
+    "wins": 3651,
+    "seconds": 97.23522794991732
+  },
+  "skulking_colony": {
+    "combats": 70,
+    "wins": 52,
+    "max_decisions": 101
+  }
+}
