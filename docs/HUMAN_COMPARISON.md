@@ -53,6 +53,8 @@ The Mentor RL-training-budget arm completed all **36,297 trials** on October 26,
 
 Tiered step 5500 subsequently completed with **33,263/36,297 trial wins (91.64%)**, **11,217/12,099 majority combat wins (92.71%)**, **118/512 runs meeting every-fight ≥2/3 (23.05%)**, and **256/512 meeting every-fight ≥1/3 (50.00%)**. It had **11 unresolved trials** and **14.39 mean HP lost per completed trial**. Its uninterrupted benchmark process took **2,684.75 seconds (44 min 45 s)**; the replacement orchestrator preserved the original start time when adopting it to cancel the queued uniform-32 arm. [Timing details and complete results](../benchmarks/comparison/README.md).
 
+Greedy policy-only step 5500 completed with **29,068/36,297 trial wins (80.08%)**, **9,846/12,099 majority combat wins (81.38%)**, **14/512 runs meeting every-fight ≥2/3 (2.73%)**, and **65/512 meeting every-fight ≥1/3 (12.70%)**. It had **1,126 unresolved trials**, included as nonwins, and **18.96 mean HP lost per completed trial**. Full-process runtime was **316.00 seconds (5 min 16 s)** with 80 workers and successful exit code 0. It is **8.50× faster** than tiered search, with **11.56 percentage points lower trial win rate**. [Policy-only source records](../benchmarks/comparison/model5500_policy_greedy/readme-metrics.json).
+
 ## Commands
 
 <details>
@@ -68,6 +70,6 @@ After building the offline preparation example and preparing a manifest with the
 
 `run_human_comparison.py` is the training host orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
 
-The policy-only arm is running at this update. The uniform-32 arm and the 8,000-simulation / 400-rollout configuration were cancelled before starting. Production remains paused at the preserved checkpoint during the three required sequential runs. Training resumes only after MCTS, tiered step 5500 and policy-only finish and pass verification.
+All three required arms completed and passed verification on October 26, 2026; production training then resumed from the preserved checkpoint. Queen diagnostic replays started only after the timed suite finished. The uniform-32 arm and the 8,000-simulation / 400-rollout configuration were cancelled before starting.
 
 </details>

@@ -1,0 +1,11 @@
+{
+  "wall_seconds": 315.99871938303113,
+  "started_at_unix": 1793051118.314211,
+  "finished_at_unix": 1793051434.312996,
+  "exit_code": 0,
+  "includes_process_startup_imports_and_compilation": true,
+  "preparation_excluded": true,
+  "workers": 80,
+  "adopted_process": false,
+  "completion_poll_interval_seconds": null
+}

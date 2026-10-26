@@ -1,0 +1,18 @@
+{
+  "trial_wins": 29068,
+  "trials": 36297,
+  "trial_win_rate": 0.8008375347824889,
+  "wins": 9846,
+  "combats": 12099,
+  "win_rate": 0.8137862633275478,
+  "runs_won_every_fight": 14,
+  "runs": 512,
+  "run_win_rate": 0.02734375,
+  "unresolved_trials": 1126,
+  "trial_average_hp_lost": 18.95905717778852,
+  "runs_every_fight_at_least_one": 65,
+  "run_at_least_one_rate": 0.126953125,
+  "full_process_wall_seconds": 315.99871938303113,
+  "workers": 80,
+  "independently_recomputed": true
+}

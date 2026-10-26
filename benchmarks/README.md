@@ -37,7 +37,7 @@ Use wins divided by **all requested trials**, including capped/unresolved nonwin
 
 ## New agent comparison
 
-The [matched comparison](../docs/HUMAN_COMPARISON.md) evaluates Mentor MCTS with RL-training budgets and step-5500 tiered search and zero-search greedy policy. Uniform-32 was cancelled before starting. All active configurations use 80 workers and the same offline compatibility-prepared panel. MCTS and tiered step 5500 are complete; their [outcomes and timing](comparison/) are separate from the historical reports above. Policy-only remains pending.
+The [matched comparison](../docs/HUMAN_COMPARISON.md) evaluates Mentor MCTS with RL-training budgets and step-5500 tiered search and zero-search greedy policy. Uniform-32 was cancelled before starting. All active configurations use 80 workers and the same offline compatibility-prepared panel. All three required configurations are complete; their [outcomes, verification and full-process timing](comparison/) are separate from the historical reports above.
 
 ## Verification
 

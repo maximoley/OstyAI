@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "configuration": "mentor_rl_training",
+      "metrics_recomputed": true,
+      "full_trial_set": true,
+      "settings_verified": true
+    },
+    {
+      "configuration": "model5500_tiered_no_reuse",
+      "metrics_recomputed": true,
+      "full_trial_set": true,
+      "settings_verified": true
+    },
+    {
+      "configuration": "model5500_policy_greedy",
+      "metrics_recomputed": true,
+      "full_trial_set": true,
+      "settings_verified": true
+    }
+  ],
+  "trial_sets_identical": true,
+  "time": 1793051458.441115
+}

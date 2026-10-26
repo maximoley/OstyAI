@@ -58,5 +58,38 @@
   "model5500_tiered_no_reuse/timing.json": {
     "original_json_sha256": "21d1e760a0ec23f8d7cf19bac45a9fb3492141c7eeae4f9b652e01a1eb633bd3",
     "stored_file_sha256": "21d1e760a0ec23f8d7cf19bac45a9fb3492141c7eeae4f9b652e01a1eb633bd3"
+  },
+  "model5500_policy_greedy/summary.json": {
+    "original_json_sha256": "2570e8e0de4fd2fcce0f24e9fc92e3d0198460192fbdb0417591d611056b03f2",
+    "stored_file_sha256": "2570e8e0de4fd2fcce0f24e9fc92e3d0198460192fbdb0417591d611056b03f2"
+  },
+  "model5500_policy_greedy/provenance.json": {
+    "original_json_sha256": "c7099621413e9db04856a4f537af93aa2d59a9c705ff4c720b22e478716122e3",
+    "stored_file_sha256": "c7099621413e9db04856a4f537af93aa2d59a9c705ff4c720b22e478716122e3"
+  },
+  "model5500_policy_greedy/trials.json.gz": {
+    "original_json_sha256": "3eb5d1cb3bb167faa4f588145c229ec31def23147620a033011819f1a0d153a6",
+    "stored_file_sha256": "30cd7b64eff7c0e780209c02e95046681990915836431fccf4a7d035d24c7731"
+  },
+  "model5500_policy_greedy/combats.json.gz": {
+    "original_json_sha256": "ea31b6446b34fd94a9aee49be568d80244e8fb7c39e7478a3976cfc6806f57b6",
+    "stored_file_sha256": "a0b49f2842e76b841c13b22423fdefd88092ec5b7ab97879fa1d72b6108f845f"
+  },
+  "model5500_policy_greedy/runs.json.gz": {
+    "original_json_sha256": "a4bb9a623b6c20b1e52dff69c3eed6a85683a891a8726290a82dba0a3d139b15",
+    "stored_file_sha256": "b8b908d4f98d5d2a2460652966cfa776d71751f1c50f52b5d7c22caa26ccc0d3"
+  },
+  "model5500_policy_greedy/timing.json": {
+    "original_json_sha256": "8ec961a5a9d498f681362e1e7f1c29bce868366b7ac0442ebd6a4f9c33a9d72c",
+    "stored_file_sha256": "8ec961a5a9d498f681362e1e7f1c29bce868366b7ac0442ebd6a4f9c33a9d72c"
+  },
+  "comparison.json": {
+    "original_json_sha256": "9b3b9737129d660f881893bf44e2e5b5636f57bc714f65e88b1dbd7a0b19e933",
+    "stored_file_sha256": "ee2a46ad22c195ce3074798f3f100d6d7f11575c531bf32251cddc6afe41d3e4",
+    "transformation": "Absolute server summary paths replaced with repository-relative paths; metrics unchanged."
+  },
+  "results-verification.json": {
+    "original_json_sha256": "a45bd3dddbade56a9c5b52a4546b2feab743fa70dd9c86b373be3ac96aa3a0eb",
+    "stored_file_sha256": "a45bd3dddbade56a9c5b52a4546b2feab743fa70dd9c86b373be3ac96aa3a0eb"
   }
 }

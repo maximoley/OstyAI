@@ -90,16 +90,16 @@ There were **9 unresolved trials**. Mean HP lost was **14.41 per completed trial
 
 ### Matched agent comparison
 
-As of **October 26, 2026**, the following comparison is in progress. Every agent uses **80 workers**, the same complete compatibility-prepared panel, and a 1,000-action combat cap. Configurations execute sequentially with production training paused. Wall time includes process startup, loading, compilation, evaluation and result writing; offline fixture preparation is excluded.
+As of **October 26, 2026**, all three required configurations in the following comparison are complete. Every agent uses **80 workers**, the same complete compatibility-prepared panel, and a 1,000-action combat cap. Configurations ran sequentially with production training paused. Wall time includes process startup, loading, compilation, evaluation and result writing; offline fixture preparation is excluded.
 
 | Agent | Search budget | Trial win rate | Majority combat win rate | Every fight ≥2/3 | Every fight ≥1/3 | Full wall time | Status at update |
 |---|---|---|---|---|---|---|---|
 | Mentor MCTS (RL training budget) | 250 non-boss; 1,000 boss; rollout cap 200 | **92.51%** (33,577/36,297) | **93.41%** (11,302/12,099) | **31.05%** (159/512) | **52.54%** (269/512) | **1 h 22 min 7 s** | Complete |
 | OstyAI step 5500, tiered, no reuse | 32 / 64 / 96 / 128 | **91.64%** (33,263/36,297) | **92.71%** (11,217/12,099) | **23.05%** (118/512) | **50.00%** (256/512) | **44 min 45 s** | Complete |
 | OstyAI step 5500, uniform, no reuse | 32 for every tier | — | — | — | — | — | Cancelled before start |
-| OstyAI step 5500, greedy policy | Zero search; legal-action argmax | Pending | Pending | Pending | Pending | Pending | Running |
+| OstyAI step 5500, greedy policy | Zero search; legal-action argmax | **80.08%** (29,068/36,297) | **81.38%** (9,846/12,099) | **2.73%** (14/512) | **12.70%** (65/512) | **5 min 16 s** | Complete |
 
-MCTS completed with **0 unresolved trials** and **11.57 mean HP lost per trial**; tiered step 5500 had **11 unresolved trials** and **14.39 mean HP lost per completed trial**. Full-process wall times were **4,926.89 seconds** and **2,684.75 seconds**, respectively, with 80 workers. MCTS won **314 more trials (+0.87 percentage points)**; the tiered model completed the benchmark **1.84× faster**. [Complete results and timing](benchmarks/comparison/README.md) · [MCTS table metrics](benchmarks/comparison/mentor_rl_training/readme-metrics.json) · [tiered-model table metrics](benchmarks/comparison/model5500_tiered_no_reuse/readme-metrics.json). These new matched results remain distinct from the historical model row above.
+MCTS, tiered search and greedy policy had **0**, **11** and **1,126 unresolved trials**, respectively; these count as nonwins. Their mean HP losses per completed trial were **11.57**, **14.39** and **18.96**. Full-process wall times were **4,926.89**, **2,684.75** and **316.00 seconds**, all with 80 workers. MCTS won **314 more trials than tiered search (+0.87 percentage points)**; tiered search finished **1.84× faster**. Greedy policy finished **8.50× faster than tiered search**, with an **11.56-percentage-point lower trial win rate**. [Complete results and timing](benchmarks/comparison/README.md) · [MCTS metrics](benchmarks/comparison/mentor_rl_training/readme-metrics.json) · [tiered metrics](benchmarks/comparison/model5500_tiered_no_reuse/readme-metrics.json) · [policy-only metrics](benchmarks/comparison/model5500_policy_greedy/readme-metrics.json). These matched results remain distinct from the historical model row above.
 
 The uniform-32 neural run and the previously proposed 8,000-simulation / rollout-400 MCTS run were cancelled before starting. The current Mentor baseline retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixtures are made compatible offline without a runtime MCTS adapter. [Comparison protocol](docs/HUMAN_COMPARISON.md).
 
