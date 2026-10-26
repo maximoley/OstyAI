@@ -17,7 +17,7 @@ def main():
         runner=int((p/'runner.pid').read_text())
         if not Path(f'/proc/{runner}').exists():raise RuntimeError('Benchmark runner exited before completion; inspect runner.log')
         time.sleep(30)
-    assert [r['configuration'] for r in comparison['results']]==['mentor_default','model5500_tiered_no_reuse','model5500_uniform32_no_reuse','model5500_policy_greedy']
+    assert [r['configuration'] for r in comparison['results']]==['mentor_rl_training','model5500_tiered_no_reuse','model5500_uniform32_no_reuse','model5500_policy_greedy']
     trial_sets=[];checks=[]
     for row in comparison['results']:
         sp=Path(row['summary']);d=sp.parent;s=json.loads(sp.read_text());trials=json.loads((d/'trials.json').read_text())
@@ -43,7 +43,9 @@ def main():
                 assert r['simulations']==sum(budgets[o['search_tier']]*o['searched_decisions']for o in r['outcomes'])
         else:
             for r in trials:
-                assert r['requested_simulations']in(1000*r['searches'],4000*r['searches'])and r['rollout_depth']==200
+                budget=1000 if r['room_type']=='boss' else 250
+                assert r['configured_simulations_per_decision']==budget
+                assert r['requested_simulations']==budget*r['searches'] and r['rollout_depth']==200
         checks.append(dict(configuration=row['configuration'],metrics_recomputed=True,full_trial_set=True,settings_verified=True))
     assert all(x==trial_sets[0]for x in trial_sets)
     fields=['configuration','trial_wins','trials','trial_win_rate','wins','combats','win_rate','runs_won_every_fight','runs','run_win_rate','unresolved_trials','trial_average_hp_lost','average_hp_lost','wall_seconds','workers']

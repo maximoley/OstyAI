@@ -22,7 +22,7 @@ def main():
     lib_hash=sha(package/'ostyai/loop_native.so');assert lib_hash=='6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f'
     env=os.environ.copy();env.update(OMP_NUM_THREADS='1',MKL_NUM_THREADS='1',TORCHINDUCTOR_COMPILE_THREADS='2')
     commands=[
-        ('mentor_default',[python,str(package/'scripts/benchmark_mcts.py'),'--prepared',str(prepared),'--workers','80','--rollout-depth','200']),
+        ('mentor_rl_training',[python,str(package/'scripts/benchmark_mcts.py'),'--prepared',str(prepared),'--workers','80','--rollout-depth','200','--budget-preset','rl-training']),
         ('model5500_tiered_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared)]),
         ('model5500_uniform32_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--uniform-simulations','32']),
         ('model5500_policy_greedy',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--policy-only']),

@@ -12,12 +12,16 @@ This experiment uses all 512 human A10 winning runs: 12,099 independent combat s
 
 | Configuration | Simulations per decision | Maximum MCTS rollout length |
 |---|---|---:|
-| Mentor deployed validation (`eval-cheap`) | Common/easy/hard/elite: 1000; boss: 4000 | 200 |
+| Mentor RL training budget | Common/easy/hard/elite: 250; boss: 1000 | 200 |
 | Step 5500, tiered Gumbel | Easy 32; hard 64; elite 96; boss 128 | Not applicable: neural leaf evaluation, no fixed search depth cap |
 | Step 5500, uniform Gumbel | 32 for every combat | Not applicable |
 | Step 5500, greedy policy | 0; highest-logit legal action | Not applicable |
 
 Mentor uses its existing complete native MCTS, BeliefDraw mode, heuristic rollouts, TexelWide leaf evaluation, RichBoth terminal evaluation, uniform prior and the deployed mode tuning/root guards. Its upstream evaluator is retained: it does **not** substitute the neural model's potion-cost objective. The model runs use the frozen 0/1 per-potion penalties. This is a comparison of complete agents, with this objective difference made explicit.
+
+The previous 1,000/4,000 baseline was stopped at the user's request after 4,978 completed trials; these partial results are retained separately and will not be mixed with the replacement. The 250/1,000 preset passed an 80-worker, 80-trial smoke test on the repaired engine (42 normal, 27 elite, 11 boss; exact simulation accounting verified). This smoke test is not a full benchmark.
+
+A pristine upstream checkout at `342c525aac02605b480c02f467837842f9ccf704` has been built in release mode. A full import audit rejects 2,037 of the 36,297 fixtures (`NEOWS_SACRIFICE` and `DOWSING_ROD`); sampled opening choices are also absent after import. The full replacement benchmark is paused pending compatible fixture loading or selection of the repaired engine. The preparation details below describe the existing repaired-engine panel, not a verified pristine-upstream panel.
 
 ## Offline compatibility preparation
 
@@ -48,7 +52,7 @@ MCTS trials are journaled as they finish. Neural trials are saved per shard. The
 After building the offline preparation example and preparing a manifest with the new shard hashes:
 
 ```bash
-.venv/bin/python scripts/benchmark_mcts.py --prepared COMPATIBLE_FIXTURES --workers 80 --rollout-depth 200 --output results/mentor-default
+.venv/bin/python scripts/benchmark_mcts.py --prepared COMPATIBLE_FIXTURES --workers 80 --rollout-depth 200 --budget-preset rl-training --output results/mentor-rl-training
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --output results/model5500-tiered
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --uniform-simulations 32 --output results/model5500-uniform32
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --policy-only --output results/model5500-policy-greedy
@@ -56,8 +60,6 @@ After building the offline preparation example and preparing a manifest with the
 
 `run_human_comparison.py` is the Zeus orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
 
-The policy-only arm was added while the first MCTS process was running. The controller was replaced without interrupting that benchmark or its workers; its original launch timestamp is retained. This first arm uses process-exit polling at 0.1-second intervals for completion timing, which can add polling/scheduling latency. Later arms are timed directly around their child process.
-
-The user subsequently removed the queued 8000-simulation, rollout-cap-400 MCTS configuration because of runtime. It was never launched as a full benchmark; its earlier 80-trial preflight is retained only as a diagnostic, not a benchmark result. The active default MCTS process and its original timing were preserved. Training resumes after the four configurations listed above finish.
+The policy-only arm remains queued, and the 8,000-simulation / 400-rollout configuration remains cancelled. The comparison controller is stopped while the pristine upstream compatibility check is resolved; production remains paused at the preserved checkpoint. The replacement must start in a fresh output directory and record its actual engine identity. Training resumes only after all four configurations finish and pass verification.
 
 </details>
