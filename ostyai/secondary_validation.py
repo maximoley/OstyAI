@@ -61,7 +61,7 @@ def evaluate(native,gpu,output,update,collect,config,stopping=lambda:False,fixtu
         atomic_json(output/'status.json',dict(stage='human_validation',update=update,parts_completed=number+1,parts_total=len(parts),completed_trials=len(all_rows),requested_trials=manifest['requested_trials'],pid=os.getpid()))
         print(json.dumps(dict(human_validation_update=update,part=number+1,total_parts=len(parts),completed_trials=len(all_rows))),flush=True)
     summary,combats,runs,trials=summarize(manifest,all_rows)
-    summary.update(provenance,seconds=time.perf_counter()-started,collection_seconds=collection_seconds,fixture_conversion_failures=len(manifest['conversion_errors']),partial_smoke=part_limit is not None or fixture_root is not None)
+    summary.update(provenance,seconds=time.perf_counter()-started,collection_seconds=collection_seconds,fixture_conversion_failures=len(manifest['conversion_errors']),partial_smoke=part_limit is not None)
     for name,data in [('combats',combats),('runs',runs),('trials',trials),('summary',summary)]:atomic_json(directory/(name+'.json'),data)
     history=output/'human-validation.jsonl'
     existing=[json.loads(l) for l in history.read_text().splitlines()] if history.exists() else []
