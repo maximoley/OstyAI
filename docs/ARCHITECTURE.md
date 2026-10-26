@@ -1,5 +1,7 @@
 # Architecture
 
+[Documentation guide](README.md) · [Project overview](../README.md)
+
 The released actor has **1,593,346 trainable parameters**. Its exact config is in `models/best/metadata.json` and its implementation is `ostyai/model.py`.
 
 | Component | Shape / behavior |

@@ -1,0 +1,19 @@
+{
+  "update": 5500,
+  "runs": 512,
+  "combats": 12099,
+  "trials": 36297,
+  "trial_wins": 33265,
+  "trial_win_rate": 0.9164669256412376,
+  "wins": 11218,
+  "win_rate": 0.9271840647987437,
+  "runs_won_every_fight": 122,
+  "run_win_rate": 0.23828125,
+  "unresolved_trials": 9,
+  "runs_won_every_fight_at_least_one": 258,
+  "sources": {
+    "summary.json": "35c55f780018b2ba197a7e1b06b7feeb2e2efa25b6fe385f4bf22e0e55f724e0",
+    "combats.json.gz": "ccb8e1ce6f5e684d04b42fb4bb030902b30d58de696a446e72a06929e76303f1"
+  },
+  "timing_note": "Historical seconds and collection_seconds have different scopes; neither is reported here as verified uninterrupted full-process wall time."
+}

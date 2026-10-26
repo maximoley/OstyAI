@@ -1,5 +1,7 @@
 # Training loop
 
+[Documentation guide](README.md) · [Project overview](../README.md)
+
 Production alternates **collection → one optimizer update → actor synchronization**. An actor is fixed during collection. Rust workers own states, act/search, and write final pinned observations; Python dispatches GPU batches. Completed-combat rows enter bounded FIFO replay. Collection and learning are cyclic on one GPU; this is not simultaneous independent actor/learner training.
 
 One cycle consumes a prepared bank of approximately 1024 combat starts (unsupported starts can be rejected). Every completed combat contributes its decision records, so fresh examples per cycle vary with combat length. There is no fixed 16,384-fresh-example requirement: **16,384 is the sampled optimizer batch**, and sampling can repeat replay entries.

@@ -1,5 +1,7 @@
 # Measured throughput
 
+[Documentation guide](README.md) · [Project overview](../README.md)
+
 Hardware: NVIDIA L40 (46,068 MiB reported), driver 570.172.08; two Intel Xeon Gold 5420+ CPUs, 56 physical / 112 logical cores; production uses 80 Rust workers. PyTorch 2.7.1+cu128 and BF16 inference. Raw hardware and timing reports are in `benchmarks/throughput`.
 
 ## End-to-end search collection

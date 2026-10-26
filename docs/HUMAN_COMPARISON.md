@@ -1,5 +1,7 @@
 # Four-way human combat comparison
 
+[Documentation guide](README.md) · [Project overview](../README.md)
+
 This experiment uses all 512 human A10 winning runs: 12,099 independent combat starts × three frozen RNG states = 36,297 trials per configuration. All runs use **80 workers**, execute sequentially with production training paused, and cap actual play at 1000 actions per trial. The actor is the immutable exported step-5500 checkpoint. None of the neural configurations uses persistent search reuse. The policy-only arm evaluates the legal action logits and selects their argmax, with no search, chance sampling, or replay updates.
 
 | Configuration | Simulations per decision | Maximum MCTS rollout length |

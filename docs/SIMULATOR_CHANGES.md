@@ -1,5 +1,7 @@
 # Simulator and search modifications
 
+[Documentation guide](README.md) · [Project overview](../README.md)
+
 The foundation is Thomas Friedel's `tfriedel/spire-mentor` Rust simulator, not a simulator written from scratch for OstyAI. Original licenses and notices are retained. `provenance/upstream-differences.json` inventories this snapshot against the recorded upstream checkout commit.
 
 OstyAI adds a native GPU queue and NUM1 observation path, Gumbel sequential-halving root search (up to eight considered actions), a policy/value transformer evaluator, replay export, independent potion-cost terminal utility, tier budgets, forced-action compression, detailed search statistics and the Python learner/validation pipeline.

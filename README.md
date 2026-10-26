@@ -1,65 +1,131 @@
 # OstyAI
 
-Necrobinder combat policy/value learning for Slay the Spire 2: a modified Rust simulator, GPU compositional state encoder, four-layer transformer, Gumbel search with belief draws, and an AlphaZero-style learner.
+**Building toward superhuman Slay the Spire 2 play, starting with Necrobinder A10 combat.**
 
-**Simulator credit:** built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, especially its `sts2-rs` combat engine, content, wire codec and original MCTS/belief-draw implementation. This repository does not claim authorship of that engine. See [ATTRIBUTION.md](ATTRIBUTION.md), the unchanged [upstream simulator license](native/LICENSE), and [provenance](PROVENANCE.md). Not affiliated with Mega Crit.
+The long-term goal is a model that plays the full game at a superhuman level. The proposed path has two stages: first train a strong, fast **combat model**, then train a **run-decision model** for choices such as pathing, card rewards, shops and deck building. This repository focuses on the first stage. Superhuman combat is the goal; the current results do not establish that level of play.
 
-## Included snapshot
+OstyAI combines a modified Rust simulator, a small policy/value transformer, Gumbel search with belief draws, and an AlphaZero-style training loop. It includes the step-5500 model, frozen benchmark inputs, recorded results, training code and provenance. Full training datasets are not included.
 
-| Component | Included |
+**Built on [Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)** and its `sts2-rs` simulator. The original combat engine, content, MCTS and belief-draw implementation are upstream work. See [credits and licensing](#credits-and-licensing).
+
+## Contents
+
+- [Motivation: why combat comes first](#motivation-why-combat-comes-first)
+- [A shared human-run combat benchmark](#a-shared-human-run-combat-benchmark)
+- [Current results](#current-results)
+- [Training progress](#training-progress)
+- [Model architecture](#model-architecture)
+- [Training scheme](#training-scheme)
+- [Changes relative to the Rust simulator](#changes-relative-to-the-rust-simulator)
+- [Low-budget search through chance nodes](#low-budget-search-through-chance-nodes)
+- [Future directions and open questions](#future-directions-and-open-questions)
+- [Quick start](#quick-start)
+- [Repository guide](#repository-guide)
+- [Credits and licensing](#credits-and-licensing)
+
+## Motivation: why combat comes first
+
+### Why Necrobinder?
+
+I am a Necrobinder main, so my initial focus is an **Ascension 10 Necrobinder combat model**. Necrobinder also looks like a demanding test case: spire-mentor's October 2026 evaluation reports a **5.6% A10 full-run win rate**, the lowest of its five characters, using 8,000 MCTS simulations per decision and 500 runs per A10 result. This describes that system's performance, rather than proving an intrinsic difficulty ranking. My hypothesis is that improvements on Necrobinder's difficult combat decisions will transfer usefully to other characters. [Upstream results](https://github.com/tfriedel/spire-mentor#numbers).
+
+### Combat strength shapes what the run model learns
+
+A run-decision model learns strategies that depend on what its combat model can execute. If the combat model cannot find winning ideas that strong humans use—such as infinite combos, exhaust loops or other long-horizon strategies—the run model may never learn to build decks around them. That can prevent the full system from reaching superhuman strength.
+
+In my earlier full-run training experiment with a weak combat model and no search, the run model learned to avoid Act 1 elites. The combat model consistently lost enough HP that relic and card rewards did not appear worthwhile. The full-run model plateaued at roughly **1% A10 win rate**, with only about **50% of runs getting out of Act 1**. These are observations from that earlier experiment, not results from the combat benchmark below.
+
+### Strength must come with throughput
+
+Full-run training also depends on how many combats the combat model can finish per second. Even a search method that finds excellent moves may be impractical for training a run model if each in-game decision takes minutes. The aim is to approach superhuman combat strength while retaining enough throughput to train the next stage.
+
+For scale, the included 512-combat diagnostic measured roughly **616–644 played decisions/second** without persistent search reuse on an NVIDIA L40 with 80 workers. Those are short diagnostic measurements, not full human-benchmark runtimes. [Measured throughput and timing definitions](docs/THROUGHPUT.md).
+
+## A shared human-run combat benchmark
+
+The benchmark fixes the historical deck, relics, HP and inventory for each fight, helping separate combat execution from deck-building decisions.
+
+1. Start with human runs from the **Spire Codex** data used by this project. Select **512 complete, solo, A10 Necrobinder winning runs**, excluding modded/unrecognized cards or relics and runs that cannot be reconstructed completely in the simulator. Selection uses a fixed hash-based random ordering; model outcomes do not determine eligibility.
+2. Extract **12,099 combat starts** from those runs.
+3. Because the source does not record exact RNG state for each combat, generate **three distinct randomized starts per combat**, then freeze their full RNG states. Every benchmark uses the same **36,297 trials**.
+4. Set starting potion-instance penalties to **0** for recorded or inferred human use in that combat, and **1** otherwise. Inference compares potion inventories with the following combat; the final fight uses final inventory and explicit use records. These penalties affect the neural agent's utility, not the definition of a win.
+
+Each original combat was won by a human on the successful run. Winning every reconstructed fight is therefore a useful aspiration for a strong combat agent. However, different RNG and reconstruction details mean a win is **not guaranteed to exist for every randomized trial**. Conditioning on successful human runs also makes this a specific diagnostic population, not a representative sample of all A10 fights.
+
+### What we report
+
+| Metric | Definition |
 |---|---|
-| Simulator | Current modified Rust workspace, including import/continuation repairs and persistent search graph reuse |
-| Model | **1,593,346 parameters**, step **5500**, selected by best completed human-benchmark all-trial win rate |
-| GPU encoder | NUM1 numeric records → compositional embeddings, numeric projection and relation binding |
-| Training | Native worker/search queue, GPU evaluation, prioritized replay, accumulated learner and supervisor |
-| Benchmark | Frozen 512-human-run panel, three RNG starts per combat, full per-trial/per-combat/per-run results |
-| Evidence | Validation histories, measured throughput, repair/deployment evidence and checksums |
+| Overall trial win rate | Total won trials / 36,297, pooling all three seeds |
+| Majority combat win rate | Combats won in at least 2 of 3 trials / 12,099 |
+| Runs with every fight won ≥2/3 | Number and percentage of the 512 runs whose every combat meets the majority rule |
+| Runs with every fight won ≥1/3 | Number and percentage of runs with at least one winning trial in every combat |
+| Average HP lost | Initial minus final HP over completed trials; healing can make this negative |
+| Benchmark time | Wall time for the entire benchmark, with worker count, hardware and timing scope recorded |
 
-**Full training datasets, replay buffers, optimizer checkpoint and compiled machine-specific binaries are excluded.** The frozen validation inputs are included separately; they are not the full training corpus.
+Capped or unresolved trials count as nonwins; they are excluded from HP-loss averages. Combat starts are independent historical reconstructions. A “run” score aggregates those fights—it is **not** an end-to-end model-played run carrying HP and inventory between combats.
 
-## Changes relative to the upstream Rust simulator
+**Training overlap:** the current OstyAI model may have benchmark combats in its training dataset. Human winning action sequences are not supplied as supervision: those sequences are unavailable. Training instead generates its own search targets and combat outcomes. Overlap still matters, so this benchmark is not a held-out generalization claim.
 
-OstyAI builds on the combat rules, content implementations, state reconstruction, original MCTS and belief-draw machinery from **[Thomas Friedel's spire-mentor / sts2-rs](https://github.com/tfriedel/spire-mentor)**. The packaged source adds a neural search and learning pipeline around that engine, together with targeted simulator repairs. The [upstream difference inventory](provenance/upstream-differences.json) compares the source snapshot with upstream checkout commit `e7a923e90dc731e83683791b6c4d4a4059656149`; original copyright and license notices are retained.
+Read the [benchmark specification](docs/BENCHMARKS.md), [original selection and potion-inference notes](provenance/human-panel-original.md), and [frozen inputs](benchmarks/fixtures/human/).
 
-**Search and neural integration:**
+## Current results
 
-- **GPU evaluation pipeline:** Rust workers export compact NUM1 state and legal-action records into pinned buffers. GPU token construction, batched transformer inference and asynchronous feedback supply policy logits and values to search; completed combats supply replay examples to the learner.
-- **Neural Gumbel search:** a custom sequential-halving root search considers up to eight legal actions, with belief draws and chance-outcome widening/reuse for uncertain transitions. Per-combat simulation budgets replace a single uniform budget; search has no fixed depth cap.
-- **Forced actions:** sole legal actions execute immediately in real play. Inside search, forced chains collapse into the parent edge without intermediate tree nodes or neural evaluations, while retaining RNG/chance effects. Real forced decisions still contribute replay observations and terminal value targets.
-- **Persistent search graph:** the current source can retain up to 512 nodes per combat across decisions, reuse matching belief states, and invalidate cached evaluations when the actor changes. Each new decision still receives its full simulation budget. This change postdates the published step-5500 benchmark; its measured runtime tradeoffs are documented in [THROUGHPUT.md](docs/THROUGHPUT.md).
-- **Reward and evaluation context:** independent potion-instance penalties follow cloned states, observations, search and replay. The pipeline adds tier-level search accounting, prioritized replay, matched search/policy-only evaluation and the frozen human-run benchmark.
+### Published model result
 
-**Simulator correctness repairs:**
+The exported **step-5500 model** is the best completed human-benchmark checkpoint in the included training history. It uses tiered budgets of **32 / 64 / 96 / 128** for easy / hard / elite / boss fights, with **persistent search reuse disabled**.
 
-- Restore ascension-aware enemy AI and migrate recognized obsolete openings for Skulking Colony, Haunted Ship and Axebots without resetting HP, powers or RNG. Unsupported live AI fails explicitly instead of falling back to a generic attack; already-dead enemies are handled separately.
-- Recognize Queen companion death when the historical TorchHeadAmalgam counter was absent.
-- Finish inner autoplay/draw choices before resuming outer turn setup, and reject out-of-phase EndTurn actions that could otherwise create a no-op loop.
-- Resume Tyranny / ToolsOfTheTrade turn-start choices only when a pending choice actually exists, allowing lethal effects to reach the combat-end path.
+| Model / evaluation | Overall trial wins | Majority combat wins | Every fight ≥2/3 | Every fight ≥1/3 | Full benchmark wall time |
+|---|---:|---:|---:|---:|---|
+| OstyAI step 5500, historical tiered search | 33,265 / 36,297 **(91.65%)** | 11,218 / 12,099 **(92.72%)** | 122 / 512 **(23.83%)** | 258 / 512 **(50.39%)** | Not verified as an uninterrupted full-process measurement |
 
-See [simulator change details](docs/SIMULATOR_CHANGES.md) and [repair/deployment evidence](provenance/changes/) for regressions, tests and historical native-library identities.
+There were **9 unresolved trials**. Mean HP lost was **14.41 per completed trial**. The historical report contains evaluation and collection timers with different scopes; they are not substituted for the full-process timing requested for the new comparison. [Original summary](benchmarks/human-validation-005500/summary.json) · [table values and source hashes](benchmarks/readme-step5500-metrics.json).
 
-## Model architecture and training scheme
+### Matched four-agent comparison
 
-### Architecture
+As of **October 26, 2026**, the following comparison is in progress. Every agent uses **80 workers**, the same complete compatibility-prepared panel, and a 1,000-action combat cap. Configurations execute sequentially with production training paused. Wall time includes process startup, loading, compilation, evaluation and result writing; offline fixture preparation is excluded.
 
-The exported model has **1,593,346 parameters** and jointly predicts legal-action scores and shaped combat return. Its [configuration and hashes](models/best/metadata.json) accompany the [weights](models/best/model.pt).
+| Agent | Search budget | Trial win rate | Every fight ≥2/3 | Every fight ≥1/3 | Full wall time | Status at update |
+|---|---|---|---|---|---|---|
+| Default Mentor MCTS (`eval-cheap`) | 1,000 common/elite; 4,000 boss; rollout cap 200 | Pending | Pending | Pending | Pending | Running |
+| OstyAI step 5500, tiered, no reuse | 32 / 64 / 96 / 128 | Pending | Pending | Pending | Pending | Queued |
+| OstyAI step 5500, uniform, no reuse | 32 for every tier | Pending | Pending | Pending | Pending | Queued |
+| OstyAI step 5500, greedy policy | Zero search; legal-action argmax | Pending | Pending | Pending | Pending | Queued |
 
-| Component | Implementation |
+The previously proposed 8,000-simulation / rollout-400 MCTS run was removed before its full benchmark started. The current Mentor baseline retains its upstream evaluator; it does not use the neural agent's potion-penalty objective. Fixtures are made compatible offline without a runtime MCTS adapter. These new results will remain separate from the historical row above. [Comparison protocol](docs/HUMAN_COMPARISON.md).
+
+## Training progress
+
+### Primary validation win rate
+
+![Primary search-enabled validation win rate from optimizer step 0 through 5500, with search and simulator changes annotated](docs/assets/validation_winrate_annotated.png)
+
+The primary panel contains **8,192 trials per checkpoint**. Step 5500 scored **91.92% with search** and **80.09% with greedy policy only**. These primary-panel scores are distinct from the 512-run human benchmark. Search budgets and simulator repairs changed during training, so jumps in the plot do not isolate learning gains. [Matched primary results](benchmarks/validation-comparison-005500.json).
+
+### Human benchmark over training
+
+![Human benchmark trial and majority win rates at steps 4000, 4500, 5000 and 5500, plus runs meeting the at-least-one and majority rule in every fight](docs/assets/human_benchmark_vs_optimizer_step.png)
+
+The plots stop at step 5500. Persistent search reuse was enabled after that checkpoint, so these curves do not establish its effect on benchmark strength. Historical configuration and native-library identities are retained in the [validation histories](benchmarks/history/) and [provenance](PROVENANCE.md).
+
+## Model architecture
+
+The model has **1,593,346 parameters** and shares an encoder between its policy and value heads.
+
+| Component | Design |
 |---|---|
-| Input | Variable-length NUM1 state/action records, `int32[B, S, 16]`; token buckets up to 4096 rows |
-| Token construction | Shared semantic embeddings, 40 signed-log1p numeric features, and owner/child/reference relations; potion penalties are explicit inputs |
+| Input | Variable-length NUM1 state and legal-action records, `int32[B, S, 16]`; buckets up to 4096 rows |
+| Token construction | Shared semantic embeddings, 40 signed-log1p numeric features, owner/child/reference relations and explicit potion-cost context |
 | Transformer | 4 pre-layer-normalized blocks, width 128, 4 attention heads, feed-forward width 512, GELU, no dropout |
-| Policy head | Action + owner + target + summary vectors → 128 → one logit per legal action; padding is masked |
-| Value head | Summary vector → 128 → one unconstrained shaped-return estimate, not a win probability |
-| GPU execution | Triton token assembly for inference, an autograd-compatible training path, BF16 autocast, Torch compile and CUDA graphs |
+| Policy head | Action + owner + target + summary vectors → 128 → one logit per legal action; padding masked |
+| Value head | Summary vector → 128 → one unconstrained shaped-return estimate; this is not a win probability |
+| GPU execution | Triton token assembly for inference, autograd-compatible training, BF16 autocast, Torch compile and CUDA graphs |
 
-The full encoding and tensor layout are described in [ARCHITECTURE.md](docs/ARCHITECTURE.md); the implementation is in [ostyai/model.py](ostyai/model.py).
+The policy can act directly by selecting its highest-scoring legal action, or supply priors to Gumbel search while the value head evaluates leaves. [Architecture and tensor layout](docs/ARCHITECTURE.md) · [model implementation](ostyai/model.py) · [checkpoint metadata](models/best/metadata.json).
 
-### Training scheme
+## Training scheme
 
-Training follows an **AlphaZero-style collection → learning → actor synchronization** cycle. With the actor fixed, 80 Rust workers collect combats from a prepared bank of approximately 1024 starts. Their decision examples enter a **65,536-example FIFO replay buffer**. Each cycle samples **16,384 replay examples**, accumulates gradients across **64 microbatches of 256**, performs one optimizer update, then synchronizes the actor. The target is 10,000 optimizer updates; the included champion is from step 5500. Fresh examples collected per cycle vary with combat length.
-
-Search budgets and learner quotas are coupled in the packaged configuration:
+Training follows **collection → learning → actor synchronization**. A frozen actor drives 80 Rust workers through approximately 1,024 combat starts per cycle. Completed decision examples enter a **65,536-example FIFO replay buffer**. Each optimizer update samples **16,384 examples**, accumulates gradients across **64 microbatches of 256**, and synchronizes the actor. The target is 10,000 updates; the packaged model is step 5500.
 
 | Combat pool | Simulations per non-forced decision | Samples per optimizer update |
 |---|---:|---:|
@@ -68,30 +134,69 @@ Search budgets and learner quotas are coupled in the packaged configuration:
 | Elite | 96 | 4,915 |
 | Boss | 128 | 6,554 |
 
-Within each pool, examples are sampled by absolute value-error priority, mixed with 5% uniform sampling. Importance weights `1 / (N_pool * P(sample | pool))` correct sampling **within that pool**, preserving the intended 10/20/30/40% pool mixture. Quotas apply to the complete optimizer update; individual microbatches are arranged for token-length efficiency.
+Within each pool, value-error priorities are mixed with **5% uniform sampling**. Importance weights `1 / (N_pool * P(sample | pool))` correct within-pool sampling while preserving the intended 10/20/30/40% pool mixture. Quotas apply to the full optimizer update; microbatches are packed for token-length efficiency.
 
-The loss combines importance-weighted **policy cross-entropy against the search target** and **value MSE against terminal utility**. AdamW uses learning rate `3e-4`, weight decay `1e-4`, and gradient-norm clipping at `1.0`. There is no explicit entropy bonus or distance-to-terminal loss discount. Terminal utility is:
+The loss combines importance-weighted **policy cross-entropy against the search target** and **value MSE against terminal utility**. AdamW uses learning rate `3e-4`, weight decay `1e-4`, and gradient-norm clipping at `1.0`. There is no explicit entropy bonus or distance-to-terminal loss discount.
 
 ```text
-win + 0.5 * (max(final_hp, 0) / initial_hp) * (1 - spent_potion_cost)
-    + (0 if win else 0.05 * damage_progress)
+utility = win + 0.5 * (max(final_hp, 0) / initial_hp) * (1 - spent_potion_cost)
+              + (0 if win else 0.05 * damage_progress)
 ```
 
-Training and primary validation assign independent Uniform[0,1] potion costs. The human benchmark uses cost 0 for recorded/inferred human potion use and 1 otherwise. The return is unclipped and can exceed 1.
+The utility is unclipped and can exceed 1. Training and primary validation assign independent Uniform[0,1] potion costs; the human benchmark uses the fixed 0/1 labels described above.
 
-Every **100 updates**, the same frozen actor runs primary search and zero-search legal-argmax policy evaluation on the matched **8192-trial** panel. Every **500 updates**, it also runs the [512-human-run benchmark](benchmarks/fixtures/human/): **12,099 combats × three frozen RNG starts**, with majority combat wins and every-combat run wins recorded. Human fixtures may overlap training. See [TRAINING.md](docs/TRAINING.md) for the full loop and [BENCHMARKS.md](docs/BENCHMARKS.md) for evaluation definitions and limitations.
+Primary search and matched policy-only validation run every **100 updates**; the human benchmark runs every **500**. No learning occurs between paired primary passes. Current source supports persistent search reuse, but the published step-5500 scores and the new comparison's neural runs use no reuse. [Full training configuration](docs/TRAINING.md).
 
-## Best human benchmark
+## Changes relative to the Rust simulator
 
-Step 5500: **33,265 / 36,297 trials won (91.65%)**, **11,218 / 12,099 combats won by a 2-of-3 majority (92.72%)**, and **122 / 512 runs with every combat majority-won (23.83%)**. Exact values and HP-loss metrics are in [the original summary](benchmarks/human-validation-005500/summary.json).
+OstyAI extends spire-mentor's engine with a neural learning pipeline and targeted simulator repairs. The [difference inventory](provenance/upstream-differences.json) compares the packaged source with upstream checkout `e7a923e90dc731e83683791b6c4d4a4059656149`.
 
-Each combat starts independently from the reconstructed human state. The run metric is **not** a linked whole-run rollout carrying model HP between combats. This human panel can overlap training and is not a held-out generalization claim. See [BENCHMARKS.md](docs/BENCHMARKS.md).
+### Neural search and learning
 
-The step-5500 results used the preceding simulator build **without persistent search reuse**. The current simulator includes reuse. Both native hashes and the actor hash are preserved; the historical results are not relabeled as current-simulator results. Step 5300 had a higher primary search-panel win rate, so “best” here specifically means **human-benchmark champion**, not best on every metric.
+- Rust workers export compact state/action records into pinned buffers for batched GPU policy/value evaluation.
+- Custom **Gumbel sequential-halving search** considers up to eight legal root actions, uses belief draws and chance-outcome widening/reuse, and has no fixed search-depth cap.
+- Sole legal actions execute immediately in search-enabled real play. Forced chains inside search collapse into the parent edge without intermediate nodes or GPU evaluation, preserving chance effects. Factual forced decisions retain replay observations and terminal targets.
+- Persistent graphs can retain up to **512 nodes per combat**, reuse matching belief states and invalidate evaluations when the actor changes. Each decision still receives its full simulation budget. [Measured tradeoffs](docs/THROUGHPUT.md).
+- Independent potion costs, bounded replay, within-pool priorities, learner accumulation, detailed accounting, and matched evaluation connect the simulator to training.
 
-## Quick start — Linux, NVIDIA CUDA
+### Simulator repairs
 
-Tested stack: Python 3.12, PyTorch 2.7.1+cu128, Triton 3.3.1, Rust 1.96.0. The production machine is an NVIDIA L40 with 80 CPU workers. The Rust engine also contains game-free CPU tests; the complete neural loop requires CUDA.
+- Restore ascension-aware enemy AI; migrate known obsolete Skulking Colony, Haunted Ship and Axebot openings without resetting HP, powers or RNG. Unsupported live AI fails explicitly; dead enemies are handled separately.
+- Recognize Queen companion death even when a historical counter is missing.
+- Complete inner autoplay/draw choices before outer turn setup resumes; reject out-of-phase EndTurn actions that would otherwise be no-ops.
+- Park Tyranny / ToolsOfTheTrade continuations only when a pending choice exists, allowing lethal effects to reach combat completion.
+
+[Simulator change details](docs/SIMULATOR_CHANGES.md) and [deployment evidence](provenance/changes/) document tests and native hashes. Historical results are never relabeled as results from a repaired or newer simulator.
+
+## Low-budget search through chance nodes
+
+A small search budget is divided between exploring different random outcomes and looking further ahead within each outcome. For a draw card, search must answer both:
+
+1. **What might I draw?** Sample several possible hands.
+2. **What can I do with each hand?** Search subsequent actions.
+
+Both consume the same simulation budget. More outcome samples give broader coverage of the card's value, but leave fewer simulations to discover combinations or delayed benefits.
+
+In the recorded **32-simulation Soul example**, the chosen Soul received **13 simulations**: eight created new draw outcomes evaluated immediately by the value network, and five revisited existing outcomes and searched one action deeper. The deepest explored sequence was only **two actions**. This diagnostic used checkpoint **5460**, not the released step-5500 model, and is an example rather than a typical-depth estimate.
+
+Consequently, low-budget search can depend heavily on the value network understanding what follows a draw. If the network undervalues a powerful combination, search may never play far enough into it to correct the estimate. Restricting the number of outcomes could allow deeper exploration, but also risks selecting actions because a few sampled draws were lucky. The challenge is balancing representative randomness against useful depth, especially when later actions introduce more chance branches.
+
+[Follow the complete search trace](docs/SEARCH.md): all candidate scores, node values, outcome samples, backups and per-simulation results are included.
+
+## Future directions and open questions
+
+These are research questions, not demonstrated improvements:
+
+- **Depth versus randomness:** can adaptive chance widening spend a small budget on representative outcomes while still discovering long combinations?
+- **Long-horizon learning:** can verified winning trajectories, targeted difficult-fight practice, or auxiliary targets improve value estimates for exhaust loops and delayed payoffs?
+- **Search distillation:** how much of search's strength reaches the greedy base policy, and where does the gap remain largest?
+- **Useful reuse:** can persistent search improve strength per second after accounting for cache-management overhead?
+- **Benchmark validity:** how do results change on strictly held-out runs, additional frozen seeds, and stronger reconstruction/parity checks?
+- **The next stage:** what combat strength and throughput are sufficient before resuming run-decision training, and how well do improvements transfer across characters?
+
+## Quick start
+
+Tested on Linux with Python 3.12, PyTorch 2.7.1+cu128, Triton 3.3.1 and Rust 1.96.0. The neural loop requires NVIDIA CUDA; the production machine uses an L40 and 80 CPU workers.
 
 ```bash
 uv venv --python 3.12
@@ -103,15 +208,25 @@ bash scripts/build_native.sh
 .venv/bin/python scripts/evaluate.py --suite smoke --output results/smoke
 ```
 
-Use `--suite human` for the complete 512-run benchmark or `--suite primary` for 8192 trials. Add `--policy-only` to the primary suite for legal-argmax zero-search evaluation. Add `--reuse` for the current persistent-search mode; without it, the search mode matches the historical step-5500 setting. Builds can have different hashes, and GPU batching can affect close decisions; exact bitwise historical outcome reproduction is not promised. See [reproduction instructions](docs/REPRODUCING.md).
+Use `--suite human --workers 80` for the full human benchmark or `--suite primary` for 8,192 primary trials. Add `--policy-only` to either suite for zero-search greedy legal-action selection. Search defaults to no persistent reuse; `--reuse` enables it. Use a fresh output directory for each configuration. [Reproduction guide](docs/REPRODUCING.md) · [controlled comparison protocol](docs/HUMAN_COMPARISON.md).
 
-## Documentation
+**The trained model is [`models/best/model.pt`](models/best/model.pt).** `ostyai/initial_weights.pt` is the original random initialization. Cloning or importing the repository does not start training. Full training corpora, replay buffers, optimizer checkpoints and machine-specific compiled binaries are excluded; frozen benchmark inputs are included.
 
-- [Architecture and tokenization](docs/ARCHITECTURE.md)
-- [Training loop, reward, replay and hyperparameters](docs/TRAINING.md)
-- [Benchmarks and limitations](docs/BENCHMARKS.md)
-- [Measured throughput and timing definitions](docs/THROUGHPUT.md)
-- [Simulator modifications](docs/SIMULATOR_CHANGES.md)
-- [Release verification](provenance/package-verification.json)
+## Repository guide
 
-`ostyai/initial_weights.pt` is the original random initialization for fresh training. **The trained champion is `models/best/model.pt`.** The evaluation command loads the champion explicitly. Training does not start simply by cloning or importing this repository.
+| Location | What to find there |
+|---|---|
+| [docs/](docs/README.md) | Reading paths for architecture, training, evaluation, search, throughput and simulator changes |
+| [models/](models/README.md) | Exported champion weights, selection criteria, configuration and hashes |
+| [benchmarks/](benchmarks/README.md) | Frozen fixtures, historical results, validation histories and timing evidence |
+| [ostyai/](ostyai/) | Model, GPU pipeline, native bindings, learner, replay and evaluation code |
+| [native/](native/) | Derived Rust simulator workspace and upstream MCTS implementation |
+| [scripts/](scripts/README.md) | Build, unpack, verify, evaluate and comparison entry points |
+| [provenance/](provenance/README.md) | Source identities, repair/deployment evidence and package verification |
+| [tools/human-panel-source/](tools/human-panel-source/) | Archival benchmark-construction tools; require external source data |
+
+## Credits and licensing
+
+The simulator is derived from **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, especially `sts2-rs`. Original engine copyright is **2025–2026 Thomas Friedel**. This repository does not claim authorship of the upstream engine, content, original MCTS or belief-draw machinery. The unchanged [upstream MIT license](native/LICENSE), notices and source attribution are retained.
+
+See [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE](LICENSE) and [PROVENANCE.md](PROVENANCE.md) for the boundaries between upstream and OstyAI work. Slay the Spire 2 belongs to Mega Crit; this project is not affiliated with or endorsed by Mega Crit. No game art, audio or assemblies are distributed here.

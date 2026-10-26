@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "simulations": 32,
+  "nodes": 33,
+  "events": 160,
+  "checked": [
+    "every backup sum reconstructed with float32 arithmetic",
+    "every edge visit count",
+    "all nodes have one parent",
+    "all HTML fragment links resolve",
+    "browser slider and simulation 18 expansion verified"
+  ],
+  "production_native_unchanged": true,
+  "production_updates_after_diagnostic": 5488
+}
