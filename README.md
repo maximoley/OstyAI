@@ -94,7 +94,7 @@ As of **October 26, 2026**, the following comparison is in progress. Every agent
 
 | Agent | Search budget | Trial win rate | Every fight ≥2/3 | Every fight ≥1/3 | Full wall time | Status at update |
 |---|---|---|---|---|---|---|
-| Mentor MCTS (RL training budget) | 250 non-boss; 1,000 boss; rollout cap 200 | Pending | Pending | Pending | Pending | Awaiting upstream fixture compatibility |
+| Mentor MCTS (RL training budget) | 250 non-boss; 1,000 boss; rollout cap 200 | Pending | Pending | Pending | Pending | Running |
 | OstyAI step 5500, tiered, no reuse | 32 / 64 / 96 / 128 | Pending | Pending | Pending | Pending | Queued |
 | OstyAI step 5500, uniform, no reuse | 32 for every tier | Pending | Pending | Pending | Pending | Queued |
 | OstyAI step 5500, greedy policy | Zero search; legal-action argmax | Pending | Pending | Pending | Pending | Queued |

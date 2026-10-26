@@ -21,7 +21,7 @@ Mentor uses its existing complete native MCTS, BeliefDraw mode, heuristic rollou
 
 The previous 1,000/4,000 baseline was stopped at the user's request after 4,978 completed trials; these partial results are retained separately and will not be mixed with the replacement. The 250/1,000 preset passed an 80-worker, 80-trial smoke test on the repaired engine (42 normal, 27 elite, 11 boss; exact simulation accounting verified). This smoke test is not a full benchmark.
 
-A pristine upstream checkout at `342c525aac02605b480c02f467837842f9ccf704` has been built in release mode. A full import audit rejects 2,037 of the 36,297 fixtures (`NEOWS_SACRIFICE` and `DOWSING_ROD`); sampled opening choices are also absent after import. The full replacement benchmark is paused pending compatible fixture loading or selection of the repaired engine. The preparation details below describe the existing repaired-engine panel, not a verified pristine-upstream panel.
+A pristine upstream checkout at `342c525aac02605b480c02f467837842f9ccf704` was built and audited, but its importer rejects 2,037 fixtures (`NEOWS_SACRIFICE` and `DOWSING_ROD`) and does not restore sampled opening choices. The user selected the updated OstyAI Rust simulator for compatibility with the newer game data. The replacement uses that existing repaired engine, with no new simulator or MCTS changes. The pristine checkout is retained separately for reference and is not used by this comparison.
 
 ## Offline compatibility preparation
 
@@ -60,6 +60,6 @@ After building the offline preparation example and preparing a manifest with the
 
 `run_human_comparison.py` is the Zeus orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
 
-The policy-only arm remains queued, and the 8,000-simulation / 400-rollout configuration remains cancelled. The comparison controller is stopped while the pristine upstream compatibility check is resolved; production remains paused at the preserved checkpoint. The replacement must start in a fresh output directory and record its actual engine identity. Training resumes only after all four configurations finish and pass verification.
+The policy-only arm remains queued, and the 8,000-simulation / 400-rollout configuration remains cancelled. The replacement starts in a fresh `mentor_rl_training` output directory with the updated engine identity recorded. Production remains paused at the preserved checkpoint during the four sequential runs. Training resumes only after all four configurations finish and pass verification.
 
 </details>
