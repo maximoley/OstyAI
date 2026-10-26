@@ -1,6 +1,6 @@
 # Fresh 1,000-cycle AlphaZero combat run
 
-Server root: `/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/`
+Server root: `archive/spire-mentor-az16384-fresh-20261024/`
 
 The run starts from newly initialized weights, not benchmark, v30/v31, or smoke-trained weights. The network remains a four-layer width-128 transformer. Its semantic catalog covers the current native enemy moves; the name embedding table was resized to avoid namespace overlap. The production model has 1,593,346 parameters. `initialization.json` records the configuration and initial-weight checksum.
 
@@ -41,7 +41,7 @@ The source is the existing full-corpus sampler, not the late-act 8196 benchmark.
 
 Checkpoints are saved every ten cycles, before/after scheduled validation, and on a requested stop. They preserve learner and actor weights, optimizer moments/step, replay, sampling RNG, Torch/CUDA RNG, cycle and last validated update. Two replay checkpoint generations are retained. A crash can require replaying up to nine uncheckpointed cycles. Resume archives uncommitted progress rows and continues from the committed cycle. The supervisor allows at most three trainer attempts and respects the run's `STOP` file.
 
-To request a graceful stop, create `/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/STOP`. The trainer finishes its current work boundary, saves its state, and exits; the feeder and supervisor also honor that file. This affects only this run.
+To request a graceful stop, create `archive/spire-mentor-az16384-fresh-20261024/STOP`. The trainer finishes its current work boundary, saves its state, and exits; the feeder and supervisor also honor that file. This affects only this run.
 
 ## Evidence and monitoring
 

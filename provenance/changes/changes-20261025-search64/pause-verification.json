@@ -3,7 +3,7 @@
   "updates": 3770,
   "examples": 61767680,
   "validated_update": 3700,
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-003770.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-003770.pt",
   "replay_keys": [
     "capacity",
     "rows",

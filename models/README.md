@@ -16,3 +16,5 @@ The exported actor supports both legal-action argmax and neural search. Historic
 ```bash
 .venv/bin/python scripts/verify_model.py
 ```
+
+The trained weights use **[CC BY-SA 4.0](WEIGHTS-LICENSE.md)**: attribution required, commercial use allowed, and distributed adaptations share alike. This is a weights-only grant.

@@ -1,6 +1,7 @@
 """Check a full-batch AdamW update against accumulated graph microbatches."""
 
 import copy
+import os
 import gc
 import json
 from dataclasses import asdict
@@ -19,7 +20,7 @@ def main():
     torch.set_num_threads(1)
     torch.manual_seed(2026102407)
     panel = torch.load(
-        "/public/maxim/Codex/spire-mentor-learner-loop-20261024/full-run-b4096-u10/replay_cache.pt",
+        os.environ["OSTYAI_TEST_REPLAY"],
         map_location="cpu",
         weights_only=False,
     )

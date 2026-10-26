@@ -3,7 +3,7 @@
   "model_actor_optimizer_finite": true,
   "replay_integrity": true,
   "replay_count": 65536,
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004880.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-004880.pt",
   "settings": {
     "environment_revision": "native-ai-import-v1",
     "cycles": 10000,

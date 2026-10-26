@@ -108,9 +108,8 @@ struct Config {
 impl Default for Config {
     fn default() -> Self {
         Self {
-            fixtures: "/public/maxim/Codex/spire-mentor-validation/late_act_8196_v1/fixtures.jsonl"
-                .into(),
-            schema: "/public/maxim/Codex/spire-mentor-native-arrays-20261024/schema".into(),
+            fixtures: "ostyai/validation/fixtures.jsonl".into(),
+            schema: "ostyai/schema".into(),
             cases: 8196,
             workers: 80,
             batch_size: 256,

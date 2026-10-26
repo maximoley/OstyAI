@@ -1,7 +1,7 @@
 {
   "step": 4176,
   "checkpoint_sha256": "cc7421accd267fde24633a6d86f3ca6e4f177c0e5db40b1228063cab7d0610f3",
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004176.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-004176.pt",
   "replay_sha256": "ce663c741d49d595b5dce4b8ef1faf700cf2b176f26ad4e958ab5b73bb19d3aa",
   "settings": {
     "cycles": 10000,

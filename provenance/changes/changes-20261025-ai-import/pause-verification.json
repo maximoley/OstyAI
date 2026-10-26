@@ -2,7 +2,7 @@
   "step": 4242,
   "validated": 4200,
   "checkpoint_sha256": "fc7d1cdf67d5835659849996b6b11af60c9ba572a74cfc0759bd3d521cd0087f",
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004242.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-004242.pt",
   "replay_sha256": "c34bfc2ce008d484a35298b306b8dc2a39f9dfa39fe4095449807cba407709bf",
   "settings": {
     "cycles": 10000,

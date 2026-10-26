@@ -1,6 +1,6 @@
-   Compiling sts2-py v0.0.1 (/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/changes-20261026-tree-reuse/source/crates/sts2-py)
+   Compiling sts2-py v0.0.1 (archive/spire-mentor-az16384-fresh-20261024/changes-20261026-tree-reuse/source/crates/sts2-py)
     Finished `release` profile [optimized] target(s) in 3m 28s
-     Running unittests src/lib.rs (/public/maxim/Codex/spire-mentor/sts2-rs/target/release/deps/sts2_rs-749570c9f25771d6)
+     Running unittests src/lib.rs (archive/spire-mentor/sts2-rs/target/release/deps/sts2_rs-749570c9f25771d6)
 
 running 24 tests
 test adversarial::closed_loop::forced::tests::forced_moves_preserve_state_rng_and_replay ... ok

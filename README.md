@@ -287,6 +287,8 @@ Use `--suite human --workers 80` for the full human benchmark or `--suite primar
 
 ## Credits and licensing
 
+**Trained model weights:** [CC BY-SA 4.0](models/WEIGHTS-LICENSE.md), attributed to Maxim Oleynikov / OstyAI. Commercial use and modifications are permitted; distributed adaptations must satisfy ShareAlike. This grant covers the trained weights only.
+
 The simulator is derived from **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, especially `sts2-rs`. Original engine copyright is **2025–2026 Thomas Friedel**. This repository does not claim authorship of the upstream engine, content, original MCTS or belief-draw machinery. The unchanged [upstream MIT license](native/LICENSE), notices and source attribution are retained.
 
 See [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE](LICENSE) and [PROVENANCE.md](PROVENANCE.md) for the boundaries between upstream and OstyAI work. Slay the Spire 2 belongs to Mega Crit; this project is not affiliated with or endorsed by Mega Crit. No game art, audio or assemblies are distributed here.

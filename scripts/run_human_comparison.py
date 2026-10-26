@@ -15,7 +15,7 @@ def main():
     root=a.root;package=Path(__file__).resolve().parents[1];python=os.environ['OSTYAI_PYTHON'];prepared=root/'compatible-fixtures'
     lock=(root/'runner.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     (root/'runner.pid').write_text(str(os.getpid()))
-    pause=json.loads((root/'pause-verification.json').read_text());stop=a.production/'STOP';stop_text='Paused for OstyAI human comparison 20261026; owner /public/maxim/Codex/ostyai-human-comparison-20261026\n'
+    pause=json.loads((root/'pause-verification.json').read_text());stop=a.production/'STOP';stop_text=f'Paused for OstyAI human comparison 20261026; owner {root.resolve()}\n'
     assert stop.read_text()==stop_text
     assert sha(a.production/'production/latest.pt')==pause['checkpoint_sha256']
     assert sha(Path(pause['replay_file']))==pause['replay_sha256']

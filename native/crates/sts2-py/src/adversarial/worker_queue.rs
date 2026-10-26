@@ -333,15 +333,13 @@ fn verify(job: &Job, at: usize, oracle: &[i32], expected: &Value) -> Result<()> 
 
 pub(crate) fn run_benchmark(root: &Path) -> Result<()> {
     let read = |p: &Path| std::fs::read_to_string(p).map_err(|e| e.to_string());
-    let base = Path::new("/public/maxim/Codex/spire-mentor-native-arrays-20261024/schema");
+    let base = Path::new("ostyai/schema");
     let labels: Vec<Value> =
         serde_json::from_str(&read(&base.join("registry.json"))?).map_err(|e| e.to_string())?;
     let templates =
         serde_json::from_str(&read(&base.join("metadata.json"))?).map_err(|e| e.to_string())?;
     let schema = Arc::new(Schema::new(&labels, templates)?);
-    let source = read(Path::new(
-        "/public/maxim/Codex/spire-mentor-validation/late_act_8196_v1/fixtures.jsonl",
-    ))?;
+    let source = read(Path::new("ostyai/validation/fixtures.jsonl"))?;
     let mut roots = Vec::new();
     for line in source.lines() {
         let fixture: Value = serde_json::from_str(line).map_err(|e| e.to_string())?;

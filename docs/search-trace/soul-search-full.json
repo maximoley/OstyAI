@@ -36083,8 +36083,8 @@
     "selection": "First Soul chosen in seeded random order of 24 easy-pool validation combats; no forced actions or result filtering",
     "parity": "All final outcomes, actions, state hashes, potion costs and trace hashes match the original library on all 24 combats",
     "config": {
-      "fixtures": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/diagnostics-soul-search-20261026/panel.jsonl",
-      "schema": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/schema",
+      "fixtures": "archive/spire-mentor-az16384-fresh-20261024/diagnostics-soul-search-20261026/panel.jsonl",
+      "schema": "archive/spire-mentor-az16384-fresh-20261024/schema",
       "cases": 24,
       "workers": 1,
       "batch_size": 1,
@@ -36165,7 +36165,7 @@
         "DEVOTED_SCULPTOR_WEAK"
       ]
     },
-    "selected_trace": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/diagnostics-soul-search-20261026/traces-single/case-5-decision-0.json",
+    "selected_trace": "archive/spire-mentor-az16384-fresh-20261024/diagnostics-soul-search-20261026/traces-single/case-5-decision-0.json",
     "captured_at": 1793029237.5240784
   },
   "fixture": {

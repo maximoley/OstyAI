@@ -2,11 +2,16 @@ Licensing scope
 ===============
 
 The inherited Rust simulator is MIT-licensed, Copyright (c) 2025-2026
-Thomas Friedel. Its complete license and scope restriction are retained
-unchanged in native/LICENSE and attribution/upstream-LICENSE.
+Thomas Friedel. Its complete license and scope restriction remain in
+native/LICENSE and attribution/upstream-LICENSE.
 
-This private snapshot does not create a new blanket license for OstyAI
-additions, model weights, human-derived benchmark fixtures, or results.
-All rights not already granted by the applicable upstream or dependency
-license are reserved by their respective owners. Consult ATTRIBUTION.md
-and PROVENANCE.md before any public redistribution.
+The trained OstyAI checkpoint models/best/model.pt is licensed by
+Maxim Oleynikov under Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0). See models/WEIGHTS-LICENSE.md for attribution
+and scope, and models/LICENSE-CC-BY-SA-4.0.txt for the full legal terms.
+
+This weights license does not license the source code, benchmark data,
+third-party game content, or ostyai/initial_weights.pt. No new blanket
+license is granted for OstyAI code additions or other artifacts.
+Rights not already granted by the applicable license remain reserved
+by their respective owners. See ATTRIBUTION.md and PROVENANCE.md.

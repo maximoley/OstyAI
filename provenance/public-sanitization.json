@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "paths_are_redacted_archive_labels": true,
+  "changes": [
+    {
+      "file": "PROVENANCE.md",
+      "original_sha256": "e1be8a8922b7484604a609fad98e44cb293bb9fa5b8a0ae4970b5d918f83afb2",
+      "sanitized_sha256": "27537577171c0ea984088d7beeb26c1f767ef0c92398256bb83c27b626eccf92",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "benchmarks/fixtures/primary/manifest.json.gz",
+      "original_sha256": "6ccc061fdbd03050d216529f1d244bbe311d83ceda8658fca1d105a59ec84f49",
+      "sanitized_sha256": "928b2c5fe9947c0ce3e610c12c7d2f2621d43c5e7aea8515867b7dc048d019de",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "docs/HUMAN_COMPARISON.md",
+      "original_sha256": "5e717ad36b742814155cb8458ecaa0468f95eb31688174ab103c2852d57fb98d",
+      "sanitized_sha256": "8ab299001162b402d69e39a6505b68ab7f778bd38cfccce8d33cfdbb3f139ce2",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "docs/search-trace/soul-search-full.json",
+      "original_sha256": "df08547c4d8a4d683a9f57144394cda15f27fafaab45589b8df2d91e1947bbd3",
+      "sanitized_sha256": "0c16579c0ba6766364ef28d35b3ea077968efb258f874eb193cd829b793bfce1",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "docs/search-trace/soul-search-walkthrough.html",
+      "original_sha256": "bb62f322a9540852305d18b849b67a175be0f0a9760d25aed0ef60b4fc37542f",
+      "sanitized_sha256": "d3c0b9c325c26afc254c2332bef8e1116cc216bdc33d68f5a0a6cece4e510c15",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "native/crates/sts2-py/src/adversarial/closed_loop.rs",
+      "original_sha256": "7a8187aac1b510973c971a7cc5e5b39b9a9a8a7edc728adc8263952b2791f334",
+      "sanitized_sha256": "deb5ece6139a62aafb05181b52c98f88f157321a6b0b15b4a9463a96708e13ed",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "native/crates/sts2-py/src/adversarial/worker_queue.rs",
+      "original_sha256": "a3e336c10d17bc26cb9e0d7499a7f5edcb1c667f36c7d34f9ee77689a5c4d8fb",
+      "sanitized_sha256": "beaf590f032b53924f4b8c003bd1c4439d7697e6da2606bf626937bb6b48bd8f",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "native/crates/sts2-py/src/adversarial/worker_queue/gpu_feed.rs",
+      "original_sha256": "33210d28785012a26612ef08a302fa8c9386b544ff2e8fd12a17d6d04bebef9d",
+      "sanitized_sha256": "09f50f543d8e18079bca40ba4ea59ec16c34e5d31633a6319075e4ba2eacd9b4",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "native/crates/sts2-py/src/bin/gpu_feed_bench.rs",
+      "original_sha256": "2161fa36eee690355cd17f32c55d6ed3639832cd879aab95dd5b469f86951416",
+      "sanitized_sha256": "04159f22d2fa3a7d6e6f76a77e4e5d13470b701a5545b187ef58948e447f3786",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "native/crates/sts2-py/src/bin/native_queue_bench.rs",
+      "original_sha256": "5a970405112993ba82107b5d849096938558ddda65eb3d7841573d358bad0817",
+      "sanitized_sha256": "5de2939d37ab55eedb7d599f8eddd096e5e7ae9d3fc8798f446a451637af5339",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "ostyai/test_accumulation.py",
+      "original_sha256": "3458260be6411351f77ab6c646a4a707c84a578fa5de183af0b968237240cb22",
+      "sanitized_sha256": "41c195ec6628565414095420f7b141058bdf4048f950bea68daf46383dd2fcee",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "ostyai/test_weighted_accumulation.py",
+      "original_sha256": "af91616af515564c9e6fa2964844dbdf3089bc50a94781f32a456dc8e42c22f2",
+      "sanitized_sha256": "bf91bdaab8ae038ea1f26f04be1ce009a76a81476e57cfc1df1f4ac163ce0659",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-ai-import/checkpoint-preservation.json",
+      "original_sha256": "b01267f26de6162d61d68d5e9ad0829412b71ac488f3befa0ebfe129a5c3c71a",
+      "sanitized_sha256": "ffa4533f16a6304a934f7cd9aeb3085ea7eff56da3ea277921c09da8a72fd6e6",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-ai-import/pause-verification.json",
+      "original_sha256": "2df45a2b1fcfc56a713dfb25ca89373392b1a621ba03cf9869cf8ca4117991d6",
+      "sanitized_sha256": "135f56bc356e8fb7d6d8475ab56819beb7e5ee26e9c66a0e4fea6f778ab51394",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-forced-action/pause-verification.json",
+      "original_sha256": "90f798b886c76faeb13fb3d7db60ae3256f4c6b892510ac413ffc54c35ec4052",
+      "sanitized_sha256": "2ef5694a3aa9e6cf88187831fe21a4f9402037e4031b5c1e81fe63d465ca73ea",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-pool-sampling/pause-verification.json",
+      "original_sha256": "33db916c445fc5ffbc5a9d6626d0bd5298647e9fbdb65083caf3660214088e6c",
+      "sanitized_sha256": "81e8f6913b1f609f1c5891609fbe875028edc62177d3df13d39ba8c1bf0e14a8",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-prioritized/README.md",
+      "original_sha256": "1ad07c81cc461aa648fceb24588a0442e9074c57d6cb7823bdabec2079643aaf",
+      "sanitized_sha256": "1b82ea4f7d07072462b304789ef6daba152d8bd3e9d88edd6305220491d3a426",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-search64/pause-verification.json",
+      "original_sha256": "a40eff825798387c45c91c2bbd6d1a1a2784a4dc6e16e1694d88303fb1401f15",
+      "sanitized_sha256": "aa78197c05c32f0f3c1518c81cd571198bf1ded7526e984eab3bb9bdd62ae11a",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261025-tier-budgets/pause-verification.json",
+      "original_sha256": "6f1666b173c73b3b0b592bba980dfeb4f9e07b2e8c7aa16c4ab77dc45dc790b9",
+      "sanitized_sha256": "a865b7899d123772b572247fd81b0aba152ad32128f3f4024f96b83ead845962",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-easy32/pause-verification.json",
+      "original_sha256": "9389ef9f1cead301461d70e60cd74e168ffc2cf3fb5497f51799082198560a43",
+      "sanitized_sha256": "7c11d147f4710dfd3adee5143a6f0cea8d8ab0c3888b9aedce08fb5ef522a18e",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-loop-stall/pause-verification.json",
+      "original_sha256": "3197df3fd87ed0fe1cd9a431c3be2c2d5c037c3f932bee4af3e5cb00aed1acd1",
+      "sanitized_sha256": "55d4a788ff9bc99a93bceb74a4e60615b27f97302b5bddbecb18a66614151124",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-policy-validation/deployment.json",
+      "original_sha256": "f28665e1fb9eec3788b7edcd47a69312e0b72947f9b905f1c4f9e5cdca1eae05",
+      "sanitized_sha256": "1f510eb581bee336423f89807b43cf3ea3d9d286c72fe70da1d03fa918891103",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-policy-validation/pause-verification.json",
+      "original_sha256": "261279928a44de6eef4296d055c43a43b3339c9fa0b3d15a0bfb5325af53f61a",
+      "sanitized_sha256": "c7768bc78b6f8b1d2e7a5395eaac47abfb222f86044a75ef6813968e2a7560bd",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-tree-reuse/rust-tests-final.log",
+      "original_sha256": "dd57d41ce7ff2fe7b0d5e34daefe70725be1b2c5ff6bc47c7079311027703c9f",
+      "sanitized_sha256": "494758e58935fee7d2d14de50482285890e4cf5181d9da614bb9a679692bbaa4",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/changes/changes-20261026-turn-draw/pause-verification.json",
+      "original_sha256": "26c035cf04555eb56e4e40b13c9af063d1a2d3f4e72d9cea771f3eab04110705",
+      "sanitized_sha256": "7a46d51911c2f415e85e154c93f19fc55df236cdd44facea6a3b00f792a38719",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/export.json",
+      "original_sha256": "d0b3e090c1025cd315a1e4c858a0021cd506f504e43efdbca7ee349abc8473b6",
+      "sanitized_sha256": "407aa7169ca72ae766799f30659c1d96a5741c914993293451d938edc6409116",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/package-rust-tests.log",
+      "original_sha256": "dc3a1c47a26f13572d7297d6dbfdddff256aceb73f76d360b0983416b5cef87a",
+      "sanitized_sha256": "9c181efb227caa1e4d8fc5ac722791750638a6fffa6dd807a4f2efe1a2810453",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/package-verification.json",
+      "original_sha256": "bbfea3a302a3d0c529c68a86ca12c7a1472a7b432d405bf43c5c83a12c55c6a4",
+      "sanitized_sha256": "d62d30e910f86686def5743f6898cfca98cea23b152a48d27ad434901fc2dd1f",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "provenance/pre-reuse/closed_loop.rs",
+      "original_sha256": "0d9ef5a4dee16011a5bfb7d31826ca687098c6e29dedaed33764bf89f27e15a3",
+      "sanitized_sha256": "3a47e4139f5808930273d6ab7ce53fde88324e8c5a7185ca06b7dcc66bc14b37",
+      "kind": "archival display path or host label"
+    },
+    {
+      "file": "scripts/README.md",
+      "original_sha256": "f0ac3269e4e951a0d71cbbfdef8e705cb1af5e7f5a999e1df67dec588d0b1671",
+      "sanitized_sha256": "c80532748a90a5ea101e0ce96eba5c9d146e81799e8eb7156c519a61e81aa7e6",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "scripts/run_human_comparison.py",
+      "original_sha256": "f2a092524a3ff4c0eae38070041d156948e9b8ed78a7f6baadaf6227f3cab9cf",
+      "sanitized_sha256": "53a8580b6bf1d1345989180ee0aed2732f98703d0dd46f945d8770cd31a648e1",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "tools/human-panel-source/build.py",
+      "original_sha256": "dc69fd5a14937d07c15fb129f86d63aa0487effedcc15eea4662b26ced0b5041",
+      "sanitized_sha256": "51b53dd99096f722abb0021830add19a7fbcb6ce60206b550b1a9004fe49ba80",
+      "kind": "portable runtime input"
+    },
+    {
+      "file": "tools/human-panel-source/index.py",
+      "original_sha256": "bccee837556882d64a763a9e3376be90be26684742f7a08ea61c91aae1df10cc",
+      "sanitized_sha256": "7c09bb712d983655309c3a8374e291fc714e715da4e77b13aa7ffe104e74358c",
+      "kind": "portable runtime input"
+    }
+  ],
+  "weights_changed": false,
+  "human_fixture_shards_changed": false,
+  "primary_fixture_states_changed": false,
+  "notes": [
+    "Archived source hashes and runtime hashes describe original experiments, not sanitized source files.",
+    "The primary manifest source label was redacted; fixture states and hashes remain unchanged.",
+    "No running training or benchmark deployment was changed."
+  ],
+  "verification": {
+    "python_syntax": "passed",
+    "rust_changed_file_format_and_parse": "passed",
+    "human_fixture_hashes": "passed",
+    "primary_fixture_hash": "passed",
+    "historical_human_metrics_recomputed": "passed",
+    "model_file_hash": "unchanged",
+    "full_native_rebuild": "not run; native changes only replace path literals",
+    "model_reload": "not rerun locally; torch is not installed; model bytes and recorded file hash verified unchanged"
+  }
+}

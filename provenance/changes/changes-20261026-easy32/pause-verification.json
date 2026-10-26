@@ -2,7 +2,7 @@
   "cycle": 4598,
   "updates": 4598,
   "checkpoint_sha256": "6faa01622b4c66aac33fb3257929b9be1b71d289ffdae828345e09ba910bfb8b",
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004598.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-004598.pt",
   "processes_exited": true,
   "settings": {
     "environment_revision": "native-ai-import-v1",

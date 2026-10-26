@@ -2,11 +2,11 @@
 from pathlib import Path
 import sys,json,pickle,hashlib,multiprocessing,time,os
 from concurrent.futures import ProcessPoolExecutor
-ROOT=Path('/public/maxim/Codex/spire-mentor-az16384-fresh-20261024')
+ROOT=Path(os.environ['OSTYAI_SOURCE_RUN'])
 OUT=ROOT/'human-win-validation'
-SOURCE=Path('/public/maxim/Codex/spire-mentor-v31-full-policy-ce-fresh-20261023')
+SOURCE=Path(os.environ['OSTYAI_CONVERSION_SOURCE'])
 def init():
- sys.path[:0]=[str(SOURCE/'native-lib'),str(SOURCE),'/public/maxim/Codex/spire-mentor-structured-tokenizer-20261019']
+ sys.path[:0]=[str(SOURCE/'native-lib'),str(SOURCE),os.environ['OSTYAI_TOKENIZER_SOURCE']]
  from corpus_conversion import setup
  setup()
 def convert(job):

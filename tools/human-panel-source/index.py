@@ -1,11 +1,11 @@
 """Audit all solo standard A10 Necrobinder winners; keep exclusion/provenance evidence."""
 from pathlib import Path
-import gzip,json,pickle,hashlib
+import gzip,json,pickle,hashlib,os
 from collections import Counter,defaultdict
-ROOT=Path('/public/maxim/Codex/spire-mentor-az16384-fresh-20261024')
+ROOT=Path(os.environ['OSTYAI_SOURCE_RUN'])
 OUT=ROOT/'human-win-validation'
-RAW=Path('/public/maxim/Codex/necrobinder_a10_data')
-CACHE=Path('/public/maxim/Codex/spire-mentor-vector-muzero-v12-human-rl-20261020/corpus/human-cases.pkl')
+RAW=Path(os.environ['OSTYAI_HUMAN_SOURCE'])
+CACHE=Path(os.environ['OSTYAI_HUMAN_CACHE'])
 def short(x):return str(x).rsplit('.',1)[-1]
 def audit():
  OUT.mkdir(exist_ok=True)

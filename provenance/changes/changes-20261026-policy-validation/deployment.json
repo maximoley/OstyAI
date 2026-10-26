@@ -4,7 +4,7 @@
   "supervisor_pid": 3082541,
   "checkpoint_sha256": "57affb7b611059cdb6eab320ff31b3771940908d07b9a4a8208531f54b129004",
   "checkpoint_unchanged": true,
-  "replay_backup": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/changes-20261026-policy-validation/before-replay-005278.pt",
+  "replay_backup": "archive/spire-mentor-az16384-fresh-20261024/changes-20261026-policy-validation/before-replay-005278.pt",
   "native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
   "native_unchanged": true,
   "source_sha256": "11a546ccc6bd74e6b84c7b1dd839a3f6f9cb45baac6fd7cb033a1eaab7ee3d66",
@@ -16,5 +16,5 @@
     "first_scheduled_step": 5300
   },
   "training_settings_unchanged": true,
-  "test_evidence": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/changes-20261026-policy-validation/smoke-results.json"
+  "test_evidence": "archive/spire-mentor-az16384-fresh-20261024/changes-20261026-policy-validation/smoke-results.json"
 }

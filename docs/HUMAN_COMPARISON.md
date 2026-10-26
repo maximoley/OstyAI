@@ -58,7 +58,7 @@ After building the offline preparation example and preparing a manifest with the
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures COMPATIBLE_FIXTURES --workers 80 --policy-only --output results/model5500-policy-greedy
 ```
 
-`run_human_comparison.py` is the Zeus orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
+`run_human_comparison.py` is the training host orchestration script for this explicitly authorized pause/run/resume experiment; its production checkpoint and STOP ownership checks are deployment-specific. It is not invoked by the normal evaluator or by cloning this repository.
 
 The policy-only arm remains queued, and the 8,000-simulation / 400-rollout configuration remains cancelled. The replacement starts in a fresh `mentor_rl_training` output directory with the updated engine identity recorded. Production remains paused at the preserved checkpoint during the four sequential runs. Training resumes only after all four configurations finish and pass verification.
 

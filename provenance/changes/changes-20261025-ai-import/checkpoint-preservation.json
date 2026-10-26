@@ -13,7 +13,7 @@
     "torch_rng": true,
     "cuda_rng": true
   },
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-004242-ai-import.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-004242-ai-import.pt",
   "replay_count": 60183,
   "retained_by_pool": {
     "0": 12270,

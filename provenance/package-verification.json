@@ -17,7 +17,7 @@
   "limitations": [
     "Full training corpus and production replay/optimizer/RNG checkpoint intentionally excluded",
     "No full training run or full 8192/36297 evaluation rerun during packaging; original verified results included",
-    "Dependencies were already installed on Zeus; clean download/install on a new host not tested",
+    "Dependencies were already installed on training host; clean download/install on a new host not tested",
     "Historical simulator regression reports are included separately; only focused search tests are rerun for packaging"
   ],
   "production_training_modified": false,

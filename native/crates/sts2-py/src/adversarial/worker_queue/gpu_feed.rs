@@ -473,15 +473,13 @@ fn run_pipeline(
 
 pub(crate) fn run(root: &Path) -> Result<()> {
     let read = |p: &Path| std::fs::read_to_string(p).map_err(|e| e.to_string());
-    let schema_path = Path::new("/public/maxim/Codex/spire-mentor-native-arrays-20261024/schema");
+    let schema_path = Path::new("ostyai/schema");
     let labels: Vec<Value> = serde_json::from_str(&read(&schema_path.join("registry.json"))?)
         .map_err(|e| e.to_string())?;
     let templates = serde_json::from_str(&read(&schema_path.join("metadata.json"))?)
         .map_err(|e| e.to_string())?;
     let schema = Arc::new(Schema::new(&labels, templates)?);
-    let source = read(Path::new(
-        "/public/maxim/Codex/spire-mentor-validation/late_act_8196_v1/fixtures.jsonl",
-    ))?;
+    let source = read(Path::new("ostyai/validation/fixtures.jsonl"))?;
     let mut roots = Vec::new();
     for line in source.lines() {
         let f: Value = serde_json::from_str(line).map_err(|e| e.to_string())?;

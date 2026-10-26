@@ -1,9 +1,9 @@
     Blocking waiting for file lock on build directory
-   Compiling sts2-vocab v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-vocab)
-   Compiling sts2-runai v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-runai)
-   Compiling sts2-cli v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-cli)
-   Compiling sts2-wire v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-wire)
-   Compiling sts2-py v0.0.1 (/public/maxim/Codex/ostyai-package-check-20261026/native/crates/sts2-py)
+   Compiling sts2-vocab v0.0.1 (archive/ostyai-package-check-20261026/native/crates/sts2-vocab)
+   Compiling sts2-runai v0.0.1 (archive/ostyai-package-check-20261026/native/crates/sts2-runai)
+   Compiling sts2-cli v0.0.1 (archive/ostyai-package-check-20261026/native/crates/sts2-cli)
+   Compiling sts2-wire v0.0.1 (archive/ostyai-package-check-20261026/native/crates/sts2-wire)
+   Compiling sts2-py v0.0.1 (archive/ostyai-package-check-20261026/native/crates/sts2-py)
     Finished `release` profile [optimized] target(s) in 6m 25s
 ────────────
  Nextest run ID 6e578668-b960-4bc9-8e09-1bf364712ad8 with nextest profile: default

@@ -66,6 +66,6 @@
     "initial_weights_sha256": "b9d2607d05bd7c95f632ae869a1aebbe76f9d479889d8053afadeaa0c4d7ab98"
   },
   "checkpoint_replay_integrity": true,
-  "replay_file": "/public/maxim/Codex/spire-mentor-az16384-fresh-20261024/production/replay-005020.pt",
+  "replay_file": "archive/spire-mentor-az16384-fresh-20261024/production/replay-005020.pt",
   "replay_count": 65536
 }

@@ -37,4 +37,6 @@ Search defaults to no persistent reuse. `--policy-only` uses zero search and gre
 
 ## Deployment-specific orchestration
 
-[run_human_comparison.py](run_human_comparison.py) and [finalize_human_comparison.py](finalize_human_comparison.py) coordinate the authorized Zeus experiment, verify results and resume its paused production run. They contain explicit production paths, checkpoint/native identities and STOP ownership checks. They are not general setup scripts and should not be invoked automatically on another machine.
+[run_human_comparison.py](run_human_comparison.py) and [finalize_human_comparison.py](finalize_human_comparison.py) coordinate the authorized training host experiment, verify results and resume its paused production run. They retain experiment-specific checkpoint/native identities and STOP ownership checks, while the production and comparison roots are supplied explicitly. They are not general setup scripts and should not be invoked automatically on another machine.
+
+The archival accumulation checks accept an external replay file via `OSTYAI_TEST_REPLAY`; it is not bundled. Native queue diagnostic defaults resolve `ostyai/schema` and `ostyai/validation/fixtures.jsonl` from the repository root after fixture unpacking. Their oracle inputs remain external.
