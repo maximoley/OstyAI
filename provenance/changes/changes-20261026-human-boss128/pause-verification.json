@@ -1,0 +1,21 @@
+{
+  "step": 5628,
+  "status": {
+    "stage": "stopped",
+    "cycle": 5628,
+    "updates": 5628,
+    "validated_update": 5600,
+    "pid": 563976
+  },
+  "service": {
+    "supervisor_pid": 563912,
+    "trainer_pid": 563976,
+    "stage": "stopped",
+    "exit_code": 0
+  },
+  "files": {
+    "latest.pt": "804c272bbdfd4cc06a690e33a3ea6fd3941daf749c8ece217557aa8a71a0712e",
+    "replay-005628.pt": "9e001f8ab4e6f2b32575bfdc0249a12dd730ef40872063d63f3197ac6c9c3ee5"
+  },
+  "time": 1793064904.553559
+}

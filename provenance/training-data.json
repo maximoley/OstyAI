@@ -121,5 +121,18 @@
     "human_generated_quota": null,
     "within_pool": "Value-error priorities plus 5% uniform mixture; beta=1 within-pool importance correction.",
     "current_configuration": "After step5613; historical step5500 configuration retained separately."
+  },
+  "scheduled_human_validation": {
+    "every": 500,
+    "budgets": {
+      "easy": 32,
+      "hard": 64,
+      "elite": 96,
+      "boss": 128
+    },
+    "fixed_after_step": 5628,
+    "next_scheduled_step": 6000,
+    "training_budgets_unchanged": true,
+    "search_reuse_unchanged": true
   }
 }

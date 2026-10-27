@@ -1,0 +1,10 @@
+{
+  "original_source_sha256": "9b56a409c539547a25891584e4a227790b1dbd3824fc66039bf3df588fa7452d",
+  "original_evidence_sha256": {
+    "pause-verification.json": "577c713f5a792edac6e1f233363faa96fa2316c8b46f9f6f2df70c51ffb8f303",
+    "deployment.json": "dbffb85221f7541663252b6b6ec470fda9a456f56295625791c590ad7564c757",
+    "tests.log": "a6707d4eff38012da33ddc34bc6dc076a3b17151cfc9aef223c8790cbe64c3da",
+    "resume-verification.json": "559ab2b143c84d4e8076daeef3eb3148ef9d71534ac9ed12e29231e5e5036768"
+  },
+  "sanitization": "Server paths replaced with archive labels; training checkpoints and replay excluded."
+}

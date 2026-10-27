@@ -23,6 +23,8 @@ ROOT = Path(__file__).resolve().parent
 STOP = False
 SEARCH_SIMULATIONS = 64  # Legacy uniform fallback; production uses per-combat budgets below.
 SEARCH_BUDGETS = POOL_BUDGETS
+# Pin the scheduled human panel independently of future training-budget changes.
+HUMAN_VALIDATION_BUDGETS = dict(easy=32, hard=64, elite=96, boss=128)
 ENVIRONMENT_REVISION = "native-ai-import-v1"
 
 
@@ -60,6 +62,12 @@ def config(fixtures, cases, episode, version, validation=False):
         episode=episode,
         search_seed=2026102501,
     )
+
+
+def human_validation_config(fixtures, cases, episode, version, validation=True):
+    cfg = config(fixtures, cases, episode, version, validation=True)
+    cfg["simulation_budgets"] = HUMAN_VALIDATION_BUDGETS.copy()
+    return cfg
 
 
 def collect(native, gpu, cfg, replay=None):
@@ -276,6 +284,7 @@ def main():
         policy_validation=dict(every=100, combats=8192, simulations=0,
                                action_selection="legal_argmax", matched_primary=True),
         human_validation_every=500,
+        human_validation_search_simulations=HUMAN_VALIDATION_BUDGETS.copy(),
         human_validation_runs=512,
         validation_combats=8192,
         workers=80,
@@ -333,6 +342,7 @@ def main():
                           or d["settings"].get("search_simulations", 16) != SEARCH_BUDGETS
                           or not d["settings"].get("skip_forced_actions", False)
                           or d["settings"].get("human_validation_every") != 500
+                          or d["settings"].get("human_validation_search_simulations") != HUMAN_VALIDATION_BUDGETS
                           or d["settings"].get("learner_pool_sampling") != settings["learner_pool_sampling"]
                           or d["settings"].get("environment_revision") != ENVIRONMENT_REVISION)
         progress = a.output / "progress.jsonl"
@@ -379,7 +389,7 @@ def main():
             save_checkpoint(a.output, learner, gpu, replay, cycle, validated, settings)
     def human_validation():
         from secondary_validation import evaluate
-        return evaluate(native, gpu, a.output, cycle, collect, config, stopping)
+        return evaluate(native, gpu, a.output, cycle, collect, human_validation_config, stopping)
     if cycle and cycle % 500 == 0 and not stopping():
         human_validation()
         save_checkpoint(a.output, learner, gpu, replay, cycle, validated, settings)

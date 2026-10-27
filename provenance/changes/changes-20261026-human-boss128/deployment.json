@@ -1,0 +1,25 @@
+{
+  "started_at": 1793064951.3076952,
+  "from_step": 5628,
+  "checkpoint_replay_hashes_before_resume": {
+    "latest.pt": "804c272bbdfd4cc06a690e33a3ea6fd3941daf749c8ece217557aa8a71a0712e",
+    "replay-005628.pt": "9e001f8ab4e6f2b32575bfdc0249a12dd730ef40872063d63f3197ac6c9c3ee5"
+  },
+  "human_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "training_primary_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "supervisor_pid": 615876,
+  "feeder_pid": 615875,
+  "feeder_start": 5759,
+  "source_sha256": "9b56a409c539547a25891584e4a227790b1dbd3824fc66039bf3df588fa7452d",
+  "tests_passed": true
+}

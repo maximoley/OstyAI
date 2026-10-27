@@ -228,7 +228,7 @@ utility = win + 0.5 * (max(final_hp, 0) / initial_hp) * (1 - spent_potion_cost)
               + (0 if win else 0.05 * damage_progress)
 ```
 
-Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500**. The target is **10,000 updates**; the bundled model is step 5500 and its reported evaluations use no search reuse.
+Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500** with fixed **32/64/96/128** simulation budgets. Training and primary search validation use **32/64/96/256**. The target is **10,000 updates**; the bundled model is step 5500 and its reported evaluations use no search reuse.
 
 [Full training configuration](docs/TRAINING.md)
 

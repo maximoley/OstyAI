@@ -38,7 +38,7 @@ Asynchronous GPU batching and BF16 kernels can change close decisions. A faithfu
 .venv/bin/python scripts/evaluate.py --suite primary --output results/primary-search
 .venv/bin/python scripts/evaluate.py --suite primary --policy-only --output results/primary-policy
 .venv/bin/python scripts/evaluate.py --suite human --output results/human-historical-mode
-.venv/bin/python scripts/evaluate.py --suite human --reuse --boss-simulations 256 --output results/human-current-search
+.venv/bin/python scripts/evaluate.py --suite human --reuse --output results/human-current-search
 .venv/bin/python scripts/evaluate.py --suite human --policy-only --workers 80 --output results/human-greedy-policy
 .venv/bin/python scripts/evaluate.py --suite human --uniform-simulations 32 --workers 80 --output results/human-uniform32
 ```
