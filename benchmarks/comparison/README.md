@@ -24,6 +24,17 @@ The policy-only process exited successfully with code 0. Its **315.9987-second e
 
 The boss-256 follow-up used the same step-5500 weights, native library, frozen trials, 80 workers and no search reuse. It exited successfully with **33,490 wins (92.27%)**, **11,294 majority wins (93.35%)**, **140/512 runs meeting every-fight ≥2/3 (27.34%)**, and **286/512 meeting ≥1/3 (55.86%)**. Its **3,983.8164-second external timer** includes startup and result writing; input verification is excluded. There were **15 unresolved trials** and **14.16 mean HP lost**. Training remained paused throughout this run. The separate MCTS 250/500 follow-up is not yet included.
 
+## Win rate by combat pool
+
+| Combat pool | Mentor MCTS 250/1,000 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|
+| Easy | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
+| Hard | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
+| Elite | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
+| Boss | **70.72%** | **64.78%** | **68.72%** | **48.76%** |
+
+Win rates pool all three seeds; unresolved trials count as nonwins. Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**, using identical pool assignments. [Counts and verification](pool-win-rates.json) · [Reproduce](../../scripts/summarize_pool_win_rates.py).
+
 ## Result files
 
 ### Mentor MCTS

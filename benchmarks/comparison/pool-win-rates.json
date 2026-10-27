@@ -1,0 +1,157 @@
+{
+  "definition": "Wins / all three-seed trials in each pool; unresolved trials count as nonwins.",
+  "pool_assignment": "Recorded native search_tier from tiered boss128 trials, verified against boss256 trials; joined to every agent by (case_id, replicate). Policy-only uniform labels describe evaluation mode, not combat pool.",
+  "trials_by_pool": {
+    "easy": 10725,
+    "hard": 9708,
+    "elite": 9720,
+    "boss": 6144
+  },
+  "combats_by_pool": {
+    "easy": 3575,
+    "hard": 3236,
+    "elite": 3240,
+    "boss": 2048
+  },
+  "matched_trial_ids": true,
+  "source_sha256": {
+    "mentor_rl_training/trials.json.gz": "8d3623b64aa460c23ab1b22ddedb038863030a7dda46f74485cd10e8c940f292",
+    "model5500_tiered_no_reuse/trials.json.gz": "21c2a59ce4e83364e38cacfd51440eac3bd92428a1ab55fdd7f82783cac51fd8",
+    "model5500_boss256_no_reuse/trials.json.gz": "dfdd3ffd837383e8c9c0340d902742df8a19ad4ea2549ba3e0315f5c4abf37f6",
+    "model5500_policy_greedy/trials.json.gz": "30cd7b64eff7c0e780209c02e95046681990915836431fccf4a7d035d24c7731"
+  },
+  "results": [
+    {
+      "configuration": "mentor_rl_training",
+      "by_pool": {
+        "easy": {
+          "trials": 10725,
+          "wins": 10698,
+          "losses": 27,
+          "unresolved": 0,
+          "win_rate": 0.9974825174825175
+        },
+        "hard": {
+          "trials": 9708,
+          "wins": 9545,
+          "losses": 163,
+          "unresolved": 0,
+          "win_rate": 0.9832097239390194
+        },
+        "elite": {
+          "trials": 9720,
+          "wins": 8989,
+          "losses": 731,
+          "unresolved": 0,
+          "win_rate": 0.9247942386831276
+        },
+        "boss": {
+          "trials": 6144,
+          "wins": 4345,
+          "losses": 1799,
+          "unresolved": 0,
+          "win_rate": 0.7071940104166666
+        }
+      }
+    },
+    {
+      "configuration": "model5500_tiered_no_reuse",
+      "by_pool": {
+        "easy": {
+          "trials": 10725,
+          "wins": 10687,
+          "losses": 37,
+          "unresolved": 1,
+          "win_rate": 0.9964568764568764
+        },
+        "hard": {
+          "trials": 9708,
+          "wins": 9537,
+          "losses": 170,
+          "unresolved": 1,
+          "win_rate": 0.9823856613102596
+        },
+        "elite": {
+          "trials": 9720,
+          "wins": 9059,
+          "losses": 652,
+          "unresolved": 9,
+          "win_rate": 0.9319958847736626
+        },
+        "boss": {
+          "trials": 6144,
+          "wins": 3980,
+          "losses": 2164,
+          "unresolved": 0,
+          "win_rate": 0.6477864583333334
+        }
+      }
+    },
+    {
+      "configuration": "model5500_boss256_no_reuse",
+      "by_pool": {
+        "easy": {
+          "trials": 10725,
+          "wins": 10685,
+          "losses": 38,
+          "unresolved": 2,
+          "win_rate": 0.9962703962703963
+        },
+        "hard": {
+          "trials": 9708,
+          "wins": 9532,
+          "losses": 175,
+          "unresolved": 1,
+          "win_rate": 0.9818706221672847
+        },
+        "elite": {
+          "trials": 9720,
+          "wins": 9051,
+          "losses": 657,
+          "unresolved": 12,
+          "win_rate": 0.9311728395061728
+        },
+        "boss": {
+          "trials": 6144,
+          "wins": 4222,
+          "losses": 1922,
+          "unresolved": 0,
+          "win_rate": 0.6871744791666666
+        }
+      }
+    },
+    {
+      "configuration": "model5500_policy_greedy",
+      "by_pool": {
+        "easy": {
+          "trials": 10725,
+          "wins": 9471,
+          "losses": 641,
+          "unresolved": 613,
+          "win_rate": 0.8830769230769231
+        },
+        "hard": {
+          "trials": 9708,
+          "wins": 8612,
+          "losses": 654,
+          "unresolved": 442,
+          "win_rate": 0.8871034198599094
+        },
+        "elite": {
+          "trials": 9720,
+          "wins": 7989,
+          "losses": 1662,
+          "unresolved": 69,
+          "win_rate": 0.8219135802469136
+        },
+        "boss": {
+          "trials": 6144,
+          "wins": 2996,
+          "losses": 3146,
+          "unresolved": 2,
+          "win_rate": 0.4876302083333333
+        }
+      }
+    }
+  ]
+}

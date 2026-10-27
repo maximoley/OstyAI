@@ -80,6 +80,17 @@ Unresolved trials were **0 / 11 / 15 / 1,126**, and mean HP lost was **11.57 / 1
 
 [Full results and timing](benchmarks/comparison/README.md) · [Comparison protocol](docs/HUMAN_COMPARISON.md)
 
+#### Win rate by combat pool
+
+| Combat pool | Mentor MCTS 250/1,000 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|
+| Easy | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
+| Hard | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
+| Elite | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
+| Boss | **70.72%** | **64.78%** | **68.72%** | **48.76%** |
+
+Win rates pool all three seeds; unresolved trials count as nonwins. Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**, using identical pool assignments. [Counts and verification](benchmarks/comparison/pool-win-rates.json) · [Reproduce](scripts/summarize_pool_win_rates.py).
+
 ### Published model result
 
 <details>
