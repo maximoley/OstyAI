@@ -1,0 +1,51 @@
+{
+  "points": [
+    {
+      "update": 4000,
+      "trial_win_rate": 0.9103231672039012,
+      "win_rate": 0.9176791470369452,
+      "runs_won_every_fight": 76,
+      "runs_every_combat_at_least_one_win": 192,
+      "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+    },
+    {
+      "update": 4500,
+      "trial_win_rate": 0.904289610711629,
+      "win_rate": 0.9161087693197785,
+      "runs_won_every_fight": 102,
+      "runs_every_combat_at_least_one_win": 227,
+      "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+    },
+    {
+      "update": 5000,
+      "trial_win_rate": 0.910598672066562,
+      "win_rate": 0.9206545995536821,
+      "runs_won_every_fight": 104,
+      "runs_every_combat_at_least_one_win": 255,
+      "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+    },
+    {
+      "update": 5500,
+      "trial_win_rate": 0.9164669256412376,
+      "win_rate": 0.9271840647987437,
+      "runs_won_every_fight": 122,
+      "runs_every_combat_at_least_one_win": 258,
+      "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+    },
+    {
+      "update": 6000,
+      "trial_win_rate": 0.9253381822189162,
+      "win_rate": 0.9374328456897264,
+      "runs_won_every_fight": 153,
+      "runs_every_combat_at_least_one_win": 300,
+      "manifest_sha256": "deb0a908a25faa9db0251967561cb429279d8b5e8e3e0313e9d51f5199023d5f"
+    }
+  ],
+  "denominators": {
+    "runs": 512,
+    "combats": 12099,
+    "trials": 36297
+  },
+  "historical_source": "Scheduled human-validation history; every-fight-at-least-one counts recomputed from archived combat outputs.",
+  "current_source": "benchmarks/human-validation-006000/combats.json.gz"
+}

@@ -1,0 +1,47 @@
+{
+  "update": 6000,
+  "runs": 512,
+  "combats": 12099,
+  "trials": 36297,
+  "trial_wins": 33587,
+  "trial_win_rate": 0.9253381822189162,
+  "wins": 11342,
+  "win_rate": 0.9374328456897264,
+  "runs_won_every_fight": 153,
+  "run_win_rate": 0.298828125,
+  "unresolved_trials": 3,
+  "trial_average_hp_lost": 13.404887860252384,
+  "seconds": 2086.9135064072907,
+  "collection_seconds": 2037.039570197463,
+  "runs_won_every_fight_at_least_one": 300,
+  "run_at_least_one_rate": 0.5859375,
+  "timing_note": "Scheduled evaluation timer, including result aggregation/writing; excludes process startup and model initialization. Not a matched full-process timing run.",
+  "independently_recomputed": true,
+  "by_pool": {
+    "easy": {
+      "trials": 10725,
+      "wins": 10702,
+      "unresolved": 0,
+      "win_rate": 0.9978554778554779
+    },
+    "hard": {
+      "trials": 9708,
+      "wins": 9547,
+      "unresolved": 1,
+      "win_rate": 0.9834157395962093
+    },
+    "elite": {
+      "trials": 9720,
+      "wins": 9102,
+      "unresolved": 2,
+      "win_rate": 0.9364197530864198
+    },
+    "boss": {
+      "trials": 6144,
+      "wins": 4236,
+      "unresolved": 0,
+      "win_rate": 0.689453125
+    }
+  },
+  "matched_trial_ids_seeds_and_pools": true
+}

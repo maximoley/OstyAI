@@ -1,9 +1,10 @@
 """Validate frozen inputs and recompute all human aggregate results."""
-import gzip,hashlib,json,sys
+import argparse,gzip,hashlib,json,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'ostyai'))
 from human_validation_metrics import summarize
-hp=ROOT/'benchmarks/human-validation-005500';fp=ROOT/'benchmarks/fixtures/human'
+ap=argparse.ArgumentParser();ap.add_argument('--step',type=int,default=6000);args=ap.parse_args()
+hp=ROOT/f'benchmarks/human-validation-{args.step:06d}';fp=ROOT/'benchmarks/fixtures/human'
 mfile=fp/'manifest.json';manifest=json.loads(mfile.read_text());prov=json.loads((hp/'provenance.json').read_text())
 assert hashlib.sha256(mfile.read_bytes()).hexdigest()==prov['manifest_sha256']
 for part in manifest['shards']:

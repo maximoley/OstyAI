@@ -16,7 +16,8 @@ Run commands from the repository root. [Quick start](../README.md#quick-start) Â
 | [build_native.sh](build_native.sh) | Build the packaged Rust native library |
 | [unpack_benchmarks.py](unpack_benchmarks.py) | Unpack included benchmark inputs; does not fetch training data |
 | [verify_model.py](verify_model.py) | Check exported model identity and architecture |
-| [verify_benchmarks.py](verify_benchmarks.py) | Verify fixture hashes and recompute historical human metrics |
+| [verify_benchmarks.py](verify_benchmarks.py) | Verify fixture hashes and recompute human metrics (default step6000; `--step 5500` for the bundled model) |
+| [plot_human_benchmark.py](plot_human_benchmark.py) | Rebuild the human benchmark plot through step6000 from bundled aggregates |
 | [verify_comparison.py](verify_comparison.py) | Recompute all five completed matched comparisons and verify saved hashes |
 
 ## Evaluation

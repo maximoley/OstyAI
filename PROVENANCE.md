@@ -24,4 +24,8 @@ Personal host labels and absolute experiment paths have been removed. Paths begi
 
 ## October 26 continuation update
 
-Includes the completed MCTS250/500 results, scheduled step 5,600 primary/policy validation, and the verified continuation after step 5,613 with boss256 and doubled boss collection. Step5500 remains the best completed human-benchmark checkpoint; its weights and historical provenance are unchanged. New training source is packaged with portable converter/registry paths; all private checkpoint/replay and full training data remain excluded. See [migration evidence](provenance/changes/changes-20261026-boss256-double/).
+Includes the completed MCTS250/500 results, scheduled step 5,600 primary/policy validation, and the verified continuation after step 5,613 with boss256 and doubled boss collection. The October 26 export selected step5500; its bundled weights and historical provenance remain unchanged. New training source is packaged with portable converter/registry paths; all private checkpoint/replay and full training data remain excluded. See [migration evidence](provenance/changes/changes-20261026-boss256-double/).
+
+## October 27 results update
+
+The latest included human benchmark is step6000 (92.53% trial wins); primary search/policy results extend through step6100. All step6000 per-part, trial, combat and run outputs are included and independently recomputed. Combat IDs, RNG seeds and pool labels match the earlier comparison. Step6000 used boss128 and no reuse. Its 2086.91-second timer covers scheduled evaluation, not full-process startup, so it is labeled separately from the timed comparisons. The downloadable model remains step5500; no new weights, optimizer or training data were exported. See [export evidence](provenance/results-update-20261027.json).
