@@ -1,0 +1,26 @@
+{
+  "boss_simulations_override": 500,
+  "mode": "mentor_rl_training",
+  "workers": 80,
+  "simulations_per_decision": null,
+  "default_tier_budgets": {
+    "common": 250,
+    "elite": 250,
+    "boss": 500
+  },
+  "budget_preset": "rl-training",
+  "max_rollout_depth": 200,
+  "max_actions": 1000,
+  "hidden_info": "BeliefDraw",
+  "leaf": "TexelWide",
+  "terminal_eval": "RichBoth",
+  "rollout_policy": "Heuristic",
+  "root_guards": true,
+  "objective": "Unmodified upstream evaluator; frozen potion costs are recorded but are not an OstyAI reward override",
+  "model": null,
+  "manifest_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f",
+  "prepared_manifest_sha256": "044d5dc7f62855ac099a0b136c52ff01dd4c9c28c573011699074cd002afe6f9",
+  "native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+  "search_seed_source": "frozen fixture wire.rng.seed; splitmix64 per decision",
+  "limit": null
+}

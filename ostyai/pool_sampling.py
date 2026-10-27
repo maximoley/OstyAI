@@ -2,7 +2,7 @@
 import numpy as np
 
 POOL_NAMES = ('easy', 'hard', 'elite', 'boss')
-POOL_BUDGETS = dict(easy=32, hard=64, elite=96, boss=128)
+POOL_BUDGETS = dict(easy=32, hard=64, elite=96, boss=256)
 POOL_CODES = {name: i for i, name in enumerate(POOL_NAMES)}
 
 

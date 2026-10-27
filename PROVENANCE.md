@@ -21,3 +21,7 @@ Version differences matter: the human corpus spans recorded game versions, and t
 ## Sanitized export
 
 Personal host labels and absolute experiment paths have been removed. Paths beginning with `archive/` in historical evidence are redacted labels, not downloadable files. Runtime defaults use repository-relative inputs or explicit environment variables. Historical source/native hashes continue to identify the original experiments; `MANIFEST.sha256` identifies the sanitized distribution. See `provenance/public-sanitization.json`. Model tensor files and human combat fixture shards are unchanged.
+
+## October 26 continuation update
+
+Includes the completed MCTS250/500 results, scheduled step 5,600 primary/policy validation, and the verified continuation after step 5,613 with boss256 and doubled boss collection. Step5500 remains the best completed human-benchmark checkpoint; its weights and historical provenance are unchanged. New training source is packaged with portable converter/registry paths; all private checkpoint/replay and full training data remain excluded. See [migration evidence](provenance/changes/changes-20261026-boss256-double/).

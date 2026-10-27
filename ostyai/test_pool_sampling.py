@@ -13,7 +13,7 @@ class SamplingTests(unittest.TestCase):
         return priorities,tiers,groups
     def test_exact_quotas_and_packing(self):
         p,t,g=self.fixture();s=PoolPrioritySampler(p,t,g,np.random.default_rng(9));plan=s.plan(256,64)
-        self.assertEqual(quotas(16384),dict(easy=1638,hard=3277,elite=4915,boss=6554))
+        self.assertEqual(quotas(16384),dict(easy=1170,hard=2341,elite=3511,boss=9362))
         ids=np.concatenate([x[1] for x in plan]);self.assertEqual(len(plan),64)
         for name,code in POOL_CODES.items():self.assertEqual(int((t[ids]==code).sum()),quotas(16384)[name])
         for tokens,idx,w in plan:

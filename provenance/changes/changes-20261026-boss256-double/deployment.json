@@ -1,0 +1,38 @@
+{
+  "started_at": 1793063374.1311905,
+  "from_step": 5613,
+  "feeder_pid": 563911,
+  "feeder_command": [
+    "archive/spire-mentor-v31-full-policy-ce-fresh-20261023/runtime/bin/python",
+    "archive/training/prepare_boss_banks.py",
+    "--start",
+    "5613",
+    "--target",
+    "10000",
+    "--workers",
+    "8"
+  ],
+  "supervisor_pid": 563912,
+  "simulation_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "quotas": {
+    "easy": 1170,
+    "hard": 2341,
+    "elite": 3511,
+    "boss": 9362
+  },
+  "native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+  "source_sha256": {
+    "production_train.py": "f09dfbc0a200abbd78e1155de9989ed189eb50b9757c163a2d4b8d16628df919",
+    "pool_sampling.py": "eb39a1664e9b07345bb50224b2ee51653c8ba413585006cac076d0b4dfacc065",
+    "boss_augmentation.py": "ed0ce7bbe50935f15cede0bc1551a652ef6aff32eb10869872e472f24c6acc47",
+    "prepare_boss_banks.py": "09d2dd193d0d8b82c4ea71b9d854c67a9603744d5a57318820f283af52beed86"
+  },
+  "stop_removed_exact_match": true,
+  "benchmarks_complete": true,
+  "smoke_passed": true
+}

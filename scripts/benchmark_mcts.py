@@ -13,15 +13,18 @@ def main():
     start=time.perf_counter();wall_start=time.time()
     ap=argparse.ArgumentParser();ap.add_argument('--output',type=Path,required=True)
     ap.add_argument('--prepared',type=Path,required=True);ap.add_argument('--workers',type=int,default=80);ap.add_argument('--simulations',type=int)
+    ap.add_argument('--boss-simulations',type=int,help='Override boss budget independently of the preset')
     ap.add_argument('--rollout-depth',type=int,default=200);ap.add_argument('--limit',type=int)
     ap.add_argument('--budget-preset',choices=['eval-cheap','rl-training'],default='eval-cheap')
     a=ap.parse_args();assert a.workers==80,'Comparison requires 80 workers'
     assert a.rollout_depth>0 and (a.simulations is None or a.simulations>0)
+    if a.boss_simulations is not None and (a.boss_simulations<1 or a.simulations is not None):ap.error("boss override requires a positive budget and no uniform override")
     a.output.mkdir(parents=True,exist_ok=True)
     fixture_root=a.prepared;mp=fixture_root/'manifest.json';manifest=json.loads(mp.read_text());prepared_manifest=json.loads((fixture_root/'prepared-manifest.json').read_text())
     lib=ROOT/'ostyai/loop_native.so';spec=importlib.util.spec_from_file_location('sts2_rs',lib);native=importlib.util.module_from_spec(spec);spec.loader.exec_module(native)
     encoder=native.AdversarialEncoder((ROOT/'ostyai/schema/registry.json').read_text(),(ROOT/'ostyai/schema/metadata.json').read_text())
     tier_budgets=dict(common=250,elite=250,boss=1000) if a.budget_preset=='rl-training' else dict(common=1000,elite=1000,boss=4000)
+    if a.boss_simulations is not None:tier_budgets['boss']=a.boss_simulations
     provenance=dict(mode=('mentor_rl_training' if a.budget_preset=='rl-training' else 'mentor_eval_cheap') if a.simulations is None else 'mentor_fixed_budget',workers=a.workers,simulations_per_decision=a.simulations,
         default_tier_budgets=tier_budgets,budget_preset=a.budget_preset,max_rollout_depth=a.rollout_depth,max_actions=1000,
         hidden_info='BeliefDraw',leaf='TexelWide',terminal_eval='RichBoth',rollout_policy='Heuristic',root_guards=True,

@@ -63,31 +63,31 @@ Each fight preserves its historical deck, relics, HP and inventory. Starting pot
 
 ### Matched agent comparison
 
-Completed **October 26, 2026**, using **80 workers**, identical compatibility-prepared fixtures and a **1,000-action cap**. Runs were sequential with training paused. Wall time includes startup, loading, compilation, evaluation and output writing; fixture preparation is excluded.
+Completed **October 26, 2026**, using **80 workers**, identical compatibility-prepared fixtures and a **1,000-action cap**. Both MCTS runs use rollout cap **200**. Runs were sequential with training paused. Wall time includes startup, loading, compilation, evaluation and output writing; fixture preparation is excluded.
 
-| Metric | Mentor MCTS | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
-|---|---|---|---|---|
-| Simulations per decision | 250 non-boss; 1,000 boss; rollout cap 200 | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
-| Trial win rate | **92.51%** | **91.64%** | **92.27%** | **80.08%** |
-| Majority combat win rate | **93.41%** | **92.71%** | **93.35%** | **81.38%** |
-| Every fight ≥2/3 | **31.05%** | **23.05%** | **27.34%** | **2.73%** |
-| Every fight ≥1/3 | **52.54%** | **50.00%** | **55.86%** | **12.70%** |
-| Wall time | **1 h 22 min 7 s** | **44 min 45 s** | **1 h 6 min 24 s** | **5 min 16 s** |
+| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|---|
+| Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
+| Trial win rate | **92.51%** | **91.91%** | **91.64%** | **92.27%** | **80.08%** |
+| Majority combat win rate | **93.41%** | **92.78%** | **92.71%** | **93.35%** | **81.38%** |
+| Every fight ≥2/3 | **31.05%** | **29.88%** | **23.05%** | **27.34%** | **2.73%** |
+| Every fight ≥1/3 | **52.54%** | **48.44%** | **50.00%** | **55.86%** | **12.70%** |
+| Wall time | **1 h 22 min 7 s** | **50 min 51 s** | **44 min 45 s** | **1 h 6 min 24 s** | **5 min 16 s** |
 
 Increasing the boss budget from 128 to 256 raised trial win rate by **0.63 percentage points**, with **48% longer runtime**. All neural search runs use **no persistent reuse**.
 
-Unresolved trials were **0 / 11 / 15 / 1,126**, and mean HP lost was **11.57 / 14.39 / 14.16 / 18.96**, in column order. MCTS retains its upstream evaluator rather than the neural potion-penalty objective; fixture compatibility is handled offline. See the linked results for counts and provenance.
+Unresolved trials were **0 / 1 / 11 / 15 / 1,126**, and mean HP lost was **11.57 / 11.88 / 14.39 / 14.16 / 18.96**, in column order. MCTS retains its upstream evaluator rather than the neural potion-penalty objective; fixture compatibility is handled offline. See the linked results for counts and provenance.
 
 [Full results and timing](benchmarks/comparison/README.md) · [Comparison protocol](docs/HUMAN_COMPARISON.md)
 
 #### Win rate by combat pool
 
-| Combat pool | Mentor MCTS 250/1,000 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
-|---|---|---|---|---|
-| Easy | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
-| Hard | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
-| Elite | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
-| Boss | **70.72%** | **64.78%** | **68.72%** | **48.76%** |
+| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|---|
+| Easy | **99.75%** | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
+| Hard | **98.32%** | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
+| Elite | **92.48%** | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
+| Boss | **70.72%** | **67.17%** | **64.78%** | **68.72%** | **48.76%** |
 
 Win rates pool all three seeds; unresolved trials count as nonwins. Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**, using identical pool assignments. [Counts and verification](benchmarks/comparison/pool-win-rates.json) · [Reproduce](scripts/summarize_pool_win_rates.py).
 
@@ -127,6 +127,8 @@ On the **8,192-trial primary panel**, step 5500 scored **91.92% with search** an
 <summary>Show human-benchmark plot</summary>
 
 ![Human benchmark win rates and run aggregates at steps 4000, 4500, 5000 and 5500](docs/assets/human_benchmark_vs_optimizer_step.png)
+
+The latest completed primary checkpoint, **5,600**, scored **92.46% search / 85.39% greedy policy**, with reuse enabled for search and boss128. [Matched results](benchmarks/validation-comparison-005600.json). The human benchmark is still latest at step 5,500.
 
 These historical plots end at step 5500, before persistent search reuse was enabled. [Validation histories](benchmarks/history/) · [Provenance](PROVENANCE.md).
 
@@ -181,7 +183,7 @@ The loop follows **AlphaZero-style search distillation**: search improves the po
 
 ### Training data and generation
 
-Collection requests a **50/50 human/generated mixture** of combat starts:
+The original banks request a **50/50 human/generated mixture** of combat starts:
 
 | Source | Candidate starts | Requested per bank |
 |---|---:|---:|
@@ -202,18 +204,20 @@ Sampling is uniform within each source pool, without replacement inside a bank. 
 
 Each cycle runs **collection → learning → actor synchronization**:
 
-- A frozen actor drives **80 Rust workers** through roughly 1,024 combat starts.
+- A frozen actor drives **80 Rust workers** through an original roughly 1,024-start bank plus its extra boss starts.
 - Decision examples enter a **65,536-example FIFO replay buffer**.
 - One optimizer update uses **16,384 examples**, accumulated over **64 microbatches of 256**.
 
 | Pool | Simulations per non-forced decision | Examples per update |
 |---|---:|---:|
-| Easy / native Weak | 32 | 1,638 |
-| Hard / native Normal, unclassified events | 64 | 3,277 |
-| Elite | 96 | 4,915 |
-| Boss | 128 | 6,554 |
+| Easy / native Weak | 32 | 1,170 |
+| Hard / native Normal, unclassified events | 64 | 2,341 |
+| Elite | 96 | 3,511 |
+| Boss | 256 | 9,362 |
 
-Within each pool, sampling mixes value-error priorities with **5% uniform sampling**. Importance weights `1 / (N_pool × P(sample | pool))` preserve the intended **10/20/30/40%** pool mixture. Quotas apply across the full update; microbatches are packed by token length. There is no learner-stage human/generated quota, so the 50/50 start mixture need not yield 50/50 decision examples.
+After step **5,613**, boss search increased to **256** and collection appends one distinct eligible boss start for each original boss, separately within human/generated sources. Every original fight is retained; other pools are unchanged. The first resumed bank grew from **137 to 274 boss starts** (**1,153 total combats**). [Implementation and verification](docs/TRAINING.md#boss-augmentation-after-step-5613).
+
+Within each pool, sampling mixes value-error priorities with **5% uniform sampling**. Importance weights `1 / (N_pool × P(sample | pool))` preserve the intended **7.14/14.29/21.43/57.14%** pool mixture. Quotas apply across the full update; microbatches are packed by token length. There is no learner-stage human/generated quota, so the 50/50 start mixture need not yield 50/50 decision examples.
 
 ### Loss and evaluation
 

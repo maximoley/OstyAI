@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "addition_hashes_unchanged_after_producer_resume": {
+    "5613": "deecf1dc335c8ff836fc55ed19ee80d42fca1fcde06275ae0cb00632b9f73982",
+    "5614": "34a67940cea79c0b9956026bd9859dc92317174974cfb46ee99dc6f2e58a830d",
+    "5615": "c87a07cb0cd3db5cb1c05d3802396180b1e5f45e8df89a651c7d6ce13eb15e09"
+  }
+}

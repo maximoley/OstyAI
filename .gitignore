@@ -22,3 +22,6 @@ results/
 .env
 .env.*
 .hegel/
+
+ostyai/boss-augmentation-v1/
+ostyai/external-corpus-converter/

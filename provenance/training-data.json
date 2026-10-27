@@ -73,7 +73,33 @@
       "generated": 5065655
     }
   },
-  "learner_sampling": {
+  "notes": [
+    "Synthetic run completion is not a measured combat or full-run win rate; generated starts are not guaranteed winnable.",
+    "Prepared-bank entries include repeats across banks and do not measure completed training.",
+    "Source-bank balance and learner combat-pool quotas are different distributions.",
+    "Full training datasets are not included; this file records summary provenance only."
+  ],
+  "continuation_after_step5613": {
+    "base_banks": "Original prepared-bank counts above remain unchanged.",
+    "collection": "Append a distinct supported boss start per original boss, separately for human/generated, preserving nonboss starts and primary holdout exclusions.",
+    "human_boss_candidates": 12379,
+    "generated_candidate_starts": 2807379,
+    "overlay": "boss-augmentation-v1",
+    "evidence": "provenance/changes/changes-20261026-boss256-double",
+    "search_budgets": {
+      "easy": 32,
+      "hard": 64,
+      "elite": 96,
+      "boss": 256
+    },
+    "learner_quotas": {
+      "easy": 1170,
+      "hard": 2341,
+      "elite": 3511,
+      "boss": 9362
+    }
+  },
+  "learner_sampling_at_step5500": {
     "batch_size": 16384,
     "quotas": {
       "easy": 1638,
@@ -84,10 +110,16 @@
     "human_generated_quota": null,
     "within_pool": "Value-error priorities plus 5% uniform mixture; beta=1 within-pool importance correction."
   },
-  "notes": [
-    "Synthetic run completion is not a measured combat or full-run win rate; generated starts are not guaranteed winnable.",
-    "Prepared-bank entries include repeats across banks and do not measure completed training.",
-    "Source-bank balance and learner combat-pool quotas are different distributions.",
-    "Full training datasets are not included; this file records summary provenance only."
-  ]
+  "learner_sampling": {
+    "batch_size": 16384,
+    "quotas": {
+      "easy": 1170,
+      "hard": 2341,
+      "elite": 3511,
+      "boss": 9362
+    },
+    "human_generated_quota": null,
+    "within_pool": "Value-error priorities plus 5% uniform mixture; beta=1 within-pool importance correction.",
+    "current_configuration": "After step5613; historical step5500 configuration retained separately."
+  }
 }

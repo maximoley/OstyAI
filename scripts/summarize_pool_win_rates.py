@@ -8,9 +8,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = ROOT / 'benchmarks/comparison'
 POOLS = ('easy', 'hard', 'elite', 'boss')
-ORDER = ('mentor_rl_training', 'model5500_tiered_no_reuse',
+ORDER = ('mentor_rl_training', 'mentor250_boss500', 'model5500_tiered_no_reuse',
          'model5500_boss256_no_reuse', 'model5500_policy_greedy')
-LABELS = ('Mentor MCTS 250/1,000', 'OstyAI 5500, boss128',
+LABELS = ('Mentor MCTS 250/1,000', 'Mentor MCTS 250/500', 'OstyAI 5500, boss128',
           'OstyAI 5500, boss256', 'OstyAI 5500, greedy')
 
 
@@ -70,7 +70,7 @@ def summarize():
         trials_by_pool=dict(counts), combats_by_pool=dict(Counter(by_case.values())),
         matched_trial_ids=True, source_sha256=hashes, results=results)
     (DIRECTORY / 'pool-win-rates.json').write_text(json.dumps(report, indent=2) + '\n')
-    table = ['| Combat pool | ' + ' | '.join(LABELS) + ' |', '|---|---|---|---|---|']
+    table = ['| Combat pool | ' + ' | '.join(LABELS) + ' |', '|' + '---|' * (len(LABELS)+1)]
     for pool in POOLS:
         table.append('| ' + pool.capitalize() + ' | ' + ' | '.join(
             f"**{r['by_pool'][pool]['win_rate'] * 100:.2f}%**" for r in results) + ' |')

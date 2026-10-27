@@ -14,6 +14,7 @@ from accumulated_learner import AccumulatedLearner
 from corpus_stream import atomic_json
 from prioritized_replay import PrioritizedReplay as Replay
 from pool_sampling import POOL_BUDGETS, quotas
+from boss_augmentation import SCHEMA as BOSS_SCHEMA, DIRECTORY as BOSS_DIRECTORY, START_BANK as BOSS_START_BANK, materialize
 from pool_metadata import restore_legacy_pool_tags
 from loop import GPU, Native, run_native
 from train import prewarm_actor
@@ -287,6 +288,8 @@ def main():
         seed=2026102501,
         potion_cost="independent per-instance Uniform[0,1]",
         sampler="full-corpus bank stream",
+        collection_sampling=dict(schema=BOSS_SCHEMA, first_bank=BOSS_START_BANK, boss_multiplier=2,
+                                 nonboss="unchanged", source_mix="preserve original boss human/generated counts"),
         prioritized_replay=dict(alpha=1.0, beta=1.0, uniform_mix=0.05,
                                 priority="absolute network value error", epsilon=1e-3),
         learner_pool_sampling=dict(schema=1, mixture="simulation_budget_proportional",
@@ -324,7 +327,8 @@ def main():
         learner.updates = d["updates"]
         learner.examples = d["examples"]
         cycle = d["cycle"]
-        budget_changed = (d["settings"].get("search_reuse") != settings["search_reuse"]
+        budget_changed = (d["settings"].get("collection_sampling") != settings["collection_sampling"]
+                          or d["settings"].get("search_reuse") != settings["search_reuse"]
                           or d["settings"].get("policy_validation") != settings["policy_validation"]
                           or d["settings"].get("search_simulations", 16) != SEARCH_BUDGETS
                           or not d["settings"].get("skip_forced_actions", False)
@@ -382,7 +386,7 @@ def main():
     while cycle < a.cycles and not stopping():
         index = cycle
         path = ROOT / f"prepared/bank-{index:06d}.jsonl"
-        info = path.with_suffix(".json")
+        info = (ROOT / BOSS_DIRECTORY / f"bank-{index:06d}.json") if index >= BOSS_START_BANK else path.with_suffix(".json")
         while not info.exists() and not stopping():
             atomic_json(
                 a.output / "status.json",
@@ -391,8 +395,11 @@ def main():
             time.sleep(1)
         if stopping():
             break
-        meta = json.loads(info.read_text())
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == meta["sha256"]
+        if index >= BOSS_START_BANK:
+            path, meta = materialize(ROOT, a.output, index)
+        else:
+            meta = json.loads(info.read_text())
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == meta["sha256"]
         started = time.perf_counter()
         atomic_json(
             a.output / "status.json",
@@ -400,6 +407,10 @@ def main():
         )
         report = collect(native, gpu, config(path, meta["accepted"], cycle + 1, cycle), replay)
         outcomes = report.pop("outcomes")
+        if "collection_sampling" in meta:
+            from collections import Counter
+            actual = Counter(row["search_tier"] for row in outcomes)
+            assert all(actual[t] == n for t, n in meta["collection_sampling"]["final"]["by_pool"].items()), "Native pool classification/count mismatch"
         costs = [p["cost"] for row in outcomes for p in row["potions"]]
         assert costs and all(0 <= v <= 1 for v in costs) and len(set(costs)) > 1
         atomic_json(
@@ -423,6 +434,7 @@ def main():
             bank=index,
             unsupported_starts=len(meta["rejected"]),
             collected_combats=meta["accepted"],
+            collection_sampling=meta.get("collection_sampling"),
             collection_seconds=report["total_seconds"],
             search_simulation_budget=report["simulation_budgets"],
             search_by_tier=report["search_by_tier"],

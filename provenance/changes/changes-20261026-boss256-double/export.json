@@ -1,0 +1,19 @@
+{
+  "source_hashes": {
+    "smoke-results.json": "353b12254b595603a2ee478f2c3bac32b5000264e461bea2252ef1455e63bd2c",
+    "checkpoint-preservation.json": "24b43ad0dcf0d1661db3a96a14859118e2edd3de5fb4e5d95a1b9d8758eb7ff1",
+    "deployment.json": "4fe321790dc5b351ff7131226b30f7c394e3fee99813dc2a5da9f707fec34a21",
+    "progress-snapshot.json": "46fbdb650cfb4dd6f2065166efeb15d972b55a42bc68ecb3356c5f9b9742bce5",
+    "cache-resume-verification.json": "4cf0e51585762e3cafbdd63a560542ec92184d8dbf58bfc9e34176bdd63a5321",
+    "unit-tests.log": "698d16d7b93c4bd9707d3cfacda6fb1e0fea99ed0cda6e69bedc42772940540a",
+    "README.md": "65cbeb94a9804a84c7f4dcffc8427648dc366c3372d0e60f42f5016ce10a5262",
+    "resume-verification.json": "e56f9a83127b81230329a81a2b110dac131a335014716bd6491f00ae5fc9b5ac"
+  },
+  "source_code_hashes": {
+    "production_train.py": "f09dfbc0a200abbd78e1155de9989ed189eb50b9757c163a2d4b8d16628df919",
+    "prepare_boss_banks.py": "09d2dd193d0d8b82c4ea71b9d854c67a9603744d5a57318820f283af52beed86",
+    "boss_augmentation.py": "ed0ce7bbe50935f15cede0bc1551a652ef6aff32eb10869872e472f24c6acc47",
+    "pool_sampling.py": "eb39a1664e9b07345bb50224b2ee51653c8ba413585006cac076d0b4dfacc065"
+  },
+  "sanitization": "Personal server paths replaced with archive labels; no production checkpoints, replay or training banks included."
+}

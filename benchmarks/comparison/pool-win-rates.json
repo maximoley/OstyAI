@@ -16,6 +16,7 @@
   "matched_trial_ids": true,
   "source_sha256": {
     "mentor_rl_training/trials.json.gz": "8d3623b64aa460c23ab1b22ddedb038863030a7dda46f74485cd10e8c940f292",
+    "mentor250_boss500/trials.json.gz": "6ea2f89345c1bb81b5b35d3b26d0bbaa57e5329851de267298128d5ebc630ece",
     "model5500_tiered_no_reuse/trials.json.gz": "21c2a59ce4e83364e38cacfd51440eac3bd92428a1ab55fdd7f82783cac51fd8",
     "model5500_boss256_no_reuse/trials.json.gz": "dfdd3ffd837383e8c9c0340d902742df8a19ad4ea2549ba3e0315f5c4abf37f6",
     "model5500_policy_greedy/trials.json.gz": "30cd7b64eff7c0e780209c02e95046681990915836431fccf4a7d035d24c7731"
@@ -51,6 +52,39 @@
           "losses": 1799,
           "unresolved": 0,
           "win_rate": 0.7071940104166666
+        }
+      }
+    },
+    {
+      "configuration": "mentor250_boss500",
+      "by_pool": {
+        "easy": {
+          "trials": 10725,
+          "wins": 10698,
+          "losses": 27,
+          "unresolved": 0,
+          "win_rate": 0.9974825174825175
+        },
+        "hard": {
+          "trials": 9708,
+          "wins": 9545,
+          "losses": 163,
+          "unresolved": 0,
+          "win_rate": 0.9832097239390194
+        },
+        "elite": {
+          "trials": 9720,
+          "wins": 8989,
+          "losses": 731,
+          "unresolved": 0,
+          "win_rate": 0.9247942386831276
+        },
+        "boss": {
+          "trials": 6144,
+          "wins": 4127,
+          "losses": 2016,
+          "unresolved": 1,
+          "win_rate": 0.6717122395833334
         }
       }
     },

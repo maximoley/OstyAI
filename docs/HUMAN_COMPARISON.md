@@ -75,3 +75,5 @@ After building the offline preparation example and preparing a manifest with the
 All three required arms completed and passed verification on October 26, 2026; production training then resumed from the preserved checkpoint. Queen diagnostic replays started only after the timed suite finished. The uniform-32 arm and the 8,000-simulation / 400-rollout configuration were cancelled before starting.
 
 </details>
+
+MCTS250/500 with rollout cap 200 completed at **91.91% trial wins** in **50 min 51 s**. [All five completed configurations and pool breakdowns](../benchmarks/comparison/README.md). The uniform32 timed run was cancelled before starting; optional uniform-budget evaluation remains supported.

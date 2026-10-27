@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-27T01:31:34.717445+00:00",
+  "matched_configurations": 5,
+  "comparison_metrics_recomputed": true,
+  "frozen_benchmark_verification_passed": true,
+  "pool_sampling_tests": 5,
+  "boss_augmentation_tests": 8,
+  "native_source_files_checked": 5726,
+  "native_source_differences": 0,
+  "model_file_sha256": "804e0d78efb83fbe6337d02f6cc3fb4f8892d67bf81ecdba4855796c8bc690bc",
+  "published_step": 5500,
+  "weight_license": "CC-BY-SA-4.0",
+  "standalone_evaluation_default_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 128
+  },
+  "current_training_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "standalone_cli_help_verified": true,
+  "notes": [
+    "Full production smoke and preservation evidence is under provenance/changes/changes-20261026-boss256-double.",
+    "New portable evaluation CLI was checked in the existing runtime; no new timed benchmark was run.",
+    "Server paths were redacted from newly exported evidence."
+  ]
+}

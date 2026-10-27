@@ -13,6 +13,7 @@ def main():
     ap.add_argument('--suite',choices=['primary','human','smoke'],default='smoke')
     ap.add_argument('--policy-only',action='store_true')
     ap.add_argument('--uniform-simulations',type=int,help='Override all four tier budgets; search modes only')
+    ap.add_argument('--boss-simulations',type=int,help='Boss budget override; default historical tier map is 32/64/96/128')
     ap.add_argument('--reuse',action='store_true',help='Enable current persistent search; historical step5500 used no reuse')
     ap.add_argument('--model',type=Path,default=ROOT/'models/best/model.pt')
     ap.add_argument('--human-fixtures',type=Path,help='Complete prepared human panel with its own manifest')
@@ -20,6 +21,7 @@ def main():
     ap.add_argument('--workers',type=int,default=80)
     ap.add_argument('--cases',type=int,default=24,help='Smoke suite only')
     a=ap.parse_args()
+    if a.boss_simulations is not None and (a.policy_only or a.uniform_simulations is not None or not 1<=a.boss_simulations<=256):ap.error('boss simulations requires tiered search and a budget in 1..256')
     if a.uniform_simulations is not None and (a.policy_only or not 1<=a.uniform_simulations<=256):ap.error('uniform simulations requires search mode and a budget in 1..256')
     if (a.output/'result.json').exists():ap.error('Choose a fresh output directory; results are never overwritten.')
     if a.cases<1 or a.workers<1:ap.error('cases and workers must be positive')
@@ -30,6 +32,7 @@ def main():
     torch.set_num_threads(1);torch.set_float32_matmul_precision("high");native=Native();gpu=GPU(lanes=2)
     def cfg(path,n,episode,v,validation=True):
         x=config(path,n,episode,v,validation)
+        x["simulation_budgets"]=dict(easy=32,hard=64,elite=96,boss=a.boss_simulations or 128)
         x.update(workers=a.workers,persistent_search=a.reuse and not a.policy_only,record_replay=False)
         if a.uniform_simulations is not None:x.update(simulations=a.uniform_simulations,simulation_budgets={k:a.uniform_simulations for k in x['simulation_budgets']})
         if a.policy_only:x.update(simulations=0,simulation_budgets=None,skip_forced_actions=False)

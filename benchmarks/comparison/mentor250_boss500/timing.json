@@ -1,0 +1,9 @@
+{
+  "wall_seconds": 3051.0974628701806,
+  "started_at": "2026-10-26T23:54:30.204870+00:00",
+  "finished_at": "2026-10-27T00:45:21.302341+00:00",
+  "exit_code": 0,
+  "workers": 80,
+  "includes_process_startup_imports_and_compilation": true,
+  "preparation_excluded": true
+}

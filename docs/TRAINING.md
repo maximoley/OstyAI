@@ -40,11 +40,19 @@ Across all prepared banks, **10,185,462 of 10,240,000 starts were accepted**: **
 
 The full raw datasets, generated SQLite shards and prepared training banks are intentionally not distributed with this repository. Frozen benchmark inputs are bundled separately.
 
+## Boss augmentation after step 5613
+
+Production resumed from the preserved step 5,613 checkpoint with boss256 search and doubled boss collection. Each remaining original bank stays immutable. A versioned overlay appends a distinct supported boss start for every original boss, matching the original boss human/generated counts separately. All nonboss starts and original boss starts remain unchanged. Thus the original 50/50 requested source mixture describes the base banks, not necessarily each augmented bank.
+
+The feeder samples the full **12,379 eligible human boss candidates** and uses rejection sampling from all **2,807,379 generated starts** to obtain generated bosses. It preserves primary held-out exclusions, rejects duplicate source identities within a bank, uses independent deterministic bank/source seeds, and validates imports with the current native engine. Per-bank provenance records counts, source identities, rejects and checksums. Existing native-compatible caches are reused only after hash verification. The first resumed banks have274 and272 boss starts, double 137 and 136, while every other pool is unchanged.
+
+Code: [boss_augmentation.py](../ostyai/boss_augmentation.py), [prepare_boss_banks.py](../ostyai/prepare_boss_banks.py). [Preservation, smoke and resume evidence](../provenance/changes/changes-20261026-boss256-double/). The published step 5,500 actor and historical evaluation settings are unchanged.
+
 ## Collection and learner sampling
 
 Production alternates **collection → one optimizer update → actor synchronization**. An actor is fixed during collection. Rust workers own states, act/search, and write final pinned observations; Python dispatches GPU batches. Completed-combat rows enter bounded FIFO replay. Collection and learning are cyclic on one GPU; this is not simultaneous independent actor/learner training.
 
-One cycle consumes a prepared bank of approximately 1024 combat starts (unsupported starts can be rejected). Every completed combat contributes its decision records, so fresh examples per cycle vary with combat length. There is no fixed 16,384-fresh-example requirement: **16,384 is the sampled optimizer batch**, and sampling can repeat replay entries.
+One cycle consumes the original approximately 1024-start prepared bank plus its boss-only additions from bank 5613 onward (unsupported original starts can be rejected). Every completed combat contributes its decision records, so fresh examples per cycle vary with combat length. There is no fixed 16,384-fresh-example requirement: **16,384 is the sampled optimizer batch**, and sampling can repeat replay entries.
 
 | Setting | Value |
 |---|---:|
@@ -64,14 +72,14 @@ One cycle consumes a prepared bank of approximately 1024 combat starts (unsuppor
 
 | Combat pool | Simulations per genuine decision | Samples per optimizer update |
 |---|---:|---:|
-| Easy / native Weak | 32 | 1,638 |
-| Hard / native Normal, unclassified events | 64 | 3,277 |
-| Elite | 96 | 4,915 |
-| Boss | 128 | 6,554 |
+| Easy / native Weak | 32 | 1,170 |
+| Hard / native Normal, unclassified events | 64 | 2,341 |
+| Elite | 96 | 3,511 |
+| Boss | 256 | 9,362 |
 
-Within each pool, sampling is proportional to value-error priority (`alpha=1`, epsilon 0.001), mixed with 5% uniform sampling. Importance weight is `1 / (N_pool * P(sample | pool))` (`beta=1`). It corrects within the pool, preserving the requested 10/20/30/40% pool objective. Sampled rows are packed into token-length-efficient microbatches; quotas apply to the full update. Forced factual actions execute without search/inference but retain replay observations and terminal value targets; forced belief transitions collapse into parent edges.
+Within each pool, sampling is proportional to value-error priority (`alpha=1`, epsilon 0.001), mixed with 5% uniform sampling. Importance weight is `1 / (N_pool * P(sample | pool))` (`beta=1`). It corrects within the pool, preserving the requested 7.14/14.29/21.43/57.14% pool objective. Sampled rows are packed into token-length-efficient microbatches; quotas apply to the full update. Forced factual actions execute without search/inference but retain replay observations and terminal value targets; forced belief transitions collapse into parent edges.
 
-The 50/50 source-bank mixture and 10/20/30/40 learner-pool mixture act at different stages. Longer fights produce more decision examples. FIFO retention, pool quotas and within-pool priorities further change their representation. There is **no enforced human/generated balance in the optimizer batch**. Search targets and terminal utility are produced by the current actor's rollout; neither source provides the unknown human winning action sequence as supervision.
+The base 50/50 source-bank mixture, boss-only collection augmentation and 7.14/14.29/21.43/57.14 learner-pool mixture act at different stages. Longer fights produce more decision examples. FIFO retention, pool quotas and within-pool priorities further change their representation. There is **no enforced human/generated balance in the optimizer batch**. Search targets and terminal utility are produced by the current actor's rollout; neither source provides the unknown human winning action sequence as supervision.
 
 Loss per example is `importance_weight * (policy_cross_entropy(search_target, network_policy) + (predicted_value - terminal_utility)^2)`. AdamW provides decoupled weight decay; it is not an explicit extra L2 term in the logged total loss. There is no explicit entropy bonus or distance-to-terminal loss discount. Policy and value loss, entropy, target KL, value residuals, gradient norm and per-pool contributions are logged.
 
@@ -95,6 +103,8 @@ OSTYAI_PYTHON="$PWD/.venv/bin/python" bash ostyai/run.sh production_train.py --c
 ```
 
 This starts fresh from `ostyai/initial_weights.pt`. It does **not** resume the champion. Exact resume requires a trainer checkpoint plus its referenced replay, optimizer moments and RNG states, deliberately excluded here. To resume your own run, add `--resume` with that run's output directory. `supervise_run.py` manages the default production directory, and `ostyai/STOP` requests a safe stop.
+
+For the published continuation, prepare the immutable boss overlays before consuming bank 5613 onward. Set `OSTYAI_CORPUS_CONVERTER` to the compatible full-source conversion checkout and run `ostyai/prepare_boss_banks.py --start 5613 --target 10000 --workers 8` with its conversion Python. This requires your original full-corpus manifest, source catalog, held-out manifest and prepared banks; these training inputs are not bundled. The feeder and trainer respect `ostyai/STOP`. The trainer waits for each verified overlay.
 
 `prepare_banks.py` is the legacy human/generated corpus conversion entry point. It requires a separate conversion checkout (`OSTYAI_CORPUS_CONVERTER`, containing `full_corpus.py` and its `native-lib`); it is not necessary for inference or for training on already prepared banks. Original human-panel construction scripts under `tools/human-panel-source/` are archival source evidence and require external raw data/conversion dependencies, not included as a one-command dataset download.
 

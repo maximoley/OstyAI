@@ -17,7 +17,7 @@ def main():
         runner=int((p/'runner.pid').read_text())
         if not Path(f'/proc/{runner}').exists():raise RuntimeError('Benchmark runner exited before completion; inspect runner.log')
         time.sleep(30)
-    assert [r['configuration'] for r in comparison['results']]==['mentor_rl_training','model5500_tiered_no_reuse','model5500_uniform32_no_reuse','model5500_policy_greedy']
+    assert [r['configuration'] for r in comparison['results']]==['mentor_rl_training','model5500_tiered_no_reuse','model5500_policy_greedy']
     trial_sets=[];checks=[]
     for row in comparison['results']:
         sp=Path(row['summary']);d=sp.parent;s=json.loads(sp.read_text());trials=json.loads((d/'trials.json').read_text())
@@ -55,7 +55,7 @@ def main():
     for r in comparison['results']:
         sec=r['wall_seconds'];h=int(sec//3600);m=int(sec%3600//60);ss=sec%60
         lines.append(f"| {r['configuration']} | {r['trial_wins']}/{r['trials']} ({100*r['trial_win_rate']:.3f}%) | {r['wins']}/{r['combats']} ({100*r['win_rate']:.3f}%) | {r['runs_won_every_fight']}/512 ({100*r['run_win_rate']:.3f}%) | {r['trial_average_hp_lost']:.3f} | {r['unresolved_trials']} | {h}h {m}m {ss:.1f}s |")
-    lines+=['','Unresolved trials count as nonwins. HP means exclude unresolved trials. Combats are independent historical starts, not linked model-played runs. Human fixtures may overlap training.','', 'Timing includes process startup, loading, compilation and result writing; offline compatibility preparation/preflight are excluded. All four runs use identical compatibility-prepared states. Original frozen files remain unchanged. Mentor retains its upstream evaluator; model runs use the fixed 0/1 potion-cost labels.']
+    lines+=['','Unresolved trials count as nonwins. HP means exclude unresolved trials. Combats are independent historical starts, not linked model-played runs. Human fixtures may overlap training.','', 'Timing includes process startup, loading, compilation and result writing; offline compatibility preparation/preflight are excluded. All three runs use identical compatibility-prepared states. Original frozen files remain unchanged. Mentor retains its upstream evaluator; model runs use the fixed 0/1 potion-cost labels.']
     (p/'comparison.md').write_text('\n'.join(lines)+'\n')
     save(p/'results-verification.json',dict(complete=True,checks=checks,trial_sets_identical=True,time=time.time()))
     while not (p/'resume-started.json').exists():

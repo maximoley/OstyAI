@@ -27,3 +27,7 @@ Total time includes native orchestration, observations, transfers, neural evalua
 The export includes cycles 5401–5508. Pre-reuse cycles 5401–5500 had median collection time 30.17 seconds. The short post-reuse steady sample, cycles 5504–5508, took about **40.61–44.08 seconds per collection-plus-learner cycle**, median **42.90 seconds**. Its collection phase averaged **791.7 actual played decisions/second** across five different ~1024-start banks. This is a different workload from the 512-panel table and should not be directly compared as a mode speedup.
 
 Each learner update processes 16,384 examples in 64 microbatches of 256; the measured learner portion here was approximately 0.38–0.39 seconds. That excludes generating the examples and initial compilation. Validation events add separate pauses, especially the 36,297-trial human suite. The source keeps GPU compilation, collection, learner and validation measurements distinct. These numbers are dated snapshots, not performance guarantees for another GPU or an unmeasured future model.
+
+## Boss256 and doubled boss collection
+
+A dated post-migration sample covers cycles 5620–5622 with 80 Rust workers, persistent reuse, boss256 and doubled boss starts. Median collection-plus-learning time was **83.94s**; aggregate actual decisions/collection-second was **435.1**. The banks contain **1134–1158 starts**. This changed workload is not directly comparable with the earlier fixed-panel timings. [Raw cycle records](../provenance/changes/changes-20261026-boss256-double/progress-snapshot.json).

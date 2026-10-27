@@ -1,0 +1,129 @@
+{
+  "verified_at": 1793063655.7239838,
+  "checkpoint_step": 5614,
+  "latest_progress_step": 5615,
+  "advancing_cycles": [
+    5614,
+    5615
+  ],
+  "changed_settings": [
+    "collection_sampling",
+    "learner_pool_sampling",
+    "search_simulations"
+  ],
+  "finite_model_actor_optimizer_replay": true,
+  "replay_count": 65536,
+  "all_rng_present": true,
+  "quotas": {
+    "easy": 1170,
+    "hard": 2341,
+    "elite": 3511,
+    "boss": 9362
+  },
+  "budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "collection_counts": [
+    {
+      "cycle": 5614,
+      "counts": {
+        "easy": 316,
+        "hard": 333,
+        "elite": 230,
+        "boss": 274
+      }
+    },
+    {
+      "cycle": 5615,
+      "counts": {
+        "easy": 305,
+        "hard": 365,
+        "elite": 212,
+        "boss": 272
+      }
+    }
+  ],
+  "search_accounting_correct": true,
+  "processes": {
+    "supervisor": {
+      "pid": 563912,
+      "command": "archive/spire-mentor-gumbel-loop-20261024/gpu-runtime/bin/python archive/training/supervise_run.py "
+    },
+    "trainer": {
+      "pid": 563976,
+      "command": "archive/spire-mentor-gumbel-loop-20261024/gpu-runtime/bin/python archive/training/production_train.py --cycles 10000 --output archive/training/production --resume "
+    },
+    "feeder": {
+      "pid": 563911,
+      "command": "archive/spire-mentor-v31-full-policy-ce-fresh-20261023/runtime/bin/python archive/training/prepare_boss_banks.py --start 5613 --target 10000 --workers 8 "
+    }
+  },
+  "status": {
+    "stage": "collecting",
+    "cycle": 5616,
+    "updates": 5615,
+    "pid": 563976
+  },
+  "feeder": {
+    "stage": "ready",
+    "last_ready": 5642,
+    "target": 10000,
+    "pid": 563911,
+    "counts": {
+      "base": {
+        "by_pool": {
+          "easy": 312,
+          "hard": 366,
+          "elite": 215,
+          "boss": 126
+        },
+        "by_source": {
+          "human": 512,
+          "generated": 507
+        },
+        "bosses_by_source": {
+          "human": 52,
+          "generated": 74
+        }
+      },
+      "added": {
+        "by_pool": {
+          "easy": 0,
+          "hard": 0,
+          "elite": 0,
+          "boss": 126
+        },
+        "by_source": {
+          "human": 52,
+          "generated": 74
+        },
+        "bosses_by_source": {
+          "human": 52,
+          "generated": 74
+        }
+      },
+      "final": {
+        "by_pool": {
+          "easy": 312,
+          "hard": 366,
+          "elite": 215,
+          "boss": 252
+        },
+        "by_source": {
+          "human": 564,
+          "generated": 581
+        },
+        "bosses_by_source": {
+          "human": 104,
+          "generated": 148
+        }
+      }
+    },
+    "seconds": 8.751536447554827
+  },
+  "native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
+  "gpu": "73 %, 17365 MiB"
+}

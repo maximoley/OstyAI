@@ -85,13 +85,13 @@
   },
   "comparison.json": {
     "original_json_sha256": "9b3b9737129d660f881893bf44e2e5b5636f57bc714f65e88b1dbd7a0b19e933",
-    "stored_file_sha256": "29f027e0b6c6648426471eeb56fc61119d89624eaa8539d059ae0cee7ceb117a",
-    "transformation": "Original three-agent aggregate extended locally with independently recomputed boss256 results; server paths remain repository-relative. Original JSON hash identifies the original three-agent source."
+    "stored_file_sha256": "616533cb97514b52de48b521134210e3ee101229fa34b8520d9c5fc1e97f92b0",
+    "transformation": "Original three-agent aggregate extended with independently recomputed boss256 and MCTS250/500 results; paths remain repository-relative."
   },
   "results-verification.json": {
     "original_json_sha256": "a45bd3dddbade56a9c5b52a4546b2feab743fa70dd9c86b373be3ac96aa3a0eb",
-    "stored_file_sha256": "9f2e455a76b59b55ec9131c88d15458e195220749c3295263e81c7f2e174284d",
-    "transformation": "Original three-agent aggregate extended locally with independently recomputed boss256 results; server paths remain repository-relative. Original JSON hash identifies the original three-agent source."
+    "stored_file_sha256": "eadb161830c4a930025052d68d2eeeb512485ecf43cbf66454a198920eae01c2",
+    "transformation": "Original three-agent aggregate extended with independently recomputed boss256 and MCTS250/500 results; paths remain repository-relative."
   },
   "model5500_boss256_no_reuse/summary.json": {
     "original_json_sha256": "77df4bddc6f08f89de40300708a961842f8e58550abe46a622bc817596c98033",
@@ -116,5 +116,29 @@
   "model5500_boss256_no_reuse/timing.json": {
     "original_json_sha256": "6520badb768dfa62602b54a585c636d548a8301198dbbc5355edca5fe66b2b6c",
     "stored_file_sha256": "6520badb768dfa62602b54a585c636d548a8301198dbbc5355edca5fe66b2b6c"
+  },
+  "mentor250_boss500/summary.json": {
+    "original_json_sha256": "f1a11abab2c3e95e14dbffc2c0a9be13b768e390100ce3fe22c0ec15e155c502",
+    "stored_file_sha256": "f1a11abab2c3e95e14dbffc2c0a9be13b768e390100ce3fe22c0ec15e155c502"
+  },
+  "mentor250_boss500/provenance.json": {
+    "original_json_sha256": "c328bdc5985ddddfe4bb2b9453d62e1bb6e6a30456921bfc9bbcea807d723b10",
+    "stored_file_sha256": "c328bdc5985ddddfe4bb2b9453d62e1bb6e6a30456921bfc9bbcea807d723b10"
+  },
+  "mentor250_boss500/trials.json.gz": {
+    "original_json_sha256": "70523ee877c83d27aecc5b8679feeddea5a4ecefe3f9c17cfeb95d38610e12a4",
+    "stored_file_sha256": "6ea2f89345c1bb81b5b35d3b26d0bbaa57e5329851de267298128d5ebc630ece"
+  },
+  "mentor250_boss500/combats.json.gz": {
+    "original_json_sha256": "7f9b0eea126002db1e3cf5901f16e31f80b26e639cdc06f19ef9779ffb7dbd58",
+    "stored_file_sha256": "2b6cf29f92b8f8b8171565e96e4d02ccb04bd77702e7913364db12bbb8821352"
+  },
+  "mentor250_boss500/runs.json.gz": {
+    "original_json_sha256": "9704b791bb2bc4083334f62347ce6028268b4a594e880c19bd048683e0a8dccf",
+    "stored_file_sha256": "2569ded11047af8d620b27500152bac031acf6c8cbcac3089f58fe349c7c2592"
+  },
+  "mentor250_boss500/timing.json": {
+    "original_json_sha256": "c0456f8dacb409f454a70c8a54a5660967a1ed51b6767ad14417409e506aa23f",
+    "stored_file_sha256": "c0456f8dacb409f454a70c8a54a5660967a1ed51b6767ad14417409e506aa23f"
   }
 }

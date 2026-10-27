@@ -8,4 +8,4 @@ Primary search score: 7530/8192. Matched policy-only score: 6561/8192. Human all
 
 This model is specialized to Necrobinder combat decisions and the simulator/schema snapshot. It does not provide a complete map, reward, card-pick or merchant agent. Unsupported or changed game content can invalidate predictions. Historical scores use no persistent search reuse; current source includes optional reuse. A freshly rebuilt binary can produce different close decisions due to batching and floating-point behavior.
 
-Weights are included in this private research repository without a new public redistribution license. Upstream game content and human-derived data retain their respective rights. See `ATTRIBUTION.md` and `PROVENANCE.md`.
+The weights are licensed under [CC BY-SA 4.0](../WEIGHTS-LICENSE.md), requiring attribution and share-alike for shared adaptations. Upstream game content and human-derived data retain their respective rights. See `ATTRIBUTION.md` and `PROVENANCE.md`.

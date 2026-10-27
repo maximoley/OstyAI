@@ -2,16 +2,16 @@
 
 [README comparison table](../../README.md#matched-agent-comparison) · [Protocol](../../docs/HUMAN_COMPARISON.md)
 
-The original three configurations and the boss-256 follow-up completed on October 26, 2026. Uniform-32 was cancelled before starting. These results use the offline compatibility-prepared 512-run panel and do not replace the historical step-5500 results. [Complete comparison](comparison.json) · [Suite verification](results-verification.json).
+All five timed configurations completed on October 26, 2026. Uniform-32 was cancelled before starting. These results use the offline compatibility-prepared 512-run panel and do not replace the historical step-5500 results. [Complete comparison](comparison.json) · [Suite verification](results-verification.json).
 
-| Metric | Mentor MCTS | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
-|---|---|---|---|---|
-| Simulations per decision | 250 non-boss; 1,000 boss; rollout cap 200 | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
-| Trial win rate | **92.51%** | **91.64%** | **92.27%** | **80.08%** |
-| Majority combat win rate | **93.41%** | **92.71%** | **93.35%** | **81.38%** |
-| Every fight ≥2/3 | **31.05%** | **23.05%** | **27.34%** | **2.73%** |
-| Every fight ≥1/3 | **52.54%** | **50.00%** | **55.86%** | **12.70%** |
-| Wall time | **1 h 22 min 7 s** | **44 min 45 s** | **1 h 6 min 24 s** | **5 min 16 s** |
+| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|---|
+| Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
+| Trial win rate | **92.51%** | **91.91%** | **91.64%** | **92.27%** | **80.08%** |
+| Majority combat win rate | **93.41%** | **92.78%** | **92.71%** | **93.35%** | **81.38%** |
+| Every fight ≥2/3 | **31.05%** | **29.88%** | **23.05%** | **27.34%** | **2.73%** |
+| Every fight ≥1/3 | **52.54%** | **48.44%** | **50.00%** | **55.86%** | **12.70%** |
+| Wall time | **1 h 22 min 7 s** | **50 min 51 s** | **44 min 45 s** | **1 h 6 min 24 s** | **5 min 16 s** |
 
 Unresolved/capped trials count as nonwins in the trial and majority metrics. HP means exclude unresolved trials. Tiered search improves trial win rate by **11.56 percentage points** over greedy policy; greedy policy completes the panel **8.50× faster**. Run-level outcomes aggregate independently initialized combats, not end-to-end played runs.
 
@@ -22,16 +22,16 @@ The successful tiered process also ran uninterrupted. When uniform-32 was cancel
 The policy-only process exited successfully with code 0. Its **315.9987-second external timer** includes startup and result writing; the summary's **307.9345-second evaluation timer** and **263.6714-second collection timer** have narrower scopes. All three timed arms completed before Queen diagnostic replays began. Production training resumed after the original suite, then paused again at step 5613 for the boss-256 follow-up.
 
 
-The boss-256 follow-up used the same step-5500 weights, native library, frozen trials, 80 workers and no search reuse. It exited successfully with **33,490 wins (92.27%)**, **11,294 majority wins (93.35%)**, **140/512 runs meeting every-fight ≥2/3 (27.34%)**, and **286/512 meeting ≥1/3 (55.86%)**. Its **3,983.8164-second external timer** includes startup and result writing; input verification is excluded. There were **15 unresolved trials** and **14.16 mean HP lost**. Training remained paused throughout this run. The separate MCTS 250/500 follow-up is not yet included.
+The boss-256 follow-up used the same step-5500 weights, native library, frozen trials, 80 workers and no search reuse. It exited successfully with **33,490 wins (92.27%)**, **11,294 majority wins (93.35%)**, **140/512 runs meeting every-fight ≥2/3 (27.34%)**, and **286/512 meeting ≥1/3 (55.86%)**. Its **3,983.8164-second external timer** includes startup and result writing; input verification is excluded. There were **15 unresolved trials** and **14.16 mean HP lost**. Training remained paused throughout this run. The MCTS 250/500 follow-up is now included below.
 
 ## Win rate by combat pool
 
-| Combat pool | Mentor MCTS 250/1,000 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
-|---|---|---|---|---|
-| Easy | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
-| Hard | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
-| Elite | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
-| Boss | **70.72%** | **64.78%** | **68.72%** | **48.76%** |
+| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+|---|---|---|---|---|---|
+| Easy | **99.75%** | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
+| Hard | **98.32%** | **98.32%** | **98.24%** | **98.19%** | **88.71%** |
+| Elite | **92.48%** | **92.48%** | **93.20%** | **93.12%** | **82.19%** |
+| Boss | **70.72%** | **67.17%** | **64.78%** | **68.72%** | **48.76%** |
 
 Win rates pool all three seeds; unresolved trials count as nonwins. Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**, using identical pool assignments. [Counts and verification](pool-win-rates.json) · [Reproduce](../../scripts/summarize_pool_win_rates.py).
 
@@ -75,3 +75,11 @@ All published summary counts, HP-loss means, combat rows and run rows were recom
 - [source-hashes.json](source-hashes.json): original JSON hashes and stored-file hashes for exported source artifacts.
 
 The repository's original frozen fixture shards are unchanged. The prepared copies were generated using the [offline compatibility procedure](../../docs/HUMAN_COMPARISON.md#offline-compatibility-preparation). MCTS uses the updated Rust simulator with its original evaluator; it does not apply the neural model's potion-cost objective. Retain this objective distinction when comparing the agents.
+
+## MCTS 250/500 follow-up
+
+The reduced boss budget produced **91.91% trial wins**, **92.78% majority wins**, **29.88% every-fight ≥2/3**, and **48.44% every-fight ≥1/3** in **50 min 51 s**. It had one unresolved trial and 11.88 mean HP lost. Relative to MCTS250/1000, runtime fell **38.1%** and trial win rate fell **0.60 percentage points**.
+
+The successful fresh process completed all 36,297 trials with 80 workers and rollout cap 200. Its external timer includes process startup and output writing. An earlier launcher-import failure lasted 1.36 seconds and completed zero trials; it is excluded from the successful timing. Training resumed only after this final timed run and migration tests.
+
+[Summary](mentor250_boss500/summary.json) · [Timing](mentor250_boss500/timing.json) · [Provenance](mentor250_boss500/provenance.json) · [Recomputed metrics](mentor250_boss500/readme-metrics.json) · [Trials](mentor250_boss500/trials.json.gz) · [Combats](mentor250_boss500/combats.json.gz) · [Runs](mentor250_boss500/runs.json.gz)

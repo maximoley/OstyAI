@@ -24,7 +24,6 @@ def main():
     commands=[
         ('mentor_rl_training',[python,str(package/'scripts/benchmark_mcts.py'),'--prepared',str(prepared),'--workers','80','--rollout-depth','200','--budget-preset','rl-training']),
         ('model5500_tiered_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared)]),
-        ('model5500_uniform32_no_reuse',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--uniform-simulations','32']),
         ('model5500_policy_greedy',[python,str(package/'scripts/evaluate.py'),'--suite','human','--workers','80','--human-fixtures',str(prepared),'--policy-only']),
     ]
     all_started=json.loads((root/'status.json').read_text())['started_at_unix'] if a.adopt_first else time.time();rows=[]
@@ -68,7 +67,7 @@ def main():
         row.update(configuration=name,wall_seconds=elapsed,workers=80,summary=str(summary_path),native_sha256=lib_hash,manifest_sha256=s['manifest_sha256'])
         rows.append(row);save(root/'comparison.json',dict(complete=len(rows)==len(commands),results=rows,started_at_unix=all_started,time=time.time()))
     assert len({r['manifest_sha256']for r in rows})==1
-    # Resume only our own pause, after all four complete, preserving any later STOP.
+    # Resume only our own pause, after all three complete, preserving any later STOP.
     assert not (root/'STOP').exists() and stop.read_text()==stop_text
     assert sha(a.production/'production/latest.pt')==pause['checkpoint_sha256']
     assert sha(Path(pause['replay_file']))==pause['replay_sha256']
