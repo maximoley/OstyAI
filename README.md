@@ -102,9 +102,9 @@ Step **6,000** won **33,587/36,297 trials (92.53%)**, up **0.89 percentage point
 <details>
 <summary>Show annotated validation plot</summary>
 
-![Primary validation win rate through step 6100, preserving earlier changes and marking boss256 and reuse-off](docs/assets/validation_winrate_annotated.png)
+![Search and policy-only validation win rates through step 6100, with all change markers](docs/assets/validation_winrate_annotated.png)
 
-The plot extends through **step 6,100**, which scored **92.05% with search / 85.31% with greedy policy** across 8,192 trials; unresolved trials count as nonwins. Search used boss256 and no reuse. New markers show the **boss128 → boss256 increase after step 5,613**, doubled boss collection and rebalanced quotas, and **reuse disabled after step 5,645**. Earlier markers are preserved. Changes also affect evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006100.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
+The dashed policy-only line shows recorded checkpoints **5,300–6,100**, with no inferred earlier results. The plot extends through **step 6,100**, which scored **92.05% with search / 85.31% with greedy policy** across 8,192 trials; unresolved trials count as nonwins. Search used boss256 and no reuse. New markers show the **boss128 → boss256 increase after step 5,613**, doubled boss collection and rebalanced quotas, and **reuse disabled after step 5,645**. Earlier markers are preserved. Changes also affect evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006100.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
 
 </details>
 
