@@ -74,7 +74,7 @@ The **step-6,000 scheduled benchmark** replaces the main boss128 result. Other c
 | Every fight ≥1/3 | **52.54%** | **48.44%** | **58.59%** | **55.86%** | **12.70%** |
 | Wall time | **1 h 22 min 7 s** | **50 min 51 s** | **34 min 47 s†** | **1 h 6 min 24 s** | **5 min 16 s** |
 
-† Step 6,000 reports **scheduled evaluation time**, excluding process startup/model initialization; other columns report full-process wall time from sequential runs with training paused. These timings are not directly equivalent. The step-5,500 boss256 and greedy columns remain historical references, not step-6,000 evaluations.
+† Step 6,000 reports **scheduled evaluation time**, excluding process startup/model initialization; other columns report full-process wall time from sequential runs with training paused.
 
 Unresolved trials were **0 / 1 / 3 / 15 / 1,126**, and mean HP lost was **11.57 / 11.88 / 13.40 / 14.16 / 18.96**, in column order. MCTS retains its upstream evaluator rather than the neural potion-penalty objective; fixture compatibility is handled offline. See the linked results for counts and provenance.
 
