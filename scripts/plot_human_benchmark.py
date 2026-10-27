@@ -27,3 +27,6 @@ fig.text(.065,.088,'Run scores aggregate independent historical combat starts; t
 fig.text(.065,.045,'Unresolved trials count as nonwins. Steps 5,500 and 6,000 use boss128 without reuse; earlier search settings and simulator versions differ.',color='#555555',fontsize=10)
 fig.subplots_adjust(left=.065,right=.975,top=.78,bottom=.23,wspace=.25)
 for ext in ['png','svg']:fig.savefig(ROOT/f'docs/assets/human_benchmark_vs_optimizer_step.{ext}',dpi=180,facecolor='white')
+
+svg=ROOT/"docs/assets/human_benchmark_vs_optimizer_step.svg"
+svg.write_text("\n".join(line.rstrip() for line in svg.read_text().splitlines())+"\n")
