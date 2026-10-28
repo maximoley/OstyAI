@@ -1,0 +1,31 @@
+{
+  "evaluation_mode": "search",
+  "model_sha256": "219fb620575f90c40b758247a5f8bb8c54db2c9a46fc331562e64531b1aab04c",
+  "fixture_sha256": "ac9b16e17dd80b4109d5314d17627df1567cb61777f9caaeee33e5c7d03a984a",
+  "native_sha256": "c9df84d0bdff0f4170a4e30f18e5604627d4fc1c9afe25e9be29244b90a58248",
+  "update": 6800,
+  "episodes": [
+    1000000,
+    1000001
+  ],
+  "simulation_budgets": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "simulations": {
+    "easy": 32,
+    "hard": 64,
+    "elite": 96,
+    "boss": 256
+  },
+  "action_selection": "gumbel_search",
+  "max_actions": 1000,
+  "skip_forced_actions": true,
+  "search_reuse": {
+    "enabled": false,
+    "capacity_per_combat": 512,
+    "schema": 1
+  }
+}

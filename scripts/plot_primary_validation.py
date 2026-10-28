@@ -31,7 +31,8 @@ events=[
 (5020,'Combat-end pending-choice repair (resume point)','simulator'),
 (5500,'Persistent search reuse enabled after this checkpoint','training'),
 (5613,'Boss: 128 → 256; double boss starts + rebalance quotas','training'),
-(5645,'Persistent search reuse disabled','training')]
+(5645,'Persistent search reuse disabled','training'),
+(6500,'Training: elite 96 → 200; boss 256 → 400','training')]
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'axes.spines.top':False,'axes.spines.right':False})
 fig=plt.figure(figsize=(14,9.2));ax=fig.add_axes([.08,.38,.87,.46])
 ax.plot(x,y,color='#156e91',lw=2.6,zorder=5,label='Gumbel search')
@@ -51,7 +52,7 @@ ax.annotate(f'{y[-1]:.2f}%',(x[-1],y[-1]),xytext=(0,15),textcoords='offset point
 fig.text(.08,.94,'Validation win rate over training',fontsize=22,fontweight='bold')
 fig.text(.08,.89,f'Search and policy-only validation · 8,192 trials per checkpoint · latest step {max(x):,}',fontsize=12,color='#555555')
 for j,(step,label,kind) in enumerate(events):
- col=j//6;row=j%6;xp=.08+.46*col;yp=.285-.034*row
+ col=j//7;row=j%7;xp=.08+.46*col;yp=.285-.030*row
  fig.text(xp,yp,f'{j+1}',fontsize=9,color='white',ha='center',va='center',bbox=dict(boxstyle='circle,pad=.25',fc=colors[kind],ec='none'))
  fig.text(xp+.018,yp,f'{step:,}  {label}',fontsize=9.3,va='center')
 fig.text(.08,.049,'Markers indicate changes after the named checkpoint. Additional dead-enemy import repair resumed at step 4,550.',fontsize=9,color='#555555')

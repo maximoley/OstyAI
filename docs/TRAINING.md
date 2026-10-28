@@ -118,3 +118,9 @@ Primary search and matched policy-only validation run every 100 optimizer update
 - **Gumbel search:** Ivo Danihelka, Arthur Guez, Julian Schrittwieser and David Silver (2022). [*Policy improvement by planning with Gumbel*](https://openreview.net/forum?id=bERaNdoegnO). *ICLR 2022*. This motivates sampling root candidates without replacement and allocating simulations with sequential halving for policy improvement.
 
 OstyAI is a custom adaptation: it uses an explicit Rust simulator, stochastic belief draws, historical/generated combat starts and shaped potion/HP utility. It is neither an exact reproduction of these papers nor full-game self-play starting from a new run. The value network predicts combat utility, not a learned transition model.
+
+## Training continuation after step 6,500
+
+Training uses easy32 / hard64 / elite200 / boss400, with exact learner quotas 753 / 1,507 / 4,708 / 9,416 per 16,384-example update. Doubled boss collection remains enabled; persistent search reuse is off. Primary evaluation stays at 32/64/96/256 and human evaluation at 32/64/96/128. Policy-only evaluation remains zero-search greedy decoding. These settings supersede historical configurations above.
+
+Training was paused by request at step 6,817 with a saved checkpoint and both trainer and supervisor exited. The latest scheduled primary evaluation is step 6,800; the latest human evaluation remains 6,500.

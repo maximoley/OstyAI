@@ -4,7 +4,7 @@
 
 The plan is to train a strong, fast combat model, then a run-decision model for pathing, rewards, shops and deck building. This repository covers the combat model; current results do not establish superhuman play.
 
-OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-5500 model**, training code, frozen benchmarks and results through **step 6,500**. The newer checkpoint weights are not yet bundled. Full training datasets are excluded.
+OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-5500 model**, training code, frozen benchmarks and results through **step 6,800**. The newer checkpoint weights are not yet bundled. Full training datasets are excluded.
 
 Built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, which provides the original simulator, MCTS and belief-draw implementation.
 
@@ -93,7 +93,7 @@ Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss 
 
 Boss256 achieved **93.27% trial wins** and **35.16% every-fight ≥2/3**, versus **92.97% / 31.05%** with boss128. Greedy policy achieved **88.46%** in **3 min 37 s**. [Per-combat outcomes](benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv) and a [failed-trial fixture index](benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz) are included for targeted analysis.
 
-Training is paused at **6,500**. The downloadable weights remain step **5,500**; these newer results do not change the bundled model.
+Training is paused at **6,817**, with its checkpoint saved. The downloadable weights remain step **5,500**; these newer results do not change the bundled model.
 
 ## Training progress
 
@@ -102,9 +102,9 @@ Training is paused at **6,500**. The downloadable weights remain step **5,500**;
 <details>
 <summary>Show annotated validation plot</summary>
 
-![Search and policy-only validation win rates through step 6500, with all change markers](docs/assets/validation_winrate_annotated.png)
+![Search and policy-only validation win rates through step 6800, with all change markers](docs/assets/validation_winrate_annotated.png)
 
-At **step 6,500**, primary validation scored **93.51% with search / 88.92% with greedy policy** across 8,192 trials. Policy-only points cover recorded steps **5,300–6,500**. All change markers are preserved, including **boss128 → boss256 after 5,613** and **reuse disabled after 5,645**. Changes also affect evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006500.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
+At **step 6,800**, primary validation scored **93.24% with search / 88.28% with greedy policy** across 8,192 trials. Unresolved trials count as nonwins (search: 0; policy: 47). Policy-only points cover recorded steps **5,300–6,800**. All change markers are preserved, including the increase after **6,500** to training **elite200 / boss400**. Primary validation remains **elite96 / boss256**, and human validation remains **elite96 / boss128**. Changes elsewhere in the history also affected evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006800.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
 
 </details>
 
@@ -197,14 +197,14 @@ Each cycle runs **collection → learning → actor synchronization**:
 
 | Pool | Simulations per non-forced decision | Examples per update |
 |---|---:|---:|
-| Easy / native Weak | 32 | 1,170 |
-| Hard / native Normal, unclassified events | 64 | 2,341 |
-| Elite | 96 | 3,511 |
-| Boss | 256 | 9,362 |
+| Easy / native Weak | 32 | 753 |
+| Hard / native Normal, unclassified events | 64 | 1,507 |
+| Elite | 200 | 4,708 |
+| Boss | 400 | 9,416 |
 
 After step **5,613**, boss search increased to **256** and collection appends one distinct eligible boss start for each original boss, separately within human/generated sources. Every original fight is retained; other pools are unchanged. The first resumed bank grew from **137 to 274 boss starts** (**1,153 total combats**). [Implementation and verification](docs/TRAINING.md#boss-augmentation-after-step-5613).
 
-Within each pool, sampling mixes value-error priorities with **5% uniform sampling**. Importance weights `1 / (N_pool × P(sample | pool))` preserve the intended **7.14/14.29/21.43/57.14%** pool mixture. Quotas apply across the full update; microbatches are packed by token length. There is no learner-stage human/generated quota, so the 50/50 start mixture need not yield 50/50 decision examples.
+Within each pool, sampling mixes value-error priorities with **5% uniform sampling**. Importance weights `1 / (N_pool × P(sample | pool))` preserve the intended **4.60/9.20/28.74/57.47%** pool mixture. Quotas apply across the full update; microbatches are packed by token length. There is no learner-stage human/generated quota, so the 50/50 start mixture need not yield 50/50 decision examples.
 
 ### Loss and evaluation
 
@@ -215,7 +215,7 @@ utility = win + 0.5 * (max(final_hp, 0) / initial_hp) * (1 - spent_potion_cost)
               + (0 if win else 0.05 * damage_progress)
 ```
 
-Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500** with fixed **32/64/96/128** simulation budgets. Training and primary search validation use **32/64/96/256**. The target is **10,000 updates**; the bundled model is step 5500 and its reported evaluations use no search reuse.
+Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500** with fixed **32/64/96/128** simulation budgets. After step **6,500**, training uses **32/64/200/400**, with learner quotas rebalanced proportionally. Primary search validation stays at **32/64/96/256** for comparison with previous checkpoints. The target is **10,000 updates**; the bundled model is step 5500 and its reported evaluations use no search reuse.
 
 [Full training configuration](docs/TRAINING.md)
 
