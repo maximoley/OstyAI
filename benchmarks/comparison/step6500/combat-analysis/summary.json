@@ -1,0 +1,26 @@
+{
+  "combats": 12099,
+  "trials_per_arm": 36297,
+  "arms": {
+    "model6500_boss128": {
+      "win": 33744,
+      "loss": 2547,
+      "unresolved": 6
+    },
+    "model6500_boss256": {
+      "win": 33854,
+      "loss": 2436,
+      "unresolved": 7
+    },
+    "model6500_policy_greedy": {
+      "win": 32107,
+      "loss": 4133,
+      "unresolved": 57
+    }
+  },
+  "failed_trial_records": 9186,
+  "zero_wins_all_arms": 189,
+  "fixture_manifest_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f",
+  "ranking": "Nonwins across both search arms descending, then all three arms descending",
+  "training_started": false
+}

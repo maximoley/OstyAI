@@ -1,0 +1,73 @@
+{
+  "complete": true,
+  "results": [
+    {
+      "name": "model6500_boss128",
+      "trial_wins": 33744,
+      "trials": 36297,
+      "trial_win_rate": 0.9296636085626911,
+      "combat_majority_wins": 11374,
+      "runs_won_every_fight_2of3": 159,
+      "runs_won_every_fight_1of3": 299,
+      "unresolved_trials": 6,
+      "timing": {
+        "started_at": "2026-10-27T22:41:40.525942+00:00",
+        "finished_at": "2026-10-27T23:17:19.242999+00:00",
+        "external_wall_seconds": 2138.7169052511454,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n3260224, python, 3620 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    },
+    {
+      "name": "model6500_boss256",
+      "trial_wins": 33854,
+      "trials": 36297,
+      "trial_win_rate": 0.9326941620519602,
+      "combat_majority_wins": 11418,
+      "runs_won_every_fight_2of3": 180,
+      "runs_won_every_fight_1of3": 311,
+      "unresolved_trials": 7,
+      "timing": {
+        "started_at": "2026-10-27T23:17:22.168524+00:00",
+        "finished_at": "2026-10-28T00:14:05.064725+00:00",
+        "external_wall_seconds": 3402.8961511068046,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    },
+    {
+      "name": "model6500_policy_greedy",
+      "trial_wins": 32107,
+      "trials": 36297,
+      "trial_win_rate": 0.884563462545114,
+      "combat_majority_wins": 10855,
+      "runs_won_every_fight_2of3": 83,
+      "runs_won_every_fight_1of3": 196,
+      "unresolved_trials": 57,
+      "timing": {
+        "started_at": "2026-10-28T00:14:07.693963+00:00",
+        "finished_at": "2026-10-28T00:17:44.921734+00:00",
+        "external_wall_seconds": 217.227720040828,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    }
+  ],
+  "matched_trial_ids": true,
+  "training_remains_paused": true
+}

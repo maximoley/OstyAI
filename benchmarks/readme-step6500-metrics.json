@@ -1,0 +1,914 @@
+{
+  "runs": 512,
+  "runs_won_every_fight": 161,
+  "run_win_rate": 0.314453125,
+  "unresolved_runs": 0,
+  "combats": 12099,
+  "wins": 11370,
+  "losses": 729,
+  "unresolved": 0,
+  "win_rate": 0.9397470865360774,
+  "trial_win_rate": 0.9292779017549659,
+  "average_hp_lost": 13.26193624817478,
+  "trials": 36297,
+  "completed_trials": 36291,
+  "trial_wins": 33730,
+  "unresolved_trials": 6,
+  "completed_trial_win_rate": 0.9294315395001516,
+  "trial_average_hp_lost": 13.260615579620291,
+  "winning_trial_average_hp_lost": 10.835606285206048,
+  "by": {
+    "act": {
+      "1": {
+        "combats": 4290,
+        "wins": 4168,
+        "losses": 122,
+        "unresolved": 0,
+        "win_rate": 0.9715617715617716,
+        "trial_win_rate": 0.9622377622377623,
+        "average_hp_lost": 9.518026418026418
+      },
+      "2": {
+        "combats": 3775,
+        "wins": 3607,
+        "losses": 168,
+        "unresolved": 0,
+        "win_rate": 0.9554966887417219,
+        "trial_win_rate": 0.9460485651214128,
+        "average_hp_lost": 11.717527593818984
+      },
+      "3": {
+        "combats": 4034,
+        "wins": 3595,
+        "losses": 439,
+        "unresolved": 0,
+        "win_rate": 0.8911750123946455,
+        "trial_win_rate": 0.8785324739712445,
+        "average_hp_lost": 18.68868782019501
+      }
+    },
+    "encounter": {
+      "AEONGLASS_BOSS": {
+        "combats": 329,
+        "wins": 183,
+        "losses": 146,
+        "unresolved": 0,
+        "win_rate": 0.5562310030395137,
+        "trial_win_rate": 0.5501519756838906,
+        "average_hp_lost": 39.60688956433637
+      },
+      "AXEBOTS_NORMAL": {
+        "combats": 121,
+        "wins": 121,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9944903581267218,
+        "average_hp_lost": 7.8264462809917354
+      },
+      "BATTLEWORN_DUMMY_EVENT_V1_ENCOUNTER": {
+        "combats": 16,
+        "wins": 16,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 0.02083333333333333
+      },
+      "BATTLEWORN_DUMMY_EVENT_V2_ENCOUNTER": {
+        "combats": 43,
+        "wins": 43,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 0.06201550387596899
+      },
+      "BATTLEWORN_DUMMY_EVENT_V3_ENCOUNTER": {
+        "combats": 12,
+        "wins": 12,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 0.1111111111111111
+      },
+      "BOWLBUGS_NORMAL": {
+        "combats": 115,
+        "wins": 114,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.991304347826087,
+        "trial_win_rate": 0.9884057971014493,
+        "average_hp_lost": 9.484057971014492
+      },
+      "BOWLBUGS_WEAK": {
+        "combats": 262,
+        "wins": 262,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9987277353689568,
+        "average_hp_lost": 7.838422391857506
+      },
+      "BYGONE_EFFIGY_ELITE": {
+        "combats": 166,
+        "wins": 155,
+        "losses": 11,
+        "unresolved": 0,
+        "win_rate": 0.9337349397590361,
+        "trial_win_rate": 0.9056224899598394,
+        "average_hp_lost": 18.3714859437751
+      },
+      "BYRDONIS_ELITE": {
+        "combats": 169,
+        "wins": 165,
+        "losses": 4,
+        "unresolved": 0,
+        "win_rate": 0.9763313609467456,
+        "trial_win_rate": 0.9526627218934911,
+        "average_hp_lost": 18.6232741617357
+      },
+      "CEREMONIAL_BEAST_BOSS": {
+        "combats": 73,
+        "wins": 68,
+        "losses": 5,
+        "unresolved": 0,
+        "win_rate": 0.9315068493150684,
+        "trial_win_rate": 0.8904109589041096,
+        "average_hp_lost": 18.91780821917808
+      },
+      "CHOMPERS_NORMAL": {
+        "combats": 119,
+        "wins": 119,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9943977591036415,
+        "average_hp_lost": 10.663865546218487
+      },
+      "CONSTRUCT_MENAGERIE_NORMAL": {
+        "combats": 126,
+        "wins": 125,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9920634920634921,
+        "trial_win_rate": 0.9603174603174603,
+        "average_hp_lost": 15.727513227513228
+      },
+      "CORPSE_SLUGS_NORMAL": {
+        "combats": 57,
+        "wins": 56,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9824561403508771,
+        "trial_win_rate": 0.9649122807017544,
+        "average_hp_lost": 7.678362573099415
+      },
+      "CORPSE_SLUGS_WEAK": {
+        "combats": 227,
+        "wins": 227,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.400881057268722
+      },
+      "CUBEX_CONSTRUCT_NORMAL": {
+        "combats": 50,
+        "wins": 50,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 7.22
+      },
+      "CULTISTS_NORMAL": {
+        "combats": 57,
+        "wins": 57,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9590643274853801,
+        "average_hp_lost": 9.555555555555555
+      },
+      "DECIMILLIPEDE_ELITE": {
+        "combats": 359,
+        "wins": 333,
+        "losses": 26,
+        "unresolved": 0,
+        "win_rate": 0.9275766016713092,
+        "trial_win_rate": 0.9164345403899722,
+        "average_hp_lost": 20.402042711234913
+      },
+      "DENSE_VEGETATION_EVENT_ENCOUNTER": {
+        "combats": 13,
+        "wins": 13,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9743589743589743,
+        "average_hp_lost": 9.35897435897436
+      },
+      "DEVOTED_SCULPTOR_WEAK": {
+        "combats": 350,
+        "wins": 347,
+        "losses": 3,
+        "unresolved": 0,
+        "win_rate": 0.9914285714285714,
+        "trial_win_rate": 0.9838095238095238,
+        "average_hp_lost": 10.960952380952381
+      },
+      "ENTOMANCER_ELITE": {
+        "combats": 374,
+        "wins": 358,
+        "losses": 16,
+        "unresolved": 0,
+        "win_rate": 0.9572192513368984,
+        "trial_win_rate": 0.9376114081996435,
+        "average_hp_lost": 15.398395721925134
+      },
+      "EXOSKELETONS_NORMAL": {
+        "combats": 112,
+        "wins": 111,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9910714285714286,
+        "trial_win_rate": 0.9821428571428571,
+        "average_hp_lost": 7.982142857142857
+      },
+      "EXOSKELETONS_WEAK": {
+        "combats": 246,
+        "wins": 245,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9959349593495935,
+        "trial_win_rate": 0.997289972899729,
+        "average_hp_lost": 5.178861788617886
+      },
+      "FABRICATOR_NORMAL": {
+        "combats": 101,
+        "wins": 99,
+        "losses": 2,
+        "unresolved": 0,
+        "win_rate": 0.9801980198019802,
+        "trial_win_rate": 0.9735973597359736,
+        "average_hp_lost": 9.805280528052805
+      },
+      "FLYCONID_NORMAL": {
+        "combats": 27,
+        "wins": 26,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9629629629629629,
+        "trial_win_rate": 0.9382716049382716,
+        "average_hp_lost": 10.74074074074074
+      },
+      "FOGMOG_NORMAL": {
+        "combats": 39,
+        "wins": 39,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 3.931623931623932
+      },
+      "FOSSIL_STALKER_NORMAL": {
+        "combats": 45,
+        "wins": 44,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9777777777777777,
+        "trial_win_rate": 0.9555555555555556,
+        "average_hp_lost": 10.192592592592593
+      },
+      "FROG_KNIGHT_NORMAL": {
+        "combats": 111,
+        "wins": 110,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.990990990990991,
+        "trial_win_rate": 0.993993993993994,
+        "average_hp_lost": 6.495495495495495
+      },
+      "FUZZY_WURM_CRAWLER_WEAK": {
+        "combats": 177,
+        "wins": 177,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 1.9642184557438795
+      },
+      "GLOBE_HEAD_NORMAL": {
+        "combats": 106,
+        "wins": 106,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 6.59433962264151
+      },
+      "GREMLIN_MERC_NORMAL": {
+        "combats": 64,
+        "wins": 63,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.984375,
+        "trial_win_rate": 0.9791666666666666,
+        "average_hp_lost": 6.494791666666667
+      },
+      "HAUNTED_SHIP_NORMAL": {
+        "combats": 64,
+        "wins": 64,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 4.572916666666667
+      },
+      "HUNTER_KILLER_NORMAL": {
+        "combats": 135,
+        "wins": 134,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9925925925925926,
+        "trial_win_rate": 0.9901234567901235,
+        "average_hp_lost": 11.735802469135802
+      },
+      "INFESTED_PRISMS_ELITE": {
+        "combats": 361,
+        "wins": 360,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.997229916897507,
+        "trial_win_rate": 0.9935364727608494,
+        "average_hp_lost": 3.383194829178209
+      },
+      "INKLETS_NORMAL": {
+        "combats": 41,
+        "wins": 41,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 11.520325203252032
+      },
+      "KAISER_CRAB_BOSS": {
+        "combats": 146,
+        "wins": 122,
+        "losses": 24,
+        "unresolved": 0,
+        "win_rate": 0.8356164383561644,
+        "trial_win_rate": 0.815068493150685,
+        "average_hp_lost": 25.052511415525114
+      },
+      "KNIGHTS_ELITE": {
+        "combats": 308,
+        "wins": 291,
+        "losses": 17,
+        "unresolved": 0,
+        "win_rate": 0.9448051948051948,
+        "trial_win_rate": 0.9090909090909091,
+        "average_hp_lost": 21.314935064935064
+      },
+      "KNOWLEDGE_DEMON_BOSS": {
+        "combats": 197,
+        "wins": 153,
+        "losses": 44,
+        "unresolved": 0,
+        "win_rate": 0.7766497461928934,
+        "trial_win_rate": 0.7614213197969543,
+        "average_hp_lost": 22.55668358714044
+      },
+      "LAGAVULIN_MATRIARCH_BOSS": {
+        "combats": 100,
+        "wins": 89,
+        "losses": 11,
+        "unresolved": 0,
+        "win_rate": 0.89,
+        "trial_win_rate": 0.8833333333333333,
+        "average_hp_lost": 9.61
+      },
+      "LIVING_FOG_NORMAL": {
+        "combats": 62,
+        "wins": 62,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.935483870967742
+      },
+      "LOUSE_PROGENITOR_NORMAL": {
+        "combats": 121,
+        "wins": 121,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9889807162534435,
+        "average_hp_lost": 6.3911845730027546
+      },
+      "MAWLER_NORMAL": {
+        "combats": 34,
+        "wins": 34,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 4.715686274509804
+      },
+      "MECHA_KNIGHT_ELITE": {
+        "combats": 313,
+        "wins": 284,
+        "losses": 29,
+        "unresolved": 0,
+        "win_rate": 0.9073482428115016,
+        "trial_win_rate": 0.8913738019169329,
+        "average_hp_lost": 24.356762513312034
+      },
+      "MYSTERIOUS_KNIGHT_EVENT_ENCOUNTER": {
+        "combats": 17,
+        "wins": 17,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 15.019607843137255
+      },
+      "MYTES_NORMAL": {
+        "combats": 121,
+        "wins": 119,
+        "losses": 2,
+        "unresolved": 0,
+        "win_rate": 0.9834710743801653,
+        "trial_win_rate": 0.9696969696969697,
+        "average_hp_lost": 12.016528925619834
+      },
+      "NIBBITS_NORMAL": {
+        "combats": 35,
+        "wins": 32,
+        "losses": 3,
+        "unresolved": 0,
+        "win_rate": 0.9142857142857143,
+        "trial_win_rate": 0.9333333333333333,
+        "average_hp_lost": 8.238095238095237
+      },
+      "NIBBITS_WEAK": {
+        "combats": 157,
+        "wins": 157,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 3.4883227176220806
+      },
+      "OVERGROWTH_CRAWLERS": {
+        "combats": 39,
+        "wins": 38,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9743589743589743,
+        "trial_win_rate": 0.9829059829059829,
+        "average_hp_lost": 8.162393162393162
+      },
+      "OVICOPTER_NORMAL": {
+        "combats": 137,
+        "wins": 136,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9927007299270073,
+        "trial_win_rate": 0.9902676399026764,
+        "average_hp_lost": 8.873479318734793
+      },
+      "OWL_MAGISTRATE_NORMAL": {
+        "combats": 117,
+        "wins": 117,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9943019943019943,
+        "average_hp_lost": 8.518518518518519
+      },
+      "PHANTASMAL_GARDENERS_ELITE": {
+        "combats": 239,
+        "wins": 236,
+        "losses": 3,
+        "unresolved": 0,
+        "win_rate": 0.9874476987447699,
+        "trial_win_rate": 0.9637377963737797,
+        "average_hp_lost": 11.90516039051604
+      },
+      "PHROG_PARASITE_ELITE": {
+        "combats": 167,
+        "wins": 154,
+        "losses": 13,
+        "unresolved": 0,
+        "win_rate": 0.9221556886227545,
+        "trial_win_rate": 0.8822355289421158,
+        "average_hp_lost": 17.6626746506986
+      },
+      "PUNCH_CONSTRUCT_NORMAL": {
+        "combats": 66,
+        "wins": 66,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 3.919191919191919
+      },
+      "PUNCH_OFF_EVENT_ENCOUNTER": {
+        "combats": 6,
+        "wins": 5,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.8333333333333334,
+        "trial_win_rate": 0.8888888888888888,
+        "average_hp_lost": 26.166666666666664
+      },
+      "QUEEN_BOSS": {
+        "combats": 346,
+        "wins": 251,
+        "losses": 95,
+        "unresolved": 0,
+        "win_rate": 0.7254335260115607,
+        "trial_win_rate": 0.7003853564547207,
+        "average_hp_lost": 33.066473988439306
+      },
+      "RUBY_RAIDERS_NORMAL": {
+        "combats": 35,
+        "wins": 34,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9714285714285714,
+        "trial_win_rate": 0.9809523809523809,
+        "average_hp_lost": 10.41904761904762
+      },
+      "SCROLLS_OF_BITING_NORMAL": {
+        "combats": 84,
+        "wins": 83,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9880952380952381,
+        "trial_win_rate": 0.9801587301587301,
+        "average_hp_lost": 11.642857142857142
+      },
+      "SCROLLS_OF_BITING_WEAK": {
+        "combats": 328,
+        "wins": 327,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9969512195121951,
+        "trial_win_rate": 0.9959349593495935,
+        "average_hp_lost": 9.132113821138212
+      },
+      "SEAPUNK_NORMAL": {
+        "combats": 53,
+        "wins": 53,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9937106918238994,
+        "average_hp_lost": 9.30817610062893
+      },
+      "SEAPUNK_WEAK": {
+        "combats": 205,
+        "wins": 205,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 3.970731707317073
+      },
+      "SEWER_CLAM_NORMAL": {
+        "combats": 57,
+        "wins": 57,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9941520467836257,
+        "average_hp_lost": 2.6023391812865495
+      },
+      "SHRINKER_BEETLE_WEAK": {
+        "combats": 165,
+        "wins": 165,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 1.3494949494949495
+      },
+      "SKULKING_COLONY_ELITE": {
+        "combats": 226,
+        "wins": 220,
+        "losses": 6,
+        "unresolved": 0,
+        "win_rate": 0.9734513274336283,
+        "trial_win_rate": 0.9631268436578171,
+        "average_hp_lost": 15.048672566371682
+      },
+      "SLIMED_BERSERKER_NORMAL": {
+        "combats": 109,
+        "wins": 109,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.981651376146789,
+        "average_hp_lost": 7.376146788990826
+      },
+      "SLIMES_NORMAL": {
+        "combats": 28,
+        "wins": 28,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.916666666666667
+      },
+      "SLIMES_WEAK": {
+        "combats": 160,
+        "wins": 160,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 3.8583333333333334
+      },
+      "SLITHERING_STRANGLER_NORMAL": {
+        "combats": 29,
+        "wins": 29,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9885057471264368,
+        "average_hp_lost": 8.045977011494253
+      },
+      "SLUDGE_SPINNER_WEAK": {
+        "combats": 224,
+        "wins": 224,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 2.380952380952381
+      },
+      "SNAPPING_JAXFRUIT_NORMAL": {
+        "combats": 45,
+        "wins": 43,
+        "losses": 2,
+        "unresolved": 0,
+        "win_rate": 0.9555555555555556,
+        "trial_win_rate": 0.9629629629629629,
+        "average_hp_lost": 13.170370370370371
+      },
+      "SOUL_FYSH_BOSS": {
+        "combats": 98,
+        "wins": 79,
+        "losses": 19,
+        "unresolved": 0,
+        "win_rate": 0.8061224489795918,
+        "trial_win_rate": 0.7857142857142857,
+        "average_hp_lost": 21.935374149659864
+      },
+      "SOUL_NEXUS_ELITE": {
+        "combats": 318,
+        "wins": 314,
+        "losses": 4,
+        "unresolved": 0,
+        "win_rate": 0.9874213836477987,
+        "trial_win_rate": 0.9696016771488469,
+        "average_hp_lost": 16.093815513626833
+      },
+      "SPINY_TOAD_NORMAL": {
+        "combats": 139,
+        "wins": 137,
+        "losses": 2,
+        "unresolved": 0,
+        "win_rate": 0.9856115107913669,
+        "trial_win_rate": 0.9760191846522782,
+        "average_hp_lost": 7.410071942446043
+      },
+      "TERROR_EEL_ELITE": {
+        "combats": 240,
+        "wins": 229,
+        "losses": 11,
+        "unresolved": 0,
+        "win_rate": 0.9541666666666667,
+        "trial_win_rate": 0.9361111111111111,
+        "average_hp_lost": 16.90972222222222
+      },
+      "TEST_SUBJECT_BOSS": {
+        "combats": 349,
+        "wins": 210,
+        "losses": 139,
+        "unresolved": 0,
+        "win_rate": 0.6017191977077364,
+        "trial_win_rate": 0.5864374403056352,
+        "average_hp_lost": 36.82234957020057
+      },
+      "THE_INSATIABLE_BOSS": {
+        "combats": 169,
+        "wins": 121,
+        "losses": 48,
+        "unresolved": 0,
+        "win_rate": 0.7159763313609467,
+        "trial_win_rate": 0.6725838264299803,
+        "average_hp_lost": 25.17948717948718
+      },
+      "THE_KIN_BOSS": {
+        "combats": 84,
+        "wins": 74,
+        "losses": 10,
+        "unresolved": 0,
+        "win_rate": 0.8809523809523809,
+        "trial_win_rate": 0.8849206349206349,
+        "average_hp_lost": 17.71031746031746
+      },
+      "THE_LOST_AND_FORGOTTEN_NORMAL": {
+        "combats": 102,
+        "wins": 102,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9901960784313726,
+        "average_hp_lost": 9.160130718954248
+      },
+      "THE_OBSCURA_NORMAL": {
+        "combats": 130,
+        "wins": 130,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9871794871794872,
+        "average_hp_lost": 8.982051282051282
+      },
+      "THIEVING_HOPPER_WEAK": {
+        "combats": 261,
+        "wins": 261,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.946360153256705
+      },
+      "TOADPOLES_WEAK": {
+        "combats": 214,
+        "wins": 214,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.753894080996885
+      },
+      "TUNNELER_WEAK": {
+        "combats": 254,
+        "wins": 254,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9960629921259843,
+        "average_hp_lost": 7.711286089238845
+      },
+      "TURRET_OPERATOR_WEAK": {
+        "combats": 345,
+        "wins": 345,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9971014492753624,
+        "average_hp_lost": 8.327536231884057
+      },
+      "TWO_TAILED_RATS_NORMAL": {
+        "combats": 54,
+        "wins": 53,
+        "losses": 1,
+        "unresolved": 0,
+        "win_rate": 0.9814814814814815,
+        "trial_win_rate": 0.9876543209876543,
+        "average_hp_lost": 6.049382716049383
+      },
+      "VANTOM_BOSS": {
+        "combats": 63,
+        "wins": 54,
+        "losses": 9,
+        "unresolved": 0,
+        "win_rate": 0.8571428571428571,
+        "trial_win_rate": 0.8359788359788359,
+        "average_hp_lost": 21.87830687830688
+      },
+      "VINE_SHAMBLER_NORMAL": {
+        "combats": 42,
+        "wins": 42,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 1.0,
+        "average_hp_lost": 5.642857142857143
+      },
+      "WATERFALL_GIANT_BOSS": {
+        "combats": 94,
+        "wins": 87,
+        "losses": 7,
+        "unresolved": 0,
+        "win_rate": 0.925531914893617,
+        "trial_win_rate": 0.9113475177304965,
+        "average_hp_lost": 8.75886524822695
+      }
+    },
+    "room_type": {
+      "boss": {
+        "combats": 2048,
+        "wins": 1491,
+        "losses": 557,
+        "unresolved": 0,
+        "win_rate": 0.72802734375,
+        "trial_win_rate": 0.7097981770833334,
+        "average_hp_lost": 28.252115885416668
+      },
+      "elite": {
+        "combats": 3240,
+        "wins": 3099,
+        "losses": 141,
+        "unresolved": 0,
+        "win_rate": 0.9564814814814815,
+        "trial_win_rate": 0.9373456790123457,
+        "average_hp_lost": 16.377314814814813
+      },
+      "monster": {
+        "combats": 6811,
+        "wins": 6780,
+        "losses": 31,
+        "unresolved": 0,
+        "win_rate": 0.9954485391278813,
+        "trial_win_rate": 0.9914354230900994,
+        "average_hp_lost": 7.272549307492781
+      }
+    },
+    "version": {
+      "v0.109.1": {
+        "combats": 903,
+        "wins": 852,
+        "losses": 51,
+        "unresolved": 0,
+        "win_rate": 0.9435215946843853,
+        "trial_win_rate": 0.9335548172757475,
+        "average_hp_lost": 14.630121816168328
+      },
+      "v0.110.0": {
+        "combats": 47,
+        "wins": 47,
+        "losses": 0,
+        "unresolved": 0,
+        "win_rate": 1.0,
+        "trial_win_rate": 0.9716312056737588,
+        "average_hp_lost": 14.148936170212766
+      },
+      "v0.110.1": {
+        "combats": 1821,
+        "wins": 1717,
+        "losses": 104,
+        "unresolved": 0,
+        "win_rate": 0.942888522789676,
+        "trial_win_rate": 0.9324546952224053,
+        "average_hp_lost": 12.597290865824638
+      },
+      "v0.111.0": {
+        "combats": 9328,
+        "wins": 8754,
+        "losses": 574,
+        "unresolved": 0,
+        "win_rate": 0.9384648370497427,
+        "trial_win_rate": 0.928030303030303,
+        "average_hp_lost": 13.254770583190394
+      }
+    },
+    "replicate": {
+      "0": {
+        "trials": 12099,
+        "wins": 11280,
+        "win_rate": 0.9323084552442351,
+        "unresolved": 0,
+        "average_hp_lost": 13.236713777998181
+      },
+      "1": {
+        "trials": 12099,
+        "wins": 11235,
+        "win_rate": 0.9285891395983139,
+        "unresolved": 4,
+        "average_hp_lost": 13.212815212897892
+      },
+      "2": {
+        "trials": 12099,
+        "wins": 11215,
+        "win_rate": 0.9269361104223489,
+        "unresolved": 2,
+        "average_hp_lost": 13.332313796809126
+      }
+    }
+  },
+  "definition": "Combat win = at least 2 of 3 RNG trials won; run win = every recorded combat wins. Primary win-rate denominators include unresolved cases. HP loss is initial minus final HP, allowing healing; completed trials only. Independent historical starts, not a linked run rollout.",
+  "runs_won_every_fight_at_least_one": 307,
+  "run_at_least_one_rate": 0.599609375,
+  "update": 6500,
+  "independently_recomputed": true,
+  "timing_note": "Scheduled evaluation timer; excludes standalone process startup. Do not substitute for timed comparison."
+}

@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-10-27T22:41:40.525942+00:00",
+  "finished_at": "2026-10-27T23:17:19.242999+00:00",
+  "external_wall_seconds": 2138.7169052511454,
+  "exit_code": 0,
+  "workers": 80,
+  "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n3260224, python, 3620 MiB\n",
+  "other_gpu_overlap_samples": [],
+  "timing_comparable_without_observed_other_gpu_jobs": true,
+  "timing_poll_interval_seconds": 2,
+  "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+}

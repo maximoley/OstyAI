@@ -1,0 +1,20 @@
+{
+  "complete": true,
+  "checkpoint_replay_unchanged": true,
+  "trainer_supervisor_benchmarks_exited": true,
+  "STOP_present": true,
+  "combats": 12099,
+  "counts": {
+    "trial-outcomes.jsonl": 108891,
+    "failed-trial-fixture-index.jsonl": 9186
+  },
+  "all_arms_80_workers": true,
+  "policy_zero_search_verified": true,
+  "files": {
+    "summary.json": "3f4845ebb86dcfaf3dbf2e235c8b0cde8ed1fad26247fa7ef8810e7fe0fd0772",
+    "failed-trial-fixture-index.jsonl": "c738f611b00ef4f5338e85f04b080cb0e4aca2e75b4c762794455265ed1a6de1",
+    "trial-outcomes.jsonl": "d4ac9e34d0cfcc68ff46117091e8fc700c22e2882de6178b39e8f14115f38616",
+    "combat-outcomes.csv": "ecb30cec8b75926c305bca83c0b70e7bebffe97b0b3778c9684019a0f7ba7aa8",
+    "README.md": "9f6db6398ca213baf0b36960a2e7c55a9cdf2dda0b780c8d9a9f878da0b6c91d"
+  }
+}

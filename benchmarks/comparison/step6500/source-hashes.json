@@ -1,0 +1,980 @@
+{
+  "benchmarks/comparison/step6500/model6500_boss128/part-00003.json.gz": {
+    "original_sha256": "35024e22b62d9877dd9a6f58630b0753bf5633fb73df135138f6832962cfde67",
+    "stored_sha256": "b3af19d04fa7dd08648d666a781fd51d3eb4141eb7018501ba66596fe395ff82"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00016.json.gz": {
+    "original_sha256": "5f6439262f1fb8aded6931ce89463c78b1c33aeca9c8e9cf31b32ae94552180b",
+    "stored_sha256": "8bcacc93739a1e9c350b52097a578055250b636748d71699d0dbd34ed131e1f3"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00019.json.gz": {
+    "original_sha256": "45dd472df13f3ff01a28bdd175484b345606422565996f560497361a7d69f52d",
+    "stored_sha256": "19c4f6b6da803e386306a1d7002d228e29858710ce8b270885b479703f039450"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00001.json.gz": {
+    "original_sha256": "8fe4c95b2a8aad7558c5dff906e55ae64e5b1da72e168cc7bfe6a9f243741799",
+    "stored_sha256": "b5f77a0d9453c25191bb6a8f2a822a873cda36bee326f413c84f46bd68cc79ce"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00043.json.gz": {
+    "original_sha256": "e47244e6d4fd88ffa0db86b4fed9194269fd8966cf67f99c7971ec91c02a55d1",
+    "stored_sha256": "50a18210218e5d019626175be486103fcb3cca2338050967ae0a69627ec82877"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00018.json.gz": {
+    "original_sha256": "2d0161de09b9e50225a07f2ad0a4075c3de10011cd5b0ecc55ea3551bacc001e",
+    "stored_sha256": "f1d0eaae17e74f0bb2267ac0f2c33143cfbd69827affa74aa0fcb47ec5cb4580"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00032.json.gz": {
+    "original_sha256": "401403380c04ac6a3f4a7a451ebce1c07daf40bf38e4912eee27778f2f7d7848",
+    "stored_sha256": "26dd00fc80dc26de62d78a5f0568cecd2635273461212d41fd84b1fa3e4b467d"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/summary.json": {
+    "original_sha256": "c39b2300d0d924f330e57c69214874031a90031f838f22192f9b5f9d37624bb6",
+    "stored_sha256": "c39b2300d0d924f330e57c69214874031a90031f838f22192f9b5f9d37624bb6"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00012.json.gz": {
+    "original_sha256": "832c28bd78ccdd56760fa8fad522b449075a281b8e8717a5b48d532bd1ef404b",
+    "stored_sha256": "8b20e2ae9a5fc0d47bd7b8ecc6a5fdaabe4c92821b35f94dd04226d90cca183a"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00033.json.gz": {
+    "original_sha256": "7122271efb744b26ef88039b0f7cc96af6c087c2fe62908836c17f9902e6475b",
+    "stored_sha256": "d8dabfb36c2e54805aa424af0e232cbe872b96c87cafecfbd9ec0f4ec8b2aba1"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00006.json.gz": {
+    "original_sha256": "52c14b4172542cf16c5f22727fd7a472b2a09a9ea9a1bab94d46569f8d6b0f10",
+    "stored_sha256": "949e1de17dfb11fcce9c04a6fb6f028d2e312700b044b32bf72af0f6facde5d6"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00014.json.gz": {
+    "original_sha256": "17f6262fa43a72d003cf81800e99363343ef7a6b27b036383662256ecf169e30",
+    "stored_sha256": "a4b8e96b905c5afc271c8a89401afc1ffa479c280c1d79d9265adab39e15f3bc"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00046.json.gz": {
+    "original_sha256": "658a224dacf4a7e083c8f94014542577006da70433a98514c4064d5d09beebba",
+    "stored_sha256": "1ce02ec2a69f3f086821659c889712c9fa4d5de765657139a474b405dec57a0d"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00035.json.gz": {
+    "original_sha256": "b7958bd75f8ac8bbe20138220ce201a14a543249e4877662d8eb0ffcd72ecb46",
+    "stored_sha256": "0ee60c9f0d0ada929520f3888ef2617702ab128d36130b61265815d982028371"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00034.json.gz": {
+    "original_sha256": "06833d3be01f16d53183804636af317403ff5b2379e572ed4a92b0952497812e",
+    "stored_sha256": "fc114a59be3ade7f61a1951286de682078b23d0cb2779eba6c901394f5239d31"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/trials.json.gz": {
+    "original_sha256": "523a73eb1ff8aa33853b873e7a01cc1a941c2fc66fd90fe76fa912c41fbc5183",
+    "stored_sha256": "fb841b0bc8680a173a8ff79cf7b17487da73246419c9924bab7805142a88374b"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00005.json.gz": {
+    "original_sha256": "2d9022da877af1932c2d39f0b4b41bef0fda10cac658b68cdb2f12027bdbe9aa",
+    "stored_sha256": "58b9452de46ca7430f5b556ce2089b5a9b8bcc84b64e009e86fd15e1a6cee9f3"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00030.json.gz": {
+    "original_sha256": "e4bd4d8b0b83f4922675a75d1a7e4068ab4f11c56660cf07325ed89eb839e93b",
+    "stored_sha256": "fb08277e4334b33f4a8878d7d9f1d437ae7cf03d9469626526e349ebe8d0d2e4"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00004.json.gz": {
+    "original_sha256": "28464f0c97eaacc928146ee2a5385aba51ed211898b3d4634cae78719ec30005",
+    "stored_sha256": "7181d0e4586fee52d9e96bd9fba46f8055e3127dc82cd8a9e5a000b2673bef64"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00013.json.gz": {
+    "original_sha256": "a189d38276ccc769385baa730f669e2ac887ddea3445de25a1af70259a5b8a10",
+    "stored_sha256": "1236878d5690f9a26191ee0c5b2be65231c9ff799df842fdae4801a6cf4762bf"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00025.json.gz": {
+    "original_sha256": "ff1f62021a1677c4e0637a517f394f8b0beaac2f48a96b6bbb2ba538b6fc3ebc",
+    "stored_sha256": "786814aefabddc4eebad7ea1f3f6f008c4c4c24e6ed385b5da8b480e8acb924d"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00015.json.gz": {
+    "original_sha256": "3dacb001a15ba30e00e2f7ba13762c7d848086947d807ab1365e6fe5c30c0a44",
+    "stored_sha256": "7bb8ff533798b8f612fcef06dff1c453f77c48d6acd251c6d43dfb029ddf4767"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00027.json.gz": {
+    "original_sha256": "04f1a9f7186c2c4f25fcf8994b60a4786860a98f150d57f8e6b8b50cfd0fe69a",
+    "stored_sha256": "8c98bc32c4d79a376b922612722617f9864c735522c187bed940454be358872b"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00021.json.gz": {
+    "original_sha256": "c1782f85badaeec68bc8add35c5a69da5ea7d85c1fb059c376f3cc7574475337",
+    "stored_sha256": "9c469f054b4b7aba8771c53e5f63df8b971e2d31d4f1e1e30cdc0eb8343aca38"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00002.json.gz": {
+    "original_sha256": "3d9403d24dc5adbac9ae14a3a7673410f42592c989fbbfba1416c889defea84a",
+    "stored_sha256": "675e5ca114399836ba7762b102c1cdc380c4bcc00d2de380aa3f78fa8c0a9eba"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00024.json.gz": {
+    "original_sha256": "12738949d723e4e84fed894745978c0dfc93ad0b0188ee5b6a1128eb59caa13b",
+    "stored_sha256": "b71228bc1db1c0025243b7e81cd77c8682aeeb37925dd33dcb903b84993038d4"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00031.json.gz": {
+    "original_sha256": "027234d478115c06f93194070f403b9053bdfe1662a6d870de009f49feee1263",
+    "stored_sha256": "b19da38ad6231a32cddd49f8600cc3a68c16eee1721ab8ff54450af47a448bef"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00039.json.gz": {
+    "original_sha256": "71d0babb7ea215d4f4cff97e7efe861ff4193385db147b187a62152ceb39d997",
+    "stored_sha256": "4bd9277919187e6bd43fe934e8bc54c979bec22e4669ab4c87b0906330b7b7d3"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00008.json.gz": {
+    "original_sha256": "7da574d6a477a9af648f61877c7bb814027227317a3f0d4055f68eb5ca472eed",
+    "stored_sha256": "dc5e2e12e8acfc75efbdda31ebc56434dcd277ce77c67117cca089b2a872514c"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/provenance.json": {
+    "original_sha256": "c2e9bf272c8f40c61404dad89ec5d1f1cfbd387da361427bfde633b4ccc57a13",
+    "stored_sha256": "c2e9bf272c8f40c61404dad89ec5d1f1cfbd387da361427bfde633b4ccc57a13"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00041.json.gz": {
+    "original_sha256": "5448d00a350fb5dc92392bc85bea0291a7012e2d81d15f32291eb6dc73331b76",
+    "stored_sha256": "c7099e3472763d02a6898476e6bac7624504a856907be4426387c3ee60eb0ab1"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00020.json.gz": {
+    "original_sha256": "7508ad9212bf4b1344f8480aa301169ecc68af707cf34154167b99f118a9e38a",
+    "stored_sha256": "20b4745683f78d7075e40da4a76aeb0f6ad2feb0e24a16c09efe8455e1739f85"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00047.json.gz": {
+    "original_sha256": "b9dd13d30ba43ce502e25b888131de3d3250fbd5512dbc90a892501bca88c482",
+    "stored_sha256": "cddc149115e7aff547609f0b4e9928a32256fc1251b9f9c3fa958864070b36e9"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00028.json.gz": {
+    "original_sha256": "929bf0f4c36318f504918dc6229f303a1d4e21335d0f7af41f6a88efbc10ebb4",
+    "stored_sha256": "2137232e2d63a5513bd3439010bb3a8392d899cab15fb4fcf23df135d1686980"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00007.json.gz": {
+    "original_sha256": "09cc7d00d777ec024c9d4ce1762e92fe7b551c881a1ffea028825c9bf06b635a",
+    "stored_sha256": "840af6d077576066a6e3f19379ae6e15ea2de38314d893ebe5fb2a00e2e4b7f5"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00010.json.gz": {
+    "original_sha256": "fa805c7fd7768d5497bc66ea01871a7d191743d542daa4606ea422c99fd57e59",
+    "stored_sha256": "54b9bd71d3a2be1f84fc099ad023425ad4fb883e39c590c95eeb02b3df561746"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00000.json.gz": {
+    "original_sha256": "cb9c39be6eca6d9ab5bbb01b1881964297efce71412197560cf351f8351b217b",
+    "stored_sha256": "7eb7bc529b350b99813af9130048ba3383872ef2babfc3ff9fdc25d424546f34"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00037.json.gz": {
+    "original_sha256": "092cac23311462ef8173f4e72a8b57e01c7c2f4954507624cb49e27cc23ab030",
+    "stored_sha256": "57c6fa0719bb5d9066f9d2db126f5380fd9a7ea9fca4866d1198cf5a03161b2e"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00036.json.gz": {
+    "original_sha256": "f288c12d5af2c312d0a001eb0696fe4cd0da7a39cf5a3424b14a513c5975b616",
+    "stored_sha256": "4ba10f4a0bb9ddd34cc05061bfa33174105aba4983fa6ff5cbc84ef5f3d0a767"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00017.json.gz": {
+    "original_sha256": "5f1ce2b13afa173854279cb52141088649b66e7df39f6523453df67cf3e42a8c",
+    "stored_sha256": "b582fdf151d748ca13e99894359a483e32a001e4be7bf109536a4ca940ebcb91"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00026.json.gz": {
+    "original_sha256": "e4877043a24d49ba2cf35c240130eb64d6a94b29129df362f48c74c12651f125",
+    "stored_sha256": "d5e438480dc97cec4d25f2872251e6d8fa41bb9bc4fc8e018a3009a315bc88da"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00011.json.gz": {
+    "original_sha256": "b16d602e0796b99ced7f949b89ad9639ffec6fcf8a1e9963469ffdc9bbbce14c",
+    "stored_sha256": "e47aee64b17a08c6571fd0e2fabb321c65537a5bbf8ffec170ffc6d1c4c89d2e"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00023.json.gz": {
+    "original_sha256": "32187a22d83bceca62da94ec96465f37b21add5bb0dccaf4a2be80e432a8daa4",
+    "stored_sha256": "0489c1e2d25058e52dda0454e0cf20270ef90ec5e9106016118d054b4c78754b"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00044.json.gz": {
+    "original_sha256": "4207b9d26fa6a2a61c7ff0c3123e783c31042506b61789840731cc877b54f439",
+    "stored_sha256": "96c2aee2d7a87a5f2c97b475432dac502f8678c358b8a9dadab8ca862ed9f41f"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/combats.json.gz": {
+    "original_sha256": "959ab2873412c3d9687f956902dc2a92cafccf84069d70e778538e04fa778623",
+    "stored_sha256": "cb564bf32d1cd41a98cb0548417404d3808564f7cd9ec7ce24d3d984389bbef6"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00040.json.gz": {
+    "original_sha256": "94f37f553cc07f30e157bce9f17f63b7f6088aadb0fd7b931bdd5daaa80d450c",
+    "stored_sha256": "0c25a874228ec30925d77cfe35f342b021b8a5e6eadbd320fbc79570cce6d011"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/runs.json.gz": {
+    "original_sha256": "2d3374ce880c2c00db008b7762565bcd95ae2c2998f85a94843f9f8505cb8183",
+    "stored_sha256": "2bb96fd65e93895feb647ce44516d1088b143cc0993599e8c84bdb9a3c28ce2a"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00009.json.gz": {
+    "original_sha256": "e12f5f1dfe231571d489daed201b3a730cf4a95ff120022a09126c510ddf3129",
+    "stored_sha256": "179160c260bc54616d9b2b9629f920d423c0250f9f7301ef39c1366c0ad1e88c"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00029.json.gz": {
+    "original_sha256": "bdb48be99ba5b9d1fed800924de23051ce1f8a04564bb880184a6603fe45a9e6",
+    "stored_sha256": "d45d053d459c332cf4a3150705e8e780dca6324cd0267e6c751a090858e5e2c7"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00022.json.gz": {
+    "original_sha256": "42800bc11121749be2363038d5647049cd32ed63731b4bace3f65c7dfb511a29",
+    "stored_sha256": "f20ba9c00e8c4b900def285291927b98932725625da2fd22df5561b76304b045"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00045.json.gz": {
+    "original_sha256": "ed7146e409449bdb9801176c760fc450c5d62dd6690906b32e21443cdc068f38",
+    "stored_sha256": "ca69e9bb259c175c993ac728f36256bd5d317e5d11d03959db1784f55366ef33"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00042.json.gz": {
+    "original_sha256": "ba8457ef76dee1bc440d9d0cd7154d9b3e78dc4662632ea7abd9e163bef5d2cd",
+    "stored_sha256": "3d3105ec2cf527da093274bbd9eeb762c034aa3443d61b969772bd04b42e2ddc"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/part-00038.json.gz": {
+    "original_sha256": "663a28d01e769762197de260bad8559709c622a76e70bfd96e62b99bc58b49fc",
+    "stored_sha256": "37ed438e0ffba19c8778224cd781ddd576581ee417b37baa2e2805b654536c6f"
+  },
+  "benchmarks/comparison/step6500/model6500_boss128/timing.json": {
+    "original_sha256": "e2e02619d87baf05d93e662b82bd0a940fab13a317f1a8660123a6888a4bfcce",
+    "stored_sha256": "e2e02619d87baf05d93e662b82bd0a940fab13a317f1a8660123a6888a4bfcce"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00003.json.gz": {
+    "original_sha256": "af509bfaab49bb9cb5dc7d54cf70905c8072fa8c5863365497c7f9df7e2bd254",
+    "stored_sha256": "3405afd249820e6f8c37f6c1d43dea14d5411719b964c0c60afe6ec051500000"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00016.json.gz": {
+    "original_sha256": "8f82029c1f6faad3dfc9a868a064828a7f0b0ba93b22041847136c490af433db",
+    "stored_sha256": "0f8388b02235f54eb92d8e00a9beeb377903f366d000e635fc265fb10873c294"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00019.json.gz": {
+    "original_sha256": "75e08a8600f36c5b00c06c00dea2c35ea1a4a5ae7884b8f91c3808aa781704aa",
+    "stored_sha256": "3ea7ef84ee069994df347e16048233012da1a7c503025e0a03f87d216695532d"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00001.json.gz": {
+    "original_sha256": "b0637d2c775be2fe4df5d548a2ff0367a22fe90957afa5eab63fbb2c79127dec",
+    "stored_sha256": "e432e71b67dc1e318a3306649cc9b06a3810f149f94c309530546fcda68f5dd1"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00043.json.gz": {
+    "original_sha256": "58f0aedc8d1e19aaafe3a3de23f3e89aa81dfcc64acfac9e93427acfc3560755",
+    "stored_sha256": "af7d4e5e84dbf3eef40668fe2ebf872b82a5022b0e3d1601f139576c224fe168"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00018.json.gz": {
+    "original_sha256": "f0104cb1c5ee317597c615193f227dedc9e1a6a1ceee351c469586e5668339de",
+    "stored_sha256": "fdf50cc59d064f32a4982fe3fc3d73f276546ca9080713a1785bb65a31e66d21"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00032.json.gz": {
+    "original_sha256": "b774ddcf6ce5c8520680640cb7feb087b1adfa98a9bd7b0997e161d7c097a11a",
+    "stored_sha256": "a80089b9c6d8075a1e29041b958c1e9b69374c9305d810d0b741d625f8910c34"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/summary.json": {
+    "original_sha256": "f5776f731c820d7e66d349968176f914181e7c66e3d1b04aeef2e5b098d47b51",
+    "stored_sha256": "f5776f731c820d7e66d349968176f914181e7c66e3d1b04aeef2e5b098d47b51"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00012.json.gz": {
+    "original_sha256": "23d1824cfaac63e5035770c0fb4b315736b36ca5d5811696204297f0e8e8773c",
+    "stored_sha256": "0475858c51e27ce437eebe2c7b465c8b0a03acb7a9437462dcfd5ebdfcb0bf78"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00033.json.gz": {
+    "original_sha256": "0724948a581aa13cd2e8f6bfdb5a6edde47d535d78d653e3626444c04756aecf",
+    "stored_sha256": "e7298ae537a700168df43abe8ce02e78280d0629e6f5888d140b1ad89fc8e402"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00006.json.gz": {
+    "original_sha256": "45e7619a17426c3ce9f1d4c703f33519269c3f8d1f86a7ab8204b754061d5b64",
+    "stored_sha256": "06cbffe80d03fe851c6341e92eae52234699ad0488de10c9696cc161a074b3e4"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00014.json.gz": {
+    "original_sha256": "c69563898264869e94263093000a4e61cc3f8f499a3509fa1b15de26cf0b0086",
+    "stored_sha256": "7fbb2578231684d652d5602b7958e622c54eab4c4d7f7c9e27742c05a5677449"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00046.json.gz": {
+    "original_sha256": "87c49c9ae3a6119b8f6989b92a132f055cf1748334c4ffd2337102d1ca54d4ad",
+    "stored_sha256": "d4eab2dcf38868746dda9295a07bca8bba230c8eda6729ff43f63390c5bd49ef"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00035.json.gz": {
+    "original_sha256": "3bee387188f1a6f5cff908120194e46f7fb63367422669fa6d66496c5b590fde",
+    "stored_sha256": "a83c35eeb170afc9f9d3fe92630de03fbe179fe9204f7453fe622d6b47a01c19"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00034.json.gz": {
+    "original_sha256": "54e09444cbd5365c5b556fc1eab4619c42c6db5281f9f5111991fba6d14bdab3",
+    "stored_sha256": "f0642d4ff204f213e74929bed4e61e7d03a4863ac1fa7573b40b2468682f9e82"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/trials.json.gz": {
+    "original_sha256": "1d7754f4d6d6e1c08729f68af61bcf1db50102ccdd8e9bce016a987a39f2e52d",
+    "stored_sha256": "4f7789f196d562eeb4f000ebea8187052b3cd31eee027cb98a976f9696a6fb7e"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00005.json.gz": {
+    "original_sha256": "a9b5924f693f43e0aa0ce065b5170f271fd9887cb5788fa7fec356e7b80fc11e",
+    "stored_sha256": "31fec9291053c8b66b89f5601c470ca253241afe27969320aad392962aa68356"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00030.json.gz": {
+    "original_sha256": "0e263adcfb2774cf2bd16ebaeef7254caf4b35fd43d06e5bf3aef6eba0bf7913",
+    "stored_sha256": "660fe137d8983cb75aa6e88def0fb5a73c1ec46ff6bd565e8c746a90ac0afdcb"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00004.json.gz": {
+    "original_sha256": "ac7ae412216e54e9b5d08139ae7049ce21039540d9454565a85db2b0dc5c12e9",
+    "stored_sha256": "1be6ea1ed34bcbbd163a43c378f268e6d0e7dc82fb13f9d58e7ff7fe92ffa159"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00013.json.gz": {
+    "original_sha256": "062d2a7ffc2d424d9de1b3b885a609e52d6799ad23eb1c105a681eb32a9e8ebd",
+    "stored_sha256": "4f1d90c6ae75df73fe40657524ebd48163ea4b41475be3e13487c2ba57b31c24"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00025.json.gz": {
+    "original_sha256": "f63ab3ec8b5bb6edc606dbad7fc9e7ce4bebc37fd69b6c08c04db53573dd5324",
+    "stored_sha256": "77441a7fb8e00c979ea1c512f187a8d25e81e90b8c50029e0ff5b70c62037f76"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00015.json.gz": {
+    "original_sha256": "bf463cf7b8a6d8823a02a45252dd28d0e044833a64ba02c883ebc4d745a81e9b",
+    "stored_sha256": "4028b6e917d3ec7fd13b097db511c6dd2dd5919d531023a903cb0e4729dd3b6e"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00027.json.gz": {
+    "original_sha256": "2cb223b46e7a8cbff46e29a05bbb43826bbba4abf955f4348593bc9426985633",
+    "stored_sha256": "a32756d2a8d5760da1226effc1e6aca280436089a5f1021202e4a9b74625bcb3"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00021.json.gz": {
+    "original_sha256": "b0eb5df083c2dc3e41ea55d551f67ad2db4276fb6fc88705212ebda81656e0f3",
+    "stored_sha256": "296f0511659479454752c6049fc24146fc689e3304cb313f92e3fbe77bae06cd"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00002.json.gz": {
+    "original_sha256": "f48b443ae86d6d2fc1125c621c65cd3caa80a218e45adcdcd8bd4ca312dacf54",
+    "stored_sha256": "4282f5be423c491e1fad49cfb56c4add79a7cc20384dd5c68dda605defdbd1bb"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00024.json.gz": {
+    "original_sha256": "b053a156f3eb8ae57c3ae3a91ebd35774e4a03d498a998ddfaa0bed5e5ec76c1",
+    "stored_sha256": "e085f9a9dd98ec9e1a275db2778724b19f28e93253617ff4ab2538a15449e8d5"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00031.json.gz": {
+    "original_sha256": "d5e515866178279482241f815b5cd9a43e3ed1adebfd8b0cae0581db453a2ce4",
+    "stored_sha256": "fb98ae223c15590022daf8083ea9a893398af2ed1b637f42f066caf5f6beadfd"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00039.json.gz": {
+    "original_sha256": "0475023eddcbcd17cd5459f0d154879272b1faef3ef587b65488de0571396311",
+    "stored_sha256": "7ac61a3f90fba77ea82fed8175783731fc09625f318aa17130b42ab7d6e06ea1"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00008.json.gz": {
+    "original_sha256": "6540a40aab54d7b4e4c724ba225252112f3ba061c6864cb0d3a8df1685df49ef",
+    "stored_sha256": "b30b31665425d82cb6defb97ed0aedff2aa5d9fd1d8142b527a159836d99c13a"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/provenance.json": {
+    "original_sha256": "0fe5bf0cbc15d4ba03d50c681c323a54166ffa05e38b9fe3545c7c4376ca21ea",
+    "stored_sha256": "0fe5bf0cbc15d4ba03d50c681c323a54166ffa05e38b9fe3545c7c4376ca21ea"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00041.json.gz": {
+    "original_sha256": "c3cb248a325fbf0c324c1831d060966a3ac3f93380d7453d00ee7600de416f2c",
+    "stored_sha256": "c8410f20b9c960905815f91cbecc4919abdbc69504d352d6de6adad9ada405df"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00020.json.gz": {
+    "original_sha256": "04c990574fce47d66d48bc076a0ea0542abfdbff525affb8083d5ee934e0caa5",
+    "stored_sha256": "61f1c113565ec37267e988ef1a8b0e46cba87f0dffe0baf33dbbb1cd4956bc12"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00047.json.gz": {
+    "original_sha256": "28d04301b05b9032fa32b96679e7d74acc924b43df8ee3c090e636bd6519545c",
+    "stored_sha256": "56f36167d653f501cb1268f56b081d1c64a9cd279cbcd6c5f5f22863eeba09c2"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00028.json.gz": {
+    "original_sha256": "3c770f9aabda79d95bc24ecacba919691e59f14e7683524a56a7d40465256604",
+    "stored_sha256": "1b8d37361481527e56b8514ae9da21e096b5ee92123a84064b4c6867cb9bb085"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00007.json.gz": {
+    "original_sha256": "faf54aae60e06cc1e42e442797a5cfb6f0da55df8f3cda3f904e0517d0d91080",
+    "stored_sha256": "269bc0ec29a4258a25ae94fb43245e59e4256c875c7c962abeef90535c2c8319"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00010.json.gz": {
+    "original_sha256": "c46357fe4a7c998983542a5cd4f4f00c3d6cd47d7ff8ecb718966a8f733ec9f4",
+    "stored_sha256": "9768cb6d9a6f1e4e0bfa1724c9b1bef8ccc6adc20af0c63dc1a5283bf661e44b"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00000.json.gz": {
+    "original_sha256": "9b33e83ee332761f043b43739d6c132fd164866160e5ed20786a0e586b4b463b",
+    "stored_sha256": "993f2a6bb992d8c9d649b05d008eb76e17aa3cd697819f5d9298ed086deff959"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00037.json.gz": {
+    "original_sha256": "2879336c39c7ff2953ef8a7b36a3e0da216bd758ce50d586c8a00aec245aa964",
+    "stored_sha256": "10355f9cb8e8f8d21796f1d7fe466f276f24f055c0e6e0e432d1e3887674271c"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00036.json.gz": {
+    "original_sha256": "c7d91425fe5618ad58040cf46ac54278c67b985afe420ddfe9f2e6a1c875e13b",
+    "stored_sha256": "92456a58fc9c36fc6f7a0a44e928db8bbda15a9fc5e3c04ca7dc9e9c88712ace"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00017.json.gz": {
+    "original_sha256": "89326f9c2cf5a5946357d9d91878f922f167168cc58c7dcf3f178e2d8367b351",
+    "stored_sha256": "e04a3a1b2451b6d36a4f6b411b9ac088fd6f7f31be6810ec49fc4f5d62c96f82"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00026.json.gz": {
+    "original_sha256": "a875e6ace1beeb1bb4918c2928c7f57dbf409f1b3e201cfb40554cf479cb8552",
+    "stored_sha256": "708da352deb90c90f806729ba577a52e286724c82d01f7aad52bd5e57cfd4ab0"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00011.json.gz": {
+    "original_sha256": "6c8a07b54444475049b9be83299a77dbe3a36f3f9548f0e1e010d390b1c42545",
+    "stored_sha256": "5e960a6e0454058fe25aa776be1196ed055a887db02dcaf857102d2f43c6b702"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00023.json.gz": {
+    "original_sha256": "5bb996d902ed602761279296e68b8b17d85984f29f5ea0e5f27765b20eba5faf",
+    "stored_sha256": "6c92028e0e274fe47856ae78d859c783485adadd6a86330519f5e939908e3474"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00044.json.gz": {
+    "original_sha256": "2432e221b85a99e358653f6960544e48bc2cf8fbf4c5b2449e1596c5009c6d52",
+    "stored_sha256": "6d110546e76fff10f5f06d1e505ec14d2b85db9788781e2f6c0e6a4476c8b897"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/combats.json.gz": {
+    "original_sha256": "72c25282f013d2badfcea4d612fafa8f9c1bd00fd922bc2b2aa1db8b6b5df3f9",
+    "stored_sha256": "ef93e5472b3925da9ae5f84336b2c21879b8887ecb0508e1fa745b5d332af6f6"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00040.json.gz": {
+    "original_sha256": "44b705181859f12f80436537b196cdda70518edd23de6d6764a2ce7f5dd27439",
+    "stored_sha256": "cf3fbce212779e152ca4a583643667c82dd60e33d06e88c3d9bb9507e538c739"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/runs.json.gz": {
+    "original_sha256": "16c37c7c327ece8112b94262562aa68224f94ee4de98b597dbc9d6b19ba895e1",
+    "stored_sha256": "08caf14e1db9f99e53929d3c81df26e008c371a3fd330787b4710917ed06413f"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00009.json.gz": {
+    "original_sha256": "045d4537c1d1565af0f28ad6c6fa141f9cba1b61aa1eba639b6e17916eb2b56d",
+    "stored_sha256": "b011faa5e9eaff7244141e69ee38d9087182182067fc309cb921485b12a3a115"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00029.json.gz": {
+    "original_sha256": "39a5341067977247c81038c06a505ace6df984dee4b3e6b9ad5fbd4f54669b24",
+    "stored_sha256": "a28b81c3e2a141ac91c13a1778dcdf5fa4cfd7bbbb101141dce7d8464e3a7504"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00022.json.gz": {
+    "original_sha256": "fb3e54422f7c088125419118fe01dddfc237d696f1a8f1ca8d8acf0a5f0c60c2",
+    "stored_sha256": "f0818cc3480718837b51893863c351ea670f815d055321aec6c5df5bcd7eaad4"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00045.json.gz": {
+    "original_sha256": "fa0ef78955b3845c7ac2d95676d39f3b9b6569ae9c65df553470fb91efc8fe0b",
+    "stored_sha256": "3eb7269076aa64344691c839ce15dca8879cdfb73eabbe05378a51534f7f622f"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00042.json.gz": {
+    "original_sha256": "3de2ac690ddcd6ec20c5e294892d602530ee77e904bb0faef901abce4ab52950",
+    "stored_sha256": "6beff060dd664df39e9495e85bc55929cba2ea42549e0583e2512f11558b3d89"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/part-00038.json.gz": {
+    "original_sha256": "b7c89718fd0947ccfd0e5673f8625d181be3a1f06f66d7bce93cb2034795e0b4",
+    "stored_sha256": "9ba51d1586c272bdd95ec1f7276049cd0e313b662f130d1e55be910be546460f"
+  },
+  "benchmarks/comparison/step6500/model6500_boss256/timing.json": {
+    "original_sha256": "ac8ceddc94bacfe032a7db7ea1680e24a3cefecec19223c2ec78532323b12fe7",
+    "stored_sha256": "ac8ceddc94bacfe032a7db7ea1680e24a3cefecec19223c2ec78532323b12fe7"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00003.json.gz": {
+    "original_sha256": "bf7476a43d8e03d98a5a9abc1b3c8f4a3a21aaf463f40d9b243ad7027cab406f",
+    "stored_sha256": "13b5b7ba1fb0ca139a9635b60cc26b399876cf992d4381fef5cbea1e2c1f96d4"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00016.json.gz": {
+    "original_sha256": "2cb76fea379e6c07b8956274cfead5d5760e650a956fee1156210037d5b116d4",
+    "stored_sha256": "f3e364ba6accfd5193f88666b167f4761e8f638040de99957ff355f65cb372aa"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00019.json.gz": {
+    "original_sha256": "b983840d0690c17d2209219708c54f9dca34ccad05a8cbc448245362f5d7169f",
+    "stored_sha256": "0d398e427d7a9498b091cdfff80176e307d87ad3bedb27717c28b1435d8b3cea"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00001.json.gz": {
+    "original_sha256": "ba87df1efb33f6405788542420004638f149594f95330d148d07227f31f17c76",
+    "stored_sha256": "1d8f932be4a59f8ddc0f9470455b7025e88462f723942275e20ca227f14e42f6"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00043.json.gz": {
+    "original_sha256": "e83e134dccb5fd72d166c8e704d445421ab3f0f1936f88246d7f29f13986016f",
+    "stored_sha256": "047f5864878d4c14eaa17133562ffdc0c0405238fb56f5b57a311a3d8483a1c4"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00018.json.gz": {
+    "original_sha256": "1999be82426f62a20488aaf599fd7a022d8dec19ce7d3e54f87a413a2b29a631",
+    "stored_sha256": "c71f6dbdb6514ad73908438797bfe9ed7c0e78d1096afcbd334fa9e14c800fa9"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00032.json.gz": {
+    "original_sha256": "65e18e6656d33d17fe11f2917eab79118a204177bbc966c74bbb672f09068c62",
+    "stored_sha256": "d45771cbfbb814a5e6063d18f7d7eed9d2a04bc19671d6b0f18cce9be1355f7e"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/summary.json": {
+    "original_sha256": "cb8f65bf1562e6b0850a51b3221be5de2b5c97e5ab759611efc6dae9b80b1d72",
+    "stored_sha256": "cb8f65bf1562e6b0850a51b3221be5de2b5c97e5ab759611efc6dae9b80b1d72"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00012.json.gz": {
+    "original_sha256": "70d493a8b96900b2ce6614ee4a5311c99353353b1f39f36278222ebc10cbee79",
+    "stored_sha256": "45cb443097b35357d53ae7ce94d1cdd5b161b9b93e8395b1248e0bdd1e9f82dd"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00033.json.gz": {
+    "original_sha256": "f02774e831f3452398fb347b94f0e330474e6d704871079623aad43d36989b85",
+    "stored_sha256": "bbcbedc0052d4a37cc39aaa7bcc10ad5b6bf46d3eba01a3beb3add2b724334f3"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00006.json.gz": {
+    "original_sha256": "9d03c6672f18e4432fdff55e62e43933965e0db4a1b28b39596ba027c2ba650c",
+    "stored_sha256": "bc982c4d9b9067d912c7acfadfe0ec0ed2314b663ed7bb26819d8a2eb69e5d86"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00014.json.gz": {
+    "original_sha256": "7fdafb4cd7651265ef115cc44b1e50068c7bcb5c19acd32cd1c9f283b143921b",
+    "stored_sha256": "df9579d74470115cc292830070e332543acc6e37ecb492a43c739311a1009dbd"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00046.json.gz": {
+    "original_sha256": "3ebbc429121e9d0566500fb520ddd470a17390e3d335a2ee9bb053f49c48f45c",
+    "stored_sha256": "d2c9c2d90a0d08e574997e869f3a4d4693fcadac077a9279b30d7b84b607f270"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00035.json.gz": {
+    "original_sha256": "14903ffe45fcba9273a70fb1a704db65bcc4914ac717825aa5dffbcabd45a738",
+    "stored_sha256": "1fa6a6e447304ed517d633184dca537d458348e9653b3750061ab0ab584afce4"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00034.json.gz": {
+    "original_sha256": "da4e83f2bfa6140a98040be3721cdc45776c95c607705d59d11e0a6944f4d128",
+    "stored_sha256": "2152a2d791e1b88108f98be0e7c064a7c3dafe3120e1415788672bf4cfaf74b4"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/trials.json.gz": {
+    "original_sha256": "f6bf32350e442e1a2977be6acc8957a58b896a78c74866fa753056c98ace8ccd",
+    "stored_sha256": "7b8c048678c4c780eae1c55bf36a8fa7b028aa84028bbd00e00aa3d4ad0b18c8"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00005.json.gz": {
+    "original_sha256": "afdbb8cdeb70968d29909abfa7ac43d43bb787260dd3ddf2de6ba490c743b858",
+    "stored_sha256": "f36bba6a04fbe43a0debe7730edea0893988474f6472539012c476677e7e4998"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00030.json.gz": {
+    "original_sha256": "6865b2becb39edcc473803ba1afafe76632855147a0d818b7f868c9c623c6d69",
+    "stored_sha256": "0a7d620dd4552ef2cb7a9478fb87de54332deaafa94a14d9921a66c335ff4ccf"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00004.json.gz": {
+    "original_sha256": "6eaddeccc7c521846a742c8e18aa627ed665fc986c476715b4b9187c0fe3e413",
+    "stored_sha256": "b1d16431d925a332fe0e1d2c9bea72ea4cd41903530c14cb98f92135d87c391c"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00013.json.gz": {
+    "original_sha256": "9713003fc187d29d5a11fdabd08588a731e9be52a442501a7f8e1bc9c931fbee",
+    "stored_sha256": "48925a0f8950045ab31ad8c8d2e949f624b22239ccd03c210dfe31629ba6a08e"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00025.json.gz": {
+    "original_sha256": "52b0245a79755a61aa71f5f0a1338e898a7da07f878f8f744c7f281cf282ea17",
+    "stored_sha256": "d77708875f4f77d5ffbf5dec6a7f7d470445a500195277154bc80c22d61956ac"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00015.json.gz": {
+    "original_sha256": "c73a50253c007add75d384cdadee840dc1cb9f99b1ff5c112299a8728568bf1a",
+    "stored_sha256": "024a4c4aa83e01d324588d826afc499581ed5b1c82c8a640202966f7de5c2605"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00027.json.gz": {
+    "original_sha256": "f4a89717a7cc3ee7b406e60efd8437eb4f8999ba52c895d96e0aa4a717b1428a",
+    "stored_sha256": "3ebd60cf86cb00c5f5f342b1e8a9d96ab963824a95dcdc4f6dcef49e66aa81af"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00021.json.gz": {
+    "original_sha256": "9de89cd19c445e62930e54a4af471aef549f801e23b190d4a6c59ce859bd0b2c",
+    "stored_sha256": "101210e6798c98e22a797de7c2921a54278f0b3e75c17aa25f7d505a70048277"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00002.json.gz": {
+    "original_sha256": "a967373f5d22ff573b40ff31259ee7b1c3297a9d0962d3a7ebbf6ad494724b50",
+    "stored_sha256": "7f067704c30efca7683adf15c0c272c24a5b5fb954694c92afd1c6e641f67330"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00024.json.gz": {
+    "original_sha256": "d6c30f1501a0d1927ffb8932172916347a2b2ae178fdb577a6b9d5dc2767f483",
+    "stored_sha256": "bdbc1c83da4902a68ef435c7c321ae0e57c3a680d79b3ca2291fc666cedbe22b"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00031.json.gz": {
+    "original_sha256": "c33d030ff1396d44a0817a10e10806389a58122847925a2ca83e38ff4c7487b0",
+    "stored_sha256": "00928a94ce6df557e85f35d39e70701e394b9b1d60ffc9f4d0cd56f9f5dced15"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00039.json.gz": {
+    "original_sha256": "213ad1a006a9b90b064ac670d9b569eafad85889cb5f365ae422134b0452c075",
+    "stored_sha256": "ba6727e49fa2d4566aeed81500bf6d2f677f21951d669819cad2c9fe13c07738"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00008.json.gz": {
+    "original_sha256": "f0d6de7377a2680cf3d72c1400995c054dc7d388471bf735ab7fc00675c979e5",
+    "stored_sha256": "c1575804bdea4463c9a502042cdc8d025fb68bc247faddd1550488efd7e0e536"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/provenance.json": {
+    "original_sha256": "575e7f6cf5a9682948ae369a8b0a7e389195adc42ef3086c6da30f9e4f67018c",
+    "stored_sha256": "575e7f6cf5a9682948ae369a8b0a7e389195adc42ef3086c6da30f9e4f67018c"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00041.json.gz": {
+    "original_sha256": "6ebe9ee9c39d8f8918baf384297b2960ae12277f5722be5bc4ca5cc71d170b14",
+    "stored_sha256": "b541d6d54b2f98e63960d47760a6a7f8f95e9da4a793d59f240c0d8a0a94645d"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00020.json.gz": {
+    "original_sha256": "ab1b6b8b1b47e9ebdce4f56f041975951ee7c6ad3cf3af8d63c4813cab7ea3f4",
+    "stored_sha256": "d2910bd524bce88217ed83f8eaa65eef6cd0a8a01a0dc9e9ceaa5e6df3268c71"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00047.json.gz": {
+    "original_sha256": "adb862fe195a5af14b4fe400a76365721b8d1d4625e0feb52348b635fd6d5888",
+    "stored_sha256": "21a3cd3e2342a1769315a4f73dc42a33c340abeacca385f44adb27f880ced0b9"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00028.json.gz": {
+    "original_sha256": "c10462a1bf2369961a78ac6433e58fe765e94ab2370d9dee19659e524aca928b",
+    "stored_sha256": "9647552612f89f668d98f52fe95b8fec6abab622ade1c19362dd909f9dfd4bf7"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00007.json.gz": {
+    "original_sha256": "a5c2270a078756c1a605177c853e01e7e19e7d2a47abbb6a98e1db2ce754e22a",
+    "stored_sha256": "f5de407ae166fa7e38d2fe6bb35a497ae38a29a7aaefc018e4b864b16322b0a1"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00010.json.gz": {
+    "original_sha256": "78f7bfbd391c71ad712983c38f11feb20ddd1494d7ef888bd37d7f4de8ffcf03",
+    "stored_sha256": "4d9ada08182b3d16dadf353108a9b74e62df7de5e9b4b9cebf069fd59335c66d"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00000.json.gz": {
+    "original_sha256": "d31446e8841e94e888a61a546852897182c7d7a6c2f424b49bc69bfc67459c02",
+    "stored_sha256": "06f8f5e320c03fc77e39a26c7f1d67e06e4ce77a4f28d39bdae49492f5338af0"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00037.json.gz": {
+    "original_sha256": "f618c230e9946c23b4931c931a0c1f3c5afcc697f3227cbee993dae5c132ddc2",
+    "stored_sha256": "3313404d49bb1eba43dda37d8ad82b3608a30bbd5f58db088f8390618d88ad74"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00036.json.gz": {
+    "original_sha256": "ee1f2b3831c124fb9d3795af253d3fe79c484e0f46497647c174ff7e011785f9",
+    "stored_sha256": "d8e6d42e295c89f38187bb33c2dc67cdd0c8a9d6d55b1bb9688c7c880fca0ffb"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00017.json.gz": {
+    "original_sha256": "1a74fe32d7b22fffe524cf01fae5b33ab023cb79397763ab70ec421a0a198c14",
+    "stored_sha256": "f20b7feea35d62d209b0026a0de360fb53632ad9939eb615364485eb3d6f00a8"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00026.json.gz": {
+    "original_sha256": "5ddfc93720c5f02dbfa1342d612bc3965e2d66a66dc274b280636c7414ec0a5c",
+    "stored_sha256": "13e641596a58464acb02bedb822dc33aff3c5ce2e05fcea02b2a278304bfa390"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00011.json.gz": {
+    "original_sha256": "d3e144eef274fecd2042007e7435ddd67c8a2c2502f382d344b8364c0a737fd8",
+    "stored_sha256": "93e53cec596a5e4cdbfdb531c3ec823de674c8fdc6363a763f410d93b774c261"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00023.json.gz": {
+    "original_sha256": "60bb21d42a6d248548507ef080cb1d753bd58d07e3846498d23dac8d49f305f6",
+    "stored_sha256": "477397b0199e60d214949be6967bf4557795313ee4221e3e40506c0093c11c6e"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00044.json.gz": {
+    "original_sha256": "dd7993c1c100c5eac3a2f99ff904ad2cea842a575a11793c7966b07954bbfd67",
+    "stored_sha256": "8f64771d8221a89bf3ca146d595ca9a93f129e7c8c341ca2ae82bab6a9713f17"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/combats.json.gz": {
+    "original_sha256": "24d5be1d14a8a4cd222a5b44cb44f446b5f71b4e312249d6d6f893701c8b0b04",
+    "stored_sha256": "3d54952213c1bdbd0f009768311541eaf8342b1cddeba820e33a95edcdaf90ac"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00040.json.gz": {
+    "original_sha256": "fd5ab19116a039edf878ae3494c86c1cf6b0cf52a47b3f4e5e6d0332734908bb",
+    "stored_sha256": "41746e432e7537f83cf09997411535c6126d0dd94183184fa905d157a952fb70"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/runs.json.gz": {
+    "original_sha256": "3cf0c3830e3f3f7eb46da9824b89133648d0b033997e58b96dd1087b0cbad8ff",
+    "stored_sha256": "81e9005ba5384b5e9da8e15f9e4038345168287d461923c82344ff5b0fb621f0"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00009.json.gz": {
+    "original_sha256": "698e63db45b89f37b6f5c2a191eebfeb94d67208ffd44904cf957211de0d8b7c",
+    "stored_sha256": "2dae2ea95c3b10fe4f455aa911e733ec937b683979f8819e40b10bd6ee64d56f"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00029.json.gz": {
+    "original_sha256": "6030769362a11b933982e9b8c233d719efded7fc383d4aeafe9641b255008c7a",
+    "stored_sha256": "7fb83ef72d4f4c88b4e081f46e099e33cd9ecd8567091f3ebeeb9dba1787df43"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00022.json.gz": {
+    "original_sha256": "cd559b42891f71c46ad02c1c22fe60338032e0389e2969e05ea19ee140d72d8e",
+    "stored_sha256": "b60819ad0feb54e619fe651170293b925e2586485a7a8199ffbf2c041ac4bf8f"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00045.json.gz": {
+    "original_sha256": "0551be44e9fc79017f8a31e9ea28c4bcd29fda7c3ddc77c464ee86e450c92e88",
+    "stored_sha256": "72316b3e86f0ba158a92e6de187422b70c9002e04acc52d9cc9cb58e61a3b709"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00042.json.gz": {
+    "original_sha256": "e6ed34672c1ed95f8ef94a663dfad30fd9a643b798917a607f8d5edef4589fad",
+    "stored_sha256": "09e9e29289ba378c807123d48d60d835699ab6f8430c66a18842e50164a390ad"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/part-00038.json.gz": {
+    "original_sha256": "045458af42952b2af2f8fb066d1957c86659166e10a68e831d13616ea3b68817",
+    "stored_sha256": "5aad5c575e9e71866cc126a79733984150605f437d293f60ecd020539bfeb9b7"
+  },
+  "benchmarks/comparison/step6500/model6500_policy_greedy/timing.json": {
+    "original_sha256": "c3a784396af693adbd7be58cf0eae95cf01e5f38fe180263a96aab41a21c49c5",
+    "stored_sha256": "c3a784396af693adbd7be58cf0eae95cf01e5f38fe180263a96aab41a21c49c5"
+  },
+  "benchmarks/human-validation-006500/part-00003.json.gz": {
+    "original_sha256": "cf8c05b94c1602f800f106dea241fac7d9db2c00ba0904a434f29c5be9fe2d5a",
+    "stored_sha256": "137d18cea8e465a420be11ac9f66e169b77049dfe3232db31671c0ebda64087e"
+  },
+  "benchmarks/human-validation-006500/part-00016.json.gz": {
+    "original_sha256": "67081c1c7ce98f747e47a02e52314ad63d318fa379008a44c10bf858f8f19823",
+    "stored_sha256": "f5807fab85d30aeb91d56a3a05d0ecd9ca4049d398134f48e07a83e1c273df8b"
+  },
+  "benchmarks/human-validation-006500/part-00019.json.gz": {
+    "original_sha256": "abffe3e851ad7aedcc6153393a0287ab488eadf6ba5e3a61ac96a94d07077cb1",
+    "stored_sha256": "3d2dde35a31ecb0ef0e5585e2f5a63c0815f0ee951b0a516a5f5d4631bf229c8"
+  },
+  "benchmarks/human-validation-006500/part-00001.json.gz": {
+    "original_sha256": "e8c92892c52dc96f044bb895025391aee9bfc18f4d443bf561f856f3dbf497d8",
+    "stored_sha256": "db9a1a2667424d15f7c32000c5622151cbc2751171d094ea0970574cf000d6de"
+  },
+  "benchmarks/human-validation-006500/part-00043.json.gz": {
+    "original_sha256": "4b189832733cf97ec2855811abc093e8eb76b166ef248b5a9adbfd0f850828f3",
+    "stored_sha256": "7e78c3acf4487801ffe2de6d7d0b84772cf35ea5eb3afe98e865854edd518e52"
+  },
+  "benchmarks/human-validation-006500/part-00018.json.gz": {
+    "original_sha256": "35319cf8e8174b7bb2a3a8806d6002eb3c90cb0a3e402afaf1c2b0f7681cf65e",
+    "stored_sha256": "41b897f536bb692f5af0880f784443dc602637022053220f8966a9073fa069d9"
+  },
+  "benchmarks/human-validation-006500/part-00032.json.gz": {
+    "original_sha256": "94e271496c5b02bc68851b7c5af2581fb5c0e164eeace384b468c3654ce4183b",
+    "stored_sha256": "1098803e88c5fc00399469844252e66f0e3189e02c02c3aed57038f8009eaa51"
+  },
+  "benchmarks/human-validation-006500/summary.json": {
+    "original_sha256": "9a3f822669fdcc336eaeb6a068f6d812a5ec75ce1359beccd9eeb94ea449eb86",
+    "stored_sha256": "9a3f822669fdcc336eaeb6a068f6d812a5ec75ce1359beccd9eeb94ea449eb86"
+  },
+  "benchmarks/human-validation-006500/part-00012.json.gz": {
+    "original_sha256": "4cabf644ca0da7826a62bd53ebee6e82051ca3f52188daabccb28469722e5dde",
+    "stored_sha256": "4f2be464acdb37b00eb6f8d6886d71c5090c2dde30b5d69cb617d09445ad3ef0"
+  },
+  "benchmarks/human-validation-006500/part-00033.json.gz": {
+    "original_sha256": "7ed6f8a7a6cce9b8606f839430bea840338441557ca5c03b5b516560a36154b4",
+    "stored_sha256": "d897323c1eca50b72d0b7cc38ae228c87d0000b194ef979ea0750a85f3583287"
+  },
+  "benchmarks/human-validation-006500/part-00006.json.gz": {
+    "original_sha256": "aa24971ac58ca6ee6471d8d8330dcf59ceb16428b8bac446a812edbda0e8f458",
+    "stored_sha256": "73d37ab9c0837d3673ee58f631f4d7cca87b4f898caa356b1fe02c587ae9a66e"
+  },
+  "benchmarks/human-validation-006500/part-00014.json.gz": {
+    "original_sha256": "004bbd14a40fb6dda3fa74824e8f8b7ecf7aded059d51cc80799190406fb7422",
+    "stored_sha256": "c42491b8ef23c433e3eb2a70763e69b3123e52b36048c643f172f1317acb8796"
+  },
+  "benchmarks/human-validation-006500/part-00046.json.gz": {
+    "original_sha256": "0c7706334cb5cd2eadedb6f46962557abe982baab3806ccbe604e0252ad94c55",
+    "stored_sha256": "5e5f71e39972eff3a267486018fb7fe3271cfea189591f0e59619361b3f2118e"
+  },
+  "benchmarks/human-validation-006500/part-00035.json.gz": {
+    "original_sha256": "547a807dd4612de71ee2b9f1ea10775932fa6251ee3f21d05f178278824230d5",
+    "stored_sha256": "a0b951d3ecf8d264cfc3ea9ae74558590bf8eca802c47dbe56027d28a2d6041d"
+  },
+  "benchmarks/human-validation-006500/part-00034.json.gz": {
+    "original_sha256": "db6c0f826604bc1afdbe6c2759d4c6e01d0345b229b924e58d036e520ef7a69e",
+    "stored_sha256": "3720a05055aa94bdace3124b4d709df0fec2853d8d438f339f44eff3482341db"
+  },
+  "benchmarks/human-validation-006500/trials.json.gz": {
+    "original_sha256": "770d1ace55cb1875f1e9b0aa46851df2bfe1513ea045fcf8b4429a1410fd3fb9",
+    "stored_sha256": "9886a98da9feaafa8725c87f1815d675150bddd454dc4fc487a3a491311fb733"
+  },
+  "benchmarks/human-validation-006500/part-00005.json.gz": {
+    "original_sha256": "44735cd832ea7f5f5ba4c5e8b2d5f3529bb918f72b3f9f52f57947f459df95df",
+    "stored_sha256": "67b9d69e2dde8ee2f661d314a6c1b070d7fb8dd5418faad9a2d31a57827e9239"
+  },
+  "benchmarks/human-validation-006500/part-00030.json.gz": {
+    "original_sha256": "1d9fdb8bd85829a6ad5322252508fd6918fcb8a53f84eddd851cdb0e1a0f23dc",
+    "stored_sha256": "d72a49cc207a317916bb3192d8299834832614a4670096681fb7ee7fa05771a1"
+  },
+  "benchmarks/human-validation-006500/part-00004.json.gz": {
+    "original_sha256": "ec8d9c2339d3caa97e83d57c165ee9522595b646080ef7068a7cce0e23c1514e",
+    "stored_sha256": "28a83ee06f214f132b9b8114d7b9dd5031dcdb95e1d21150846eb31cdf9f0683"
+  },
+  "benchmarks/human-validation-006500/part-00013.json.gz": {
+    "original_sha256": "cc8027ac893623effcf0771bde503a345712a29ab38b9ca370e525bc81cd3dfb",
+    "stored_sha256": "dd745636f88d94ec2ca4c922f48937fdfffde82a092820625f9cc96ece9ae755"
+  },
+  "benchmarks/human-validation-006500/part-00025.json.gz": {
+    "original_sha256": "a91f91ecd2fca95fe4789b9cc8007a6d7070fdca37ee96a411f626f9b4b004b3",
+    "stored_sha256": "e52cacf2bdb75513227c2546aab9ade87c2b02e84a735eea8533c42678c84a89"
+  },
+  "benchmarks/human-validation-006500/part-00015.json.gz": {
+    "original_sha256": "1e8761e72b251271bfbdcdc196beaa804034a3d12075917a2d75a110d8dde92d",
+    "stored_sha256": "681d6f6b7b6bd782d47e0dd36b46566cc8de222bb160351c33d6bf967e9d913c"
+  },
+  "benchmarks/human-validation-006500/part-00027.json.gz": {
+    "original_sha256": "5c647d6ad19584b92c206640850cb44d111d7e248e405baf37e5cfaf2694db75",
+    "stored_sha256": "dae258929851d7e439d919ab2245818a501e6c01a253520aac3eaf8eeed41c16"
+  },
+  "benchmarks/human-validation-006500/part-00021.json.gz": {
+    "original_sha256": "da4497f0edb2ed76e1f5b3598a7babc9053e2ecdf6ddc01b1778284e346c3ad6",
+    "stored_sha256": "ee301cb9df20b824ba0d2c7923ac38712f8e351528802ff40975fff3ef7ae452"
+  },
+  "benchmarks/human-validation-006500/part-00002.json.gz": {
+    "original_sha256": "aed92c1680f037c72d6fa14504192b9679cfed7ec7a49b6c1dc5a36414ce9738",
+    "stored_sha256": "08acc348bd85c8132ee5201184c446bd94b848ba3d28a0bb95d1b52f3d6ba031"
+  },
+  "benchmarks/human-validation-006500/part-00024.json.gz": {
+    "original_sha256": "9072d43cf7a3bad5788d49c99a1effe46424c0b4f93730892421515e912ca2dc",
+    "stored_sha256": "f699d156c72777b229bca31dc148fa796b6660041837bae3bb48e8195def53e2"
+  },
+  "benchmarks/human-validation-006500/part-00031.json.gz": {
+    "original_sha256": "a5eb0c704660fbc9375c12fba8daf0c67dbca53ea7491d0b054e4c161dffff52",
+    "stored_sha256": "b89cce96b138c3223bc78e8d08c0f910e19bd42f605c895ffc2a36f80ef78290"
+  },
+  "benchmarks/human-validation-006500/part-00039.json.gz": {
+    "original_sha256": "060573643a7d5060a9de1f29db5eb4bf5616e2a086ff604ee7b7b8781dbbf8a7",
+    "stored_sha256": "5228e575be2355cc1ae206625740c0d07106f5d6d2616eb938b707b284ea355f"
+  },
+  "benchmarks/human-validation-006500/part-00008.json.gz": {
+    "original_sha256": "b3d8444cb1c9e5baedd14f9d5acc3940e405e413c4f4107233277049d47b1706",
+    "stored_sha256": "b30c093e398f5fba69cfac8ff5da10915c826643246a9939a3b8185aef739edf"
+  },
+  "benchmarks/human-validation-006500/provenance.json": {
+    "original_sha256": "bffebb45edf45e762b3ad4311e2d839c6f2715ba656a220ba493b9bc59b23ca3",
+    "stored_sha256": "bffebb45edf45e762b3ad4311e2d839c6f2715ba656a220ba493b9bc59b23ca3"
+  },
+  "benchmarks/human-validation-006500/part-00041.json.gz": {
+    "original_sha256": "79c465b21b5f55fbb82dd983e014460ec3ed3468f4ffd82fcdab64922f7cf70d",
+    "stored_sha256": "cd7087f4e9198667d2a0bb868a605e76702be84656e27bfd7795682ce2d22601"
+  },
+  "benchmarks/human-validation-006500/part-00020.json.gz": {
+    "original_sha256": "d1b095052df480be84ab44a88cbcf9cc6a6fb7316b897f495fc98020efa8d3aa",
+    "stored_sha256": "57e7e8222ba9a0d9f25713c5e93030bf38b85a0e9016429087ad6e8b574a043a"
+  },
+  "benchmarks/human-validation-006500/part-00047.json.gz": {
+    "original_sha256": "0347b56debfcf6faec853f829645db78cab9333418ace1b406d8efae0c031ff7",
+    "stored_sha256": "29b5d5e78a4524274270f3dddb625aedee560bc2448e71629617848598ce8cbf"
+  },
+  "benchmarks/human-validation-006500/part-00028.json.gz": {
+    "original_sha256": "ea3bf7011b087833bbf384d1c0db036612b29097e9385079ab6e8185d85aa698",
+    "stored_sha256": "2bc56113f03db4780f60100d478c4ac0d66ce6224ad3a9f7ebcbced1a0297671"
+  },
+  "benchmarks/human-validation-006500/part-00007.json.gz": {
+    "original_sha256": "7e51248aa231bcb6d2bc359c0d1601b2e90b63e886b919729fdd566beccf2bf5",
+    "stored_sha256": "c050f13dbca9b5c8a076443f6abf12b50a0a0203ca930bd8a09e1f03ad31a6b8"
+  },
+  "benchmarks/human-validation-006500/part-00010.json.gz": {
+    "original_sha256": "2802a11361b663180950cea10fbc3078e8de0d308920baf0a6e112716ebcf0ab",
+    "stored_sha256": "138345031a1a4856a6c5d910a9320acd218bfd919aaf35dfb681a8546068afbb"
+  },
+  "benchmarks/human-validation-006500/part-00000.json.gz": {
+    "original_sha256": "aad5a2861af1fe8ca075323a58766dccd4873dcefbf17167c0b5e9bde8bb01ce",
+    "stored_sha256": "20c7412532aae4f47962413a8ed391714ed2617586e972684f42396eecb1cbe1"
+  },
+  "benchmarks/human-validation-006500/part-00037.json.gz": {
+    "original_sha256": "a6bb46dafbcbce26ccefa69b4d9995a6299666a2a3c4b88e8fc92ee4aa879192",
+    "stored_sha256": "956272860d3ef6d67f412de6b2e1f9e1fcb5593c6bcec54b02a4814174451dbc"
+  },
+  "benchmarks/human-validation-006500/part-00036.json.gz": {
+    "original_sha256": "ae48b629ea59e69881fa6dc8ce952c22a909cbf36c1bf2dc4d5056b0b4b87416",
+    "stored_sha256": "10064d7d038cd364cff678f284bc12a112e2b150cc6316e1dd03ee6ad328ff39"
+  },
+  "benchmarks/human-validation-006500/part-00017.json.gz": {
+    "original_sha256": "ad7d8f4185c3a5aff629e80eabbfcc11b1fe1df9fe9a85a755ed2b5ae3082a66",
+    "stored_sha256": "5f49b9af37f0cad25d792c408799b66c8d808e70e19ce913628ef533ba35790d"
+  },
+  "benchmarks/human-validation-006500/part-00026.json.gz": {
+    "original_sha256": "5f26e2069bd1949589ee4c8322c218dd9dedb76a5fda9b3ba003106bde4bf3d7",
+    "stored_sha256": "b97c1e01150a85337be1fb627f20b9a1181ba2a6bf2d8a6e84532b65157156b9"
+  },
+  "benchmarks/human-validation-006500/part-00011.json.gz": {
+    "original_sha256": "8ac762be1d8d08722568f2bcf2c50f4418b0b112bc0ee1f643fea3e902677fc9",
+    "stored_sha256": "02dae9d61bfb30502a1b443b750308154ba98ba4017464044a17c0aa65b345ad"
+  },
+  "benchmarks/human-validation-006500/part-00023.json.gz": {
+    "original_sha256": "67aaa8355c07c9bb3c0d12c7e22b74038d0656eba12ceae57a21e3fdac6d1d3b",
+    "stored_sha256": "7a8e2f50ba86d77e561c535002bccd96ec4a1445c877bdc42bb59c3f12762edf"
+  },
+  "benchmarks/human-validation-006500/part-00044.json.gz": {
+    "original_sha256": "05150f186fbef5dc9e02f0bfcc65b033c9b2d5ac478dd51ed571d689026a5663",
+    "stored_sha256": "f2a6879c600ecae37eca3ad1a9fd0e152775368f32a8a4aea10b3a31815ece03"
+  },
+  "benchmarks/human-validation-006500/combats.json.gz": {
+    "original_sha256": "540612ae9cb8ac4b3bf428a01323aae0dcc2df2a269e17269ae3fee5122e5f17",
+    "stored_sha256": "34d99726bade087521b309a2fec712956f76318fabbfaf2d0f44fb93a3fe579c"
+  },
+  "benchmarks/human-validation-006500/part-00040.json.gz": {
+    "original_sha256": "e58c4b1d21bb85fba26c1f6090f436b5e04b960d4c69f0ca8f4ac33f1f6a3dc4",
+    "stored_sha256": "689038366c4223671b2281e8746cf6c60c5f45a92abd208f9b8298245e6252ce"
+  },
+  "benchmarks/human-validation-006500/runs.json.gz": {
+    "original_sha256": "a81cd3a411cb8b872ebdacd407cecaf629d18e4dd923c6064ea5b95cd9552a18",
+    "stored_sha256": "338848842e575be8e9a2f566ebd3ac4add2523ccbc52c6145e2772bc6d46b99a"
+  },
+  "benchmarks/human-validation-006500/part-00009.json.gz": {
+    "original_sha256": "312ce9d9d0c69c1048e0dad367775b0f79e909326c0f6c1d393510c3b3bdbbe3",
+    "stored_sha256": "7f38ea6f07389d63dd1f9411ed8a0d48cab711d6836828372a121dd37e1e30fa"
+  },
+  "benchmarks/human-validation-006500/part-00029.json.gz": {
+    "original_sha256": "d765cd6a13e29eca0107c342f408feea1462b50c4b9a12e0c0382ec4330e3cda",
+    "stored_sha256": "da72803f1b9611eda6fd43633fab9ce83a977a937aa15c19ac9c172a2e817203"
+  },
+  "benchmarks/human-validation-006500/part-00022.json.gz": {
+    "original_sha256": "44d3b01333eae523d168a3fbeaed5be03d62ba51dff76752af3b5e639d183ec3",
+    "stored_sha256": "520484945e5db1f45e004d0295467806586612724b11237475ec847c12ffd880"
+  },
+  "benchmarks/human-validation-006500/part-00045.json.gz": {
+    "original_sha256": "eafe1b7c47b0503d0cd73bd6a6410c20c2ca916af5806060818022323f95c63d",
+    "stored_sha256": "efb248ef15c2806a7df9a1173834bb907263cefbdecf520783e4eb109ab8e66d"
+  },
+  "benchmarks/human-validation-006500/part-00042.json.gz": {
+    "original_sha256": "0b356585a1d2deed7dcb8103a9a344e4a4a260da326464e3466d910a10217cbb",
+    "stored_sha256": "53d80a20581dfaba404846baf1cbf254b493ea40d73ee15d2e7edb45e1c85e03"
+  },
+  "benchmarks/human-validation-006500/part-00038.json.gz": {
+    "original_sha256": "76c6617d20a629bb6a5a03656153f9ce2bd056164465dbf55bb27fcce7556079",
+    "stored_sha256": "061a8d1f7553943618d1f2adf4cff74467d801e40745ab8080fdd2a65f1d7fdc"
+  },
+  "benchmarks/validation-comparison-006200.json": {
+    "original_sha256": "4a26e8da2a7fef21677bacb2f21a190b7dc7779de7cb868b7b6e54801a0c3871",
+    "stored_sha256": "4a26e8da2a7fef21677bacb2f21a190b7dc7779de7cb868b7b6e54801a0c3871"
+  },
+  "benchmarks/validation-006200/summary.json": {
+    "original_sha256": "c699d98c455766adb41bdbe9b9010915deeadaa8efad6ed422534246a3881b3b",
+    "stored_sha256": "c699d98c455766adb41bdbe9b9010915deeadaa8efad6ed422534246a3881b3b"
+  },
+  "benchmarks/validation-006200/provenance.json": {
+    "original_sha256": "9af9fd23cbf5cd03a8ae9801374e7f97bd8778c3e24eeb05f63521c1190bfe4e",
+    "stored_sha256": "9af9fd23cbf5cd03a8ae9801374e7f97bd8778c3e24eeb05f63521c1190bfe4e"
+  },
+  "benchmarks/policy-validation-006200/summary.json": {
+    "original_sha256": "5338b6bb74732bbd2ec1780c5a5e0889642e4f843829a321e8d1454e1b05c0f6",
+    "stored_sha256": "5338b6bb74732bbd2ec1780c5a5e0889642e4f843829a321e8d1454e1b05c0f6"
+  },
+  "benchmarks/policy-validation-006200/provenance.json": {
+    "original_sha256": "128486c06de25d44871e724c90cbcafac131a92456f1065d701b9d68b27e32d3",
+    "stored_sha256": "128486c06de25d44871e724c90cbcafac131a92456f1065d701b9d68b27e32d3"
+  },
+  "benchmarks/validation-comparison-006300.json": {
+    "original_sha256": "20e86acf067824e2be320fb8c4261a201feadd7ded360c55053d66a38085e4e1",
+    "stored_sha256": "20e86acf067824e2be320fb8c4261a201feadd7ded360c55053d66a38085e4e1"
+  },
+  "benchmarks/validation-006300/summary.json": {
+    "original_sha256": "351b1094f1b3006a435d0efeac0c6a0b155609c7e48d44183befdf25e01bae38",
+    "stored_sha256": "351b1094f1b3006a435d0efeac0c6a0b155609c7e48d44183befdf25e01bae38"
+  },
+  "benchmarks/validation-006300/provenance.json": {
+    "original_sha256": "18d264d1d8cebae45cae1cc062a90309a596c207cd3d313c43a6d12217ed10e5",
+    "stored_sha256": "18d264d1d8cebae45cae1cc062a90309a596c207cd3d313c43a6d12217ed10e5"
+  },
+  "benchmarks/policy-validation-006300/summary.json": {
+    "original_sha256": "265838c83a97bcef2b6d24cc87c6b6014a0dd97617108fa6f959fb567e5725bf",
+    "stored_sha256": "265838c83a97bcef2b6d24cc87c6b6014a0dd97617108fa6f959fb567e5725bf"
+  },
+  "benchmarks/policy-validation-006300/provenance.json": {
+    "original_sha256": "af1f175b8506c722c091350ac429a0c2f5a6b4f6435ab859e62c2e6629fc069a",
+    "stored_sha256": "af1f175b8506c722c091350ac429a0c2f5a6b4f6435ab859e62c2e6629fc069a"
+  },
+  "benchmarks/validation-comparison-006400.json": {
+    "original_sha256": "e2baa2a4197b7995bc9f8a6671e0821d4b05ccd1aa972e42d1332568d51b9690",
+    "stored_sha256": "e2baa2a4197b7995bc9f8a6671e0821d4b05ccd1aa972e42d1332568d51b9690"
+  },
+  "benchmarks/validation-006400/summary.json": {
+    "original_sha256": "4b2ef492c89b4c7b1eb08b110472aa26bd3a8de32a6f39ff4825c9318a237453",
+    "stored_sha256": "4b2ef492c89b4c7b1eb08b110472aa26bd3a8de32a6f39ff4825c9318a237453"
+  },
+  "benchmarks/validation-006400/provenance.json": {
+    "original_sha256": "e12946ad46d2bc5411cdd3211c5f648dd79cdb714bb51d112bc58b0ca330d8ee",
+    "stored_sha256": "e12946ad46d2bc5411cdd3211c5f648dd79cdb714bb51d112bc58b0ca330d8ee"
+  },
+  "benchmarks/policy-validation-006400/summary.json": {
+    "original_sha256": "a7ad97805b94325d8ef8f87b48b2ba4a1daf002cc93ccc85d186834273d93db4",
+    "stored_sha256": "a7ad97805b94325d8ef8f87b48b2ba4a1daf002cc93ccc85d186834273d93db4"
+  },
+  "benchmarks/policy-validation-006400/provenance.json": {
+    "original_sha256": "4d7f27c5ac23076c184baebc7192b24821c64e4d32fce400aad13f357fc70f75",
+    "stored_sha256": "4d7f27c5ac23076c184baebc7192b24821c64e4d32fce400aad13f357fc70f75"
+  },
+  "benchmarks/validation-comparison-006500.json": {
+    "original_sha256": "da296b82e7b83241531f1af756471d371c56110b5b9521b2ac15c96b7f323ce6",
+    "stored_sha256": "da296b82e7b83241531f1af756471d371c56110b5b9521b2ac15c96b7f323ce6"
+  },
+  "benchmarks/validation-006500/summary.json": {
+    "original_sha256": "060780d72c55594d7fc1c68d6097d6d2fcb8393d59ff201fa3f289004de69bd8",
+    "stored_sha256": "060780d72c55594d7fc1c68d6097d6d2fcb8393d59ff201fa3f289004de69bd8"
+  },
+  "benchmarks/validation-006500/provenance.json": {
+    "original_sha256": "e3573ef240250c8b75c13d25d4fd3c8b3ff2c9235160f2cd3ccf1cf62bb12003",
+    "stored_sha256": "e3573ef240250c8b75c13d25d4fd3c8b3ff2c9235160f2cd3ccf1cf62bb12003"
+  },
+  "benchmarks/policy-validation-006500/summary.json": {
+    "original_sha256": "230c1386417207f2ed750ac337c86ba0467cd75cb13d359cff4ab0e9d1e29c3f",
+    "stored_sha256": "230c1386417207f2ed750ac337c86ba0467cd75cb13d359cff4ab0e9d1e29c3f"
+  },
+  "benchmarks/policy-validation-006500/provenance.json": {
+    "original_sha256": "5daa4260a89b9b002417291b9b5729a5e9b845ecdc26ddbab2be32cd7c989f93",
+    "stored_sha256": "5daa4260a89b9b002417291b9b5729a5e9b845ecdc26ddbab2be32cd7c989f93"
+  },
+  "benchmarks/history/validation.jsonl": {
+    "original_sha256": "4014aa936d1f92f426dcbb76f79d1db36c8c3bce444a1a8d82170634b3656b23",
+    "stored_sha256": "4014aa936d1f92f426dcbb76f79d1db36c8c3bce444a1a8d82170634b3656b23"
+  },
+  "benchmarks/history/policy-validation.jsonl": {
+    "original_sha256": "97ddfcd7cd5025daf545968c454294b513dd0dd7111a7d3fe92e29bd2641ed11",
+    "stored_sha256": "97ddfcd7cd5025daf545968c454294b513dd0dd7111a7d3fe92e29bd2641ed11"
+  },
+  "benchmarks/history/human-validation.jsonl": {
+    "original_sha256": "1719df702589490f3f80c543dc7e6383559389667ed6a49d2ecd49d763fc793b",
+    "stored_sha256": "1719df702589490f3f80c543dc7e6383559389667ed6a49d2ecd49d763fc793b"
+  },
+  "benchmarks/comparison/step6500/comparison.json": {
+    "original_sha256": "b7f500a24dc13ea8a05bce0456fff0b947d875c290d8d87211bab5ac22c49b39",
+    "stored_sha256": "b7f500a24dc13ea8a05bce0456fff0b947d875c290d8d87211bab5ac22c49b39"
+  },
+  "benchmarks/comparison/step6500/matched-comparison.json": {
+    "original_sha256": "b386432990f276e82e74fd92d438fcbf6ad3363a8d6cca2d59c95b2e2f576bbd",
+    "stored_sha256": "b386432990f276e82e74fd92d438fcbf6ad3363a8d6cca2d59c95b2e2f576bbd"
+  },
+  "benchmarks/comparison/step6500/final-verification.json": {
+    "original_sha256": "7c49f5b4bc559b54d587a71a643fb1356f4f302db5eab788b2f3ca3f9d80612e",
+    "stored_sha256": "7c49f5b4bc559b54d587a71a643fb1356f4f302db5eab788b2f3ca3f9d80612e"
+  },
+  "benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv": {
+    "original_sha256": "ecb30cec8b75926c305bca83c0b70e7bebffe97b0b3778c9684019a0f7ba7aa8",
+    "stored_sha256": "42236f24e9b62c139692b1530c30f02e0d87987daa24b24c0970b11af646e1a1",
+    "transformation": "CSV line endings normalized to LF; values unchanged."
+  },
+  "benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz": {
+    "original_sha256": "c738f611b00ef4f5338e85f04b080cb0e4aca2e75b4c762794455265ed1a6de1",
+    "stored_sha256": "b1fb0fa22baa281931d19e7a8bfb80014fdc4610cdfddcce24c06fd23f287fc7",
+    "transformation": "Personal path prefixes sanitized; pool joined from frozen boss128 reference, original mode label retained as recorded_search_tier."
+  },
+  "benchmarks/comparison/step6500/combat-analysis/summary.json": {
+    "original_sha256": "3f4845ebb86dcfaf3dbf2e235c8b0cde8ed1fad26247fa7ef8810e7fe0fd0772",
+    "stored_sha256": "3f4845ebb86dcfaf3dbf2e235c8b0cde8ed1fad26247fa7ef8810e7fe0fd0772"
+  }
+}

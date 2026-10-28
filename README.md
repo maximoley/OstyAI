@@ -4,7 +4,7 @@
 
 The plan is to train a strong, fast combat model, then a run-decision model for pathing, rewards, shops and deck building. This repository covers the combat model; current results do not establish superhuman play.
 
-OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-5500 model**, training code, frozen benchmarks and results through **step 6,000**. The newer checkpoint weights are not yet bundled. Full training datasets are excluded.
+OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-5500 model**, training code, frozen benchmarks and results through **step 6,500**. The newer checkpoint weights are not yet bundled. Full training datasets are excluded.
 
 Built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, which provides the original simulator, MCTS and belief-draw implementation.
 
@@ -63,37 +63,37 @@ Each fight preserves its historical deck, relics, HP and inventory. Starting pot
 
 ### Matched agent comparison
 
-The **step-6,000 scheduled benchmark** replaces the main boss128 result. Other columns are the October 26 timed runs. All use **80 workers**, the same 512-run combat IDs and three frozen RNG seeds, and a **1,000-action cap**. Both MCTS runs use rollout cap **200**. Neural search uses **no persistent reuse**.
+All neural columns use **step 6,500**. Runs use **80 workers**, the same 512-run panel and three frozen RNG seeds, and a **1,000-action cap**. MCTS uses rollout cap **200**; neural search uses **no persistent reuse**.
 
-| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6000, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
 |---|---|---|---|---|---|
 | Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
-| Trial win rate | **92.51%** | **91.91%** | **92.53%** | **92.27%** | **80.08%** |
-| Majority combat win rate | **93.41%** | **92.78%** | **93.74%** | **93.35%** | **81.38%** |
-| Every fight ≥2/3 | **31.05%** | **29.88%** | **29.88%** | **27.34%** | **2.73%** |
-| Every fight ≥1/3 | **52.54%** | **48.44%** | **58.59%** | **55.86%** | **12.70%** |
-| Wall time | **1 h 22 min 7 s** | **50 min 51 s** | **34 min 47 s†** | **1 h 6 min 24 s** | **5 min 16 s** |
+| Trial win rate | **92.51%** | **91.91%** | **92.97%** | **93.27%** | **88.46%** |
+| Majority combat win rate | **93.41%** | **92.78%** | **94.01%** | **94.37%** | **89.72%** |
+| Every fight ≥2/3 | **31.05%** | **29.88%** | **31.05%** | **35.16%** | **16.21%** |
+| Every fight ≥1/3 | **52.54%** | **48.44%** | **58.40%** | **60.74%** | **38.28%** |
+| Wall time | **82 min 07 s** | **50 min 51 s** | **35 min 39 s** | **56 min 43 s** | **3 min 37 s** |
 
-† Step 6,000 reports **scheduled evaluation time**, excluding process startup/model initialization; other columns report full-process wall time from sequential runs with training paused.
+Times cover fresh standalone processes, including startup and output writing, with training paused. No unrelated GPU jobs were observed during the new runs; these are single-run timings with existing compilation caches.
 
-Unresolved trials were **0 / 1 / 3 / 15 / 1,126**, and mean HP lost was **11.57 / 11.88 / 13.40 / 14.16 / 18.96**, in column order. MCTS retains its upstream evaluator rather than the neural potion-penalty objective; fixture compatibility is handled offline. See the linked results for counts and provenance.
-
-[Step-6,000 results](benchmarks/human-validation-006000/summary.json) · [Recomputed metrics](benchmarks/readme-step6000-metrics.json) · [Historical timed comparisons](benchmarks/comparison/README.md)
+Unresolved trials were **0 / 1 / 6 / 7 / 57**, in column order, and count as nonwins. MCTS retains its upstream evaluator rather than the neural potion-penalty objective. [Verified results and timing](benchmarks/comparison/step6500/README.md) · [Historical comparisons](benchmarks/comparison/README.md).
 
 #### Win rate by combat pool
 
-| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6000, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
 |---|---|---|---|---|---|
-| Easy | **99.75%** | **99.75%** | **99.79%** | **99.63%** | **88.31%** |
-| Hard | **98.32%** | **98.32%** | **98.34%** | **98.19%** | **88.71%** |
-| Elite | **92.48%** | **92.48%** | **93.64%** | **93.12%** | **82.19%** |
-| Boss | **70.72%** | **67.17%** | **68.95%** | **68.72%** | **48.76%** |
+| Easy | **99.75%** | **99.75%** | **99.72%** | **99.72%** | **99.16%** |
+| Hard | **98.32%** | **98.32%** | **98.48%** | **98.49%** | **96.32%** |
+| Elite | **92.48%** | **92.48%** | **93.80%** | **93.56%** | **87.78%** |
+| Boss | **70.72%** | **67.17%** | **71.16%** | **73.31%** | **58.41%** |
 
-Win rates pool all three seeds; unresolved trials count as nonwins. Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**, using identical pool assignments. [Step-6,000 counts](benchmarks/readme-step6000-metrics.json) · [Historical pool counts](benchmarks/comparison/pool-win-rates.json).
+Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**. [Step-6,500 counts](benchmarks/comparison/step6500/readme-metrics.json) · [MCTS counts](benchmarks/comparison/pool-win-rates.json).
 
 ### Latest human benchmark
 
-Step **6,000** won **33,587/36,297 trials (92.53%)**, up **0.89 percentage points** from scheduled step 5,500. **153/512 runs (29.88%)** won every fight by majority, up from **122/512 (23.83%)**. The downloadable model is still step 5,500; its [historical results](benchmarks/readme-step5500-metrics.json) are retained.
+Boss256 achieved **93.27% trial wins** and **35.16% every-fight ≥2/3**, versus **92.97% / 31.05%** with boss128. Greedy policy achieved **88.46%** in **3 min 37 s**. [Per-combat outcomes](benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv) and a [failed-trial fixture index](benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz) are included for targeted analysis.
+
+Training is paused at **6,500**. The downloadable weights remain step **5,500**; these newer results do not change the bundled model.
 
 ## Training progress
 
@@ -102,9 +102,9 @@ Step **6,000** won **33,587/36,297 trials (92.53%)**, up **0.89 percentage point
 <details>
 <summary>Show annotated validation plot</summary>
 
-![Search and policy-only validation win rates through step 6100, with all change markers](docs/assets/validation_winrate_annotated.png)
+![Search and policy-only validation win rates through step 6500, with all change markers](docs/assets/validation_winrate_annotated.png)
 
-The dashed policy-only line shows recorded checkpoints **5,300–6,100**, with no inferred earlier results. The plot extends through **step 6,100**, which scored **92.05% with search / 85.31% with greedy policy** across 8,192 trials; unresolved trials count as nonwins. Search used boss256 and no reuse. New markers show the **boss128 → boss256 increase after step 5,613**, doubled boss collection and rebalanced quotas, and **reuse disabled after step 5,645**. Earlier markers are preserved. Changes also affect evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006100.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
+At **step 6,500**, primary validation scored **93.51% with search / 88.92% with greedy policy** across 8,192 trials. Policy-only points cover recorded steps **5,300–6,500**. All change markers are preserved, including **boss128 → boss256 after 5,613** and **reuse disabled after 5,645**. Changes also affect evaluation, so jumps do not isolate learning gains. [Matched results](benchmarks/validation-comparison-006500.json) · [Plot data](benchmarks/history/primary-validation-annotated-data.json) · [Reproduce](scripts/plot_primary_validation.py).
 
 </details>
 
@@ -113,9 +113,9 @@ The dashed policy-only line shows recorded checkpoints **5,300–6,100**, with n
 <details>
 <summary>Show human-benchmark plot</summary>
 
-![Human benchmark win rates and run aggregates from step 4000 through 6000](docs/assets/human_benchmark_vs_optimizer_step.png)
+![Human benchmark win rates and run aggregates from step 4000 through 6500](docs/assets/human_benchmark_vs_optimizer_step.png)
 
-The human plot now includes **step 6,000**. Steps 5,500 and 6,000 both use **32/64/96/128** simulations with no reuse; training between them increased boss search to 256 and doubled boss collection starts.
+The plot uses **scheduled human evaluations**, through **step 6,500: 92.93% trial wins and 31.45% every-fight ≥2/3**. Steps 5,500–6,500 use **32/64/96/128** simulations with no reuse. The separately timed step-6,500 runs in the comparison table are distinct passes; their results are not substituted into this training history.
 
 Earlier search budgets and simulator repairs differ across checkpoints. [Plot data](benchmarks/history/human-benchmark-plot-data.json) · [Reproduce plot](scripts/plot_human_benchmark.py) · [Validation histories](benchmarks/history/).
 

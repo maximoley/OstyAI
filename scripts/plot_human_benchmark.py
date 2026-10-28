@@ -24,7 +24,7 @@ for ax in axes:
 fig.suptitle('Human benchmark results over training',fontsize=23,fontweight='bold',x=.065,ha='left',y=.97)
 fig.text(.065,.895,'512 fixed A10 human winning runs · 12,099 combats · 36,297 frozen RNG trials per checkpoint',color='#555555',fontsize=12)
 fig.text(.065,.088,'Run scores aggregate independent historical combat starts; they are not end-to-end played runs.',color='#555555',fontsize=10)
-fig.text(.065,.045,'Unresolved trials count as nonwins. Steps 5,500 and 6,000 use boss128 without reuse; earlier search settings and simulator versions differ.',color='#555555',fontsize=10)
+fig.text(.065,.045,'Unresolved trials count as nonwins. Steps 5,500–6,500 use boss128 without reuse; earlier search settings and simulator versions differ.',color='#555555',fontsize=10)
 fig.subplots_adjust(left=.065,right=.975,top=.78,bottom=.23,wspace=.25)
 for ext in ['png','svg']:fig.savefig(ROOT/f'docs/assets/human_benchmark_vs_optimizer_step.{ext}',dpi=180,facecolor='white')
 

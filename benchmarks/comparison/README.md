@@ -1,4 +1,6 @@
-# Matched 80-worker comparison results
+# Historical step-5500 matched comparison results
+
+**Latest:** [Step-6,500 timed results](step6500/README.md). The tables below retain the historical step-5,500 runs.
 
 [README comparison table](../../README.md#matched-agent-comparison) · [Protocol](../../docs/HUMAN_COMPARISON.md)
 

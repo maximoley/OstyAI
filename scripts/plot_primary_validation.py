@@ -38,7 +38,7 @@ ax.plot(x,y,color='#156e91',lw=2.6,zorder=5,label='Gumbel search')
 ax.scatter(x,y,s=10,color='#156e91',zorder=6)
 ax.plot(px,py,color='#c58b25',lw=2.2,ls='--',marker='s',ms=3.8,zorder=6,label='Policy only · greedy, no search')
 ax.legend(loc='upper left',frameon=False,fontsize=10)
-ax.annotate(f'{py[-1]:.2f}%',(px[-1],py[-1]),xytext=(0,-20),textcoords='offset points',ha='center',fontweight='bold',color='#a56e0c')
+ax.annotate(f'{py[-1]:.2f}%',(px[-1],py[-1]),xytext=(0,10),textcoords='offset points',ha='center',fontweight='bold',color='#a56e0c')
 ax.set_xlim(0,max(x)+230);ax.set_ylim(35,100);ax.yaxis.set_major_formatter(PercentFormatter(100));ax.grid(axis='y',alpha=.18);ax.set_axisbelow(True)
 ax.set_xlabel('Optimizer step',labelpad=10);ax.set_ylabel('Validation win rate')
 colors={'training':'#775a98','simulator':'#bf7637'}

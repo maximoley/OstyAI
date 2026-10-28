@@ -3,7 +3,7 @@ import argparse,gzip,hashlib,json,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'ostyai'))
 from human_validation_metrics import summarize
-ap=argparse.ArgumentParser();ap.add_argument('--step',type=int,default=6000);args=ap.parse_args()
+ap=argparse.ArgumentParser();ap.add_argument('--step',type=int,default=6500);args=ap.parse_args()
 hp=ROOT/f'benchmarks/human-validation-{args.step:06d}';fp=ROOT/'benchmarks/fixtures/human'
 mfile=fp/'manifest.json';manifest=json.loads(mfile.read_text());prov=json.loads((hp/'provenance.json').read_text())
 assert hashlib.sha256(mfile.read_bytes()).hexdigest()==prov['manifest_sha256']

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Mentor MCTS 250/1000",
+    "trial_wins": 33577,
+    "trials": 36297,
+    "combat_majority_wins": 11302,
+    "runs_won_every_fight_2of3": 159,
+    "runs_won_every_fight_1of3": 269,
+    "unresolved_trials": 0,
+    "wall_seconds": 4926.890855256468
+  },
+  {
+    "name": "Mentor MCTS 250/500",
+    "trial_wins": 33359,
+    "trials": 36297,
+    "combat_majority_wins": 11226,
+    "runs_won_every_fight_2of3": 153,
+    "runs_won_every_fight_1of3": 248,
+    "unresolved_trials": 1,
+    "wall_seconds": 3051.0974628701806
+  },
+  {
+    "name": "model6500_boss128",
+    "trial_wins": 33744,
+    "trials": 36297,
+    "trial_win_rate": 0.9296636085626911,
+    "combat_majority_wins": 11374,
+    "runs_won_every_fight_2of3": 159,
+    "runs_won_every_fight_1of3": 299,
+    "unresolved_trials": 6,
+    "wall_seconds": 2138.7169052511454
+  },
+  {
+    "name": "model6500_boss256",
+    "trial_wins": 33854,
+    "trials": 36297,
+    "trial_win_rate": 0.9326941620519602,
+    "combat_majority_wins": 11418,
+    "runs_won_every_fight_2of3": 180,
+    "runs_won_every_fight_1of3": 311,
+    "unresolved_trials": 7,
+    "wall_seconds": 3402.8961511068046
+  },
+  {
+    "name": "model6500_policy_greedy",
+    "trial_wins": 32107,
+    "trials": 36297,
+    "trial_win_rate": 0.884563462545114,
+    "combat_majority_wins": 10855,
+    "runs_won_every_fight_2of3": 83,
+    "runs_won_every_fight_1of3": 196,
+    "unresolved_trials": 57,
+    "wall_seconds": 217.227720040828
+  }
+]
