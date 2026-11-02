@@ -1,0 +1,11 @@
+{
+  "exported_at_utc": "2026-11-02T16:00:46.794780+00:00",
+  "step": 6500,
+  "source": "Frozen actor from completed matched step6500 benchmark suite",
+  "model_file_sha256": "3b165acddbc89bbba56f202aabb81e7022d760ae96c606a3d6cb1f2ca0d66721",
+  "actor_sha256": "0cf598b2b1f75c1ad41d990fd2ed1d027f11fd2a82b8ffb1dbe930f845ca97cf",
+  "actor_file_unchanged_from_benchmark": true,
+  "production_training_modified": false,
+  "optimizer_replay_rng_included": false,
+  "historical_results_modified": false
+}

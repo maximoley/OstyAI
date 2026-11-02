@@ -51,3 +51,7 @@ To reproduce the added timed configurations, use the same offline compatibility-
 .venv/bin/python scripts/evaluate.py --suite human --human-fixtures PATH_TO_PREPARED_PANEL --boss-simulations 256 --workers 80 --output results/human-boss256
 .venv/bin/python scripts/benchmark_mcts.py --prepared PATH_TO_PREPARED_PANEL --budget-preset rl-training --boss-simulations 500 --rollout-depth 200 --workers 80 --output results/mcts250-500
 ```
+
+## Bundled step-6500 actor
+
+The default model is now checkpoint 6500. Historical step5500 result files remain unchanged; the old actor is available in Git history before this replacement. `scripts/verify_model.py` checks the current actor against both primary and timed-human fingerprints. Use `--boss-simulations 128` or `--boss-simulations 256` for the corresponding timed configurations, with reuse disabled (the default). Search settings and batching can affect trajectories; original results remain authoritative.

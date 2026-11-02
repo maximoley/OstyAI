@@ -1,0 +1,19 @@
+{
+  "verified_at_utc": "2026-11-02T16:02:09.921237+00:00",
+  "step": 6500,
+  "parameters": 1593346,
+  "human_actor_hash": "0cf598b2b1f75c1ad41d990fd2ed1d027f11fd2a82b8ffb1dbe930f845ca97cf",
+  "primary_actor_hash": "adcf4f60d31a0662f22519b7ca97a73cff240940c98d00fb6340f04da06334aa",
+  "model_file_sha256": "3b165acddbc89bbba56f202aabb81e7022d760ae96c606a3d6cb1f2ca0d66721",
+  "finite": true,
+  "strict_load": true,
+  "weights_only_load": true,
+  "matched_timed_benchmarks": [
+    "model6500_boss128",
+    "model6500_boss256",
+    "model6500_policy_greedy"
+  ],
+  "method": "scripts/verify_model.py run against an isolated copy of the packaged model source on the training host; CPU tensor verification only",
+  "fresh_benchmark_rerun": false,
+  "production_training_modified": false
+}

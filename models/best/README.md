@@ -1,11 +1,19 @@
-# Exported human-benchmark champion
+# Exported step-6500 actor
 
-`model.pt` is the inference actor at optimizer update 5500, selected by the highest completed human-panel all-trial win rate at the snapshot time in `provenance/export.json`. It contains configuration, actor tensors, step and actor fingerprint; load with `torch.load(..., weights_only=True)`. It does not contain optimizer moments, replay or RNG state, so it is not an exact training-resume checkpoint.
+`model.pt` is the frozen inference actor at optimizer update **6,500**, matching the published primary, scheduled human and three timed human evaluations. It contains configuration, actor tensors and step; load with `torch.load(..., weights_only=True)`. Optimizer, replay and RNG state are excluded.
 
-1,593,346 parameters; four-layer width-128 policy/value transformer, four attention heads and 512-wide feed-forward layers. Inputs are the packaged NUM1 schema, including legal actions and independent potion penalties. Outputs are action logits and an unbounded shaped-return estimate. See `docs/ARCHITECTURE.md` and `docs/TRAINING.md` for full definitions.
+The model has **1,593,346 parameters**: a four-layer, width-128 policy/value transformer with four attention heads and 512-wide feed-forward layers. See [architecture](../../docs/ARCHITECTURE.md), [training](../../docs/TRAINING.md) and [metadata](metadata.json).
 
-Primary search score: 7530/8192. Matched policy-only score: 6561/8192. Human all-trial score: 33265/36297; majority-combat score: 11218/12099; complete majority-winning runs: 122/512. Unresolved trials count as nonwins. Human states may overlap training, and each combat is reset independently; these are not linked model-played full runs.
+| Evaluation | Wins / requested | Win rate |
+|---|---:|---:|
+| Scheduled primary search, boss256 | 7,660 / 8,192 | 93.51% |
+| Matched primary greedy policy | 7,284 / 8,192 | 88.92% |
+| Timed human, boss128 | 33,744 / 36,297 | 92.97% |
+| Timed human, boss256 | 33,854 / 36,297 | 93.27% |
+| Timed human, greedy policy | 32,107 / 36,297 | 88.46% |
 
-This model is specialized to Necrobinder combat decisions and the simulator/schema snapshot. It does not provide a complete map, reward, card-pick or merchant agent. Unsupported or changed game content can invalidate predictions. Historical scores use no persistent search reuse; current source includes optional reuse. A freshly rebuilt binary can produce different close decisions due to batching and floating-point behavior.
+Search uses easy32/hard64/elite96 and the stated boss budget, with reuse off. Unresolved trials count as nonwins. The separate scheduled human evaluation scored 33,730/36,297; do not substitute timed outcomes into scheduled training history. [Full matched results](../../benchmarks/comparison/step6500/README.md).
 
-The weights are licensed under [CC BY-SA 4.0](../WEIGHTS-LICENSE.md), requiring attribution and share-alike for shared adaptations. Upstream game content and human-derived data retain their respective rights. See `ATTRIBUTION.md` and `PROVENANCE.md`.
+Human states may overlap training, and each combat resets independently; run aggregates are not end-to-end model-played runs. This actor handles Necrobinder combat decisions, not map, reward or merchant decisions. Changed simulator content or asynchronous GPU batching can affect trajectories.
+
+Weights: [CC BY-SA 4.0](../WEIGHTS-LICENSE.md), Maxim Oleynikov, OstyAI. Third-party game content and human-derived data retain their respective rights.

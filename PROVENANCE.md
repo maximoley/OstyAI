@@ -29,3 +29,7 @@ Includes the completed MCTS250/500 results, scheduled step 5,600 primary/policy 
 ## October 27 results update
 
 The latest included human benchmark is step6000 (92.53% trial wins); primary search/policy results extend through step6100. All step6000 per-part, trial, combat and run outputs are included and independently recomputed. Combat IDs, RNG seeds and pool labels match the earlier comparison. Step6000 used boss128 and no reuse. Its 2086.91-second timer covers scheduled evaluation, not full-process startup, so it is labeled separately from the timed comparisons. The downloadable model remains step5500; no new weights, optimizer or training data were exported. See [export evidence](provenance/results-update-20261027.json).
+
+## Model replacement, November 2, 2026
+
+The bundled actor was replaced with the frozen step6500 export used by the published timed benchmarks. Both historical tensor fingerprint formats match the step6500 primary and human provenance. The original file hash is preserved; the export contains no optimizer, replay or RNG state. The model license remains CC BY-SA 4.0. Historical model references above describe earlier exports. See [current model metadata](models/best/metadata.json) and [replacement verification](provenance/model6500-verification.json).

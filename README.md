@@ -4,7 +4,7 @@
 
 The plan is to train a strong, fast combat model, then a run-decision model for pathing, rewards, shops and deck building. This repository covers the combat model; current results do not establish superhuman play.
 
-OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-5500 model**, training code, frozen benchmarks and results through **step 6,800**. The newer checkpoint weights are not yet bundled. Full training datasets are excluded.
+OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-6500 model**, training code, frozen benchmarks and results through **step 6,800**. Full training datasets are excluded.
 
 Built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, which provides the original simulator, MCTS and belief-draw implementation.
 
@@ -93,7 +93,7 @@ Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss 
 
 Boss256 achieved **93.27% trial wins** and **35.16% every-fight ≥2/3**, versus **92.97% / 31.05%** with boss128. Greedy policy achieved **88.46%** in **3 min 37 s**. [Per-combat outcomes](benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv) and a [failed-trial fixture index](benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz) are included for targeted analysis.
 
-Training is paused at **6,817**, with its checkpoint saved. The downloadable weights remain step **5,500**; these newer results do not change the bundled model.
+Training is paused at **6,817**, with its checkpoint saved. The downloadable weights are the benchmarked step **6,500** actor.
 
 ## Training progress
 
@@ -215,7 +215,7 @@ utility = win + 0.5 * (max(final_hp, 0) / initial_hp) * (1 - spent_potion_cost)
               + (0 if win else 0.05 * damage_progress)
 ```
 
-Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500** with fixed **32/64/96/128** simulation budgets. After step **6,500**, training uses **32/64/200/400**, with learner quotas rebalanced proportionally. Primary search validation stays at **32/64/96/256** for comparison with previous checkpoints. The target is **10,000 updates**; the bundled model is step 5500 and its reported evaluations use no search reuse.
+Utility is unclipped and can exceed 1. Primary search and policy-only validation run every **100 updates**, with no learning between passes; human validation runs every **500** with fixed **32/64/96/128** simulation budgets. After step **6,500**, training uses **32/64/200/400**, with learner quotas rebalanced proportionally. Primary search validation stays at **32/64/96/256** for comparison with previous checkpoints. The target is **10,000 updates**; the bundled model is step 6500 and its reported evaluations use no search reuse.
 
 [Full training configuration](docs/TRAINING.md)
 

@@ -1,9 +1,9 @@
 {
-  "step": 5500,
-  "selection_metric": "maximum all-requested-trial win rate among completed human benchmarks",
-  "actor_sha256": "a04bd9f4964954ad3c6bc11e8de7e809e01075bfb7b45fe4939dcd2580d84376",
-  "model_file_sha256": "804e0d78efb83fbe6337d02f6cc3fb4f8892d67bf81ecdba4855796c8bc690bc",
-  "source_checkpoint_sha256": "6811f48a9843a2f0a5919673c94ea99ddb1ea79bdd980dc89ea95c407e019aa0",
+  "step": 6500,
+  "selection_metric": "Highest completed scheduled human-benchmark all-requested-trial win rate through step 6500; timed configurations reported separately",
+  "actor_sha256": "0cf598b2b1f75c1ad41d990fd2ed1d027f11fd2a82b8ffb1dbe930f845ca97cf",
+  "model_file_sha256": "3b165acddbc89bbba56f202aabb81e7022d760ae96c606a3d6cb1f2ca0d66721",
+  "source_checkpoint_sha256": "a0d881b100f1af05ec5618cc4b299597b660adfc369659b6a62fa5b46ee1bfd4",
   "parameters": 1593346,
   "config": {
     "width": 128,
@@ -31,14 +31,25 @@
       "matched_primary": true
     },
     "human_validation_every": 500,
-    "human_validation_runs": 512,
-    "validation_combats": 8192,
-    "workers": 80,
-    "search_simulations": {
+    "human_validation_search_simulations": {
       "easy": 32,
       "hard": 64,
       "elite": 96,
       "boss": 128
+    },
+    "human_validation_runs": 512,
+    "validation_combats": 8192,
+    "workers": 80,
+    "search_reuse": {
+      "enabled": false,
+      "capacity_per_combat": 512,
+      "schema": 1
+    },
+    "search_simulations": {
+      "easy": 32,
+      "hard": 64,
+      "elite": 96,
+      "boss": 256
     },
     "skip_forced_actions": true,
     "replay_capacity": 65536,
@@ -47,6 +58,13 @@
     "seed": 2026102501,
     "potion_cost": "independent per-instance Uniform[0,1]",
     "sampler": "full-corpus bank stream",
+    "collection_sampling": {
+      "schema": "double-boss-starts-v1",
+      "first_bank": 5613,
+      "boss_multiplier": 2,
+      "nonboss": "unchanged",
+      "source_mix": "preserve original boss human/generated counts"
+    },
     "prioritized_replay": {
       "alpha": 1.0,
       "beta": 1.0,
@@ -61,13 +79,13 @@
         "easy": 32,
         "hard": 64,
         "elite": 96,
-        "boss": 128
+        "boss": 256
       },
       "quotas": {
-        "easy": 1638,
-        "hard": 3277,
-        "elite": 4915,
-        "boss": 6554
+        "easy": 1170,
+        "hard": 2341,
+        "elite": 3511,
+        "boss": 9362
       },
       "priority_normalization": "within_pool",
       "importance_target": "uniform_within_pool",
@@ -89,26 +107,95 @@
   },
   "human_result": {
     "runs": 512,
+    "runs_won_every_fight": 161,
+    "run_win_rate": 0.314453125,
     "combats": 12099,
+    "wins": 11370,
+    "win_rate": 0.9397470865360774,
+    "trial_win_rate": 0.9292779017549659,
+    "average_hp_lost": 13.26193624817478,
     "trials": 36297,
-    "trial_wins": 33265,
-    "trial_win_rate": 0.9164669256412376,
-    "wins": 11218,
-    "win_rate": 0.9271840647987437,
-    "runs_won_every_fight": 122,
-    "run_win_rate": 0.23828125,
-    "average_hp_lost": 14.411067030333085,
-    "unresolved_trials": 9
+    "trial_wins": 33730,
+    "unresolved_trials": 6
   },
-  "evaluation_native_sha256": "ce7318db3469e64a0f4f93b3989f76e4f96c8c9c3c55462f4b90a716e40fe566",
+  "evaluation_native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
   "current_native_sha256": "6a041f84c93019b6f32ed4977a95806e34e643b532126405925c5d718185e62f",
   "historical_search_reuse": false,
-  "current_search_reuse": true,
+  "current_search_reuse": false,
   "optimizer_and_replay_included": false,
   "weights_license": {
     "spdx_id": "CC-BY-SA-4.0",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/",
     "scope": "models/best/model.pt",
     "attribution": "Maxim Oleynikov, OstyAI, https://github.com/maximoley/OstyAI"
-  }
+  },
+  "primary_actor_sha256": "adcf4f60d31a0662f22519b7ca97a73cff240940c98d00fb6340f04da06334aa",
+  "timed_human_results": [
+    {
+      "name": "model6500_boss128",
+      "trial_wins": 33744,
+      "trials": 36297,
+      "trial_win_rate": 0.9296636085626911,
+      "combat_majority_wins": 11374,
+      "runs_won_every_fight_2of3": 159,
+      "runs_won_every_fight_1of3": 299,
+      "unresolved_trials": 6,
+      "timing": {
+        "started_at": "2026-10-27T22:41:40.525942+00:00",
+        "finished_at": "2026-10-27T23:17:19.242999+00:00",
+        "external_wall_seconds": 2138.7169052511454,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n3260224, python, 3620 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    },
+    {
+      "name": "model6500_boss256",
+      "trial_wins": 33854,
+      "trials": 36297,
+      "trial_win_rate": 0.9326941620519602,
+      "combat_majority_wins": 11418,
+      "runs_won_every_fight_2of3": 180,
+      "runs_won_every_fight_1of3": 311,
+      "unresolved_trials": 7,
+      "timing": {
+        "started_at": "2026-10-27T23:17:22.168524+00:00",
+        "finished_at": "2026-10-28T00:14:05.064725+00:00",
+        "external_wall_seconds": 3402.8961511068046,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    },
+    {
+      "name": "model6500_policy_greedy",
+      "trial_wins": 32107,
+      "trials": 36297,
+      "trial_win_rate": 0.884563462545114,
+      "combat_majority_wins": 10855,
+      "runs_won_every_fight_2of3": 83,
+      "runs_won_every_fight_1of3": 196,
+      "unresolved_trials": 57,
+      "timing": {
+        "started_at": "2026-10-28T00:14:07.693963+00:00",
+        "finished_at": "2026-10-28T00:17:44.921734+00:00",
+        "external_wall_seconds": 217.227720040828,
+        "exit_code": 0,
+        "workers": 80,
+        "gpu_processes_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB\n",
+        "other_gpu_overlap_samples": [],
+        "timing_comparable_without_observed_other_gpu_jobs": true,
+        "timing_poll_interval_seconds": 2,
+        "scope": "Full external child process wall time: startup, imports, compilation/cache loading, all 36297 trials, and result writing. Preparation/verification excluded. Existing shared compilation cache retained, as in previous matched MCTS comparison."
+      }
+    }
+  ]
 }
