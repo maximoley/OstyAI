@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "matched_trial_ids": true,
+  "matched_fixture_hashes": true,
+  "matched_environment_seeds": true,
+  "matched_potion_costs": true,
+  "trials": 36297,
+  "net_action_selections": 13495061197,
+  "production_training_paused": true,
+  "checkpoint_sha256": "5d5de15148d3380b7bc939f98db41b9e81997521162a00f1ce20bb22e2842803",
+  "weights_sha256": "50a71a00d64efc63e1042e54dd81e45bc6f7a9435fb6846b60d3a9c7393b6d67"
+}

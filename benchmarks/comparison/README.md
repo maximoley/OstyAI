@@ -1,12 +1,15 @@
 # Historical step-5500 matched comparison results
 
+The later [network-enabled Mentor 250/1,000 benchmark](mentor_net250_1000/README.md) scored **94.25%**. The older Mentor results below use heuristic rollouts; they do not include the shipped Necrobinder network. The [current main table](../../README.md#matched-agent-comparison) includes the new result.
+
+
 **Latest:** [Step-6,500 timed results](step6500/README.md). The tables below retain the historical step-5,500 runs.
 
 [README comparison table](../../README.md#matched-agent-comparison) · [Protocol](../../docs/HUMAN_COMPARISON.md)
 
 All five timed configurations completed on October 26, 2026. Uniform-32 was cancelled before starting. These results use the offline compatibility-prepared 512-run panel and do not replace the historical step-5500 results. [Complete comparison](comparison.json) · [Suite verification](results-verification.json).
 
-| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+| Metric | Mentor heuristic 250/1,000 | Mentor heuristic 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
 |---|---|---|---|---|---|
 | Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
 | Trial win rate | **92.51%** | **91.91%** | **91.64%** | **92.27%** | **80.08%** |
@@ -28,7 +31,7 @@ The boss-256 follow-up used the same step-5500 weights, native library, frozen t
 
 ## Win rate by combat pool
 
-| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
+| Combat pool | Mentor heuristic 250/1,000 | Mentor heuristic 250/500 | OstyAI 5500, boss128 | OstyAI 5500, boss256 | OstyAI 5500, greedy |
 |---|---|---|---|---|---|
 | Easy | **99.75%** | **99.75%** | **99.65%** | **99.63%** | **88.31%** |
 | Hard | **98.32%** | **98.32%** | **98.24%** | **98.19%** | **88.71%** |

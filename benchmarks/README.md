@@ -20,6 +20,8 @@ Run `scripts/unpack_benchmarks.py` from the repository root to prepare inputs fo
 
 ## Published outcomes
 
+The [Mentor network rerun](comparison/mentor_net250_1000/README.md) includes complete outcomes and verified timing for the shipped Necrobinder v1 playout weights.
+
 | Location | Contents |
 |---|---|
 | [human-validation-005500/](human-validation-005500/) | Summary, provenance, compressed per-trial / per-combat / per-run results and per-part outputs |

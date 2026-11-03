@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "states": 80,
+  "action_logits": 711,
+  "max_absolute_numpy_logit_error": 7.62939453125e-06,
+  "weights_sha256": "50a71a00d64efc63e1042e54dd81e45bc6f7a9435fb6846b60d3a9c7393b6d67",
+  "native_sha256": "04dc2fdea03860d209738336c7e1abd9be63a6497b471e128a067a74b4901c05",
+  "simulator_core_wire_content_identical": true,
+  "feature_contract": "upstream v1 read-only feature helpers; same heuristic-priority routines as original upstream source",
+  "golden_trajectory_limit": "Upstream random-walk test produces 611 states; repaired simulator produces 608, so full trajectory golden is not a compatible acceptance test. Never reblessed. Independent network formula checked on identical exported features from 80 frozen benchmark states.",
+  "smoke_composition": {
+    "boss": 32,
+    "elite": 24,
+    "monster": 24
+  }
+}

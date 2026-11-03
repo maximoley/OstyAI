@@ -1,0 +1,38 @@
+{
+  "easy": {
+    "trials": 10725,
+    "wins": 10707,
+    "old_heuristic_wins": 10698,
+    "unresolved": 0,
+    "win_rate": 0.9983216783216783,
+    "old_heuristic_win_rate": 0.9974825174825175,
+    "gain_percentage_points": 0.08391608391608019
+  },
+  "hard": {
+    "trials": 9708,
+    "wins": 9585,
+    "old_heuristic_wins": 9545,
+    "unresolved": 0,
+    "win_rate": 0.9873300370828183,
+    "old_heuristic_win_rate": 0.9832097239390194,
+    "gain_percentage_points": 0.4120313143798904
+  },
+  "elite": {
+    "trials": 9720,
+    "wins": 9116,
+    "old_heuristic_wins": 8989,
+    "unresolved": 0,
+    "win_rate": 0.9378600823045268,
+    "old_heuristic_win_rate": 0.9247942386831276,
+    "gain_percentage_points": 1.3065843621399176
+  },
+  "boss": {
+    "trials": 6144,
+    "wins": 4801,
+    "old_heuristic_wins": 4345,
+    "unresolved": 0,
+    "win_rate": 0.7814127604166666,
+    "old_heuristic_win_rate": 0.7071940104166666,
+    "gain_percentage_points": 7.421875
+  }
+}

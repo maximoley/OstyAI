@@ -1,0 +1,29 @@
+{
+  "time": 1793658810.246807,
+  "scope": "Only network inference/backport added to repaired engine and previous MCTS. Not latest full upstream engine.",
+  "sources": {
+    "native/crates/sts2-mcts/src/lib.rs": "df8fbc1653791c402a57cad52dd4ae5c43966e6610587813b7b083448ef52a24",
+    "native/crates/sts2-mcts/src/expert.rs": "516de5ec1e5e349c4f4d50445f41eabc1ca1c0e868d5ba950cbbd3c9526ed16d",
+    "native/crates/sts2-mcts/src/rollout_net.rs": "17b854001c058f41f9ac7bb197ec9269bc34924beb7119e25539149cc1cf4196",
+    "native/crates/sts2-py/src/adversarial.rs": "b4e183d4200639eae18201efd9e97df618f7f39e804e5e28edd7706ba6fcf0db",
+    "native/data/rollout_nets/necrobinder.json": "50a71a00d64efc63e1042e54dd81e45bc6f7a9435fb6846b60d3a9c7393b6d67",
+    "scripts/benchmark_mcts.py": "88190782fbfe720efbd9995cc159b15b34573b7a502611c5ef59b7312f37efb1",
+    "run-benchmark.py": "f90320d84ae61b087fdb7bd0fa08a1636b34453adc699a3de54f8b5bd68657cb",
+    "preflight.py": "2b9e5f795e5c9b66194a5a60c4990f10e14dbcd66cedddfa4b0ff942e67b5b55",
+    "ostyai/loop_native.so": "04dc2fdea03860d209738336c7e1abd9be63a6497b471e128a067a74b4901c05"
+  },
+  "weights_upstream_commit": "52bfee16387685a415abc22255c7b58e62f0f91e",
+  "v1_inference_upstream_commit": "6ca85c185054",
+  "read_only_core_helpers_local": true,
+  "production_training_modified": false,
+  "old_results_modified": false,
+  "workers": 80,
+  "nonboss_simulations": 250,
+  "boss_simulations": 1000,
+  "rollout_cap": 200,
+  "factual_action_cap": 1000,
+  "rollout_policy": "Net",
+  "temperature": 1.0,
+  "no_early_end_turn": false,
+  "telemetry": "Thread-local count of actual net selections; no external adapter"
+}

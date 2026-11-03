@@ -1,0 +1,15 @@
+{
+  "trial_wins": 34209,
+  "trials": 36297,
+  "trial_win_rate": 0.9424745846764195,
+  "combat_majority_wins": 11514,
+  "combats": 12099,
+  "combat_majority_win_rate": 0.9516488966030251,
+  "runs_2of3": 212,
+  "runs_1of3": 330,
+  "runs": 512,
+  "run_2of3_rate": 0.4140625,
+  "run_1of3_rate": 0.64453125,
+  "unresolved_trials": 0,
+  "external_wall_seconds": 6110.955286968499
+}

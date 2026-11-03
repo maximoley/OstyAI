@@ -21,6 +21,8 @@ Run commands from the repository root. [Quick start](../README.md#quick-start) Â
 | [plot_primary_validation.py](plot_primary_validation.py) | Rebuild primary validation history with preserved change markers, boss256 and reuse-off |
 | [verify_comparison.py](verify_comparison.py) | Recompute all five completed matched comparisons and verify saved hashes |
 
+The network-enabled Mentor results can be independently recomputed with `python scripts/verify_mentor_net.py`; this verifies saved outcomes and provenance without running inference.
+
 ## Evaluation
 
 | Script | Purpose |

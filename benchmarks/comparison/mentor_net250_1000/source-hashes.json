@@ -1,0 +1,72 @@
+{
+  "summary.json": {
+    "original_sha256": "5d1d3759ac1efedb4a21efc773fbab8c82a5b1ca740fa894665a848499c02155",
+    "stored_sha256": "5d1d3759ac1efedb4a21efc773fbab8c82a5b1ca740fa894665a848499c02155",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "provenance.json": {
+    "original_sha256": "dfc8b72de11c22e740eb1ab3b732e7b7a830c25e85b6e3ec855c30eacb06af29",
+    "stored_sha256": "dfc8b72de11c22e740eb1ab3b732e7b7a830c25e85b6e3ec855c30eacb06af29",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "readme-metrics.json": {
+    "original_sha256": "a28c04c96c96ea1bb397c2235713ed183d2de66af0a5af7c823e2ecf13e5b425",
+    "stored_sha256": "a28c04c96c96ea1bb397c2235713ed183d2de66af0a5af7c823e2ecf13e5b425",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "timing.json": {
+    "original_sha256": "3bfbdbbc089e965c5c3e35310f06f75c6089c728e239e8b8731a1501541432e0",
+    "stored_sha256": "2ebe4e2f45b91a03bc63bdf2439feadd19a2749be8c1019fbd2d08adbc74a33c",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "verification.json": {
+    "original_sha256": "bbe08d2c69973dec33963965770030081ceced73370d6cf9ac0d6a7cb511d3bc",
+    "stored_sha256": "bbe08d2c69973dec33963965770030081ceced73370d6cf9ac0d6a7cb511d3bc",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "preflight.json": {
+    "original_sha256": "7d9a2a588f2fbc14b651819aef9f8fbb0190f11aad713cd4f34db639f8cf1ed6",
+    "stored_sha256": "7d9a2a588f2fbc14b651819aef9f8fbb0190f11aad713cd4f34db639f8cf1ed6",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "smoke-verification.json": {
+    "original_sha256": "31c558b65a8ffe09438cbc5a094692e820f96e009f9f8ac4cf7ed6bcfc7515bb",
+    "stored_sha256": "31c558b65a8ffe09438cbc5a094692e820f96e009f9f8ac4cf7ed6bcfc7515bb",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "deployment.json": {
+    "original_sha256": "18cfab8167770342ab59835946aed5a6a3543ae36aff1d74137826d540ce9e63",
+    "stored_sha256": "18cfab8167770342ab59835946aed5a6a3543ae36aff1d74137826d540ce9e63",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "pool-win-rates.json": {
+    "original_sha256": "da4192eabfb57277e7ac940aaff6e22c9c22fe2bd5579f99b52a766dc15ac305",
+    "stored_sha256": "da4192eabfb57277e7ac940aaff6e22c9c22fe2bd5579f99b52a766dc15ac305",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "trials.json.gz": {
+    "original_sha256": "2f559b5ae569b6099416f272b1b707bedb7a2faeb8987bc6dfdc65e0e6ab6250",
+    "stored_sha256": "e8e6b8ee9e231e0cac1c0c7f4e063e608c59476079b555ff386dbb1148929458",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "combats.json.gz": {
+    "original_sha256": "e6c1968f3a4631bc7330dfaed16cb4c414cd722d60b807a09efbc803d6745d70",
+    "stored_sha256": "9a7d473aa5ce131f9a07f98680d03b36b10ea322c8c2d7e27c82cdf3cd8fe932",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "runs.json.gz": {
+    "original_sha256": "deb63d9f11c8d1346e779afa93b402bda9b00e82aba847460c43ce4a56621535",
+    "stored_sha256": "20ee375d10f803c68236da82393b991a074303892fe52b52ffed88a2bad185d5",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  },
+  "combat-outcomes.csv": {
+    "original_sha256": "9c03139f2f94ed4b3e0f937f3161a895b4eb722f83e0b9d57b1bf7915135e524",
+    "stored_sha256": "d7d4558852588275fc47d209bfce41506dbdd26eee13c9ce5989e6b5dab8c340",
+    "transformation": "CSV line endings normalized to LF; original server checksum retained."
+  },
+  "failed-trial-fixture-index.jsonl.gz": {
+    "original_sha256": "bc5cba30e46f7333e7b985256201fc67968e02934cc8195325322676eacde5a9",
+    "stored_sha256": "0430459a8e470cad640f0557cfc38b5c4e67e0d852c5e5b5f3a5be914aa6fc66",
+    "transformation": "Personal server paths replaced with portable archive references; deterministic gzip where applicable. Timing copy adds polling-resolution disclosure without changing recorded elapsed time."
+  }
+}

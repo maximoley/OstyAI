@@ -1,0 +1,15 @@
+{
+  "external_wall_seconds": 6110.955286968499,
+  "started_at_unix": 1793658660.8370762,
+  "finished_at_unix": 1793664771.792439,
+  "exit_code": 0,
+  "workers": 80,
+  "fresh_process": true,
+  "preparation_and_smoke_excluded": true,
+  "scope": "Fresh full benchmark process: startup, native module import, inference and result writing; existing compilation caches retained as for earlier comparisons.",
+  "gpu_before": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB",
+  "gpu_after": "pid, process_name, used_gpu_memory [MiB]\n3066, /opt/ont/dorado/bin/dorado_basecall_server, 516 MiB",
+  "completion_poll_interval_seconds": 10,
+  "completion_detection_overhead_upper_bound_seconds": 10,
+  "timing_note": "Includes up to approximately 10 seconds of parent completion-polling overhead; reported elapsed time is preserved."
+}

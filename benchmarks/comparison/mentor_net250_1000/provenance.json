@@ -1,0 +1,39 @@
+{
+  "mode": "mentor_rl_training",
+  "workers": 80,
+  "simulations_per_decision": null,
+  "default_tier_budgets": {
+    "common": 250,
+    "elite": 250,
+    "boss": 1000
+  },
+  "budget_preset": "rl-training",
+  "max_rollout_depth": 200,
+  "max_actions": 1000,
+  "hidden_info": "BeliefDraw",
+  "leaf": "TexelWide",
+  "terminal_eval": "RichBoth",
+  "rollout_policy": "Net",
+  "rollout_network": {
+    "character": "Necrobinder",
+    "feature_version": 1,
+    "state_dim": 32,
+    "action_dim": 24,
+    "hidden": 64,
+    "emb_dim": 32,
+    "temperature": 1.0,
+    "no_early_end_turn": false,
+    "weights_sha256": "50a71a00d64efc63e1042e54dd81e45bc6f7a9435fb6846b60d3a9c7393b6d67",
+    "inference_source_ref": "6ca85c185054",
+    "weights_source_ref": "52bfee16387685a415abc22255c7b58e62f0f91e",
+    "integration": "v1 network backport into unchanged repaired benchmark simulator; not a full upstream engine upgrade"
+  },
+  "root_guards": true,
+  "objective": "Unmodified upstream evaluator; frozen potion costs are recorded but are not an OstyAI reward override",
+  "model": null,
+  "manifest_sha256": "f386cbfac6b8850bde6e48ce337c69060649918e78c973870def22da074a728f",
+  "prepared_manifest_sha256": "044d5dc7f62855ac099a0b136c52ff01dd4c9c28c573011699074cd002afe6f9",
+  "native_sha256": "04dc2fdea03860d209738336c7e1abd9be63a6497b471e128a067a74b4901c05",
+  "search_seed_source": "frozen fixture wire.rng.seed; splitmix64 per decision",
+  "limit": null
+}

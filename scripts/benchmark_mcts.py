@@ -1,4 +1,4 @@
-"""Run upstream deployed MCTS over the complete frozen human panel."""
+"""Run the heuristic-only Mentor baseline over the complete frozen human panel."""
 import argparse,concurrent.futures,gzip,hashlib,importlib.util,json,os,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]

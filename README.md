@@ -65,31 +65,33 @@ Each fight preserves its historical deck, relics, HP and inventory. Starting pot
 
 All neural columns use **step 6,500**. Runs use **80 workers**, the same 512-run panel and three frozen RNG seeds, and a **1,000-action cap**. MCTS uses rollout cap **200**; neural search uses **no persistent reuse**.
 
-| Metric | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
-|---|---|---|---|---|---|
-| Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
-| Trial win rate | **92.51%** | **91.91%** | **92.97%** | **93.27%** | **88.46%** |
-| Majority combat win rate | **93.41%** | **92.78%** | **94.01%** | **94.37%** | **89.72%** |
-| Every fight ≥2/3 | **31.05%** | **29.88%** | **31.05%** | **35.16%** | **16.21%** |
-| Every fight ≥1/3 | **52.54%** | **48.44%** | **58.40%** | **60.74%** | **38.28%** |
-| Wall time | **82 min 07 s** | **50 min 51 s** | **35 min 39 s** | **56 min 43 s** | **3 min 37 s** |
+| Metric | Mentor net 250/1,000 | Mentor heuristic 250/1,000 | Mentor heuristic 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
+|---|---|---|---|---|---|---|
+| Simulations per decision | 250 non-boss; 1,000 boss | 250 non-boss; 1,000 boss | 250 non-boss; 500 boss | 32 / 64 / 96 / 128 | 32 / 64 / 96 / 256 | No search; legal argmax |
+| Trial win rate | **94.25%** | **92.51%** | **91.91%** | **92.97%** | **93.27%** | **88.46%** |
+| Majority combat win rate | **95.16%** | **93.41%** | **92.78%** | **94.01%** | **94.37%** | **89.72%** |
+| Every fight ≥2/3 | **41.41%** | **31.05%** | **29.88%** | **31.05%** | **35.16%** | **16.21%** |
+| Every fight ≥1/3 | **64.45%** | **52.54%** | **48.44%** | **58.40%** | **60.74%** | **38.28%** |
+| Wall time | **101 min 51 s** | **82 min 07 s** | **50 min 51 s** | **35 min 39 s** | **56 min 43 s** | **3 min 37 s** |
 
-Times cover fresh standalone processes, including startup and output writing, with training paused. No unrelated GPU jobs were observed during the new runs; these are single-run timings with existing compilation caches.
+Times cover fresh standalone processes with training paused and existing compilation caches. The network run includes up to 10 seconds of completion-polling overhead. See the linked timing records for scope and resource observations.
 
-Unresolved trials were **0 / 1 / 6 / 7 / 57**, in column order, and count as nonwins. MCTS retains its upstream evaluator rather than the neural potion-penalty objective. [Verified results and timing](benchmarks/comparison/step6500/README.md) · [Historical comparisons](benchmarks/comparison/README.md).
+Unresolved trials were **0 / 0 / 1 / 6 / 7 / 57**, in column order, and count as nonwins. The net column uses the shipped Necrobinder playout weights backported into the same repaired simulator; the other Mentor columns use heuristic rollouts. This is not a full latest-upstream engine upgrade. MCTS retains its own evaluator and potion objective. [Network results and provenance](benchmarks/comparison/mentor_net250_1000/README.md). [Verified results and timing](benchmarks/comparison/step6500/README.md) · [Historical comparisons](benchmarks/comparison/README.md).
 
 #### Win rate by combat pool
 
-| Combat pool | Mentor MCTS 250/1,000 | Mentor MCTS 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
-|---|---|---|---|---|---|
-| Easy | **99.75%** | **99.75%** | **99.72%** | **99.72%** | **99.16%** |
-| Hard | **98.32%** | **98.32%** | **98.48%** | **98.49%** | **96.32%** |
-| Elite | **92.48%** | **92.48%** | **93.80%** | **93.56%** | **87.78%** |
-| Boss | **70.72%** | **67.17%** | **71.16%** | **73.31%** | **58.41%** |
+| Combat pool | Mentor net 250/1,000 | Mentor heuristic 250/1,000 | Mentor heuristic 250/500 | OstyAI 6500, boss128 | OstyAI 6500, boss256 | OstyAI 6500, greedy |
+|---|---|---|---|---|---|---|
+| Easy | **99.83%** | **99.75%** | **99.75%** | **99.72%** | **99.72%** | **99.16%** |
+| Hard | **98.73%** | **98.32%** | **98.32%** | **98.48%** | **98.49%** | **96.32%** |
+| Elite | **93.79%** | **92.48%** | **92.48%** | **93.80%** | **93.56%** | **87.78%** |
+| Boss | **78.14%** | **70.72%** | **67.17%** | **71.16%** | **73.31%** | **58.41%** |
 
-Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**. [Step-6,500 counts](benchmarks/comparison/step6500/readme-metrics.json) · [MCTS counts](benchmarks/comparison/pool-win-rates.json).
+Each agent faces the same **10,725 easy / 9,708 hard / 9,720 elite / 6,144 boss trials**. [Net counts](benchmarks/comparison/mentor_net250_1000/pool-win-rates.json) · [Step-6,500 counts](benchmarks/comparison/step6500/readme-metrics.json) · [Heuristic counts](benchmarks/comparison/pool-win-rates.json).
 
 ### Latest human benchmark
+
+Mentor with the Necrobinder network achieved **94.25% trial wins / 41.41% every-fight ≥2/3**. Compared with its heuristic baseline, this added **632 wins (+1.74 percentage points)**; boss wins rose **70.72% → 78.14%**. [Full results](benchmarks/comparison/mentor_net250_1000/README.md).
 
 Boss256 achieved **93.27% trial wins** and **35.16% every-fight ≥2/3**, versus **92.97% / 31.05%** with boss128. Greedy policy achieved **88.46%** in **3 min 37 s**. [Per-combat outcomes](benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv) and a [failed-trial fixture index](benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz) are included for targeted analysis.
 
