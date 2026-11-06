@@ -33,3 +33,7 @@ The latest included human benchmark is step6000 (92.53% trial wins); primary sea
 ## Model replacement, November 2, 2026
 
 The bundled actor was replaced with the frozen step6500 export used by the published timed benchmarks. Both historical tensor fingerprint formats match the step6500 primary and human provenance. The original file hash is preserved; the export contains no optimizer, replay or RNG state. The model license remains CC BY-SA 4.0. Historical model references above describe earlier exports. See [current model metadata](models/best/metadata.json) and [replacement verification](provenance/model6500-verification.json).
+
+## PPO source publication, November 6, 2026
+
+[`ppo/`](ppo/README.md) adds the shared trainer, native full-run overlay, exact Ironclad/Necrobinder configurations, frozen validation seeds and tests from the November 2026 PPO-only campaigns. [`ppo/SOURCE.json`](ppo/SOURCE.json) records original source identities and packaging adaptations; [`ppo/native-base.json`](ppo/native-base.json) pins the already-published Rust base. The builder assembles a separate character-specific library. No production trainer, library, checkpoint or STOP was changed by publication. No PPO weights, replay/practice bank, optimizer state, private server paths or credentials are included. The existing combat-model export and benchmark history are unchanged.

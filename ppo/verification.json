@@ -1,0 +1,114 @@
+{
+  "complete": true,
+  "verified_at": "2026-11-06T16:07:39.176661+00:00",
+  "platform": "Linux x86_64; Python 3.12.3; Rust 1.96.0; PyTorch 2.7.1+cu128; NumPy 2.5.3; Triton 3.3.1",
+  "builds": {
+    "Necrobinder": {
+      "passed": true,
+      "sha256": "f16954e161ddf73d3779e863d9b0acb310830331f7f2fa36f812ac52f64bfcc5"
+    },
+    "Ironclad": {
+      "passed": true,
+      "sha256": "4041ec1e1fcfb2f9c2a551d3d3d7e1b0075e00e131054ed22368554396d9cb50"
+    }
+  },
+  "checks": {
+    "packaging": {
+      "passed": true,
+      "seconds": 0.1705322563648224,
+      "returncode": 0
+    },
+    "prepare-necrobinder": {
+      "passed": true,
+      "seconds": 0.16611315682530403,
+      "returncode": 0
+    },
+    "unit-necrobinder": {
+      "passed": true,
+      "seconds": 4.633563999086618,
+      "returncode": 0
+    },
+    "assemble-necrobinder": {
+      "passed": true,
+      "seconds": 0.7610961422324181,
+      "returncode": 0
+    },
+    "build-necrobinder": {
+      "passed": true,
+      "seconds": 111.28541824966669,
+      "returncode": 0
+    },
+    "character-necrobinder": {
+      "passed": true,
+      "seconds": 8.226890489459038,
+      "returncode": 0
+    },
+    "native-necrobinder": {
+      "passed": true,
+      "seconds": 8.6974839232862,
+      "returncode": 0
+    },
+    "model-necrobinder": {
+      "passed": true,
+      "seconds": 4.560305565595627,
+      "returncode": 0
+    },
+    "prepare-ironclad": {
+      "passed": true,
+      "seconds": 0.2088514231145382,
+      "returncode": 0
+    },
+    "unit-ironclad": {
+      "passed": true,
+      "seconds": 2.9137475937604904,
+      "returncode": 0
+    },
+    "assemble-ironclad": {
+      "passed": true,
+      "seconds": 0.7717557772994041,
+      "returncode": 0
+    },
+    "build-ironclad": {
+      "passed": true,
+      "seconds": 110.82959593832493,
+      "returncode": 0
+    },
+    "character-ironclad": {
+      "passed": true,
+      "seconds": 8.09713576734066,
+      "returncode": 0
+    },
+    "native-ironclad": {
+      "passed": true,
+      "seconds": 10.823907885700464,
+      "returncode": 0
+    },
+    "model-ironclad": {
+      "passed": true,
+      "seconds": 4.9938587583601475,
+      "returncode": 0
+    }
+  },
+  "original_versus_packaged_native": {
+    "Necrobinder": {
+      "passed": true,
+      "character": "Necrobinder",
+      "frames": 4096,
+      "trace_sha256": "97e4041daa1beafd6797dc23754b4c264b74c6cd09bd6c94bf777dea1f80c713"
+    },
+    "Ironclad": {
+      "passed": true,
+      "character": "Ironclad",
+      "frames": 4096,
+      "trace_sha256": "0f92de3b7e796592aa4bedddad4d81753cb23a22c57679b2eb645f746ede01fa"
+    }
+  },
+  "production_sources_configs_libraries_unchanged": true,
+  "production_native_sha256": {
+    "Necrobinder": "b2e43e6c04fe9e2a0bb70b24e560e0dfc1b643c6159ff1c3962237d163760d02",
+    "Ironclad": "cc44dd367f6793f3df147b10c69e3c8323c9019f0789af8e4fc22ba294a3de4e"
+  },
+  "gpu_compute_used": false,
+  "scope": "Publication correctness and native parity; no fresh training-performance or playing-strength measurement",
+  "final_packaging_passed": true
+}

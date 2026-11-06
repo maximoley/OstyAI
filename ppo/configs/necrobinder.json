@@ -1,0 +1,182 @@
+{
+  "protocol": "run-continuation-ppo-necrobinder-nov12-v1",
+  "reference": {
+    "url": "https://github.com/tfriedel/spire-mentor/pull/45",
+    "commit": "a98d8f721edcd2987af57e59c42ffc131958ae56",
+    "scope": "independent adaptation of published plan; upstream PPO source unpublished"
+  },
+  "architecture": {
+    "width": 256,
+    "layers": 8,
+    "heads": 8,
+    "ff": 1024
+  },
+  "environment": {
+    "character": "Necrobinder",
+    "ascension": 10,
+    "workers": 80,
+    "slots": 512,
+    "seed": 20261105,
+    "observation_capacity": 2048,
+    "private_capacity": 512,
+    "search_simulations": 0,
+    "max_combat_decisions": 1000,
+    "max_combat_turns": 100,
+    "max_run_decisions": 6000,
+    "auto_advance_forced": true,
+    "deduplication": "conservative exact card-instance identity excluding UID; same target; choices kept distinct"
+  },
+  "rollout_steps": 32768,
+  "epochs": 1,
+  "optimizer_minibatch": 8192,
+  "microbatch": 1024,
+  "max_microbatch_tokens": 98304,
+  "gamma": 1.0,
+  "combat_lambda": 0.95,
+  "run_lambda": 0.97,
+  "out_of_combat_hold_updates": 4,
+  "clip_ratio": 0.2,
+  "dual_clip": 3.0,
+  "importance_cap": 2.0,
+  "value_coef": 0.5,
+  "value_clipping": false,
+  "learning_rate": 0.0001,
+  "critic_learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "warmup_updates": 10,
+  "max_grad_norm": 1.0,
+  "kl_probe_rows": 8192,
+  "kl_stop": 0.06,
+  "kl_lr_low": 0.005,
+  "kl_lr_high": 0.02,
+  "lr_multiplier_bounds": [
+    0.3,
+    2.0
+  ],
+  "rewards": {
+    "floor": 0.002,
+    "elite": 0.0,
+    "boss": 0.05,
+    "run_win": 1.0
+  },
+  "advantage_filter": {
+    "enabled": true,
+    "quantile": 0.6,
+    "min_abs_advantage": 0.001,
+    "scope": "per_task",
+    "apply_to": "actor_critic_entropy",
+    "score": "raw_gae_before_centering",
+    "absolute_floor_units": "old 0.01 divided by 10 to match run-win reward 10 to 1; percentile remains 0.6"
+  },
+  "advantage_normalization": {
+    "scope": "combat_vs_noncombat",
+    "ew_decay": 0.99,
+    "epsilon": 0.0001
+  },
+  "entropy": {
+    "combat": [
+      0.01,
+      0.002
+    ],
+    "noncombat": [
+      0.0125,
+      0.006
+    ],
+    "schedule_decisions": 4000000000,
+    "normalized": true,
+    "low_entropy_threshold": 0.1,
+    "low_entropy_updates": 20,
+    "max_boosts": 2
+  },
+  "practice": {
+    "source": "own_full_runs_only",
+    "cells": [
+      "elite_act1",
+      "elite_act2",
+      "elite_act3",
+      "boss_act1",
+      "boss_act2",
+      "boss_act3_double"
+    ],
+    "queue_per_cell": 2560,
+    "queue_interpretation": "32 entries per cell times 80 workers in one shared FIFO",
+    "activation_entries": 8,
+    "max_age_decisions": 50000000,
+    "max_reuses": 4,
+    "slot_fraction": [
+      0.4,
+      0.25
+    ],
+    "boss_fraction": [
+      0.4,
+      0.75
+    ],
+    "boss_weights": [
+      0.15,
+      0.2,
+      0.65
+    ],
+    "elite_weights": [
+      0.2,
+      0.4,
+      0.4
+    ],
+    "schedule_decisions": 2000000000,
+    "boundary": "first postcombat out-of-combat state; act3 double boss to actual terminal",
+    "reseed": "RunRngSet only, before captured Move",
+    "expert_guidance": false
+  },
+  "ema_decays": [
+    0.996,
+    0.999
+  ],
+  "evaluation_weights": "ema_0.996",
+  "total_policy_updates": 305176,
+  "initialization": "fresh",
+  "checkpoint_every": 100,
+  "pre_generated_starts": 100352,
+  "mixed_precision": "bfloat16_trunk_fp32_value_projection_and_logsoftmax",
+  "compile": true,
+  "validation": {
+    "seeds": 1024,
+    "every_seconds": 7200,
+    "selection": "legal_argmax",
+    "slots": 64,
+    "workers": 80,
+    "max_decisions_per_run": 6000,
+    "max_combat_decisions": 1000,
+    "max_combat_turns": 100,
+    "first_after_seconds": 7200,
+    "cadence": "7200 seconds after previous validation completion",
+    "timeout_is_nonwin": true
+  },
+  "log_every_update": true,
+  "observation_capacity_mode": "grow_without_truncation",
+  "numerical_reproducibility": {
+    "checkpoint_restore": "exact model/optimizer/native/RNG state",
+    "cuda_updates": "floating point reductions may differ; future trajectories not promised bitwise",
+    "strict_deterministic_mode": false,
+    "reason": "Torch deterministic scatter_reduce is incompatible with the current CUDA-graph actor"
+  },
+  "max_collected_decisions": 10000000000,
+  "initialization_seed": 20261105,
+  "schedule": {
+    "timezone": "America/New_York",
+    "adapt_lr_until": "2026-11-11T06:00:00-05:00",
+    "anneal_start": "2026-11-11T06:00:00-05:00",
+    "anneal_end": "2026-11-12T06:00:00-05:00",
+    "stop_at": "2026-11-12T06:00:00-05:00",
+    "anneal_drop": 0.7,
+    "anneal_kind": "linear",
+    "stop_precedence": "earlier of wall deadline or collected-decision cap",
+    "decision_clock": "stored meaningful choices before advantage filtering",
+    "deadline_boundary": "no new simulator batch or optimizer step after deadline; checkpoint active state and retain any partial rollout"
+  },
+  "kl_control": {
+    "probe_rows": 8192,
+    "hard_stop": 0.06,
+    "check_after": "each optimizer minibatch",
+    "on_exceed": "stop remaining optimizer minibatches for current rollout; retain crossing step",
+    "adapt_multiplier_once": "after each policy update, before adapt_lr_until"
+  }
+}

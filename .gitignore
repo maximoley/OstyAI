@@ -23,5 +23,9 @@ results/
 .env.*
 .hegel/
 
+# PPO builds, prepared campaigns and live state
+ppo/build/
+ppo/runs/
+
 ostyai/boss-augmentation-v1/
 ostyai/external-corpus-converter/

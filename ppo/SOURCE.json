@@ -1,0 +1,63 @@
+{
+  "export_date": "2026-11-06",
+  "scope": "Ironclad and Necrobinder November 12 PPO runs; shared trainer plus character-specific native factory",
+  "python": {
+    "train_production.py": "fdb8e4da339a3fd164e89466f919bac9f50f4d1de941bd48acfeeee42c032d5b",
+    "fast_workers.py": "96fd9349038bc218c0cce1020b8c8496d130c626a23eba2ab89afb49981f8529",
+    "worker.py": "f0833841e453e8df27fbad7c2e5c9d8dada9bf8d468fe469b9c63a15c7198952",
+    "collect.py": "b5f818d5d69bc28a9b0b6026c1af90810914d98052946040fac75c158a2b4f14",
+    "training_schedule.py": "55c2815c12b8ef2ec03fdf750518fccdd5ed9da6716db5c596e3f337b141b003",
+    "collect_fast.py": "f9b8a37506d073700f2bafd51a689249d783037e3b30ce7d82807d2ec555cee0",
+    "filtering.py": "c113f474f8c1aeb5360a0f100d455c5bee03c5256b4d333e4c87f294ec26ad2f",
+    "fast_tokenizer.py": "758484a67d923377618e014dc992944b83c570b24320bb66f0277dcf168687c3",
+    "gc_budget.py": "dac51f7daf2c21e217402a359d7de3d57f68c98a0af7ec0dce084f3b608e749e",
+    "returns.py": "c126df45844c35292570ef42e190fdb5651567d24f0232061a51205454b204b3",
+    "model.py": "70940af02d60034c983513579987a2d43e9c03b6e466a7796ef1dfcddcb1a273",
+    "operations.py": "7a5ea17ff3f88db01612d2bb1bb020ff68e41156760ee64d3b8dadc563b8e123",
+    "supervise_run.py": "e2c329a33ae991aac2383889390b208bdae5d219e83c8904cb6c6cba8ff91106",
+    "rollout.py": "c288235c8a107b3df0f05c9afd49e04c8db26848cdccb43767b65d2b6b30cfd4",
+    "run_workers.py": "d351520ebfee98717c0b758fec815a29454f04a84a51b55790f0b8a97c9a945a",
+    "actor.py": "d8a758239bb815824a17f4e919a41122051400d0d7a94a1f92d9623c563f7d62",
+    "validation.py": "2310817e5eb7b7a35e35bb22ec0f33f59d81aa655d3f4641bef2a22566f6b4c5",
+    "learner.py": "aa93733d7bd58d3537e74ca62e98562ed95384a5ea9a14da8121fb96936a3ead",
+    "tests/test_character.py": "81e516b94dbaade4c32053226bcc6bcb06c1e9f2434e8875cfd30ab3e33c3f94",
+    "tests/test_model.py": "64880ed4cd20e677d507c72fe2d02e5197ccb324dba550101e733e088dcdcba5",
+    "tests/deadline_integration.py": "d925c3bc08f69dd04c790173a4cb33b65de1b294244355b9d7a0a855df1c450d",
+    "tests/check_checkpoint.py": "7ca3dff3af0031c9261f95b31e1bd19baf15c2f1965978ebf57d514caaf5e349",
+    "tests/test_returns.py": "e43369d04111b4c21b214b22eb668ffed8e5297cf32027fdb8dd68fe905c53ec",
+    "tests/test_loss_reference.py": "3a2329c9c6422358b18a5c9046cb19afb5592a554784f40889a28fd71f9cc91d",
+    "tests/test_schedule.py": "5a560a3b8b66cae1a380946d3fb33c815ac07598ae94d4743c9d423820194a9f",
+    "tests/test_collection_deadline.py": "8dacf68f049f23570959adccebb2ec5733c80f22052ae4d24736cd18691331bd",
+    "tests/test_supervisor_deadline.py": "e2fee3028e6e7a69ddf24335c77fd343d04c225ef763003bbae36e76a600fe33",
+    "tests/test_native.py": "efccf343c66d092a819784f0ba52d68b04c9a8308bfd23325c1956ebb49de584",
+    "tests/test_kl_deadline.py": "f9ade5c6d6eb5a13723c7bd1153cc68c9f9d20c7b603aeb5af4dd80d0f6d4154"
+  },
+  "native_overlay": {
+    "fullrun.rs": "d0ce5e14e37bb79aac3cc00523d1be0876715505dd9a45f3cbdc1eb607375f5f",
+    "fullrun/curriculum.rs": "0896f372458c25c7075a9a140bd702a8dbe3ea21eede2ac30d9cbe802d52c8b7",
+    "fullrun/runvalue.rs": "76e9aaf05bb165bdd8bb35a9e3477220fdb588bfb5ce5feceedbc660bb166a01",
+    "fullrun/ppo.rs": "5c73050fbf08af6c71abdaa64056ae9d3b53196ffad1a43494a2da4886e33758"
+  },
+  "validation_seed_sha256": "509154e255ffd65e065181751618d26580590822209361329bb1a569e8897e6f",
+  "schema_sha256": {
+    "registry.json": "31527ba3a325562f83a688760b580f695c841a7045b12138c7d76b95696c70c2",
+    "metadata.json": "7f56e126875a3e8ddccdb61dbec6a6190e6d25d756ebaef33674c93e76036dab",
+    "numeric_catalog.json": "f6c38f24a2c1fdf82eeaa8f9c756b1e71b73977df6da787042c4c7d4dc0cac03"
+  },
+  "production_native_sha256": {
+    "Necrobinder": "b2e43e6c04fe9e2a0bb70b24e560e0dfc1b643c6159ff1c3962237d163760d02",
+    "Ironclad": "cc44dd367f6793f3df147b10c69e3c8323c9019f0789af8e4fc22ba294a3de4e"
+  },
+  "packaging_changes": [
+    "Portable interpreter and CUDA runtime discovery; no host paths or process exemptions",
+    "Shared RunWorkers defaults and character tests read the selected character configuration",
+    "Standalone build overlay keeps the published combat simulator untouched",
+    "Prepare-run tool copies sources/schema/seeds/config into an isolated output and can explicitly shift schedule timestamps"
+  ],
+  "includes_weights": false,
+  "includes_training_replay": false,
+  "original_character_factory_sha256": {
+    "Necrobinder": "d0ce5e14e37bb79aac3cc00523d1be0876715505dd9a45f3cbdc1eb607375f5f",
+    "Ironclad": "5ef15b26f13e78e96cf5a2adebc6683b157befad2d6c33d01ff94b4dc7244d06"
+  }
+}

@@ -16,6 +16,7 @@
 | What does the model see and predict? | [Architecture](ARCHITECTURE.md) |
 | How are potion penalties represented and learned? | [Potion-cost conditioning](ARCHITECTURE.md#potion-cost-conditioning) and [measured sensitivity](../benchmarks/potion-sensitivity/README.md) |
 | How are search, replay and learning connected? | [Training](TRAINING.md) |
+| How do the PPO-only Ironclad/Necrobinder full-run campaigns work? | [PPO source, recipe and reproduction](../ppo/README.md) |
 | Where do the human and 100k random-run training starts come from? | [Data generation and mixture](TRAINING.md#training-data-and-generation) |
 | What happens inside a chance-node search? | [Search walkthrough](SEARCH.md) |
 | What differs from the upstream simulator? | [Simulator changes](SIMULATOR_CHANGES.md) and [attribution](../ATTRIBUTION.md) |

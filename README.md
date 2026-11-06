@@ -2,9 +2,9 @@
 
 **Toward superhuman Slay the Spire 2 play, starting with Necrobinder A10 combat.**
 
-The plan is to train a strong, fast combat model, then a run-decision model for pathing, rewards, shops and deck building. This repository covers the combat model; current results do not establish superhuman play.
+The original approach trains a strong, fast combat model, then a run-decision model for pathing, rewards, shops and deck building. The repository also includes a separate **PPO-only full-run approach** for Ironclad and Necrobinder. Current results do not establish superhuman play.
 
-OstyAI combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-6500 model**, training code, frozen benchmarks and results through **step 6,800**. Full training datasets are excluded.
+The combat system combines a modified Rust simulator, a policy/value transformer, Gumbel search with belief draws, and AlphaZero-style training. It includes the **step-6500 model**, training code, frozen benchmarks and results through **step 6,800**. Full training datasets are excluded.
 
 Built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-mentor)**, which provides the original simulator, MCTS and belief-draw implementation.
 
@@ -19,6 +19,7 @@ Built on **[Thomas Friedel's spire-mentor](https://github.com/tfriedel/spire-men
 - [Simulator changes](#changes-relative-to-the-rust-simulator)
 - [Search through chance nodes](#low-budget-search-through-chance-nodes)
 - [Open questions](#future-directions-and-open-questions)
+- [PPO-only full-run training](#ppo-only-full-run-training)
 - [Quick start](#quick-start)
 - [Repository guide](#repository-guide)
 - [Credits and licensing](#credits-and-licensing)
@@ -95,7 +96,7 @@ Mentor with the Necrobinder network achieved **94.25% trial wins / 41.41% every-
 
 Boss256 achieved **93.27% trial wins** and **35.16% every-fight ≥2/3**, versus **92.97% / 31.05%** with boss128. Greedy policy achieved **88.46%** in **3 min 37 s**. [Per-combat outcomes](benchmarks/comparison/step6500/combat-analysis/combat-outcomes.csv) and a [failed-trial fixture index](benchmarks/comparison/step6500/combat-analysis/failed-trial-fixture-index.jsonl.gz) are included for targeted analysis.
 
-Training is paused at **6,817**, with its checkpoint saved. The downloadable weights are the benchmarked step **6,500** actor.
+The combat run is paused at **6,817**, with its checkpoint saved. The downloadable weights are the benchmarked step **6,500** actor.
 
 ## Training progress
 
@@ -280,6 +281,21 @@ This checkpoint-5460 example is not a typical-depth estimate or a trace of the r
 
 </details>
 
+## PPO-only full-run training
+
+The [`ppo/`](ppo/README.md) section contains the code used for the **Ironclad and Necrobinder full-run PPO campaigns**: an 8-layer, width-256 transformer, separate combat/noncombat policies, privileged critics, optimized Rust workers, learner, validation, checkpointing and supervision. These runs use **no search or expert guidance**.
+
+<details>
+<summary>Training recipe and code</summary>
+
+Collect **32,768 meaningful decisions** from **512 environments / 80 Rust workers** per policy update. Keep roughly 40% of rows using a 60th-percentile absolute-advantage cutoff, then fit one PPO epoch. Rewards are +0.002/floor, +0.05/boss and +1/run win. Combat practice uses the policy's own saved elite/boss starts, with a **40%→75% boss sampling target**; it does not use the earlier human/synthetic training corpus.
+
+[Model and training details](ppo/README.md#model) · [Exact configurations](ppo/configs/) · [Build and run](ppo/README.md#build-and-run) · [Tests](ppo/README.md#tests) · [Source guide](ppo/README.md#source-guide).
+
+The benchmark tables and downloadable combat-model weights elsewhere on this page are from the earlier search-based approach. PPO weights and live training state are not bundled.
+
+</details>
+
 ## Quick start
 
 Tested on Linux with Python 3.12, PyTorch 2.7.1+cu128, Triton 3.3.1 and Rust 1.96.0. Neural inference requires NVIDIA CUDA; reported runs use an L40 and 80 CPU workers.
@@ -308,6 +324,7 @@ Use `--suite human --workers 80` for the full human benchmark or `--suite primar
 | [models/](models/README.md) | Weights, configuration, selection criteria and hashes |
 | [benchmarks/](benchmarks/README.md) | Fixtures, results, histories and timing |
 | [ostyai/](ostyai/) | Model, GPU pipeline, learner, replay and evaluation |
+| [ppo/](ppo/README.md) | PPO-only full-run model, Rust worker overlay, Ironclad/Necrobinder recipes and reproduction |
 | [native/](native/) | Modified Rust simulator and upstream MCTS |
 | [scripts/](scripts/README.md) | Build, verify and evaluate |
 | [provenance/](provenance/README.md) | Source identities, tests and deployment records |
